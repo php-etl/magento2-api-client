@@ -1,0 +1,32 @@
+{
+    "name": "php-etl/magento-2.3-api-client",
+    "description": "This package provides Jane-PHP generated API models and client based on the OpenAPI specification for Magento 2.3.x",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kiboko\\Magento\\V2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Grégory Planchat",
+            "email": "gregory@kiboko.fr"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "jane-php/open-api-runtime": "^7.3"
+    },
+    "require-dev": {
+        "jane-php/open-api-2": "^7.3"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        }
+    }
+}
