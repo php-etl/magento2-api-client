@@ -1,5 +1,5 @@
 {
-    "name": "php-etl/magento-2.3-api-client",
+    "name": "php-etl/magento-v2-api-client",
     "description": "This package provides Jane-PHP generated API models and client based on the OpenAPI specification for Magento 2.3.x",
     "type": "library",
     "license": "MIT",
