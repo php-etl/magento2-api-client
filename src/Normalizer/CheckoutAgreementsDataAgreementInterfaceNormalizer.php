@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CheckoutAgreementsDataAgreementInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CheckoutAgreementsDataAgreementInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CheckoutAgreementsDataAgreementInterface';
     }
@@ -43,8 +42,8 @@ class CheckoutAgreementsDataAgreementInterfaceNormalizer implements Denormalizer
         if (\array_key_exists('agreement_id', $data)) {
             $object->setAgreementId($data['agreement_id']);
         }
-        if (\array_key_exists('name', $data)) {
-            $object->setName($data['name']);
+        if (\array_key_exists('checkbox_text', $data)) {
+            $object->setCheckboxText($data['checkbox_text']);
         }
         if (\array_key_exists('content', $data)) {
             $object->setContent($data['content']);
@@ -52,8 +51,8 @@ class CheckoutAgreementsDataAgreementInterfaceNormalizer implements Denormalizer
         if (\array_key_exists('content_height', $data)) {
             $object->setContentHeight($data['content_height']);
         }
-        if (\array_key_exists('checkbox_text', $data)) {
-            $object->setCheckboxText($data['checkbox_text']);
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
         }
         if (\array_key_exists('is_active', $data)) {
             $object->setIsActive($data['is_active']);
@@ -64,8 +63,8 @@ class CheckoutAgreementsDataAgreementInterfaceNormalizer implements Denormalizer
         if (\array_key_exists('mode', $data)) {
             $object->setMode($data['mode']);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
+        if (\array_key_exists('name', $data)) {
+            $object->setName($data['name']);
         }
         return $object;
     }
@@ -76,18 +75,18 @@ class CheckoutAgreementsDataAgreementInterfaceNormalizer implements Denormalizer
     {
         $data = array();
         $data['agreement_id'] = $object->getAgreementId();
-        $data['name'] = $object->getName();
+        $data['checkbox_text'] = $object->getCheckboxText();
         $data['content'] = $object->getContent();
         if (null !== $object->getContentHeight()) {
             $data['content_height'] = $object->getContentHeight();
         }
-        $data['checkbox_text'] = $object->getCheckboxText();
-        $data['is_active'] = $object->getIsActive();
-        $data['is_html'] = $object->getIsHtml();
-        $data['mode'] = $object->getMode();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
+        $data['is_active'] = $object->getIsActive();
+        $data['is_html'] = $object->getIsHtml();
+        $data['mode'] = $object->getMode();
+        $data['name'] = $object->getName();
         return $data;
     }
 }

@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class FrameworkDataImageContentInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\FrameworkDataImageContentInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\FrameworkDataImageContentInterface';
     }
@@ -43,11 +42,11 @@ class FrameworkDataImageContentInterfaceNormalizer implements DenormalizerInterf
         if (\array_key_exists('base64_encoded_data', $data)) {
             $object->setBase64EncodedData($data['base64_encoded_data']);
         }
-        if (\array_key_exists('type', $data)) {
-            $object->setType($data['type']);
-        }
         if (\array_key_exists('name', $data)) {
             $object->setName($data['name']);
+        }
+        if (\array_key_exists('type', $data)) {
+            $object->setType($data['type']);
         }
         return $object;
     }
@@ -58,8 +57,8 @@ class FrameworkDataImageContentInterfaceNormalizer implements DenormalizerInterf
     {
         $data = array();
         $data['base64_encoded_data'] = $object->getBase64EncodedData();
-        $data['type'] = $object->getType();
         $data['name'] = $object->getName();
+        $data['type'] = $object->getType();
         return $data;
     }
 }

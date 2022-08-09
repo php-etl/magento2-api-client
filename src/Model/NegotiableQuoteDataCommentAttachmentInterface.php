@@ -17,6 +17,12 @@ class NegotiableQuoteDataCommentAttachmentInterface
      */
     protected $commentId;
     /**
+     * ExtensionInterface class for @see \Magento\NegotiableQuote\Api\Data\CommentAttachmentInterface
+     *
+     * @var mixed
+     */
+    protected $extensionAttributes;
+    /**
      * File name.
      *
      * @var string
@@ -35,17 +41,11 @@ class NegotiableQuoteDataCommentAttachmentInterface
      */
     protected $fileType;
     /**
-     * ExtensionInterface class for @see \Magento\NegotiableQuote\Api\Data\CommentAttachmentInterface
-     *
-     * @var mixed
-     */
-    protected $extensionAttributes;
-    /**
      * Attachment ID.
      *
      * @return int
      */
-    public function getAttachmentId(): int
+    public function getAttachmentId() : int
     {
         return $this->attachmentId;
     }
@@ -56,7 +56,7 @@ class NegotiableQuoteDataCommentAttachmentInterface
      *
      * @return self
      */
-    public function setAttachmentId(int $attachmentId): self
+    public function setAttachmentId(int $attachmentId) : self
     {
         $this->attachmentId = $attachmentId;
         return $this;
@@ -66,7 +66,7 @@ class NegotiableQuoteDataCommentAttachmentInterface
      *
      * @return int
      */
-    public function getCommentId(): int
+    public function getCommentId() : int
     {
         return $this->commentId;
     }
@@ -77,72 +77,9 @@ class NegotiableQuoteDataCommentAttachmentInterface
      *
      * @return self
      */
-    public function setCommentId(int $commentId): self
+    public function setCommentId(int $commentId) : self
     {
         $this->commentId = $commentId;
-        return $this;
-    }
-    /**
-     * File name.
-     *
-     * @return string
-     */
-    public function getFileName(): string
-    {
-        return $this->fileName;
-    }
-    /**
-     * File name.
-     *
-     * @param string $fileName
-     *
-     * @return self
-     */
-    public function setFileName(string $fileName): self
-    {
-        $this->fileName = $fileName;
-        return $this;
-    }
-    /**
-     * File path.
-     *
-     * @return string
-     */
-    public function getFilePath(): string
-    {
-        return $this->filePath;
-    }
-    /**
-     * File path.
-     *
-     * @param string $filePath
-     *
-     * @return self
-     */
-    public function setFilePath(string $filePath): self
-    {
-        $this->filePath = $filePath;
-        return $this;
-    }
-    /**
-     * File type.
-     *
-     * @return string
-     */
-    public function getFileType(): string
-    {
-        return $this->fileType;
-    }
-    /**
-     * File type.
-     *
-     * @param string $fileType
-     *
-     * @return self
-     */
-    public function setFileType(string $fileType): self
-    {
-        $this->fileType = $fileType;
         return $this;
     }
     /**
@@ -161,9 +98,72 @@ class NegotiableQuoteDataCommentAttachmentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * File name.
+     *
+     * @return string
+     */
+    public function getFileName() : string
+    {
+        return $this->fileName;
+    }
+    /**
+     * File name.
+     *
+     * @param string $fileName
+     *
+     * @return self
+     */
+    public function setFileName(string $fileName) : self
+    {
+        $this->fileName = $fileName;
+        return $this;
+    }
+    /**
+     * File path.
+     *
+     * @return string
+     */
+    public function getFilePath() : string
+    {
+        return $this->filePath;
+    }
+    /**
+     * File path.
+     *
+     * @param string $filePath
+     *
+     * @return self
+     */
+    public function setFilePath(string $filePath) : self
+    {
+        $this->filePath = $filePath;
+        return $this;
+    }
+    /**
+     * File type.
+     *
+     * @return string
+     */
+    public function getFileType() : string
+    {
+        return $this->fileType;
+    }
+    /**
+     * File type.
+     *
+     * @param string $fileType
+     *
+     * @return self
+     */
+    public function setFileType(string $fileType) : self
+    {
+        $this->fileType = $fileType;
         return $this;
     }
 }

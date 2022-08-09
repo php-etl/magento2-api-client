@@ -5,36 +5,6 @@ namespace Kiboko\Magento\V2\Model;
 class SharedCatalogDataSharedCatalogInterface
 {
     /**
-     * ID.
-     *
-     * @var int
-     */
-    protected $id;
-    /**
-     * Shared Catalog name.
-     *
-     * @var string
-     */
-    protected $name;
-    /**
-     * Shared Catalog description.
-     *
-     * @var string
-     */
-    protected $description;
-    /**
-     * Customer Group Id.
-     *
-     * @var int
-     */
-    protected $customerGroupId;
-    /**
-     * Shared Catalog type.
-     *
-     * @var int
-     */
-    protected $type;
-    /**
      * Created time for Shared Catalog.
      *
      * @var string
@@ -46,6 +16,30 @@ class SharedCatalogDataSharedCatalogInterface
      * @var int
      */
     protected $createdBy;
+    /**
+     * Customer Group Id.
+     *
+     * @var int
+     */
+    protected $customerGroupId;
+    /**
+     * Shared Catalog description.
+     *
+     * @var string
+     */
+    protected $description;
+    /**
+     * ID.
+     *
+     * @var int
+     */
+    protected $id;
+    /**
+     * Shared Catalog name.
+     *
+     * @var string
+     */
+    protected $name;
     /**
      * Store id for Shared Catalog.
      *
@@ -59,116 +53,17 @@ class SharedCatalogDataSharedCatalogInterface
      */
     protected $taxClassId;
     /**
-     * ID.
-     *
-     * @return int
-     */
-    public function getId(): int
-    {
-        return $this->id;
-    }
-    /**
-     * ID.
-     *
-     * @param int $id
-     *
-     * @return self
-     */
-    public function setId(int $id): self
-    {
-        $this->id = $id;
-        return $this;
-    }
-    /**
-     * Shared Catalog name.
-     *
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-    /**
-     * Shared Catalog name.
-     *
-     * @param string $name
-     *
-     * @return self
-     */
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-        return $this;
-    }
-    /**
-     * Shared Catalog description.
-     *
-     * @return string
-     */
-    public function getDescription(): string
-    {
-        return $this->description;
-    }
-    /**
-     * Shared Catalog description.
-     *
-     * @param string $description
-     *
-     * @return self
-     */
-    public function setDescription(string $description): self
-    {
-        $this->description = $description;
-        return $this;
-    }
-    /**
-     * Customer Group Id.
-     *
-     * @return int
-     */
-    public function getCustomerGroupId(): int
-    {
-        return $this->customerGroupId;
-    }
-    /**
-     * Customer Group Id.
-     *
-     * @param int $customerGroupId
-     *
-     * @return self
-     */
-    public function setCustomerGroupId(int $customerGroupId): self
-    {
-        $this->customerGroupId = $customerGroupId;
-        return $this;
-    }
-    /**
      * Shared Catalog type.
      *
-     * @return int
+     * @var int
      */
-    public function getType(): int
-    {
-        return $this->type;
-    }
-    /**
-     * Shared Catalog type.
-     *
-     * @param int $type
-     *
-     * @return self
-     */
-    public function setType(int $type): self
-    {
-        $this->type = $type;
-        return $this;
-    }
+    protected $type;
     /**
      * Created time for Shared Catalog.
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -179,7 +74,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -189,7 +84,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return int
      */
-    public function getCreatedBy(): int
+    public function getCreatedBy() : int
     {
         return $this->createdBy;
     }
@@ -200,9 +95,93 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return self
      */
-    public function setCreatedBy(int $createdBy): self
+    public function setCreatedBy(int $createdBy) : self
     {
         $this->createdBy = $createdBy;
+        return $this;
+    }
+    /**
+     * Customer Group Id.
+     *
+     * @return int
+     */
+    public function getCustomerGroupId() : int
+    {
+        return $this->customerGroupId;
+    }
+    /**
+     * Customer Group Id.
+     *
+     * @param int $customerGroupId
+     *
+     * @return self
+     */
+    public function setCustomerGroupId(int $customerGroupId) : self
+    {
+        $this->customerGroupId = $customerGroupId;
+        return $this;
+    }
+    /**
+     * Shared Catalog description.
+     *
+     * @return string
+     */
+    public function getDescription() : string
+    {
+        return $this->description;
+    }
+    /**
+     * Shared Catalog description.
+     *
+     * @param string $description
+     *
+     * @return self
+     */
+    public function setDescription(string $description) : self
+    {
+        $this->description = $description;
+        return $this;
+    }
+    /**
+     * ID.
+     *
+     * @return int
+     */
+    public function getId() : int
+    {
+        return $this->id;
+    }
+    /**
+     * ID.
+     *
+     * @param int $id
+     *
+     * @return self
+     */
+    public function setId(int $id) : self
+    {
+        $this->id = $id;
+        return $this;
+    }
+    /**
+     * Shared Catalog name.
+     *
+     * @return string
+     */
+    public function getName() : string
+    {
+        return $this->name;
+    }
+    /**
+     * Shared Catalog name.
+     *
+     * @param string $name
+     *
+     * @return self
+     */
+    public function setName(string $name) : self
+    {
+        $this->name = $name;
         return $this;
     }
     /**
@@ -210,7 +189,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return int
      */
-    public function getStoreId(): int
+    public function getStoreId() : int
     {
         return $this->storeId;
     }
@@ -221,7 +200,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(int $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;
@@ -231,7 +210,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return int
      */
-    public function getTaxClassId(): int
+    public function getTaxClassId() : int
     {
         return $this->taxClassId;
     }
@@ -242,9 +221,30 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return self
      */
-    public function setTaxClassId(int $taxClassId): self
+    public function setTaxClassId(int $taxClassId) : self
     {
         $this->taxClassId = $taxClassId;
+        return $this;
+    }
+    /**
+     * Shared Catalog type.
+     *
+     * @return int
+     */
+    public function getType() : int
+    {
+        return $this->type;
+    }
+    /**
+     * Shared Catalog type.
+     *
+     * @param int $type
+     *
+     * @return self
+     */
+    public function setType(int $type) : self
+    {
+        $this->type = $type;
         return $this;
     }
 }

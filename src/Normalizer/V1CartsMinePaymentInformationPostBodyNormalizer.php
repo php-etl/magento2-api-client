@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1CartsMinePaymentInformationPostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\V1CartsMinePaymentInformationPostBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\V1CartsMinePaymentInformationPostBody';
     }
@@ -40,11 +39,11 @@ class V1CartsMinePaymentInformationPostBodyNormalizer implements DenormalizerInt
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('paymentMethod', $data)) {
-            $object->setPaymentMethod($this->denormalizer->denormalize($data['paymentMethod'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataPaymentInterface', 'json', $context));
-        }
         if (\array_key_exists('billingAddress', $data)) {
             $object->setBillingAddress($this->denormalizer->denormalize($data['billingAddress'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataAddressInterface', 'json', $context));
+        }
+        if (\array_key_exists('paymentMethod', $data)) {
+            $object->setPaymentMethod($this->denormalizer->denormalize($data['paymentMethod'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataPaymentInterface', 'json', $context));
         }
         return $object;
     }
@@ -54,10 +53,10 @@ class V1CartsMinePaymentInformationPostBodyNormalizer implements DenormalizerInt
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['paymentMethod'] = $this->normalizer->normalize($object->getPaymentMethod(), 'json', $context);
         if (null !== $object->getBillingAddress()) {
             $data['billingAddress'] = $this->normalizer->normalize($object->getBillingAddress(), 'json', $context);
         }
+        $data['paymentMethod'] = $this->normalizer->normalize($object->getPaymentMethod(), 'json', $context);
         return $data;
     }
 }

@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class QuoteDataTotalsExtensionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalsExtensionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalsExtensionInterface';
     }
@@ -40,11 +39,14 @@ class QuoteDataTotalsExtensionInterfaceNormalizer implements DenormalizerInterfa
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('coupon_label', $data)) {
-            $object->setCouponLabel($data['coupon_label']);
-        }
         if (\array_key_exists('base_customer_balance_amount', $data)) {
             $object->setBaseCustomerBalanceAmount($data['base_customer_balance_amount']);
+        }
+        if (\array_key_exists('base_reward_currency_amount', $data)) {
+            $object->setBaseRewardCurrencyAmount($data['base_reward_currency_amount']);
+        }
+        if (\array_key_exists('coupon_label', $data)) {
+            $object->setCouponLabel($data['coupon_label']);
         }
         if (\array_key_exists('customer_balance_amount', $data)) {
             $object->setCustomerBalanceAmount($data['customer_balance_amount']);
@@ -52,14 +54,11 @@ class QuoteDataTotalsExtensionInterfaceNormalizer implements DenormalizerInterfa
         if (\array_key_exists('negotiable_quote_totals', $data)) {
             $object->setNegotiableQuoteTotals($this->denormalizer->denormalize($data['negotiable_quote_totals'], 'Kiboko\\Magento\\V2\\Model\\NegotiableQuoteDataNegotiableQuoteTotalsInterface', 'json', $context));
         }
-        if (\array_key_exists('reward_points_balance', $data)) {
-            $object->setRewardPointsBalance($data['reward_points_balance']);
-        }
         if (\array_key_exists('reward_currency_amount', $data)) {
             $object->setRewardCurrencyAmount($data['reward_currency_amount']);
         }
-        if (\array_key_exists('base_reward_currency_amount', $data)) {
-            $object->setBaseRewardCurrencyAmount($data['base_reward_currency_amount']);
+        if (\array_key_exists('reward_points_balance', $data)) {
+            $object->setRewardPointsBalance($data['reward_points_balance']);
         }
         return $object;
     }
@@ -69,11 +68,14 @@ class QuoteDataTotalsExtensionInterfaceNormalizer implements DenormalizerInterfa
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getCouponLabel()) {
-            $data['coupon_label'] = $object->getCouponLabel();
-        }
         if (null !== $object->getBaseCustomerBalanceAmount()) {
             $data['base_customer_balance_amount'] = $object->getBaseCustomerBalanceAmount();
+        }
+        if (null !== $object->getBaseRewardCurrencyAmount()) {
+            $data['base_reward_currency_amount'] = $object->getBaseRewardCurrencyAmount();
+        }
+        if (null !== $object->getCouponLabel()) {
+            $data['coupon_label'] = $object->getCouponLabel();
         }
         if (null !== $object->getCustomerBalanceAmount()) {
             $data['customer_balance_amount'] = $object->getCustomerBalanceAmount();
@@ -81,14 +83,11 @@ class QuoteDataTotalsExtensionInterfaceNormalizer implements DenormalizerInterfa
         if (null !== $object->getNegotiableQuoteTotals()) {
             $data['negotiable_quote_totals'] = $this->normalizer->normalize($object->getNegotiableQuoteTotals(), 'json', $context);
         }
-        if (null !== $object->getRewardPointsBalance()) {
-            $data['reward_points_balance'] = $object->getRewardPointsBalance();
-        }
         if (null !== $object->getRewardCurrencyAmount()) {
             $data['reward_currency_amount'] = $object->getRewardCurrencyAmount();
         }
-        if (null !== $object->getBaseRewardCurrencyAmount()) {
-            $data['base_reward_currency_amount'] = $object->getBaseRewardCurrencyAmount();
+        if (null !== $object->getRewardPointsBalance()) {
+            $data['reward_points_balance'] = $object->getRewardPointsBalance();
         }
         return $data;
     }

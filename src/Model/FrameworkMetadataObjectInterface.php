@@ -15,7 +15,7 @@ class FrameworkMetadataObjectInterface
      *
      * @return string
      */
-    public function getAttributeCode(): string
+    public function getAttributeCode() : string
     {
         return $this->attributeCode;
     }
@@ -26,7 +26,7 @@ class FrameworkMetadataObjectInterface
      *
      * @return self
      */
-    public function setAttributeCode(string $attributeCode): self
+    public function setAttributeCode(string $attributeCode) : self
     {
         $this->attributeCode = $attributeCode;
         return $this;

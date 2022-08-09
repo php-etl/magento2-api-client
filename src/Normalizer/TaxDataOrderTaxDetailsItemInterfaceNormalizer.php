@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class TaxDataOrderTaxDetailsItemInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\TaxDataOrderTaxDetailsItemInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\TaxDataOrderTaxDetailsItemInterface';
     }
@@ -40,15 +39,6 @@ class TaxDataOrderTaxDetailsItemInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('type', $data)) {
-            $object->setType($data['type']);
-        }
-        if (\array_key_exists('item_id', $data)) {
-            $object->setItemId($data['item_id']);
-        }
-        if (\array_key_exists('associated_item_id', $data)) {
-            $object->setAssociatedItemId($data['associated_item_id']);
-        }
         if (\array_key_exists('applied_taxes', $data)) {
             $values = array();
             foreach ($data['applied_taxes'] as $value) {
@@ -56,8 +46,17 @@ class TaxDataOrderTaxDetailsItemInterfaceNormalizer implements DenormalizerInter
             }
             $object->setAppliedTaxes($values);
         }
+        if (\array_key_exists('associated_item_id', $data)) {
+            $object->setAssociatedItemId($data['associated_item_id']);
+        }
         if (\array_key_exists('extension_attributes', $data)) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        }
+        if (\array_key_exists('item_id', $data)) {
+            $object->setItemId($data['item_id']);
+        }
+        if (\array_key_exists('type', $data)) {
+            $object->setType($data['type']);
         }
         return $object;
     }
@@ -67,15 +66,6 @@ class TaxDataOrderTaxDetailsItemInterfaceNormalizer implements DenormalizerInter
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getType()) {
-            $data['type'] = $object->getType();
-        }
-        if (null !== $object->getItemId()) {
-            $data['item_id'] = $object->getItemId();
-        }
-        if (null !== $object->getAssociatedItemId()) {
-            $data['associated_item_id'] = $object->getAssociatedItemId();
-        }
         if (null !== $object->getAppliedTaxes()) {
             $values = array();
             foreach ($object->getAppliedTaxes() as $value) {
@@ -83,8 +73,17 @@ class TaxDataOrderTaxDetailsItemInterfaceNormalizer implements DenormalizerInter
             }
             $data['applied_taxes'] = $values;
         }
+        if (null !== $object->getAssociatedItemId()) {
+            $data['associated_item_id'] = $object->getAssociatedItemId();
+        }
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
+        }
+        if (null !== $object->getItemId()) {
+            $data['item_id'] = $object->getItemId();
+        }
+        if (null !== $object->getType()) {
+            $data['type'] = $object->getType();
         }
         return $data;
     }

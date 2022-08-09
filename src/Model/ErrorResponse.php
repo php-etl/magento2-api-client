@@ -5,11 +5,11 @@ namespace Kiboko\Magento\V2\Model;
 class ErrorResponse
 {
     /**
-     * Error message
+     * Error code
      *
-     * @var string
+     * @var int
      */
-    protected $message;
+    protected $code;
     /**
      * Errors list
      *
@@ -17,11 +17,11 @@ class ErrorResponse
      */
     protected $errors;
     /**
-     * Error code
+     * Error message
      *
-     * @var int
+     * @var string
      */
-    protected $code;
+    protected $message;
     /**
      * Error parameters list
      *
@@ -35,53 +35,11 @@ class ErrorResponse
      */
     protected $trace;
     /**
-     * Error message
-     *
-     * @return string
-     */
-    public function getMessage(): string
-    {
-        return $this->message;
-    }
-    /**
-     * Error message
-     *
-     * @param string $message
-     *
-     * @return self
-     */
-    public function setMessage(string $message): self
-    {
-        $this->message = $message;
-        return $this;
-    }
-    /**
-     * Errors list
-     *
-     * @return ErrorErrorsItem[]
-     */
-    public function getErrors(): array
-    {
-        return $this->errors;
-    }
-    /**
-     * Errors list
-     *
-     * @param ErrorErrorsItem[] $errors
-     *
-     * @return self
-     */
-    public function setErrors(array $errors): self
-    {
-        $this->errors = $errors;
-        return $this;
-    }
-    /**
      * Error code
      *
      * @return int
      */
-    public function getCode(): int
+    public function getCode() : int
     {
         return $this->code;
     }
@@ -92,9 +50,51 @@ class ErrorResponse
      *
      * @return self
      */
-    public function setCode(int $code): self
+    public function setCode(int $code) : self
     {
         $this->code = $code;
+        return $this;
+    }
+    /**
+     * Errors list
+     *
+     * @return ErrorErrorsItem[]
+     */
+    public function getErrors() : array
+    {
+        return $this->errors;
+    }
+    /**
+     * Errors list
+     *
+     * @param ErrorErrorsItem[] $errors
+     *
+     * @return self
+     */
+    public function setErrors(array $errors) : self
+    {
+        $this->errors = $errors;
+        return $this;
+    }
+    /**
+     * Error message
+     *
+     * @return string
+     */
+    public function getMessage() : string
+    {
+        return $this->message;
+    }
+    /**
+     * Error message
+     *
+     * @param string $message
+     *
+     * @return self
+     */
+    public function setMessage(string $message) : self
+    {
+        $this->message = $message;
         return $this;
     }
     /**
@@ -102,7 +102,7 @@ class ErrorResponse
      *
      * @return ErrorParametersItem[]
      */
-    public function getParameters(): array
+    public function getParameters() : array
     {
         return $this->parameters;
     }
@@ -113,7 +113,7 @@ class ErrorResponse
      *
      * @return self
      */
-    public function setParameters(array $parameters): self
+    public function setParameters(array $parameters) : self
     {
         $this->parameters = $parameters;
         return $this;
@@ -123,7 +123,7 @@ class ErrorResponse
      *
      * @return string
      */
-    public function getTrace(): string
+    public function getTrace() : string
     {
         return $this->trace;
     }
@@ -134,7 +134,7 @@ class ErrorResponse
      *
      * @return self
      */
-    public function setTrace(string $trace): self
+    public function setTrace(string $trace) : self
     {
         $this->trace = $trace;
         return $this;

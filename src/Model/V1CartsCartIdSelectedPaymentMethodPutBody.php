@@ -15,7 +15,7 @@ class V1CartsCartIdSelectedPaymentMethodPutBody
      *
      * @return QuoteDataPaymentInterface
      */
-    public function getMethod(): QuoteDataPaymentInterface
+    public function getMethod() : QuoteDataPaymentInterface
     {
         return $this->method;
     }
@@ -26,7 +26,7 @@ class V1CartsCartIdSelectedPaymentMethodPutBody
      *
      * @return self
      */
-    public function setMethod(QuoteDataPaymentInterface $method): self
+    public function setMethod(QuoteDataPaymentInterface $method) : self
     {
         $this->method = $method;
         return $this;

@@ -5,65 +5,23 @@ namespace Kiboko\Magento\V2\Model;
 class QuoteDataShippingAssignmentInterface
 {
     /**
-     * Interface ShippingInterface
-     *
-     * @var QuoteDataShippingInterface
-     */
-    protected $shipping;
-    /**
-     *
-     *
-     * @var QuoteDataCartItemInterface[]
-     */
-    protected $items;
-    /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\ShippingAssignmentInterface
      *
      * @var mixed
      */
     protected $extensionAttributes;
     /**
-     * Interface ShippingInterface
+     * 
      *
-     * @return QuoteDataShippingInterface
+     * @var QuoteDataCartItemInterface[]
      */
-    public function getShipping(): QuoteDataShippingInterface
-    {
-        return $this->shipping;
-    }
+    protected $items;
     /**
      * Interface ShippingInterface
      *
-     * @param QuoteDataShippingInterface $shipping
-     *
-     * @return self
+     * @var QuoteDataShippingInterface
      */
-    public function setShipping(QuoteDataShippingInterface $shipping): self
-    {
-        $this->shipping = $shipping;
-        return $this;
-    }
-    /**
-     *
-     *
-     * @return QuoteDataCartItemInterface[]
-     */
-    public function getItems(): array
-    {
-        return $this->items;
-    }
-    /**
-     *
-     *
-     * @param QuoteDataCartItemInterface[] $items
-     *
-     * @return self
-     */
-    public function setItems(array $items): self
-    {
-        $this->items = $items;
-        return $this;
-    }
+    protected $shipping;
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\ShippingAssignmentInterface
      *
@@ -80,9 +38,51 @@ class QuoteDataShippingAssignmentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return QuoteDataCartItemInterface[]
+     */
+    public function getItems() : array
+    {
+        return $this->items;
+    }
+    /**
+     * 
+     *
+     * @param QuoteDataCartItemInterface[] $items
+     *
+     * @return self
+     */
+    public function setItems(array $items) : self
+    {
+        $this->items = $items;
+        return $this;
+    }
+    /**
+     * Interface ShippingInterface
+     *
+     * @return QuoteDataShippingInterface
+     */
+    public function getShipping() : QuoteDataShippingInterface
+    {
+        return $this->shipping;
+    }
+    /**
+     * Interface ShippingInterface
+     *
+     * @param QuoteDataShippingInterface $shipping
+     *
+     * @return self
+     */
+    public function setShipping(QuoteDataShippingInterface $shipping) : self
+    {
+        $this->shipping = $shipping;
         return $this;
     }
 }

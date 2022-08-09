@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class QuoteDataTotalsInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalsInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalsInterface';
     }
@@ -40,80 +39,50 @@ class QuoteDataTotalsInterfaceNormalizer implements DenormalizerInterface, Norma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('grand_total', $data)) {
-            $object->setGrandTotal($data['grand_total']);
-        }
-        if (\array_key_exists('base_grand_total', $data)) {
-            $object->setBaseGrandTotal($data['base_grand_total']);
-        }
-        if (\array_key_exists('subtotal', $data)) {
-            $object->setSubtotal($data['subtotal']);
-        }
-        if (\array_key_exists('base_subtotal', $data)) {
-            $object->setBaseSubtotal($data['base_subtotal']);
-        }
-        if (\array_key_exists('discount_amount', $data)) {
-            $object->setDiscountAmount($data['discount_amount']);
+        if (\array_key_exists('base_currency_code', $data)) {
+            $object->setBaseCurrencyCode($data['base_currency_code']);
         }
         if (\array_key_exists('base_discount_amount', $data)) {
             $object->setBaseDiscountAmount($data['base_discount_amount']);
         }
-        if (\array_key_exists('subtotal_with_discount', $data)) {
-            $object->setSubtotalWithDiscount($data['subtotal_with_discount']);
-        }
-        if (\array_key_exists('base_subtotal_with_discount', $data)) {
-            $object->setBaseSubtotalWithDiscount($data['base_subtotal_with_discount']);
-        }
-        if (\array_key_exists('shipping_amount', $data)) {
-            $object->setShippingAmount($data['shipping_amount']);
+        if (\array_key_exists('base_grand_total', $data)) {
+            $object->setBaseGrandTotal($data['base_grand_total']);
         }
         if (\array_key_exists('base_shipping_amount', $data)) {
             $object->setBaseShippingAmount($data['base_shipping_amount']);
         }
-        if (\array_key_exists('shipping_discount_amount', $data)) {
-            $object->setShippingDiscountAmount($data['shipping_discount_amount']);
-        }
         if (\array_key_exists('base_shipping_discount_amount', $data)) {
             $object->setBaseShippingDiscountAmount($data['base_shipping_discount_amount']);
-        }
-        if (\array_key_exists('tax_amount', $data)) {
-            $object->setTaxAmount($data['tax_amount']);
-        }
-        if (\array_key_exists('base_tax_amount', $data)) {
-            $object->setBaseTaxAmount($data['base_tax_amount']);
-        }
-        if (\array_key_exists('weee_tax_applied_amount', $data)) {
-            $object->setWeeeTaxAppliedAmount($data['weee_tax_applied_amount']);
-        }
-        if (\array_key_exists('shipping_tax_amount', $data)) {
-            $object->setShippingTaxAmount($data['shipping_tax_amount']);
-        }
-        if (\array_key_exists('base_shipping_tax_amount', $data)) {
-            $object->setBaseShippingTaxAmount($data['base_shipping_tax_amount']);
-        }
-        if (\array_key_exists('subtotal_incl_tax', $data)) {
-            $object->setSubtotalInclTax($data['subtotal_incl_tax']);
-        }
-        if (\array_key_exists('base_subtotal_incl_tax', $data)) {
-            $object->setBaseSubtotalInclTax($data['base_subtotal_incl_tax']);
-        }
-        if (\array_key_exists('shipping_incl_tax', $data)) {
-            $object->setShippingInclTax($data['shipping_incl_tax']);
         }
         if (\array_key_exists('base_shipping_incl_tax', $data)) {
             $object->setBaseShippingInclTax($data['base_shipping_incl_tax']);
         }
-        if (\array_key_exists('base_currency_code', $data)) {
-            $object->setBaseCurrencyCode($data['base_currency_code']);
+        if (\array_key_exists('base_shipping_tax_amount', $data)) {
+            $object->setBaseShippingTaxAmount($data['base_shipping_tax_amount']);
         }
-        if (\array_key_exists('quote_currency_code', $data)) {
-            $object->setQuoteCurrencyCode($data['quote_currency_code']);
+        if (\array_key_exists('base_subtotal', $data)) {
+            $object->setBaseSubtotal($data['base_subtotal']);
+        }
+        if (\array_key_exists('base_subtotal_incl_tax', $data)) {
+            $object->setBaseSubtotalInclTax($data['base_subtotal_incl_tax']);
+        }
+        if (\array_key_exists('base_subtotal_with_discount', $data)) {
+            $object->setBaseSubtotalWithDiscount($data['base_subtotal_with_discount']);
+        }
+        if (\array_key_exists('base_tax_amount', $data)) {
+            $object->setBaseTaxAmount($data['base_tax_amount']);
         }
         if (\array_key_exists('coupon_code', $data)) {
             $object->setCouponCode($data['coupon_code']);
         }
-        if (\array_key_exists('items_qty', $data)) {
-            $object->setItemsQty($data['items_qty']);
+        if (\array_key_exists('discount_amount', $data)) {
+            $object->setDiscountAmount($data['discount_amount']);
+        }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalsExtensionInterface', 'json', $context));
+        }
+        if (\array_key_exists('grand_total', $data)) {
+            $object->setGrandTotal($data['grand_total']);
         }
         if (\array_key_exists('items', $data)) {
             $values = array();
@@ -122,6 +91,36 @@ class QuoteDataTotalsInterfaceNormalizer implements DenormalizerInterface, Norma
             }
             $object->setItems($values);
         }
+        if (\array_key_exists('items_qty', $data)) {
+            $object->setItemsQty($data['items_qty']);
+        }
+        if (\array_key_exists('quote_currency_code', $data)) {
+            $object->setQuoteCurrencyCode($data['quote_currency_code']);
+        }
+        if (\array_key_exists('shipping_amount', $data)) {
+            $object->setShippingAmount($data['shipping_amount']);
+        }
+        if (\array_key_exists('shipping_discount_amount', $data)) {
+            $object->setShippingDiscountAmount($data['shipping_discount_amount']);
+        }
+        if (\array_key_exists('shipping_incl_tax', $data)) {
+            $object->setShippingInclTax($data['shipping_incl_tax']);
+        }
+        if (\array_key_exists('shipping_tax_amount', $data)) {
+            $object->setShippingTaxAmount($data['shipping_tax_amount']);
+        }
+        if (\array_key_exists('subtotal', $data)) {
+            $object->setSubtotal($data['subtotal']);
+        }
+        if (\array_key_exists('subtotal_incl_tax', $data)) {
+            $object->setSubtotalInclTax($data['subtotal_incl_tax']);
+        }
+        if (\array_key_exists('subtotal_with_discount', $data)) {
+            $object->setSubtotalWithDiscount($data['subtotal_with_discount']);
+        }
+        if (\array_key_exists('tax_amount', $data)) {
+            $object->setTaxAmount($data['tax_amount']);
+        }
         if (\array_key_exists('total_segments', $data)) {
             $values_1 = array();
             foreach ($data['total_segments'] as $value_1) {
@@ -129,8 +128,8 @@ class QuoteDataTotalsInterfaceNormalizer implements DenormalizerInterface, Norma
             }
             $object->setTotalSegments($values_1);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalsExtensionInterface', 'json', $context));
+        if (\array_key_exists('weee_tax_applied_amount', $data)) {
+            $object->setWeeeTaxAppliedAmount($data['weee_tax_applied_amount']);
         }
         return $object;
     }
@@ -140,78 +139,50 @@ class QuoteDataTotalsInterfaceNormalizer implements DenormalizerInterface, Norma
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getGrandTotal()) {
-            $data['grand_total'] = $object->getGrandTotal();
-        }
-        if (null !== $object->getBaseGrandTotal()) {
-            $data['base_grand_total'] = $object->getBaseGrandTotal();
-        }
-        if (null !== $object->getSubtotal()) {
-            $data['subtotal'] = $object->getSubtotal();
-        }
-        if (null !== $object->getBaseSubtotal()) {
-            $data['base_subtotal'] = $object->getBaseSubtotal();
-        }
-        if (null !== $object->getDiscountAmount()) {
-            $data['discount_amount'] = $object->getDiscountAmount();
+        if (null !== $object->getBaseCurrencyCode()) {
+            $data['base_currency_code'] = $object->getBaseCurrencyCode();
         }
         if (null !== $object->getBaseDiscountAmount()) {
             $data['base_discount_amount'] = $object->getBaseDiscountAmount();
         }
-        if (null !== $object->getSubtotalWithDiscount()) {
-            $data['subtotal_with_discount'] = $object->getSubtotalWithDiscount();
-        }
-        if (null !== $object->getBaseSubtotalWithDiscount()) {
-            $data['base_subtotal_with_discount'] = $object->getBaseSubtotalWithDiscount();
-        }
-        if (null !== $object->getShippingAmount()) {
-            $data['shipping_amount'] = $object->getShippingAmount();
+        if (null !== $object->getBaseGrandTotal()) {
+            $data['base_grand_total'] = $object->getBaseGrandTotal();
         }
         if (null !== $object->getBaseShippingAmount()) {
             $data['base_shipping_amount'] = $object->getBaseShippingAmount();
         }
-        if (null !== $object->getShippingDiscountAmount()) {
-            $data['shipping_discount_amount'] = $object->getShippingDiscountAmount();
-        }
         if (null !== $object->getBaseShippingDiscountAmount()) {
             $data['base_shipping_discount_amount'] = $object->getBaseShippingDiscountAmount();
-        }
-        if (null !== $object->getTaxAmount()) {
-            $data['tax_amount'] = $object->getTaxAmount();
-        }
-        if (null !== $object->getBaseTaxAmount()) {
-            $data['base_tax_amount'] = $object->getBaseTaxAmount();
-        }
-        $data['weee_tax_applied_amount'] = $object->getWeeeTaxAppliedAmount();
-        if (null !== $object->getShippingTaxAmount()) {
-            $data['shipping_tax_amount'] = $object->getShippingTaxAmount();
-        }
-        if (null !== $object->getBaseShippingTaxAmount()) {
-            $data['base_shipping_tax_amount'] = $object->getBaseShippingTaxAmount();
-        }
-        if (null !== $object->getSubtotalInclTax()) {
-            $data['subtotal_incl_tax'] = $object->getSubtotalInclTax();
-        }
-        if (null !== $object->getBaseSubtotalInclTax()) {
-            $data['base_subtotal_incl_tax'] = $object->getBaseSubtotalInclTax();
-        }
-        if (null !== $object->getShippingInclTax()) {
-            $data['shipping_incl_tax'] = $object->getShippingInclTax();
         }
         if (null !== $object->getBaseShippingInclTax()) {
             $data['base_shipping_incl_tax'] = $object->getBaseShippingInclTax();
         }
-        if (null !== $object->getBaseCurrencyCode()) {
-            $data['base_currency_code'] = $object->getBaseCurrencyCode();
+        if (null !== $object->getBaseShippingTaxAmount()) {
+            $data['base_shipping_tax_amount'] = $object->getBaseShippingTaxAmount();
         }
-        if (null !== $object->getQuoteCurrencyCode()) {
-            $data['quote_currency_code'] = $object->getQuoteCurrencyCode();
+        if (null !== $object->getBaseSubtotal()) {
+            $data['base_subtotal'] = $object->getBaseSubtotal();
+        }
+        if (null !== $object->getBaseSubtotalInclTax()) {
+            $data['base_subtotal_incl_tax'] = $object->getBaseSubtotalInclTax();
+        }
+        if (null !== $object->getBaseSubtotalWithDiscount()) {
+            $data['base_subtotal_with_discount'] = $object->getBaseSubtotalWithDiscount();
+        }
+        if (null !== $object->getBaseTaxAmount()) {
+            $data['base_tax_amount'] = $object->getBaseTaxAmount();
         }
         if (null !== $object->getCouponCode()) {
             $data['coupon_code'] = $object->getCouponCode();
         }
-        if (null !== $object->getItemsQty()) {
-            $data['items_qty'] = $object->getItemsQty();
+        if (null !== $object->getDiscountAmount()) {
+            $data['discount_amount'] = $object->getDiscountAmount();
+        }
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
+        }
+        if (null !== $object->getGrandTotal()) {
+            $data['grand_total'] = $object->getGrandTotal();
         }
         if (null !== $object->getItems()) {
             $values = array();
@@ -220,14 +191,42 @@ class QuoteDataTotalsInterfaceNormalizer implements DenormalizerInterface, Norma
             }
             $data['items'] = $values;
         }
+        if (null !== $object->getItemsQty()) {
+            $data['items_qty'] = $object->getItemsQty();
+        }
+        if (null !== $object->getQuoteCurrencyCode()) {
+            $data['quote_currency_code'] = $object->getQuoteCurrencyCode();
+        }
+        if (null !== $object->getShippingAmount()) {
+            $data['shipping_amount'] = $object->getShippingAmount();
+        }
+        if (null !== $object->getShippingDiscountAmount()) {
+            $data['shipping_discount_amount'] = $object->getShippingDiscountAmount();
+        }
+        if (null !== $object->getShippingInclTax()) {
+            $data['shipping_incl_tax'] = $object->getShippingInclTax();
+        }
+        if (null !== $object->getShippingTaxAmount()) {
+            $data['shipping_tax_amount'] = $object->getShippingTaxAmount();
+        }
+        if (null !== $object->getSubtotal()) {
+            $data['subtotal'] = $object->getSubtotal();
+        }
+        if (null !== $object->getSubtotalInclTax()) {
+            $data['subtotal_incl_tax'] = $object->getSubtotalInclTax();
+        }
+        if (null !== $object->getSubtotalWithDiscount()) {
+            $data['subtotal_with_discount'] = $object->getSubtotalWithDiscount();
+        }
+        if (null !== $object->getTaxAmount()) {
+            $data['tax_amount'] = $object->getTaxAmount();
+        }
         $values_1 = array();
         foreach ($object->getTotalSegments() as $value_1) {
             $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
         }
         $data['total_segments'] = $values_1;
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
-        }
+        $data['weee_tax_applied_amount'] = $object->getWeeeTaxAppliedAmount();
         return $data;
     }
 }

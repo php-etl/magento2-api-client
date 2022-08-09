@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class TaxDataGrandTotalDetailsInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\TaxDataGrandTotalDetailsInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\TaxDataGrandTotalDetailsInterface';
     }
@@ -43,15 +42,15 @@ class TaxDataGrandTotalDetailsInterfaceNormalizer implements DenormalizerInterfa
         if (\array_key_exists('amount', $data)) {
             $object->setAmount($data['amount']);
         }
+        if (\array_key_exists('group_id', $data)) {
+            $object->setGroupId($data['group_id']);
+        }
         if (\array_key_exists('rates', $data)) {
             $values = array();
             foreach ($data['rates'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\TaxDataGrandTotalRatesInterface', 'json', $context);
             }
             $object->setRates($values);
-        }
-        if (\array_key_exists('group_id', $data)) {
-            $object->setGroupId($data['group_id']);
         }
         return $object;
     }
@@ -62,12 +61,12 @@ class TaxDataGrandTotalDetailsInterfaceNormalizer implements DenormalizerInterfa
     {
         $data = array();
         $data['amount'] = $object->getAmount();
+        $data['group_id'] = $object->getGroupId();
         $values = array();
         foreach ($object->getRates() as $value) {
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
         $data['rates'] = $values;
-        $data['group_id'] = $object->getGroupId();
         return $data;
     }
 }

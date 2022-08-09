@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataInvoiceItemExtensionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataInvoiceItemExtensionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataInvoiceItemExtensionInterface';
     }
@@ -40,26 +39,26 @@ class SalesDataInvoiceItemExtensionInterfaceNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('vertex_tax_codes', $data)) {
+        if (\array_key_exists('invoice_text_codes', $data)) {
             $values = array();
-            foreach ($data['vertex_tax_codes'] as $value) {
+            foreach ($data['invoice_text_codes'] as $value) {
                 $values[] = $value;
             }
-            $object->setVertexTaxCodes($values);
-        }
-        if (\array_key_exists('invoice_text_codes', $data)) {
-            $values_1 = array();
-            foreach ($data['invoice_text_codes'] as $value_1) {
-                $values_1[] = $value_1;
-            }
-            $object->setInvoiceTextCodes($values_1);
+            $object->setInvoiceTextCodes($values);
         }
         if (\array_key_exists('tax_codes', $data)) {
+            $values_1 = array();
+            foreach ($data['tax_codes'] as $value_1) {
+                $values_1[] = $value_1;
+            }
+            $object->setTaxCodes($values_1);
+        }
+        if (\array_key_exists('vertex_tax_codes', $data)) {
             $values_2 = array();
-            foreach ($data['tax_codes'] as $value_2) {
+            foreach ($data['vertex_tax_codes'] as $value_2) {
                 $values_2[] = $value_2;
             }
-            $object->setTaxCodes($values_2);
+            $object->setVertexTaxCodes($values_2);
         }
         return $object;
     }
@@ -69,26 +68,26 @@ class SalesDataInvoiceItemExtensionInterfaceNormalizer implements DenormalizerIn
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getVertexTaxCodes()) {
+        if (null !== $object->getInvoiceTextCodes()) {
             $values = array();
-            foreach ($object->getVertexTaxCodes() as $value) {
+            foreach ($object->getInvoiceTextCodes() as $value) {
                 $values[] = $value;
             }
-            $data['vertex_tax_codes'] = $values;
-        }
-        if (null !== $object->getInvoiceTextCodes()) {
-            $values_1 = array();
-            foreach ($object->getInvoiceTextCodes() as $value_1) {
-                $values_1[] = $value_1;
-            }
-            $data['invoice_text_codes'] = $values_1;
+            $data['invoice_text_codes'] = $values;
         }
         if (null !== $object->getTaxCodes()) {
+            $values_1 = array();
+            foreach ($object->getTaxCodes() as $value_1) {
+                $values_1[] = $value_1;
+            }
+            $data['tax_codes'] = $values_1;
+        }
+        if (null !== $object->getVertexTaxCodes()) {
             $values_2 = array();
-            foreach ($object->getTaxCodes() as $value_2) {
+            foreach ($object->getVertexTaxCodes() as $value_2) {
                 $values_2[] = $value_2;
             }
-            $data['tax_codes'] = $values_2;
+            $data['vertex_tax_codes'] = $values_2;
         }
         return $data;
     }

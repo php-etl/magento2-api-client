@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataProductRenderPriceInfoInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductRenderPriceInfoInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductRenderPriceInfoInterface';
     }
@@ -40,8 +39,14 @@ class CatalogDataProductRenderPriceInfoInterfaceNormalizer implements Denormaliz
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductRenderPriceInfoExtensionInterface', 'json', $context));
+        }
         if (\array_key_exists('final_price', $data)) {
             $object->setFinalPrice($data['final_price']);
+        }
+        if (\array_key_exists('formatted_prices', $data)) {
+            $object->setFormattedPrices($this->denormalizer->denormalize($data['formatted_prices'], 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductRenderFormattedPriceInfoInterface', 'json', $context));
         }
         if (\array_key_exists('max_price', $data)) {
             $object->setMaxPrice($data['max_price']);
@@ -49,23 +54,17 @@ class CatalogDataProductRenderPriceInfoInterfaceNormalizer implements Denormaliz
         if (\array_key_exists('max_regular_price', $data)) {
             $object->setMaxRegularPrice($data['max_regular_price']);
         }
-        if (\array_key_exists('minimal_regular_price', $data)) {
-            $object->setMinimalRegularPrice($data['minimal_regular_price']);
-        }
-        if (\array_key_exists('special_price', $data)) {
-            $object->setSpecialPrice($data['special_price']);
-        }
         if (\array_key_exists('minimal_price', $data)) {
             $object->setMinimalPrice($data['minimal_price']);
+        }
+        if (\array_key_exists('minimal_regular_price', $data)) {
+            $object->setMinimalRegularPrice($data['minimal_regular_price']);
         }
         if (\array_key_exists('regular_price', $data)) {
             $object->setRegularPrice($data['regular_price']);
         }
-        if (\array_key_exists('formatted_prices', $data)) {
-            $object->setFormattedPrices($this->denormalizer->denormalize($data['formatted_prices'], 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductRenderFormattedPriceInfoInterface', 'json', $context));
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductRenderPriceInfoExtensionInterface', 'json', $context));
+        if (\array_key_exists('special_price', $data)) {
+            $object->setSpecialPrice($data['special_price']);
         }
         return $object;
     }
@@ -75,17 +74,17 @@ class CatalogDataProductRenderPriceInfoInterfaceNormalizer implements Denormaliz
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['final_price'] = $object->getFinalPrice();
-        $data['max_price'] = $object->getMaxPrice();
-        $data['max_regular_price'] = $object->getMaxRegularPrice();
-        $data['minimal_regular_price'] = $object->getMinimalRegularPrice();
-        $data['special_price'] = $object->getSpecialPrice();
-        $data['minimal_price'] = $object->getMinimalPrice();
-        $data['regular_price'] = $object->getRegularPrice();
-        $data['formatted_prices'] = $this->normalizer->normalize($object->getFormattedPrices(), 'json', $context);
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
+        $data['final_price'] = $object->getFinalPrice();
+        $data['formatted_prices'] = $this->normalizer->normalize($object->getFormattedPrices(), 'json', $context);
+        $data['max_price'] = $object->getMaxPrice();
+        $data['max_regular_price'] = $object->getMaxRegularPrice();
+        $data['minimal_price'] = $object->getMinimalPrice();
+        $data['minimal_regular_price'] = $object->getMinimalRegularPrice();
+        $data['regular_price'] = $object->getRegularPrice();
+        $data['special_price'] = $object->getSpecialPrice();
         return $data;
     }
 }

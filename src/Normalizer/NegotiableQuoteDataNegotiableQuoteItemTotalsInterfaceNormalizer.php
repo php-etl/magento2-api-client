@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class NegotiableQuoteDataNegotiableQuoteItemTotalsInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\NegotiableQuoteDataNegotiableQuoteItemTotalsInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\NegotiableQuoteDataNegotiableQuoteItemTotalsInterface';
     }
@@ -40,17 +39,17 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterfaceNormalizer implements
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('cost', $data)) {
-            $object->setCost($data['cost']);
+        if (\array_key_exists('base_cart_price', $data)) {
+            $object->setBaseCartPrice($data['base_cart_price']);
         }
-        if (\array_key_exists('catalog_price', $data)) {
-            $object->setCatalogPrice($data['catalog_price']);
+        if (\array_key_exists('base_cart_price_incl_tax', $data)) {
+            $object->setBaseCartPriceInclTax($data['base_cart_price_incl_tax']);
+        }
+        if (\array_key_exists('base_cart_tax', $data)) {
+            $object->setBaseCartTax($data['base_cart_tax']);
         }
         if (\array_key_exists('base_catalog_price', $data)) {
             $object->setBaseCatalogPrice($data['base_catalog_price']);
-        }
-        if (\array_key_exists('catalog_price_incl_tax', $data)) {
-            $object->setCatalogPriceInclTax($data['catalog_price_incl_tax']);
         }
         if (\array_key_exists('base_catalog_price_incl_tax', $data)) {
             $object->setBaseCatalogPriceInclTax($data['base_catalog_price_incl_tax']);
@@ -58,20 +57,20 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterfaceNormalizer implements
         if (\array_key_exists('cart_price', $data)) {
             $object->setCartPrice($data['cart_price']);
         }
-        if (\array_key_exists('base_cart_price', $data)) {
-            $object->setBaseCartPrice($data['base_cart_price']);
+        if (\array_key_exists('cart_price_incl_tax', $data)) {
+            $object->setCartPriceInclTax($data['cart_price_incl_tax']);
         }
         if (\array_key_exists('cart_tax', $data)) {
             $object->setCartTax($data['cart_tax']);
         }
-        if (\array_key_exists('base_cart_tax', $data)) {
-            $object->setBaseCartTax($data['base_cart_tax']);
+        if (\array_key_exists('catalog_price', $data)) {
+            $object->setCatalogPrice($data['catalog_price']);
         }
-        if (\array_key_exists('cart_price_incl_tax', $data)) {
-            $object->setCartPriceInclTax($data['cart_price_incl_tax']);
+        if (\array_key_exists('catalog_price_incl_tax', $data)) {
+            $object->setCatalogPriceInclTax($data['catalog_price_incl_tax']);
         }
-        if (\array_key_exists('base_cart_price_incl_tax', $data)) {
-            $object->setBaseCartPriceInclTax($data['base_cart_price_incl_tax']);
+        if (\array_key_exists('cost', $data)) {
+            $object->setCost($data['cost']);
         }
         if (\array_key_exists('extension_attributes', $data)) {
             $object->setExtensionAttributes($data['extension_attributes']);
@@ -84,17 +83,17 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterfaceNormalizer implements
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['cost'] = $object->getCost();
-        $data['catalog_price'] = $object->getCatalogPrice();
+        $data['base_cart_price'] = $object->getBaseCartPrice();
+        $data['base_cart_price_incl_tax'] = $object->getBaseCartPriceInclTax();
+        $data['base_cart_tax'] = $object->getBaseCartTax();
         $data['base_catalog_price'] = $object->getBaseCatalogPrice();
-        $data['catalog_price_incl_tax'] = $object->getCatalogPriceInclTax();
         $data['base_catalog_price_incl_tax'] = $object->getBaseCatalogPriceInclTax();
         $data['cart_price'] = $object->getCartPrice();
-        $data['base_cart_price'] = $object->getBaseCartPrice();
-        $data['cart_tax'] = $object->getCartTax();
-        $data['base_cart_tax'] = $object->getBaseCartTax();
         $data['cart_price_incl_tax'] = $object->getCartPriceInclTax();
-        $data['base_cart_price_incl_tax'] = $object->getBaseCartPriceInclTax();
+        $data['cart_tax'] = $object->getCartTax();
+        $data['catalog_price'] = $object->getCatalogPrice();
+        $data['catalog_price_incl_tax'] = $object->getCatalogPriceInclTax();
+        $data['cost'] = $object->getCost();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }

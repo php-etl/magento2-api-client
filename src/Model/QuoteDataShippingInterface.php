@@ -11,23 +11,23 @@ class QuoteDataShippingInterface
      */
     protected $address;
     /**
-     * Shipping method
-     *
-     * @var string
-     */
-    protected $method;
-    /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\ShippingInterface
      *
      * @var mixed
      */
     protected $extensionAttributes;
     /**
+     * Shipping method
+     *
+     * @var string
+     */
+    protected $method;
+    /**
      * Interface AddressInterface
      *
      * @return QuoteDataAddressInterface
      */
-    public function getAddress(): QuoteDataAddressInterface
+    public function getAddress() : QuoteDataAddressInterface
     {
         return $this->address;
     }
@@ -38,30 +38,9 @@ class QuoteDataShippingInterface
      *
      * @return self
      */
-    public function setAddress(QuoteDataAddressInterface $address): self
+    public function setAddress(QuoteDataAddressInterface $address) : self
     {
         $this->address = $address;
-        return $this;
-    }
-    /**
-     * Shipping method
-     *
-     * @return string
-     */
-    public function getMethod(): string
-    {
-        return $this->method;
-    }
-    /**
-     * Shipping method
-     *
-     * @param string $method
-     *
-     * @return self
-     */
-    public function setMethod(string $method): self
-    {
-        $this->method = $method;
         return $this;
     }
     /**
@@ -80,9 +59,30 @@ class QuoteDataShippingInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Shipping method
+     *
+     * @return string
+     */
+    public function getMethod() : string
+    {
+        return $this->method;
+    }
+    /**
+     * Shipping method
+     *
+     * @param string $method
+     *
+     * @return self
+     */
+    public function setMethod(string $method) : self
+    {
+        $this->method = $method;
         return $this;
     }
 }

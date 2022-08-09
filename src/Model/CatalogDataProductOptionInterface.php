@@ -15,7 +15,7 @@ class CatalogDataProductOptionInterface
      *
      * @return CatalogDataProductOptionExtensionInterface
      */
-    public function getExtensionAttributes(): CatalogDataProductOptionExtensionInterface
+    public function getExtensionAttributes() : CatalogDataProductOptionExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -26,7 +26,7 @@ class CatalogDataProductOptionInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(CatalogDataProductOptionExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(CatalogDataProductOptionExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

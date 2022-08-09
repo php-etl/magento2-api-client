@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class FrameworkSearchAggregationInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\FrameworkSearchAggregationInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\FrameworkSearchAggregationInterface';
     }
@@ -40,19 +39,19 @@ class FrameworkSearchAggregationInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('buckets', $data)) {
-            $values = array();
-            foreach ($data['buckets'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\FrameworkSearchBucketInterface', 'json', $context);
-            }
-            $object->setBuckets($values);
-        }
         if (\array_key_exists('bucket_names', $data)) {
-            $values_1 = array();
-            foreach ($data['bucket_names'] as $value_1) {
-                $values_1[] = $value_1;
+            $values = array();
+            foreach ($data['bucket_names'] as $value) {
+                $values[] = $value;
             }
-            $object->setBucketNames($values_1);
+            $object->setBucketNames($values);
+        }
+        if (\array_key_exists('buckets', $data)) {
+            $values_1 = array();
+            foreach ($data['buckets'] as $value_1) {
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2\\Model\\FrameworkSearchBucketInterface', 'json', $context);
+            }
+            $object->setBuckets($values_1);
         }
         return $object;
     }
@@ -63,15 +62,15 @@ class FrameworkSearchAggregationInterfaceNormalizer implements DenormalizerInter
     {
         $data = array();
         $values = array();
-        foreach ($object->getBuckets() as $value) {
-            $values[] = $this->normalizer->normalize($value, 'json', $context);
+        foreach ($object->getBucketNames() as $value) {
+            $values[] = $value;
         }
-        $data['buckets'] = $values;
+        $data['bucket_names'] = $values;
         $values_1 = array();
-        foreach ($object->getBucketNames() as $value_1) {
-            $values_1[] = $value_1;
+        foreach ($object->getBuckets() as $value_1) {
+            $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
         }
-        $data['bucket_names'] = $values_1;
+        $data['buckets'] = $values_1;
         return $data;
     }
 }

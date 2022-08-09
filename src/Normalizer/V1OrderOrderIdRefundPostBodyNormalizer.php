@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1OrderOrderIdRefundPostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\V1OrderOrderIdRefundPostBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\V1OrderOrderIdRefundPostBody';
     }
@@ -40,6 +39,15 @@ class V1OrderOrderIdRefundPostBodyNormalizer implements DenormalizerInterface, N
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('appendComment', $data)) {
+            $object->setAppendComment($data['appendComment']);
+        }
+        if (\array_key_exists('arguments', $data)) {
+            $object->setArguments($this->denormalizer->denormalize($data['arguments'], 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoCreationArgumentsInterface', 'json', $context));
+        }
+        if (\array_key_exists('comment', $data)) {
+            $object->setComment($this->denormalizer->denormalize($data['comment'], 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoCommentCreationInterface', 'json', $context));
+        }
         if (\array_key_exists('items', $data)) {
             $values = array();
             foreach ($data['items'] as $value) {
@@ -50,15 +58,6 @@ class V1OrderOrderIdRefundPostBodyNormalizer implements DenormalizerInterface, N
         if (\array_key_exists('notify', $data)) {
             $object->setNotify($data['notify']);
         }
-        if (\array_key_exists('appendComment', $data)) {
-            $object->setAppendComment($data['appendComment']);
-        }
-        if (\array_key_exists('comment', $data)) {
-            $object->setComment($this->denormalizer->denormalize($data['comment'], 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoCommentCreationInterface', 'json', $context));
-        }
-        if (\array_key_exists('arguments', $data)) {
-            $object->setArguments($this->denormalizer->denormalize($data['arguments'], 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoCreationArgumentsInterface', 'json', $context));
-        }
         return $object;
     }
     /**
@@ -67,6 +66,15 @@ class V1OrderOrderIdRefundPostBodyNormalizer implements DenormalizerInterface, N
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
+        if (null !== $object->getAppendComment()) {
+            $data['appendComment'] = $object->getAppendComment();
+        }
+        if (null !== $object->getArguments()) {
+            $data['arguments'] = $this->normalizer->normalize($object->getArguments(), 'json', $context);
+        }
+        if (null !== $object->getComment()) {
+            $data['comment'] = $this->normalizer->normalize($object->getComment(), 'json', $context);
+        }
         if (null !== $object->getItems()) {
             $values = array();
             foreach ($object->getItems() as $value) {
@@ -76,15 +84,6 @@ class V1OrderOrderIdRefundPostBodyNormalizer implements DenormalizerInterface, N
         }
         if (null !== $object->getNotify()) {
             $data['notify'] = $object->getNotify();
-        }
-        if (null !== $object->getAppendComment()) {
-            $data['appendComment'] = $object->getAppendComment();
-        }
-        if (null !== $object->getComment()) {
-            $data['comment'] = $this->normalizer->normalize($object->getComment(), 'json', $context);
-        }
-        if (null !== $object->getArguments()) {
-            $data['arguments'] = $this->normalizer->normalize($object->getArguments(), 'json', $context);
         }
         return $data;
     }

@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class VaultDataPaymentTokenInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\VaultDataPaymentTokenInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\VaultDataPaymentTokenInterface';
     }
@@ -40,23 +39,14 @@ class VaultDataPaymentTokenInterfaceNormalizer implements DenormalizerInterface,
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('entity_id', $data)) {
-            $object->setEntityId($data['entity_id']);
+        if (\array_key_exists('created_at', $data)) {
+            $object->setCreatedAt($data['created_at']);
         }
         if (\array_key_exists('customer_id', $data)) {
             $object->setCustomerId($data['customer_id']);
         }
-        if (\array_key_exists('public_hash', $data)) {
-            $object->setPublicHash($data['public_hash']);
-        }
-        if (\array_key_exists('payment_method_code', $data)) {
-            $object->setPaymentMethodCode($data['payment_method_code']);
-        }
-        if (\array_key_exists('type', $data)) {
-            $object->setType($data['type']);
-        }
-        if (\array_key_exists('created_at', $data)) {
-            $object->setCreatedAt($data['created_at']);
+        if (\array_key_exists('entity_id', $data)) {
+            $object->setEntityId($data['entity_id']);
         }
         if (\array_key_exists('expires_at', $data)) {
             $object->setExpiresAt($data['expires_at']);
@@ -64,14 +54,23 @@ class VaultDataPaymentTokenInterfaceNormalizer implements DenormalizerInterface,
         if (\array_key_exists('gateway_token', $data)) {
             $object->setGatewayToken($data['gateway_token']);
         }
-        if (\array_key_exists('token_details', $data)) {
-            $object->setTokenDetails($data['token_details']);
-        }
         if (\array_key_exists('is_active', $data)) {
             $object->setIsActive($data['is_active']);
         }
         if (\array_key_exists('is_visible', $data)) {
             $object->setIsVisible($data['is_visible']);
+        }
+        if (\array_key_exists('payment_method_code', $data)) {
+            $object->setPaymentMethodCode($data['payment_method_code']);
+        }
+        if (\array_key_exists('public_hash', $data)) {
+            $object->setPublicHash($data['public_hash']);
+        }
+        if (\array_key_exists('token_details', $data)) {
+            $object->setTokenDetails($data['token_details']);
+        }
+        if (\array_key_exists('type', $data)) {
+            $object->setType($data['type']);
         }
         return $object;
     }
@@ -81,25 +80,25 @@ class VaultDataPaymentTokenInterfaceNormalizer implements DenormalizerInterface,
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getEntityId()) {
-            $data['entity_id'] = $object->getEntityId();
+        if (null !== $object->getCreatedAt()) {
+            $data['created_at'] = $object->getCreatedAt();
         }
         if (null !== $object->getCustomerId()) {
             $data['customer_id'] = $object->getCustomerId();
         }
-        $data['public_hash'] = $object->getPublicHash();
-        $data['payment_method_code'] = $object->getPaymentMethodCode();
-        $data['type'] = $object->getType();
-        if (null !== $object->getCreatedAt()) {
-            $data['created_at'] = $object->getCreatedAt();
+        if (null !== $object->getEntityId()) {
+            $data['entity_id'] = $object->getEntityId();
         }
         if (null !== $object->getExpiresAt()) {
             $data['expires_at'] = $object->getExpiresAt();
         }
         $data['gateway_token'] = $object->getGatewayToken();
-        $data['token_details'] = $object->getTokenDetails();
         $data['is_active'] = $object->getIsActive();
         $data['is_visible'] = $object->getIsVisible();
+        $data['payment_method_code'] = $object->getPaymentMethodCode();
+        $data['public_hash'] = $object->getPublicHash();
+        $data['token_details'] = $object->getTokenDetails();
+        $data['type'] = $object->getType();
         return $data;
     }
 }

@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class QuoteDataAddressExtensionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\QuoteDataAddressExtensionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\QuoteDataAddressExtensionInterface';
     }
@@ -40,15 +39,15 @@ class QuoteDataAddressExtensionInterfaceNormalizer implements DenormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('gift_registry_id', $data)) {
-            $object->setGiftRegistryId($data['gift_registry_id']);
-        }
         if (\array_key_exists('checkout_fields', $data)) {
             $values = array();
             foreach ($data['checkout_fields'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setCheckoutFields($values);
+        }
+        if (\array_key_exists('gift_registry_id', $data)) {
+            $object->setGiftRegistryId($data['gift_registry_id']);
         }
         return $object;
     }
@@ -58,15 +57,15 @@ class QuoteDataAddressExtensionInterfaceNormalizer implements DenormalizerInterf
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getGiftRegistryId()) {
-            $data['gift_registry_id'] = $object->getGiftRegistryId();
-        }
         if (null !== $object->getCheckoutFields()) {
             $values = array();
             foreach ($object->getCheckoutFields() as $value) {
                 $values[] = $this->normalizer->normalize($value, 'json', $context);
             }
             $data['checkout_fields'] = $values;
+        }
+        if (null !== $object->getGiftRegistryId()) {
+            $data['gift_registry_id'] = $object->getGiftRegistryId();
         }
         return $data;
     }

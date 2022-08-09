@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class QuoteDataCartItemInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\QuoteDataCartItemInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\QuoteDataCartItemInterface';
     }
@@ -40,14 +39,11 @@ class QuoteDataCartItemInterfaceNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataCartItemExtensionInterface', 'json', $context));
+        }
         if (\array_key_exists('item_id', $data)) {
             $object->setItemId($data['item_id']);
-        }
-        if (\array_key_exists('sku', $data)) {
-            $object->setSku($data['sku']);
-        }
-        if (\array_key_exists('qty', $data)) {
-            $object->setQty($data['qty']);
         }
         if (\array_key_exists('name', $data)) {
             $object->setName($data['name']);
@@ -55,17 +51,20 @@ class QuoteDataCartItemInterfaceNormalizer implements DenormalizerInterface, Nor
         if (\array_key_exists('price', $data)) {
             $object->setPrice($data['price']);
         }
+        if (\array_key_exists('product_option', $data)) {
+            $object->setProductOption($this->denormalizer->denormalize($data['product_option'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataProductOptionInterface', 'json', $context));
+        }
         if (\array_key_exists('product_type', $data)) {
             $object->setProductType($data['product_type']);
+        }
+        if (\array_key_exists('qty', $data)) {
+            $object->setQty($data['qty']);
         }
         if (\array_key_exists('quote_id', $data)) {
             $object->setQuoteId($data['quote_id']);
         }
-        if (\array_key_exists('product_option', $data)) {
-            $object->setProductOption($this->denormalizer->denormalize($data['product_option'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataProductOptionInterface', 'json', $context));
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataCartItemExtensionInterface', 'json', $context));
+        if (\array_key_exists('sku', $data)) {
+            $object->setSku($data['sku']);
         }
         return $object;
     }
@@ -75,28 +74,28 @@ class QuoteDataCartItemInterfaceNormalizer implements DenormalizerInterface, Nor
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
+        }
         if (null !== $object->getItemId()) {
             $data['item_id'] = $object->getItemId();
         }
-        if (null !== $object->getSku()) {
-            $data['sku'] = $object->getSku();
-        }
-        $data['qty'] = $object->getQty();
         if (null !== $object->getName()) {
             $data['name'] = $object->getName();
         }
         if (null !== $object->getPrice()) {
             $data['price'] = $object->getPrice();
         }
-        if (null !== $object->getProductType()) {
-            $data['product_type'] = $object->getProductType();
-        }
-        $data['quote_id'] = $object->getQuoteId();
         if (null !== $object->getProductOption()) {
             $data['product_option'] = $this->normalizer->normalize($object->getProductOption(), 'json', $context);
         }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
+        if (null !== $object->getProductType()) {
+            $data['product_type'] = $object->getProductType();
+        }
+        $data['qty'] = $object->getQty();
+        $data['quote_id'] = $object->getQuoteId();
+        if (null !== $object->getSku()) {
+            $data['sku'] = $object->getSku();
         }
         return $data;
     }

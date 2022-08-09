@@ -5,12 +5,6 @@ namespace Kiboko\Magento\V2\Model;
 class BundleDataOptionTypeInterface
 {
     /**
-     * Type label
-     *
-     * @var string
-     */
-    protected $label;
-    /**
      * Type code
      *
      * @var string
@@ -25,30 +19,15 @@ class BundleDataOptionTypeInterface
     /**
      * Type label
      *
-     * @return string
+     * @var string
      */
-    public function getLabel(): string
-    {
-        return $this->label;
-    }
-    /**
-     * Type label
-     *
-     * @param string $label
-     *
-     * @return self
-     */
-    public function setLabel(string $label): self
-    {
-        $this->label = $label;
-        return $this;
-    }
+    protected $label;
     /**
      * Type code
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -59,7 +38,7 @@ class BundleDataOptionTypeInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
@@ -80,9 +59,30 @@ class BundleDataOptionTypeInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Type label
+     *
+     * @return string
+     */
+    public function getLabel() : string
+    {
+        return $this->label;
+    }
+    /**
+     * Type label
+     *
+     * @param string $label
+     *
+     * @return self
+     */
+    public function setLabel(string $label) : self
+    {
+        $this->label = $label;
         return $this;
     }
 }

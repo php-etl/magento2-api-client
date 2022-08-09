@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class QuoteDataTotalSegmentInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalSegmentInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalSegmentInterface';
     }
@@ -40,20 +39,20 @@ class QuoteDataTotalSegmentInterfaceNormalizer implements DenormalizerInterface,
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('area', $data)) {
+            $object->setArea($data['area']);
+        }
         if (\array_key_exists('code', $data)) {
             $object->setCode($data['code']);
+        }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalSegmentExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('title', $data)) {
             $object->setTitle($data['title']);
         }
         if (\array_key_exists('value', $data)) {
             $object->setValue($data['value']);
-        }
-        if (\array_key_exists('area', $data)) {
-            $object->setArea($data['area']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalSegmentExtensionInterface', 'json', $context));
         }
         return $object;
     }
@@ -63,17 +62,17 @@ class QuoteDataTotalSegmentInterfaceNormalizer implements DenormalizerInterface,
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
+        if (null !== $object->getArea()) {
+            $data['area'] = $object->getArea();
+        }
         $data['code'] = $object->getCode();
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
+        }
         if (null !== $object->getTitle()) {
             $data['title'] = $object->getTitle();
         }
         $data['value'] = $object->getValue();
-        if (null !== $object->getArea()) {
-            $data['area'] = $object->getArea();
-        }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
-        }
         return $data;
     }
 }

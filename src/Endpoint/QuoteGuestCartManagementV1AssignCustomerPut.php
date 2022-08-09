@@ -4,32 +4,38 @@ namespace Kiboko\Magento\V2\Endpoint;
 
 class QuoteGuestCartManagementV1AssignCustomerPut extends \Kiboko\Magento\V2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\V2\Runtime\Client\EndpointTrait;
     protected $cartId;
     /**
      * Assign a specified customer to a specified shopping cart.
      *
      * @param string $cartId The cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdPutBody $quoteGuestCartManagementV1AssignCustomerPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdPutBody $requestBody 
      */
-    public function __construct(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdPutBody $quoteGuestCartManagementV1AssignCustomerPutBody)
+    public function __construct(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdPutBody $requestBody = null)
     {
         $this->cartId = $cartId;
-        $this->body = $quoteGuestCartManagementV1AssignCustomerPutBody;
+        $this->body = $requestBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\V2\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'PUT';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{cartId}'), array($this->cartId), '/V1/guest-carts/{cartId}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
-        return $this->getSerializedBody($serializer);
+        if ($this->body instanceof \Kiboko\Magento\V2\Model\V1GuestCartsCartIdPutBody) {
+            return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
+        }
+        if ($this->body instanceof \Kiboko\Magento\V2\Model\V1GuestCartsCartIdPutBody) {
+            return array(array('Content-Type' => array('application/xml')), $this->body);
+        }
+        return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -42,15 +48,17 @@ class QuoteGuestCartManagementV1AssignCustomerPut extends \Kiboko\Magento\V2\Run
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (200 === $status) {
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             return json_decode($body);
         }
-        if (401 === $status) {
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \Kiboko\Magento\V2\Exception\QuoteGuestCartManagementV1AssignCustomerPutUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2\\Model\\ErrorResponse', 'json'));
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\V2\\Model\\ErrorResponse', 'json');
+        if (mb_strpos($contentType, 'application/json') !== false) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2\\Model\\ErrorResponse', 'json');
+        }
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

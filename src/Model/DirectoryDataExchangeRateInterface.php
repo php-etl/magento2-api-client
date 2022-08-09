@@ -11,23 +11,23 @@ class DirectoryDataExchangeRateInterface
      */
     protected $currencyTo;
     /**
-     * The exchange rate for the associated currency and the store's base currency.
-     *
-     * @var float
-     */
-    protected $rate;
-    /**
      * ExtensionInterface class for @see \Magento\Directory\Api\Data\ExchangeRateInterface
      *
      * @var mixed
      */
     protected $extensionAttributes;
     /**
+     * The exchange rate for the associated currency and the store's base currency.
+     *
+     * @var float
+     */
+    protected $rate;
+    /**
      * The currency code associated with the exchange rate.
      *
      * @return string
      */
-    public function getCurrencyTo(): string
+    public function getCurrencyTo() : string
     {
         return $this->currencyTo;
     }
@@ -38,30 +38,9 @@ class DirectoryDataExchangeRateInterface
      *
      * @return self
      */
-    public function setCurrencyTo(string $currencyTo): self
+    public function setCurrencyTo(string $currencyTo) : self
     {
         $this->currencyTo = $currencyTo;
-        return $this;
-    }
-    /**
-     * The exchange rate for the associated currency and the store's base currency.
-     *
-     * @return float
-     */
-    public function getRate(): float
-    {
-        return $this->rate;
-    }
-    /**
-     * The exchange rate for the associated currency and the store's base currency.
-     *
-     * @param float $rate
-     *
-     * @return self
-     */
-    public function setRate(float $rate): self
-    {
-        $this->rate = $rate;
         return $this;
     }
     /**
@@ -80,9 +59,30 @@ class DirectoryDataExchangeRateInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * The exchange rate for the associated currency and the store's base currency.
+     *
+     * @return float
+     */
+    public function getRate() : float
+    {
+        return $this->rate;
+    }
+    /**
+     * The exchange rate for the associated currency and the store's base currency.
+     *
+     * @param float $rate
+     *
+     * @return self
+     */
+    public function setRate(float $rate) : self
+    {
+        $this->rate = $rate;
         return $this;
     }
 }

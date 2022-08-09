@@ -15,7 +15,7 @@ class V1GuestCartsCartIdGiftMessagePostBody
      *
      * @return GiftMessageDataMessageInterface
      */
-    public function getGiftMessage(): GiftMessageDataMessageInterface
+    public function getGiftMessage() : GiftMessageDataMessageInterface
     {
         return $this->giftMessage;
     }
@@ -26,7 +26,7 @@ class V1GuestCartsCartIdGiftMessagePostBody
      *
      * @return self
      */
-    public function setGiftMessage(GiftMessageDataMessageInterface $giftMessage): self
+    public function setGiftMessage(GiftMessageDataMessageInterface $giftMessage) : self
     {
         $this->giftMessage = $giftMessage;
         return $this;

@@ -5,18 +5,6 @@ namespace Kiboko\Magento\V2\Model;
 class CatalogDataCategoryProductLinkInterface
 {
     /**
-     *
-     *
-     * @var string
-     */
-    protected $sku;
-    /**
-     *
-     *
-     * @var int
-     */
-    protected $position;
-    /**
      * Category id
      *
      * @var string
@@ -29,53 +17,23 @@ class CatalogDataCategoryProductLinkInterface
      */
     protected $extensionAttributes;
     /**
+     * 
      *
-     *
-     * @return string
+     * @var int
      */
-    public function getSku(): string
-    {
-        return $this->sku;
-    }
+    protected $position;
     /**
+     * 
      *
-     *
-     * @param string $sku
-     *
-     * @return self
+     * @var string
      */
-    public function setSku(string $sku): self
-    {
-        $this->sku = $sku;
-        return $this;
-    }
-    /**
-     *
-     *
-     * @return int
-     */
-    public function getPosition(): int
-    {
-        return $this->position;
-    }
-    /**
-     *
-     *
-     * @param int $position
-     *
-     * @return self
-     */
-    public function setPosition(int $position): self
-    {
-        $this->position = $position;
-        return $this;
-    }
+    protected $sku;
     /**
      * Category id
      *
      * @return string
      */
-    public function getCategoryId(): string
+    public function getCategoryId() : string
     {
         return $this->categoryId;
     }
@@ -86,7 +44,7 @@ class CatalogDataCategoryProductLinkInterface
      *
      * @return self
      */
-    public function setCategoryId(string $categoryId): self
+    public function setCategoryId(string $categoryId) : self
     {
         $this->categoryId = $categoryId;
         return $this;
@@ -107,9 +65,51 @@ class CatalogDataCategoryProductLinkInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return int
+     */
+    public function getPosition() : int
+    {
+        return $this->position;
+    }
+    /**
+     * 
+     *
+     * @param int $position
+     *
+     * @return self
+     */
+    public function setPosition(int $position) : self
+    {
+        $this->position = $position;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getSku() : string
+    {
+        return $this->sku;
+    }
+    /**
+     * 
+     *
+     * @param string $sku
+     *
+     * @return self
+     */
+    public function setSku(string $sku) : self
+    {
+        $this->sku = $sku;
         return $this;
     }
 }

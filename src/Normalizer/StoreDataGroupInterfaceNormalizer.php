@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class StoreDataGroupInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\StoreDataGroupInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\StoreDataGroupInterface';
     }
@@ -40,26 +39,26 @@ class StoreDataGroupInterfaceNormalizer implements DenormalizerInterface, Normal
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('id', $data)) {
-            $object->setId($data['id']);
-        }
-        if (\array_key_exists('website_id', $data)) {
-            $object->setWebsiteId($data['website_id']);
-        }
-        if (\array_key_exists('root_category_id', $data)) {
-            $object->setRootCategoryId($data['root_category_id']);
+        if (\array_key_exists('code', $data)) {
+            $object->setCode($data['code']);
         }
         if (\array_key_exists('default_store_id', $data)) {
             $object->setDefaultStoreId($data['default_store_id']);
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
+        }
+        if (\array_key_exists('id', $data)) {
+            $object->setId($data['id']);
+        }
         if (\array_key_exists('name', $data)) {
             $object->setName($data['name']);
         }
-        if (\array_key_exists('code', $data)) {
-            $object->setCode($data['code']);
+        if (\array_key_exists('root_category_id', $data)) {
+            $object->setRootCategoryId($data['root_category_id']);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
+        if (\array_key_exists('website_id', $data)) {
+            $object->setWebsiteId($data['website_id']);
         }
         return $object;
     }
@@ -69,15 +68,15 @@ class StoreDataGroupInterfaceNormalizer implements DenormalizerInterface, Normal
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['id'] = $object->getId();
-        $data['website_id'] = $object->getWebsiteId();
-        $data['root_category_id'] = $object->getRootCategoryId();
-        $data['default_store_id'] = $object->getDefaultStoreId();
-        $data['name'] = $object->getName();
         $data['code'] = $object->getCode();
+        $data['default_store_id'] = $object->getDefaultStoreId();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
+        $data['id'] = $object->getId();
+        $data['name'] = $object->getName();
+        $data['root_category_id'] = $object->getRootCategoryId();
+        $data['website_id'] = $object->getWebsiteId();
         return $data;
     }
 }

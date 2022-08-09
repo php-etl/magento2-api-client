@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CustomerDataValidationResultsInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CustomerDataValidationResultsInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CustomerDataValidationResultsInterface';
     }
@@ -40,15 +39,15 @@ class CustomerDataValidationResultsInterfaceNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('valid', $data)) {
-            $object->setValid($data['valid']);
-        }
         if (\array_key_exists('messages', $data)) {
             $values = array();
             foreach ($data['messages'] as $value) {
                 $values[] = $value;
             }
             $object->setMessages($values);
+        }
+        if (\array_key_exists('valid', $data)) {
+            $object->setValid($data['valid']);
         }
         return $object;
     }
@@ -58,12 +57,12 @@ class CustomerDataValidationResultsInterfaceNormalizer implements DenormalizerIn
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['valid'] = $object->getValid();
         $values = array();
         foreach ($object->getMessages() as $value) {
             $values[] = $value;
         }
         $data['messages'] = $values;
+        $data['valid'] = $object->getValid();
         return $data;
     }
 }

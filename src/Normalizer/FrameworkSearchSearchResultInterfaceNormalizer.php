@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class FrameworkSearchSearchResultInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\FrameworkSearchSearchResultInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\FrameworkSearchSearchResultInterface';
     }
@@ -40,15 +39,15 @@ class FrameworkSearchSearchResultInterfaceNormalizer implements DenormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('aggregations', $data)) {
+            $object->setAggregations($this->denormalizer->denormalize($data['aggregations'], 'Kiboko\\Magento\\V2\\Model\\FrameworkSearchAggregationInterface', 'json', $context));
+        }
         if (\array_key_exists('items', $data)) {
             $values = array();
             foreach ($data['items'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\FrameworkSearchDocumentInterface', 'json', $context);
             }
             $object->setItems($values);
-        }
-        if (\array_key_exists('aggregations', $data)) {
-            $object->setAggregations($this->denormalizer->denormalize($data['aggregations'], 'Kiboko\\Magento\\V2\\Model\\FrameworkSearchAggregationInterface', 'json', $context));
         }
         if (\array_key_exists('search_criteria', $data)) {
             $object->setSearchCriteria($this->denormalizer->denormalize($data['search_criteria'], 'Kiboko\\Magento\\V2\\Model\\FrameworkSearchSearchCriteriaInterface', 'json', $context));
@@ -64,12 +63,12 @@ class FrameworkSearchSearchResultInterfaceNormalizer implements DenormalizerInte
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
+        $data['aggregations'] = $this->normalizer->normalize($object->getAggregations(), 'json', $context);
         $values = array();
         foreach ($object->getItems() as $value) {
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
         $data['items'] = $values;
-        $data['aggregations'] = $this->normalizer->normalize($object->getAggregations(), 'json', $context);
         $data['search_criteria'] = $this->normalizer->normalize($object->getSearchCriteria(), 'json', $context);
         $data['total_count'] = $object->getTotalCount();
         return $data;

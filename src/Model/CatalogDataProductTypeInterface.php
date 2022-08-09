@@ -5,11 +5,11 @@ namespace Kiboko\Magento\V2\Model;
 class CatalogDataProductTypeInterface
 {
     /**
-     * Product type code
+     * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductTypeInterface
      *
-     * @var string
+     * @var mixed
      */
-    protected $name;
+    protected $extensionAttributes;
     /**
      * Product type label
      *
@@ -17,53 +17,11 @@ class CatalogDataProductTypeInterface
      */
     protected $label;
     /**
-     * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductTypeInterface
-     *
-     * @var mixed
-     */
-    protected $extensionAttributes;
-    /**
      * Product type code
      *
-     * @return string
+     * @var string
      */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-    /**
-     * Product type code
-     *
-     * @param string $name
-     *
-     * @return self
-     */
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-        return $this;
-    }
-    /**
-     * Product type label
-     *
-     * @return string
-     */
-    public function getLabel(): string
-    {
-        return $this->label;
-    }
-    /**
-     * Product type label
-     *
-     * @param string $label
-     *
-     * @return self
-     */
-    public function setLabel(string $label): self
-    {
-        $this->label = $label;
-        return $this;
-    }
+    protected $name;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductTypeInterface
      *
@@ -80,9 +38,51 @@ class CatalogDataProductTypeInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Product type label
+     *
+     * @return string
+     */
+    public function getLabel() : string
+    {
+        return $this->label;
+    }
+    /**
+     * Product type label
+     *
+     * @param string $label
+     *
+     * @return self
+     */
+    public function setLabel(string $label) : self
+    {
+        $this->label = $label;
+        return $this;
+    }
+    /**
+     * Product type code
+     *
+     * @return string
+     */
+    public function getName() : string
+    {
+        return $this->name;
+    }
+    /**
+     * Product type code
+     *
+     * @param string $name
+     *
+     * @return self
+     */
+    public function setName(string $name) : self
+    {
+        $this->name = $name;
         return $this;
     }
 }

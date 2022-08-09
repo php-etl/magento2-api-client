@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class TemandoShippingDataCollectionPointOrderCollectionPointInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\TemandoShippingDataCollectionPointOrderCollectionPointInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\TemandoShippingDataCollectionPointOrderCollectionPointInterface';
     }
@@ -40,26 +39,26 @@ class TemandoShippingDataCollectionPointOrderCollectionPointInterfaceNormalizer 
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('recipient_address_id', $data)) {
-            $object->setRecipientAddressId($data['recipient_address_id']);
+        if (\array_key_exists('city', $data)) {
+            $object->setCity($data['city']);
         }
         if (\array_key_exists('collection_point_id', $data)) {
             $object->setCollectionPointId($data['collection_point_id']);
         }
-        if (\array_key_exists('name', $data)) {
-            $object->setName($data['name']);
-        }
         if (\array_key_exists('country', $data)) {
             $object->setCountry($data['country']);
         }
-        if (\array_key_exists('region', $data)) {
-            $object->setRegion($data['region']);
+        if (\array_key_exists('name', $data)) {
+            $object->setName($data['name']);
         }
         if (\array_key_exists('postcode', $data)) {
             $object->setPostcode($data['postcode']);
         }
-        if (\array_key_exists('city', $data)) {
-            $object->setCity($data['city']);
+        if (\array_key_exists('recipient_address_id', $data)) {
+            $object->setRecipientAddressId($data['recipient_address_id']);
+        }
+        if (\array_key_exists('region', $data)) {
+            $object->setRegion($data['region']);
         }
         if (\array_key_exists('street', $data)) {
             $values = array();
@@ -76,13 +75,13 @@ class TemandoShippingDataCollectionPointOrderCollectionPointInterfaceNormalizer 
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['recipient_address_id'] = $object->getRecipientAddressId();
-        $data['collection_point_id'] = $object->getCollectionPointId();
-        $data['name'] = $object->getName();
-        $data['country'] = $object->getCountry();
-        $data['region'] = $object->getRegion();
-        $data['postcode'] = $object->getPostcode();
         $data['city'] = $object->getCity();
+        $data['collection_point_id'] = $object->getCollectionPointId();
+        $data['country'] = $object->getCountry();
+        $data['name'] = $object->getName();
+        $data['postcode'] = $object->getPostcode();
+        $data['recipient_address_id'] = $object->getRecipientAddressId();
+        $data['region'] = $object->getRegion();
         $values = array();
         foreach ($object->getStreet() as $value) {
             $values[] = $value;

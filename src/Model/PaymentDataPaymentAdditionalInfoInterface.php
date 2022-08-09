@@ -21,7 +21,7 @@ class PaymentDataPaymentAdditionalInfoInterface
      *
      * @return string
      */
-    public function getKey(): string
+    public function getKey() : string
     {
         return $this->key;
     }
@@ -32,7 +32,7 @@ class PaymentDataPaymentAdditionalInfoInterface
      *
      * @return self
      */
-    public function setKey(string $key): self
+    public function setKey(string $key) : self
     {
         $this->key = $key;
         return $this;
@@ -42,7 +42,7 @@ class PaymentDataPaymentAdditionalInfoInterface
      *
      * @return string
      */
-    public function getValue(): string
+    public function getValue() : string
     {
         return $this->value;
     }
@@ -53,7 +53,7 @@ class PaymentDataPaymentAdditionalInfoInterface
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(string $value) : self
     {
         $this->value = $value;
         return $this;

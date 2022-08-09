@@ -5,17 +5,23 @@ namespace Kiboko\Magento\V2\Model;
 class CustomerDataGroupInterface
 {
     /**
-     * Id
-     *
-     * @var int
-     */
-    protected $id;
-    /**
      * Code
      *
      * @var string
      */
     protected $code;
+    /**
+     * ExtensionInterface class for @see \Magento\Customer\Api\Data\GroupInterface
+     *
+     * @var mixed
+     */
+    protected $extensionAttributes;
+    /**
+     * Id
+     *
+     * @var int
+     */
+    protected $id;
     /**
      * Tax class id
      *
@@ -29,38 +35,11 @@ class CustomerDataGroupInterface
      */
     protected $taxClassName;
     /**
-     * ExtensionInterface class for @see \Magento\Customer\Api\Data\GroupInterface
-     *
-     * @var mixed
-     */
-    protected $extensionAttributes;
-    /**
-     * Id
-     *
-     * @return int
-     */
-    public function getId(): int
-    {
-        return $this->id;
-    }
-    /**
-     * Id
-     *
-     * @param int $id
-     *
-     * @return self
-     */
-    public function setId(int $id): self
-    {
-        $this->id = $id;
-        return $this;
-    }
-    /**
      * Code
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -71,51 +50,9 @@ class CustomerDataGroupInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
-        return $this;
-    }
-    /**
-     * Tax class id
-     *
-     * @return int
-     */
-    public function getTaxClassId(): int
-    {
-        return $this->taxClassId;
-    }
-    /**
-     * Tax class id
-     *
-     * @param int $taxClassId
-     *
-     * @return self
-     */
-    public function setTaxClassId(int $taxClassId): self
-    {
-        $this->taxClassId = $taxClassId;
-        return $this;
-    }
-    /**
-     * Tax class name
-     *
-     * @return string
-     */
-    public function getTaxClassName(): string
-    {
-        return $this->taxClassName;
-    }
-    /**
-     * Tax class name
-     *
-     * @param string $taxClassName
-     *
-     * @return self
-     */
-    public function setTaxClassName(string $taxClassName): self
-    {
-        $this->taxClassName = $taxClassName;
         return $this;
     }
     /**
@@ -134,9 +71,72 @@ class CustomerDataGroupInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Id
+     *
+     * @return int
+     */
+    public function getId() : int
+    {
+        return $this->id;
+    }
+    /**
+     * Id
+     *
+     * @param int $id
+     *
+     * @return self
+     */
+    public function setId(int $id) : self
+    {
+        $this->id = $id;
+        return $this;
+    }
+    /**
+     * Tax class id
+     *
+     * @return int
+     */
+    public function getTaxClassId() : int
+    {
+        return $this->taxClassId;
+    }
+    /**
+     * Tax class id
+     *
+     * @param int $taxClassId
+     *
+     * @return self
+     */
+    public function setTaxClassId(int $taxClassId) : self
+    {
+        $this->taxClassId = $taxClassId;
+        return $this;
+    }
+    /**
+     * Tax class name
+     *
+     * @return string
+     */
+    public function getTaxClassName() : string
+    {
+        return $this->taxClassName;
+    }
+    /**
+     * Tax class name
+     *
+     * @param string $taxClassName
+     *
+     * @return self
+     */
+    public function setTaxClassName(string $taxClassName) : self
+    {
+        $this->taxClassName = $taxClassName;
         return $this;
     }
 }

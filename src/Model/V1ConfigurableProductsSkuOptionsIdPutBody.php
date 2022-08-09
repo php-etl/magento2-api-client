@@ -15,7 +15,7 @@ class V1ConfigurableProductsSkuOptionsIdPutBody
      *
      * @return ConfigurableProductDataOptionInterface
      */
-    public function getOption(): ConfigurableProductDataOptionInterface
+    public function getOption() : ConfigurableProductDataOptionInterface
     {
         return $this->option;
     }
@@ -26,7 +26,7 @@ class V1ConfigurableProductsSkuOptionsIdPutBody
      *
      * @return self
      */
-    public function setOption(ConfigurableProductDataOptionInterface $option): self
+    public function setOption(ConfigurableProductDataOptionInterface $option) : self
     {
         $this->option = $option;
         return $this;

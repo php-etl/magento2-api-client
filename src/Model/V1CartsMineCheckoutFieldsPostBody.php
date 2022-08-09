@@ -5,28 +5,28 @@ namespace Kiboko\Magento\V2\Model;
 class V1CartsMineCheckoutFieldsPostBody
 {
     /**
-     *
+     * 
      *
      * @var FrameworkAttributeInterface[]
      */
     protected $serviceSelection;
     /**
-     *
+     * 
      *
      * @return FrameworkAttributeInterface[]
      */
-    public function getServiceSelection(): array
+    public function getServiceSelection() : array
     {
         return $this->serviceSelection;
     }
     /**
-     *
+     * 
      *
      * @param FrameworkAttributeInterface[] $serviceSelection
      *
      * @return self
      */
-    public function setServiceSelection(array $serviceSelection): self
+    public function setServiceSelection(array $serviceSelection) : self
     {
         $this->serviceSelection = $serviceSelection;
         return $this;

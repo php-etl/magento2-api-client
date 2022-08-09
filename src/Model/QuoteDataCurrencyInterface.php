@@ -5,41 +5,11 @@ namespace Kiboko\Magento\V2\Model;
 class QuoteDataCurrencyInterface
 {
     /**
-     * Global currency code
-     *
-     * @var string
-     */
-    protected $globalCurrencyCode;
-    /**
      * Base currency code
      *
      * @var string
      */
     protected $baseCurrencyCode;
-    /**
-     * Store currency code
-     *
-     * @var string
-     */
-    protected $storeCurrencyCode;
-    /**
-     * Quote currency code
-     *
-     * @var string
-     */
-    protected $quoteCurrencyCode;
-    /**
-     * Store currency to base currency rate
-     *
-     * @var float
-     */
-    protected $storeToBaseRate;
-    /**
-     * Store currency to quote currency rate
-     *
-     * @var float
-     */
-    protected $storeToQuoteRate;
     /**
      * Base currency to global currency rate
      *
@@ -61,30 +31,39 @@ class QuoteDataCurrencyInterface
     /**
      * Global currency code
      *
-     * @return string
+     * @var string
      */
-    public function getGlobalCurrencyCode(): string
-    {
-        return $this->globalCurrencyCode;
-    }
+    protected $globalCurrencyCode;
     /**
-     * Global currency code
+     * Quote currency code
      *
-     * @param string $globalCurrencyCode
-     *
-     * @return self
+     * @var string
      */
-    public function setGlobalCurrencyCode(string $globalCurrencyCode): self
-    {
-        $this->globalCurrencyCode = $globalCurrencyCode;
-        return $this;
-    }
+    protected $quoteCurrencyCode;
+    /**
+     * Store currency code
+     *
+     * @var string
+     */
+    protected $storeCurrencyCode;
+    /**
+     * Store currency to base currency rate
+     *
+     * @var float
+     */
+    protected $storeToBaseRate;
+    /**
+     * Store currency to quote currency rate
+     *
+     * @var float
+     */
+    protected $storeToQuoteRate;
     /**
      * Base currency code
      *
      * @return string
      */
-    public function getBaseCurrencyCode(): string
+    public function getBaseCurrencyCode() : string
     {
         return $this->baseCurrencyCode;
     }
@@ -95,93 +74,9 @@ class QuoteDataCurrencyInterface
      *
      * @return self
      */
-    public function setBaseCurrencyCode(string $baseCurrencyCode): self
+    public function setBaseCurrencyCode(string $baseCurrencyCode) : self
     {
         $this->baseCurrencyCode = $baseCurrencyCode;
-        return $this;
-    }
-    /**
-     * Store currency code
-     *
-     * @return string
-     */
-    public function getStoreCurrencyCode(): string
-    {
-        return $this->storeCurrencyCode;
-    }
-    /**
-     * Store currency code
-     *
-     * @param string $storeCurrencyCode
-     *
-     * @return self
-     */
-    public function setStoreCurrencyCode(string $storeCurrencyCode): self
-    {
-        $this->storeCurrencyCode = $storeCurrencyCode;
-        return $this;
-    }
-    /**
-     * Quote currency code
-     *
-     * @return string
-     */
-    public function getQuoteCurrencyCode(): string
-    {
-        return $this->quoteCurrencyCode;
-    }
-    /**
-     * Quote currency code
-     *
-     * @param string $quoteCurrencyCode
-     *
-     * @return self
-     */
-    public function setQuoteCurrencyCode(string $quoteCurrencyCode): self
-    {
-        $this->quoteCurrencyCode = $quoteCurrencyCode;
-        return $this;
-    }
-    /**
-     * Store currency to base currency rate
-     *
-     * @return float
-     */
-    public function getStoreToBaseRate(): float
-    {
-        return $this->storeToBaseRate;
-    }
-    /**
-     * Store currency to base currency rate
-     *
-     * @param float $storeToBaseRate
-     *
-     * @return self
-     */
-    public function setStoreToBaseRate(float $storeToBaseRate): self
-    {
-        $this->storeToBaseRate = $storeToBaseRate;
-        return $this;
-    }
-    /**
-     * Store currency to quote currency rate
-     *
-     * @return float
-     */
-    public function getStoreToQuoteRate(): float
-    {
-        return $this->storeToQuoteRate;
-    }
-    /**
-     * Store currency to quote currency rate
-     *
-     * @param float $storeToQuoteRate
-     *
-     * @return self
-     */
-    public function setStoreToQuoteRate(float $storeToQuoteRate): self
-    {
-        $this->storeToQuoteRate = $storeToQuoteRate;
         return $this;
     }
     /**
@@ -189,7 +84,7 @@ class QuoteDataCurrencyInterface
      *
      * @return float
      */
-    public function getBaseToGlobalRate(): float
+    public function getBaseToGlobalRate() : float
     {
         return $this->baseToGlobalRate;
     }
@@ -200,7 +95,7 @@ class QuoteDataCurrencyInterface
      *
      * @return self
      */
-    public function setBaseToGlobalRate(float $baseToGlobalRate): self
+    public function setBaseToGlobalRate(float $baseToGlobalRate) : self
     {
         $this->baseToGlobalRate = $baseToGlobalRate;
         return $this;
@@ -210,7 +105,7 @@ class QuoteDataCurrencyInterface
      *
      * @return float
      */
-    public function getBaseToQuoteRate(): float
+    public function getBaseToQuoteRate() : float
     {
         return $this->baseToQuoteRate;
     }
@@ -221,7 +116,7 @@ class QuoteDataCurrencyInterface
      *
      * @return self
      */
-    public function setBaseToQuoteRate(float $baseToQuoteRate): self
+    public function setBaseToQuoteRate(float $baseToQuoteRate) : self
     {
         $this->baseToQuoteRate = $baseToQuoteRate;
         return $this;
@@ -242,9 +137,114 @@ class QuoteDataCurrencyInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Global currency code
+     *
+     * @return string
+     */
+    public function getGlobalCurrencyCode() : string
+    {
+        return $this->globalCurrencyCode;
+    }
+    /**
+     * Global currency code
+     *
+     * @param string $globalCurrencyCode
+     *
+     * @return self
+     */
+    public function setGlobalCurrencyCode(string $globalCurrencyCode) : self
+    {
+        $this->globalCurrencyCode = $globalCurrencyCode;
+        return $this;
+    }
+    /**
+     * Quote currency code
+     *
+     * @return string
+     */
+    public function getQuoteCurrencyCode() : string
+    {
+        return $this->quoteCurrencyCode;
+    }
+    /**
+     * Quote currency code
+     *
+     * @param string $quoteCurrencyCode
+     *
+     * @return self
+     */
+    public function setQuoteCurrencyCode(string $quoteCurrencyCode) : self
+    {
+        $this->quoteCurrencyCode = $quoteCurrencyCode;
+        return $this;
+    }
+    /**
+     * Store currency code
+     *
+     * @return string
+     */
+    public function getStoreCurrencyCode() : string
+    {
+        return $this->storeCurrencyCode;
+    }
+    /**
+     * Store currency code
+     *
+     * @param string $storeCurrencyCode
+     *
+     * @return self
+     */
+    public function setStoreCurrencyCode(string $storeCurrencyCode) : self
+    {
+        $this->storeCurrencyCode = $storeCurrencyCode;
+        return $this;
+    }
+    /**
+     * Store currency to base currency rate
+     *
+     * @return float
+     */
+    public function getStoreToBaseRate() : float
+    {
+        return $this->storeToBaseRate;
+    }
+    /**
+     * Store currency to base currency rate
+     *
+     * @param float $storeToBaseRate
+     *
+     * @return self
+     */
+    public function setStoreToBaseRate(float $storeToBaseRate) : self
+    {
+        $this->storeToBaseRate = $storeToBaseRate;
+        return $this;
+    }
+    /**
+     * Store currency to quote currency rate
+     *
+     * @return float
+     */
+    public function getStoreToQuoteRate() : float
+    {
+        return $this->storeToQuoteRate;
+    }
+    /**
+     * Store currency to quote currency rate
+     *
+     * @param float $storeToQuoteRate
+     *
+     * @return self
+     */
+    public function setStoreToQuoteRate(float $storeToQuoteRate) : self
+    {
+        $this->storeToQuoteRate = $storeToQuoteRate;
         return $this;
     }
 }

@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1CategoriesCategoryIdMovePutBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\V1CategoriesCategoryIdMovePutBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\V1CategoriesCategoryIdMovePutBody';
     }
@@ -40,11 +39,11 @@ class V1CategoriesCategoryIdMovePutBodyNormalizer implements DenormalizerInterfa
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('parentId', $data)) {
-            $object->setParentId($data['parentId']);
-        }
         if (\array_key_exists('afterId', $data)) {
             $object->setAfterId($data['afterId']);
+        }
+        if (\array_key_exists('parentId', $data)) {
+            $object->setParentId($data['parentId']);
         }
         return $object;
     }
@@ -54,10 +53,10 @@ class V1CategoriesCategoryIdMovePutBodyNormalizer implements DenormalizerInterfa
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['parentId'] = $object->getParentId();
         if (null !== $object->getAfterId()) {
             $data['afterId'] = $object->getAfterId();
         }
+        $data['parentId'] = $object->getParentId();
         return $data;
     }
 }

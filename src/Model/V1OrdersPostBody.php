@@ -15,7 +15,7 @@ class V1OrdersPostBody
      *
      * @return SalesDataOrderInterface
      */
-    public function getEntity(): SalesDataOrderInterface
+    public function getEntity() : SalesDataOrderInterface
     {
         return $this->entity;
     }
@@ -26,7 +26,7 @@ class V1OrdersPostBody
      *
      * @return self
      */
-    public function setEntity(SalesDataOrderInterface $entity): self
+    public function setEntity(SalesDataOrderInterface $entity) : self
     {
         $this->entity = $entity;
         return $this;

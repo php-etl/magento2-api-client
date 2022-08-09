@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataShipmentCreationArgumentsExtensionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentCreationArgumentsExtensionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentCreationArgumentsExtensionInterface';
     }
@@ -40,23 +39,23 @@ class SalesDataShipmentCreationArgumentsExtensionInterfaceNormalizer implements 
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('shipping_label', $data)) {
-            $object->setShippingLabel($data['shipping_label']);
-        }
-        if (\array_key_exists('ext_shipment_id', $data)) {
-            $object->setExtShipmentId($data['ext_shipment_id']);
+        if (\array_key_exists('ext_location_id', $data)) {
+            $object->setExtLocationId($data['ext_location_id']);
         }
         if (\array_key_exists('ext_return_shipment_id', $data)) {
             $object->setExtReturnShipmentId($data['ext_return_shipment_id']);
         }
-        if (\array_key_exists('ext_location_id', $data)) {
-            $object->setExtLocationId($data['ext_location_id']);
+        if (\array_key_exists('ext_shipment_id', $data)) {
+            $object->setExtShipmentId($data['ext_shipment_id']);
+        }
+        if (\array_key_exists('ext_tracking_reference', $data)) {
+            $object->setExtTrackingReference($data['ext_tracking_reference']);
         }
         if (\array_key_exists('ext_tracking_url', $data)) {
             $object->setExtTrackingUrl($data['ext_tracking_url']);
         }
-        if (\array_key_exists('ext_tracking_reference', $data)) {
-            $object->setExtTrackingReference($data['ext_tracking_reference']);
+        if (\array_key_exists('shipping_label', $data)) {
+            $object->setShippingLabel($data['shipping_label']);
         }
         return $object;
     }
@@ -66,23 +65,23 @@ class SalesDataShipmentCreationArgumentsExtensionInterfaceNormalizer implements 
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getShippingLabel()) {
-            $data['shipping_label'] = $object->getShippingLabel();
-        }
-        if (null !== $object->getExtShipmentId()) {
-            $data['ext_shipment_id'] = $object->getExtShipmentId();
+        if (null !== $object->getExtLocationId()) {
+            $data['ext_location_id'] = $object->getExtLocationId();
         }
         if (null !== $object->getExtReturnShipmentId()) {
             $data['ext_return_shipment_id'] = $object->getExtReturnShipmentId();
         }
-        if (null !== $object->getExtLocationId()) {
-            $data['ext_location_id'] = $object->getExtLocationId();
+        if (null !== $object->getExtShipmentId()) {
+            $data['ext_shipment_id'] = $object->getExtShipmentId();
+        }
+        if (null !== $object->getExtTrackingReference()) {
+            $data['ext_tracking_reference'] = $object->getExtTrackingReference();
         }
         if (null !== $object->getExtTrackingUrl()) {
             $data['ext_tracking_url'] = $object->getExtTrackingUrl();
         }
-        if (null !== $object->getExtTrackingReference()) {
-            $data['ext_tracking_reference'] = $object->getExtTrackingReference();
+        if (null !== $object->getShippingLabel()) {
+            $data['shipping_label'] = $object->getShippingLabel();
         }
         return $data;
     }

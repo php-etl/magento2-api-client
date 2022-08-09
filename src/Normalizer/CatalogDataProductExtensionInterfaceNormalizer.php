@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataProductExtensionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductExtensionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductExtensionInterface';
     }
@@ -40,12 +39,12 @@ class CatalogDataProductExtensionInterfaceNormalizer implements DenormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('website_ids', $data)) {
+        if (\array_key_exists('bundle_product_options', $data)) {
             $values = array();
-            foreach ($data['website_ids'] as $value) {
-                $values[] = $value;
+            foreach ($data['bundle_product_options'] as $value) {
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\BundleDataOptionInterface', 'json', $context);
             }
-            $object->setWebsiteIds($values);
+            $object->setBundleProductOptions($values);
         }
         if (\array_key_exists('category_links', $data)) {
             $values_1 = array();
@@ -54,15 +53,12 @@ class CatalogDataProductExtensionInterfaceNormalizer implements DenormalizerInte
             }
             $object->setCategoryLinks($values_1);
         }
-        if (\array_key_exists('bundle_product_options', $data)) {
+        if (\array_key_exists('configurable_product_links', $data)) {
             $values_2 = array();
-            foreach ($data['bundle_product_options'] as $value_2) {
-                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\V2\\Model\\BundleDataOptionInterface', 'json', $context);
+            foreach ($data['configurable_product_links'] as $value_2) {
+                $values_2[] = $value_2;
             }
-            $object->setBundleProductOptions($values_2);
-        }
-        if (\array_key_exists('stock_item', $data)) {
-            $object->setStockItem($this->denormalizer->denormalize($data['stock_item'], 'Kiboko\\Magento\\V2\\Model\\CatalogInventoryDataStockItemInterface', 'json', $context));
+            $object->setConfigurableProductLinks($values_2);
         }
         if (\array_key_exists('configurable_product_options', $data)) {
             $values_3 = array();
@@ -71,33 +67,36 @@ class CatalogDataProductExtensionInterfaceNormalizer implements DenormalizerInte
             }
             $object->setConfigurableProductOptions($values_3);
         }
-        if (\array_key_exists('configurable_product_links', $data)) {
-            $values_4 = array();
-            foreach ($data['configurable_product_links'] as $value_4) {
-                $values_4[] = $value_4;
-            }
-            $object->setConfigurableProductLinks($values_4);
-        }
         if (\array_key_exists('downloadable_product_links', $data)) {
-            $values_5 = array();
-            foreach ($data['downloadable_product_links'] as $value_5) {
-                $values_5[] = $this->denormalizer->denormalize($value_5, 'Kiboko\\Magento\\V2\\Model\\DownloadableDataLinkInterface', 'json', $context);
+            $values_4 = array();
+            foreach ($data['downloadable_product_links'] as $value_4) {
+                $values_4[] = $this->denormalizer->denormalize($value_4, 'Kiboko\\Magento\\V2\\Model\\DownloadableDataLinkInterface', 'json', $context);
             }
-            $object->setDownloadableProductLinks($values_5);
+            $object->setDownloadableProductLinks($values_4);
         }
         if (\array_key_exists('downloadable_product_samples', $data)) {
-            $values_6 = array();
-            foreach ($data['downloadable_product_samples'] as $value_6) {
-                $values_6[] = $this->denormalizer->denormalize($value_6, 'Kiboko\\Magento\\V2\\Model\\DownloadableDataSampleInterface', 'json', $context);
+            $values_5 = array();
+            foreach ($data['downloadable_product_samples'] as $value_5) {
+                $values_5[] = $this->denormalizer->denormalize($value_5, 'Kiboko\\Magento\\V2\\Model\\DownloadableDataSampleInterface', 'json', $context);
             }
-            $object->setDownloadableProductSamples($values_6);
+            $object->setDownloadableProductSamples($values_5);
         }
         if (\array_key_exists('giftcard_amounts', $data)) {
-            $values_7 = array();
-            foreach ($data['giftcard_amounts'] as $value_7) {
-                $values_7[] = $this->denormalizer->denormalize($value_7, 'Kiboko\\Magento\\V2\\Model\\GiftCardDataGiftcardAmountInterface', 'json', $context);
+            $values_6 = array();
+            foreach ($data['giftcard_amounts'] as $value_6) {
+                $values_6[] = $this->denormalizer->denormalize($value_6, 'Kiboko\\Magento\\V2\\Model\\GiftCardDataGiftcardAmountInterface', 'json', $context);
             }
-            $object->setGiftcardAmounts($values_7);
+            $object->setGiftcardAmounts($values_6);
+        }
+        if (\array_key_exists('stock_item', $data)) {
+            $object->setStockItem($this->denormalizer->denormalize($data['stock_item'], 'Kiboko\\Magento\\V2\\Model\\CatalogInventoryDataStockItemInterface', 'json', $context));
+        }
+        if (\array_key_exists('website_ids', $data)) {
+            $values_7 = array();
+            foreach ($data['website_ids'] as $value_7) {
+                $values_7[] = $value_7;
+            }
+            $object->setWebsiteIds($values_7);
         }
         return $object;
     }
@@ -107,12 +106,12 @@ class CatalogDataProductExtensionInterfaceNormalizer implements DenormalizerInte
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getWebsiteIds()) {
+        if (null !== $object->getBundleProductOptions()) {
             $values = array();
-            foreach ($object->getWebsiteIds() as $value) {
-                $values[] = $value;
+            foreach ($object->getBundleProductOptions() as $value) {
+                $values[] = $this->normalizer->normalize($value, 'json', $context);
             }
-            $data['website_ids'] = $values;
+            $data['bundle_product_options'] = $values;
         }
         if (null !== $object->getCategoryLinks()) {
             $values_1 = array();
@@ -121,15 +120,12 @@ class CatalogDataProductExtensionInterfaceNormalizer implements DenormalizerInte
             }
             $data['category_links'] = $values_1;
         }
-        if (null !== $object->getBundleProductOptions()) {
+        if (null !== $object->getConfigurableProductLinks()) {
             $values_2 = array();
-            foreach ($object->getBundleProductOptions() as $value_2) {
-                $values_2[] = $this->normalizer->normalize($value_2, 'json', $context);
+            foreach ($object->getConfigurableProductLinks() as $value_2) {
+                $values_2[] = $value_2;
             }
-            $data['bundle_product_options'] = $values_2;
-        }
-        if (null !== $object->getStockItem()) {
-            $data['stock_item'] = $this->normalizer->normalize($object->getStockItem(), 'json', $context);
+            $data['configurable_product_links'] = $values_2;
         }
         if (null !== $object->getConfigurableProductOptions()) {
             $values_3 = array();
@@ -138,33 +134,36 @@ class CatalogDataProductExtensionInterfaceNormalizer implements DenormalizerInte
             }
             $data['configurable_product_options'] = $values_3;
         }
-        if (null !== $object->getConfigurableProductLinks()) {
-            $values_4 = array();
-            foreach ($object->getConfigurableProductLinks() as $value_4) {
-                $values_4[] = $value_4;
-            }
-            $data['configurable_product_links'] = $values_4;
-        }
         if (null !== $object->getDownloadableProductLinks()) {
-            $values_5 = array();
-            foreach ($object->getDownloadableProductLinks() as $value_5) {
-                $values_5[] = $this->normalizer->normalize($value_5, 'json', $context);
+            $values_4 = array();
+            foreach ($object->getDownloadableProductLinks() as $value_4) {
+                $values_4[] = $this->normalizer->normalize($value_4, 'json', $context);
             }
-            $data['downloadable_product_links'] = $values_5;
+            $data['downloadable_product_links'] = $values_4;
         }
         if (null !== $object->getDownloadableProductSamples()) {
-            $values_6 = array();
-            foreach ($object->getDownloadableProductSamples() as $value_6) {
-                $values_6[] = $this->normalizer->normalize($value_6, 'json', $context);
+            $values_5 = array();
+            foreach ($object->getDownloadableProductSamples() as $value_5) {
+                $values_5[] = $this->normalizer->normalize($value_5, 'json', $context);
             }
-            $data['downloadable_product_samples'] = $values_6;
+            $data['downloadable_product_samples'] = $values_5;
         }
         if (null !== $object->getGiftcardAmounts()) {
-            $values_7 = array();
-            foreach ($object->getGiftcardAmounts() as $value_7) {
-                $values_7[] = $this->normalizer->normalize($value_7, 'json', $context);
+            $values_6 = array();
+            foreach ($object->getGiftcardAmounts() as $value_6) {
+                $values_6[] = $this->normalizer->normalize($value_6, 'json', $context);
             }
-            $data['giftcard_amounts'] = $values_7;
+            $data['giftcard_amounts'] = $values_6;
+        }
+        if (null !== $object->getStockItem()) {
+            $data['stock_item'] = $this->normalizer->normalize($object->getStockItem(), 'json', $context);
+        }
+        if (null !== $object->getWebsiteIds()) {
+            $values_7 = array();
+            foreach ($object->getWebsiteIds() as $value_7) {
+                $values_7[] = $value_7;
+            }
+            $data['website_ids'] = $values_7;
         }
         return $data;
     }

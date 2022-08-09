@@ -5,17 +5,17 @@ namespace Kiboko\Magento\V2\Model;
 class SalesDataShipmentTrackCreationInterface
 {
     /**
+     * Carrier code.
+     *
+     * @var string
+     */
+    protected $carrierCode;
+    /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\ShipmentTrackCreationInterface
      *
      * @var mixed
      */
     protected $extensionAttributes;
-    /**
-     * Track number.
-     *
-     * @var string
-     */
-    protected $trackNumber;
     /**
      * Title.
      *
@@ -23,11 +23,32 @@ class SalesDataShipmentTrackCreationInterface
      */
     protected $title;
     /**
-     * Carrier code.
+     * Track number.
      *
      * @var string
      */
-    protected $carrierCode;
+    protected $trackNumber;
+    /**
+     * Carrier code.
+     *
+     * @return string
+     */
+    public function getCarrierCode() : string
+    {
+        return $this->carrierCode;
+    }
+    /**
+     * Carrier code.
+     *
+     * @param string $carrierCode
+     *
+     * @return self
+     */
+    public function setCarrierCode(string $carrierCode) : self
+    {
+        $this->carrierCode = $carrierCode;
+        return $this;
+    }
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\ShipmentTrackCreationInterface
      *
@@ -44,30 +65,9 @@ class SalesDataShipmentTrackCreationInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
-        return $this;
-    }
-    /**
-     * Track number.
-     *
-     * @return string
-     */
-    public function getTrackNumber(): string
-    {
-        return $this->trackNumber;
-    }
-    /**
-     * Track number.
-     *
-     * @param string $trackNumber
-     *
-     * @return self
-     */
-    public function setTrackNumber(string $trackNumber): self
-    {
-        $this->trackNumber = $trackNumber;
         return $this;
     }
     /**
@@ -75,7 +75,7 @@ class SalesDataShipmentTrackCreationInterface
      *
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle() : string
     {
         return $this->title;
     }
@@ -86,30 +86,30 @@ class SalesDataShipmentTrackCreationInterface
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(string $title) : self
     {
         $this->title = $title;
         return $this;
     }
     /**
-     * Carrier code.
+     * Track number.
      *
      * @return string
      */
-    public function getCarrierCode(): string
+    public function getTrackNumber() : string
     {
-        return $this->carrierCode;
+        return $this->trackNumber;
     }
     /**
-     * Carrier code.
+     * Track number.
      *
-     * @param string $carrierCode
+     * @param string $trackNumber
      *
      * @return self
      */
-    public function setCarrierCode(string $carrierCode): self
+    public function setTrackNumber(string $trackNumber) : self
     {
-        $this->carrierCode = $carrierCode;
+        $this->trackNumber = $trackNumber;
         return $this;
     }
 }

@@ -5,17 +5,11 @@ namespace Kiboko\Magento\V2\Model;
 class CompanyDataTeamInterface
 {
     /**
-     * ID
+     * Custom attributes values.
      *
-     * @var int
+     * @var FrameworkAttributeInterface[]
      */
-    protected $id;
-    /**
-     * Name
-     *
-     * @var string
-     */
-    protected $name;
+    protected $customAttributes;
     /**
      * Description
      *
@@ -29,51 +23,36 @@ class CompanyDataTeamInterface
      */
     protected $extensionAttributes;
     /**
+     * ID
+     *
+     * @var int
+     */
+    protected $id;
+    /**
+     * Name
+     *
+     * @var string
+     */
+    protected $name;
+    /**
      * Custom attributes values.
      *
-     * @var FrameworkAttributeInterface[]
+     * @return FrameworkAttributeInterface[]
      */
-    protected $customAttributes;
-    /**
-     * ID
-     *
-     * @return int
-     */
-    public function getId(): int
+    public function getCustomAttributes() : array
     {
-        return $this->id;
+        return $this->customAttributes;
     }
     /**
-     * ID
+     * Custom attributes values.
      *
-     * @param int $id
+     * @param FrameworkAttributeInterface[] $customAttributes
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setCustomAttributes(array $customAttributes) : self
     {
-        $this->id = $id;
-        return $this;
-    }
-    /**
-     * Name
-     *
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-    /**
-     * Name
-     *
-     * @param string $name
-     *
-     * @return self
-     */
-    public function setName(string $name): self
-    {
-        $this->name = $name;
+        $this->customAttributes = $customAttributes;
         return $this;
     }
     /**
@@ -81,7 +60,7 @@ class CompanyDataTeamInterface
      *
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription() : string
     {
         return $this->description;
     }
@@ -92,7 +71,7 @@ class CompanyDataTeamInterface
      *
      * @return self
      */
-    public function setDescription(string $description): self
+    public function setDescription(string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -113,30 +92,51 @@ class CompanyDataTeamInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
     }
     /**
-     * Custom attributes values.
+     * ID
      *
-     * @return FrameworkAttributeInterface[]
+     * @return int
      */
-    public function getCustomAttributes(): array
+    public function getId() : int
     {
-        return $this->customAttributes;
+        return $this->id;
     }
     /**
-     * Custom attributes values.
+     * ID
      *
-     * @param FrameworkAttributeInterface[] $customAttributes
+     * @param int $id
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setId(int $id) : self
     {
-        $this->customAttributes = $customAttributes;
+        $this->id = $id;
+        return $this;
+    }
+    /**
+     * Name
+     *
+     * @return string
+     */
+    public function getName() : string
+    {
+        return $this->name;
+    }
+    /**
+     * Name
+     *
+     * @param string $name
+     *
+     * @return self
+     */
+    public function setName(string $name) : self
+    {
+        $this->name = $name;
         return $this;
     }
 }

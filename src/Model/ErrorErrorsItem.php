@@ -21,7 +21,7 @@ class ErrorErrorsItem
      *
      * @return string
      */
-    public function getMessage(): string
+    public function getMessage() : string
     {
         return $this->message;
     }
@@ -32,7 +32,7 @@ class ErrorErrorsItem
      *
      * @return self
      */
-    public function setMessage(string $message): self
+    public function setMessage(string $message) : self
     {
         $this->message = $message;
         return $this;
@@ -42,7 +42,7 @@ class ErrorErrorsItem
      *
      * @return ErrorParametersItem[]
      */
-    public function getParameters(): array
+    public function getParameters() : array
     {
         return $this->parameters;
     }
@@ -53,7 +53,7 @@ class ErrorErrorsItem
      *
      * @return self
      */
-    public function setParameters(array $parameters): self
+    public function setParameters(array $parameters) : self
     {
         $this->parameters = $parameters;
         return $this;

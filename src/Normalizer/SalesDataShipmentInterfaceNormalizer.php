@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataShipmentInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentInterface';
     }
@@ -43,6 +42,13 @@ class SalesDataShipmentInterfaceNormalizer implements DenormalizerInterface, Nor
         if (\array_key_exists('billing_address_id', $data)) {
             $object->setBillingAddressId($data['billing_address_id']);
         }
+        if (\array_key_exists('comments', $data)) {
+            $values = array();
+            foreach ($data['comments'] as $value) {
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentCommentInterface', 'json', $context);
+            }
+            $object->setComments($values);
+        }
         if (\array_key_exists('created_at', $data)) {
             $object->setCreatedAt($data['created_at']);
         }
@@ -55,18 +61,28 @@ class SalesDataShipmentInterfaceNormalizer implements DenormalizerInterface, Nor
         if (\array_key_exists('entity_id', $data)) {
             $object->setEntityId($data['entity_id']);
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentExtensionInterface', 'json', $context));
+        }
         if (\array_key_exists('increment_id', $data)) {
             $object->setIncrementId($data['increment_id']);
+        }
+        if (\array_key_exists('items', $data)) {
+            $values_1 = array();
+            foreach ($data['items'] as $value_1) {
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentItemInterface', 'json', $context);
+            }
+            $object->setItems($values_1);
         }
         if (\array_key_exists('order_id', $data)) {
             $object->setOrderId($data['order_id']);
         }
         if (\array_key_exists('packages', $data)) {
-            $values = array();
-            foreach ($data['packages'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentPackageInterface', 'json', $context);
+            $values_2 = array();
+            foreach ($data['packages'] as $value_2) {
+                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentPackageInterface', 'json', $context);
             }
-            $object->setPackages($values);
+            $object->setPackages($values_2);
         }
         if (\array_key_exists('shipment_status', $data)) {
             $object->setShipmentStatus($data['shipment_status']);
@@ -86,32 +102,15 @@ class SalesDataShipmentInterfaceNormalizer implements DenormalizerInterface, Nor
         if (\array_key_exists('total_weight', $data)) {
             $object->setTotalWeight($data['total_weight']);
         }
+        if (\array_key_exists('tracks', $data)) {
+            $values_3 = array();
+            foreach ($data['tracks'] as $value_3) {
+                $values_3[] = $this->denormalizer->denormalize($value_3, 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentTrackInterface', 'json', $context);
+            }
+            $object->setTracks($values_3);
+        }
         if (\array_key_exists('updated_at', $data)) {
             $object->setUpdatedAt($data['updated_at']);
-        }
-        if (\array_key_exists('items', $data)) {
-            $values_1 = array();
-            foreach ($data['items'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentItemInterface', 'json', $context);
-            }
-            $object->setItems($values_1);
-        }
-        if (\array_key_exists('tracks', $data)) {
-            $values_2 = array();
-            foreach ($data['tracks'] as $value_2) {
-                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentTrackInterface', 'json', $context);
-            }
-            $object->setTracks($values_2);
-        }
-        if (\array_key_exists('comments', $data)) {
-            $values_3 = array();
-            foreach ($data['comments'] as $value_3) {
-                $values_3[] = $this->denormalizer->denormalize($value_3, 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentCommentInterface', 'json', $context);
-            }
-            $object->setComments($values_3);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentExtensionInterface', 'json', $context));
         }
         return $object;
     }
@@ -124,6 +123,11 @@ class SalesDataShipmentInterfaceNormalizer implements DenormalizerInterface, Nor
         if (null !== $object->getBillingAddressId()) {
             $data['billing_address_id'] = $object->getBillingAddressId();
         }
+        $values = array();
+        foreach ($object->getComments() as $value) {
+            $values[] = $this->normalizer->normalize($value, 'json', $context);
+        }
+        $data['comments'] = $values;
         if (null !== $object->getCreatedAt()) {
             $data['created_at'] = $object->getCreatedAt();
         }
@@ -136,16 +140,24 @@ class SalesDataShipmentInterfaceNormalizer implements DenormalizerInterface, Nor
         if (null !== $object->getEntityId()) {
             $data['entity_id'] = $object->getEntityId();
         }
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
+        }
         if (null !== $object->getIncrementId()) {
             $data['increment_id'] = $object->getIncrementId();
         }
+        $values_1 = array();
+        foreach ($object->getItems() as $value_1) {
+            $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
+        }
+        $data['items'] = $values_1;
         $data['order_id'] = $object->getOrderId();
         if (null !== $object->getPackages()) {
-            $values = array();
-            foreach ($object->getPackages() as $value) {
-                $values[] = $this->normalizer->normalize($value, 'json', $context);
+            $values_2 = array();
+            foreach ($object->getPackages() as $value_2) {
+                $values_2[] = $this->normalizer->normalize($value_2, 'json', $context);
             }
-            $data['packages'] = $values;
+            $data['packages'] = $values_2;
         }
         if (null !== $object->getShipmentStatus()) {
             $data['shipment_status'] = $object->getShipmentStatus();
@@ -165,26 +177,13 @@ class SalesDataShipmentInterfaceNormalizer implements DenormalizerInterface, Nor
         if (null !== $object->getTotalWeight()) {
             $data['total_weight'] = $object->getTotalWeight();
         }
-        if (null !== $object->getUpdatedAt()) {
-            $data['updated_at'] = $object->getUpdatedAt();
-        }
-        $values_1 = array();
-        foreach ($object->getItems() as $value_1) {
-            $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
-        }
-        $data['items'] = $values_1;
-        $values_2 = array();
-        foreach ($object->getTracks() as $value_2) {
-            $values_2[] = $this->normalizer->normalize($value_2, 'json', $context);
-        }
-        $data['tracks'] = $values_2;
         $values_3 = array();
-        foreach ($object->getComments() as $value_3) {
+        foreach ($object->getTracks() as $value_3) {
             $values_3[] = $this->normalizer->normalize($value_3, 'json', $context);
         }
-        $data['comments'] = $values_3;
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
+        $data['tracks'] = $values_3;
+        if (null !== $object->getUpdatedAt()) {
+            $data['updated_at'] = $object->getUpdatedAt();
         }
         return $data;
     }

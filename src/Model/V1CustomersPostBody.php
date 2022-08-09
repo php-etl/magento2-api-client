@@ -11,13 +11,13 @@ class V1CustomersPostBody
      */
     protected $customer;
     /**
-     *
+     * 
      *
      * @var string
      */
     protected $password;
     /**
-     *
+     * 
      *
      * @var string
      */
@@ -27,7 +27,7 @@ class V1CustomersPostBody
      *
      * @return CustomerDataCustomerInterface
      */
-    public function getCustomer(): CustomerDataCustomerInterface
+    public function getCustomer() : CustomerDataCustomerInterface
     {
         return $this->customer;
     }
@@ -38,49 +38,49 @@ class V1CustomersPostBody
      *
      * @return self
      */
-    public function setCustomer(CustomerDataCustomerInterface $customer): self
+    public function setCustomer(CustomerDataCustomerInterface $customer) : self
     {
         $this->customer = $customer;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getPassword(): string
+    public function getPassword() : string
     {
         return $this->password;
     }
     /**
-     *
+     * 
      *
      * @param string $password
      *
      * @return self
      */
-    public function setPassword(string $password): self
+    public function setPassword(string $password) : self
     {
         $this->password = $password;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getRedirectUrl(): string
+    public function getRedirectUrl() : string
     {
         return $this->redirectUrl;
     }
     /**
-     *
+     * 
      *
      * @param string $redirectUrl
      *
      * @return self
      */
-    public function setRedirectUrl(string $redirectUrl): self
+    public function setRedirectUrl(string $redirectUrl) : self
     {
         $this->redirectUrl = $redirectUrl;
         return $this;

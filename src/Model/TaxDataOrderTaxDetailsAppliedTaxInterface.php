@@ -5,24 +5,6 @@ namespace Kiboko\Magento\V2\Model;
 class TaxDataOrderTaxDetailsAppliedTaxInterface
 {
     /**
-     * Code
-     *
-     * @var string
-     */
-    protected $code;
-    /**
-     * Title
-     *
-     * @var string
-     */
-    protected $title;
-    /**
-     * Tax Percent
-     *
-     * @var float
-     */
-    protected $percent;
-    /**
      * Tax amount
      *
      * @var float
@@ -35,80 +17,35 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      */
     protected $baseAmount;
     /**
+     * Code
+     *
+     * @var string
+     */
+    protected $code;
+    /**
      * ExtensionInterface class for @see \Magento\Tax\Api\Data\OrderTaxDetailsAppliedTaxInterface
      *
      * @var TaxDataOrderTaxDetailsAppliedTaxExtensionInterface
      */
     protected $extensionAttributes;
     /**
-     * Code
+     * Tax Percent
      *
-     * @return string
+     * @var float
      */
-    public function getCode(): string
-    {
-        return $this->code;
-    }
-    /**
-     * Code
-     *
-     * @param string $code
-     *
-     * @return self
-     */
-    public function setCode(string $code): self
-    {
-        $this->code = $code;
-        return $this;
-    }
+    protected $percent;
     /**
      * Title
      *
-     * @return string
+     * @var string
      */
-    public function getTitle(): string
-    {
-        return $this->title;
-    }
-    /**
-     * Title
-     *
-     * @param string $title
-     *
-     * @return self
-     */
-    public function setTitle(string $title): self
-    {
-        $this->title = $title;
-        return $this;
-    }
-    /**
-     * Tax Percent
-     *
-     * @return float
-     */
-    public function getPercent(): float
-    {
-        return $this->percent;
-    }
-    /**
-     * Tax Percent
-     *
-     * @param float $percent
-     *
-     * @return self
-     */
-    public function setPercent(float $percent): self
-    {
-        $this->percent = $percent;
-        return $this;
-    }
+    protected $title;
     /**
      * Tax amount
      *
      * @return float
      */
-    public function getAmount(): float
+    public function getAmount() : float
     {
         return $this->amount;
     }
@@ -119,7 +56,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return self
      */
-    public function setAmount(float $amount): self
+    public function setAmount(float $amount) : self
     {
         $this->amount = $amount;
         return $this;
@@ -129,7 +66,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return float
      */
-    public function getBaseAmount(): float
+    public function getBaseAmount() : float
     {
         return $this->baseAmount;
     }
@@ -140,9 +77,30 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return self
      */
-    public function setBaseAmount(float $baseAmount): self
+    public function setBaseAmount(float $baseAmount) : self
     {
         $this->baseAmount = $baseAmount;
+        return $this;
+    }
+    /**
+     * Code
+     *
+     * @return string
+     */
+    public function getCode() : string
+    {
+        return $this->code;
+    }
+    /**
+     * Code
+     *
+     * @param string $code
+     *
+     * @return self
+     */
+    public function setCode(string $code) : self
+    {
+        $this->code = $code;
         return $this;
     }
     /**
@@ -150,7 +108,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return TaxDataOrderTaxDetailsAppliedTaxExtensionInterface
      */
-    public function getExtensionAttributes(): TaxDataOrderTaxDetailsAppliedTaxExtensionInterface
+    public function getExtensionAttributes() : TaxDataOrderTaxDetailsAppliedTaxExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -161,9 +119,51 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(TaxDataOrderTaxDetailsAppliedTaxExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(TaxDataOrderTaxDetailsAppliedTaxExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Tax Percent
+     *
+     * @return float
+     */
+    public function getPercent() : float
+    {
+        return $this->percent;
+    }
+    /**
+     * Tax Percent
+     *
+     * @param float $percent
+     *
+     * @return self
+     */
+    public function setPercent(float $percent) : self
+    {
+        $this->percent = $percent;
+        return $this;
+    }
+    /**
+     * Title
+     *
+     * @return string
+     */
+    public function getTitle() : string
+    {
+        return $this->title;
+    }
+    /**
+     * Title
+     *
+     * @param string $title
+     *
+     * @return self
+     */
+    public function setTitle(string $title) : self
+    {
+        $this->title = $title;
         return $this;
     }
 }

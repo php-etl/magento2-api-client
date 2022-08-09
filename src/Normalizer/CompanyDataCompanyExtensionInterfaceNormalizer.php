@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CompanyDataCompanyExtensionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CompanyDataCompanyExtensionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CompanyDataCompanyExtensionInterface';
     }
@@ -46,11 +45,11 @@ class CompanyDataCompanyExtensionInterfaceNormalizer implements DenormalizerInte
         if (\array_key_exists('available_payment_methods', $data)) {
             $object->setAvailablePaymentMethods($data['available_payment_methods']);
         }
-        if (\array_key_exists('use_config_settings', $data)) {
-            $object->setUseConfigSettings($data['use_config_settings']);
-        }
         if (\array_key_exists('quote_config', $data)) {
             $object->setQuoteConfig($this->denormalizer->denormalize($data['quote_config'], 'Kiboko\\Magento\\V2\\Model\\NegotiableQuoteDataCompanyQuoteConfigInterface', 'json', $context));
+        }
+        if (\array_key_exists('use_config_settings', $data)) {
+            $object->setUseConfigSettings($data['use_config_settings']);
         }
         return $object;
     }
@@ -66,11 +65,11 @@ class CompanyDataCompanyExtensionInterfaceNormalizer implements DenormalizerInte
         if (null !== $object->getAvailablePaymentMethods()) {
             $data['available_payment_methods'] = $object->getAvailablePaymentMethods();
         }
-        if (null !== $object->getUseConfigSettings()) {
-            $data['use_config_settings'] = $object->getUseConfigSettings();
-        }
         if (null !== $object->getQuoteConfig()) {
             $data['quote_config'] = $this->normalizer->normalize($object->getQuoteConfig(), 'json', $context);
+        }
+        if (null !== $object->getUseConfigSettings()) {
+            $data['use_config_settings'] = $object->getUseConfigSettings();
         }
         return $data;
     }

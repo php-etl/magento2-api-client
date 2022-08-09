@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class EavDataAttributeFrontendLabelInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\EavDataAttributeFrontendLabelInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\EavDataAttributeFrontendLabelInterface';
     }
@@ -40,11 +39,11 @@ class EavDataAttributeFrontendLabelInterfaceNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('store_id', $data)) {
-            $object->setStoreId($data['store_id']);
-        }
         if (\array_key_exists('label', $data)) {
             $object->setLabel($data['label']);
+        }
+        if (\array_key_exists('store_id', $data)) {
+            $object->setStoreId($data['store_id']);
         }
         return $object;
     }
@@ -54,11 +53,11 @@ class EavDataAttributeFrontendLabelInterfaceNormalizer implements DenormalizerIn
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getStoreId()) {
-            $data['store_id'] = $object->getStoreId();
-        }
         if (null !== $object->getLabel()) {
             $data['label'] = $object->getLabel();
+        }
+        if (null !== $object->getStoreId()) {
+            $data['store_id'] = $object->getStoreId();
         }
         return $data;
     }

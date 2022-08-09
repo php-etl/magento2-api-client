@@ -21,7 +21,7 @@ class FrameworkAttributeInterface
      *
      * @return string
      */
-    public function getAttributeCode(): string
+    public function getAttributeCode() : string
     {
         return $this->attributeCode;
     }
@@ -32,7 +32,7 @@ class FrameworkAttributeInterface
      *
      * @return self
      */
-    public function setAttributeCode(string $attributeCode): self
+    public function setAttributeCode(string $attributeCode) : self
     {
         $this->attributeCode = $attributeCode;
         return $this;
@@ -42,7 +42,7 @@ class FrameworkAttributeInterface
      *
      * @return string
      */
-    public function getValue(): string
+    public function getValue() : string
     {
         return $this->value;
     }
@@ -53,7 +53,7 @@ class FrameworkAttributeInterface
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(string $value) : self
     {
         $this->value = $value;
         return $this;

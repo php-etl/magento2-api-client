@@ -11,11 +11,11 @@ class NegotiableQuoteDataAttachmentContentInterface
      */
     protected $base64EncodedData;
     /**
-     * MIME type.
+     * ExtensionInterface class for @see \Magento\NegotiableQuote\Api\Data\AttachmentContentInterface
      *
-     * @var string
+     * @var mixed
      */
-    protected $type;
+    protected $extensionAttributes;
     /**
      * File name.
      *
@@ -23,17 +23,17 @@ class NegotiableQuoteDataAttachmentContentInterface
      */
     protected $name;
     /**
-     * ExtensionInterface class for @see \Magento\NegotiableQuote\Api\Data\AttachmentContentInterface
+     * MIME type.
      *
-     * @var mixed
+     * @var string
      */
-    protected $extensionAttributes;
+    protected $type;
     /**
      * Media data (base64 encoded content).
      *
      * @return string
      */
-    public function getBase64EncodedData(): string
+    public function getBase64EncodedData() : string
     {
         return $this->base64EncodedData;
     }
@@ -44,51 +44,9 @@ class NegotiableQuoteDataAttachmentContentInterface
      *
      * @return self
      */
-    public function setBase64EncodedData(string $base64EncodedData): self
+    public function setBase64EncodedData(string $base64EncodedData) : self
     {
         $this->base64EncodedData = $base64EncodedData;
-        return $this;
-    }
-    /**
-     * MIME type.
-     *
-     * @return string
-     */
-    public function getType(): string
-    {
-        return $this->type;
-    }
-    /**
-     * MIME type.
-     *
-     * @param string $type
-     *
-     * @return self
-     */
-    public function setType(string $type): self
-    {
-        $this->type = $type;
-        return $this;
-    }
-    /**
-     * File name.
-     *
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-    /**
-     * File name.
-     *
-     * @param string $name
-     *
-     * @return self
-     */
-    public function setName(string $name): self
-    {
-        $this->name = $name;
         return $this;
     }
     /**
@@ -107,9 +65,51 @@ class NegotiableQuoteDataAttachmentContentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * File name.
+     *
+     * @return string
+     */
+    public function getName() : string
+    {
+        return $this->name;
+    }
+    /**
+     * File name.
+     *
+     * @param string $name
+     *
+     * @return self
+     */
+    public function setName(string $name) : self
+    {
+        $this->name = $name;
+        return $this;
+    }
+    /**
+     * MIME type.
+     *
+     * @return string
+     */
+    public function getType() : string
+    {
+        return $this->type;
+    }
+    /**
+     * MIME type.
+     *
+     * @param string $type
+     *
+     * @return self
+     */
+    public function setType(string $type) : self
+    {
+        $this->type = $type;
         return $this;
     }
 }

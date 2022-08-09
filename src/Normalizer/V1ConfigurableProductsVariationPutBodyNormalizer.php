@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1ConfigurableProductsVariationPutBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\V1ConfigurableProductsVariationPutBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\V1ConfigurableProductsVariationPutBody';
     }
@@ -40,15 +39,15 @@ class V1ConfigurableProductsVariationPutBodyNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('product', $data)) {
-            $object->setProduct($this->denormalizer->denormalize($data['product'], 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductInterface', 'json', $context));
-        }
         if (\array_key_exists('options', $data)) {
             $values = array();
             foreach ($data['options'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\ConfigurableProductDataOptionInterface', 'json', $context);
             }
             $object->setOptions($values);
+        }
+        if (\array_key_exists('product', $data)) {
+            $object->setProduct($this->denormalizer->denormalize($data['product'], 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductInterface', 'json', $context));
         }
         return $object;
     }
@@ -58,12 +57,12 @@ class V1ConfigurableProductsVariationPutBodyNormalizer implements DenormalizerIn
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['product'] = $this->normalizer->normalize($object->getProduct(), 'json', $context);
         $values = array();
         foreach ($object->getOptions() as $value) {
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
         $data['options'] = $values;
+        $data['product'] = $this->normalizer->normalize($object->getProduct(), 'json', $context);
         return $data;
     }
 }

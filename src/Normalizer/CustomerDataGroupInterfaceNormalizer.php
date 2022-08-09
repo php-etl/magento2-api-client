@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CustomerDataGroupInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CustomerDataGroupInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CustomerDataGroupInterface';
     }
@@ -40,20 +39,20 @@ class CustomerDataGroupInterfaceNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('id', $data)) {
-            $object->setId($data['id']);
-        }
         if (\array_key_exists('code', $data)) {
             $object->setCode($data['code']);
+        }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
+        }
+        if (\array_key_exists('id', $data)) {
+            $object->setId($data['id']);
         }
         if (\array_key_exists('tax_class_id', $data)) {
             $object->setTaxClassId($data['tax_class_id']);
         }
         if (\array_key_exists('tax_class_name', $data)) {
             $object->setTaxClassName($data['tax_class_name']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
         }
         return $object;
     }
@@ -63,16 +62,16 @@ class CustomerDataGroupInterfaceNormalizer implements DenormalizerInterface, Nor
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
+        $data['code'] = $object->getCode();
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $object->getExtensionAttributes();
+        }
         if (null !== $object->getId()) {
             $data['id'] = $object->getId();
         }
-        $data['code'] = $object->getCode();
         $data['tax_class_id'] = $object->getTaxClassId();
         if (null !== $object->getTaxClassName()) {
             $data['tax_class_name'] = $object->getTaxClassName();
-        }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $object->getExtensionAttributes();
         }
         return $data;
     }

@@ -5,12 +5,6 @@ namespace Kiboko\Magento\V2\Model;
 class EavDataAttributeOptionLabelInterface
 {
     /**
-     * Store id
-     *
-     * @var int
-     */
-    protected $storeId;
-    /**
      * Option label
      *
      * @var string
@@ -19,30 +13,15 @@ class EavDataAttributeOptionLabelInterface
     /**
      * Store id
      *
-     * @return int
+     * @var int
      */
-    public function getStoreId(): int
-    {
-        return $this->storeId;
-    }
-    /**
-     * Store id
-     *
-     * @param int $storeId
-     *
-     * @return self
-     */
-    public function setStoreId(int $storeId): self
-    {
-        $this->storeId = $storeId;
-        return $this;
-    }
+    protected $storeId;
     /**
      * Option label
      *
      * @return string
      */
-    public function getLabel(): string
+    public function getLabel() : string
     {
         return $this->label;
     }
@@ -53,9 +32,30 @@ class EavDataAttributeOptionLabelInterface
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(string $label) : self
     {
         $this->label = $label;
+        return $this;
+    }
+    /**
+     * Store id
+     *
+     * @return int
+     */
+    public function getStoreId() : int
+    {
+        return $this->storeId;
+    }
+    /**
+     * Store id
+     *
+     * @param int $storeId
+     *
+     * @return self
+     */
+    public function setStoreId(int $storeId) : self
+    {
+        $this->storeId = $storeId;
         return $this;
     }
 }

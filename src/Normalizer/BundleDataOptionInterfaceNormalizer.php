@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class BundleDataOptionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\BundleDataOptionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\BundleDataOptionInterface';
     }
@@ -40,23 +39,14 @@ class BundleDataOptionInterfaceNormalizer implements DenormalizerInterface, Norm
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
+        }
         if (\array_key_exists('option_id', $data)) {
             $object->setOptionId($data['option_id']);
         }
-        if (\array_key_exists('title', $data)) {
-            $object->setTitle($data['title']);
-        }
-        if (\array_key_exists('required', $data)) {
-            $object->setRequired($data['required']);
-        }
-        if (\array_key_exists('type', $data)) {
-            $object->setType($data['type']);
-        }
         if (\array_key_exists('position', $data)) {
             $object->setPosition($data['position']);
-        }
-        if (\array_key_exists('sku', $data)) {
-            $object->setSku($data['sku']);
         }
         if (\array_key_exists('product_links', $data)) {
             $values = array();
@@ -65,8 +55,17 @@ class BundleDataOptionInterfaceNormalizer implements DenormalizerInterface, Norm
             }
             $object->setProductLinks($values);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
+        if (\array_key_exists('required', $data)) {
+            $object->setRequired($data['required']);
+        }
+        if (\array_key_exists('sku', $data)) {
+            $object->setSku($data['sku']);
+        }
+        if (\array_key_exists('title', $data)) {
+            $object->setTitle($data['title']);
+        }
+        if (\array_key_exists('type', $data)) {
+            $object->setType($data['type']);
         }
         return $object;
     }
@@ -76,23 +75,14 @@ class BundleDataOptionInterfaceNormalizer implements DenormalizerInterface, Norm
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $object->getExtensionAttributes();
+        }
         if (null !== $object->getOptionId()) {
             $data['option_id'] = $object->getOptionId();
         }
-        if (null !== $object->getTitle()) {
-            $data['title'] = $object->getTitle();
-        }
-        if (null !== $object->getRequired()) {
-            $data['required'] = $object->getRequired();
-        }
-        if (null !== $object->getType()) {
-            $data['type'] = $object->getType();
-        }
         if (null !== $object->getPosition()) {
             $data['position'] = $object->getPosition();
-        }
-        if (null !== $object->getSku()) {
-            $data['sku'] = $object->getSku();
         }
         if (null !== $object->getProductLinks()) {
             $values = array();
@@ -101,8 +91,17 @@ class BundleDataOptionInterfaceNormalizer implements DenormalizerInterface, Norm
             }
             $data['product_links'] = $values;
         }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $object->getExtensionAttributes();
+        if (null !== $object->getRequired()) {
+            $data['required'] = $object->getRequired();
+        }
+        if (null !== $object->getSku()) {
+            $data['sku'] = $object->getSku();
+        }
+        if (null !== $object->getTitle()) {
+            $data['title'] = $object->getTitle();
+        }
+        if (null !== $object->getType()) {
+            $data['type'] = $object->getType();
         }
         return $data;
     }

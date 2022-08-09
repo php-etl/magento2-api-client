@@ -21,7 +21,7 @@ class QuoteDataPaymentMethodInterface
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -32,7 +32,7 @@ class QuoteDataPaymentMethodInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
@@ -42,7 +42,7 @@ class QuoteDataPaymentMethodInterface
      *
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle() : string
     {
         return $this->title;
     }
@@ -53,7 +53,7 @@ class QuoteDataPaymentMethodInterface
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(string $title) : self
     {
         $this->title = $title;
         return $this;

@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataCreditmemoCreationArgumentsInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoCreationArgumentsInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoCreationArgumentsInterface';
     }
@@ -40,17 +39,17 @@ class SalesDataCreditmemoCreationArgumentsInterfaceNormalizer implements Denorma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('shipping_amount', $data)) {
-            $object->setShippingAmount($data['shipping_amount']);
+        if (\array_key_exists('adjustment_negative', $data)) {
+            $object->setAdjustmentNegative($data['adjustment_negative']);
         }
         if (\array_key_exists('adjustment_positive', $data)) {
             $object->setAdjustmentPositive($data['adjustment_positive']);
         }
-        if (\array_key_exists('adjustment_negative', $data)) {
-            $object->setAdjustmentNegative($data['adjustment_negative']);
-        }
         if (\array_key_exists('extension_attributes', $data)) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoCreationArgumentsExtensionInterface', 'json', $context));
+        }
+        if (\array_key_exists('shipping_amount', $data)) {
+            $object->setShippingAmount($data['shipping_amount']);
         }
         return $object;
     }
@@ -60,17 +59,17 @@ class SalesDataCreditmemoCreationArgumentsInterfaceNormalizer implements Denorma
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getShippingAmount()) {
-            $data['shipping_amount'] = $object->getShippingAmount();
+        if (null !== $object->getAdjustmentNegative()) {
+            $data['adjustment_negative'] = $object->getAdjustmentNegative();
         }
         if (null !== $object->getAdjustmentPositive()) {
             $data['adjustment_positive'] = $object->getAdjustmentPositive();
         }
-        if (null !== $object->getAdjustmentNegative()) {
-            $data['adjustment_negative'] = $object->getAdjustmentNegative();
-        }
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
+        }
+        if (null !== $object->getShippingAmount()) {
+            $data['shipping_amount'] = $object->getShippingAmount();
         }
         return $data;
     }

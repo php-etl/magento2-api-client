@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class RmaDataItemInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\RmaDataItemInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\RmaDataItemInterface';
     }
@@ -40,23 +39,26 @@ class RmaDataItemInterfaceNormalizer implements DenormalizerInterface, Normalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('condition', $data)) {
+            $object->setCondition($data['condition']);
+        }
         if (\array_key_exists('entity_id', $data)) {
             $object->setEntityId($data['entity_id']);
         }
-        if (\array_key_exists('rma_entity_id', $data)) {
-            $object->setRmaEntityId($data['rma_entity_id']);
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
         }
         if (\array_key_exists('order_item_id', $data)) {
             $object->setOrderItemId($data['order_item_id']);
         }
-        if (\array_key_exists('qty_requested', $data)) {
-            $object->setQtyRequested($data['qty_requested']);
+        if (\array_key_exists('qty_approved', $data)) {
+            $object->setQtyApproved($data['qty_approved']);
         }
         if (\array_key_exists('qty_authorized', $data)) {
             $object->setQtyAuthorized($data['qty_authorized']);
         }
-        if (\array_key_exists('qty_approved', $data)) {
-            $object->setQtyApproved($data['qty_approved']);
+        if (\array_key_exists('qty_requested', $data)) {
+            $object->setQtyRequested($data['qty_requested']);
         }
         if (\array_key_exists('qty_returned', $data)) {
             $object->setQtyReturned($data['qty_returned']);
@@ -64,17 +66,14 @@ class RmaDataItemInterfaceNormalizer implements DenormalizerInterface, Normalize
         if (\array_key_exists('reason', $data)) {
             $object->setReason($data['reason']);
         }
-        if (\array_key_exists('condition', $data)) {
-            $object->setCondition($data['condition']);
-        }
         if (\array_key_exists('resolution', $data)) {
             $object->setResolution($data['resolution']);
         }
+        if (\array_key_exists('rma_entity_id', $data)) {
+            $object->setRmaEntityId($data['rma_entity_id']);
+        }
         if (\array_key_exists('status', $data)) {
             $object->setStatus($data['status']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
         }
         return $object;
     }
@@ -84,20 +83,20 @@ class RmaDataItemInterfaceNormalizer implements DenormalizerInterface, Normalize
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['entity_id'] = $object->getEntityId();
-        $data['rma_entity_id'] = $object->getRmaEntityId();
-        $data['order_item_id'] = $object->getOrderItemId();
-        $data['qty_requested'] = $object->getQtyRequested();
-        $data['qty_authorized'] = $object->getQtyAuthorized();
-        $data['qty_approved'] = $object->getQtyApproved();
-        $data['qty_returned'] = $object->getQtyReturned();
-        $data['reason'] = $object->getReason();
         $data['condition'] = $object->getCondition();
-        $data['resolution'] = $object->getResolution();
-        $data['status'] = $object->getStatus();
+        $data['entity_id'] = $object->getEntityId();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
+        $data['order_item_id'] = $object->getOrderItemId();
+        $data['qty_approved'] = $object->getQtyApproved();
+        $data['qty_authorized'] = $object->getQtyAuthorized();
+        $data['qty_requested'] = $object->getQtyRequested();
+        $data['qty_returned'] = $object->getQtyReturned();
+        $data['reason'] = $object->getReason();
+        $data['resolution'] = $object->getResolution();
+        $data['rma_entity_id'] = $object->getRmaEntityId();
+        $data['status'] = $object->getStatus();
         return $data;
     }
 }

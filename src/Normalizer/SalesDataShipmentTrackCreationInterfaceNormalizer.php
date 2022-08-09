@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataShipmentTrackCreationInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentTrackCreationInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentTrackCreationInterface';
     }
@@ -40,17 +39,17 @@ class SalesDataShipmentTrackCreationInterfaceNormalizer implements DenormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('carrier_code', $data)) {
+            $object->setCarrierCode($data['carrier_code']);
+        }
         if (\array_key_exists('extension_attributes', $data)) {
             $object->setExtensionAttributes($data['extension_attributes']);
-        }
-        if (\array_key_exists('track_number', $data)) {
-            $object->setTrackNumber($data['track_number']);
         }
         if (\array_key_exists('title', $data)) {
             $object->setTitle($data['title']);
         }
-        if (\array_key_exists('carrier_code', $data)) {
-            $object->setCarrierCode($data['carrier_code']);
+        if (\array_key_exists('track_number', $data)) {
+            $object->setTrackNumber($data['track_number']);
         }
         return $object;
     }
@@ -60,12 +59,12 @@ class SalesDataShipmentTrackCreationInterfaceNormalizer implements DenormalizerI
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
+        $data['carrier_code'] = $object->getCarrierCode();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
-        $data['track_number'] = $object->getTrackNumber();
         $data['title'] = $object->getTitle();
-        $data['carrier_code'] = $object->getCarrierCode();
+        $data['track_number'] = $object->getTrackNumber();
         return $data;
     }
 }

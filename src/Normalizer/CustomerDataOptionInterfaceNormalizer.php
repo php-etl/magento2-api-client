@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CustomerDataOptionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CustomerDataOptionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CustomerDataOptionInterface';
     }
@@ -43,15 +42,15 @@ class CustomerDataOptionInterfaceNormalizer implements DenormalizerInterface, No
         if (\array_key_exists('label', $data)) {
             $object->setLabel($data['label']);
         }
-        if (\array_key_exists('value', $data)) {
-            $object->setValue($data['value']);
-        }
         if (\array_key_exists('options', $data)) {
             $values = array();
             foreach ($data['options'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\CustomerDataOptionInterface', 'json', $context);
             }
             $object->setOptions($values);
+        }
+        if (\array_key_exists('value', $data)) {
+            $object->setValue($data['value']);
         }
         return $object;
     }
@@ -62,15 +61,15 @@ class CustomerDataOptionInterfaceNormalizer implements DenormalizerInterface, No
     {
         $data = array();
         $data['label'] = $object->getLabel();
-        if (null !== $object->getValue()) {
-            $data['value'] = $object->getValue();
-        }
         if (null !== $object->getOptions()) {
             $values = array();
             foreach ($object->getOptions() as $value) {
                 $values[] = $this->normalizer->normalize($value, 'json', $context);
             }
             $data['options'] = $values;
+        }
+        if (null !== $object->getValue()) {
+            $data['value'] = $object->getValue();
         }
         return $data;
     }

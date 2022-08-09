@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1IntegrationAdminTokenPostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\V1IntegrationAdminTokenPostBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\V1IntegrationAdminTokenPostBody';
     }
@@ -40,11 +39,11 @@ class V1IntegrationAdminTokenPostBodyNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('username', $data)) {
-            $object->setUsername($data['username']);
-        }
         if (\array_key_exists('password', $data)) {
             $object->setPassword($data['password']);
+        }
+        if (\array_key_exists('username', $data)) {
+            $object->setUsername($data['username']);
         }
         return $object;
     }
@@ -54,8 +53,8 @@ class V1IntegrationAdminTokenPostBodyNormalizer implements DenormalizerInterface
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['username'] = $object->getUsername();
         $data['password'] = $object->getPassword();
+        $data['username'] = $object->getUsername();
         return $data;
     }
 }

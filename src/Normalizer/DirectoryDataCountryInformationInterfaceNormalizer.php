@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class DirectoryDataCountryInformationInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\DirectoryDataCountryInformationInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\DirectoryDataCountryInformationInterface';
     }
@@ -40,21 +39,6 @@ class DirectoryDataCountryInformationInterfaceNormalizer implements Denormalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('id', $data)) {
-            $object->setId($data['id']);
-        }
-        if (\array_key_exists('two_letter_abbreviation', $data)) {
-            $object->setTwoLetterAbbreviation($data['two_letter_abbreviation']);
-        }
-        if (\array_key_exists('three_letter_abbreviation', $data)) {
-            $object->setThreeLetterAbbreviation($data['three_letter_abbreviation']);
-        }
-        if (\array_key_exists('full_name_locale', $data)) {
-            $object->setFullNameLocale($data['full_name_locale']);
-        }
-        if (\array_key_exists('full_name_english', $data)) {
-            $object->setFullNameEnglish($data['full_name_english']);
-        }
         if (\array_key_exists('available_regions', $data)) {
             $values = array();
             foreach ($data['available_regions'] as $value) {
@@ -65,6 +49,21 @@ class DirectoryDataCountryInformationInterfaceNormalizer implements Denormalizer
         if (\array_key_exists('extension_attributes', $data)) {
             $object->setExtensionAttributes($data['extension_attributes']);
         }
+        if (\array_key_exists('full_name_english', $data)) {
+            $object->setFullNameEnglish($data['full_name_english']);
+        }
+        if (\array_key_exists('full_name_locale', $data)) {
+            $object->setFullNameLocale($data['full_name_locale']);
+        }
+        if (\array_key_exists('id', $data)) {
+            $object->setId($data['id']);
+        }
+        if (\array_key_exists('three_letter_abbreviation', $data)) {
+            $object->setThreeLetterAbbreviation($data['three_letter_abbreviation']);
+        }
+        if (\array_key_exists('two_letter_abbreviation', $data)) {
+            $object->setTwoLetterAbbreviation($data['two_letter_abbreviation']);
+        }
         return $object;
     }
     /**
@@ -73,11 +72,6 @@ class DirectoryDataCountryInformationInterfaceNormalizer implements Denormalizer
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['id'] = $object->getId();
-        $data['two_letter_abbreviation'] = $object->getTwoLetterAbbreviation();
-        $data['three_letter_abbreviation'] = $object->getThreeLetterAbbreviation();
-        $data['full_name_locale'] = $object->getFullNameLocale();
-        $data['full_name_english'] = $object->getFullNameEnglish();
         if (null !== $object->getAvailableRegions()) {
             $values = array();
             foreach ($object->getAvailableRegions() as $value) {
@@ -88,6 +82,11 @@ class DirectoryDataCountryInformationInterfaceNormalizer implements Denormalizer
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
+        $data['full_name_english'] = $object->getFullNameEnglish();
+        $data['full_name_locale'] = $object->getFullNameLocale();
+        $data['id'] = $object->getId();
+        $data['three_letter_abbreviation'] = $object->getThreeLetterAbbreviation();
+        $data['two_letter_abbreviation'] = $object->getTwoLetterAbbreviation();
         return $data;
     }
 }

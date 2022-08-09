@@ -15,7 +15,7 @@ class V1CompanyRoleIdPutBody
      *
      * @return CompanyDataRoleInterface
      */
-    public function getRole(): CompanyDataRoleInterface
+    public function getRole() : CompanyDataRoleInterface
     {
         return $this->role;
     }
@@ -26,7 +26,7 @@ class V1CompanyRoleIdPutBody
      *
      * @return self
      */
-    public function setRole(CompanyDataRoleInterface $role): self
+    public function setRole(CompanyDataRoleInterface $role) : self
     {
         $this->role = $role;
         return $this;

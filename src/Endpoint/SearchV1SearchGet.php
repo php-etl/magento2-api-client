@@ -4,12 +4,11 @@ namespace Kiboko\Magento\V2\Endpoint;
 
 class SearchV1SearchGet extends \Kiboko\Magento\V2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\V2\Runtime\Client\EndpointTrait;
     /**
      * Make Full Text Search and return found Documents
      *
      * @param array $queryParameters {
-     *     @var string $searchCriteria[requestName]
+     *     @var string $searchCriteria[requestName] 
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
@@ -23,23 +22,24 @@ class SearchV1SearchGet extends \Kiboko\Magento\V2\Runtime\Client\BaseEndpoint i
     {
         $this->queryParameters = $queryParameters;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\V2\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'GET';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return '/V1/search';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
-    protected function getQueryOptionsResolver(): \Symfony\Component\OptionsResolver\OptionsResolver
+    protected function getQueryOptionsResolver() : \Symfony\Component\OptionsResolver\OptionsResolver
     {
         $optionsResolver = parent::getQueryOptionsResolver();
         $optionsResolver->setDefined(array('searchCriteria[requestName]', 'searchCriteria[filterGroups][0][filters][0][field]', 'searchCriteria[filterGroups][0][filters][0][value]', 'searchCriteria[filterGroups][0][filters][0][conditionType]', 'searchCriteria[sortOrders][0][field]', 'searchCriteria[sortOrders][0][direction]', 'searchCriteria[pageSize]', 'searchCriteria[currentPage]'));
@@ -63,12 +63,14 @@ class SearchV1SearchGet extends \Kiboko\Magento\V2\Runtime\Client\BaseEndpoint i
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (200 === $status) {
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             return $serializer->deserialize($body, 'Kiboko\\Magento\\V2\\Model\\FrameworkSearchSearchResultInterface', 'json');
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\V2\\Model\\ErrorResponse', 'json');
+        if (mb_strpos($contentType, 'application/json') !== false) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2\\Model\\ErrorResponse', 'json');
+        }
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

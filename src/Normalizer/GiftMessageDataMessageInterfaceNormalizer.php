@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class GiftMessageDataMessageInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\GiftMessageDataMessageInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\GiftMessageDataMessageInterface';
     }
@@ -40,23 +39,23 @@ class GiftMessageDataMessageInterfaceNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('gift_message_id', $data)) {
-            $object->setGiftMessageId($data['gift_message_id']);
-        }
         if (\array_key_exists('customer_id', $data)) {
             $object->setCustomerId($data['customer_id']);
         }
-        if (\array_key_exists('sender', $data)) {
-            $object->setSender($data['sender']);
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\GiftMessageDataMessageExtensionInterface', 'json', $context));
         }
-        if (\array_key_exists('recipient', $data)) {
-            $object->setRecipient($data['recipient']);
+        if (\array_key_exists('gift_message_id', $data)) {
+            $object->setGiftMessageId($data['gift_message_id']);
         }
         if (\array_key_exists('message', $data)) {
             $object->setMessage($data['message']);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\GiftMessageDataMessageExtensionInterface', 'json', $context));
+        if (\array_key_exists('recipient', $data)) {
+            $object->setRecipient($data['recipient']);
+        }
+        if (\array_key_exists('sender', $data)) {
+            $object->setSender($data['sender']);
         }
         return $object;
     }
@@ -66,18 +65,18 @@ class GiftMessageDataMessageInterfaceNormalizer implements DenormalizerInterface
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getGiftMessageId()) {
-            $data['gift_message_id'] = $object->getGiftMessageId();
-        }
         if (null !== $object->getCustomerId()) {
             $data['customer_id'] = $object->getCustomerId();
         }
-        $data['sender'] = $object->getSender();
-        $data['recipient'] = $object->getRecipient();
-        $data['message'] = $object->getMessage();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
+        if (null !== $object->getGiftMessageId()) {
+            $data['gift_message_id'] = $object->getGiftMessageId();
+        }
+        $data['message'] = $object->getMessage();
+        $data['recipient'] = $object->getRecipient();
+        $data['sender'] = $object->getSender();
         return $data;
     }
 }

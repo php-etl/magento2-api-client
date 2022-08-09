@@ -5,23 +5,17 @@ namespace Kiboko\Magento\V2\Model;
 class CatalogDataCategoryTreeInterface
 {
     /**
+     * 
      *
+     * @var CatalogDataCategoryTreeInterface[]
+     */
+    protected $childrenData;
+    /**
+     * 
      *
      * @var int
      */
     protected $id;
-    /**
-     * Parent category ID
-     *
-     * @var int
-     */
-    protected $parentId;
-    /**
-     * Category name
-     *
-     * @var string
-     */
-    protected $name;
     /**
      * Whether category is active
      *
@@ -29,17 +23,29 @@ class CatalogDataCategoryTreeInterface
      */
     protected $isActive;
     /**
-     * Category position
-     *
-     * @var int
-     */
-    protected $position;
-    /**
      * Category level
      *
      * @var int
      */
     protected $level;
+    /**
+     * Category name
+     *
+     * @var string
+     */
+    protected $name;
+    /**
+     * Parent category ID
+     *
+     * @var int
+     */
+    protected $parentId;
+    /**
+     * Category position
+     *
+     * @var int
+     */
+    protected $position;
     /**
      * Product count
      *
@@ -47,72 +53,45 @@ class CatalogDataCategoryTreeInterface
      */
     protected $productCount;
     /**
+     * 
      *
-     *
-     * @var CatalogDataCategoryTreeInterface[]
+     * @return CatalogDataCategoryTreeInterface[]
      */
-    protected $childrenData;
+    public function getChildrenData() : array
+    {
+        return $this->childrenData;
+    }
     /**
+     * 
      *
+     * @param CatalogDataCategoryTreeInterface[] $childrenData
+     *
+     * @return self
+     */
+    public function setChildrenData(array $childrenData) : self
+    {
+        $this->childrenData = $childrenData;
+        return $this;
+    }
+    /**
+     * 
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
     /**
-     *
+     * 
      *
      * @param int $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
-        return $this;
-    }
-    /**
-     * Parent category ID
-     *
-     * @return int
-     */
-    public function getParentId(): int
-    {
-        return $this->parentId;
-    }
-    /**
-     * Parent category ID
-     *
-     * @param int $parentId
-     *
-     * @return self
-     */
-    public function setParentId(int $parentId): self
-    {
-        $this->parentId = $parentId;
-        return $this;
-    }
-    /**
-     * Category name
-     *
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-    /**
-     * Category name
-     *
-     * @param string $name
-     *
-     * @return self
-     */
-    public function setName(string $name): self
-    {
-        $this->name = $name;
         return $this;
     }
     /**
@@ -120,7 +99,7 @@ class CatalogDataCategoryTreeInterface
      *
      * @return bool
      */
-    public function getIsActive(): bool
+    public function getIsActive() : bool
     {
         return $this->isActive;
     }
@@ -131,30 +110,9 @@ class CatalogDataCategoryTreeInterface
      *
      * @return self
      */
-    public function setIsActive(bool $isActive): self
+    public function setIsActive(bool $isActive) : self
     {
         $this->isActive = $isActive;
-        return $this;
-    }
-    /**
-     * Category position
-     *
-     * @return int
-     */
-    public function getPosition(): int
-    {
-        return $this->position;
-    }
-    /**
-     * Category position
-     *
-     * @param int $position
-     *
-     * @return self
-     */
-    public function setPosition(int $position): self
-    {
-        $this->position = $position;
         return $this;
     }
     /**
@@ -162,7 +120,7 @@ class CatalogDataCategoryTreeInterface
      *
      * @return int
      */
-    public function getLevel(): int
+    public function getLevel() : int
     {
         return $this->level;
     }
@@ -173,9 +131,72 @@ class CatalogDataCategoryTreeInterface
      *
      * @return self
      */
-    public function setLevel(int $level): self
+    public function setLevel(int $level) : self
     {
         $this->level = $level;
+        return $this;
+    }
+    /**
+     * Category name
+     *
+     * @return string
+     */
+    public function getName() : string
+    {
+        return $this->name;
+    }
+    /**
+     * Category name
+     *
+     * @param string $name
+     *
+     * @return self
+     */
+    public function setName(string $name) : self
+    {
+        $this->name = $name;
+        return $this;
+    }
+    /**
+     * Parent category ID
+     *
+     * @return int
+     */
+    public function getParentId() : int
+    {
+        return $this->parentId;
+    }
+    /**
+     * Parent category ID
+     *
+     * @param int $parentId
+     *
+     * @return self
+     */
+    public function setParentId(int $parentId) : self
+    {
+        $this->parentId = $parentId;
+        return $this;
+    }
+    /**
+     * Category position
+     *
+     * @return int
+     */
+    public function getPosition() : int
+    {
+        return $this->position;
+    }
+    /**
+     * Category position
+     *
+     * @param int $position
+     *
+     * @return self
+     */
+    public function setPosition(int $position) : self
+    {
+        $this->position = $position;
         return $this;
     }
     /**
@@ -183,7 +204,7 @@ class CatalogDataCategoryTreeInterface
      *
      * @return int
      */
-    public function getProductCount(): int
+    public function getProductCount() : int
     {
         return $this->productCount;
     }
@@ -194,30 +215,9 @@ class CatalogDataCategoryTreeInterface
      *
      * @return self
      */
-    public function setProductCount(int $productCount): self
+    public function setProductCount(int $productCount) : self
     {
         $this->productCount = $productCount;
-        return $this;
-    }
-    /**
-     *
-     *
-     * @return CatalogDataCategoryTreeInterface[]
-     */
-    public function getChildrenData(): array
-    {
-        return $this->childrenData;
-    }
-    /**
-     *
-     *
-     * @param CatalogDataCategoryTreeInterface[] $childrenData
-     *
-     * @return self
-     */
-    public function setChildrenData(array $childrenData): self
-    {
-        $this->childrenData = $childrenData;
         return $this;
     }
 }

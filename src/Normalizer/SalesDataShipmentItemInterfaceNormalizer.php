@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataShipmentItemInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentItemInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentItemInterface';
     }
@@ -49,8 +48,14 @@ class SalesDataShipmentItemInterfaceNormalizer implements DenormalizerInterface,
         if (\array_key_exists('entity_id', $data)) {
             $object->setEntityId($data['entity_id']);
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
+        }
         if (\array_key_exists('name', $data)) {
             $object->setName($data['name']);
+        }
+        if (\array_key_exists('order_item_id', $data)) {
+            $object->setOrderItemId($data['order_item_id']);
         }
         if (\array_key_exists('parent_id', $data)) {
             $object->setParentId($data['parent_id']);
@@ -61,6 +66,9 @@ class SalesDataShipmentItemInterfaceNormalizer implements DenormalizerInterface,
         if (\array_key_exists('product_id', $data)) {
             $object->setProductId($data['product_id']);
         }
+        if (\array_key_exists('qty', $data)) {
+            $object->setQty($data['qty']);
+        }
         if (\array_key_exists('row_total', $data)) {
             $object->setRowTotal($data['row_total']);
         }
@@ -69,15 +77,6 @@ class SalesDataShipmentItemInterfaceNormalizer implements DenormalizerInterface,
         }
         if (\array_key_exists('weight', $data)) {
             $object->setWeight($data['weight']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
-        }
-        if (\array_key_exists('order_item_id', $data)) {
-            $object->setOrderItemId($data['order_item_id']);
-        }
-        if (\array_key_exists('qty', $data)) {
-            $object->setQty($data['qty']);
         }
         return $object;
     }
@@ -96,9 +95,13 @@ class SalesDataShipmentItemInterfaceNormalizer implements DenormalizerInterface,
         if (null !== $object->getEntityId()) {
             $data['entity_id'] = $object->getEntityId();
         }
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $object->getExtensionAttributes();
+        }
         if (null !== $object->getName()) {
             $data['name'] = $object->getName();
         }
+        $data['order_item_id'] = $object->getOrderItemId();
         if (null !== $object->getParentId()) {
             $data['parent_id'] = $object->getParentId();
         }
@@ -108,6 +111,7 @@ class SalesDataShipmentItemInterfaceNormalizer implements DenormalizerInterface,
         if (null !== $object->getProductId()) {
             $data['product_id'] = $object->getProductId();
         }
+        $data['qty'] = $object->getQty();
         if (null !== $object->getRowTotal()) {
             $data['row_total'] = $object->getRowTotal();
         }
@@ -117,11 +121,6 @@ class SalesDataShipmentItemInterfaceNormalizer implements DenormalizerInterface,
         if (null !== $object->getWeight()) {
             $data['weight'] = $object->getWeight();
         }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $object->getExtensionAttributes();
-        }
-        $data['order_item_id'] = $object->getOrderItemId();
-        $data['qty'] = $object->getQty();
         return $data;
     }
 }

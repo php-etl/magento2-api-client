@@ -11,11 +11,11 @@ class CatalogDataCostInterface
      */
     protected $cost;
     /**
-     * Store id.
+     * ExtensionInterface class for @see \Magento\Catalog\Api\Data\CostInterface
      *
-     * @var int
+     * @var mixed
      */
-    protected $storeId;
+    protected $extensionAttributes;
     /**
      * SKU.
      *
@@ -23,17 +23,17 @@ class CatalogDataCostInterface
      */
     protected $sku;
     /**
-     * ExtensionInterface class for @see \Magento\Catalog\Api\Data\CostInterface
+     * Store id.
      *
-     * @var mixed
+     * @var int
      */
-    protected $extensionAttributes;
+    protected $storeId;
     /**
      * Cost value.
      *
      * @return float
      */
-    public function getCost(): float
+    public function getCost() : float
     {
         return $this->cost;
     }
@@ -44,51 +44,9 @@ class CatalogDataCostInterface
      *
      * @return self
      */
-    public function setCost(float $cost): self
+    public function setCost(float $cost) : self
     {
         $this->cost = $cost;
-        return $this;
-    }
-    /**
-     * Store id.
-     *
-     * @return int
-     */
-    public function getStoreId(): int
-    {
-        return $this->storeId;
-    }
-    /**
-     * Store id.
-     *
-     * @param int $storeId
-     *
-     * @return self
-     */
-    public function setStoreId(int $storeId): self
-    {
-        $this->storeId = $storeId;
-        return $this;
-    }
-    /**
-     * SKU.
-     *
-     * @return string
-     */
-    public function getSku(): string
-    {
-        return $this->sku;
-    }
-    /**
-     * SKU.
-     *
-     * @param string $sku
-     *
-     * @return self
-     */
-    public function setSku(string $sku): self
-    {
-        $this->sku = $sku;
         return $this;
     }
     /**
@@ -107,9 +65,51 @@ class CatalogDataCostInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * SKU.
+     *
+     * @return string
+     */
+    public function getSku() : string
+    {
+        return $this->sku;
+    }
+    /**
+     * SKU.
+     *
+     * @param string $sku
+     *
+     * @return self
+     */
+    public function setSku(string $sku) : self
+    {
+        $this->sku = $sku;
+        return $this;
+    }
+    /**
+     * Store id.
+     *
+     * @return int
+     */
+    public function getStoreId() : int
+    {
+        return $this->storeId;
+    }
+    /**
+     * Store id.
+     *
+     * @param int $storeId
+     *
+     * @return self
+     */
+    public function setStoreId(int $storeId) : self
+    {
+        $this->storeId = $storeId;
         return $this;
     }
 }

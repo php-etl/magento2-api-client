@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataBasePriceInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CatalogDataBasePriceInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CatalogDataBasePriceInterface';
     }
@@ -40,17 +39,17 @@ class CatalogDataBasePriceInterfaceNormalizer implements DenormalizerInterface, 
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
+        }
         if (\array_key_exists('price', $data)) {
             $object->setPrice($data['price']);
-        }
-        if (\array_key_exists('store_id', $data)) {
-            $object->setStoreId($data['store_id']);
         }
         if (\array_key_exists('sku', $data)) {
             $object->setSku($data['sku']);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
+        if (\array_key_exists('store_id', $data)) {
+            $object->setStoreId($data['store_id']);
         }
         return $object;
     }
@@ -60,12 +59,12 @@ class CatalogDataBasePriceInterfaceNormalizer implements DenormalizerInterface, 
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['price'] = $object->getPrice();
-        $data['store_id'] = $object->getStoreId();
-        $data['sku'] = $object->getSku();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
+        $data['price'] = $object->getPrice();
+        $data['sku'] = $object->getSku();
+        $data['store_id'] = $object->getStoreId();
         return $data;
     }
 }

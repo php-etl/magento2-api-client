@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataCreditmemoItemInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoItemInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoItemInterface';
     }
@@ -85,11 +84,14 @@ class SalesDataCreditmemoItemInterfaceNormalizer implements DenormalizerInterfac
         if (\array_key_exists('discount_amount', $data)) {
             $object->setDiscountAmount($data['discount_amount']);
         }
+        if (\array_key_exists('discount_tax_compensation_amount', $data)) {
+            $object->setDiscountTaxCompensationAmount($data['discount_tax_compensation_amount']);
+        }
         if (\array_key_exists('entity_id', $data)) {
             $object->setEntityId($data['entity_id']);
         }
-        if (\array_key_exists('discount_tax_compensation_amount', $data)) {
-            $object->setDiscountTaxCompensationAmount($data['discount_tax_compensation_amount']);
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoItemExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('name', $data)) {
             $object->setName($data['name']);
@@ -138,9 +140,6 @@ class SalesDataCreditmemoItemInterfaceNormalizer implements DenormalizerInterfac
         }
         if (\array_key_exists('weee_tax_row_disposition', $data)) {
             $object->setWeeeTaxRowDisposition($data['weee_tax_row_disposition']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoItemExtensionInterface', 'json', $context));
         }
         return $object;
     }
@@ -191,9 +190,12 @@ class SalesDataCreditmemoItemInterfaceNormalizer implements DenormalizerInterfac
         if (null !== $object->getDiscountAmount()) {
             $data['discount_amount'] = $object->getDiscountAmount();
         }
-        $data['entity_id'] = $object->getEntityId();
         if (null !== $object->getDiscountTaxCompensationAmount()) {
             $data['discount_tax_compensation_amount'] = $object->getDiscountTaxCompensationAmount();
+        }
+        $data['entity_id'] = $object->getEntityId();
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
         if (null !== $object->getName()) {
             $data['name'] = $object->getName();
@@ -238,9 +240,6 @@ class SalesDataCreditmemoItemInterfaceNormalizer implements DenormalizerInterfac
         }
         if (null !== $object->getWeeeTaxRowDisposition()) {
             $data['weee_tax_row_disposition'] = $object->getWeeeTaxRowDisposition();
-        }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
         return $data;
     }

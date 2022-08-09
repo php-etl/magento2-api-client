@@ -5,12 +5,6 @@ namespace Kiboko\Magento\V2\Model;
 class FrameworkSearchAggregationInterface
 {
     /**
-     * All Document fields
-     *
-     * @var FrameworkSearchBucketInterface[]
-     */
-    protected $buckets;
-    /**
      * Document field names
      *
      * @var string[]
@@ -19,30 +13,15 @@ class FrameworkSearchAggregationInterface
     /**
      * All Document fields
      *
-     * @return FrameworkSearchBucketInterface[]
+     * @var FrameworkSearchBucketInterface[]
      */
-    public function getBuckets(): array
-    {
-        return $this->buckets;
-    }
-    /**
-     * All Document fields
-     *
-     * @param FrameworkSearchBucketInterface[] $buckets
-     *
-     * @return self
-     */
-    public function setBuckets(array $buckets): self
-    {
-        $this->buckets = $buckets;
-        return $this;
-    }
+    protected $buckets;
     /**
      * Document field names
      *
      * @return string[]
      */
-    public function getBucketNames(): array
+    public function getBucketNames() : array
     {
         return $this->bucketNames;
     }
@@ -53,9 +32,30 @@ class FrameworkSearchAggregationInterface
      *
      * @return self
      */
-    public function setBucketNames(array $bucketNames): self
+    public function setBucketNames(array $bucketNames) : self
     {
         $this->bucketNames = $bucketNames;
+        return $this;
+    }
+    /**
+     * All Document fields
+     *
+     * @return FrameworkSearchBucketInterface[]
+     */
+    public function getBuckets() : array
+    {
+        return $this->buckets;
+    }
+    /**
+     * All Document fields
+     *
+     * @param FrameworkSearchBucketInterface[] $buckets
+     *
+     * @return self
+     */
+    public function setBuckets(array $buckets) : self
+    {
+        $this->buckets = $buckets;
         return $this;
     }
 }

@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class GiftMessageDataMessageExtensionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\GiftMessageDataMessageExtensionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\GiftMessageDataMessageExtensionInterface';
     }
@@ -46,14 +45,14 @@ class GiftMessageDataMessageExtensionInterfaceNormalizer implements Denormalizer
         if (\array_key_exists('entity_type', $data)) {
             $object->setEntityType($data['entity_type']);
         }
-        if (\array_key_exists('wrapping_id', $data)) {
-            $object->setWrappingId($data['wrapping_id']);
+        if (\array_key_exists('wrapping_add_printed_card', $data)) {
+            $object->setWrappingAddPrintedCard($data['wrapping_add_printed_card']);
         }
         if (\array_key_exists('wrapping_allow_gift_receipt', $data)) {
             $object->setWrappingAllowGiftReceipt($data['wrapping_allow_gift_receipt']);
         }
-        if (\array_key_exists('wrapping_add_printed_card', $data)) {
-            $object->setWrappingAddPrintedCard($data['wrapping_add_printed_card']);
+        if (\array_key_exists('wrapping_id', $data)) {
+            $object->setWrappingId($data['wrapping_id']);
         }
         return $object;
     }
@@ -69,14 +68,14 @@ class GiftMessageDataMessageExtensionInterfaceNormalizer implements Denormalizer
         if (null !== $object->getEntityType()) {
             $data['entity_type'] = $object->getEntityType();
         }
-        if (null !== $object->getWrappingId()) {
-            $data['wrapping_id'] = $object->getWrappingId();
+        if (null !== $object->getWrappingAddPrintedCard()) {
+            $data['wrapping_add_printed_card'] = $object->getWrappingAddPrintedCard();
         }
         if (null !== $object->getWrappingAllowGiftReceipt()) {
             $data['wrapping_allow_gift_receipt'] = $object->getWrappingAllowGiftReceipt();
         }
-        if (null !== $object->getWrappingAddPrintedCard()) {
-            $data['wrapping_add_printed_card'] = $object->getWrappingAddPrintedCard();
+        if (null !== $object->getWrappingId()) {
+            $data['wrapping_id'] = $object->getWrappingId();
         }
         return $data;
     }

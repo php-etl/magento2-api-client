@@ -13,7 +13,7 @@ class SalesRuleRuleRepositoryV1GetListGetInternalServerErrorException extends In
         parent::__construct('Internal Server error');
         $this->errorResponse = $errorResponse;
     }
-    public function getErrorResponse(): \Kiboko\Magento\V2\Model\ErrorResponse
+    public function getErrorResponse() : \Kiboko\Magento\V2\Model\ErrorResponse
     {
         return $this->errorResponse;
     }

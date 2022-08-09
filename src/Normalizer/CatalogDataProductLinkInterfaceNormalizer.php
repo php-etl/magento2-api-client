@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataProductLinkInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductLinkInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductLinkInterface';
     }
@@ -40,8 +39,8 @@ class CatalogDataProductLinkInterfaceNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('sku', $data)) {
-            $object->setSku($data['sku']);
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductLinkExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('link_type', $data)) {
             $object->setLinkType($data['link_type']);
@@ -55,8 +54,8 @@ class CatalogDataProductLinkInterfaceNormalizer implements DenormalizerInterface
         if (\array_key_exists('position', $data)) {
             $object->setPosition($data['position']);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductLinkExtensionInterface', 'json', $context));
+        if (\array_key_exists('sku', $data)) {
+            $object->setSku($data['sku']);
         }
         return $object;
     }
@@ -66,14 +65,14 @@ class CatalogDataProductLinkInterfaceNormalizer implements DenormalizerInterface
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['sku'] = $object->getSku();
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
+        }
         $data['link_type'] = $object->getLinkType();
         $data['linked_product_sku'] = $object->getLinkedProductSku();
         $data['linked_product_type'] = $object->getLinkedProductType();
         $data['position'] = $object->getPosition();
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
-        }
+        $data['sku'] = $object->getSku();
         return $data;
     }
 }

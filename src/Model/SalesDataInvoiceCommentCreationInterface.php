@@ -5,23 +5,44 @@ namespace Kiboko\Magento\V2\Model;
 class SalesDataInvoiceCommentCreationInterface
 {
     /**
-     * ExtensionInterface class for @see \Magento\Sales\Api\Data\InvoiceCommentCreationInterface
-     *
-     * @var mixed
-     */
-    protected $extensionAttributes;
-    /**
      * Comment.
      *
      * @var string
      */
     protected $comment;
     /**
+     * ExtensionInterface class for @see \Magento\Sales\Api\Data\InvoiceCommentCreationInterface
+     *
+     * @var mixed
+     */
+    protected $extensionAttributes;
+    /**
      * Is-visible-on-storefront flag value.
      *
      * @var int
      */
     protected $isVisibleOnFront;
+    /**
+     * Comment.
+     *
+     * @return string
+     */
+    public function getComment() : string
+    {
+        return $this->comment;
+    }
+    /**
+     * Comment.
+     *
+     * @param string $comment
+     *
+     * @return self
+     */
+    public function setComment(string $comment) : self
+    {
+        $this->comment = $comment;
+        return $this;
+    }
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\InvoiceCommentCreationInterface
      *
@@ -38,30 +59,9 @@ class SalesDataInvoiceCommentCreationInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
-        return $this;
-    }
-    /**
-     * Comment.
-     *
-     * @return string
-     */
-    public function getComment(): string
-    {
-        return $this->comment;
-    }
-    /**
-     * Comment.
-     *
-     * @param string $comment
-     *
-     * @return self
-     */
-    public function setComment(string $comment): self
-    {
-        $this->comment = $comment;
         return $this;
     }
     /**
@@ -69,7 +69,7 @@ class SalesDataInvoiceCommentCreationInterface
      *
      * @return int
      */
-    public function getIsVisibleOnFront(): int
+    public function getIsVisibleOnFront() : int
     {
         return $this->isVisibleOnFront;
     }
@@ -80,7 +80,7 @@ class SalesDataInvoiceCommentCreationInterface
      *
      * @return self
      */
-    public function setIsVisibleOnFront(int $isVisibleOnFront): self
+    public function setIsVisibleOnFront(int $isVisibleOnFront) : self
     {
         $this->isVisibleOnFront = $isVisibleOnFront;
         return $this;

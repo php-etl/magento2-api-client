@@ -13,7 +13,7 @@ class QuoteGuestPaymentMethodManagementV1GetGetBadRequestException extends BadRe
         parent::__construct('400 Bad Request');
         $this->errorResponse = $errorResponse;
     }
-    public function getErrorResponse(): \Kiboko\Magento\V2\Model\ErrorResponse
+    public function getErrorResponse() : \Kiboko\Magento\V2\Model\ErrorResponse
     {
         return $this->errorResponse;
     }

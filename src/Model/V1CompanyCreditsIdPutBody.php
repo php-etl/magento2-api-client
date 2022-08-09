@@ -15,7 +15,7 @@ class V1CompanyCreditsIdPutBody
      *
      * @return CompanyCreditDataCreditLimitInterface
      */
-    public function getCreditLimit(): CompanyCreditDataCreditLimitInterface
+    public function getCreditLimit() : CompanyCreditDataCreditLimitInterface
     {
         return $this->creditLimit;
     }
@@ -26,7 +26,7 @@ class V1CompanyCreditsIdPutBody
      *
      * @return self
      */
-    public function setCreditLimit(CompanyCreditDataCreditLimitInterface $creditLimit): self
+    public function setCreditLimit(CompanyCreditDataCreditLimitInterface $creditLimit) : self
     {
         $this->creditLimit = $creditLimit;
         return $this;

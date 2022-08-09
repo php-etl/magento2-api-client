@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataCreditmemoCommentInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoCommentInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoCommentInterface';
     }
@@ -49,6 +48,9 @@ class SalesDataCreditmemoCommentInterfaceNormalizer implements DenormalizerInter
         if (\array_key_exists('entity_id', $data)) {
             $object->setEntityId($data['entity_id']);
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
+        }
         if (\array_key_exists('is_customer_notified', $data)) {
             $object->setIsCustomerNotified($data['is_customer_notified']);
         }
@@ -57,9 +59,6 @@ class SalesDataCreditmemoCommentInterfaceNormalizer implements DenormalizerInter
         }
         if (\array_key_exists('parent_id', $data)) {
             $object->setParentId($data['parent_id']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
         }
         return $object;
     }
@@ -76,12 +75,12 @@ class SalesDataCreditmemoCommentInterfaceNormalizer implements DenormalizerInter
         if (null !== $object->getEntityId()) {
             $data['entity_id'] = $object->getEntityId();
         }
-        $data['is_customer_notified'] = $object->getIsCustomerNotified();
-        $data['is_visible_on_front'] = $object->getIsVisibleOnFront();
-        $data['parent_id'] = $object->getParentId();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
+        $data['is_customer_notified'] = $object->getIsCustomerNotified();
+        $data['is_visible_on_front'] = $object->getIsVisibleOnFront();
+        $data['parent_id'] = $object->getParentId();
         return $data;
     }
 }

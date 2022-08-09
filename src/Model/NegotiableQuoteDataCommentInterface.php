@@ -5,41 +5,11 @@ namespace Kiboko\Magento\V2\Model;
 class NegotiableQuoteDataCommentInterface
 {
     /**
-     * Comment ID.
+     * Existing attachments.
      *
-     * @var int
+     * @var NegotiableQuoteDataCommentAttachmentInterface[]
      */
-    protected $entityId;
-    /**
-     * Negotiable quote ID, that this comment belongs to.
-     *
-     * @var int
-     */
-    protected $parentId;
-    /**
-     * The comment creator type.
-     *
-     * @var int
-     */
-    protected $creatorType;
-    /**
-     * Is quote was declined by seller.
-     *
-     * @var int
-     */
-    protected $isDecline;
-    /**
-     * Is quote draft flag.
-     *
-     * @var int
-     */
-    protected $isDraft;
-    /**
-     * Comment creator ID.
-     *
-     * @var int
-     */
-    protected $creatorId;
+    protected $attachments;
     /**
      * Comment.
      *
@@ -53,141 +23,66 @@ class NegotiableQuoteDataCommentInterface
      */
     protected $createdAt;
     /**
+     * Comment creator ID.
+     *
+     * @var int
+     */
+    protected $creatorId;
+    /**
+     * The comment creator type.
+     *
+     * @var int
+     */
+    protected $creatorType;
+    /**
+     * Comment ID.
+     *
+     * @var int
+     */
+    protected $entityId;
+    /**
      * ExtensionInterface class for @see \Magento\NegotiableQuote\Api\Data\CommentInterface
      *
      * @var mixed
      */
     protected $extensionAttributes;
     /**
+     * Is quote was declined by seller.
+     *
+     * @var int
+     */
+    protected $isDecline;
+    /**
+     * Is quote draft flag.
+     *
+     * @var int
+     */
+    protected $isDraft;
+    /**
+     * Negotiable quote ID, that this comment belongs to.
+     *
+     * @var int
+     */
+    protected $parentId;
+    /**
      * Existing attachments.
      *
-     * @var NegotiableQuoteDataCommentAttachmentInterface[]
+     * @return NegotiableQuoteDataCommentAttachmentInterface[]
      */
-    protected $attachments;
-    /**
-     * Comment ID.
-     *
-     * @return int
-     */
-    public function getEntityId(): int
+    public function getAttachments() : array
     {
-        return $this->entityId;
+        return $this->attachments;
     }
     /**
-     * Comment ID.
+     * Existing attachments.
      *
-     * @param int $entityId
+     * @param NegotiableQuoteDataCommentAttachmentInterface[] $attachments
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setAttachments(array $attachments) : self
     {
-        $this->entityId = $entityId;
-        return $this;
-    }
-    /**
-     * Negotiable quote ID, that this comment belongs to.
-     *
-     * @return int
-     */
-    public function getParentId(): int
-    {
-        return $this->parentId;
-    }
-    /**
-     * Negotiable quote ID, that this comment belongs to.
-     *
-     * @param int $parentId
-     *
-     * @return self
-     */
-    public function setParentId(int $parentId): self
-    {
-        $this->parentId = $parentId;
-        return $this;
-    }
-    /**
-     * The comment creator type.
-     *
-     * @return int
-     */
-    public function getCreatorType(): int
-    {
-        return $this->creatorType;
-    }
-    /**
-     * The comment creator type.
-     *
-     * @param int $creatorType
-     *
-     * @return self
-     */
-    public function setCreatorType(int $creatorType): self
-    {
-        $this->creatorType = $creatorType;
-        return $this;
-    }
-    /**
-     * Is quote was declined by seller.
-     *
-     * @return int
-     */
-    public function getIsDecline(): int
-    {
-        return $this->isDecline;
-    }
-    /**
-     * Is quote was declined by seller.
-     *
-     * @param int $isDecline
-     *
-     * @return self
-     */
-    public function setIsDecline(int $isDecline): self
-    {
-        $this->isDecline = $isDecline;
-        return $this;
-    }
-    /**
-     * Is quote draft flag.
-     *
-     * @return int
-     */
-    public function getIsDraft(): int
-    {
-        return $this->isDraft;
-    }
-    /**
-     * Is quote draft flag.
-     *
-     * @param int $isDraft
-     *
-     * @return self
-     */
-    public function setIsDraft(int $isDraft): self
-    {
-        $this->isDraft = $isDraft;
-        return $this;
-    }
-    /**
-     * Comment creator ID.
-     *
-     * @return int
-     */
-    public function getCreatorId(): int
-    {
-        return $this->creatorId;
-    }
-    /**
-     * Comment creator ID.
-     *
-     * @param int $creatorId
-     *
-     * @return self
-     */
-    public function setCreatorId(int $creatorId): self
-    {
-        $this->creatorId = $creatorId;
+        $this->attachments = $attachments;
         return $this;
     }
     /**
@@ -195,7 +90,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return string
      */
-    public function getComment(): string
+    public function getComment() : string
     {
         return $this->comment;
     }
@@ -206,7 +101,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(string $comment) : self
     {
         $this->comment = $comment;
         return $this;
@@ -216,7 +111,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -227,9 +122,72 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
+        return $this;
+    }
+    /**
+     * Comment creator ID.
+     *
+     * @return int
+     */
+    public function getCreatorId() : int
+    {
+        return $this->creatorId;
+    }
+    /**
+     * Comment creator ID.
+     *
+     * @param int $creatorId
+     *
+     * @return self
+     */
+    public function setCreatorId(int $creatorId) : self
+    {
+        $this->creatorId = $creatorId;
+        return $this;
+    }
+    /**
+     * The comment creator type.
+     *
+     * @return int
+     */
+    public function getCreatorType() : int
+    {
+        return $this->creatorType;
+    }
+    /**
+     * The comment creator type.
+     *
+     * @param int $creatorType
+     *
+     * @return self
+     */
+    public function setCreatorType(int $creatorType) : self
+    {
+        $this->creatorType = $creatorType;
+        return $this;
+    }
+    /**
+     * Comment ID.
+     *
+     * @return int
+     */
+    public function getEntityId() : int
+    {
+        return $this->entityId;
+    }
+    /**
+     * Comment ID.
+     *
+     * @param int $entityId
+     *
+     * @return self
+     */
+    public function setEntityId(int $entityId) : self
+    {
+        $this->entityId = $entityId;
         return $this;
     }
     /**
@@ -248,30 +206,72 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
     }
     /**
-     * Existing attachments.
+     * Is quote was declined by seller.
      *
-     * @return NegotiableQuoteDataCommentAttachmentInterface[]
+     * @return int
      */
-    public function getAttachments(): array
+    public function getIsDecline() : int
     {
-        return $this->attachments;
+        return $this->isDecline;
     }
     /**
-     * Existing attachments.
+     * Is quote was declined by seller.
      *
-     * @param NegotiableQuoteDataCommentAttachmentInterface[] $attachments
+     * @param int $isDecline
      *
      * @return self
      */
-    public function setAttachments(array $attachments): self
+    public function setIsDecline(int $isDecline) : self
     {
-        $this->attachments = $attachments;
+        $this->isDecline = $isDecline;
+        return $this;
+    }
+    /**
+     * Is quote draft flag.
+     *
+     * @return int
+     */
+    public function getIsDraft() : int
+    {
+        return $this->isDraft;
+    }
+    /**
+     * Is quote draft flag.
+     *
+     * @param int $isDraft
+     *
+     * @return self
+     */
+    public function setIsDraft(int $isDraft) : self
+    {
+        $this->isDraft = $isDraft;
+        return $this;
+    }
+    /**
+     * Negotiable quote ID, that this comment belongs to.
+     *
+     * @return int
+     */
+    public function getParentId() : int
+    {
+        return $this->parentId;
+    }
+    /**
+     * Negotiable quote ID, that this comment belongs to.
+     *
+     * @param int $parentId
+     *
+     * @return self
+     */
+    public function setParentId(int $parentId) : self
+    {
+        $this->parentId = $parentId;
         return $this;
     }
 }

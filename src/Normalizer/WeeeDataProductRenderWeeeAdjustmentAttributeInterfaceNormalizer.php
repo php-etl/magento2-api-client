@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class WeeeDataProductRenderWeeeAdjustmentAttributeInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\WeeeDataProductRenderWeeeAdjustmentAttributeInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\WeeeDataProductRenderWeeeAdjustmentAttributeInterface';
     }
@@ -43,12 +42,6 @@ class WeeeDataProductRenderWeeeAdjustmentAttributeInterfaceNormalizer implements
         if (\array_key_exists('amount', $data)) {
             $object->setAmount($data['amount']);
         }
-        if (\array_key_exists('tax_amount', $data)) {
-            $object->setTaxAmount($data['tax_amount']);
-        }
-        if (\array_key_exists('tax_amount_incl_tax', $data)) {
-            $object->setTaxAmountInclTax($data['tax_amount_incl_tax']);
-        }
         if (\array_key_exists('amount_excl_tax', $data)) {
             $object->setAmountExclTax($data['amount_excl_tax']);
         }
@@ -57,6 +50,12 @@ class WeeeDataProductRenderWeeeAdjustmentAttributeInterfaceNormalizer implements
         }
         if (\array_key_exists('extension_attributes', $data)) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        }
+        if (\array_key_exists('tax_amount', $data)) {
+            $object->setTaxAmount($data['tax_amount']);
+        }
+        if (\array_key_exists('tax_amount_incl_tax', $data)) {
+            $object->setTaxAmountInclTax($data['tax_amount_incl_tax']);
         }
         return $object;
     }
@@ -67,11 +66,11 @@ class WeeeDataProductRenderWeeeAdjustmentAttributeInterfaceNormalizer implements
     {
         $data = array();
         $data['amount'] = $object->getAmount();
-        $data['tax_amount'] = $object->getTaxAmount();
-        $data['tax_amount_incl_tax'] = $object->getTaxAmountInclTax();
         $data['amount_excl_tax'] = $object->getAmountExclTax();
         $data['attribute_code'] = $object->getAttributeCode();
         $data['extension_attributes'] = $object->getExtensionAttributes();
+        $data['tax_amount'] = $object->getTaxAmount();
+        $data['tax_amount_incl_tax'] = $object->getTaxAmountInclTax();
         return $data;
     }
 }

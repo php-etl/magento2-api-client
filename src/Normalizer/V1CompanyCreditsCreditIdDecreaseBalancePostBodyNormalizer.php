@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1CompanyCreditsCreditIdDecreaseBalancePostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\V1CompanyCreditsCreditIdDecreaseBalancePostBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\V1CompanyCreditsCreditIdDecreaseBalancePostBody';
     }
@@ -40,8 +39,8 @@ class V1CompanyCreditsCreditIdDecreaseBalancePostBodyNormalizer implements Denor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('value', $data)) {
-            $object->setValue($data['value']);
+        if (\array_key_exists('comment', $data)) {
+            $object->setComment($data['comment']);
         }
         if (\array_key_exists('currency', $data)) {
             $object->setCurrency($data['currency']);
@@ -49,11 +48,11 @@ class V1CompanyCreditsCreditIdDecreaseBalancePostBodyNormalizer implements Denor
         if (\array_key_exists('operationType', $data)) {
             $object->setOperationType($data['operationType']);
         }
-        if (\array_key_exists('comment', $data)) {
-            $object->setComment($data['comment']);
-        }
         if (\array_key_exists('options', $data)) {
             $object->setOptions($this->denormalizer->denormalize($data['options'], 'Kiboko\\Magento\\V2\\Model\\CompanyCreditDataCreditBalanceOptionsInterface', 'json', $context));
+        }
+        if (\array_key_exists('value', $data)) {
+            $object->setValue($data['value']);
         }
         return $object;
     }
@@ -63,15 +62,15 @@ class V1CompanyCreditsCreditIdDecreaseBalancePostBodyNormalizer implements Denor
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['value'] = $object->getValue();
-        $data['currency'] = $object->getCurrency();
-        $data['operationType'] = $object->getOperationType();
         if (null !== $object->getComment()) {
             $data['comment'] = $object->getComment();
         }
+        $data['currency'] = $object->getCurrency();
+        $data['operationType'] = $object->getOperationType();
         if (null !== $object->getOptions()) {
             $data['options'] = $this->normalizer->normalize($object->getOptions(), 'json', $context);
         }
+        $data['value'] = $object->getValue();
         return $data;
     }
 }

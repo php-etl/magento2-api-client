@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1CustomersResetPasswordPostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\V1CustomersResetPasswordPostBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\V1CustomersResetPasswordPostBody';
     }
@@ -43,11 +42,11 @@ class V1CustomersResetPasswordPostBodyNormalizer implements DenormalizerInterfac
         if (\array_key_exists('email', $data)) {
             $object->setEmail($data['email']);
         }
-        if (\array_key_exists('resetToken', $data)) {
-            $object->setResetToken($data['resetToken']);
-        }
         if (\array_key_exists('newPassword', $data)) {
             $object->setNewPassword($data['newPassword']);
+        }
+        if (\array_key_exists('resetToken', $data)) {
+            $object->setResetToken($data['resetToken']);
         }
         return $object;
     }
@@ -58,8 +57,8 @@ class V1CustomersResetPasswordPostBodyNormalizer implements DenormalizerInterfac
     {
         $data = array();
         $data['email'] = $object->getEmail();
-        $data['resetToken'] = $object->getResetToken();
         $data['newPassword'] = $object->getNewPassword();
+        $data['resetToken'] = $object->getResetToken();
         return $data;
     }
 }

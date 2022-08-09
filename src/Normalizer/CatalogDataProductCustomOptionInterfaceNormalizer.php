@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataProductCustomOptionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductCustomOptionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductCustomOptionInterface';
     }
@@ -40,38 +39,11 @@ class CatalogDataProductCustomOptionInterfaceNormalizer implements DenormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('product_sku', $data)) {
-            $object->setProductSku($data['product_sku']);
-        }
-        if (\array_key_exists('option_id', $data)) {
-            $object->setOptionId($data['option_id']);
-        }
-        if (\array_key_exists('title', $data)) {
-            $object->setTitle($data['title']);
-        }
-        if (\array_key_exists('type', $data)) {
-            $object->setType($data['type']);
-        }
-        if (\array_key_exists('sort_order', $data)) {
-            $object->setSortOrder($data['sort_order']);
-        }
-        if (\array_key_exists('is_require', $data)) {
-            $object->setIsRequire($data['is_require']);
-        }
-        if (\array_key_exists('price', $data)) {
-            $object->setPrice($data['price']);
-        }
-        if (\array_key_exists('price_type', $data)) {
-            $object->setPriceType($data['price_type']);
-        }
-        if (\array_key_exists('sku', $data)) {
-            $object->setSku($data['sku']);
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductCustomOptionExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('file_extension', $data)) {
             $object->setFileExtension($data['file_extension']);
-        }
-        if (\array_key_exists('max_characters', $data)) {
-            $object->setMaxCharacters($data['max_characters']);
         }
         if (\array_key_exists('image_size_x', $data)) {
             $object->setImageSizeX($data['image_size_x']);
@@ -79,15 +51,42 @@ class CatalogDataProductCustomOptionInterfaceNormalizer implements DenormalizerI
         if (\array_key_exists('image_size_y', $data)) {
             $object->setImageSizeY($data['image_size_y']);
         }
+        if (\array_key_exists('is_require', $data)) {
+            $object->setIsRequire($data['is_require']);
+        }
+        if (\array_key_exists('max_characters', $data)) {
+            $object->setMaxCharacters($data['max_characters']);
+        }
+        if (\array_key_exists('option_id', $data)) {
+            $object->setOptionId($data['option_id']);
+        }
+        if (\array_key_exists('price', $data)) {
+            $object->setPrice($data['price']);
+        }
+        if (\array_key_exists('price_type', $data)) {
+            $object->setPriceType($data['price_type']);
+        }
+        if (\array_key_exists('product_sku', $data)) {
+            $object->setProductSku($data['product_sku']);
+        }
+        if (\array_key_exists('sku', $data)) {
+            $object->setSku($data['sku']);
+        }
+        if (\array_key_exists('sort_order', $data)) {
+            $object->setSortOrder($data['sort_order']);
+        }
+        if (\array_key_exists('title', $data)) {
+            $object->setTitle($data['title']);
+        }
+        if (\array_key_exists('type', $data)) {
+            $object->setType($data['type']);
+        }
         if (\array_key_exists('values', $data)) {
             $values = array();
             foreach ($data['values'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductCustomOptionValuesInterface', 'json', $context);
             }
             $object->setValues($values);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductCustomOptionExtensionInterface', 'json', $context));
         }
         return $object;
     }
@@ -97,28 +96,11 @@ class CatalogDataProductCustomOptionInterfaceNormalizer implements DenormalizerI
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['product_sku'] = $object->getProductSku();
-        if (null !== $object->getOptionId()) {
-            $data['option_id'] = $object->getOptionId();
-        }
-        $data['title'] = $object->getTitle();
-        $data['type'] = $object->getType();
-        $data['sort_order'] = $object->getSortOrder();
-        $data['is_require'] = $object->getIsRequire();
-        if (null !== $object->getPrice()) {
-            $data['price'] = $object->getPrice();
-        }
-        if (null !== $object->getPriceType()) {
-            $data['price_type'] = $object->getPriceType();
-        }
-        if (null !== $object->getSku()) {
-            $data['sku'] = $object->getSku();
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
         if (null !== $object->getFileExtension()) {
             $data['file_extension'] = $object->getFileExtension();
-        }
-        if (null !== $object->getMaxCharacters()) {
-            $data['max_characters'] = $object->getMaxCharacters();
         }
         if (null !== $object->getImageSizeX()) {
             $data['image_size_x'] = $object->getImageSizeX();
@@ -126,15 +108,32 @@ class CatalogDataProductCustomOptionInterfaceNormalizer implements DenormalizerI
         if (null !== $object->getImageSizeY()) {
             $data['image_size_y'] = $object->getImageSizeY();
         }
+        $data['is_require'] = $object->getIsRequire();
+        if (null !== $object->getMaxCharacters()) {
+            $data['max_characters'] = $object->getMaxCharacters();
+        }
+        if (null !== $object->getOptionId()) {
+            $data['option_id'] = $object->getOptionId();
+        }
+        if (null !== $object->getPrice()) {
+            $data['price'] = $object->getPrice();
+        }
+        if (null !== $object->getPriceType()) {
+            $data['price_type'] = $object->getPriceType();
+        }
+        $data['product_sku'] = $object->getProductSku();
+        if (null !== $object->getSku()) {
+            $data['sku'] = $object->getSku();
+        }
+        $data['sort_order'] = $object->getSortOrder();
+        $data['title'] = $object->getTitle();
+        $data['type'] = $object->getType();
         if (null !== $object->getValues()) {
             $values = array();
             foreach ($object->getValues() as $value) {
                 $values[] = $this->normalizer->normalize($value, 'json', $context);
             }
             $data['values'] = $values;
-        }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
         return $data;
     }

@@ -4,7 +4,6 @@ namespace Kiboko\Magento\V2\Endpoint;
 
 class CatalogProductTierPriceManagementV1AddPost extends \Kiboko\Magento\V2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\V2\Runtime\Client\EndpointTrait;
     protected $sku;
     protected $customerGroupId;
     protected $price;
@@ -12,10 +11,10 @@ class CatalogProductTierPriceManagementV1AddPost extends \Kiboko\Magento\V2\Runt
     /**
      * Create tier price for product
      *
-     * @param string $sku
+     * @param string $sku 
      * @param string $customerGroupId 'all' can be used to specify 'ALL GROUPS'
-     * @param float $price
-     * @param float $qty
+     * @param float $price 
+     * @param float $qty 
      */
     public function __construct(string $sku, string $customerGroupId, float $price, float $qty)
     {
@@ -24,19 +23,20 @@ class CatalogProductTierPriceManagementV1AddPost extends \Kiboko\Magento\V2\Runt
         $this->price = $price;
         $this->qty = $qty;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\V2\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'POST';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{sku}', '{customerGroupId}', '{price}', '{qty}'), array($this->sku, $this->customerGroupId, $this->price, $this->qty), '/V1/products/{sku}/group-prices/{customerGroupId}/tiers/{qty}/price/{price}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -50,18 +50,20 @@ class CatalogProductTierPriceManagementV1AddPost extends \Kiboko\Magento\V2\Runt
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (200 === $status) {
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             return json_decode($body);
         }
-        if (400 === $status) {
+        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \Kiboko\Magento\V2\Exception\CatalogProductTierPriceManagementV1AddPostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\V2\\Model\\ErrorResponse', 'json'));
         }
-        if (401 === $status) {
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \Kiboko\Magento\V2\Exception\CatalogProductTierPriceManagementV1AddPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2\\Model\\ErrorResponse', 'json'));
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\V2\\Model\\ErrorResponse', 'json');
+        if (mb_strpos($contentType, 'application/json') !== false) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2\\Model\\ErrorResponse', 'json');
+        }
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

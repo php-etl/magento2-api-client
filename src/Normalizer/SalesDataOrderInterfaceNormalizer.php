@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderInterface';
     }
@@ -70,9 +69,6 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (\array_key_exists('base_discount_refunded', $data)) {
             $object->setBaseDiscountRefunded($data['base_discount_refunded']);
         }
-        if (\array_key_exists('base_grand_total', $data)) {
-            $object->setBaseGrandTotal($data['base_grand_total']);
-        }
         if (\array_key_exists('base_discount_tax_compensation_amount', $data)) {
             $object->setBaseDiscountTaxCompensationAmount($data['base_discount_tax_compensation_amount']);
         }
@@ -81,6 +77,9 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         }
         if (\array_key_exists('base_discount_tax_compensation_refunded', $data)) {
             $object->setBaseDiscountTaxCompensationRefunded($data['base_discount_tax_compensation_refunded']);
+        }
+        if (\array_key_exists('base_grand_total', $data)) {
+            $object->setBaseGrandTotal($data['base_grand_total']);
         }
         if (\array_key_exists('base_shipping_amount', $data)) {
             $object->setBaseShippingAmount($data['base_shipping_amount']);
@@ -136,6 +135,12 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (\array_key_exists('base_tax_refunded', $data)) {
             $object->setBaseTaxRefunded($data['base_tax_refunded']);
         }
+        if (\array_key_exists('base_to_global_rate', $data)) {
+            $object->setBaseToGlobalRate($data['base_to_global_rate']);
+        }
+        if (\array_key_exists('base_to_order_rate', $data)) {
+            $object->setBaseToOrderRate($data['base_to_order_rate']);
+        }
         if (\array_key_exists('base_total_canceled', $data)) {
             $object->setBaseTotalCanceled($data['base_total_canceled']);
         }
@@ -163,11 +168,8 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (\array_key_exists('base_total_refunded', $data)) {
             $object->setBaseTotalRefunded($data['base_total_refunded']);
         }
-        if (\array_key_exists('base_to_global_rate', $data)) {
-            $object->setBaseToGlobalRate($data['base_to_global_rate']);
-        }
-        if (\array_key_exists('base_to_order_rate', $data)) {
-            $object->setBaseToOrderRate($data['base_to_order_rate']);
+        if (\array_key_exists('billing_address', $data)) {
+            $object->setBillingAddress($this->denormalizer->denormalize($data['billing_address'], 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderAddressInterface', 'json', $context));
         }
         if (\array_key_exists('billing_address_id', $data)) {
             $object->setBillingAddressId($data['billing_address_id']);
@@ -241,6 +243,15 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (\array_key_exists('discount_refunded', $data)) {
             $object->setDiscountRefunded($data['discount_refunded']);
         }
+        if (\array_key_exists('discount_tax_compensation_amount', $data)) {
+            $object->setDiscountTaxCompensationAmount($data['discount_tax_compensation_amount']);
+        }
+        if (\array_key_exists('discount_tax_compensation_invoiced', $data)) {
+            $object->setDiscountTaxCompensationInvoiced($data['discount_tax_compensation_invoiced']);
+        }
+        if (\array_key_exists('discount_tax_compensation_refunded', $data)) {
+            $object->setDiscountTaxCompensationRefunded($data['discount_tax_compensation_refunded']);
+        }
         if (\array_key_exists('edit_increment', $data)) {
             $object->setEditIncrement($data['edit_increment']);
         }
@@ -256,6 +267,9 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (\array_key_exists('ext_order_id', $data)) {
             $object->setExtOrderId($data['ext_order_id']);
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderExtensionInterface', 'json', $context));
+        }
         if (\array_key_exists('forced_shipment_with_invoice', $data)) {
             $object->setForcedShipmentWithInvoice($data['forced_shipment_with_invoice']);
         }
@@ -264,15 +278,6 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         }
         if (\array_key_exists('grand_total', $data)) {
             $object->setGrandTotal($data['grand_total']);
-        }
-        if (\array_key_exists('discount_tax_compensation_amount', $data)) {
-            $object->setDiscountTaxCompensationAmount($data['discount_tax_compensation_amount']);
-        }
-        if (\array_key_exists('discount_tax_compensation_invoiced', $data)) {
-            $object->setDiscountTaxCompensationInvoiced($data['discount_tax_compensation_invoiced']);
-        }
-        if (\array_key_exists('discount_tax_compensation_refunded', $data)) {
-            $object->setDiscountTaxCompensationRefunded($data['discount_tax_compensation_refunded']);
         }
         if (\array_key_exists('hold_before_state', $data)) {
             $object->setHoldBeforeState($data['hold_before_state']);
@@ -286,17 +291,27 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (\array_key_exists('is_virtual', $data)) {
             $object->setIsVirtual($data['is_virtual']);
         }
+        if (\array_key_exists('items', $data)) {
+            $values = array();
+            foreach ($data['items'] as $value) {
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderItemInterface', 'json', $context);
+            }
+            $object->setItems($values);
+        }
         if (\array_key_exists('order_currency_code', $data)) {
             $object->setOrderCurrencyCode($data['order_currency_code']);
         }
         if (\array_key_exists('original_increment_id', $data)) {
             $object->setOriginalIncrementId($data['original_increment_id']);
         }
-        if (\array_key_exists('payment_authorization_amount', $data)) {
-            $object->setPaymentAuthorizationAmount($data['payment_authorization_amount']);
+        if (\array_key_exists('payment', $data)) {
+            $object->setPayment($this->denormalizer->denormalize($data['payment'], 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderPaymentInterface', 'json', $context));
         }
         if (\array_key_exists('payment_auth_expiration', $data)) {
             $object->setPaymentAuthExpiration($data['payment_auth_expiration']);
+        }
+        if (\array_key_exists('payment_authorization_amount', $data)) {
+            $object->setPaymentAuthorizationAmount($data['payment_authorization_amount']);
         }
         if (\array_key_exists('protect_code', $data)) {
             $object->setProtectCode($data['protect_code']);
@@ -357,6 +372,13 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         }
         if (\array_key_exists('status', $data)) {
             $object->setStatus($data['status']);
+        }
+        if (\array_key_exists('status_histories', $data)) {
+            $values_1 = array();
+            foreach ($data['status_histories'] as $value_1) {
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderStatusHistoryInterface', 'json', $context);
+            }
+            $object->setStatusHistories($values_1);
         }
         if (\array_key_exists('store_currency_code', $data)) {
             $object->setStoreCurrencyCode($data['store_currency_code']);
@@ -436,29 +458,6 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (\array_key_exists('x_forwarded_for', $data)) {
             $object->setXForwardedFor($data['x_forwarded_for']);
         }
-        if (\array_key_exists('items', $data)) {
-            $values = array();
-            foreach ($data['items'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderItemInterface', 'json', $context);
-            }
-            $object->setItems($values);
-        }
-        if (\array_key_exists('billing_address', $data)) {
-            $object->setBillingAddress($this->denormalizer->denormalize($data['billing_address'], 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderAddressInterface', 'json', $context));
-        }
-        if (\array_key_exists('payment', $data)) {
-            $object->setPayment($this->denormalizer->denormalize($data['payment'], 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderPaymentInterface', 'json', $context));
-        }
-        if (\array_key_exists('status_histories', $data)) {
-            $values_1 = array();
-            foreach ($data['status_histories'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderStatusHistoryInterface', 'json', $context);
-            }
-            $object->setStatusHistories($values_1);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderExtensionInterface', 'json', $context));
-        }
         return $object;
     }
     /**
@@ -497,7 +496,6 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (null !== $object->getBaseDiscountRefunded()) {
             $data['base_discount_refunded'] = $object->getBaseDiscountRefunded();
         }
-        $data['base_grand_total'] = $object->getBaseGrandTotal();
         if (null !== $object->getBaseDiscountTaxCompensationAmount()) {
             $data['base_discount_tax_compensation_amount'] = $object->getBaseDiscountTaxCompensationAmount();
         }
@@ -507,6 +505,7 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (null !== $object->getBaseDiscountTaxCompensationRefunded()) {
             $data['base_discount_tax_compensation_refunded'] = $object->getBaseDiscountTaxCompensationRefunded();
         }
+        $data['base_grand_total'] = $object->getBaseGrandTotal();
         if (null !== $object->getBaseShippingAmount()) {
             $data['base_shipping_amount'] = $object->getBaseShippingAmount();
         }
@@ -561,6 +560,12 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (null !== $object->getBaseTaxRefunded()) {
             $data['base_tax_refunded'] = $object->getBaseTaxRefunded();
         }
+        if (null !== $object->getBaseToGlobalRate()) {
+            $data['base_to_global_rate'] = $object->getBaseToGlobalRate();
+        }
+        if (null !== $object->getBaseToOrderRate()) {
+            $data['base_to_order_rate'] = $object->getBaseToOrderRate();
+        }
         if (null !== $object->getBaseTotalCanceled()) {
             $data['base_total_canceled'] = $object->getBaseTotalCanceled();
         }
@@ -588,11 +593,8 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (null !== $object->getBaseTotalRefunded()) {
             $data['base_total_refunded'] = $object->getBaseTotalRefunded();
         }
-        if (null !== $object->getBaseToGlobalRate()) {
-            $data['base_to_global_rate'] = $object->getBaseToGlobalRate();
-        }
-        if (null !== $object->getBaseToOrderRate()) {
-            $data['base_to_order_rate'] = $object->getBaseToOrderRate();
+        if (null !== $object->getBillingAddress()) {
+            $data['billing_address'] = $this->normalizer->normalize($object->getBillingAddress(), 'json', $context);
         }
         if (null !== $object->getBillingAddressId()) {
             $data['billing_address_id'] = $object->getBillingAddressId();
@@ -664,6 +666,15 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (null !== $object->getDiscountRefunded()) {
             $data['discount_refunded'] = $object->getDiscountRefunded();
         }
+        if (null !== $object->getDiscountTaxCompensationAmount()) {
+            $data['discount_tax_compensation_amount'] = $object->getDiscountTaxCompensationAmount();
+        }
+        if (null !== $object->getDiscountTaxCompensationInvoiced()) {
+            $data['discount_tax_compensation_invoiced'] = $object->getDiscountTaxCompensationInvoiced();
+        }
+        if (null !== $object->getDiscountTaxCompensationRefunded()) {
+            $data['discount_tax_compensation_refunded'] = $object->getDiscountTaxCompensationRefunded();
+        }
         if (null !== $object->getEditIncrement()) {
             $data['edit_increment'] = $object->getEditIncrement();
         }
@@ -679,6 +690,9 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (null !== $object->getExtOrderId()) {
             $data['ext_order_id'] = $object->getExtOrderId();
         }
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
+        }
         if (null !== $object->getForcedShipmentWithInvoice()) {
             $data['forced_shipment_with_invoice'] = $object->getForcedShipmentWithInvoice();
         }
@@ -686,15 +700,6 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
             $data['global_currency_code'] = $object->getGlobalCurrencyCode();
         }
         $data['grand_total'] = $object->getGrandTotal();
-        if (null !== $object->getDiscountTaxCompensationAmount()) {
-            $data['discount_tax_compensation_amount'] = $object->getDiscountTaxCompensationAmount();
-        }
-        if (null !== $object->getDiscountTaxCompensationInvoiced()) {
-            $data['discount_tax_compensation_invoiced'] = $object->getDiscountTaxCompensationInvoiced();
-        }
-        if (null !== $object->getDiscountTaxCompensationRefunded()) {
-            $data['discount_tax_compensation_refunded'] = $object->getDiscountTaxCompensationRefunded();
-        }
         if (null !== $object->getHoldBeforeState()) {
             $data['hold_before_state'] = $object->getHoldBeforeState();
         }
@@ -707,17 +712,25 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (null !== $object->getIsVirtual()) {
             $data['is_virtual'] = $object->getIsVirtual();
         }
+        $values = array();
+        foreach ($object->getItems() as $value) {
+            $values[] = $this->normalizer->normalize($value, 'json', $context);
+        }
+        $data['items'] = $values;
         if (null !== $object->getOrderCurrencyCode()) {
             $data['order_currency_code'] = $object->getOrderCurrencyCode();
         }
         if (null !== $object->getOriginalIncrementId()) {
             $data['original_increment_id'] = $object->getOriginalIncrementId();
         }
-        if (null !== $object->getPaymentAuthorizationAmount()) {
-            $data['payment_authorization_amount'] = $object->getPaymentAuthorizationAmount();
+        if (null !== $object->getPayment()) {
+            $data['payment'] = $this->normalizer->normalize($object->getPayment(), 'json', $context);
         }
         if (null !== $object->getPaymentAuthExpiration()) {
             $data['payment_auth_expiration'] = $object->getPaymentAuthExpiration();
+        }
+        if (null !== $object->getPaymentAuthorizationAmount()) {
+            $data['payment_authorization_amount'] = $object->getPaymentAuthorizationAmount();
         }
         if (null !== $object->getProtectCode()) {
             $data['protect_code'] = $object->getProtectCode();
@@ -778,6 +791,13 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         }
         if (null !== $object->getStatus()) {
             $data['status'] = $object->getStatus();
+        }
+        if (null !== $object->getStatusHistories()) {
+            $values_1 = array();
+            foreach ($object->getStatusHistories() as $value_1) {
+                $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
+            }
+            $data['status_histories'] = $values_1;
         }
         if (null !== $object->getStoreCurrencyCode()) {
             $data['store_currency_code'] = $object->getStoreCurrencyCode();
@@ -856,27 +876,6 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         }
         if (null !== $object->getXForwardedFor()) {
             $data['x_forwarded_for'] = $object->getXForwardedFor();
-        }
-        $values = array();
-        foreach ($object->getItems() as $value) {
-            $values[] = $this->normalizer->normalize($value, 'json', $context);
-        }
-        $data['items'] = $values;
-        if (null !== $object->getBillingAddress()) {
-            $data['billing_address'] = $this->normalizer->normalize($object->getBillingAddress(), 'json', $context);
-        }
-        if (null !== $object->getPayment()) {
-            $data['payment'] = $this->normalizer->normalize($object->getPayment(), 'json', $context);
-        }
-        if (null !== $object->getStatusHistories()) {
-            $values_1 = array();
-            foreach ($object->getStatusHistories() as $value_1) {
-                $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
-            }
-            $data['status_histories'] = $values_1;
-        }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
         return $data;
     }

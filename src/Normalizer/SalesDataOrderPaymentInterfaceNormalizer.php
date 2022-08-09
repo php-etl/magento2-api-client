@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataOrderPaymentInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderPaymentInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderPaymentInterface';
     }
@@ -179,6 +178,9 @@ class SalesDataOrderPaymentInterfaceNormalizer implements DenormalizerInterface,
         if (\array_key_exists('entity_id', $data)) {
             $object->setEntityId($data['entity_id']);
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderPaymentExtensionInterface', 'json', $context));
+        }
         if (\array_key_exists('last_trans_id', $data)) {
             $object->setLastTransId($data['last_trans_id']);
         }
@@ -205,9 +207,6 @@ class SalesDataOrderPaymentInterfaceNormalizer implements DenormalizerInterface,
         }
         if (\array_key_exists('shipping_refunded', $data)) {
             $object->setShippingRefunded($data['shipping_refunded']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderPaymentExtensionInterface', 'json', $context));
         }
         return $object;
     }
@@ -350,6 +349,9 @@ class SalesDataOrderPaymentInterfaceNormalizer implements DenormalizerInterface,
         if (null !== $object->getEntityId()) {
             $data['entity_id'] = $object->getEntityId();
         }
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
+        }
         if (null !== $object->getLastTransId()) {
             $data['last_trans_id'] = $object->getLastTransId();
         }
@@ -374,9 +376,6 @@ class SalesDataOrderPaymentInterfaceNormalizer implements DenormalizerInterface,
         }
         if (null !== $object->getShippingRefunded()) {
             $data['shipping_refunded'] = $object->getShippingRefunded();
-        }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
         return $data;
     }

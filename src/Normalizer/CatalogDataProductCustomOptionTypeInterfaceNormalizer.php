@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataProductCustomOptionTypeInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductCustomOptionTypeInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductCustomOptionTypeInterface';
     }
@@ -40,17 +39,17 @@ class CatalogDataProductCustomOptionTypeInterfaceNormalizer implements Denormali
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('label', $data)) {
-            $object->setLabel($data['label']);
-        }
         if (\array_key_exists('code', $data)) {
             $object->setCode($data['code']);
+        }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
         }
         if (\array_key_exists('group', $data)) {
             $object->setGroup($data['group']);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
+        if (\array_key_exists('label', $data)) {
+            $object->setLabel($data['label']);
         }
         return $object;
     }
@@ -60,12 +59,12 @@ class CatalogDataProductCustomOptionTypeInterfaceNormalizer implements Denormali
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['label'] = $object->getLabel();
         $data['code'] = $object->getCode();
-        $data['group'] = $object->getGroup();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
+        $data['group'] = $object->getGroup();
+        $data['label'] = $object->getLabel();
         return $data;
     }
 }

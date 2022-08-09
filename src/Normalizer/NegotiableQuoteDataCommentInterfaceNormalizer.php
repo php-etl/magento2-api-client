@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class NegotiableQuoteDataCommentInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\NegotiableQuoteDataCommentInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\NegotiableQuoteDataCommentInterface';
     }
@@ -40,23 +39,12 @@ class NegotiableQuoteDataCommentInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('entity_id', $data)) {
-            $object->setEntityId($data['entity_id']);
-        }
-        if (\array_key_exists('parent_id', $data)) {
-            $object->setParentId($data['parent_id']);
-        }
-        if (\array_key_exists('creator_type', $data)) {
-            $object->setCreatorType($data['creator_type']);
-        }
-        if (\array_key_exists('is_decline', $data)) {
-            $object->setIsDecline($data['is_decline']);
-        }
-        if (\array_key_exists('is_draft', $data)) {
-            $object->setIsDraft($data['is_draft']);
-        }
-        if (\array_key_exists('creator_id', $data)) {
-            $object->setCreatorId($data['creator_id']);
+        if (\array_key_exists('attachments', $data)) {
+            $values = array();
+            foreach ($data['attachments'] as $value) {
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\NegotiableQuoteDataCommentAttachmentInterface', 'json', $context);
+            }
+            $object->setAttachments($values);
         }
         if (\array_key_exists('comment', $data)) {
             $object->setComment($data['comment']);
@@ -64,15 +52,26 @@ class NegotiableQuoteDataCommentInterfaceNormalizer implements DenormalizerInter
         if (\array_key_exists('created_at', $data)) {
             $object->setCreatedAt($data['created_at']);
         }
+        if (\array_key_exists('creator_id', $data)) {
+            $object->setCreatorId($data['creator_id']);
+        }
+        if (\array_key_exists('creator_type', $data)) {
+            $object->setCreatorType($data['creator_type']);
+        }
+        if (\array_key_exists('entity_id', $data)) {
+            $object->setEntityId($data['entity_id']);
+        }
         if (\array_key_exists('extension_attributes', $data)) {
             $object->setExtensionAttributes($data['extension_attributes']);
         }
-        if (\array_key_exists('attachments', $data)) {
-            $values = array();
-            foreach ($data['attachments'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\NegotiableQuoteDataCommentAttachmentInterface', 'json', $context);
-            }
-            $object->setAttachments($values);
+        if (\array_key_exists('is_decline', $data)) {
+            $object->setIsDecline($data['is_decline']);
+        }
+        if (\array_key_exists('is_draft', $data)) {
+            $object->setIsDraft($data['is_draft']);
+        }
+        if (\array_key_exists('parent_id', $data)) {
+            $object->setParentId($data['parent_id']);
         }
         return $object;
     }
@@ -82,22 +81,22 @@ class NegotiableQuoteDataCommentInterfaceNormalizer implements DenormalizerInter
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['entity_id'] = $object->getEntityId();
-        $data['parent_id'] = $object->getParentId();
-        $data['creator_type'] = $object->getCreatorType();
-        $data['is_decline'] = $object->getIsDecline();
-        $data['is_draft'] = $object->getIsDraft();
-        $data['creator_id'] = $object->getCreatorId();
-        $data['comment'] = $object->getComment();
-        $data['created_at'] = $object->getCreatedAt();
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $object->getExtensionAttributes();
-        }
         $values = array();
         foreach ($object->getAttachments() as $value) {
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
         $data['attachments'] = $values;
+        $data['comment'] = $object->getComment();
+        $data['created_at'] = $object->getCreatedAt();
+        $data['creator_id'] = $object->getCreatorId();
+        $data['creator_type'] = $object->getCreatorType();
+        $data['entity_id'] = $object->getEntityId();
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $object->getExtensionAttributes();
+        }
+        $data['is_decline'] = $object->getIsDecline();
+        $data['is_draft'] = $object->getIsDraft();
+        $data['parent_id'] = $object->getParentId();
         return $data;
     }
 }

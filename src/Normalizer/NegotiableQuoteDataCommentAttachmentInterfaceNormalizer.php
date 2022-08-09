@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class NegotiableQuoteDataCommentAttachmentInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\NegotiableQuoteDataCommentAttachmentInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\NegotiableQuoteDataCommentAttachmentInterface';
     }
@@ -46,6 +45,9 @@ class NegotiableQuoteDataCommentAttachmentInterfaceNormalizer implements Denorma
         if (\array_key_exists('comment_id', $data)) {
             $object->setCommentId($data['comment_id']);
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
+        }
         if (\array_key_exists('file_name', $data)) {
             $object->setFileName($data['file_name']);
         }
@@ -54,9 +56,6 @@ class NegotiableQuoteDataCommentAttachmentInterfaceNormalizer implements Denorma
         }
         if (\array_key_exists('file_type', $data)) {
             $object->setFileType($data['file_type']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
         }
         return $object;
     }
@@ -68,12 +67,12 @@ class NegotiableQuoteDataCommentAttachmentInterfaceNormalizer implements Denorma
         $data = array();
         $data['attachment_id'] = $object->getAttachmentId();
         $data['comment_id'] = $object->getCommentId();
-        $data['file_name'] = $object->getFileName();
-        $data['file_path'] = $object->getFilePath();
-        $data['file_type'] = $object->getFileType();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
+        $data['file_name'] = $object->getFileName();
+        $data['file_path'] = $object->getFilePath();
+        $data['file_type'] = $object->getFileType();
         return $data;
     }
 }

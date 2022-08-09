@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class FrameworkSortOrderNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\FrameworkSortOrder';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\FrameworkSortOrder';
     }
@@ -40,11 +39,11 @@ class FrameworkSortOrderNormalizer implements DenormalizerInterface, NormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('field', $data)) {
-            $object->setField($data['field']);
-        }
         if (\array_key_exists('direction', $data)) {
             $object->setDirection($data['direction']);
+        }
+        if (\array_key_exists('field', $data)) {
+            $object->setField($data['field']);
         }
         return $object;
     }
@@ -54,8 +53,8 @@ class FrameworkSortOrderNormalizer implements DenormalizerInterface, NormalizerI
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['field'] = $object->getField();
         $data['direction'] = $object->getDirection();
+        $data['field'] = $object->getField();
         return $data;
     }
 }

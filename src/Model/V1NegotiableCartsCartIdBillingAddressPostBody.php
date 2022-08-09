@@ -11,7 +11,7 @@ class V1NegotiableCartsCartIdBillingAddressPostBody
      */
     protected $address;
     /**
-     *
+     * 
      *
      * @var bool
      */
@@ -21,7 +21,7 @@ class V1NegotiableCartsCartIdBillingAddressPostBody
      *
      * @return QuoteDataAddressInterface
      */
-    public function getAddress(): QuoteDataAddressInterface
+    public function getAddress() : QuoteDataAddressInterface
     {
         return $this->address;
     }
@@ -32,28 +32,28 @@ class V1NegotiableCartsCartIdBillingAddressPostBody
      *
      * @return self
      */
-    public function setAddress(QuoteDataAddressInterface $address): self
+    public function setAddress(QuoteDataAddressInterface $address) : self
     {
         $this->address = $address;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return bool
      */
-    public function getUseForShipping(): bool
+    public function getUseForShipping() : bool
     {
         return $this->useForShipping;
     }
     /**
-     *
+     * 
      *
      * @param bool $useForShipping
      *
      * @return self
      */
-    public function setUseForShipping(bool $useForShipping): self
+    public function setUseForShipping(bool $useForShipping) : self
     {
         $this->useForShipping = $useForShipping;
         return $this;

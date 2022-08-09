@@ -9,31 +9,7 @@ class CheckoutDataShippingInformationInterface
      *
      * @var QuoteDataAddressInterface
      */
-    protected $shippingAddress;
-    /**
-     * Interface AddressInterface
-     *
-     * @var QuoteDataAddressInterface
-     */
     protected $billingAddress;
-    /**
-     * Shipping method code
-     *
-     * @var string
-     */
-    protected $shippingMethodCode;
-    /**
-     * Carrier code
-     *
-     * @var string
-     */
-    protected $shippingCarrierCode;
-    /**
-     * ExtensionInterface class for @see \Magento\Checkout\Api\Data\ShippingInformationInterface
-     *
-     * @var mixed
-     */
-    protected $extensionAttributes;
     /**
      * Custom attributes values.
      *
@@ -41,32 +17,35 @@ class CheckoutDataShippingInformationInterface
      */
     protected $customAttributes;
     /**
+     * ExtensionInterface class for @see \Magento\Checkout\Api\Data\ShippingInformationInterface
+     *
+     * @var mixed
+     */
+    protected $extensionAttributes;
+    /**
+     * Interface AddressInterface
+     *
+     * @var QuoteDataAddressInterface
+     */
+    protected $shippingAddress;
+    /**
+     * Carrier code
+     *
+     * @var string
+     */
+    protected $shippingCarrierCode;
+    /**
+     * Shipping method code
+     *
+     * @var string
+     */
+    protected $shippingMethodCode;
+    /**
      * Interface AddressInterface
      *
      * @return QuoteDataAddressInterface
      */
-    public function getShippingAddress(): QuoteDataAddressInterface
-    {
-        return $this->shippingAddress;
-    }
-    /**
-     * Interface AddressInterface
-     *
-     * @param QuoteDataAddressInterface $shippingAddress
-     *
-     * @return self
-     */
-    public function setShippingAddress(QuoteDataAddressInterface $shippingAddress): self
-    {
-        $this->shippingAddress = $shippingAddress;
-        return $this;
-    }
-    /**
-     * Interface AddressInterface
-     *
-     * @return QuoteDataAddressInterface
-     */
-    public function getBillingAddress(): QuoteDataAddressInterface
+    public function getBillingAddress() : QuoteDataAddressInterface
     {
         return $this->billingAddress;
     }
@@ -77,51 +56,30 @@ class CheckoutDataShippingInformationInterface
      *
      * @return self
      */
-    public function setBillingAddress(QuoteDataAddressInterface $billingAddress): self
+    public function setBillingAddress(QuoteDataAddressInterface $billingAddress) : self
     {
         $this->billingAddress = $billingAddress;
         return $this;
     }
     /**
-     * Shipping method code
+     * Custom attributes values.
      *
-     * @return string
+     * @return FrameworkAttributeInterface[]
      */
-    public function getShippingMethodCode(): string
+    public function getCustomAttributes() : array
     {
-        return $this->shippingMethodCode;
+        return $this->customAttributes;
     }
     /**
-     * Shipping method code
+     * Custom attributes values.
      *
-     * @param string $shippingMethodCode
+     * @param FrameworkAttributeInterface[] $customAttributes
      *
      * @return self
      */
-    public function setShippingMethodCode(string $shippingMethodCode): self
+    public function setCustomAttributes(array $customAttributes) : self
     {
-        $this->shippingMethodCode = $shippingMethodCode;
-        return $this;
-    }
-    /**
-     * Carrier code
-     *
-     * @return string
-     */
-    public function getShippingCarrierCode(): string
-    {
-        return $this->shippingCarrierCode;
-    }
-    /**
-     * Carrier code
-     *
-     * @param string $shippingCarrierCode
-     *
-     * @return self
-     */
-    public function setShippingCarrierCode(string $shippingCarrierCode): self
-    {
-        $this->shippingCarrierCode = $shippingCarrierCode;
+        $this->customAttributes = $customAttributes;
         return $this;
     }
     /**
@@ -140,30 +98,72 @@ class CheckoutDataShippingInformationInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
     }
     /**
-     * Custom attributes values.
+     * Interface AddressInterface
      *
-     * @return FrameworkAttributeInterface[]
+     * @return QuoteDataAddressInterface
      */
-    public function getCustomAttributes(): array
+    public function getShippingAddress() : QuoteDataAddressInterface
     {
-        return $this->customAttributes;
+        return $this->shippingAddress;
     }
     /**
-     * Custom attributes values.
+     * Interface AddressInterface
      *
-     * @param FrameworkAttributeInterface[] $customAttributes
+     * @param QuoteDataAddressInterface $shippingAddress
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setShippingAddress(QuoteDataAddressInterface $shippingAddress) : self
     {
-        $this->customAttributes = $customAttributes;
+        $this->shippingAddress = $shippingAddress;
+        return $this;
+    }
+    /**
+     * Carrier code
+     *
+     * @return string
+     */
+    public function getShippingCarrierCode() : string
+    {
+        return $this->shippingCarrierCode;
+    }
+    /**
+     * Carrier code
+     *
+     * @param string $shippingCarrierCode
+     *
+     * @return self
+     */
+    public function setShippingCarrierCode(string $shippingCarrierCode) : self
+    {
+        $this->shippingCarrierCode = $shippingCarrierCode;
+        return $this;
+    }
+    /**
+     * Shipping method code
+     *
+     * @return string
+     */
+    public function getShippingMethodCode() : string
+    {
+        return $this->shippingMethodCode;
+    }
+    /**
+     * Shipping method code
+     *
+     * @param string $shippingMethodCode
+     *
+     * @return self
+     */
+    public function setShippingMethodCode(string $shippingMethodCode) : self
+    {
+        $this->shippingMethodCode = $shippingMethodCode;
         return $this;
     }
 }

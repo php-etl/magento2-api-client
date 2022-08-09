@@ -11,23 +11,23 @@ class CustomerDataOptionInterface
      */
     protected $label;
     /**
-     * Option value
-     *
-     * @var string
-     */
-    protected $value;
-    /**
      * Nested options
      *
      * @var CustomerDataOptionInterface[]
      */
     protected $options;
     /**
+     * Option value
+     *
+     * @var string
+     */
+    protected $value;
+    /**
      * Option label
      *
      * @return string
      */
-    public function getLabel(): string
+    public function getLabel() : string
     {
         return $this->label;
     }
@@ -38,30 +38,9 @@ class CustomerDataOptionInterface
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(string $label) : self
     {
         $this->label = $label;
-        return $this;
-    }
-    /**
-     * Option value
-     *
-     * @return string
-     */
-    public function getValue(): string
-    {
-        return $this->value;
-    }
-    /**
-     * Option value
-     *
-     * @param string $value
-     *
-     * @return self
-     */
-    public function setValue(string $value): self
-    {
-        $this->value = $value;
         return $this;
     }
     /**
@@ -69,7 +48,7 @@ class CustomerDataOptionInterface
      *
      * @return CustomerDataOptionInterface[]
      */
-    public function getOptions(): array
+    public function getOptions() : array
     {
         return $this->options;
     }
@@ -80,9 +59,30 @@ class CustomerDataOptionInterface
      *
      * @return self
      */
-    public function setOptions(array $options): self
+    public function setOptions(array $options) : self
     {
         $this->options = $options;
+        return $this;
+    }
+    /**
+     * Option value
+     *
+     * @return string
+     */
+    public function getValue() : string
+    {
+        return $this->value;
+    }
+    /**
+     * Option value
+     *
+     * @param string $value
+     *
+     * @return self
+     */
+    public function setValue(string $value) : self
+    {
+        $this->value = $value;
         return $this;
     }
 }

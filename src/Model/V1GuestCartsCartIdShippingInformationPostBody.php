@@ -15,7 +15,7 @@ class V1GuestCartsCartIdShippingInformationPostBody
      *
      * @return CheckoutDataShippingInformationInterface
      */
-    public function getAddressInformation(): CheckoutDataShippingInformationInterface
+    public function getAddressInformation() : CheckoutDataShippingInformationInterface
     {
         return $this->addressInformation;
     }
@@ -26,7 +26,7 @@ class V1GuestCartsCartIdShippingInformationPostBody
      *
      * @return self
      */
-    public function setAddressInformation(CheckoutDataShippingInformationInterface $addressInformation): self
+    public function setAddressInformation(CheckoutDataShippingInformationInterface $addressInformation) : self
     {
         $this->addressInformation = $addressInformation;
         return $this;

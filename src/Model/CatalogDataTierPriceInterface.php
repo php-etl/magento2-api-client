@@ -5,6 +5,18 @@ namespace Kiboko\Magento\V2\Model;
 class CatalogDataTierPriceInterface
 {
     /**
+     * Customer group.
+     *
+     * @var string
+     */
+    protected $customerGroup;
+    /**
+     * ExtensionInterface class for @see \Magento\Catalog\Api\Data\TierPriceInterface
+     *
+     * @var mixed
+     */
+    protected $extensionAttributes;
+    /**
      * Tier price.
      *
      * @var float
@@ -17,11 +29,11 @@ class CatalogDataTierPriceInterface
      */
     protected $priceType;
     /**
-     * Website id.
+     * Quantity.
      *
-     * @var int
+     * @var float
      */
-    protected $websiteId;
+    protected $quantity;
     /**
      * SKU.
      *
@@ -29,113 +41,17 @@ class CatalogDataTierPriceInterface
      */
     protected $sku;
     /**
-     * Customer group.
-     *
-     * @var string
-     */
-    protected $customerGroup;
-    /**
-     * Quantity.
-     *
-     * @var float
-     */
-    protected $quantity;
-    /**
-     * ExtensionInterface class for @see \Magento\Catalog\Api\Data\TierPriceInterface
-     *
-     * @var mixed
-     */
-    protected $extensionAttributes;
-    /**
-     * Tier price.
-     *
-     * @return float
-     */
-    public function getPrice(): float
-    {
-        return $this->price;
-    }
-    /**
-     * Tier price.
-     *
-     * @param float $price
-     *
-     * @return self
-     */
-    public function setPrice(float $price): self
-    {
-        $this->price = $price;
-        return $this;
-    }
-    /**
-     * Tier price type.
-     *
-     * @return string
-     */
-    public function getPriceType(): string
-    {
-        return $this->priceType;
-    }
-    /**
-     * Tier price type.
-     *
-     * @param string $priceType
-     *
-     * @return self
-     */
-    public function setPriceType(string $priceType): self
-    {
-        $this->priceType = $priceType;
-        return $this;
-    }
-    /**
      * Website id.
      *
-     * @return int
+     * @var int
      */
-    public function getWebsiteId(): int
-    {
-        return $this->websiteId;
-    }
-    /**
-     * Website id.
-     *
-     * @param int $websiteId
-     *
-     * @return self
-     */
-    public function setWebsiteId(int $websiteId): self
-    {
-        $this->websiteId = $websiteId;
-        return $this;
-    }
-    /**
-     * SKU.
-     *
-     * @return string
-     */
-    public function getSku(): string
-    {
-        return $this->sku;
-    }
-    /**
-     * SKU.
-     *
-     * @param string $sku
-     *
-     * @return self
-     */
-    public function setSku(string $sku): self
-    {
-        $this->sku = $sku;
-        return $this;
-    }
+    protected $websiteId;
     /**
      * Customer group.
      *
      * @return string
      */
-    public function getCustomerGroup(): string
+    public function getCustomerGroup() : string
     {
         return $this->customerGroup;
     }
@@ -146,30 +62,9 @@ class CatalogDataTierPriceInterface
      *
      * @return self
      */
-    public function setCustomerGroup(string $customerGroup): self
+    public function setCustomerGroup(string $customerGroup) : self
     {
         $this->customerGroup = $customerGroup;
-        return $this;
-    }
-    /**
-     * Quantity.
-     *
-     * @return float
-     */
-    public function getQuantity(): float
-    {
-        return $this->quantity;
-    }
-    /**
-     * Quantity.
-     *
-     * @param float $quantity
-     *
-     * @return self
-     */
-    public function setQuantity(float $quantity): self
-    {
-        $this->quantity = $quantity;
         return $this;
     }
     /**
@@ -188,9 +83,114 @@ class CatalogDataTierPriceInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Tier price.
+     *
+     * @return float
+     */
+    public function getPrice() : float
+    {
+        return $this->price;
+    }
+    /**
+     * Tier price.
+     *
+     * @param float $price
+     *
+     * @return self
+     */
+    public function setPrice(float $price) : self
+    {
+        $this->price = $price;
+        return $this;
+    }
+    /**
+     * Tier price type.
+     *
+     * @return string
+     */
+    public function getPriceType() : string
+    {
+        return $this->priceType;
+    }
+    /**
+     * Tier price type.
+     *
+     * @param string $priceType
+     *
+     * @return self
+     */
+    public function setPriceType(string $priceType) : self
+    {
+        $this->priceType = $priceType;
+        return $this;
+    }
+    /**
+     * Quantity.
+     *
+     * @return float
+     */
+    public function getQuantity() : float
+    {
+        return $this->quantity;
+    }
+    /**
+     * Quantity.
+     *
+     * @param float $quantity
+     *
+     * @return self
+     */
+    public function setQuantity(float $quantity) : self
+    {
+        $this->quantity = $quantity;
+        return $this;
+    }
+    /**
+     * SKU.
+     *
+     * @return string
+     */
+    public function getSku() : string
+    {
+        return $this->sku;
+    }
+    /**
+     * SKU.
+     *
+     * @param string $sku
+     *
+     * @return self
+     */
+    public function setSku(string $sku) : self
+    {
+        $this->sku = $sku;
+        return $this;
+    }
+    /**
+     * Website id.
+     *
+     * @return int
+     */
+    public function getWebsiteId() : int
+    {
+        return $this->websiteId;
+    }
+    /**
+     * Website id.
+     *
+     * @param int $websiteId
+     *
+     * @return self
+     */
+    public function setWebsiteId(int $websiteId) : self
+    {
+        $this->websiteId = $websiteId;
         return $this;
     }
 }

@@ -15,7 +15,7 @@ class V1CreditmemoIdCommentsPostBody
      *
      * @return SalesDataCreditmemoCommentInterface
      */
-    public function getEntity(): SalesDataCreditmemoCommentInterface
+    public function getEntity() : SalesDataCreditmemoCommentInterface
     {
         return $this->entity;
     }
@@ -26,7 +26,7 @@ class V1CreditmemoIdCommentsPostBody
      *
      * @return self
      */
-    public function setEntity(SalesDataCreditmemoCommentInterface $entity): self
+    public function setEntity(SalesDataCreditmemoCommentInterface $entity) : self
     {
         $this->entity = $entity;
         return $this;

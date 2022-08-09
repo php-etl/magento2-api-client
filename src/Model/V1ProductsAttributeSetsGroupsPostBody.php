@@ -15,7 +15,7 @@ class V1ProductsAttributeSetsGroupsPostBody
      *
      * @return EavDataAttributeGroupInterface
      */
-    public function getGroup(): EavDataAttributeGroupInterface
+    public function getGroup() : EavDataAttributeGroupInterface
     {
         return $this->group;
     }
@@ -26,7 +26,7 @@ class V1ProductsAttributeSetsGroupsPostBody
      *
      * @return self
      */
-    public function setGroup(EavDataAttributeGroupInterface $group): self
+    public function setGroup(EavDataAttributeGroupInterface $group) : self
     {
         $this->group = $group;
         return $this;

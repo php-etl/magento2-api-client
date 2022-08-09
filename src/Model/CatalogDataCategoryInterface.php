@@ -5,83 +5,23 @@ namespace Kiboko\Magento\V2\Model;
 class CatalogDataCategoryInterface
 {
     /**
-     *
-     *
-     * @var int
-     */
-    protected $id;
-    /**
-     * Parent category ID
-     *
-     * @var int
-     */
-    protected $parentId;
-    /**
-     * Category name
-     *
-     * @var string
-     */
-    protected $name;
-    /**
-     * Whether category is active
-     *
-     * @var bool
-     */
-    protected $isActive;
-    /**
-     * Category position
-     *
-     * @var int
-     */
-    protected $position;
-    /**
-     * Category level
-     *
-     * @var int
-     */
-    protected $level;
-    /**
-     *
-     *
-     * @var string
-     */
-    protected $children;
-    /**
-     *
-     *
-     * @var string
-     */
-    protected $createdAt;
-    /**
-     *
-     *
-     * @var string
-     */
-    protected $updatedAt;
-    /**
-     *
-     *
-     * @var string
-     */
-    protected $path;
-    /**
-     *
+     * 
      *
      * @var string[]
      */
     protected $availableSortBy;
     /**
+     * 
      *
-     *
-     * @var bool
+     * @var string
      */
-    protected $includeInMenu;
+    protected $children;
     /**
-     * ExtensionInterface class for @see \Magento\Catalog\Api\Data\CategoryInterface
+     * 
      *
-     * @var mixed
+     * @var string
      */
-    protected $extensionAttributes;
+    protected $createdAt;
     /**
      * Custom attributes values.
      *
@@ -89,255 +29,147 @@ class CatalogDataCategoryInterface
      */
     protected $customAttributes;
     /**
+     * ExtensionInterface class for @see \Magento\Catalog\Api\Data\CategoryInterface
      *
-     *
-     * @return int
+     * @var mixed
      */
-    public function getId(): int
-    {
-        return $this->id;
-    }
+    protected $extensionAttributes;
     /**
+     * 
      *
-     *
-     * @param int $id
-     *
-     * @return self
+     * @var int
      */
-    public function setId(int $id): self
-    {
-        $this->id = $id;
-        return $this;
-    }
+    protected $id;
     /**
-     * Parent category ID
+     * 
      *
-     * @return int
+     * @var bool
      */
-    public function getParentId(): int
-    {
-        return $this->parentId;
-    }
-    /**
-     * Parent category ID
-     *
-     * @param int $parentId
-     *
-     * @return self
-     */
-    public function setParentId(int $parentId): self
-    {
-        $this->parentId = $parentId;
-        return $this;
-    }
-    /**
-     * Category name
-     *
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-    /**
-     * Category name
-     *
-     * @param string $name
-     *
-     * @return self
-     */
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-        return $this;
-    }
+    protected $includeInMenu;
     /**
      * Whether category is active
      *
-     * @return bool
+     * @var bool
      */
-    public function getIsActive(): bool
-    {
-        return $this->isActive;
-    }
-    /**
-     * Whether category is active
-     *
-     * @param bool $isActive
-     *
-     * @return self
-     */
-    public function setIsActive(bool $isActive): self
-    {
-        $this->isActive = $isActive;
-        return $this;
-    }
-    /**
-     * Category position
-     *
-     * @return int
-     */
-    public function getPosition(): int
-    {
-        return $this->position;
-    }
-    /**
-     * Category position
-     *
-     * @param int $position
-     *
-     * @return self
-     */
-    public function setPosition(int $position): self
-    {
-        $this->position = $position;
-        return $this;
-    }
+    protected $isActive;
     /**
      * Category level
      *
-     * @return int
+     * @var int
      */
-    public function getLevel(): int
-    {
-        return $this->level;
-    }
+    protected $level;
     /**
-     * Category level
+     * Category name
      *
-     * @param int $level
-     *
-     * @return self
+     * @var string
      */
-    public function setLevel(int $level): self
-    {
-        $this->level = $level;
-        return $this;
-    }
+    protected $name;
     /**
+     * Parent category ID
      *
-     *
-     * @return string
+     * @var int
      */
-    public function getChildren(): string
-    {
-        return $this->children;
-    }
+    protected $parentId;
     /**
+     * 
      *
-     *
-     * @param string $children
-     *
-     * @return self
+     * @var string
      */
-    public function setChildren(string $children): self
-    {
-        $this->children = $children;
-        return $this;
-    }
+    protected $path;
     /**
+     * Category position
      *
-     *
-     * @return string
+     * @var int
      */
-    public function getCreatedAt(): string
-    {
-        return $this->createdAt;
-    }
+    protected $position;
     /**
+     * 
      *
-     *
-     * @param string $createdAt
-     *
-     * @return self
+     * @var string
      */
-    public function setCreatedAt(string $createdAt): self
-    {
-        $this->createdAt = $createdAt;
-        return $this;
-    }
+    protected $updatedAt;
     /**
-     *
-     *
-     * @return string
-     */
-    public function getUpdatedAt(): string
-    {
-        return $this->updatedAt;
-    }
-    /**
-     *
-     *
-     * @param string $updatedAt
-     *
-     * @return self
-     */
-    public function setUpdatedAt(string $updatedAt): self
-    {
-        $this->updatedAt = $updatedAt;
-        return $this;
-    }
-    /**
-     *
-     *
-     * @return string
-     */
-    public function getPath(): string
-    {
-        return $this->path;
-    }
-    /**
-     *
-     *
-     * @param string $path
-     *
-     * @return self
-     */
-    public function setPath(string $path): self
-    {
-        $this->path = $path;
-        return $this;
-    }
-    /**
-     *
+     * 
      *
      * @return string[]
      */
-    public function getAvailableSortBy(): array
+    public function getAvailableSortBy() : array
     {
         return $this->availableSortBy;
     }
     /**
-     *
+     * 
      *
      * @param string[] $availableSortBy
      *
      * @return self
      */
-    public function setAvailableSortBy(array $availableSortBy): self
+    public function setAvailableSortBy(array $availableSortBy) : self
     {
         $this->availableSortBy = $availableSortBy;
         return $this;
     }
     /**
+     * 
      *
-     *
-     * @return bool
+     * @return string
      */
-    public function getIncludeInMenu(): bool
+    public function getChildren() : string
     {
-        return $this->includeInMenu;
+        return $this->children;
     }
     /**
+     * 
      *
-     *
-     * @param bool $includeInMenu
+     * @param string $children
      *
      * @return self
      */
-    public function setIncludeInMenu(bool $includeInMenu): self
+    public function setChildren(string $children) : self
     {
-        $this->includeInMenu = $includeInMenu;
+        $this->children = $children;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getCreatedAt() : string
+    {
+        return $this->createdAt;
+    }
+    /**
+     * 
+     *
+     * @param string $createdAt
+     *
+     * @return self
+     */
+    public function setCreatedAt(string $createdAt) : self
+    {
+        $this->createdAt = $createdAt;
+        return $this;
+    }
+    /**
+     * Custom attributes values.
+     *
+     * @return FrameworkAttributeInterface[]
+     */
+    public function getCustomAttributes() : array
+    {
+        return $this->customAttributes;
+    }
+    /**
+     * Custom attributes values.
+     *
+     * @param FrameworkAttributeInterface[] $customAttributes
+     *
+     * @return self
+     */
+    public function setCustomAttributes(array $customAttributes) : self
+    {
+        $this->customAttributes = $customAttributes;
         return $this;
     }
     /**
@@ -356,30 +188,198 @@ class CatalogDataCategoryInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
     }
     /**
-     * Custom attributes values.
+     * 
      *
-     * @return FrameworkAttributeInterface[]
+     * @return int
      */
-    public function getCustomAttributes(): array
+    public function getId() : int
     {
-        return $this->customAttributes;
+        return $this->id;
     }
     /**
-     * Custom attributes values.
+     * 
      *
-     * @param FrameworkAttributeInterface[] $customAttributes
+     * @param int $id
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setId(int $id) : self
     {
-        $this->customAttributes = $customAttributes;
+        $this->id = $id;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return bool
+     */
+    public function getIncludeInMenu() : bool
+    {
+        return $this->includeInMenu;
+    }
+    /**
+     * 
+     *
+     * @param bool $includeInMenu
+     *
+     * @return self
+     */
+    public function setIncludeInMenu(bool $includeInMenu) : self
+    {
+        $this->includeInMenu = $includeInMenu;
+        return $this;
+    }
+    /**
+     * Whether category is active
+     *
+     * @return bool
+     */
+    public function getIsActive() : bool
+    {
+        return $this->isActive;
+    }
+    /**
+     * Whether category is active
+     *
+     * @param bool $isActive
+     *
+     * @return self
+     */
+    public function setIsActive(bool $isActive) : self
+    {
+        $this->isActive = $isActive;
+        return $this;
+    }
+    /**
+     * Category level
+     *
+     * @return int
+     */
+    public function getLevel() : int
+    {
+        return $this->level;
+    }
+    /**
+     * Category level
+     *
+     * @param int $level
+     *
+     * @return self
+     */
+    public function setLevel(int $level) : self
+    {
+        $this->level = $level;
+        return $this;
+    }
+    /**
+     * Category name
+     *
+     * @return string
+     */
+    public function getName() : string
+    {
+        return $this->name;
+    }
+    /**
+     * Category name
+     *
+     * @param string $name
+     *
+     * @return self
+     */
+    public function setName(string $name) : self
+    {
+        $this->name = $name;
+        return $this;
+    }
+    /**
+     * Parent category ID
+     *
+     * @return int
+     */
+    public function getParentId() : int
+    {
+        return $this->parentId;
+    }
+    /**
+     * Parent category ID
+     *
+     * @param int $parentId
+     *
+     * @return self
+     */
+    public function setParentId(int $parentId) : self
+    {
+        $this->parentId = $parentId;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getPath() : string
+    {
+        return $this->path;
+    }
+    /**
+     * 
+     *
+     * @param string $path
+     *
+     * @return self
+     */
+    public function setPath(string $path) : self
+    {
+        $this->path = $path;
+        return $this;
+    }
+    /**
+     * Category position
+     *
+     * @return int
+     */
+    public function getPosition() : int
+    {
+        return $this->position;
+    }
+    /**
+     * Category position
+     *
+     * @param int $position
+     *
+     * @return self
+     */
+    public function setPosition(int $position) : self
+    {
+        $this->position = $position;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getUpdatedAt() : string
+    {
+        return $this->updatedAt;
+    }
+    /**
+     * 
+     *
+     * @param string $updatedAt
+     *
+     * @return self
+     */
+    public function setUpdatedAt(string $updatedAt) : self
+    {
+        $this->updatedAt = $updatedAt;
         return $this;
     }
 }

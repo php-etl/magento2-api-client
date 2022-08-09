@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class DirectoryDataCurrencyInformationInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\DirectoryDataCurrencyInformationInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\DirectoryDataCurrencyInformationInterface';
     }
@@ -40,6 +39,13 @@ class DirectoryDataCurrencyInformationInterfaceNormalizer implements Denormalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('available_currency_codes', $data)) {
+            $values = array();
+            foreach ($data['available_currency_codes'] as $value) {
+                $values[] = $value;
+            }
+            $object->setAvailableCurrencyCodes($values);
+        }
         if (\array_key_exists('base_currency_code', $data)) {
             $object->setBaseCurrencyCode($data['base_currency_code']);
         }
@@ -51,13 +57,6 @@ class DirectoryDataCurrencyInformationInterfaceNormalizer implements Denormalize
         }
         if (\array_key_exists('default_display_currency_symbol', $data)) {
             $object->setDefaultDisplayCurrencySymbol($data['default_display_currency_symbol']);
-        }
-        if (\array_key_exists('available_currency_codes', $data)) {
-            $values = array();
-            foreach ($data['available_currency_codes'] as $value) {
-                $values[] = $value;
-            }
-            $object->setAvailableCurrencyCodes($values);
         }
         if (\array_key_exists('exchange_rates', $data)) {
             $values_1 = array();
@@ -77,15 +76,15 @@ class DirectoryDataCurrencyInformationInterfaceNormalizer implements Denormalize
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['base_currency_code'] = $object->getBaseCurrencyCode();
-        $data['base_currency_symbol'] = $object->getBaseCurrencySymbol();
-        $data['default_display_currency_code'] = $object->getDefaultDisplayCurrencyCode();
-        $data['default_display_currency_symbol'] = $object->getDefaultDisplayCurrencySymbol();
         $values = array();
         foreach ($object->getAvailableCurrencyCodes() as $value) {
             $values[] = $value;
         }
         $data['available_currency_codes'] = $values;
+        $data['base_currency_code'] = $object->getBaseCurrencyCode();
+        $data['base_currency_symbol'] = $object->getBaseCurrencySymbol();
+        $data['default_display_currency_code'] = $object->getDefaultDisplayCurrencyCode();
+        $data['default_display_currency_symbol'] = $object->getDefaultDisplayCurrencySymbol();
         $values_1 = array();
         foreach ($object->getExchangeRates() as $value_1) {
             $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);

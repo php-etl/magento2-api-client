@@ -15,7 +15,7 @@ class V1InvoicesPostBody
      *
      * @return SalesDataInvoiceInterface
      */
-    public function getEntity(): SalesDataInvoiceInterface
+    public function getEntity() : SalesDataInvoiceInterface
     {
         return $this->entity;
     }
@@ -26,7 +26,7 @@ class V1InvoicesPostBody
      *
      * @return self
      */
-    public function setEntity(SalesDataInvoiceInterface $entity): self
+    public function setEntity(SalesDataInvoiceInterface $entity) : self
     {
         $this->entity = $entity;
         return $this;

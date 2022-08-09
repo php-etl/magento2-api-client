@@ -5,12 +5,6 @@ namespace Kiboko\Magento\V2\Model;
 class FrameworkSearchAggregationValueInterface
 {
     /**
-     * Aggregation
-     *
-     * @var string
-     */
-    protected $value;
-    /**
      * Metrics
      *
      * @var string[]
@@ -19,30 +13,15 @@ class FrameworkSearchAggregationValueInterface
     /**
      * Aggregation
      *
-     * @return string
+     * @var string
      */
-    public function getValue(): string
-    {
-        return $this->value;
-    }
-    /**
-     * Aggregation
-     *
-     * @param string $value
-     *
-     * @return self
-     */
-    public function setValue(string $value): self
-    {
-        $this->value = $value;
-        return $this;
-    }
+    protected $value;
     /**
      * Metrics
      *
      * @return string[]
      */
-    public function getMetrics(): array
+    public function getMetrics() : array
     {
         return $this->metrics;
     }
@@ -53,9 +32,30 @@ class FrameworkSearchAggregationValueInterface
      *
      * @return self
      */
-    public function setMetrics(array $metrics): self
+    public function setMetrics(array $metrics) : self
     {
         $this->metrics = $metrics;
+        return $this;
+    }
+    /**
+     * Aggregation
+     *
+     * @return string
+     */
+    public function getValue() : string
+    {
+        return $this->value;
+    }
+    /**
+     * Aggregation
+     *
+     * @param string $value
+     *
+     * @return self
+     */
+    public function setValue(string $value) : self
+    {
+        $this->value = $value;
         return $this;
     }
 }

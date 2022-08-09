@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1EavAttributeSetsPostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\V1EavAttributeSetsPostBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\V1EavAttributeSetsPostBody';
     }
@@ -40,11 +39,11 @@ class V1EavAttributeSetsPostBodyNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('entityTypeCode', $data)) {
-            $object->setEntityTypeCode($data['entityTypeCode']);
-        }
         if (\array_key_exists('attributeSet', $data)) {
             $object->setAttributeSet($this->denormalizer->denormalize($data['attributeSet'], 'Kiboko\\Magento\\V2\\Model\\EavDataAttributeSetInterface', 'json', $context));
+        }
+        if (\array_key_exists('entityTypeCode', $data)) {
+            $object->setEntityTypeCode($data['entityTypeCode']);
         }
         if (\array_key_exists('skeletonId', $data)) {
             $object->setSkeletonId($data['skeletonId']);
@@ -57,8 +56,8 @@ class V1EavAttributeSetsPostBodyNormalizer implements DenormalizerInterface, Nor
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['entityTypeCode'] = $object->getEntityTypeCode();
         $data['attributeSet'] = $this->normalizer->normalize($object->getAttributeSet(), 'json', $context);
+        $data['entityTypeCode'] = $object->getEntityTypeCode();
         $data['skeletonId'] = $object->getSkeletonId();
         return $data;
     }

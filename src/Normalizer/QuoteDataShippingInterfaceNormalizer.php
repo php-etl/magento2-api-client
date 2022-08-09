@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class QuoteDataShippingInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\QuoteDataShippingInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\QuoteDataShippingInterface';
     }
@@ -43,11 +42,11 @@ class QuoteDataShippingInterfaceNormalizer implements DenormalizerInterface, Nor
         if (\array_key_exists('address', $data)) {
             $object->setAddress($this->denormalizer->denormalize($data['address'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataAddressInterface', 'json', $context));
         }
-        if (\array_key_exists('method', $data)) {
-            $object->setMethod($data['method']);
-        }
         if (\array_key_exists('extension_attributes', $data)) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        }
+        if (\array_key_exists('method', $data)) {
+            $object->setMethod($data['method']);
         }
         return $object;
     }
@@ -58,10 +57,10 @@ class QuoteDataShippingInterfaceNormalizer implements DenormalizerInterface, Nor
     {
         $data = array();
         $data['address'] = $this->normalizer->normalize($object->getAddress(), 'json', $context);
-        $data['method'] = $object->getMethod();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
+        $data['method'] = $object->getMethod();
         return $data;
     }
 }

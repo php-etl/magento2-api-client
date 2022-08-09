@@ -15,7 +15,7 @@ class V1CustomerGroupsIdPutBody
      *
      * @return CustomerDataGroupInterface
      */
-    public function getGroup(): CustomerDataGroupInterface
+    public function getGroup() : CustomerDataGroupInterface
     {
         return $this->group;
     }
@@ -26,7 +26,7 @@ class V1CustomerGroupsIdPutBody
      *
      * @return self
      */
-    public function setGroup(CustomerDataGroupInterface $group): self
+    public function setGroup(CustomerDataGroupInterface $group) : self
     {
         $this->group = $group;
         return $this;

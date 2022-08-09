@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class GiftWrappingDataWrappingInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\GiftWrappingDataWrappingInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\GiftWrappingDataWrappingInterface';
     }
@@ -40,26 +39,29 @@ class GiftWrappingDataWrappingInterfaceNormalizer implements DenormalizerInterfa
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('wrapping_id', $data)) {
-            $object->setWrappingId($data['wrapping_id']);
-        }
-        if (\array_key_exists('design', $data)) {
-            $object->setDesign($data['design']);
-        }
-        if (\array_key_exists('status', $data)) {
-            $object->setStatus($data['status']);
+        if (\array_key_exists('base_currency_code', $data)) {
+            $object->setBaseCurrencyCode($data['base_currency_code']);
         }
         if (\array_key_exists('base_price', $data)) {
             $object->setBasePrice($data['base_price']);
         }
-        if (\array_key_exists('image_name', $data)) {
-            $object->setImageName($data['image_name']);
+        if (\array_key_exists('design', $data)) {
+            $object->setDesign($data['design']);
+        }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
         }
         if (\array_key_exists('image_base64_content', $data)) {
             $object->setImageBase64Content($data['image_base64_content']);
         }
-        if (\array_key_exists('base_currency_code', $data)) {
-            $object->setBaseCurrencyCode($data['base_currency_code']);
+        if (\array_key_exists('image_name', $data)) {
+            $object->setImageName($data['image_name']);
+        }
+        if (\array_key_exists('image_url', $data)) {
+            $object->setImageUrl($data['image_url']);
+        }
+        if (\array_key_exists('status', $data)) {
+            $object->setStatus($data['status']);
         }
         if (\array_key_exists('website_ids', $data)) {
             $values = array();
@@ -68,11 +70,8 @@ class GiftWrappingDataWrappingInterfaceNormalizer implements DenormalizerInterfa
             }
             $object->setWebsiteIds($values);
         }
-        if (\array_key_exists('image_url', $data)) {
-            $object->setImageUrl($data['image_url']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
+        if (\array_key_exists('wrapping_id', $data)) {
+            $object->setWrappingId($data['wrapping_id']);
         }
         return $object;
     }
@@ -82,21 +81,24 @@ class GiftWrappingDataWrappingInterfaceNormalizer implements DenormalizerInterfa
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getWrappingId()) {
-            $data['wrapping_id'] = $object->getWrappingId();
+        if (null !== $object->getBaseCurrencyCode()) {
+            $data['base_currency_code'] = $object->getBaseCurrencyCode();
         }
-        $data['design'] = $object->getDesign();
-        $data['status'] = $object->getStatus();
         $data['base_price'] = $object->getBasePrice();
-        if (null !== $object->getImageName()) {
-            $data['image_name'] = $object->getImageName();
+        $data['design'] = $object->getDesign();
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $object->getExtensionAttributes();
         }
         if (null !== $object->getImageBase64Content()) {
             $data['image_base64_content'] = $object->getImageBase64Content();
         }
-        if (null !== $object->getBaseCurrencyCode()) {
-            $data['base_currency_code'] = $object->getBaseCurrencyCode();
+        if (null !== $object->getImageName()) {
+            $data['image_name'] = $object->getImageName();
         }
+        if (null !== $object->getImageUrl()) {
+            $data['image_url'] = $object->getImageUrl();
+        }
+        $data['status'] = $object->getStatus();
         if (null !== $object->getWebsiteIds()) {
             $values = array();
             foreach ($object->getWebsiteIds() as $value) {
@@ -104,11 +106,8 @@ class GiftWrappingDataWrappingInterfaceNormalizer implements DenormalizerInterfa
             }
             $data['website_ids'] = $values;
         }
-        if (null !== $object->getImageUrl()) {
-            $data['image_url'] = $object->getImageUrl();
-        }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $object->getExtensionAttributes();
+        if (null !== $object->getWrappingId()) {
+            $data['wrapping_id'] = $object->getWrappingId();
         }
         return $data;
     }

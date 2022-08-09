@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1CompanyAssignRolesPutBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\V1CompanyAssignRolesPutBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\V1CompanyAssignRolesPutBody';
     }
@@ -40,15 +39,15 @@ class V1CompanyAssignRolesPutBodyNormalizer implements DenormalizerInterface, No
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('userId', $data)) {
-            $object->setUserId($data['userId']);
-        }
         if (\array_key_exists('roles', $data)) {
             $values = array();
             foreach ($data['roles'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\CompanyDataRoleInterface', 'json', $context);
             }
             $object->setRoles($values);
+        }
+        if (\array_key_exists('userId', $data)) {
+            $object->setUserId($data['userId']);
         }
         return $object;
     }
@@ -58,12 +57,12 @@ class V1CompanyAssignRolesPutBodyNormalizer implements DenormalizerInterface, No
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['userId'] = $object->getUserId();
         $values = array();
         foreach ($object->getRoles() as $value) {
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
         $data['roles'] = $values;
+        $data['userId'] = $object->getUserId();
         return $data;
     }
 }

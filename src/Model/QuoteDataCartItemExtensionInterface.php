@@ -15,7 +15,7 @@ class QuoteDataCartItemExtensionInterface
      *
      * @return NegotiableQuoteDataNegotiableQuoteItemInterface
      */
-    public function getNegotiableQuoteItem(): NegotiableQuoteDataNegotiableQuoteItemInterface
+    public function getNegotiableQuoteItem() : NegotiableQuoteDataNegotiableQuoteItemInterface
     {
         return $this->negotiableQuoteItem;
     }
@@ -26,7 +26,7 @@ class QuoteDataCartItemExtensionInterface
      *
      * @return self
      */
-    public function setNegotiableQuoteItem(NegotiableQuoteDataNegotiableQuoteItemInterface $negotiableQuoteItem): self
+    public function setNegotiableQuoteItem(NegotiableQuoteDataNegotiableQuoteItemInterface $negotiableQuoteItem) : self
     {
         $this->negotiableQuoteItem = $negotiableQuoteItem;
         return $this;

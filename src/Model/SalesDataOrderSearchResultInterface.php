@@ -27,7 +27,7 @@ class SalesDataOrderSearchResultInterface
      *
      * @return SalesDataOrderInterface[]
      */
-    public function getItems(): array
+    public function getItems() : array
     {
         return $this->items;
     }
@@ -38,7 +38,7 @@ class SalesDataOrderSearchResultInterface
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(array $items) : self
     {
         $this->items = $items;
         return $this;
@@ -48,7 +48,7 @@ class SalesDataOrderSearchResultInterface
      *
      * @return FrameworkSearchCriteriaInterface
      */
-    public function getSearchCriteria(): FrameworkSearchCriteriaInterface
+    public function getSearchCriteria() : FrameworkSearchCriteriaInterface
     {
         return $this->searchCriteria;
     }
@@ -59,7 +59,7 @@ class SalesDataOrderSearchResultInterface
      *
      * @return self
      */
-    public function setSearchCriteria(FrameworkSearchCriteriaInterface $searchCriteria): self
+    public function setSearchCriteria(FrameworkSearchCriteriaInterface $searchCriteria) : self
     {
         $this->searchCriteria = $searchCriteria;
         return $this;
@@ -69,7 +69,7 @@ class SalesDataOrderSearchResultInterface
      *
      * @return int
      */
-    public function getTotalCount(): int
+    public function getTotalCount() : int
     {
         return $this->totalCount;
     }
@@ -80,7 +80,7 @@ class SalesDataOrderSearchResultInterface
      *
      * @return self
      */
-    public function setTotalCount(int $totalCount): self
+    public function setTotalCount(int $totalCount) : self
     {
         $this->totalCount = $totalCount;
         return $this;

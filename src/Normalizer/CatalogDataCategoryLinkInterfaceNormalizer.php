@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataCategoryLinkInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CatalogDataCategoryLinkInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CatalogDataCategoryLinkInterface';
     }
@@ -40,14 +39,14 @@ class CatalogDataCategoryLinkInterfaceNormalizer implements DenormalizerInterfac
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('position', $data)) {
-            $object->setPosition($data['position']);
-        }
         if (\array_key_exists('category_id', $data)) {
             $object->setCategoryId($data['category_id']);
         }
         if (\array_key_exists('extension_attributes', $data)) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        }
+        if (\array_key_exists('position', $data)) {
+            $object->setPosition($data['position']);
         }
         return $object;
     }
@@ -57,12 +56,12 @@ class CatalogDataCategoryLinkInterfaceNormalizer implements DenormalizerInterfac
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getPosition()) {
-            $data['position'] = $object->getPosition();
-        }
         $data['category_id'] = $object->getCategoryId();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
+        }
+        if (null !== $object->getPosition()) {
+            $data['position'] = $object->getPosition();
         }
         return $data;
     }

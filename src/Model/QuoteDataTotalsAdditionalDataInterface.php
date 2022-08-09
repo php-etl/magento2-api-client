@@ -5,12 +5,6 @@ namespace Kiboko\Magento\V2\Model;
 class QuoteDataTotalsAdditionalDataInterface
 {
     /**
-     * ExtensionInterface class for @see \Magento\Quote\Api\Data\TotalsAdditionalDataInterface
-     *
-     * @var QuoteDataTotalsAdditionalDataExtensionInterface
-     */
-    protected $extensionAttributes;
-    /**
      * Custom attributes values.
      *
      * @var FrameworkAttributeInterface[]
@@ -19,30 +13,15 @@ class QuoteDataTotalsAdditionalDataInterface
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\TotalsAdditionalDataInterface
      *
-     * @return QuoteDataTotalsAdditionalDataExtensionInterface
+     * @var QuoteDataTotalsAdditionalDataExtensionInterface
      */
-    public function getExtensionAttributes(): QuoteDataTotalsAdditionalDataExtensionInterface
-    {
-        return $this->extensionAttributes;
-    }
-    /**
-     * ExtensionInterface class for @see \Magento\Quote\Api\Data\TotalsAdditionalDataInterface
-     *
-     * @param QuoteDataTotalsAdditionalDataExtensionInterface $extensionAttributes
-     *
-     * @return self
-     */
-    public function setExtensionAttributes(QuoteDataTotalsAdditionalDataExtensionInterface $extensionAttributes): self
-    {
-        $this->extensionAttributes = $extensionAttributes;
-        return $this;
-    }
+    protected $extensionAttributes;
     /**
      * Custom attributes values.
      *
      * @return FrameworkAttributeInterface[]
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes() : array
     {
         return $this->customAttributes;
     }
@@ -53,9 +32,30 @@ class QuoteDataTotalsAdditionalDataInterface
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(array $customAttributes) : self
     {
         $this->customAttributes = $customAttributes;
+        return $this;
+    }
+    /**
+     * ExtensionInterface class for @see \Magento\Quote\Api\Data\TotalsAdditionalDataInterface
+     *
+     * @return QuoteDataTotalsAdditionalDataExtensionInterface
+     */
+    public function getExtensionAttributes() : QuoteDataTotalsAdditionalDataExtensionInterface
+    {
+        return $this->extensionAttributes;
+    }
+    /**
+     * ExtensionInterface class for @see \Magento\Quote\Api\Data\TotalsAdditionalDataInterface
+     *
+     * @param QuoteDataTotalsAdditionalDataExtensionInterface $extensionAttributes
+     *
+     * @return self
+     */
+    public function setExtensionAttributes(QuoteDataTotalsAdditionalDataExtensionInterface $extensionAttributes) : self
+    {
+        $this->extensionAttributes = $extensionAttributes;
         return $this;
     }
 }

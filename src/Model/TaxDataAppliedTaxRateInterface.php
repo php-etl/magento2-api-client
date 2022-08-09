@@ -11,11 +11,11 @@ class TaxDataAppliedTaxRateInterface
      */
     protected $code;
     /**
-     * Title
+     * ExtensionInterface class for @see \Magento\Tax\Api\Data\AppliedTaxRateInterface
      *
-     * @var string
+     * @var mixed
      */
-    protected $title;
+    protected $extensionAttributes;
     /**
      * Tax Percent
      *
@@ -23,17 +23,17 @@ class TaxDataAppliedTaxRateInterface
      */
     protected $percent;
     /**
-     * ExtensionInterface class for @see \Magento\Tax\Api\Data\AppliedTaxRateInterface
+     * Title
      *
-     * @var mixed
+     * @var string
      */
-    protected $extensionAttributes;
+    protected $title;
     /**
      * Code
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -44,51 +44,9 @@ class TaxDataAppliedTaxRateInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
-        return $this;
-    }
-    /**
-     * Title
-     *
-     * @return string
-     */
-    public function getTitle(): string
-    {
-        return $this->title;
-    }
-    /**
-     * Title
-     *
-     * @param string $title
-     *
-     * @return self
-     */
-    public function setTitle(string $title): self
-    {
-        $this->title = $title;
-        return $this;
-    }
-    /**
-     * Tax Percent
-     *
-     * @return float
-     */
-    public function getPercent(): float
-    {
-        return $this->percent;
-    }
-    /**
-     * Tax Percent
-     *
-     * @param float $percent
-     *
-     * @return self
-     */
-    public function setPercent(float $percent): self
-    {
-        $this->percent = $percent;
         return $this;
     }
     /**
@@ -107,9 +65,51 @@ class TaxDataAppliedTaxRateInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Tax Percent
+     *
+     * @return float
+     */
+    public function getPercent() : float
+    {
+        return $this->percent;
+    }
+    /**
+     * Tax Percent
+     *
+     * @param float $percent
+     *
+     * @return self
+     */
+    public function setPercent(float $percent) : self
+    {
+        $this->percent = $percent;
+        return $this;
+    }
+    /**
+     * Title
+     *
+     * @return string
+     */
+    public function getTitle() : string
+    {
+        return $this->title;
+    }
+    /**
+     * Title
+     *
+     * @param string $title
+     *
+     * @return self
+     */
+    public function setTitle(string $title) : self
+    {
+        $this->title = $title;
         return $this;
     }
 }

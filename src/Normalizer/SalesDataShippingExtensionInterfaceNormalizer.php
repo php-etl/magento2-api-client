@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataShippingExtensionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataShippingExtensionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataShippingExtensionInterface';
     }
@@ -40,14 +39,14 @@ class SalesDataShippingExtensionInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('collection_point', $data)) {
+            $object->setCollectionPoint($this->denormalizer->denormalize($data['collection_point'], 'Kiboko\\Magento\\V2\\Model\\TemandoShippingDataCollectionPointOrderCollectionPointInterface', 'json', $context));
+        }
         if (\array_key_exists('ext_order_id', $data)) {
             $object->setExtOrderId($data['ext_order_id']);
         }
         if (\array_key_exists('shipping_experience', $data)) {
             $object->setShippingExperience($this->denormalizer->denormalize($data['shipping_experience'], 'Kiboko\\Magento\\V2\\Model\\TemandoShippingDataOrderShippingExperienceInterface', 'json', $context));
-        }
-        if (\array_key_exists('collection_point', $data)) {
-            $object->setCollectionPoint($this->denormalizer->denormalize($data['collection_point'], 'Kiboko\\Magento\\V2\\Model\\TemandoShippingDataCollectionPointOrderCollectionPointInterface', 'json', $context));
         }
         return $object;
     }
@@ -57,14 +56,14 @@ class SalesDataShippingExtensionInterfaceNormalizer implements DenormalizerInter
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
+        if (null !== $object->getCollectionPoint()) {
+            $data['collection_point'] = $this->normalizer->normalize($object->getCollectionPoint(), 'json', $context);
+        }
         if (null !== $object->getExtOrderId()) {
             $data['ext_order_id'] = $object->getExtOrderId();
         }
         if (null !== $object->getShippingExperience()) {
             $data['shipping_experience'] = $this->normalizer->normalize($object->getShippingExperience(), 'json', $context);
-        }
-        if (null !== $object->getCollectionPoint()) {
-            $data['collection_point'] = $this->normalizer->normalize($object->getCollectionPoint(), 'json', $context);
         }
         return $data;
     }

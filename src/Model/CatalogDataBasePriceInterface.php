@@ -5,24 +5,6 @@ namespace Kiboko\Magento\V2\Model;
 class CatalogDataBasePriceInterface
 {
     /**
-     * Price.
-     *
-     * @var float
-     */
-    protected $price;
-    /**
-     * Store id.
-     *
-     * @var int
-     */
-    protected $storeId;
-    /**
-     * SKU.
-     *
-     * @var string
-     */
-    protected $sku;
-    /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\BasePriceInterface
      *
      * @var mixed
@@ -31,66 +13,21 @@ class CatalogDataBasePriceInterface
     /**
      * Price.
      *
-     * @return float
+     * @var float
      */
-    public function getPrice(): float
-    {
-        return $this->price;
-    }
-    /**
-     * Price.
-     *
-     * @param float $price
-     *
-     * @return self
-     */
-    public function setPrice(float $price): self
-    {
-        $this->price = $price;
-        return $this;
-    }
-    /**
-     * Store id.
-     *
-     * @return int
-     */
-    public function getStoreId(): int
-    {
-        return $this->storeId;
-    }
-    /**
-     * Store id.
-     *
-     * @param int $storeId
-     *
-     * @return self
-     */
-    public function setStoreId(int $storeId): self
-    {
-        $this->storeId = $storeId;
-        return $this;
-    }
+    protected $price;
     /**
      * SKU.
      *
-     * @return string
+     * @var string
      */
-    public function getSku(): string
-    {
-        return $this->sku;
-    }
+    protected $sku;
     /**
-     * SKU.
+     * Store id.
      *
-     * @param string $sku
-     *
-     * @return self
+     * @var int
      */
-    public function setSku(string $sku): self
-    {
-        $this->sku = $sku;
-        return $this;
-    }
+    protected $storeId;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\BasePriceInterface
      *
@@ -107,9 +44,72 @@ class CatalogDataBasePriceInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Price.
+     *
+     * @return float
+     */
+    public function getPrice() : float
+    {
+        return $this->price;
+    }
+    /**
+     * Price.
+     *
+     * @param float $price
+     *
+     * @return self
+     */
+    public function setPrice(float $price) : self
+    {
+        $this->price = $price;
+        return $this;
+    }
+    /**
+     * SKU.
+     *
+     * @return string
+     */
+    public function getSku() : string
+    {
+        return $this->sku;
+    }
+    /**
+     * SKU.
+     *
+     * @param string $sku
+     *
+     * @return self
+     */
+    public function setSku(string $sku) : self
+    {
+        $this->sku = $sku;
+        return $this;
+    }
+    /**
+     * Store id.
+     *
+     * @return int
+     */
+    public function getStoreId() : int
+    {
+        return $this->storeId;
+    }
+    /**
+     * Store id.
+     *
+     * @param int $storeId
+     *
+     * @return self
+     */
+    public function setStoreId(int $storeId) : self
+    {
+        $this->storeId = $storeId;
         return $this;
     }
 }

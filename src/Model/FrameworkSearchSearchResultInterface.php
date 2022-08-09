@@ -5,17 +5,17 @@ namespace Kiboko\Magento\V2\Model;
 class FrameworkSearchSearchResultInterface
 {
     /**
-     *
-     *
-     * @var FrameworkSearchDocumentInterface[]
-     */
-    protected $items;
-    /**
      * Faceted data
      *
      * @var FrameworkSearchAggregationInterface
      */
     protected $aggregations;
+    /**
+     * 
+     *
+     * @var FrameworkSearchDocumentInterface[]
+     */
+    protected $items;
     /**
      * Interface SearchCriteriaInterface
      *
@@ -29,32 +29,11 @@ class FrameworkSearchSearchResultInterface
      */
     protected $totalCount;
     /**
-     *
-     *
-     * @return FrameworkSearchDocumentInterface[]
-     */
-    public function getItems(): array
-    {
-        return $this->items;
-    }
-    /**
-     *
-     *
-     * @param FrameworkSearchDocumentInterface[] $items
-     *
-     * @return self
-     */
-    public function setItems(array $items): self
-    {
-        $this->items = $items;
-        return $this;
-    }
-    /**
      * Faceted data
      *
      * @return FrameworkSearchAggregationInterface
      */
-    public function getAggregations(): FrameworkSearchAggregationInterface
+    public function getAggregations() : FrameworkSearchAggregationInterface
     {
         return $this->aggregations;
     }
@@ -65,9 +44,30 @@ class FrameworkSearchSearchResultInterface
      *
      * @return self
      */
-    public function setAggregations(FrameworkSearchAggregationInterface $aggregations): self
+    public function setAggregations(FrameworkSearchAggregationInterface $aggregations) : self
     {
         $this->aggregations = $aggregations;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return FrameworkSearchDocumentInterface[]
+     */
+    public function getItems() : array
+    {
+        return $this->items;
+    }
+    /**
+     * 
+     *
+     * @param FrameworkSearchDocumentInterface[] $items
+     *
+     * @return self
+     */
+    public function setItems(array $items) : self
+    {
+        $this->items = $items;
         return $this;
     }
     /**
@@ -75,7 +75,7 @@ class FrameworkSearchSearchResultInterface
      *
      * @return FrameworkSearchSearchCriteriaInterface
      */
-    public function getSearchCriteria(): FrameworkSearchSearchCriteriaInterface
+    public function getSearchCriteria() : FrameworkSearchSearchCriteriaInterface
     {
         return $this->searchCriteria;
     }
@@ -86,7 +86,7 @@ class FrameworkSearchSearchResultInterface
      *
      * @return self
      */
-    public function setSearchCriteria(FrameworkSearchSearchCriteriaInterface $searchCriteria): self
+    public function setSearchCriteria(FrameworkSearchSearchCriteriaInterface $searchCriteria) : self
     {
         $this->searchCriteria = $searchCriteria;
         return $this;
@@ -96,7 +96,7 @@ class FrameworkSearchSearchResultInterface
      *
      * @return int
      */
-    public function getTotalCount(): int
+    public function getTotalCount() : int
     {
         return $this->totalCount;
     }
@@ -107,7 +107,7 @@ class FrameworkSearchSearchResultInterface
      *
      * @return self
      */
-    public function setTotalCount(int $totalCount): self
+    public function setTotalCount(int $totalCount) : self
     {
         $this->totalCount = $totalCount;
         return $this;

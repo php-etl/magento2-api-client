@@ -5,29 +5,11 @@ namespace Kiboko\Magento\V2\Model;
 class CatalogDataProductAttributeMediaGalleryEntryInterface
 {
     /**
-     * Gallery entry ID
+     * Image Content data interface
      *
-     * @var int
+     * @var FrameworkDataImageContentInterface
      */
-    protected $id;
-    /**
-     * Media type
-     *
-     * @var string
-     */
-    protected $mediaType;
-    /**
-     * Gallery entry alternative text
-     *
-     * @var string
-     */
-    protected $label;
-    /**
-     * Gallery entry position (sort order)
-     *
-     * @var int
-     */
-    protected $position;
+    protected $content;
     /**
      * If gallery entry is hidden from product page
      *
@@ -35,11 +17,11 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      */
     protected $disabled;
     /**
-     * Gallery entry image types (thumbnail, image, small_image etc)
+     * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductAttributeMediaGalleryEntryInterface
      *
-     * @var string[]
+     * @var CatalogDataProductAttributeMediaGalleryEntryExtensionInterface
      */
-    protected $types;
+    protected $extensionAttributes;
     /**
      * File path
      *
@@ -47,170 +29,41 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      */
     protected $file;
     /**
-     * Image Content data interface
-     *
-     * @var FrameworkDataImageContentInterface
-     */
-    protected $content;
-    /**
-     * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductAttributeMediaGalleryEntryInterface
-     *
-     * @var CatalogDataProductAttributeMediaGalleryEntryExtensionInterface
-     */
-    protected $extensionAttributes;
-    /**
      * Gallery entry ID
      *
-     * @return int
+     * @var int
      */
-    public function getId(): int
-    {
-        return $this->id;
-    }
-    /**
-     * Gallery entry ID
-     *
-     * @param int $id
-     *
-     * @return self
-     */
-    public function setId(int $id): self
-    {
-        $this->id = $id;
-        return $this;
-    }
-    /**
-     * Media type
-     *
-     * @return string
-     */
-    public function getMediaType(): string
-    {
-        return $this->mediaType;
-    }
-    /**
-     * Media type
-     *
-     * @param string $mediaType
-     *
-     * @return self
-     */
-    public function setMediaType(string $mediaType): self
-    {
-        $this->mediaType = $mediaType;
-        return $this;
-    }
+    protected $id;
     /**
      * Gallery entry alternative text
      *
-     * @return string
+     * @var string
      */
-    public function getLabel(): string
-    {
-        return $this->label;
-    }
+    protected $label;
     /**
-     * Gallery entry alternative text
+     * Media type
      *
-     * @param string $label
-     *
-     * @return self
+     * @var string
      */
-    public function setLabel(string $label): self
-    {
-        $this->label = $label;
-        return $this;
-    }
+    protected $mediaType;
     /**
      * Gallery entry position (sort order)
      *
-     * @return int
+     * @var int
      */
-    public function getPosition(): int
-    {
-        return $this->position;
-    }
-    /**
-     * Gallery entry position (sort order)
-     *
-     * @param int $position
-     *
-     * @return self
-     */
-    public function setPosition(int $position): self
-    {
-        $this->position = $position;
-        return $this;
-    }
-    /**
-     * If gallery entry is hidden from product page
-     *
-     * @return bool
-     */
-    public function getDisabled(): bool
-    {
-        return $this->disabled;
-    }
-    /**
-     * If gallery entry is hidden from product page
-     *
-     * @param bool $disabled
-     *
-     * @return self
-     */
-    public function setDisabled(bool $disabled): self
-    {
-        $this->disabled = $disabled;
-        return $this;
-    }
+    protected $position;
     /**
      * Gallery entry image types (thumbnail, image, small_image etc)
      *
-     * @return string[]
+     * @var string[]
      */
-    public function getTypes(): array
-    {
-        return $this->types;
-    }
-    /**
-     * Gallery entry image types (thumbnail, image, small_image etc)
-     *
-     * @param string[] $types
-     *
-     * @return self
-     */
-    public function setTypes(array $types): self
-    {
-        $this->types = $types;
-        return $this;
-    }
-    /**
-     * File path
-     *
-     * @return string
-     */
-    public function getFile(): string
-    {
-        return $this->file;
-    }
-    /**
-     * File path
-     *
-     * @param string $file
-     *
-     * @return self
-     */
-    public function setFile(string $file): self
-    {
-        $this->file = $file;
-        return $this;
-    }
+    protected $types;
     /**
      * Image Content data interface
      *
      * @return FrameworkDataImageContentInterface
      */
-    public function getContent(): FrameworkDataImageContentInterface
+    public function getContent() : FrameworkDataImageContentInterface
     {
         return $this->content;
     }
@@ -221,9 +74,30 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return self
      */
-    public function setContent(FrameworkDataImageContentInterface $content): self
+    public function setContent(FrameworkDataImageContentInterface $content) : self
     {
         $this->content = $content;
+        return $this;
+    }
+    /**
+     * If gallery entry is hidden from product page
+     *
+     * @return bool
+     */
+    public function getDisabled() : bool
+    {
+        return $this->disabled;
+    }
+    /**
+     * If gallery entry is hidden from product page
+     *
+     * @param bool $disabled
+     *
+     * @return self
+     */
+    public function setDisabled(bool $disabled) : self
+    {
+        $this->disabled = $disabled;
         return $this;
     }
     /**
@@ -231,7 +105,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return CatalogDataProductAttributeMediaGalleryEntryExtensionInterface
      */
-    public function getExtensionAttributes(): CatalogDataProductAttributeMediaGalleryEntryExtensionInterface
+    public function getExtensionAttributes() : CatalogDataProductAttributeMediaGalleryEntryExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -242,9 +116,135 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(CatalogDataProductAttributeMediaGalleryEntryExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(CatalogDataProductAttributeMediaGalleryEntryExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * File path
+     *
+     * @return string
+     */
+    public function getFile() : string
+    {
+        return $this->file;
+    }
+    /**
+     * File path
+     *
+     * @param string $file
+     *
+     * @return self
+     */
+    public function setFile(string $file) : self
+    {
+        $this->file = $file;
+        return $this;
+    }
+    /**
+     * Gallery entry ID
+     *
+     * @return int
+     */
+    public function getId() : int
+    {
+        return $this->id;
+    }
+    /**
+     * Gallery entry ID
+     *
+     * @param int $id
+     *
+     * @return self
+     */
+    public function setId(int $id) : self
+    {
+        $this->id = $id;
+        return $this;
+    }
+    /**
+     * Gallery entry alternative text
+     *
+     * @return string
+     */
+    public function getLabel() : string
+    {
+        return $this->label;
+    }
+    /**
+     * Gallery entry alternative text
+     *
+     * @param string $label
+     *
+     * @return self
+     */
+    public function setLabel(string $label) : self
+    {
+        $this->label = $label;
+        return $this;
+    }
+    /**
+     * Media type
+     *
+     * @return string
+     */
+    public function getMediaType() : string
+    {
+        return $this->mediaType;
+    }
+    /**
+     * Media type
+     *
+     * @param string $mediaType
+     *
+     * @return self
+     */
+    public function setMediaType(string $mediaType) : self
+    {
+        $this->mediaType = $mediaType;
+        return $this;
+    }
+    /**
+     * Gallery entry position (sort order)
+     *
+     * @return int
+     */
+    public function getPosition() : int
+    {
+        return $this->position;
+    }
+    /**
+     * Gallery entry position (sort order)
+     *
+     * @param int $position
+     *
+     * @return self
+     */
+    public function setPosition(int $position) : self
+    {
+        $this->position = $position;
+        return $this;
+    }
+    /**
+     * Gallery entry image types (thumbnail, image, small_image etc)
+     *
+     * @return string[]
+     */
+    public function getTypes() : array
+    {
+        return $this->types;
+    }
+    /**
+     * Gallery entry image types (thumbnail, image, small_image etc)
+     *
+     * @param string[] $types
+     *
+     * @return self
+     */
+    public function setTypes(array $types) : self
+    {
+        $this->types = $types;
         return $this;
     }
 }

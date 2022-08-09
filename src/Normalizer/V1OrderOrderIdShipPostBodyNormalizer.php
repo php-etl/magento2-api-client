@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1OrderOrderIdShipPostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\V1OrderOrderIdShipPostBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\V1OrderOrderIdShipPostBody';
     }
@@ -40,6 +39,15 @@ class V1OrderOrderIdShipPostBodyNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('appendComment', $data)) {
+            $object->setAppendComment($data['appendComment']);
+        }
+        if (\array_key_exists('arguments', $data)) {
+            $object->setArguments($this->denormalizer->denormalize($data['arguments'], 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentCreationArgumentsInterface', 'json', $context));
+        }
+        if (\array_key_exists('comment', $data)) {
+            $object->setComment($this->denormalizer->denormalize($data['comment'], 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentCommentCreationInterface', 'json', $context));
+        }
         if (\array_key_exists('items', $data)) {
             $values = array();
             foreach ($data['items'] as $value) {
@@ -50,28 +58,19 @@ class V1OrderOrderIdShipPostBodyNormalizer implements DenormalizerInterface, Nor
         if (\array_key_exists('notify', $data)) {
             $object->setNotify($data['notify']);
         }
-        if (\array_key_exists('appendComment', $data)) {
-            $object->setAppendComment($data['appendComment']);
-        }
-        if (\array_key_exists('comment', $data)) {
-            $object->setComment($this->denormalizer->denormalize($data['comment'], 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentCommentCreationInterface', 'json', $context));
+        if (\array_key_exists('packages', $data)) {
+            $values_1 = array();
+            foreach ($data['packages'] as $value_1) {
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentPackageCreationInterface', 'json', $context);
+            }
+            $object->setPackages($values_1);
         }
         if (\array_key_exists('tracks', $data)) {
-            $values_1 = array();
-            foreach ($data['tracks'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentTrackCreationInterface', 'json', $context);
-            }
-            $object->setTracks($values_1);
-        }
-        if (\array_key_exists('packages', $data)) {
             $values_2 = array();
-            foreach ($data['packages'] as $value_2) {
-                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentPackageCreationInterface', 'json', $context);
+            foreach ($data['tracks'] as $value_2) {
+                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentTrackCreationInterface', 'json', $context);
             }
-            $object->setPackages($values_2);
-        }
-        if (\array_key_exists('arguments', $data)) {
-            $object->setArguments($this->denormalizer->denormalize($data['arguments'], 'Kiboko\\Magento\\V2\\Model\\SalesDataShipmentCreationArgumentsInterface', 'json', $context));
+            $object->setTracks($values_2);
         }
         return $object;
     }
@@ -81,6 +80,15 @@ class V1OrderOrderIdShipPostBodyNormalizer implements DenormalizerInterface, Nor
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
+        if (null !== $object->getAppendComment()) {
+            $data['appendComment'] = $object->getAppendComment();
+        }
+        if (null !== $object->getArguments()) {
+            $data['arguments'] = $this->normalizer->normalize($object->getArguments(), 'json', $context);
+        }
+        if (null !== $object->getComment()) {
+            $data['comment'] = $this->normalizer->normalize($object->getComment(), 'json', $context);
+        }
         if (null !== $object->getItems()) {
             $values = array();
             foreach ($object->getItems() as $value) {
@@ -91,28 +99,19 @@ class V1OrderOrderIdShipPostBodyNormalizer implements DenormalizerInterface, Nor
         if (null !== $object->getNotify()) {
             $data['notify'] = $object->getNotify();
         }
-        if (null !== $object->getAppendComment()) {
-            $data['appendComment'] = $object->getAppendComment();
-        }
-        if (null !== $object->getComment()) {
-            $data['comment'] = $this->normalizer->normalize($object->getComment(), 'json', $context);
-        }
-        if (null !== $object->getTracks()) {
+        if (null !== $object->getPackages()) {
             $values_1 = array();
-            foreach ($object->getTracks() as $value_1) {
+            foreach ($object->getPackages() as $value_1) {
                 $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
             }
-            $data['tracks'] = $values_1;
+            $data['packages'] = $values_1;
         }
-        if (null !== $object->getPackages()) {
+        if (null !== $object->getTracks()) {
             $values_2 = array();
-            foreach ($object->getPackages() as $value_2) {
+            foreach ($object->getTracks() as $value_2) {
                 $values_2[] = $this->normalizer->normalize($value_2, 'json', $context);
             }
-            $data['packages'] = $values_2;
-        }
-        if (null !== $object->getArguments()) {
-            $data['arguments'] = $this->normalizer->normalize($object->getArguments(), 'json', $context);
+            $data['tracks'] = $values_2;
         }
         return $data;
     }

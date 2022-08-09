@@ -5,54 +5,6 @@ namespace Kiboko\Magento\V2\Model;
 class BundleDataLinkInterface
 {
     /**
-     * The identifier
-     *
-     * @var string
-     */
-    protected $id;
-    /**
-     * Linked product sku
-     *
-     * @var string
-     */
-    protected $sku;
-    /**
-     * Option id
-     *
-     * @var int
-     */
-    protected $optionId;
-    /**
-     * Qty
-     *
-     * @var float
-     */
-    protected $qty;
-    /**
-     * Position
-     *
-     * @var int
-     */
-    protected $position;
-    /**
-     * Is default
-     *
-     * @var bool
-     */
-    protected $isDefault;
-    /**
-     * Price
-     *
-     * @var float
-     */
-    protected $price;
-    /**
-     * Price type
-     *
-     * @var int
-     */
-    protected $priceType;
-    /**
      * Whether quantity could be changed
      *
      * @var int
@@ -67,177 +19,57 @@ class BundleDataLinkInterface
     /**
      * The identifier
      *
-     * @return string
+     * @var string
      */
-    public function getId(): string
-    {
-        return $this->id;
-    }
-    /**
-     * The identifier
-     *
-     * @param string $id
-     *
-     * @return self
-     */
-    public function setId(string $id): self
-    {
-        $this->id = $id;
-        return $this;
-    }
-    /**
-     * Linked product sku
-     *
-     * @return string
-     */
-    public function getSku(): string
-    {
-        return $this->sku;
-    }
-    /**
-     * Linked product sku
-     *
-     * @param string $sku
-     *
-     * @return self
-     */
-    public function setSku(string $sku): self
-    {
-        $this->sku = $sku;
-        return $this;
-    }
-    /**
-     * Option id
-     *
-     * @return int
-     */
-    public function getOptionId(): int
-    {
-        return $this->optionId;
-    }
-    /**
-     * Option id
-     *
-     * @param int $optionId
-     *
-     * @return self
-     */
-    public function setOptionId(int $optionId): self
-    {
-        $this->optionId = $optionId;
-        return $this;
-    }
-    /**
-     * Qty
-     *
-     * @return float
-     */
-    public function getQty(): float
-    {
-        return $this->qty;
-    }
-    /**
-     * Qty
-     *
-     * @param float $qty
-     *
-     * @return self
-     */
-    public function setQty(float $qty): self
-    {
-        $this->qty = $qty;
-        return $this;
-    }
-    /**
-     * Position
-     *
-     * @return int
-     */
-    public function getPosition(): int
-    {
-        return $this->position;
-    }
-    /**
-     * Position
-     *
-     * @param int $position
-     *
-     * @return self
-     */
-    public function setPosition(int $position): self
-    {
-        $this->position = $position;
-        return $this;
-    }
+    protected $id;
     /**
      * Is default
      *
-     * @return bool
+     * @var bool
      */
-    public function getIsDefault(): bool
-    {
-        return $this->isDefault;
-    }
+    protected $isDefault;
     /**
-     * Is default
+     * Option id
      *
-     * @param bool $isDefault
-     *
-     * @return self
+     * @var int
      */
-    public function setIsDefault(bool $isDefault): self
-    {
-        $this->isDefault = $isDefault;
-        return $this;
-    }
+    protected $optionId;
+    /**
+     * Position
+     *
+     * @var int
+     */
+    protected $position;
     /**
      * Price
      *
-     * @return float
+     * @var float
      */
-    public function getPrice(): float
-    {
-        return $this->price;
-    }
-    /**
-     * Price
-     *
-     * @param float $price
-     *
-     * @return self
-     */
-    public function setPrice(float $price): self
-    {
-        $this->price = $price;
-        return $this;
-    }
+    protected $price;
     /**
      * Price type
      *
-     * @return int
+     * @var int
      */
-    public function getPriceType(): int
-    {
-        return $this->priceType;
-    }
+    protected $priceType;
     /**
-     * Price type
+     * Qty
      *
-     * @param int $priceType
-     *
-     * @return self
+     * @var float
      */
-    public function setPriceType(int $priceType): self
-    {
-        $this->priceType = $priceType;
-        return $this;
-    }
+    protected $qty;
+    /**
+     * Linked product sku
+     *
+     * @var string
+     */
+    protected $sku;
     /**
      * Whether quantity could be changed
      *
      * @return int
      */
-    public function getCanChangeQuantity(): int
+    public function getCanChangeQuantity() : int
     {
         return $this->canChangeQuantity;
     }
@@ -248,7 +80,7 @@ class BundleDataLinkInterface
      *
      * @return self
      */
-    public function setCanChangeQuantity(int $canChangeQuantity): self
+    public function setCanChangeQuantity(int $canChangeQuantity) : self
     {
         $this->canChangeQuantity = $canChangeQuantity;
         return $this;
@@ -269,9 +101,177 @@ class BundleDataLinkInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * The identifier
+     *
+     * @return string
+     */
+    public function getId() : string
+    {
+        return $this->id;
+    }
+    /**
+     * The identifier
+     *
+     * @param string $id
+     *
+     * @return self
+     */
+    public function setId(string $id) : self
+    {
+        $this->id = $id;
+        return $this;
+    }
+    /**
+     * Is default
+     *
+     * @return bool
+     */
+    public function getIsDefault() : bool
+    {
+        return $this->isDefault;
+    }
+    /**
+     * Is default
+     *
+     * @param bool $isDefault
+     *
+     * @return self
+     */
+    public function setIsDefault(bool $isDefault) : self
+    {
+        $this->isDefault = $isDefault;
+        return $this;
+    }
+    /**
+     * Option id
+     *
+     * @return int
+     */
+    public function getOptionId() : int
+    {
+        return $this->optionId;
+    }
+    /**
+     * Option id
+     *
+     * @param int $optionId
+     *
+     * @return self
+     */
+    public function setOptionId(int $optionId) : self
+    {
+        $this->optionId = $optionId;
+        return $this;
+    }
+    /**
+     * Position
+     *
+     * @return int
+     */
+    public function getPosition() : int
+    {
+        return $this->position;
+    }
+    /**
+     * Position
+     *
+     * @param int $position
+     *
+     * @return self
+     */
+    public function setPosition(int $position) : self
+    {
+        $this->position = $position;
+        return $this;
+    }
+    /**
+     * Price
+     *
+     * @return float
+     */
+    public function getPrice() : float
+    {
+        return $this->price;
+    }
+    /**
+     * Price
+     *
+     * @param float $price
+     *
+     * @return self
+     */
+    public function setPrice(float $price) : self
+    {
+        $this->price = $price;
+        return $this;
+    }
+    /**
+     * Price type
+     *
+     * @return int
+     */
+    public function getPriceType() : int
+    {
+        return $this->priceType;
+    }
+    /**
+     * Price type
+     *
+     * @param int $priceType
+     *
+     * @return self
+     */
+    public function setPriceType(int $priceType) : self
+    {
+        $this->priceType = $priceType;
+        return $this;
+    }
+    /**
+     * Qty
+     *
+     * @return float
+     */
+    public function getQty() : float
+    {
+        return $this->qty;
+    }
+    /**
+     * Qty
+     *
+     * @param float $qty
+     *
+     * @return self
+     */
+    public function setQty(float $qty) : self
+    {
+        $this->qty = $qty;
+        return $this;
+    }
+    /**
+     * Linked product sku
+     *
+     * @return string
+     */
+    public function getSku() : string
+    {
+        return $this->sku;
+    }
+    /**
+     * Linked product sku
+     *
+     * @param string $sku
+     *
+     * @return self
+     */
+    public function setSku(string $sku) : self
+    {
+        $this->sku = $sku;
         return $this;
     }
 }

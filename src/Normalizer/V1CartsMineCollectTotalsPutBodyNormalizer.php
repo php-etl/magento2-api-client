@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1CartsMineCollectTotalsPutBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\V1CartsMineCollectTotalsPutBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\V1CartsMineCollectTotalsPutBody';
     }
@@ -40,6 +39,9 @@ class V1CartsMineCollectTotalsPutBodyNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('additionalData', $data)) {
+            $object->setAdditionalData($this->denormalizer->denormalize($data['additionalData'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalsAdditionalDataInterface', 'json', $context));
+        }
         if (\array_key_exists('paymentMethod', $data)) {
             $object->setPaymentMethod($this->denormalizer->denormalize($data['paymentMethod'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataPaymentInterface', 'json', $context));
         }
@@ -49,9 +51,6 @@ class V1CartsMineCollectTotalsPutBodyNormalizer implements DenormalizerInterface
         if (\array_key_exists('shippingMethodCode', $data)) {
             $object->setShippingMethodCode($data['shippingMethodCode']);
         }
-        if (\array_key_exists('additionalData', $data)) {
-            $object->setAdditionalData($this->denormalizer->denormalize($data['additionalData'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalsAdditionalDataInterface', 'json', $context));
-        }
         return $object;
     }
     /**
@@ -60,15 +59,15 @@ class V1CartsMineCollectTotalsPutBodyNormalizer implements DenormalizerInterface
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
+        if (null !== $object->getAdditionalData()) {
+            $data['additionalData'] = $this->normalizer->normalize($object->getAdditionalData(), 'json', $context);
+        }
         $data['paymentMethod'] = $this->normalizer->normalize($object->getPaymentMethod(), 'json', $context);
         if (null !== $object->getShippingCarrierCode()) {
             $data['shippingCarrierCode'] = $object->getShippingCarrierCode();
         }
         if (null !== $object->getShippingMethodCode()) {
             $data['shippingMethodCode'] = $object->getShippingMethodCode();
-        }
-        if (null !== $object->getAdditionalData()) {
-            $data['additionalData'] = $this->normalizer->normalize($object->getAdditionalData(), 'json', $context);
         }
         return $data;
     }

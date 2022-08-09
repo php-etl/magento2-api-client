@@ -15,7 +15,7 @@ class V1CartsMineGiftCardsPostBody
      *
      * @return GiftCardAccountDataGiftCardAccountInterface
      */
-    public function getGiftCardAccountData(): GiftCardAccountDataGiftCardAccountInterface
+    public function getGiftCardAccountData() : GiftCardAccountDataGiftCardAccountInterface
     {
         return $this->giftCardAccountData;
     }
@@ -26,7 +26,7 @@ class V1CartsMineGiftCardsPostBody
      *
      * @return self
      */
-    public function setGiftCardAccountData(GiftCardAccountDataGiftCardAccountInterface $giftCardAccountData): self
+    public function setGiftCardAccountData(GiftCardAccountDataGiftCardAccountInterface $giftCardAccountData) : self
     {
         $this->giftCardAccountData = $giftCardAccountData;
         return $this;

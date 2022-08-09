@@ -5,7 +5,7 @@ namespace Kiboko\Magento\V2\Model;
 class CatalogDataProductWebsiteLinkInterface
 {
     /**
-     *
+     * 
      *
      * @var string
      */
@@ -17,22 +17,22 @@ class CatalogDataProductWebsiteLinkInterface
      */
     protected $websiteId;
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
     /**
-     *
+     * 
      *
      * @param string $sku
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -42,7 +42,7 @@ class CatalogDataProductWebsiteLinkInterface
      *
      * @return int
      */
-    public function getWebsiteId(): int
+    public function getWebsiteId() : int
     {
         return $this->websiteId;
     }
@@ -53,7 +53,7 @@ class CatalogDataProductWebsiteLinkInterface
      *
      * @return self
      */
-    public function setWebsiteId(int $websiteId): self
+    public function setWebsiteId(int $websiteId) : self
     {
         $this->websiteId = $websiteId;
         return $this;

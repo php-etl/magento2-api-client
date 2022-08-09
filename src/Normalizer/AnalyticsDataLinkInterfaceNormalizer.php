@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class AnalyticsDataLinkInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\AnalyticsDataLinkInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\AnalyticsDataLinkInterface';
     }
@@ -40,11 +39,11 @@ class AnalyticsDataLinkInterfaceNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('url', $data)) {
-            $object->setUrl($data['url']);
-        }
         if (\array_key_exists('initialization_vector', $data)) {
             $object->setInitializationVector($data['initialization_vector']);
+        }
+        if (\array_key_exists('url', $data)) {
+            $object->setUrl($data['url']);
         }
         return $object;
     }
@@ -54,8 +53,8 @@ class AnalyticsDataLinkInterfaceNormalizer implements DenormalizerInterface, Nor
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['url'] = $object->getUrl();
         $data['initialization_vector'] = $object->getInitializationVector();
+        $data['url'] = $object->getUrl();
         return $data;
     }
 }

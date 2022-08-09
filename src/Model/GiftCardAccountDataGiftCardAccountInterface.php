@@ -5,29 +5,11 @@ namespace Kiboko\Magento\V2\Model;
 class GiftCardAccountDataGiftCardAccountInterface
 {
     /**
-     * Cards codes
-     *
-     * @var string[]
-     */
-    protected $giftCards;
-    /**
-     * Cards amount in quote currency
-     *
-     * @var float
-     */
-    protected $giftCardsAmount;
-    /**
      * Cards amount in base currency
      *
      * @var float
      */
     protected $baseGiftCardsAmount;
-    /**
-     * Cards amount used in quote currency
-     *
-     * @var float
-     */
-    protected $giftCardsAmountUsed;
     /**
      * Cards amount used in base currency
      *
@@ -43,51 +25,27 @@ class GiftCardAccountDataGiftCardAccountInterface
     /**
      * Cards codes
      *
-     * @return string[]
+     * @var string[]
      */
-    public function getGiftCards(): array
-    {
-        return $this->giftCards;
-    }
-    /**
-     * Cards codes
-     *
-     * @param string[] $giftCards
-     *
-     * @return self
-     */
-    public function setGiftCards(array $giftCards): self
-    {
-        $this->giftCards = $giftCards;
-        return $this;
-    }
+    protected $giftCards;
     /**
      * Cards amount in quote currency
      *
-     * @return float
+     * @var float
      */
-    public function getGiftCardsAmount(): float
-    {
-        return $this->giftCardsAmount;
-    }
+    protected $giftCardsAmount;
     /**
-     * Cards amount in quote currency
+     * Cards amount used in quote currency
      *
-     * @param float $giftCardsAmount
-     *
-     * @return self
+     * @var float
      */
-    public function setGiftCardsAmount(float $giftCardsAmount): self
-    {
-        $this->giftCardsAmount = $giftCardsAmount;
-        return $this;
-    }
+    protected $giftCardsAmountUsed;
     /**
      * Cards amount in base currency
      *
      * @return float
      */
-    public function getBaseGiftCardsAmount(): float
+    public function getBaseGiftCardsAmount() : float
     {
         return $this->baseGiftCardsAmount;
     }
@@ -98,30 +56,9 @@ class GiftCardAccountDataGiftCardAccountInterface
      *
      * @return self
      */
-    public function setBaseGiftCardsAmount(float $baseGiftCardsAmount): self
+    public function setBaseGiftCardsAmount(float $baseGiftCardsAmount) : self
     {
         $this->baseGiftCardsAmount = $baseGiftCardsAmount;
-        return $this;
-    }
-    /**
-     * Cards amount used in quote currency
-     *
-     * @return float
-     */
-    public function getGiftCardsAmountUsed(): float
-    {
-        return $this->giftCardsAmountUsed;
-    }
-    /**
-     * Cards amount used in quote currency
-     *
-     * @param float $giftCardsAmountUsed
-     *
-     * @return self
-     */
-    public function setGiftCardsAmountUsed(float $giftCardsAmountUsed): self
-    {
-        $this->giftCardsAmountUsed = $giftCardsAmountUsed;
         return $this;
     }
     /**
@@ -129,7 +66,7 @@ class GiftCardAccountDataGiftCardAccountInterface
      *
      * @return float
      */
-    public function getBaseGiftCardsAmountUsed(): float
+    public function getBaseGiftCardsAmountUsed() : float
     {
         return $this->baseGiftCardsAmountUsed;
     }
@@ -140,7 +77,7 @@ class GiftCardAccountDataGiftCardAccountInterface
      *
      * @return self
      */
-    public function setBaseGiftCardsAmountUsed(float $baseGiftCardsAmountUsed): self
+    public function setBaseGiftCardsAmountUsed(float $baseGiftCardsAmountUsed) : self
     {
         $this->baseGiftCardsAmountUsed = $baseGiftCardsAmountUsed;
         return $this;
@@ -161,9 +98,72 @@ class GiftCardAccountDataGiftCardAccountInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Cards codes
+     *
+     * @return string[]
+     */
+    public function getGiftCards() : array
+    {
+        return $this->giftCards;
+    }
+    /**
+     * Cards codes
+     *
+     * @param string[] $giftCards
+     *
+     * @return self
+     */
+    public function setGiftCards(array $giftCards) : self
+    {
+        $this->giftCards = $giftCards;
+        return $this;
+    }
+    /**
+     * Cards amount in quote currency
+     *
+     * @return float
+     */
+    public function getGiftCardsAmount() : float
+    {
+        return $this->giftCardsAmount;
+    }
+    /**
+     * Cards amount in quote currency
+     *
+     * @param float $giftCardsAmount
+     *
+     * @return self
+     */
+    public function setGiftCardsAmount(float $giftCardsAmount) : self
+    {
+        $this->giftCardsAmount = $giftCardsAmount;
+        return $this;
+    }
+    /**
+     * Cards amount used in quote currency
+     *
+     * @return float
+     */
+    public function getGiftCardsAmountUsed() : float
+    {
+        return $this->giftCardsAmountUsed;
+    }
+    /**
+     * Cards amount used in quote currency
+     *
+     * @param float $giftCardsAmountUsed
+     *
+     * @return self
+     */
+    public function setGiftCardsAmountUsed(float $giftCardsAmountUsed) : self
+    {
+        $this->giftCardsAmountUsed = $giftCardsAmountUsed;
         return $this;
     }
 }

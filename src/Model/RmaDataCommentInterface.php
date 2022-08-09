@@ -5,17 +5,17 @@ namespace Kiboko\Magento\V2\Model;
 class RmaDataCommentInterface
 {
     /**
+     * Is_admin
+     *
+     * @var bool
+     */
+    protected $admin;
+    /**
      * Comment
      *
      * @var string
      */
     protected $comment;
-    /**
-     * Rma Id
-     *
-     * @var int
-     */
-    protected $rmaEntityId;
     /**
      * Created_at
      *
@@ -23,11 +23,11 @@ class RmaDataCommentInterface
      */
     protected $createdAt;
     /**
-     * Entity_id
+     * Custom attributes values.
      *
-     * @var int
+     * @var FrameworkAttributeInterface[]
      */
-    protected $entityId;
+    protected $customAttributes;
     /**
      * Is_customer_notified
      *
@@ -35,23 +35,11 @@ class RmaDataCommentInterface
      */
     protected $customerNotified;
     /**
-     * Is_visible_on_front
+     * Entity_id
      *
-     * @var bool
+     * @var int
      */
-    protected $visibleOnFront;
-    /**
-     * Status
-     *
-     * @var string
-     */
-    protected $status;
-    /**
-     * Is_admin
-     *
-     * @var bool
-     */
-    protected $admin;
+    protected $entityId;
     /**
      * ExtensionInterface class for @see \Magento\Rma\Api\Data\CommentInterface
      *
@@ -59,164 +47,29 @@ class RmaDataCommentInterface
      */
     protected $extensionAttributes;
     /**
-     * Custom attributes values.
-     *
-     * @var FrameworkAttributeInterface[]
-     */
-    protected $customAttributes;
-    /**
-     * Comment
-     *
-     * @return string
-     */
-    public function getComment(): string
-    {
-        return $this->comment;
-    }
-    /**
-     * Comment
-     *
-     * @param string $comment
-     *
-     * @return self
-     */
-    public function setComment(string $comment): self
-    {
-        $this->comment = $comment;
-        return $this;
-    }
-    /**
      * Rma Id
      *
-     * @return int
+     * @var int
      */
-    public function getRmaEntityId(): int
-    {
-        return $this->rmaEntityId;
-    }
-    /**
-     * Rma Id
-     *
-     * @param int $rmaEntityId
-     *
-     * @return self
-     */
-    public function setRmaEntityId(int $rmaEntityId): self
-    {
-        $this->rmaEntityId = $rmaEntityId;
-        return $this;
-    }
-    /**
-     * Created_at
-     *
-     * @return string
-     */
-    public function getCreatedAt(): string
-    {
-        return $this->createdAt;
-    }
-    /**
-     * Created_at
-     *
-     * @param string $createdAt
-     *
-     * @return self
-     */
-    public function setCreatedAt(string $createdAt): self
-    {
-        $this->createdAt = $createdAt;
-        return $this;
-    }
-    /**
-     * Entity_id
-     *
-     * @return int
-     */
-    public function getEntityId(): int
-    {
-        return $this->entityId;
-    }
-    /**
-     * Entity_id
-     *
-     * @param int $entityId
-     *
-     * @return self
-     */
-    public function setEntityId(int $entityId): self
-    {
-        $this->entityId = $entityId;
-        return $this;
-    }
-    /**
-     * Is_customer_notified
-     *
-     * @return bool
-     */
-    public function getCustomerNotified(): bool
-    {
-        return $this->customerNotified;
-    }
-    /**
-     * Is_customer_notified
-     *
-     * @param bool $customerNotified
-     *
-     * @return self
-     */
-    public function setCustomerNotified(bool $customerNotified): self
-    {
-        $this->customerNotified = $customerNotified;
-        return $this;
-    }
-    /**
-     * Is_visible_on_front
-     *
-     * @return bool
-     */
-    public function getVisibleOnFront(): bool
-    {
-        return $this->visibleOnFront;
-    }
-    /**
-     * Is_visible_on_front
-     *
-     * @param bool $visibleOnFront
-     *
-     * @return self
-     */
-    public function setVisibleOnFront(bool $visibleOnFront): self
-    {
-        $this->visibleOnFront = $visibleOnFront;
-        return $this;
-    }
+    protected $rmaEntityId;
     /**
      * Status
      *
-     * @return string
+     * @var string
      */
-    public function getStatus(): string
-    {
-        return $this->status;
-    }
+    protected $status;
     /**
-     * Status
+     * Is_visible_on_front
      *
-     * @param string $status
-     *
-     * @return self
+     * @var bool
      */
-    public function setStatus(string $status): self
-    {
-        $this->status = $status;
-        return $this;
-    }
+    protected $visibleOnFront;
     /**
      * Is_admin
      *
      * @return bool
      */
-    public function getAdmin(): bool
+    public function getAdmin() : bool
     {
         return $this->admin;
     }
@@ -227,9 +80,114 @@ class RmaDataCommentInterface
      *
      * @return self
      */
-    public function setAdmin(bool $admin): self
+    public function setAdmin(bool $admin) : self
     {
         $this->admin = $admin;
+        return $this;
+    }
+    /**
+     * Comment
+     *
+     * @return string
+     */
+    public function getComment() : string
+    {
+        return $this->comment;
+    }
+    /**
+     * Comment
+     *
+     * @param string $comment
+     *
+     * @return self
+     */
+    public function setComment(string $comment) : self
+    {
+        $this->comment = $comment;
+        return $this;
+    }
+    /**
+     * Created_at
+     *
+     * @return string
+     */
+    public function getCreatedAt() : string
+    {
+        return $this->createdAt;
+    }
+    /**
+     * Created_at
+     *
+     * @param string $createdAt
+     *
+     * @return self
+     */
+    public function setCreatedAt(string $createdAt) : self
+    {
+        $this->createdAt = $createdAt;
+        return $this;
+    }
+    /**
+     * Custom attributes values.
+     *
+     * @return FrameworkAttributeInterface[]
+     */
+    public function getCustomAttributes() : array
+    {
+        return $this->customAttributes;
+    }
+    /**
+     * Custom attributes values.
+     *
+     * @param FrameworkAttributeInterface[] $customAttributes
+     *
+     * @return self
+     */
+    public function setCustomAttributes(array $customAttributes) : self
+    {
+        $this->customAttributes = $customAttributes;
+        return $this;
+    }
+    /**
+     * Is_customer_notified
+     *
+     * @return bool
+     */
+    public function getCustomerNotified() : bool
+    {
+        return $this->customerNotified;
+    }
+    /**
+     * Is_customer_notified
+     *
+     * @param bool $customerNotified
+     *
+     * @return self
+     */
+    public function setCustomerNotified(bool $customerNotified) : self
+    {
+        $this->customerNotified = $customerNotified;
+        return $this;
+    }
+    /**
+     * Entity_id
+     *
+     * @return int
+     */
+    public function getEntityId() : int
+    {
+        return $this->entityId;
+    }
+    /**
+     * Entity_id
+     *
+     * @param int $entityId
+     *
+     * @return self
+     */
+    public function setEntityId(int $entityId) : self
+    {
+        $this->entityId = $entityId;
         return $this;
     }
     /**
@@ -248,30 +206,72 @@ class RmaDataCommentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
     }
     /**
-     * Custom attributes values.
+     * Rma Id
      *
-     * @return FrameworkAttributeInterface[]
+     * @return int
      */
-    public function getCustomAttributes(): array
+    public function getRmaEntityId() : int
     {
-        return $this->customAttributes;
+        return $this->rmaEntityId;
     }
     /**
-     * Custom attributes values.
+     * Rma Id
      *
-     * @param FrameworkAttributeInterface[] $customAttributes
+     * @param int $rmaEntityId
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setRmaEntityId(int $rmaEntityId) : self
     {
-        $this->customAttributes = $customAttributes;
+        $this->rmaEntityId = $rmaEntityId;
+        return $this;
+    }
+    /**
+     * Status
+     *
+     * @return string
+     */
+    public function getStatus() : string
+    {
+        return $this->status;
+    }
+    /**
+     * Status
+     *
+     * @param string $status
+     *
+     * @return self
+     */
+    public function setStatus(string $status) : self
+    {
+        $this->status = $status;
+        return $this;
+    }
+    /**
+     * Is_visible_on_front
+     *
+     * @return bool
+     */
+    public function getVisibleOnFront() : bool
+    {
+        return $this->visibleOnFront;
+    }
+    /**
+     * Is_visible_on_front
+     *
+     * @param bool $visibleOnFront
+     *
+     * @return self
+     */
+    public function setVisibleOnFront(bool $visibleOnFront) : self
+    {
+        $this->visibleOnFront = $visibleOnFront;
         return $this;
     }
 }

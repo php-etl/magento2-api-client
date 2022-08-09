@@ -15,7 +15,7 @@ class V1InvoicesCommentsPostBody
      *
      * @return SalesDataInvoiceCommentInterface
      */
-    public function getEntity(): SalesDataInvoiceCommentInterface
+    public function getEntity() : SalesDataInvoiceCommentInterface
     {
         return $this->entity;
     }
@@ -26,7 +26,7 @@ class V1InvoicesCommentsPostBody
      *
      * @return self
      */
-    public function setEntity(SalesDataInvoiceCommentInterface $entity): self
+    public function setEntity(SalesDataInvoiceCommentInterface $entity) : self
     {
         $this->entity = $entity;
         return $this;

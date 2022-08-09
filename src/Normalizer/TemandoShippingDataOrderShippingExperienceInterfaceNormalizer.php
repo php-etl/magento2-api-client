@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class TemandoShippingDataOrderShippingExperienceInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\TemandoShippingDataOrderShippingExperienceInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\TemandoShippingDataOrderShippingExperienceInterface';
     }
@@ -40,14 +39,14 @@ class TemandoShippingDataOrderShippingExperienceInterfaceNormalizer implements D
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('label', $data)) {
-            $object->setLabel($data['label']);
-        }
         if (\array_key_exists('code', $data)) {
             $object->setCode($data['code']);
         }
         if (\array_key_exists('cost', $data)) {
             $object->setCost($data['cost']);
+        }
+        if (\array_key_exists('label', $data)) {
+            $object->setLabel($data['label']);
         }
         return $object;
     }
@@ -57,9 +56,9 @@ class TemandoShippingDataOrderShippingExperienceInterfaceNormalizer implements D
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['label'] = $object->getLabel();
         $data['code'] = $object->getCode();
         $data['cost'] = $object->getCost();
+        $data['label'] = $object->getLabel();
         return $data;
     }
 }

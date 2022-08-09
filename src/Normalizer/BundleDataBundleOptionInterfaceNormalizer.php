@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class BundleDataBundleOptionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\BundleDataBundleOptionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\BundleDataBundleOptionInterface';
     }
@@ -40,6 +39,9 @@ class BundleDataBundleOptionInterfaceNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
+        }
         if (\array_key_exists('option_id', $data)) {
             $object->setOptionId($data['option_id']);
         }
@@ -53,9 +55,6 @@ class BundleDataBundleOptionInterfaceNormalizer implements DenormalizerInterface
             }
             $object->setOptionSelections($values);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
-        }
         return $object;
     }
     /**
@@ -64,6 +63,9 @@ class BundleDataBundleOptionInterfaceNormalizer implements DenormalizerInterface
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $object->getExtensionAttributes();
+        }
         $data['option_id'] = $object->getOptionId();
         $data['option_qty'] = $object->getOptionQty();
         $values = array();
@@ -71,9 +73,6 @@ class BundleDataBundleOptionInterfaceNormalizer implements DenormalizerInterface
             $values[] = $value;
         }
         $data['option_selections'] = $values;
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $object->getExtensionAttributes();
-        }
         return $data;
     }
 }

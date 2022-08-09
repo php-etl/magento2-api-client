@@ -15,7 +15,7 @@ class QuoteDataProductOptionInterface
      *
      * @return QuoteDataProductOptionExtensionInterface
      */
-    public function getExtensionAttributes(): QuoteDataProductOptionExtensionInterface
+    public function getExtensionAttributes() : QuoteDataProductOptionExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -26,7 +26,7 @@ class QuoteDataProductOptionInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(QuoteDataProductOptionExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(QuoteDataProductOptionExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

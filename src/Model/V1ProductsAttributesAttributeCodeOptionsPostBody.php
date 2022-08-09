@@ -15,7 +15,7 @@ class V1ProductsAttributesAttributeCodeOptionsPostBody
      *
      * @return EavDataAttributeOptionInterface
      */
-    public function getOption(): EavDataAttributeOptionInterface
+    public function getOption() : EavDataAttributeOptionInterface
     {
         return $this->option;
     }
@@ -26,7 +26,7 @@ class V1ProductsAttributesAttributeCodeOptionsPostBody
      *
      * @return self
      */
-    public function setOption(EavDataAttributeOptionInterface $option): self
+    public function setOption(EavDataAttributeOptionInterface $option) : self
     {
         $this->option = $option;
         return $this;

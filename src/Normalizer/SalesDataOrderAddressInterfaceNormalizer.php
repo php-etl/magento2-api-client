@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataOrderAddressInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderAddressInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderAddressInterface';
     }
@@ -63,6 +62,9 @@ class SalesDataOrderAddressInterfaceNormalizer implements DenormalizerInterface,
         }
         if (\array_key_exists('entity_id', $data)) {
             $object->setEntityId($data['entity_id']);
+        }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderAddressExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('fax', $data)) {
             $object->setFax($data['fax']);
@@ -122,9 +124,6 @@ class SalesDataOrderAddressInterfaceNormalizer implements DenormalizerInterface,
         if (\array_key_exists('vat_request_success', $data)) {
             $object->setVatRequestSuccess($data['vat_request_success']);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderAddressExtensionInterface', 'json', $context));
-        }
         return $object;
     }
     /**
@@ -150,6 +149,9 @@ class SalesDataOrderAddressInterfaceNormalizer implements DenormalizerInterface,
         }
         if (null !== $object->getEntityId()) {
             $data['entity_id'] = $object->getEntityId();
+        }
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
         if (null !== $object->getFax()) {
             $data['fax'] = $object->getFax();
@@ -200,9 +202,6 @@ class SalesDataOrderAddressInterfaceNormalizer implements DenormalizerInterface,
         }
         if (null !== $object->getVatRequestSuccess()) {
             $data['vat_request_success'] = $object->getVatRequestSuccess();
-        }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
         return $data;
     }

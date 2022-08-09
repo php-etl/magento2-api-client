@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesRuleDataConditionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesRuleDataConditionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesRuleDataConditionInterface';
     }
@@ -40,6 +39,12 @@ class SalesRuleDataConditionInterfaceNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('aggregator_type', $data)) {
+            $object->setAggregatorType($data['aggregator_type']);
+        }
+        if (\array_key_exists('attribute_name', $data)) {
+            $object->setAttributeName($data['attribute_name']);
+        }
         if (\array_key_exists('condition_type', $data)) {
             $object->setConditionType($data['condition_type']);
         }
@@ -50,20 +55,14 @@ class SalesRuleDataConditionInterfaceNormalizer implements DenormalizerInterface
             }
             $object->setConditions($values);
         }
-        if (\array_key_exists('aggregator_type', $data)) {
-            $object->setAggregatorType($data['aggregator_type']);
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
         }
         if (\array_key_exists('operator', $data)) {
             $object->setOperator($data['operator']);
         }
-        if (\array_key_exists('attribute_name', $data)) {
-            $object->setAttributeName($data['attribute_name']);
-        }
         if (\array_key_exists('value', $data)) {
             $object->setValue($data['value']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
         }
         return $object;
     }
@@ -73,6 +72,12 @@ class SalesRuleDataConditionInterfaceNormalizer implements DenormalizerInterface
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
+        if (null !== $object->getAggregatorType()) {
+            $data['aggregator_type'] = $object->getAggregatorType();
+        }
+        if (null !== $object->getAttributeName()) {
+            $data['attribute_name'] = $object->getAttributeName();
+        }
         $data['condition_type'] = $object->getConditionType();
         if (null !== $object->getConditions()) {
             $values = array();
@@ -81,17 +86,11 @@ class SalesRuleDataConditionInterfaceNormalizer implements DenormalizerInterface
             }
             $data['conditions'] = $values;
         }
-        if (null !== $object->getAggregatorType()) {
-            $data['aggregator_type'] = $object->getAggregatorType();
-        }
-        $data['operator'] = $object->getOperator();
-        if (null !== $object->getAttributeName()) {
-            $data['attribute_name'] = $object->getAttributeName();
-        }
-        $data['value'] = $object->getValue();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
+        $data['operator'] = $object->getOperator();
+        $data['value'] = $object->getValue();
         return $data;
     }
 }

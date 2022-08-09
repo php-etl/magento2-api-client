@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CheckoutDataShippingInformationInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CheckoutDataShippingInformationInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CheckoutDataShippingInformationInterface';
     }
@@ -40,20 +39,8 @@ class CheckoutDataShippingInformationInterfaceNormalizer implements Denormalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('shipping_address', $data)) {
-            $object->setShippingAddress($this->denormalizer->denormalize($data['shipping_address'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataAddressInterface', 'json', $context));
-        }
         if (\array_key_exists('billing_address', $data)) {
             $object->setBillingAddress($this->denormalizer->denormalize($data['billing_address'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataAddressInterface', 'json', $context));
-        }
-        if (\array_key_exists('shipping_method_code', $data)) {
-            $object->setShippingMethodCode($data['shipping_method_code']);
-        }
-        if (\array_key_exists('shipping_carrier_code', $data)) {
-            $object->setShippingCarrierCode($data['shipping_carrier_code']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
         }
         if (\array_key_exists('custom_attributes', $data)) {
             $values = array();
@@ -61,6 +48,18 @@ class CheckoutDataShippingInformationInterfaceNormalizer implements Denormalizer
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setCustomAttributes($values);
+        }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
+        }
+        if (\array_key_exists('shipping_address', $data)) {
+            $object->setShippingAddress($this->denormalizer->denormalize($data['shipping_address'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataAddressInterface', 'json', $context));
+        }
+        if (\array_key_exists('shipping_carrier_code', $data)) {
+            $object->setShippingCarrierCode($data['shipping_carrier_code']);
+        }
+        if (\array_key_exists('shipping_method_code', $data)) {
+            $object->setShippingMethodCode($data['shipping_method_code']);
         }
         return $object;
     }
@@ -70,14 +69,8 @@ class CheckoutDataShippingInformationInterfaceNormalizer implements Denormalizer
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['shipping_address'] = $this->normalizer->normalize($object->getShippingAddress(), 'json', $context);
         if (null !== $object->getBillingAddress()) {
             $data['billing_address'] = $this->normalizer->normalize($object->getBillingAddress(), 'json', $context);
-        }
-        $data['shipping_method_code'] = $object->getShippingMethodCode();
-        $data['shipping_carrier_code'] = $object->getShippingCarrierCode();
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $object->getExtensionAttributes();
         }
         if (null !== $object->getCustomAttributes()) {
             $values = array();
@@ -86,6 +79,12 @@ class CheckoutDataShippingInformationInterfaceNormalizer implements Denormalizer
             }
             $data['custom_attributes'] = $values;
         }
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $object->getExtensionAttributes();
+        }
+        $data['shipping_address'] = $this->normalizer->normalize($object->getShippingAddress(), 'json', $context);
+        $data['shipping_carrier_code'] = $object->getShippingCarrierCode();
+        $data['shipping_method_code'] = $object->getShippingMethodCode();
         return $data;
     }
 }

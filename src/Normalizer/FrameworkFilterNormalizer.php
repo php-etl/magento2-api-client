@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class FrameworkFilterNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\FrameworkFilter';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\FrameworkFilter';
     }
@@ -40,14 +39,14 @@ class FrameworkFilterNormalizer implements DenormalizerInterface, NormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('condition_type', $data)) {
+            $object->setConditionType($data['condition_type']);
+        }
         if (\array_key_exists('field', $data)) {
             $object->setField($data['field']);
         }
         if (\array_key_exists('value', $data)) {
             $object->setValue($data['value']);
-        }
-        if (\array_key_exists('condition_type', $data)) {
-            $object->setConditionType($data['condition_type']);
         }
         return $object;
     }
@@ -57,11 +56,11 @@ class FrameworkFilterNormalizer implements DenormalizerInterface, NormalizerInte
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['field'] = $object->getField();
-        $data['value'] = $object->getValue();
         if (null !== $object->getConditionType()) {
             $data['condition_type'] = $object->getConditionType();
         }
+        $data['field'] = $object->getField();
+        $data['value'] = $object->getValue();
         return $data;
     }
 }

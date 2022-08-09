@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CompanyCreditDataCreditLimitInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CompanyCreditDataCreditLimitInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CompanyCreditDataCreditLimitInterface';
     }
@@ -40,17 +39,20 @@ class CompanyCreditDataCreditLimitInterfaceNormalizer implements DenormalizerInt
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('id', $data)) {
-            $object->setId($data['id']);
+        if (\array_key_exists('available_limit', $data)) {
+            $object->setAvailableLimit($data['available_limit']);
+        }
+        if (\array_key_exists('balance', $data)) {
+            $object->setBalance($data['balance']);
         }
         if (\array_key_exists('company_id', $data)) {
             $object->setCompanyId($data['company_id']);
         }
+        if (\array_key_exists('credit_comment', $data)) {
+            $object->setCreditComment($data['credit_comment']);
+        }
         if (\array_key_exists('credit_limit', $data)) {
             $object->setCreditLimit($data['credit_limit']);
-        }
-        if (\array_key_exists('balance', $data)) {
-            $object->setBalance($data['balance']);
         }
         if (\array_key_exists('currency_code', $data)) {
             $object->setCurrencyCode($data['currency_code']);
@@ -58,14 +60,11 @@ class CompanyCreditDataCreditLimitInterfaceNormalizer implements DenormalizerInt
         if (\array_key_exists('exceed_limit', $data)) {
             $object->setExceedLimit($data['exceed_limit']);
         }
-        if (\array_key_exists('available_limit', $data)) {
-            $object->setAvailableLimit($data['available_limit']);
-        }
-        if (\array_key_exists('credit_comment', $data)) {
-            $object->setCreditComment($data['credit_comment']);
-        }
         if (\array_key_exists('extension_attributes', $data)) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        }
+        if (\array_key_exists('id', $data)) {
+            $object->setId($data['id']);
         }
         return $object;
     }
@@ -75,30 +74,30 @@ class CompanyCreditDataCreditLimitInterfaceNormalizer implements DenormalizerInt
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getId()) {
-            $data['id'] = $object->getId();
+        if (null !== $object->getAvailableLimit()) {
+            $data['available_limit'] = $object->getAvailableLimit();
+        }
+        if (null !== $object->getBalance()) {
+            $data['balance'] = $object->getBalance();
         }
         if (null !== $object->getCompanyId()) {
             $data['company_id'] = $object->getCompanyId();
         }
+        if (null !== $object->getCreditComment()) {
+            $data['credit_comment'] = $object->getCreditComment();
+        }
         if (null !== $object->getCreditLimit()) {
             $data['credit_limit'] = $object->getCreditLimit();
-        }
-        if (null !== $object->getBalance()) {
-            $data['balance'] = $object->getBalance();
         }
         if (null !== $object->getCurrencyCode()) {
             $data['currency_code'] = $object->getCurrencyCode();
         }
         $data['exceed_limit'] = $object->getExceedLimit();
-        if (null !== $object->getAvailableLimit()) {
-            $data['available_limit'] = $object->getAvailableLimit();
-        }
-        if (null !== $object->getCreditComment()) {
-            $data['credit_comment'] = $object->getCreditComment();
-        }
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
+        }
+        if (null !== $object->getId()) {
+            $data['id'] = $object->getId();
         }
         return $data;
     }

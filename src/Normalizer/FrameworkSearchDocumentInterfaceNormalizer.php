@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class FrameworkSearchDocumentInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\FrameworkSearchDocumentInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\FrameworkSearchDocumentInterface';
     }
@@ -40,15 +39,15 @@ class FrameworkSearchDocumentInterfaceNormalizer implements DenormalizerInterfac
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('id', $data)) {
-            $object->setId($data['id']);
-        }
         if (\array_key_exists('custom_attributes', $data)) {
             $values = array();
             foreach ($data['custom_attributes'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setCustomAttributes($values);
+        }
+        if (\array_key_exists('id', $data)) {
+            $object->setId($data['id']);
         }
         return $object;
     }
@@ -58,7 +57,6 @@ class FrameworkSearchDocumentInterfaceNormalizer implements DenormalizerInterfac
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['id'] = $object->getId();
         if (null !== $object->getCustomAttributes()) {
             $values = array();
             foreach ($object->getCustomAttributes() as $value) {
@@ -66,6 +64,7 @@ class FrameworkSearchDocumentInterfaceNormalizer implements DenormalizerInterfac
             }
             $data['custom_attributes'] = $values;
         }
+        $data['id'] = $object->getId();
         return $data;
     }
 }

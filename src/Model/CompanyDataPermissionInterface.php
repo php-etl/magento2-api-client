@@ -11,11 +11,11 @@ class CompanyDataPermissionInterface
      */
     protected $id;
     /**
-     * Role id.
+     * Permission.
      *
-     * @var int
+     * @var string
      */
-    protected $roleId;
+    protected $permission;
     /**
      * Resource id.
      *
@@ -23,17 +23,17 @@ class CompanyDataPermissionInterface
      */
     protected $resourceId;
     /**
-     * Permission.
+     * Role id.
      *
-     * @var string
+     * @var int
      */
-    protected $permission;
+    protected $roleId;
     /**
      * Id.
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -44,51 +44,9 @@ class CompanyDataPermissionInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
-        return $this;
-    }
-    /**
-     * Role id.
-     *
-     * @return int
-     */
-    public function getRoleId(): int
-    {
-        return $this->roleId;
-    }
-    /**
-     * Role id.
-     *
-     * @param int $roleId
-     *
-     * @return self
-     */
-    public function setRoleId(int $roleId): self
-    {
-        $this->roleId = $roleId;
-        return $this;
-    }
-    /**
-     * Resource id.
-     *
-     * @return string
-     */
-    public function getResourceId(): string
-    {
-        return $this->resourceId;
-    }
-    /**
-     * Resource id.
-     *
-     * @param string $resourceId
-     *
-     * @return self
-     */
-    public function setResourceId(string $resourceId): self
-    {
-        $this->resourceId = $resourceId;
         return $this;
     }
     /**
@@ -96,7 +54,7 @@ class CompanyDataPermissionInterface
      *
      * @return string
      */
-    public function getPermission(): string
+    public function getPermission() : string
     {
         return $this->permission;
     }
@@ -107,9 +65,51 @@ class CompanyDataPermissionInterface
      *
      * @return self
      */
-    public function setPermission(string $permission): self
+    public function setPermission(string $permission) : self
     {
         $this->permission = $permission;
+        return $this;
+    }
+    /**
+     * Resource id.
+     *
+     * @return string
+     */
+    public function getResourceId() : string
+    {
+        return $this->resourceId;
+    }
+    /**
+     * Resource id.
+     *
+     * @param string $resourceId
+     *
+     * @return self
+     */
+    public function setResourceId(string $resourceId) : self
+    {
+        $this->resourceId = $resourceId;
+        return $this;
+    }
+    /**
+     * Role id.
+     *
+     * @return int
+     */
+    public function getRoleId() : int
+    {
+        return $this->roleId;
+    }
+    /**
+     * Role id.
+     *
+     * @param int $roleId
+     *
+     * @return self
+     */
+    public function setRoleId(int $roleId) : self
+    {
+        $this->roleId = $roleId;
         return $this;
     }
 }

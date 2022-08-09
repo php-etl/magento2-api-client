@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataProductCustomOptionValuesInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductCustomOptionValuesInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductCustomOptionValuesInterface';
     }
@@ -40,11 +39,8 @@ class CatalogDataProductCustomOptionValuesInterfaceNormalizer implements Denorma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('title', $data)) {
-            $object->setTitle($data['title']);
-        }
-        if (\array_key_exists('sort_order', $data)) {
-            $object->setSortOrder($data['sort_order']);
+        if (\array_key_exists('option_type_id', $data)) {
+            $object->setOptionTypeId($data['option_type_id']);
         }
         if (\array_key_exists('price', $data)) {
             $object->setPrice($data['price']);
@@ -55,8 +51,11 @@ class CatalogDataProductCustomOptionValuesInterfaceNormalizer implements Denorma
         if (\array_key_exists('sku', $data)) {
             $object->setSku($data['sku']);
         }
-        if (\array_key_exists('option_type_id', $data)) {
-            $object->setOptionTypeId($data['option_type_id']);
+        if (\array_key_exists('sort_order', $data)) {
+            $object->setSortOrder($data['sort_order']);
+        }
+        if (\array_key_exists('title', $data)) {
+            $object->setTitle($data['title']);
         }
         return $object;
     }
@@ -66,16 +65,16 @@ class CatalogDataProductCustomOptionValuesInterfaceNormalizer implements Denorma
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['title'] = $object->getTitle();
-        $data['sort_order'] = $object->getSortOrder();
+        if (null !== $object->getOptionTypeId()) {
+            $data['option_type_id'] = $object->getOptionTypeId();
+        }
         $data['price'] = $object->getPrice();
         $data['price_type'] = $object->getPriceType();
         if (null !== $object->getSku()) {
             $data['sku'] = $object->getSku();
         }
-        if (null !== $object->getOptionTypeId()) {
-            $data['option_type_id'] = $object->getOptionTypeId();
-        }
+        $data['sort_order'] = $object->getSortOrder();
+        $data['title'] = $object->getTitle();
         return $data;
     }
 }

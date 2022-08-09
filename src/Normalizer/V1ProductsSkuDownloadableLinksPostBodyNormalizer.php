@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1ProductsSkuDownloadableLinksPostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\V1ProductsSkuDownloadableLinksPostBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\V1ProductsSkuDownloadableLinksPostBody';
     }
@@ -40,11 +39,11 @@ class V1ProductsSkuDownloadableLinksPostBodyNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('link', $data)) {
-            $object->setLink($this->denormalizer->denormalize($data['link'], 'Kiboko\\Magento\\V2\\Model\\DownloadableDataLinkInterface', 'json', $context));
-        }
         if (\array_key_exists('isGlobalScopeContent', $data)) {
             $object->setIsGlobalScopeContent($data['isGlobalScopeContent']);
+        }
+        if (\array_key_exists('link', $data)) {
+            $object->setLink($this->denormalizer->denormalize($data['link'], 'Kiboko\\Magento\\V2\\Model\\DownloadableDataLinkInterface', 'json', $context));
         }
         return $object;
     }
@@ -54,10 +53,10 @@ class V1ProductsSkuDownloadableLinksPostBodyNormalizer implements DenormalizerIn
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['link'] = $this->normalizer->normalize($object->getLink(), 'json', $context);
         if (null !== $object->getIsGlobalScopeContent()) {
             $data['isGlobalScopeContent'] = $object->getIsGlobalScopeContent();
         }
+        $data['link'] = $this->normalizer->normalize($object->getLink(), 'json', $context);
         return $data;
     }
 }

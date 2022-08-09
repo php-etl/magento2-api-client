@@ -15,7 +15,7 @@ class V1CartsCartIdEstimateShippingMethodsByAddressIdPostBody
      *
      * @return int
      */
-    public function getAddressId(): int
+    public function getAddressId() : int
     {
         return $this->addressId;
     }
@@ -26,7 +26,7 @@ class V1CartsCartIdEstimateShippingMethodsByAddressIdPostBody
      *
      * @return self
      */
-    public function setAddressId(int $addressId): self
+    public function setAddressId(int $addressId) : self
     {
         $this->addressId = $addressId;
         return $this;

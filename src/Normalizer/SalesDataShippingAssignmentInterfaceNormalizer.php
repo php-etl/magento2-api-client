@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataShippingAssignmentInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataShippingAssignmentInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataShippingAssignmentInterface';
     }
@@ -40,8 +39,8 @@ class SalesDataShippingAssignmentInterfaceNormalizer implements DenormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('shipping', $data)) {
-            $object->setShipping($this->denormalizer->denormalize($data['shipping'], 'Kiboko\\Magento\\V2\\Model\\SalesDataShippingInterface', 'json', $context));
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
         }
         if (\array_key_exists('items', $data)) {
             $values = array();
@@ -50,11 +49,11 @@ class SalesDataShippingAssignmentInterfaceNormalizer implements DenormalizerInte
             }
             $object->setItems($values);
         }
+        if (\array_key_exists('shipping', $data)) {
+            $object->setShipping($this->denormalizer->denormalize($data['shipping'], 'Kiboko\\Magento\\V2\\Model\\SalesDataShippingInterface', 'json', $context));
+        }
         if (\array_key_exists('stock_id', $data)) {
             $object->setStockId($data['stock_id']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
         }
         return $object;
     }
@@ -64,17 +63,17 @@ class SalesDataShippingAssignmentInterfaceNormalizer implements DenormalizerInte
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['shipping'] = $this->normalizer->normalize($object->getShipping(), 'json', $context);
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $object->getExtensionAttributes();
+        }
         $values = array();
         foreach ($object->getItems() as $value) {
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
         $data['items'] = $values;
+        $data['shipping'] = $this->normalizer->normalize($object->getShipping(), 'json', $context);
         if (null !== $object->getStockId()) {
             $data['stock_id'] = $object->getStockId();
-        }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $object->getExtensionAttributes();
         }
         return $data;
     }

@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class GiftCardAccountDataGiftCardInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\GiftCardAccountDataGiftCardInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\GiftCardAccountDataGiftCardInterface';
     }
@@ -40,17 +39,17 @@ class GiftCardAccountDataGiftCardInterfaceNormalizer implements DenormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('id', $data)) {
-            $object->setId($data['id']);
-        }
-        if (\array_key_exists('code', $data)) {
-            $object->setCode($data['code']);
-        }
         if (\array_key_exists('amount', $data)) {
             $object->setAmount($data['amount']);
         }
         if (\array_key_exists('base_amount', $data)) {
             $object->setBaseAmount($data['base_amount']);
+        }
+        if (\array_key_exists('code', $data)) {
+            $object->setCode($data['code']);
+        }
+        if (\array_key_exists('id', $data)) {
+            $object->setId($data['id']);
         }
         return $object;
     }
@@ -60,10 +59,10 @@ class GiftCardAccountDataGiftCardInterfaceNormalizer implements DenormalizerInte
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['id'] = $object->getId();
-        $data['code'] = $object->getCode();
         $data['amount'] = $object->getAmount();
         $data['base_amount'] = $object->getBaseAmount();
+        $data['code'] = $object->getCode();
+        $data['id'] = $object->getId();
         return $data;
     }
 }

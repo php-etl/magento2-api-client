@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataCustomOptionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CatalogDataCustomOptionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CatalogDataCustomOptionInterface';
     }
@@ -40,14 +39,14 @@ class CatalogDataCustomOptionInterfaceNormalizer implements DenormalizerInterfac
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\CatalogDataCustomOptionExtensionInterface', 'json', $context));
+        }
         if (\array_key_exists('option_id', $data)) {
             $object->setOptionId($data['option_id']);
         }
         if (\array_key_exists('option_value', $data)) {
             $object->setOptionValue($data['option_value']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\CatalogDataCustomOptionExtensionInterface', 'json', $context));
         }
         return $object;
     }
@@ -57,11 +56,11 @@ class CatalogDataCustomOptionInterfaceNormalizer implements DenormalizerInterfac
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['option_id'] = $object->getOptionId();
-        $data['option_value'] = $object->getOptionValue();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
+        $data['option_id'] = $object->getOptionId();
+        $data['option_value'] = $object->getOptionValue();
         return $data;
     }
 }

@@ -5,12 +5,6 @@ namespace Kiboko\Magento\V2\Model;
 class CompanyDataHierarchyInterface
 {
     /**
-     * Structure ID.
-     *
-     * @var int
-     */
-    protected $structureId;
-    /**
      * Entity ID.
      *
      * @var int
@@ -23,12 +17,6 @@ class CompanyDataHierarchyInterface
      */
     protected $entityType;
     /**
-     * Structure parent ID.
-     *
-     * @var int
-     */
-    protected $structureParentId;
-    /**
      * ExtensionInterface class for @see \Magento\Company\Api\Data\HierarchyInterface
      *
      * @var mixed
@@ -37,30 +25,21 @@ class CompanyDataHierarchyInterface
     /**
      * Structure ID.
      *
-     * @return int
+     * @var int
      */
-    public function getStructureId(): int
-    {
-        return $this->structureId;
-    }
+    protected $structureId;
     /**
-     * Structure ID.
+     * Structure parent ID.
      *
-     * @param int $structureId
-     *
-     * @return self
+     * @var int
      */
-    public function setStructureId(int $structureId): self
-    {
-        $this->structureId = $structureId;
-        return $this;
-    }
+    protected $structureParentId;
     /**
      * Entity ID.
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -71,7 +50,7 @@ class CompanyDataHierarchyInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
         return $this;
@@ -81,7 +60,7 @@ class CompanyDataHierarchyInterface
      *
      * @return string
      */
-    public function getEntityType(): string
+    public function getEntityType() : string
     {
         return $this->entityType;
     }
@@ -92,30 +71,9 @@ class CompanyDataHierarchyInterface
      *
      * @return self
      */
-    public function setEntityType(string $entityType): self
+    public function setEntityType(string $entityType) : self
     {
         $this->entityType = $entityType;
-        return $this;
-    }
-    /**
-     * Structure parent ID.
-     *
-     * @return int
-     */
-    public function getStructureParentId(): int
-    {
-        return $this->structureParentId;
-    }
-    /**
-     * Structure parent ID.
-     *
-     * @param int $structureParentId
-     *
-     * @return self
-     */
-    public function setStructureParentId(int $structureParentId): self
-    {
-        $this->structureParentId = $structureParentId;
         return $this;
     }
     /**
@@ -134,9 +92,51 @@ class CompanyDataHierarchyInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Structure ID.
+     *
+     * @return int
+     */
+    public function getStructureId() : int
+    {
+        return $this->structureId;
+    }
+    /**
+     * Structure ID.
+     *
+     * @param int $structureId
+     *
+     * @return self
+     */
+    public function setStructureId(int $structureId) : self
+    {
+        $this->structureId = $structureId;
+        return $this;
+    }
+    /**
+     * Structure parent ID.
+     *
+     * @return int
+     */
+    public function getStructureParentId() : int
+    {
+        return $this->structureParentId;
+    }
+    /**
+     * Structure parent ID.
+     *
+     * @param int $structureParentId
+     *
+     * @return self
+     */
+    public function setStructureParentId(int $structureParentId) : self
+    {
+        $this->structureParentId = $structureParentId;
         return $this;
     }
 }

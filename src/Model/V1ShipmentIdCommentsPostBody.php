@@ -15,7 +15,7 @@ class V1ShipmentIdCommentsPostBody
      *
      * @return SalesDataShipmentCommentInterface
      */
-    public function getEntity(): SalesDataShipmentCommentInterface
+    public function getEntity() : SalesDataShipmentCommentInterface
     {
         return $this->entity;
     }
@@ -26,7 +26,7 @@ class V1ShipmentIdCommentsPostBody
      *
      * @return self
      */
-    public function setEntity(SalesDataShipmentCommentInterface $entity): self
+    public function setEntity(SalesDataShipmentCommentInterface $entity) : self
     {
         $this->entity = $entity;
         return $this;

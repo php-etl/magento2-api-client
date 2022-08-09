@@ -4,32 +4,38 @@ namespace Kiboko\Magento\V2\Endpoint;
 
 class CatalogProductAttributeOptionManagementV1AddPost extends \Kiboko\Magento\V2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\V2\Runtime\Client\EndpointTrait;
     protected $attributeCode;
     /**
      * Add option to attribute
      *
-     * @param string $attributeCode
-     * @param \Kiboko\Magento\V2\Model\V1ProductsAttributesAttributeCodeOptionsPostBody $catalogProductAttributeOptionManagementV1AddPostBody
+     * @param string $attributeCode 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsAttributesAttributeCodeOptionsPostBody $requestBody 
      */
-    public function __construct(string $attributeCode, \Kiboko\Magento\V2\Model\V1ProductsAttributesAttributeCodeOptionsPostBody $catalogProductAttributeOptionManagementV1AddPostBody)
+    public function __construct(string $attributeCode, ?\Kiboko\Magento\V2\Model\V1ProductsAttributesAttributeCodeOptionsPostBody $requestBody = null)
     {
         $this->attributeCode = $attributeCode;
-        $this->body = $catalogProductAttributeOptionManagementV1AddPostBody;
+        $this->body = $requestBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\V2\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'POST';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{attributeCode}'), array($this->attributeCode), '/V1/products/attributes/{attributeCode}/options');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
-        return $this->getSerializedBody($serializer);
+        if ($this->body instanceof \Kiboko\Magento\V2\Model\V1ProductsAttributesAttributeCodeOptionsPostBody) {
+            return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
+        }
+        if ($this->body instanceof \Kiboko\Magento\V2\Model\V1ProductsAttributesAttributeCodeOptionsPostBody) {
+            return array(array('Content-Type' => array('application/xml')), $this->body);
+        }
+        return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -43,18 +49,20 @@ class CatalogProductAttributeOptionManagementV1AddPost extends \Kiboko\Magento\V
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (200 === $status) {
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             return json_decode($body);
         }
-        if (400 === $status) {
+        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \Kiboko\Magento\V2\Exception\CatalogProductAttributeOptionManagementV1AddPostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\V2\\Model\\ErrorResponse', 'json'));
         }
-        if (401 === $status) {
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
             throw new \Kiboko\Magento\V2\Exception\CatalogProductAttributeOptionManagementV1AddPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2\\Model\\ErrorResponse', 'json'));
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\V2\\Model\\ErrorResponse', 'json');
+        if (mb_strpos($contentType, 'application/json') !== false) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2\\Model\\ErrorResponse', 'json');
+        }
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

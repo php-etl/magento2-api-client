@@ -15,7 +15,7 @@ class V1CustomersValidatePutBody
      *
      * @return CustomerDataCustomerInterface
      */
-    public function getCustomer(): CustomerDataCustomerInterface
+    public function getCustomer() : CustomerDataCustomerInterface
     {
         return $this->customer;
     }
@@ -26,7 +26,7 @@ class V1CustomersValidatePutBody
      *
      * @return self
      */
-    public function setCustomer(CustomerDataCustomerInterface $customer): self
+    public function setCustomer(CustomerDataCustomerInterface $customer) : self
     {
         $this->customer = $customer;
         return $this;

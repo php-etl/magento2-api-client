@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class TaxDataAppliedTaxRateInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\TaxDataAppliedTaxRateInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\TaxDataAppliedTaxRateInterface';
     }
@@ -43,14 +42,14 @@ class TaxDataAppliedTaxRateInterfaceNormalizer implements DenormalizerInterface,
         if (\array_key_exists('code', $data)) {
             $object->setCode($data['code']);
         }
-        if (\array_key_exists('title', $data)) {
-            $object->setTitle($data['title']);
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
         }
         if (\array_key_exists('percent', $data)) {
             $object->setPercent($data['percent']);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
+        if (\array_key_exists('title', $data)) {
+            $object->setTitle($data['title']);
         }
         return $object;
     }
@@ -63,14 +62,14 @@ class TaxDataAppliedTaxRateInterfaceNormalizer implements DenormalizerInterface,
         if (null !== $object->getCode()) {
             $data['code'] = $object->getCode();
         }
-        if (null !== $object->getTitle()) {
-            $data['title'] = $object->getTitle();
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $object->getExtensionAttributes();
         }
         if (null !== $object->getPercent()) {
             $data['percent'] = $object->getPercent();
         }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $object->getExtensionAttributes();
+        if (null !== $object->getTitle()) {
+            $data['title'] = $object->getTitle();
         }
         return $data;
     }

@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataShippingInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataShippingInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataShippingInterface';
     }
@@ -43,14 +42,14 @@ class SalesDataShippingInterfaceNormalizer implements DenormalizerInterface, Nor
         if (\array_key_exists('address', $data)) {
             $object->setAddress($this->denormalizer->denormalize($data['address'], 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderAddressInterface', 'json', $context));
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataShippingExtensionInterface', 'json', $context));
+        }
         if (\array_key_exists('method', $data)) {
             $object->setMethod($data['method']);
         }
         if (\array_key_exists('total', $data)) {
             $object->setTotal($this->denormalizer->denormalize($data['total'], 'Kiboko\\Magento\\V2\\Model\\SalesDataTotalInterface', 'json', $context));
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataShippingExtensionInterface', 'json', $context));
         }
         return $object;
     }
@@ -63,14 +62,14 @@ class SalesDataShippingInterfaceNormalizer implements DenormalizerInterface, Nor
         if (null !== $object->getAddress()) {
             $data['address'] = $this->normalizer->normalize($object->getAddress(), 'json', $context);
         }
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
+        }
         if (null !== $object->getMethod()) {
             $data['method'] = $object->getMethod();
         }
         if (null !== $object->getTotal()) {
             $data['total'] = $this->normalizer->normalize($object->getTotal(), 'json', $context);
-        }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
         return $data;
     }

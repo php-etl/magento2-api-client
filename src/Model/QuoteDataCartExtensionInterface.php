@@ -5,11 +5,11 @@ namespace Kiboko\Magento\V2\Model;
 class QuoteDataCartExtensionInterface
 {
     /**
+     * 
      *
-     *
-     * @var QuoteDataShippingAssignmentInterface[]
+     * @var string
      */
-    protected $shippingAssignments;
+    protected $amazonOrderReferenceId;
     /**
      * Interface NegotiableQuoteInterface
      *
@@ -17,30 +17,30 @@ class QuoteDataCartExtensionInterface
      */
     protected $negotiableQuote;
     /**
+     * 
      *
-     *
-     * @var string
+     * @var QuoteDataShippingAssignmentInterface[]
      */
-    protected $amazonOrderReferenceId;
+    protected $shippingAssignments;
     /**
+     * 
      *
-     *
-     * @return QuoteDataShippingAssignmentInterface[]
+     * @return string
      */
-    public function getShippingAssignments(): array
+    public function getAmazonOrderReferenceId() : string
     {
-        return $this->shippingAssignments;
+        return $this->amazonOrderReferenceId;
     }
     /**
+     * 
      *
-     *
-     * @param QuoteDataShippingAssignmentInterface[] $shippingAssignments
+     * @param string $amazonOrderReferenceId
      *
      * @return self
      */
-    public function setShippingAssignments(array $shippingAssignments): self
+    public function setAmazonOrderReferenceId(string $amazonOrderReferenceId) : self
     {
-        $this->shippingAssignments = $shippingAssignments;
+        $this->amazonOrderReferenceId = $amazonOrderReferenceId;
         return $this;
     }
     /**
@@ -48,7 +48,7 @@ class QuoteDataCartExtensionInterface
      *
      * @return NegotiableQuoteDataNegotiableQuoteInterface
      */
-    public function getNegotiableQuote(): NegotiableQuoteDataNegotiableQuoteInterface
+    public function getNegotiableQuote() : NegotiableQuoteDataNegotiableQuoteInterface
     {
         return $this->negotiableQuote;
     }
@@ -59,30 +59,30 @@ class QuoteDataCartExtensionInterface
      *
      * @return self
      */
-    public function setNegotiableQuote(NegotiableQuoteDataNegotiableQuoteInterface $negotiableQuote): self
+    public function setNegotiableQuote(NegotiableQuoteDataNegotiableQuoteInterface $negotiableQuote) : self
     {
         $this->negotiableQuote = $negotiableQuote;
         return $this;
     }
     /**
+     * 
      *
-     *
-     * @return string
+     * @return QuoteDataShippingAssignmentInterface[]
      */
-    public function getAmazonOrderReferenceId(): string
+    public function getShippingAssignments() : array
     {
-        return $this->amazonOrderReferenceId;
+        return $this->shippingAssignments;
     }
     /**
+     * 
      *
-     *
-     * @param string $amazonOrderReferenceId
+     * @param QuoteDataShippingAssignmentInterface[] $shippingAssignments
      *
      * @return self
      */
-    public function setAmazonOrderReferenceId(string $amazonOrderReferenceId): self
+    public function setShippingAssignments(array $shippingAssignments) : self
     {
-        $this->amazonOrderReferenceId = $amazonOrderReferenceId;
+        $this->shippingAssignments = $shippingAssignments;
         return $this;
     }
 }

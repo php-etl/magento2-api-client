@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1ProductsAttributeSetsAttributesPostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\V1ProductsAttributeSetsAttributesPostBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\V1ProductsAttributeSetsAttributesPostBody';
     }
@@ -40,14 +39,14 @@ class V1ProductsAttributeSetsAttributesPostBodyNormalizer implements Denormalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('attributeSetId', $data)) {
-            $object->setAttributeSetId($data['attributeSetId']);
+        if (\array_key_exists('attributeCode', $data)) {
+            $object->setAttributeCode($data['attributeCode']);
         }
         if (\array_key_exists('attributeGroupId', $data)) {
             $object->setAttributeGroupId($data['attributeGroupId']);
         }
-        if (\array_key_exists('attributeCode', $data)) {
-            $object->setAttributeCode($data['attributeCode']);
+        if (\array_key_exists('attributeSetId', $data)) {
+            $object->setAttributeSetId($data['attributeSetId']);
         }
         if (\array_key_exists('sortOrder', $data)) {
             $object->setSortOrder($data['sortOrder']);
@@ -60,9 +59,9 @@ class V1ProductsAttributeSetsAttributesPostBodyNormalizer implements Denormalize
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['attributeSetId'] = $object->getAttributeSetId();
-        $data['attributeGroupId'] = $object->getAttributeGroupId();
         $data['attributeCode'] = $object->getAttributeCode();
+        $data['attributeGroupId'] = $object->getAttributeGroupId();
+        $data['attributeSetId'] = $object->getAttributeSetId();
         $data['sortOrder'] = $object->getSortOrder();
         return $data;
     }

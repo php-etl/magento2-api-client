@@ -5,7 +5,7 @@ namespace Kiboko\Magento\V2\Model;
 class V1CustomersIsEmailAvailablePostBody
 {
     /**
-     *
+     * 
      *
      * @var string
      */
@@ -17,22 +17,22 @@ class V1CustomersIsEmailAvailablePostBody
      */
     protected $websiteId;
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getCustomerEmail(): string
+    public function getCustomerEmail() : string
     {
         return $this->customerEmail;
     }
     /**
-     *
+     * 
      *
      * @param string $customerEmail
      *
      * @return self
      */
-    public function setCustomerEmail(string $customerEmail): self
+    public function setCustomerEmail(string $customerEmail) : self
     {
         $this->customerEmail = $customerEmail;
         return $this;
@@ -42,7 +42,7 @@ class V1CustomersIsEmailAvailablePostBody
      *
      * @return int
      */
-    public function getWebsiteId(): int
+    public function getWebsiteId() : int
     {
         return $this->websiteId;
     }
@@ -53,7 +53,7 @@ class V1CustomersIsEmailAvailablePostBody
      *
      * @return self
      */
-    public function setWebsiteId(int $websiteId): self
+    public function setWebsiteId(int $websiteId) : self
     {
         $this->websiteId = $websiteId;
         return $this;

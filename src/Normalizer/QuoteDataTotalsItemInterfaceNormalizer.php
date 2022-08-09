@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class QuoteDataTotalsItemInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalsItemInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalsItemInterface';
     }
@@ -40,14 +39,47 @@ class QuoteDataTotalsItemInterfaceNormalizer implements DenormalizerInterface, N
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('base_discount_amount', $data)) {
+            $object->setBaseDiscountAmount($data['base_discount_amount']);
+        }
+        if (\array_key_exists('base_price', $data)) {
+            $object->setBasePrice($data['base_price']);
+        }
+        if (\array_key_exists('base_price_incl_tax', $data)) {
+            $object->setBasePriceInclTax($data['base_price_incl_tax']);
+        }
+        if (\array_key_exists('base_row_total', $data)) {
+            $object->setBaseRowTotal($data['base_row_total']);
+        }
+        if (\array_key_exists('base_row_total_incl_tax', $data)) {
+            $object->setBaseRowTotalInclTax($data['base_row_total_incl_tax']);
+        }
+        if (\array_key_exists('base_tax_amount', $data)) {
+            $object->setBaseTaxAmount($data['base_tax_amount']);
+        }
+        if (\array_key_exists('discount_amount', $data)) {
+            $object->setDiscountAmount($data['discount_amount']);
+        }
+        if (\array_key_exists('discount_percent', $data)) {
+            $object->setDiscountPercent($data['discount_percent']);
+        }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalsItemExtensionInterface', 'json', $context));
+        }
         if (\array_key_exists('item_id', $data)) {
             $object->setItemId($data['item_id']);
+        }
+        if (\array_key_exists('name', $data)) {
+            $object->setName($data['name']);
+        }
+        if (\array_key_exists('options', $data)) {
+            $object->setOptions($data['options']);
         }
         if (\array_key_exists('price', $data)) {
             $object->setPrice($data['price']);
         }
-        if (\array_key_exists('base_price', $data)) {
-            $object->setBasePrice($data['base_price']);
+        if (\array_key_exists('price_incl_tax', $data)) {
+            $object->setPriceInclTax($data['price_incl_tax']);
         }
         if (\array_key_exists('qty', $data)) {
             $object->setQty($data['qty']);
@@ -55,8 +87,8 @@ class QuoteDataTotalsItemInterfaceNormalizer implements DenormalizerInterface, N
         if (\array_key_exists('row_total', $data)) {
             $object->setRowTotal($data['row_total']);
         }
-        if (\array_key_exists('base_row_total', $data)) {
-            $object->setBaseRowTotal($data['base_row_total']);
+        if (\array_key_exists('row_total_incl_tax', $data)) {
+            $object->setRowTotalInclTax($data['row_total_incl_tax']);
         }
         if (\array_key_exists('row_total_with_discount', $data)) {
             $object->setRowTotalWithDiscount($data['row_total_with_discount']);
@@ -64,47 +96,14 @@ class QuoteDataTotalsItemInterfaceNormalizer implements DenormalizerInterface, N
         if (\array_key_exists('tax_amount', $data)) {
             $object->setTaxAmount($data['tax_amount']);
         }
-        if (\array_key_exists('base_tax_amount', $data)) {
-            $object->setBaseTaxAmount($data['base_tax_amount']);
-        }
         if (\array_key_exists('tax_percent', $data)) {
             $object->setTaxPercent($data['tax_percent']);
-        }
-        if (\array_key_exists('discount_amount', $data)) {
-            $object->setDiscountAmount($data['discount_amount']);
-        }
-        if (\array_key_exists('base_discount_amount', $data)) {
-            $object->setBaseDiscountAmount($data['base_discount_amount']);
-        }
-        if (\array_key_exists('discount_percent', $data)) {
-            $object->setDiscountPercent($data['discount_percent']);
-        }
-        if (\array_key_exists('price_incl_tax', $data)) {
-            $object->setPriceInclTax($data['price_incl_tax']);
-        }
-        if (\array_key_exists('base_price_incl_tax', $data)) {
-            $object->setBasePriceInclTax($data['base_price_incl_tax']);
-        }
-        if (\array_key_exists('row_total_incl_tax', $data)) {
-            $object->setRowTotalInclTax($data['row_total_incl_tax']);
-        }
-        if (\array_key_exists('base_row_total_incl_tax', $data)) {
-            $object->setBaseRowTotalInclTax($data['base_row_total_incl_tax']);
-        }
-        if (\array_key_exists('options', $data)) {
-            $object->setOptions($data['options']);
-        }
-        if (\array_key_exists('weee_tax_applied_amount', $data)) {
-            $object->setWeeeTaxAppliedAmount($data['weee_tax_applied_amount']);
         }
         if (\array_key_exists('weee_tax_applied', $data)) {
             $object->setWeeeTaxApplied($data['weee_tax_applied']);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalsItemExtensionInterface', 'json', $context));
-        }
-        if (\array_key_exists('name', $data)) {
-            $object->setName($data['name']);
+        if (\array_key_exists('weee_tax_applied_amount', $data)) {
+            $object->setWeeeTaxAppliedAmount($data['weee_tax_applied_amount']);
         }
         return $object;
     }
@@ -114,54 +113,54 @@ class QuoteDataTotalsItemInterfaceNormalizer implements DenormalizerInterface, N
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['item_id'] = $object->getItemId();
-        $data['price'] = $object->getPrice();
+        if (null !== $object->getBaseDiscountAmount()) {
+            $data['base_discount_amount'] = $object->getBaseDiscountAmount();
+        }
         $data['base_price'] = $object->getBasePrice();
+        if (null !== $object->getBasePriceInclTax()) {
+            $data['base_price_incl_tax'] = $object->getBasePriceInclTax();
+        }
+        $data['base_row_total'] = $object->getBaseRowTotal();
+        if (null !== $object->getBaseRowTotalInclTax()) {
+            $data['base_row_total_incl_tax'] = $object->getBaseRowTotalInclTax();
+        }
+        if (null !== $object->getBaseTaxAmount()) {
+            $data['base_tax_amount'] = $object->getBaseTaxAmount();
+        }
+        if (null !== $object->getDiscountAmount()) {
+            $data['discount_amount'] = $object->getDiscountAmount();
+        }
+        if (null !== $object->getDiscountPercent()) {
+            $data['discount_percent'] = $object->getDiscountPercent();
+        }
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
+        }
+        $data['item_id'] = $object->getItemId();
+        if (null !== $object->getName()) {
+            $data['name'] = $object->getName();
+        }
+        $data['options'] = $object->getOptions();
+        $data['price'] = $object->getPrice();
+        if (null !== $object->getPriceInclTax()) {
+            $data['price_incl_tax'] = $object->getPriceInclTax();
+        }
         $data['qty'] = $object->getQty();
         $data['row_total'] = $object->getRowTotal();
-        $data['base_row_total'] = $object->getBaseRowTotal();
+        if (null !== $object->getRowTotalInclTax()) {
+            $data['row_total_incl_tax'] = $object->getRowTotalInclTax();
+        }
         if (null !== $object->getRowTotalWithDiscount()) {
             $data['row_total_with_discount'] = $object->getRowTotalWithDiscount();
         }
         if (null !== $object->getTaxAmount()) {
             $data['tax_amount'] = $object->getTaxAmount();
         }
-        if (null !== $object->getBaseTaxAmount()) {
-            $data['base_tax_amount'] = $object->getBaseTaxAmount();
-        }
         if (null !== $object->getTaxPercent()) {
             $data['tax_percent'] = $object->getTaxPercent();
         }
-        if (null !== $object->getDiscountAmount()) {
-            $data['discount_amount'] = $object->getDiscountAmount();
-        }
-        if (null !== $object->getBaseDiscountAmount()) {
-            $data['base_discount_amount'] = $object->getBaseDiscountAmount();
-        }
-        if (null !== $object->getDiscountPercent()) {
-            $data['discount_percent'] = $object->getDiscountPercent();
-        }
-        if (null !== $object->getPriceInclTax()) {
-            $data['price_incl_tax'] = $object->getPriceInclTax();
-        }
-        if (null !== $object->getBasePriceInclTax()) {
-            $data['base_price_incl_tax'] = $object->getBasePriceInclTax();
-        }
-        if (null !== $object->getRowTotalInclTax()) {
-            $data['row_total_incl_tax'] = $object->getRowTotalInclTax();
-        }
-        if (null !== $object->getBaseRowTotalInclTax()) {
-            $data['base_row_total_incl_tax'] = $object->getBaseRowTotalInclTax();
-        }
-        $data['options'] = $object->getOptions();
-        $data['weee_tax_applied_amount'] = $object->getWeeeTaxAppliedAmount();
         $data['weee_tax_applied'] = $object->getWeeeTaxApplied();
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
-        }
-        if (null !== $object->getName()) {
-            $data['name'] = $object->getName();
-        }
+        $data['weee_tax_applied_amount'] = $object->getWeeeTaxAppliedAmount();
         return $data;
     }
 }

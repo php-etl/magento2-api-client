@@ -7,7 +7,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Delete customer address by ID.
      *
-     * @param int $addressId
+     * @param int $addressId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAddressRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CustomerAddressRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -20,30 +20,30 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAddressRepositoryV1DeleteByIdDelete($addressId), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $amazonOrderReferenceId
-     * @param \Kiboko\Magento\V2\Model\V1AmazonBillingAddressAmazonOrderReferenceIdPutBody $amazonPaymentAddressManagementV1GetBillingAddressPutBody
+     * @param string $amazonOrderReferenceId 
+     * @param null|\Kiboko\Magento\V2\Model\V1AmazonBillingAddressAmazonOrderReferenceIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function amazonPaymentAddressManagementV1GetBillingAddressPut(string $amazonOrderReferenceId, \Kiboko\Magento\V2\Model\V1AmazonBillingAddressAmazonOrderReferenceIdPutBody $amazonPaymentAddressManagementV1GetBillingAddressPutBody, string $fetch = self::FETCH_OBJECT)
+    public function amazonPaymentAddressManagementV1GetBillingAddressPut(string $amazonOrderReferenceId, ?\Kiboko\Magento\V2\Model\V1AmazonBillingAddressAmazonOrderReferenceIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\AmazonPaymentAddressManagementV1GetBillingAddressPut($amazonOrderReferenceId, $amazonPaymentAddressManagementV1GetBillingAddressPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\AmazonPaymentAddressManagementV1GetBillingAddressPut($amazonOrderReferenceId, $requestBody), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $amazonOrderReferenceId
-     * @param \Kiboko\Magento\V2\Model\V1AmazonShippingAddressAmazonOrderReferenceIdPutBody $amazonPaymentAddressManagementV1GetShippingAddressPutBody
+     * @param string $amazonOrderReferenceId 
+     * @param null|\Kiboko\Magento\V2\Model\V1AmazonShippingAddressAmazonOrderReferenceIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function amazonPaymentAddressManagementV1GetShippingAddressPut(string $amazonOrderReferenceId, \Kiboko\Magento\V2\Model\V1AmazonShippingAddressAmazonOrderReferenceIdPutBody $amazonPaymentAddressManagementV1GetShippingAddressPutBody, string $fetch = self::FETCH_OBJECT)
+    public function amazonPaymentAddressManagementV1GetShippingAddressPut(string $amazonOrderReferenceId, ?\Kiboko\Magento\V2\Model\V1AmazonShippingAddressAmazonOrderReferenceIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\AmazonPaymentAddressManagementV1GetShippingAddressPut($amazonOrderReferenceId, $amazonPaymentAddressManagementV1GetShippingAddressPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\AmazonPaymentAddressManagementV1GetShippingAddressPut($amazonOrderReferenceId, $requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -78,7 +78,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve attribute metadata.
      *
-     * @param string $attributeCode
+     * @param string $attributeCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerMetadataV1GetAttributeMetadataGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerMetadataV1GetAttributeMetadataGetUnauthorizedException
@@ -94,7 +94,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * Get custom attributes metadata for the given data interface.
      *
      * @param array $queryParameters {
-     *     @var string $dataInterfaceName
+     *     @var string $dataInterfaceName 
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerMetadataV1GetCustomAttributesMetadataGetUnauthorizedException
@@ -109,7 +109,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve all attributes filtered by form code
      *
-     * @param string $formCode
+     * @param string $formCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerMetadataV1GetAttributesGetUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerMetadataV1GetAttributesGetInternalServerErrorException
@@ -134,7 +134,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve attribute metadata.
      *
-     * @param string $attributeCode
+     * @param string $attributeCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAddressMetadataV1GetAttributeMetadataGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CustomerAddressMetadataV1GetAttributeMetadataGetUnauthorizedException
@@ -150,7 +150,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * Get custom attributes metadata for the given data interface.
      *
      * @param array $queryParameters {
-     *     @var string $dataInterfaceName
+     *     @var string $dataInterfaceName 
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAddressMetadataV1GetCustomAttributesMetadataGetUnauthorizedException
@@ -165,7 +165,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve all attributes filtered by form code
      *
-     * @param string $formCode
+     * @param string $formCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAddressMetadataV1GetAttributesGetUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\CustomerAddressMetadataV1GetAttributesGetInternalServerErrorException
@@ -179,7 +179,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get Bulk summary data with list of operations items full data.
      *
-     * @param string $bulkUuid
+     * @param string $bulkUuid 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\AsynchronousOperationsBulkStatusV1GetBulkDetailedStatusGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\AsynchronousOperationsBulkStatusV1GetBulkDetailedStatusGetUnauthorizedException
@@ -193,8 +193,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get operations count by bulk uuid and status.
      *
-     * @param string $bulkUuid
-     * @param int $status
+     * @param string $bulkUuid 
+     * @param int $status 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\AsynchronousOperationsBulkStatusV1GetOperationsCountByBulkIdAndStatusGetUnauthorizedException
      *
@@ -207,7 +207,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get Bulk summary data with list of operations items short data.
      *
-     * @param string $bulkUuid
+     * @param string $bulkUuid 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\AsynchronousOperationsBulkStatusV1GetBulkShortStatusGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\AsynchronousOperationsBulkStatusV1GetBulkShortStatusGetUnauthorizedException
@@ -221,16 +221,16 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Add new option for bundle product
      *
-     * @param \Kiboko\Magento\V2\Model\V1BundleProductsOptionsAddPostBody $bundleProductOptionManagementV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1BundleProductsOptionsAddPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\BundleProductOptionManagementV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\BundleProductOptionManagementV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function bundleProductOptionManagementV1SavePost(\Kiboko\Magento\V2\Model\V1BundleProductsOptionsAddPostBody $bundleProductOptionManagementV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function bundleProductOptionManagementV1SavePost(?\Kiboko\Magento\V2\Model\V1BundleProductsOptionsAddPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\BundleProductOptionManagementV1SavePost($bundleProductOptionManagementV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\BundleProductOptionManagementV1SavePost($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -245,24 +245,24 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Add new option for bundle product
      *
-     * @param string $optionId
-     * @param \Kiboko\Magento\V2\Model\V1BundleProductsOptionsOptionIdPutBody $bundleProductOptionManagementV1SavePutBody
+     * @param string $optionId 
+     * @param null|\Kiboko\Magento\V2\Model\V1BundleProductsOptionsOptionIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\BundleProductOptionManagementV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\BundleProductOptionManagementV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function bundleProductOptionManagementV1SavePut(string $optionId, \Kiboko\Magento\V2\Model\V1BundleProductsOptionsOptionIdPutBody $bundleProductOptionManagementV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function bundleProductOptionManagementV1SavePut(string $optionId, ?\Kiboko\Magento\V2\Model\V1BundleProductsOptionsOptionIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\BundleProductOptionManagementV1SavePut($optionId, $bundleProductOptionManagementV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\BundleProductOptionManagementV1SavePut($optionId, $requestBody), $fetch);
     }
     /**
      * Get all children for Bundle product
      *
-     * @param string $productSku
+     * @param string $productSku 
      * @param array $queryParameters {
-     *     @var int $optionId
+     *     @var int $optionId 
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\BundleProductLinkManagementV1GetChildrenGetBadRequestException
@@ -275,41 +275,41 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\BundleProductLinkManagementV1GetChildrenGet($productSku, $queryParameters), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $sku
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1BundleProductsSkuLinksIdPutBody $bundleProductLinkManagementV1SaveChildPutBody
+     * @param string $sku 
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1BundleProductsSkuLinksIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\BundleProductLinkManagementV1SaveChildPutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\BundleProductLinkManagementV1SaveChildPutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function bundleProductLinkManagementV1SaveChildPut(string $sku, string $id, \Kiboko\Magento\V2\Model\V1BundleProductsSkuLinksIdPutBody $bundleProductLinkManagementV1SaveChildPutBody, string $fetch = self::FETCH_OBJECT)
+    public function bundleProductLinkManagementV1SaveChildPut(string $sku, string $id, ?\Kiboko\Magento\V2\Model\V1BundleProductsSkuLinksIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\BundleProductLinkManagementV1SaveChildPut($sku, $id, $bundleProductLinkManagementV1SaveChildPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\BundleProductLinkManagementV1SaveChildPut($sku, $id, $requestBody), $fetch);
     }
     /**
      * Add child product to specified Bundle option by product sku
      *
-     * @param string $sku
-     * @param int $optionId
-     * @param \Kiboko\Magento\V2\Model\V1BundleProductsSkuLinksOptionIdPostBody $bundleProductLinkManagementV1AddChildByProductSkuPostBody
+     * @param string $sku 
+     * @param int $optionId 
+     * @param null|\Kiboko\Magento\V2\Model\V1BundleProductsSkuLinksOptionIdPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\BundleProductLinkManagementV1AddChildByProductSkuPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\BundleProductLinkManagementV1AddChildByProductSkuPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function bundleProductLinkManagementV1AddChildByProductSkuPost(string $sku, int $optionId, \Kiboko\Magento\V2\Model\V1BundleProductsSkuLinksOptionIdPostBody $bundleProductLinkManagementV1AddChildByProductSkuPostBody, string $fetch = self::FETCH_OBJECT)
+    public function bundleProductLinkManagementV1AddChildByProductSkuPost(string $sku, int $optionId, ?\Kiboko\Magento\V2\Model\V1BundleProductsSkuLinksOptionIdPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\BundleProductLinkManagementV1AddChildByProductSkuPost($sku, $optionId, $bundleProductLinkManagementV1AddChildByProductSkuPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\BundleProductLinkManagementV1AddChildByProductSkuPost($sku, $optionId, $requestBody), $fetch);
     }
     /**
      * Get all options for bundle product
      *
-     * @param string $sku
+     * @param string $sku 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\BundleProductOptionRepositoryV1GetListGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\BundleProductOptionRepositoryV1GetListGetUnauthorizedException
@@ -323,8 +323,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Remove bundle option
      *
-     * @param string $sku
-     * @param int $optionId
+     * @param string $sku 
+     * @param int $optionId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\BundleProductOptionRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\BundleProductOptionRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -338,8 +338,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get option for bundle product
      *
-     * @param string $sku
-     * @param int $optionId
+     * @param string $sku 
+     * @param int $optionId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\BundleProductOptionRepositoryV1GetGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\BundleProductOptionRepositoryV1GetGetUnauthorizedException
@@ -353,9 +353,9 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Remove product from Bundle product option
      *
-     * @param string $sku
-     * @param int $optionId
-     * @param string $childSku
+     * @param string $sku 
+     * @param int $optionId 
+     * @param string $childSku 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\BundleProductLinkManagementV1RemoveChildDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\BundleProductLinkManagementV1RemoveChildDeleteUnauthorizedException
@@ -378,10 +378,10 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartManagementV1CreateEmptyCartPost(), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $cartId
-     * @param string $giftCardCode
+     * @param string $cartId 
+     * @param string $giftCardCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftCardAccountGuestGiftCardAccountManagementV1CheckGiftCardGetBadRequestException
      *
@@ -392,23 +392,23 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftCardAccountGuestGiftCardAccountManagementV1CheckGiftCardGet($cartId, $giftCardCode), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $cartId
-     * @param \Kiboko\Magento\V2\Model\V1CartsGuestCartsCartIdGiftCardsPostBody $giftCardAccountGuestGiftCardAccountManagementV1AddGiftCardPostBody
+     * @param string $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsGuestCartsCartIdGiftCardsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftCardAccountGuestGiftCardAccountManagementV1AddGiftCardPost(string $cartId, \Kiboko\Magento\V2\Model\V1CartsGuestCartsCartIdGiftCardsPostBody $giftCardAccountGuestGiftCardAccountManagementV1AddGiftCardPostBody, string $fetch = self::FETCH_OBJECT)
+    public function giftCardAccountGuestGiftCardAccountManagementV1AddGiftCardPost(string $cartId, ?\Kiboko\Magento\V2\Model\V1CartsGuestCartsCartIdGiftCardsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftCardAccountGuestGiftCardAccountManagementV1AddGiftCardPost($cartId, $giftCardAccountGuestGiftCardAccountManagementV1AddGiftCardPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftCardAccountGuestGiftCardAccountManagementV1AddGiftCardPost($cartId, $requestBody), $fetch);
     }
     /**
      * Remove GiftCard Account entity
      *
-     * @param string $cartId
-     * @param string $giftCardCode
+     * @param string $cartId 
+     * @param string $giftCardCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
@@ -452,15 +452,15 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save quote
      *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMinePutBody $quoteCartRepositoryV1SavePutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMinePutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteCartRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCartRepositoryV1SavePut(\Kiboko\Magento\V2\Model\V1CartsMinePutBody $quoteCartRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteCartRepositoryV1SavePut(?\Kiboko\Magento\V2\Model\V1CartsMinePutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartRepositoryV1SavePut($quoteCartRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartRepositoryV1SavePut($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -496,21 +496,21 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Assigns a specified billing address to a specified cart.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineBillingAddressPostBody $quoteBillingAddressManagementV1AssignPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineBillingAddressPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteBillingAddressManagementV1AssignPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\QuoteBillingAddressManagementV1AssignPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteBillingAddressManagementV1AssignPost(\Kiboko\Magento\V2\Model\V1CartsMineBillingAddressPostBody $quoteBillingAddressManagementV1AssignPostBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteBillingAddressManagementV1AssignPost(?\Kiboko\Magento\V2\Model\V1CartsMineBillingAddressPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteBillingAddressManagementV1AssignPost($quoteBillingAddressManagementV1AssignPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteBillingAddressManagementV1AssignPost($requestBody), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $giftCardCode
+     * @param string $giftCardCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftCardAccountGiftCardAccountManagementV1CheckGiftCardGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\GiftCardAccountGiftCardAccountManagementV1CheckGiftCardGetUnauthorizedException
@@ -522,31 +522,31 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftCardAccountGiftCardAccountManagementV1CheckGiftCardGet($giftCardCode), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineCheckoutFieldsPostBody $temandoShippingQuoteCartCheckoutFieldManagementV1SaveCheckoutFieldsPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineCheckoutFieldsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TemandoShippingQuoteCartCheckoutFieldManagementV1SaveCheckoutFieldsPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\TemandoShippingQuoteCartCheckoutFieldManagementV1SaveCheckoutFieldsPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function temandoShippingQuoteCartCheckoutFieldManagementV1SaveCheckoutFieldsPost(\Kiboko\Magento\V2\Model\V1CartsMineCheckoutFieldsPostBody $temandoShippingQuoteCartCheckoutFieldManagementV1SaveCheckoutFieldsPostBody, string $fetch = self::FETCH_OBJECT)
+    public function temandoShippingQuoteCartCheckoutFieldManagementV1SaveCheckoutFieldsPost(?\Kiboko\Magento\V2\Model\V1CartsMineCheckoutFieldsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingQuoteCartCheckoutFieldManagementV1SaveCheckoutFieldsPost($temandoShippingQuoteCartCheckoutFieldManagementV1SaveCheckoutFieldsPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingQuoteCartCheckoutFieldManagementV1SaveCheckoutFieldsPost($requestBody), $fetch);
     }
     /**
      * Set shipping/billing methods and additional data for cart and collect totals.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineCollectTotalsPutBody $quoteCartTotalManagementV1CollectTotalsPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineCollectTotalsPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteCartTotalManagementV1CollectTotalsPutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataTotalsInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCartTotalManagementV1CollectTotalsPut(\Kiboko\Magento\V2\Model\V1CartsMineCollectTotalsPutBody $quoteCartTotalManagementV1CollectTotalsPutBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteCartTotalManagementV1CollectTotalsPut(?\Kiboko\Magento\V2\Model\V1CartsMineCollectTotalsPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartTotalManagementV1CollectTotalsPut($quoteCartTotalManagementV1CollectTotalsPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartTotalManagementV1CollectTotalsPut($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -560,18 +560,18 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingCollectionPointCartCollectionPointManagementV1DeleteSearchRequestDelete(), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineCollectionPointSearchRequestPutBody $temandoShippingCollectionPointCartCollectionPointManagementV1SaveSearchRequestPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineCollectionPointSearchRequestPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TemandoShippingCollectionPointCartCollectionPointManagementV1SaveSearchRequestPutUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\TemandoShippingCollectionPointCartCollectionPointManagementV1SaveSearchRequestPutInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\TemandoShippingDataCollectionPointSearchRequestInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function temandoShippingCollectionPointCartCollectionPointManagementV1SaveSearchRequestPut(\Kiboko\Magento\V2\Model\V1CartsMineCollectionPointSearchRequestPutBody $temandoShippingCollectionPointCartCollectionPointManagementV1SaveSearchRequestPutBody, string $fetch = self::FETCH_OBJECT)
+    public function temandoShippingCollectionPointCartCollectionPointManagementV1SaveSearchRequestPut(?\Kiboko\Magento\V2\Model\V1CartsMineCollectionPointSearchRequestPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingCollectionPointCartCollectionPointManagementV1SaveSearchRequestPut($temandoShippingCollectionPointCartCollectionPointManagementV1SaveSearchRequestPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingCollectionPointCartCollectionPointManagementV1SaveSearchRequestPut($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -584,18 +584,18 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingCollectionPointCartCollectionPointManagementV1GetCollectionPointsGet(), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineCollectionPointSelectPostBody $temandoShippingCollectionPointCartCollectionPointManagementV1SelectCollectionPointPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineCollectionPointSelectPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TemandoShippingCollectionPointCartCollectionPointManagementV1SelectCollectionPointPostUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\TemandoShippingCollectionPointCartCollectionPointManagementV1SelectCollectionPointPostInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function temandoShippingCollectionPointCartCollectionPointManagementV1SelectCollectionPointPost(\Kiboko\Magento\V2\Model\V1CartsMineCollectionPointSelectPostBody $temandoShippingCollectionPointCartCollectionPointManagementV1SelectCollectionPointPostBody, string $fetch = self::FETCH_OBJECT)
+    public function temandoShippingCollectionPointCartCollectionPointManagementV1SelectCollectionPointPost(?\Kiboko\Magento\V2\Model\V1CartsMineCollectionPointSelectPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingCollectionPointCartCollectionPointManagementV1SelectCollectionPointPost($temandoShippingCollectionPointCartCollectionPointManagementV1SelectCollectionPointPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingCollectionPointCartCollectionPointManagementV1SelectCollectionPointPost($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -636,42 +636,42 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Handle selected delivery option.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineDeliveryOptionPostBody $temandoShippingQuoteCartDeliveryOptionManagementV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineDeliveryOptionPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TemandoShippingQuoteCartDeliveryOptionManagementV1SavePostUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\TemandoShippingQuoteCartDeliveryOptionManagementV1SavePostInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function temandoShippingQuoteCartDeliveryOptionManagementV1SavePost(\Kiboko\Magento\V2\Model\V1CartsMineDeliveryOptionPostBody $temandoShippingQuoteCartDeliveryOptionManagementV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function temandoShippingQuoteCartDeliveryOptionManagementV1SavePost(?\Kiboko\Magento\V2\Model\V1CartsMineDeliveryOptionPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingQuoteCartDeliveryOptionManagementV1SavePost($temandoShippingQuoteCartDeliveryOptionManagementV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingQuoteCartDeliveryOptionManagementV1SavePost($requestBody), $fetch);
     }
     /**
      * Estimate shipping by address and return list of available shipping methods
      *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineEstimateShippingMethodsPostBody $quoteShipmentEstimationV1EstimateByExtendedAddressPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineEstimateShippingMethodsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteShipmentEstimationV1EstimateByExtendedAddressPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataShippingMethodInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteShipmentEstimationV1EstimateByExtendedAddressPost(\Kiboko\Magento\V2\Model\V1CartsMineEstimateShippingMethodsPostBody $quoteShipmentEstimationV1EstimateByExtendedAddressPostBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteShipmentEstimationV1EstimateByExtendedAddressPost(?\Kiboko\Magento\V2\Model\V1CartsMineEstimateShippingMethodsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteShipmentEstimationV1EstimateByExtendedAddressPost($quoteShipmentEstimationV1EstimateByExtendedAddressPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteShipmentEstimationV1EstimateByExtendedAddressPost($requestBody), $fetch);
     }
     /**
      * Estimate shipping
      *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineEstimateShippingMethodsByAddressIdPostBody $quoteShippingMethodManagementV1EstimateByAddressIdPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineEstimateShippingMethodsByAddressIdPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteShippingMethodManagementV1EstimateByAddressIdPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataShippingMethodInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteShippingMethodManagementV1EstimateByAddressIdPost(\Kiboko\Magento\V2\Model\V1CartsMineEstimateShippingMethodsByAddressIdPostBody $quoteShippingMethodManagementV1EstimateByAddressIdPostBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteShippingMethodManagementV1EstimateByAddressIdPost(?\Kiboko\Magento\V2\Model\V1CartsMineEstimateShippingMethodsByAddressIdPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteShippingMethodManagementV1EstimateByAddressIdPost($quoteShippingMethodManagementV1EstimateByAddressIdPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteShippingMethodManagementV1EstimateByAddressIdPost($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -686,16 +686,16 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Set the gift message for an entire order.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineGiftMessagePostBody $giftMessageCartRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineGiftMessagePostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftMessageCartRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\GiftMessageCartRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftMessageCartRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1CartsMineGiftMessagePostBody $giftMessageCartRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function giftMessageCartRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1CartsMineGiftMessagePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftMessageCartRepositoryV1SavePost($giftMessageCartRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftMessageCartRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Return the gift message for a specified item in a specified shopping cart.
@@ -715,34 +715,34 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * Set the gift message for a specified item in a specified shopping cart.
      *
      * @param int $itemId The item ID.
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineGiftMessageItemIdPostBody $giftMessageItemRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineGiftMessageItemIdPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftMessageItemRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\GiftMessageItemRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftMessageItemRepositoryV1SavePost(int $itemId, \Kiboko\Magento\V2\Model\V1CartsMineGiftMessageItemIdPostBody $giftMessageItemRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function giftMessageItemRepositoryV1SavePost(int $itemId, ?\Kiboko\Magento\V2\Model\V1CartsMineGiftMessageItemIdPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftMessageItemRepositoryV1SavePost($itemId, $giftMessageItemRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftMessageItemRepositoryV1SavePost($itemId, $requestBody), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineGiftCardsPostBody $giftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineGiftCardsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPost(\Kiboko\Magento\V2\Model\V1CartsMineGiftCardsPostBody $giftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPostBody, string $fetch = self::FETCH_OBJECT)
+    public function giftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPost(?\Kiboko\Magento\V2\Model\V1CartsMineGiftCardsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPost($giftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPost($requestBody), $fetch);
     }
     /**
      * Remove GiftCard Account entity
      *
-     * @param string $giftCardCode
+     * @param string $giftCardCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftCardAccountGiftCardAccountManagementV1DeleteByQuoteIdDeleteUnauthorizedException
      *
@@ -766,16 +766,16 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Add/update the specified cart item.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineItemsPostBody $quoteCartItemRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineItemsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteCartItemRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\QuoteCartItemRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataCartItemInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCartItemRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1CartsMineItemsPostBody $quoteCartItemRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteCartItemRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1CartsMineItemsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartItemRepositoryV1SavePost($quoteCartItemRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartItemRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Removes the specified item from the specified cart.
@@ -794,31 +794,31 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Add/update the specified cart item.
      *
-     * @param string $itemId
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineItemsItemIdPutBody $quoteCartItemRepositoryV1SavePutBody
+     * @param string $itemId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineItemsItemIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteCartItemRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\QuoteCartItemRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataCartItemInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCartItemRepositoryV1SavePut(string $itemId, \Kiboko\Magento\V2\Model\V1CartsMineItemsItemIdPutBody $quoteCartItemRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteCartItemRepositoryV1SavePut(string $itemId, ?\Kiboko\Magento\V2\Model\V1CartsMineItemsItemIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartItemRepositoryV1SavePut($itemId, $quoteCartItemRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartItemRepositoryV1SavePut($itemId, $requestBody), $fetch);
     }
     /**
      * Places an order for a specified cart.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineOrderPutBody $quoteCartManagementV1PlaceOrderPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineOrderPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteCartManagementV1PlaceOrderPutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\QuoteCartManagementV1PlaceOrderPutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCartManagementV1PlaceOrderPut(\Kiboko\Magento\V2\Model\V1CartsMineOrderPutBody $quoteCartManagementV1PlaceOrderPutBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteCartManagementV1PlaceOrderPut(?\Kiboko\Magento\V2\Model\V1CartsMineOrderPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartManagementV1PlaceOrderPut($quoteCartManagementV1PlaceOrderPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartManagementV1PlaceOrderPut($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -833,16 +833,16 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Set payment information and place order for a specified cart.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMinePaymentInformationPostBody $checkoutPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMinePaymentInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CheckoutPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CheckoutPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function checkoutPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPost(\Kiboko\Magento\V2\Model\V1CartsMinePaymentInformationPostBody $checkoutPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBody, string $fetch = self::FETCH_OBJECT)
+    public function checkoutPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPost(?\Kiboko\Magento\V2\Model\V1CartsMinePaymentInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPost($checkoutPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPost($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -869,43 +869,43 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Adds a specified payment method to a specified shopping cart.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineSelectedPaymentMethodPutBody $quotePaymentMethodManagementV1SetPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineSelectedPaymentMethodPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuotePaymentMethodManagementV1SetPutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\QuotePaymentMethodManagementV1SetPutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quotePaymentMethodManagementV1SetPut(\Kiboko\Magento\V2\Model\V1CartsMineSelectedPaymentMethodPutBody $quotePaymentMethodManagementV1SetPutBody, string $fetch = self::FETCH_OBJECT)
+    public function quotePaymentMethodManagementV1SetPut(?\Kiboko\Magento\V2\Model\V1CartsMineSelectedPaymentMethodPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuotePaymentMethodManagementV1SetPut($quotePaymentMethodManagementV1SetPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuotePaymentMethodManagementV1SetPut($requestBody), $fetch);
     }
     /**
      * Set payment information for a specified cart.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineSetPaymentInformationPostBody $checkoutPaymentInformationManagementV1SavePaymentInformationPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineSetPaymentInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CheckoutPaymentInformationManagementV1SavePaymentInformationPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CheckoutPaymentInformationManagementV1SavePaymentInformationPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function checkoutPaymentInformationManagementV1SavePaymentInformationPost(\Kiboko\Magento\V2\Model\V1CartsMineSetPaymentInformationPostBody $checkoutPaymentInformationManagementV1SavePaymentInformationPostBody, string $fetch = self::FETCH_OBJECT)
+    public function checkoutPaymentInformationManagementV1SavePaymentInformationPost(?\Kiboko\Magento\V2\Model\V1CartsMineSetPaymentInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutPaymentInformationManagementV1SavePaymentInformationPost($checkoutPaymentInformationManagementV1SavePaymentInformationPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutPaymentInformationManagementV1SavePaymentInformationPost($requestBody), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineShippingInformationPostBody $checkoutShippingInformationManagementV1SaveAddressInformationPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineShippingInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CheckoutShippingInformationManagementV1SaveAddressInformationPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CheckoutDataPaymentDetailsInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function checkoutShippingInformationManagementV1SaveAddressInformationPost(\Kiboko\Magento\V2\Model\V1CartsMineShippingInformationPostBody $checkoutShippingInformationManagementV1SaveAddressInformationPostBody, string $fetch = self::FETCH_OBJECT)
+    public function checkoutShippingInformationManagementV1SaveAddressInformationPost(?\Kiboko\Magento\V2\Model\V1CartsMineShippingInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutShippingInformationManagementV1SaveAddressInformationPost($checkoutShippingInformationManagementV1SaveAddressInformationPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutShippingInformationManagementV1SaveAddressInformationPost($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -932,18 +932,18 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Calculate quote totals based on address and shipping method.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CartsMineTotalsInformationPostBody $checkoutTotalsInformationManagementV1CalculatePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsMineTotalsInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CheckoutTotalsInformationManagementV1CalculatePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataTotalsInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function checkoutTotalsInformationManagementV1CalculatePost(\Kiboko\Magento\V2\Model\V1CartsMineTotalsInformationPostBody $checkoutTotalsInformationManagementV1CalculatePostBody, string $fetch = self::FETCH_OBJECT)
+    public function checkoutTotalsInformationManagementV1CalculatePost(?\Kiboko\Magento\V2\Model\V1CartsMineTotalsInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutTotalsInformationManagementV1CalculatePost($checkoutTotalsInformationManagementV1CalculatePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutTotalsInformationManagementV1CalculatePost($requestBody), $fetch);
     }
     /**
-     * Enables administrative users to list carts that match specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included.  See https://devdocs.magento.com/codelinks/attributes.html#CartRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Enables administrative users to list carts that match specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included.  See http://devdocs.magento.com/codelinks/attributes.html#CartRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param array $queryParameters {
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
@@ -966,7 +966,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Enables an administrative user to return information for a specified cart.
      *
-     * @param int $cartId
+     * @param int $cartId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteCartRepositoryV1GetGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\QuoteCartRepositoryV1GetGetUnauthorizedException
@@ -981,72 +981,72 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * Assigns a specified customer to a specified shopping cart.
      *
      * @param int $cartId The cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1CartsCartIdPutBody $quoteCartManagementV1AssignCustomerPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsCartIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteCartManagementV1AssignCustomerPutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCartManagementV1AssignCustomerPut(int $cartId, \Kiboko\Magento\V2\Model\V1CartsCartIdPutBody $quoteCartManagementV1AssignCustomerPutBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteCartManagementV1AssignCustomerPut(int $cartId, ?\Kiboko\Magento\V2\Model\V1CartsCartIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartManagementV1AssignCustomerPut($cartId, $quoteCartManagementV1AssignCustomerPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartManagementV1AssignCustomerPut($cartId, $requestBody), $fetch);
     }
     /**
      * Returns the billing address for a specified quote.
      *
      * @param int $cartId The cart ID.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuoteBillingAddressManagementV1GetGetBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuoteBillingAddressManagementV1GetGetUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdBillingAddressBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdBillingAddressUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataAddressInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteBillingAddressManagementV1GetGet(int $cartId, string $fetch = self::FETCH_OBJECT)
+    public function getV1CartsByCartIdBillingAddress(int $cartId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteBillingAddressManagementV1GetGet($cartId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GetV1CartsByCartIdBillingAddress($cartId), $fetch);
     }
     /**
      * Assigns a specified billing address to a specified cart.
      *
      * @param int $cartId The cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1CartsCartIdBillingAddressPostBody $quoteBillingAddressManagementV1AssignPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsCartIdBillingAddressPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuoteBillingAddressManagementV1AssignPostBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuoteBillingAddressManagementV1AssignPostUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\PostV1CartsByCartIdBillingAddressBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\PostV1CartsByCartIdBillingAddressUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteBillingAddressManagementV1AssignPost(int $cartId, \Kiboko\Magento\V2\Model\V1CartsCartIdBillingAddressPostBody $quoteBillingAddressManagementV1AssignPostBody, string $fetch = self::FETCH_OBJECT)
+    public function postV1CartsByCartIdBillingAddress(int $cartId, ?\Kiboko\Magento\V2\Model\V1CartsCartIdBillingAddressPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteBillingAddressManagementV1AssignPost($cartId, $quoteBillingAddressManagementV1AssignPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\PostV1CartsByCartIdBillingAddress($cartId, $requestBody), $fetch);
     }
     /**
      * Deletes a coupon from a specified cart.
      *
      * @param int $cartId The cart ID.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCouponManagementV1RemoveDeleteBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCouponManagementV1RemoveDeleteUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\DeleteV1CartsByCartIdCouponBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\DeleteV1CartsByCartIdCouponUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCouponManagementV1RemoveDelete(int $cartId, string $fetch = self::FETCH_OBJECT)
+    public function deleteV1CartsByCartIdCoupon(int $cartId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCouponManagementV1RemoveDelete($cartId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\DeleteV1CartsByCartIdCoupon($cartId), $fetch);
     }
     /**
      * Returns information for a coupon in a specified cart.
      *
      * @param int $cartId The cart ID.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCouponManagementV1GetGetBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCouponManagementV1GetGetUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdCouponBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdCouponUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCouponManagementV1GetGet(int $cartId, string $fetch = self::FETCH_OBJECT)
+    public function getV1CartsByCartIdCoupon(int $cartId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCouponManagementV1GetGet($cartId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GetV1CartsByCartIdCoupon($cartId), $fetch);
     }
     /**
      * Adds a coupon by code to a specified cart.
@@ -1054,70 +1054,70 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * @param int $cartId The cart ID.
      * @param string $couponCode The coupon code data.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCouponManagementV1SetPutBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCouponManagementV1SetPutUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\PutV1CartsByCartIdCouponByCouponCodeBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\PutV1CartsByCartIdCouponByCouponCodeUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCouponManagementV1SetPut(int $cartId, string $couponCode, string $fetch = self::FETCH_OBJECT)
+    public function putV1CartsByCartIdCouponByCouponCode(int $cartId, string $couponCode, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCouponManagementV1SetPut($cartId, $couponCode), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\PutV1CartsByCartIdCouponByCouponCode($cartId, $couponCode), $fetch);
     }
     /**
      * Estimate shipping by address and return list of available shipping methods
      *
-     * @param string $cartId
-     * @param \Kiboko\Magento\V2\Model\V1CartsCartIdEstimateShippingMethodsPostBody $quoteShipmentEstimationV1EstimateByExtendedAddressPostBody
+     * @param string $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsCartIdEstimateShippingMethodsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuoteShipmentEstimationV1EstimateByExtendedAddressPostUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\PostV1CartsByCartIdEstimateShippingMethodsUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataShippingMethodInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteShipmentEstimationV1EstimateByExtendedAddressPost(string $cartId, \Kiboko\Magento\V2\Model\V1CartsCartIdEstimateShippingMethodsPostBody $quoteShipmentEstimationV1EstimateByExtendedAddressPostBody, string $fetch = self::FETCH_OBJECT)
+    public function postV1CartsByCartIdEstimateShippingMethods(string $cartId, ?\Kiboko\Magento\V2\Model\V1CartsCartIdEstimateShippingMethodsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteShipmentEstimationV1EstimateByExtendedAddressPost($cartId, $quoteShipmentEstimationV1EstimateByExtendedAddressPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\PostV1CartsByCartIdEstimateShippingMethods($cartId, $requestBody), $fetch);
     }
     /**
      * Estimate shipping
      *
      * @param int $cartId The shopping cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1CartsCartIdEstimateShippingMethodsByAddressIdPostBody $quoteShippingMethodManagementV1EstimateByAddressIdPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsCartIdEstimateShippingMethodsByAddressIdPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuoteShippingMethodManagementV1EstimateByAddressIdPostUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\PostV1CartsByCartIdEstimateShippingMethodsByAddressIdUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataShippingMethodInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteShippingMethodManagementV1EstimateByAddressIdPost(int $cartId, \Kiboko\Magento\V2\Model\V1CartsCartIdEstimateShippingMethodsByAddressIdPostBody $quoteShippingMethodManagementV1EstimateByAddressIdPostBody, string $fetch = self::FETCH_OBJECT)
+    public function postV1CartsByCartIdEstimateShippingMethodsByAddressId(int $cartId, ?\Kiboko\Magento\V2\Model\V1CartsCartIdEstimateShippingMethodsByAddressIdPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteShippingMethodManagementV1EstimateByAddressIdPost($cartId, $quoteShippingMethodManagementV1EstimateByAddressIdPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\PostV1CartsByCartIdEstimateShippingMethodsByAddressId($cartId, $requestBody), $fetch);
     }
     /**
      * Return the gift message for a specified order.
      *
      * @param int $cartId The shopping cart ID.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\GiftMessageCartRepositoryV1GetGetUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdGiftMessageUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\GiftMessageDataMessageInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftMessageCartRepositoryV1GetGet(int $cartId, string $fetch = self::FETCH_OBJECT)
+    public function getV1CartsByCartIdGiftMessage(int $cartId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftMessageCartRepositoryV1GetGet($cartId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GetV1CartsByCartIdGiftMessage($cartId), $fetch);
     }
     /**
      * Set the gift message for an entire order.
      *
      * @param int $cartId The cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1CartsCartIdGiftMessagePostBody $giftMessageCartRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsCartIdGiftMessagePostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\GiftMessageCartRepositoryV1SavePostBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\GiftMessageCartRepositoryV1SavePostUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\PostV1CartsByCartIdGiftMessageBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\PostV1CartsByCartIdGiftMessageUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftMessageCartRepositoryV1SavePost(int $cartId, \Kiboko\Magento\V2\Model\V1CartsCartIdGiftMessagePostBody $giftMessageCartRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function postV1CartsByCartIdGiftMessage(int $cartId, ?\Kiboko\Magento\V2\Model\V1CartsCartIdGiftMessagePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftMessageCartRepositoryV1SavePost($cartId, $giftMessageCartRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\PostV1CartsByCartIdGiftMessage($cartId, $requestBody), $fetch);
     }
     /**
      * Return the gift message for a specified item in a specified shopping cart.
@@ -1125,72 +1125,72 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * @param int $cartId The shopping cart ID.
      * @param int $itemId The item ID.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\GiftMessageItemRepositoryV1GetGetBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\GiftMessageItemRepositoryV1GetGetUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdGiftMessageByItemIdBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdGiftMessageByItemIdUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\GiftMessageDataMessageInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftMessageItemRepositoryV1GetGet(int $cartId, int $itemId, string $fetch = self::FETCH_OBJECT)
+    public function getV1CartsByCartIdGiftMessageByItemId(int $cartId, int $itemId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftMessageItemRepositoryV1GetGet($cartId, $itemId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GetV1CartsByCartIdGiftMessageByItemId($cartId, $itemId), $fetch);
     }
     /**
      * Set the gift message for a specified item in a specified shopping cart.
      *
      * @param int $cartId The cart ID.
      * @param int $itemId The item ID.
-     * @param \Kiboko\Magento\V2\Model\V1CartsCartIdGiftMessageItemIdPostBody $giftMessageItemRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsCartIdGiftMessageItemIdPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\GiftMessageItemRepositoryV1SavePostBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\GiftMessageItemRepositoryV1SavePostUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\PostV1CartsByCartIdGiftMessageByItemIdBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\PostV1CartsByCartIdGiftMessageByItemIdUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftMessageItemRepositoryV1SavePost(int $cartId, int $itemId, \Kiboko\Magento\V2\Model\V1CartsCartIdGiftMessageItemIdPostBody $giftMessageItemRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function postV1CartsByCartIdGiftMessageByItemId(int $cartId, int $itemId, ?\Kiboko\Magento\V2\Model\V1CartsCartIdGiftMessageItemIdPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftMessageItemRepositoryV1SavePost($cartId, $itemId, $giftMessageItemRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\PostV1CartsByCartIdGiftMessageByItemId($cartId, $itemId, $requestBody), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param int $cartId
-     * @param \Kiboko\Magento\V2\Model\V1CartsCartIdGiftCardsPutBody $giftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPutBody
+     * @param int $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsCartIdGiftCardsPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPut(int $cartId, \Kiboko\Magento\V2\Model\V1CartsCartIdGiftCardsPutBody $giftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPutBody, string $fetch = self::FETCH_OBJECT)
+    public function giftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPut(int $cartId, ?\Kiboko\Magento\V2\Model\V1CartsCartIdGiftCardsPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPut($cartId, $giftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPut($cartId, $requestBody), $fetch);
     }
     /**
      * Remove GiftCard Account entity
      *
-     * @param int $cartId
-     * @param string $giftCardCode
+     * @param int $cartId 
+     * @param string $giftCardCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\GiftCardAccountGiftCardAccountManagementV1DeleteByQuoteIdDeleteUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\DeleteV1CartsByCartIdGiftCardByGiftCardCodeUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftCardAccountGiftCardAccountManagementV1DeleteByQuoteIdDelete(int $cartId, string $giftCardCode, string $fetch = self::FETCH_OBJECT)
+    public function deleteV1CartsByCartIdGiftCardByGiftCardCode(int $cartId, string $giftCardCode, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftCardAccountGiftCardAccountManagementV1DeleteByQuoteIdDelete($cartId, $giftCardCode), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\DeleteV1CartsByCartIdGiftCardByGiftCardCode($cartId, $giftCardCode), $fetch);
     }
     /**
      * Lists items that are assigned to a specified cart.
      *
      * @param int $cartId The cart ID.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCartItemRepositoryV1GetListGetBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCartItemRepositoryV1GetListGetUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdItemsBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdItemsUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataCartItemInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCartItemRepositoryV1GetListGet(int $cartId, string $fetch = self::FETCH_OBJECT)
+    public function getV1CartsByCartIdItems(int $cartId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartItemRepositoryV1GetListGet($cartId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GetV1CartsByCartIdItems($cartId), $fetch);
     }
     /**
      * Removes the specified item from the specified cart.
@@ -1198,149 +1198,149 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * @param int $cartId The cart ID.
      * @param int $itemId The item ID of the item to be removed.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCartItemRepositoryV1DeleteByIdDeleteBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCartItemRepositoryV1DeleteByIdDeleteUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\DeleteV1CartsByCartIdItemByItemIdBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\DeleteV1CartsByCartIdItemByItemIdUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCartItemRepositoryV1DeleteByIdDelete(int $cartId, int $itemId, string $fetch = self::FETCH_OBJECT)
+    public function deleteV1CartsByCartIdItemByItemId(int $cartId, int $itemId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartItemRepositoryV1DeleteByIdDelete($cartId, $itemId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\DeleteV1CartsByCartIdItemByItemId($cartId, $itemId), $fetch);
     }
     /**
      * Add/update the specified cart item.
      *
-     * @param string $cartId
-     * @param string $itemId
-     * @param \Kiboko\Magento\V2\Model\V1CartsCartIdItemsItemIdPutBody $quoteCartItemRepositoryV1SavePutBody
+     * @param string $cartId 
+     * @param string $itemId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsCartIdItemsItemIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCartItemRepositoryV1SavePutBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCartItemRepositoryV1SavePutUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\PutV1CartsByCartIdItemByItemIdBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\PutV1CartsByCartIdItemByItemIdUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataCartItemInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCartItemRepositoryV1SavePut(string $cartId, string $itemId, \Kiboko\Magento\V2\Model\V1CartsCartIdItemsItemIdPutBody $quoteCartItemRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function putV1CartsByCartIdItemByItemId(string $cartId, string $itemId, ?\Kiboko\Magento\V2\Model\V1CartsCartIdItemsItemIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartItemRepositoryV1SavePut($cartId, $itemId, $quoteCartItemRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\PutV1CartsByCartIdItemByItemId($cartId, $itemId, $requestBody), $fetch);
     }
     /**
      * Places an order for a specified cart.
      *
      * @param int $cartId The cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1CartsCartIdOrderPutBody $quoteCartManagementV1PlaceOrderPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsCartIdOrderPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCartManagementV1PlaceOrderPutBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCartManagementV1PlaceOrderPutUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\PutV1CartsByCartIdOrderBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\PutV1CartsByCartIdOrderUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCartManagementV1PlaceOrderPut(int $cartId, \Kiboko\Magento\V2\Model\V1CartsCartIdOrderPutBody $quoteCartManagementV1PlaceOrderPutBody, string $fetch = self::FETCH_OBJECT)
+    public function putV1CartsByCartIdOrder(int $cartId, ?\Kiboko\Magento\V2\Model\V1CartsCartIdOrderPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartManagementV1PlaceOrderPut($cartId, $quoteCartManagementV1PlaceOrderPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\PutV1CartsByCartIdOrder($cartId, $requestBody), $fetch);
     }
     /**
-     * Lists available payment methods for a specified shopping cart. This call returns an array of objects, but detailed information about each object’s attributes might not be included.  See https://devdocs.magento.com/codelinks/attributes.html#PaymentMethodManagementInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Lists available payment methods for a specified shopping cart. This call returns an array of objects, but detailed information about each object’s attributes might not be included.  See http://devdocs.magento.com/codelinks/attributes.html#PaymentMethodManagementInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param int $cartId The cart ID.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuotePaymentMethodManagementV1GetListGetBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuotePaymentMethodManagementV1GetListGetUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdPaymentMethodsBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdPaymentMethodsUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataPaymentMethodInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quotePaymentMethodManagementV1GetListGet(int $cartId, string $fetch = self::FETCH_OBJECT)
+    public function getV1CartsByCartIdPaymentMethods(int $cartId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuotePaymentMethodManagementV1GetListGet($cartId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GetV1CartsByCartIdPaymentMethods($cartId), $fetch);
     }
     /**
      * Returns the payment method for a specified shopping cart.
      *
      * @param int $cartId The cart ID.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuotePaymentMethodManagementV1GetGetBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuotePaymentMethodManagementV1GetGetUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdSelectedPaymentMethodBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdSelectedPaymentMethodUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataPaymentInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quotePaymentMethodManagementV1GetGet(int $cartId, string $fetch = self::FETCH_OBJECT)
+    public function getV1CartsByCartIdSelectedPaymentMethod(int $cartId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuotePaymentMethodManagementV1GetGet($cartId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GetV1CartsByCartIdSelectedPaymentMethod($cartId), $fetch);
     }
     /**
      * Adds a specified payment method to a specified shopping cart.
      *
      * @param int $cartId The cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1CartsCartIdSelectedPaymentMethodPutBody $quotePaymentMethodManagementV1SetPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsCartIdSelectedPaymentMethodPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuotePaymentMethodManagementV1SetPutBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuotePaymentMethodManagementV1SetPutUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\PutV1CartsByCartIdSelectedPaymentMethodBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\PutV1CartsByCartIdSelectedPaymentMethodUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quotePaymentMethodManagementV1SetPut(int $cartId, \Kiboko\Magento\V2\Model\V1CartsCartIdSelectedPaymentMethodPutBody $quotePaymentMethodManagementV1SetPutBody, string $fetch = self::FETCH_OBJECT)
+    public function putV1CartsByCartIdSelectedPaymentMethod(int $cartId, ?\Kiboko\Magento\V2\Model\V1CartsCartIdSelectedPaymentMethodPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuotePaymentMethodManagementV1SetPut($cartId, $quotePaymentMethodManagementV1SetPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\PutV1CartsByCartIdSelectedPaymentMethod($cartId, $requestBody), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param int $cartId
-     * @param \Kiboko\Magento\V2\Model\V1CartsCartIdShippingInformationPostBody $checkoutShippingInformationManagementV1SaveAddressInformationPostBody
+     * @param int $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsCartIdShippingInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\CheckoutShippingInformationManagementV1SaveAddressInformationPostUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\PostV1CartsByCartIdShippingInformationUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CheckoutDataPaymentDetailsInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function checkoutShippingInformationManagementV1SaveAddressInformationPost(int $cartId, \Kiboko\Magento\V2\Model\V1CartsCartIdShippingInformationPostBody $checkoutShippingInformationManagementV1SaveAddressInformationPostBody, string $fetch = self::FETCH_OBJECT)
+    public function postV1CartsByCartIdShippingInformation(int $cartId, ?\Kiboko\Magento\V2\Model\V1CartsCartIdShippingInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutShippingInformationManagementV1SaveAddressInformationPost($cartId, $checkoutShippingInformationManagementV1SaveAddressInformationPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\PostV1CartsByCartIdShippingInformation($cartId, $requestBody), $fetch);
     }
     /**
      * Lists applicable shipping methods for a specified quote.
      *
      * @param int $cartId The shopping cart ID.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuoteShippingMethodManagementV1GetListGetBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuoteShippingMethodManagementV1GetListGetUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdShippingMethodsBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdShippingMethodsUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataShippingMethodInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteShippingMethodManagementV1GetListGet(int $cartId, string $fetch = self::FETCH_OBJECT)
+    public function getV1CartsByCartIdShippingMethods(int $cartId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteShippingMethodManagementV1GetListGet($cartId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GetV1CartsByCartIdShippingMethods($cartId), $fetch);
     }
     /**
      * Returns quote totals data for a specified cart.
      *
      * @param int $cartId The cart ID.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCartTotalRepositoryV1GetGetBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCartTotalRepositoryV1GetGetUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdTotalBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CartsByCartIdTotalUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataTotalsInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCartTotalRepositoryV1GetGet(int $cartId, string $fetch = self::FETCH_OBJECT)
+    public function getV1CartsByCartIdTotal(int $cartId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartTotalRepositoryV1GetGet($cartId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GetV1CartsByCartIdTotal($cartId), $fetch);
     }
     /**
      * Calculate quote totals based on address and shipping method.
      *
-     * @param int $cartId
-     * @param \Kiboko\Magento\V2\Model\V1CartsCartIdTotalsInformationPostBody $checkoutTotalsInformationManagementV1CalculatePostBody
+     * @param int $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsCartIdTotalsInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\CheckoutTotalsInformationManagementV1CalculatePostUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\PostV1CartsByCartIdTotalsInformationUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataTotalsInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function checkoutTotalsInformationManagementV1CalculatePost(int $cartId, \Kiboko\Magento\V2\Model\V1CartsCartIdTotalsInformationPostBody $checkoutTotalsInformationManagementV1CalculatePostBody, string $fetch = self::FETCH_OBJECT)
+    public function postV1CartsByCartIdTotalsInformation(int $cartId, ?\Kiboko\Magento\V2\Model\V1CartsCartIdTotalsInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutTotalsInformationManagementV1CalculatePost($cartId, $checkoutTotalsInformationManagementV1CalculatePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\PostV1CartsByCartIdTotalsInformation($cartId, $requestBody), $fetch);
     }
     /**
      * Return GiftCard Account cards
      *
-     * @param int $quoteId
+     * @param int $quoteId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftCardAccountGiftCardAccountManagementV1GetListByQuoteIdGetUnauthorizedException
      *
@@ -1353,24 +1353,24 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Add/update the specified cart item.
      *
-     * @param string $quoteId
-     * @param \Kiboko\Magento\V2\Model\V1CartsQuoteIdItemsPostBody $quoteCartItemRepositoryV1SavePostBody
+     * @param string $quoteId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CartsQuoteIdItemsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCartItemRepositoryV1SavePostBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCartItemRepositoryV1SavePostUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\PostV1CartsByQuoteIdItemBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\PostV1CartsByQuoteIdItemUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataCartItemInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCartItemRepositoryV1SavePost(string $quoteId, \Kiboko\Magento\V2\Model\V1CartsQuoteIdItemsPostBody $quoteCartItemRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function postV1CartsByQuoteIdItem(string $quoteId, ?\Kiboko\Magento\V2\Model\V1CartsQuoteIdItemsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartItemRepositoryV1SavePost($quoteId, $quoteCartItemRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\PostV1CartsByQuoteIdItem($quoteId, $requestBody), $fetch);
     }
     /**
      * Retrieve list of categories
      *
      * @param array $queryParameters {
-     *     @var int $rootCategoryId
-     *     @var int $depth
+     *     @var int $rootCategoryId 
+     *     @var int $depth 
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryManagementV1GetTreeGetBadRequestException
@@ -1385,16 +1385,16 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create category service
      *
-     * @param \Kiboko\Magento\V2\Model\V1CategoriesPostBody $catalogCategoryRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CategoriesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataCategoryInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogCategoryRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1CategoriesPostBody $catalogCategoryRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogCategoryRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1CategoriesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCategoryRepositoryV1SavePost($catalogCategoryRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCategoryRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Retrieve all attributes for entity type
@@ -1420,7 +1420,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve specific attribute
      *
-     * @param string $attributeCode
+     * @param string $attributeCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryAttributeRepositoryV1GetGetUnauthorizedException
      *
@@ -1433,7 +1433,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve list of attribute options
      *
-     * @param string $attributeCode
+     * @param string $attributeCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryAttributeOptionManagementV1GetItemsGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryAttributeOptionManagementV1GetItemsGetUnauthorizedException
@@ -1468,7 +1468,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Delete category by identifier
      *
-     * @param int $categoryId
+     * @param int $categoryId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryRepositoryV1DeleteByIdentifierDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryRepositoryV1DeleteByIdentifierDeleteUnauthorizedException
@@ -1482,9 +1482,9 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get info about category by category id
      *
-     * @param int $categoryId
+     * @param int $categoryId 
      * @param array $queryParameters {
-     *     @var int $storeId
+     *     @var int $storeId 
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryRepositoryV1GetGetBadRequestException
@@ -1499,8 +1499,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Move category
      *
-     * @param int $categoryId
-     * @param \Kiboko\Magento\V2\Model\V1CategoriesCategoryIdMovePutBody $catalogCategoryManagementV1MovePutBody
+     * @param int $categoryId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CategoriesCategoryIdMovePutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryManagementV1MovePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryManagementV1MovePutUnauthorizedException
@@ -1508,14 +1508,14 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogCategoryManagementV1MovePut(int $categoryId, \Kiboko\Magento\V2\Model\V1CategoriesCategoryIdMovePutBody $catalogCategoryManagementV1MovePutBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogCategoryManagementV1MovePut(int $categoryId, ?\Kiboko\Magento\V2\Model\V1CategoriesCategoryIdMovePutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCategoryManagementV1MovePut($categoryId, $catalogCategoryManagementV1MovePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCategoryManagementV1MovePut($categoryId, $requestBody), $fetch);
     }
     /**
      * Get products assigned to category
      *
-     * @param int $categoryId
+     * @param int $categoryId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryLinkManagementV1GetAssignedProductsGetUnauthorizedException
      *
@@ -1528,38 +1528,38 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Assign a product to the required category
      *
-     * @param string $categoryId
-     * @param \Kiboko\Magento\V2\Model\V1CategoriesCategoryIdProductsPostBody $catalogCategoryLinkRepositoryV1SavePostBody
+     * @param string $categoryId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CategoriesCategoryIdProductsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryLinkRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryLinkRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogCategoryLinkRepositoryV1SavePost(string $categoryId, \Kiboko\Magento\V2\Model\V1CategoriesCategoryIdProductsPostBody $catalogCategoryLinkRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogCategoryLinkRepositoryV1SavePost(string $categoryId, ?\Kiboko\Magento\V2\Model\V1CategoriesCategoryIdProductsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCategoryLinkRepositoryV1SavePost($categoryId, $catalogCategoryLinkRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCategoryLinkRepositoryV1SavePost($categoryId, $requestBody), $fetch);
     }
     /**
      * Assign a product to the required category
      *
-     * @param string $categoryId
-     * @param \Kiboko\Magento\V2\Model\V1CategoriesCategoryIdProductsPutBody $catalogCategoryLinkRepositoryV1SavePutBody
+     * @param string $categoryId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CategoriesCategoryIdProductsPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryLinkRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryLinkRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogCategoryLinkRepositoryV1SavePut(string $categoryId, \Kiboko\Magento\V2\Model\V1CategoriesCategoryIdProductsPutBody $catalogCategoryLinkRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogCategoryLinkRepositoryV1SavePut(string $categoryId, ?\Kiboko\Magento\V2\Model\V1CategoriesCategoryIdProductsPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCategoryLinkRepositoryV1SavePut($categoryId, $catalogCategoryLinkRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCategoryLinkRepositoryV1SavePut($categoryId, $requestBody), $fetch);
     }
     /**
      * Remove the product assignment from the category by category id and sku
      *
-     * @param string $categoryId
-     * @param string $sku
+     * @param string $categoryId 
+     * @param string $sku 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryLinkRepositoryV1DeleteByIdsDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryLinkRepositoryV1DeleteByIdsDeleteUnauthorizedException
@@ -1573,31 +1573,31 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create category service
      *
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1CategoriesIdPutBody $catalogCategoryRepositoryV1SavePutBody
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1CategoriesIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogCategoryRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataCategoryInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogCategoryRepositoryV1SavePut(string $id, \Kiboko\Magento\V2\Model\V1CategoriesIdPutBody $catalogCategoryRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogCategoryRepositoryV1SavePut(string $id, ?\Kiboko\Magento\V2\Model\V1CategoriesIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCategoryRepositoryV1SavePut($id, $catalogCategoryRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCategoryRepositoryV1SavePut($id, $requestBody), $fetch);
     }
     /**
      * Save block.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CmsBlockPostBody $cmsBlockRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CmsBlockPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CmsBlockRepositoryV1SavePostUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\CmsBlockRepositoryV1SavePostInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\CmsDataBlockInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function cmsBlockRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1CmsBlockPostBody $cmsBlockRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function cmsBlockRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1CmsBlockPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CmsBlockRepositoryV1SavePost($cmsBlockRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CmsBlockRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Retrieve blocks matching the specified criteria.
@@ -1624,7 +1624,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Delete block by ID.
      *
-     * @param int $blockId
+     * @param int $blockId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CmsBlockRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CmsBlockRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -1639,7 +1639,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve block.
      *
-     * @param int $blockId
+     * @param int $blockId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CmsBlockRepositoryV1GetByIdGetUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\CmsBlockRepositoryV1GetByIdGetInternalServerErrorException
@@ -1653,31 +1653,31 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save block.
      *
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1CmsBlockIdPutBody $cmsBlockRepositoryV1SavePutBody
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1CmsBlockIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CmsBlockRepositoryV1SavePutUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\CmsBlockRepositoryV1SavePutInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\CmsDataBlockInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function cmsBlockRepositoryV1SavePut(string $id, \Kiboko\Magento\V2\Model\V1CmsBlockIdPutBody $cmsBlockRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function cmsBlockRepositoryV1SavePut(string $id, ?\Kiboko\Magento\V2\Model\V1CmsBlockIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CmsBlockRepositoryV1SavePut($id, $cmsBlockRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CmsBlockRepositoryV1SavePut($id, $requestBody), $fetch);
     }
     /**
      * Save page.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CmsPagePostBody $cmsPageRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CmsPagePostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CmsPageRepositoryV1SavePostUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\CmsPageRepositoryV1SavePostInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\CmsDataPageInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function cmsPageRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1CmsPagePostBody $cmsPageRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function cmsPageRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1CmsPagePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CmsPageRepositoryV1SavePost($cmsPageRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CmsPageRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Retrieve pages matching the specified criteria.
@@ -1704,22 +1704,22 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save page.
      *
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1CmsPageIdPutBody $cmsPageRepositoryV1SavePutBody
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1CmsPageIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CmsPageRepositoryV1SavePutUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\CmsPageRepositoryV1SavePutInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\CmsDataPageInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function cmsPageRepositoryV1SavePut(string $id, \Kiboko\Magento\V2\Model\V1CmsPageIdPutBody $cmsPageRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function cmsPageRepositoryV1SavePut(string $id, ?\Kiboko\Magento\V2\Model\V1CmsPageIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CmsPageRepositoryV1SavePut($id, $cmsPageRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CmsPageRepositoryV1SavePut($id, $requestBody), $fetch);
     }
     /**
      * Delete page by ID.
      *
-     * @param int $pageId
+     * @param int $pageId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CmsPageRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CmsPageRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -1734,7 +1734,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve page.
      *
-     * @param int $pageId
+     * @param int $pageId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CmsPageRepositoryV1GetByIdGetUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\CmsPageRepositoryV1GetByIdGetInternalServerErrorException
@@ -1770,30 +1770,30 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create or update a company account.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CompanyPostBody $companyCompanyRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CompanyPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyCompanyRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CompanyCompanyRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CompanyDataCompanyInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function companyCompanyRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1CompanyPostBody $companyCompanyRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function companyCompanyRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1CompanyPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyCompanyRepositoryV1SavePost($companyCompanyRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyCompanyRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Change a role for a company user.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CompanyAssignRolesPutBody $companyAclV1AssignRolesPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CompanyAssignRolesPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyAclV1AssignRolesPutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CompanyAclV1AssignRolesPutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function companyAclV1AssignRolesPut(\Kiboko\Magento\V2\Model\V1CompanyAssignRolesPutBody $companyAclV1AssignRolesPutBody, string $fetch = self::FETCH_OBJECT)
+    public function companyAclV1AssignRolesPut(?\Kiboko\Magento\V2\Model\V1CompanyAssignRolesPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyAclV1AssignRolesPut($companyAclV1AssignRolesPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyAclV1AssignRolesPut($requestBody), $fetch);
     }
     /**
      * Returns the list of roles and permissions for a specified company.
@@ -1820,36 +1820,36 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create or update a role for a selected company.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CompanyRolePostBody $companyRoleRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CompanyRolePostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyRoleRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CompanyRoleRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CompanyDataRoleInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function companyRoleRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1CompanyRolePostBody $companyRoleRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function companyRoleRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1CompanyRolePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyRoleRepositoryV1SavePost($companyRoleRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyRoleRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Create or update a role for a selected company.
      *
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1CompanyRoleIdPutBody $companyRoleRepositoryV1SavePutBody
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1CompanyRoleIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyRoleRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CompanyRoleRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CompanyDataRoleInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function companyRoleRepositoryV1SavePut(string $id, \Kiboko\Magento\V2\Model\V1CompanyRoleIdPutBody $companyRoleRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function companyRoleRepositoryV1SavePut(string $id, ?\Kiboko\Magento\V2\Model\V1CompanyRoleIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyRoleRepositoryV1SavePut($id, $companyRoleRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyRoleRepositoryV1SavePut($id, $requestBody), $fetch);
     }
     /**
      * Delete a role.
      *
-     * @param int $roleId
+     * @param int $roleId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyRoleRepositoryV1DeleteDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CompanyRoleRepositoryV1DeleteDeleteUnauthorizedException
@@ -1863,7 +1863,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Returns the list of permissions for a specified role.
      *
-     * @param int $roleId
+     * @param int $roleId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyRoleRepositoryV1GetGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CompanyRoleRepositoryV1GetGetUnauthorizedException
@@ -1877,7 +1877,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * View the list of company users assigned to a specified role.
      *
-     * @param int $roleId
+     * @param int $roleId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyAclV1GetUsersByRoleIdGetUnauthorizedException
      *
@@ -1890,7 +1890,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Delete a company. Customers belonging to a company are not deleted with this request.
      *
-     * @param int $companyId
+     * @param int $companyId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyCompanyRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CompanyCompanyRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -1904,7 +1904,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Returns company details.
      *
-     * @param int $companyId
+     * @param int $companyId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyCompanyRepositoryV1GetGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CompanyCompanyRepositoryV1GetGetUnauthorizedException
@@ -1918,17 +1918,17 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create or update a company account.
      *
-     * @param string $companyId
-     * @param \Kiboko\Magento\V2\Model\V1CompanyCompanyIdPutBody $companyCompanyRepositoryV1SavePutBody
+     * @param string $companyId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CompanyCompanyIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyCompanyRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CompanyCompanyRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CompanyDataCompanyInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function companyCompanyRepositoryV1SavePut(string $companyId, \Kiboko\Magento\V2\Model\V1CompanyCompanyIdPutBody $companyCompanyRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function companyCompanyRepositoryV1SavePut(string $companyId, ?\Kiboko\Magento\V2\Model\V1CompanyCompanyIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyCompanyRepositoryV1SavePut($companyId, $companyCompanyRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyCompanyRepositoryV1SavePut($companyId, $requestBody), $fetch);
     }
     /**
      * Returns the list of credits for specified companies.
@@ -1955,7 +1955,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Returns data on the credit limit for a specified company.
      *
-     * @param int $companyId
+     * @param int $companyId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyCreditCreditLimitManagementV1GetCreditByCompanyIdGetUnauthorizedException
      *
@@ -1990,22 +1990,22 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Update the PO Number and/or comment for a Reimburse transaction.
      *
-     * @param int $historyId
-     * @param \Kiboko\Magento\V2\Model\V1CompanyCreditsHistoryHistoryIdPutBody $companyCreditCreditHistoryManagementV1UpdatePutBody
+     * @param int $historyId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CompanyCreditsHistoryHistoryIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyCreditCreditHistoryManagementV1UpdatePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CompanyCreditCreditHistoryManagementV1UpdatePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function companyCreditCreditHistoryManagementV1UpdatePut(int $historyId, \Kiboko\Magento\V2\Model\V1CompanyCreditsHistoryHistoryIdPutBody $companyCreditCreditHistoryManagementV1UpdatePutBody, string $fetch = self::FETCH_OBJECT)
+    public function companyCreditCreditHistoryManagementV1UpdatePut(int $historyId, ?\Kiboko\Magento\V2\Model\V1CompanyCreditsHistoryHistoryIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyCreditCreditHistoryManagementV1UpdatePut($historyId, $companyCreditCreditHistoryManagementV1UpdatePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyCreditCreditHistoryManagementV1UpdatePut($historyId, $requestBody), $fetch);
     }
     /**
      * Returns data on the credit limit for a specified credit limit ID.
      *
-     * @param int $creditId
+     * @param int $creditId 
      * @param array $queryParameters {
      *     @var bool $reload [optional]
      * }
@@ -2022,36 +2022,36 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Decreases the company credit with an Update, Reimburse, or Purchase transaction. This transaction increases company's outstanding balance and decreases company's available credit.
      *
-     * @param int $creditId
-     * @param \Kiboko\Magento\V2\Model\V1CompanyCreditsCreditIdDecreaseBalancePostBody $companyCreditCreditBalanceManagementV1DecreasePostBody
+     * @param int $creditId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CompanyCreditsCreditIdDecreaseBalancePostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyCreditCreditBalanceManagementV1DecreasePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function companyCreditCreditBalanceManagementV1DecreasePost(int $creditId, \Kiboko\Magento\V2\Model\V1CompanyCreditsCreditIdDecreaseBalancePostBody $companyCreditCreditBalanceManagementV1DecreasePostBody, string $fetch = self::FETCH_OBJECT)
+    public function companyCreditCreditBalanceManagementV1DecreasePost(int $creditId, ?\Kiboko\Magento\V2\Model\V1CompanyCreditsCreditIdDecreaseBalancePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyCreditCreditBalanceManagementV1DecreasePost($creditId, $companyCreditCreditBalanceManagementV1DecreasePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyCreditCreditBalanceManagementV1DecreasePost($creditId, $requestBody), $fetch);
     }
     /**
      * Increases the company credit with an Allocate, Update, Refund, Revert, or Reimburse transaction. This transaction decreases company's outstanding balance and increases company's available credit.
      *
-     * @param int $creditId
-     * @param \Kiboko\Magento\V2\Model\V1CompanyCreditsCreditIdIncreaseBalancePostBody $companyCreditCreditBalanceManagementV1IncreasePostBody
+     * @param int $creditId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CompanyCreditsCreditIdIncreaseBalancePostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyCreditCreditBalanceManagementV1IncreasePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function companyCreditCreditBalanceManagementV1IncreasePost(int $creditId, \Kiboko\Magento\V2\Model\V1CompanyCreditsCreditIdIncreaseBalancePostBody $companyCreditCreditBalanceManagementV1IncreasePostBody, string $fetch = self::FETCH_OBJECT)
+    public function companyCreditCreditBalanceManagementV1IncreasePost(int $creditId, ?\Kiboko\Magento\V2\Model\V1CompanyCreditsCreditIdIncreaseBalancePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyCreditCreditBalanceManagementV1IncreasePost($creditId, $companyCreditCreditBalanceManagementV1IncreasePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyCreditCreditBalanceManagementV1IncreasePost($creditId, $requestBody), $fetch);
     }
     /**
      * Update the following company credit attributes: credit currency, credit limit and setting to exceed credit.
      *
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1CompanyCreditsIdPutBody $companyCreditCreditLimitRepositoryV1SavePutBody
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1CompanyCreditsIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyCreditCreditLimitRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CompanyCreditCreditLimitRepositoryV1SavePutUnauthorizedException
@@ -2059,41 +2059,41 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\CompanyCreditDataCreditLimitInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function companyCreditCreditLimitRepositoryV1SavePut(string $id, \Kiboko\Magento\V2\Model\V1CompanyCreditsIdPutBody $companyCreditCreditLimitRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function companyCreditCreditLimitRepositoryV1SavePut(string $id, ?\Kiboko\Magento\V2\Model\V1CompanyCreditsIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyCreditCreditLimitRepositoryV1SavePut($id, $companyCreditCreditLimitRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyCreditCreditLimitRepositoryV1SavePut($id, $requestBody), $fetch);
     }
     /**
      * Generate variation based on same product
      *
-     * @param \Kiboko\Magento\V2\Model\V1ConfigurableProductsVariationPutBody $configurableProductConfigurableProductManagementV1GenerateVariationPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ConfigurableProductsVariationPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\ConfigurableProductConfigurableProductManagementV1GenerateVariationPutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataProductInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function configurableProductConfigurableProductManagementV1GenerateVariationPut(\Kiboko\Magento\V2\Model\V1ConfigurableProductsVariationPutBody $configurableProductConfigurableProductManagementV1GenerateVariationPutBody, string $fetch = self::FETCH_OBJECT)
+    public function configurableProductConfigurableProductManagementV1GenerateVariationPut(?\Kiboko\Magento\V2\Model\V1ConfigurableProductsVariationPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\ConfigurableProductConfigurableProductManagementV1GenerateVariationPut($configurableProductConfigurableProductManagementV1GenerateVariationPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\ConfigurableProductConfigurableProductManagementV1GenerateVariationPut($requestBody), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $sku
-     * @param \Kiboko\Magento\V2\Model\V1ConfigurableProductsSkuChildPostBody $configurableProductLinkManagementV1AddChildPostBody
+     * @param string $sku 
+     * @param null|\Kiboko\Magento\V2\Model\V1ConfigurableProductsSkuChildPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\ConfigurableProductLinkManagementV1AddChildPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function configurableProductLinkManagementV1AddChildPost(string $sku, \Kiboko\Magento\V2\Model\V1ConfigurableProductsSkuChildPostBody $configurableProductLinkManagementV1AddChildPostBody, string $fetch = self::FETCH_OBJECT)
+    public function configurableProductLinkManagementV1AddChildPost(string $sku, ?\Kiboko\Magento\V2\Model\V1ConfigurableProductsSkuChildPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\ConfigurableProductLinkManagementV1AddChildPost($sku, $configurableProductLinkManagementV1AddChildPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\ConfigurableProductLinkManagementV1AddChildPost($sku, $requestBody), $fetch);
     }
     /**
      * Get all children for Configurable product
      *
-     * @param string $sku
+     * @param string $sku 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\ConfigurableProductLinkManagementV1GetChildrenGetUnauthorizedException
      *
@@ -2106,8 +2106,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Remove configurable product option
      *
-     * @param string $sku
-     * @param string $childSku
+     * @param string $sku 
+     * @param string $childSku 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\ConfigurableProductLinkManagementV1RemoveChildDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\ConfigurableProductLinkManagementV1RemoveChildDeleteUnauthorizedException
@@ -2121,8 +2121,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save option
      *
-     * @param string $sku
-     * @param \Kiboko\Magento\V2\Model\V1ConfigurableProductsSkuOptionsPostBody $configurableProductOptionRepositoryV1SavePostBody
+     * @param string $sku 
+     * @param null|\Kiboko\Magento\V2\Model\V1ConfigurableProductsSkuOptionsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\ConfigurableProductOptionRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\ConfigurableProductOptionRepositoryV1SavePostUnauthorizedException
@@ -2130,14 +2130,14 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function configurableProductOptionRepositoryV1SavePost(string $sku, \Kiboko\Magento\V2\Model\V1ConfigurableProductsSkuOptionsPostBody $configurableProductOptionRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function configurableProductOptionRepositoryV1SavePost(string $sku, ?\Kiboko\Magento\V2\Model\V1ConfigurableProductsSkuOptionsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\ConfigurableProductOptionRepositoryV1SavePost($sku, $configurableProductOptionRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\ConfigurableProductOptionRepositoryV1SavePost($sku, $requestBody), $fetch);
     }
     /**
      * Get all options for configurable product
      *
-     * @param string $sku
+     * @param string $sku 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\ConfigurableProductOptionRepositoryV1GetListGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\ConfigurableProductOptionRepositoryV1GetListGetUnauthorizedException
@@ -2151,8 +2151,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Remove option from configurable product
      *
-     * @param string $sku
-     * @param int $id
+     * @param string $sku 
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\ConfigurableProductOptionRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\ConfigurableProductOptionRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -2166,8 +2166,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get option for configurable product
      *
-     * @param string $sku
-     * @param int $id
+     * @param string $sku 
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\ConfigurableProductOptionRepositoryV1GetGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\ConfigurableProductOptionRepositoryV1GetGetUnauthorizedException
@@ -2181,9 +2181,9 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save option
      *
-     * @param string $sku
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1ConfigurableProductsSkuOptionsIdPutBody $configurableProductOptionRepositoryV1SavePutBody
+     * @param string $sku 
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1ConfigurableProductsSkuOptionsIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\ConfigurableProductOptionRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\ConfigurableProductOptionRepositoryV1SavePutUnauthorizedException
@@ -2191,14 +2191,14 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function configurableProductOptionRepositoryV1SavePut(string $sku, string $id, \Kiboko\Magento\V2\Model\V1ConfigurableProductsSkuOptionsIdPutBody $configurableProductOptionRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function configurableProductOptionRepositoryV1SavePut(string $sku, string $id, ?\Kiboko\Magento\V2\Model\V1ConfigurableProductsSkuOptionsIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\ConfigurableProductOptionRepositoryV1SavePut($sku, $id, $configurableProductOptionRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\ConfigurableProductOptionRepositoryV1SavePut($sku, $id, $requestBody), $fetch);
     }
     /**
      * Save a coupon.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CouponsPostBody $salesRuleCouponRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CouponsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleCouponRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleCouponRepositoryV1SavePostUnauthorizedException
@@ -2206,14 +2206,14 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesRuleDataCouponInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesRuleCouponRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1CouponsPostBody $salesRuleCouponRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesRuleCouponRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1CouponsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRuleCouponRepositoryV1SavePost($salesRuleCouponRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRuleCouponRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Delete coupon by coupon codes.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CouponsDeleteByCodesPostBody $salesRuleCouponManagementV1DeleteByCodesPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CouponsDeleteByCodesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleCouponManagementV1DeleteByCodesPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleCouponManagementV1DeleteByCodesPostUnauthorizedException
@@ -2221,14 +2221,14 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesRuleDataCouponMassDeleteResultInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesRuleCouponManagementV1DeleteByCodesPost(\Kiboko\Magento\V2\Model\V1CouponsDeleteByCodesPostBody $salesRuleCouponManagementV1DeleteByCodesPostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesRuleCouponManagementV1DeleteByCodesPost(?\Kiboko\Magento\V2\Model\V1CouponsDeleteByCodesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRuleCouponManagementV1DeleteByCodesPost($salesRuleCouponManagementV1DeleteByCodesPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRuleCouponManagementV1DeleteByCodesPost($requestBody), $fetch);
     }
     /**
      * Delete coupon by coupon ids.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CouponsDeleteByIdsPostBody $salesRuleCouponManagementV1DeleteByIdsPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CouponsDeleteByIdsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleCouponManagementV1DeleteByIdsPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleCouponManagementV1DeleteByIdsPostUnauthorizedException
@@ -2236,26 +2236,26 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesRuleDataCouponMassDeleteResultInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesRuleCouponManagementV1DeleteByIdsPost(\Kiboko\Magento\V2\Model\V1CouponsDeleteByIdsPostBody $salesRuleCouponManagementV1DeleteByIdsPostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesRuleCouponManagementV1DeleteByIdsPost(?\Kiboko\Magento\V2\Model\V1CouponsDeleteByIdsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRuleCouponManagementV1DeleteByIdsPost($salesRuleCouponManagementV1DeleteByIdsPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRuleCouponManagementV1DeleteByIdsPost($requestBody), $fetch);
     }
     /**
      * Generate coupon for a rule
      *
-     * @param \Kiboko\Magento\V2\Model\V1CouponsGeneratePostBody $salesRuleCouponManagementV1GeneratePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CouponsGeneratePostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleCouponManagementV1GeneratePostUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleCouponManagementV1GeneratePostInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesRuleCouponManagementV1GeneratePost(\Kiboko\Magento\V2\Model\V1CouponsGeneratePostBody $salesRuleCouponManagementV1GeneratePostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesRuleCouponManagementV1GeneratePost(?\Kiboko\Magento\V2\Model\V1CouponsGeneratePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRuleCouponManagementV1GeneratePost($salesRuleCouponManagementV1GeneratePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRuleCouponManagementV1GeneratePost($requestBody), $fetch);
     }
     /**
-     * Retrieve a coupon using the specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See https://devdocs.magento.com/codelinks/attributes.html#CouponRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Retrieve a coupon using the specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#CouponRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param array $queryParameters {
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
@@ -2279,7 +2279,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Delete coupon by coupon id.
      *
-     * @param int $couponId
+     * @param int $couponId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleCouponRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleCouponRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -2294,7 +2294,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get coupon by coupon id.
      *
-     * @param int $couponId
+     * @param int $couponId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleCouponRepositoryV1GetByIdGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleCouponRepositoryV1GetByIdGetUnauthorizedException
@@ -2309,8 +2309,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save a coupon.
      *
-     * @param string $couponId
-     * @param \Kiboko\Magento\V2\Model\V1CouponsCouponIdPutBody $salesRuleCouponRepositoryV1SavePutBody
+     * @param string $couponId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CouponsCouponIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleCouponRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleCouponRepositoryV1SavePutUnauthorizedException
@@ -2318,35 +2318,35 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesRuleDataCouponInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesRuleCouponRepositoryV1SavePut(string $couponId, \Kiboko\Magento\V2\Model\V1CouponsCouponIdPutBody $salesRuleCouponRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function salesRuleCouponRepositoryV1SavePut(string $couponId, ?\Kiboko\Magento\V2\Model\V1CouponsCouponIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRuleCouponRepositoryV1SavePut($couponId, $salesRuleCouponRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRuleCouponRepositoryV1SavePut($couponId, $requestBody), $fetch);
     }
     /**
      * Performs persist operations for a specified credit memo.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CreditmemoPostBody $salesCreditmemoRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CreditmemoPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesCreditmemoRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesDataCreditmemoInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesCreditmemoRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1CreditmemoPostBody $salesCreditmemoRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesCreditmemoRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1CreditmemoPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesCreditmemoRepositoryV1SavePost($salesCreditmemoRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesCreditmemoRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Prepare creditmemo to refund and save it.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CreditmemoRefundPostBody $salesCreditmemoManagementV1RefundPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CreditmemoRefundPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesCreditmemoManagementV1RefundPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesDataCreditmemoInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesCreditmemoManagementV1RefundPost(\Kiboko\Magento\V2\Model\V1CreditmemoRefundPostBody $salesCreditmemoManagementV1RefundPostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesCreditmemoManagementV1RefundPost(?\Kiboko\Magento\V2\Model\V1CreditmemoRefundPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesCreditmemoManagementV1RefundPost($salesCreditmemoManagementV1RefundPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesCreditmemoManagementV1RefundPost($requestBody), $fetch);
     }
     /**
      * Loads a specified credit memo.
@@ -2391,17 +2391,17 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Performs persist operations for a specified entity.
      *
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1CreditmemoIdCommentsPostBody $salesCreditmemoCommentRepositoryV1SavePostBody
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1CreditmemoIdCommentsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesCreditmemoCommentRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SalesCreditmemoCommentRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesDataCreditmemoCommentInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesCreditmemoCommentRepositoryV1SavePost(string $id, \Kiboko\Magento\V2\Model\V1CreditmemoIdCommentsPostBody $salesCreditmemoCommentRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesCreditmemoCommentRepositoryV1SavePost(string $id, ?\Kiboko\Magento\V2\Model\V1CreditmemoIdCommentsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesCreditmemoCommentRepositoryV1SavePost($id, $salesCreditmemoCommentRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesCreditmemoCommentRepositoryV1SavePost($id, $requestBody), $fetch);
     }
     /**
      * Emails a user a specified credit memo.
@@ -2417,7 +2417,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesCreditmemoManagementV1NotifyPost($id), $fetch);
     }
     /**
-     * Lists credit memos that match specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See https://devdocs.magento.com/codelinks/attributes.html#CreditmemoRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Lists credit memos that match specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#CreditmemoRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param array $queryParameters {
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
@@ -2440,7 +2440,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save customer group.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CustomerGroupsPostBody $customerGroupRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CustomerGroupsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerGroupRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CustomerGroupRepositoryV1SavePostUnauthorizedException
@@ -2448,15 +2448,15 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\CustomerDataGroupInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerGroupRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1CustomerGroupsPostBody $customerGroupRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function customerGroupRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1CustomerGroupsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerGroupRepositoryV1SavePost($customerGroupRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerGroupRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Get default customer group.
      *
      * @param array $queryParameters {
-     *     @var int $storeId
+     *     @var int $storeId 
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerGroupManagementV1GetDefaultGroupGetBadRequestException
@@ -2472,7 +2472,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Set system default customer group.
      *
-     * @param int $id
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerGroupConfigV1SetDefaultCustomerGroupPutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerGroupConfigV1SetDefaultCustomerGroupPutUnauthorizedException
@@ -2487,20 +2487,20 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get default customer group.
      *
-     * @param int $storeId
+     * @param int $storeId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\CustomerGroupManagementV1GetDefaultGroupGetBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\CustomerGroupManagementV1GetDefaultGroupGetUnauthorizedException
-     * @throws \Kiboko\Magento\V2\Exception\CustomerGroupManagementV1GetDefaultGroupGetInternalServerErrorException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CustomerGroupsDefaultByStoreIdBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CustomerGroupsDefaultByStoreIdUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CustomerGroupsDefaultByStoreIdInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\CustomerDataGroupInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerGroupManagementV1GetDefaultGroupGet(int $storeId, string $fetch = self::FETCH_OBJECT)
+    public function getV1CustomerGroupsDefaultByStoreId(int $storeId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerGroupManagementV1GetDefaultGroupGet($storeId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GetV1CustomerGroupsDefaultByStoreId($storeId), $fetch);
     }
     /**
-     * Retrieve customer groups. The list of groups can be filtered to exclude the NOT_LOGGED_IN group using the first parameter and/or it can be filtered by tax class. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See https://devdocs.magento.com/codelinks/attributes.html#GroupRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Retrieve customer groups. The list of groups can be filtered to exclude the NOT_LOGGED_IN group using the first parameter and/or it can be filtered by tax class. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#GroupRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param array $queryParameters {
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
@@ -2524,7 +2524,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Delete customer group by ID.
      *
-     * @param int $id
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerGroupRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CustomerGroupRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -2539,7 +2539,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get customer group by group ID.
      *
-     * @param int $id
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerGroupRepositoryV1GetByIdGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CustomerGroupRepositoryV1GetByIdGetUnauthorizedException
@@ -2554,8 +2554,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save customer group.
      *
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1CustomerGroupsIdPutBody $customerGroupRepositoryV1SavePutBody
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1CustomerGroupsIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerGroupRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CustomerGroupRepositoryV1SavePutUnauthorizedException
@@ -2563,14 +2563,14 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\CustomerDataGroupInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerGroupRepositoryV1SavePut(string $id, \Kiboko\Magento\V2\Model\V1CustomerGroupsIdPutBody $customerGroupRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function customerGroupRepositoryV1SavePut(string $id, ?\Kiboko\Magento\V2\Model\V1CustomerGroupsIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerGroupRepositoryV1SavePut($id, $customerGroupRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerGroupRepositoryV1SavePut($id, $requestBody), $fetch);
     }
     /**
      * Check if customer group can be deleted.
      *
-     * @param int $id
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerGroupManagementV1IsReadonlyGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CustomerGroupManagementV1IsReadonlyGetUnauthorizedException
@@ -2585,20 +2585,20 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create customer account. Perform necessary business operations like sending email.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CustomersPostBody $customerAccountManagementV1CreateAccountPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CustomersPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1CreateAccountPostInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\CustomerDataCustomerInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerAccountManagementV1CreateAccountPost(\Kiboko\Magento\V2\Model\V1CustomersPostBody $customerAccountManagementV1CreateAccountPostBody, string $fetch = self::FETCH_OBJECT)
+    public function customerAccountManagementV1CreateAccountPost(?\Kiboko\Magento\V2\Model\V1CustomersPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1CreateAccountPost($customerAccountManagementV1CreateAccountPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1CreateAccountPost($requestBody), $fetch);
     }
     /**
      * Retrieve customer address.
      *
-     * @param int $addressId
+     * @param int $addressId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAddressRepositoryV1GetByIdGetUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\CustomerAddressRepositoryV1GetByIdGetInternalServerErrorException
@@ -2612,29 +2612,29 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Resend confirmation email.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CustomersConfirmPostBody $customerAccountManagementV1ResendConfirmationPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CustomersConfirmPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1ResendConfirmationPostUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1ResendConfirmationPostInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerAccountManagementV1ResendConfirmationPost(\Kiboko\Magento\V2\Model\V1CustomersConfirmPostBody $customerAccountManagementV1ResendConfirmationPostBody, string $fetch = self::FETCH_OBJECT)
+    public function customerAccountManagementV1ResendConfirmationPost(?\Kiboko\Magento\V2\Model\V1CustomersConfirmPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1ResendConfirmationPost($customerAccountManagementV1ResendConfirmationPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1ResendConfirmationPost($requestBody), $fetch);
     }
     /**
      * Check if given email is associated with a customer account in given website.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CustomersIsEmailAvailablePostBody $customerAccountManagementV1IsEmailAvailablePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CustomersIsEmailAvailablePostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1IsEmailAvailablePostInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerAccountManagementV1IsEmailAvailablePost(\Kiboko\Magento\V2\Model\V1CustomersIsEmailAvailablePostBody $customerAccountManagementV1IsEmailAvailablePostBody, string $fetch = self::FETCH_OBJECT)
+    public function customerAccountManagementV1IsEmailAvailablePost(?\Kiboko\Magento\V2\Model\V1CustomersIsEmailAvailablePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1IsEmailAvailablePost($customerAccountManagementV1IsEmailAvailablePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1IsEmailAvailablePost($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -2651,7 +2651,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create or update a customer.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CustomersMePutBody $customerCustomerRepositoryV1SavePutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CustomersMePutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerRepositoryV1SavePutUnauthorizedException
@@ -2659,23 +2659,23 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\CustomerDataCustomerInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerCustomerRepositoryV1SavePut(\Kiboko\Magento\V2\Model\V1CustomersMePutBody $customerCustomerRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function customerCustomerRepositoryV1SavePut(?\Kiboko\Magento\V2\Model\V1CustomersMePutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerCustomerRepositoryV1SavePut($customerCustomerRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerCustomerRepositoryV1SavePut($requestBody), $fetch);
     }
     /**
      * Activate a customer account using a key that was sent in a confirmation email.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CustomersMeActivatePutBody $customerAccountManagementV1ActivateByIdPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CustomersMeActivatePutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1ActivateByIdPutUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1ActivateByIdPutInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\CustomerDataCustomerInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerAccountManagementV1ActivateByIdPut(\Kiboko\Magento\V2\Model\V1CustomersMeActivatePutBody $customerAccountManagementV1ActivateByIdPutBody, string $fetch = self::FETCH_OBJECT)
+    public function customerAccountManagementV1ActivateByIdPut(?\Kiboko\Magento\V2\Model\V1CustomersMeActivatePutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1ActivateByIdPut($customerAccountManagementV1ActivateByIdPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1ActivateByIdPut($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -2692,16 +2692,16 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Change customer password.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CustomersMePasswordPutBody $customerAccountManagementV1ChangePasswordByIdPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CustomersMePasswordPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1ChangePasswordByIdPutUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1ChangePasswordByIdPutInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerAccountManagementV1ChangePasswordByIdPut(\Kiboko\Magento\V2\Model\V1CustomersMePasswordPutBody $customerAccountManagementV1ChangePasswordByIdPutBody, string $fetch = self::FETCH_OBJECT)
+    public function customerAccountManagementV1ChangePasswordByIdPut(?\Kiboko\Magento\V2\Model\V1CustomersMePasswordPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1ChangePasswordByIdPut($customerAccountManagementV1ChangePasswordByIdPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1ChangePasswordByIdPut($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -2718,31 +2718,31 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Send an email to the customer with a password reset link.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CustomersPasswordPutBody $customerAccountManagementV1InitiatePasswordResetPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CustomersPasswordPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1InitiatePasswordResetPutInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerAccountManagementV1InitiatePasswordResetPut(\Kiboko\Magento\V2\Model\V1CustomersPasswordPutBody $customerAccountManagementV1InitiatePasswordResetPutBody, string $fetch = self::FETCH_OBJECT)
+    public function customerAccountManagementV1InitiatePasswordResetPut(?\Kiboko\Magento\V2\Model\V1CustomersPasswordPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1InitiatePasswordResetPut($customerAccountManagementV1InitiatePasswordResetPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1InitiatePasswordResetPut($requestBody), $fetch);
     }
     /**
      * Reset customer password.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CustomersResetPasswordPostBody $customerAccountManagementV1ResetPasswordPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CustomersResetPasswordPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1ResetPasswordPostInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerAccountManagementV1ResetPasswordPost(\Kiboko\Magento\V2\Model\V1CustomersResetPasswordPostBody $customerAccountManagementV1ResetPasswordPostBody, string $fetch = self::FETCH_OBJECT)
+    public function customerAccountManagementV1ResetPasswordPost(?\Kiboko\Magento\V2\Model\V1CustomersResetPasswordPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1ResetPasswordPost($customerAccountManagementV1ResetPasswordPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1ResetPasswordPost($requestBody), $fetch);
     }
     /**
-     * Retrieve customers which match a specified criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See https://devdocs.magento.com/codelinks/attributes.html#CustomerRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Retrieve customers which match a specified criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#CustomerRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param array $queryParameters {
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
@@ -2766,21 +2766,21 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Validate customer data.
      *
-     * @param \Kiboko\Magento\V2\Model\V1CustomersValidatePutBody $customerAccountManagementV1ValidatePutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1CustomersValidatePutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1ValidatePutUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1ValidatePutInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\CustomerDataValidationResultsInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerAccountManagementV1ValidatePut(\Kiboko\Magento\V2\Model\V1CustomersValidatePutBody $customerAccountManagementV1ValidatePutBody, string $fetch = self::FETCH_OBJECT)
+    public function customerAccountManagementV1ValidatePut(?\Kiboko\Magento\V2\Model\V1CustomersValidatePutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1ValidatePut($customerAccountManagementV1ValidatePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1ValidatePut($requestBody), $fetch);
     }
     /**
      * Delete customer by Customer ID.
      *
-     * @param int $customerId
+     * @param int $customerId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -2795,67 +2795,67 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get customer by Customer ID.
      *
-     * @param int $customerId
+     * @param int $customerId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerRepositoryV1GetByIdGetBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerRepositoryV1GetByIdGetUnauthorizedException
-     * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerRepositoryV1GetByIdGetInternalServerErrorException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CustomerByCustomerIdBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CustomerByCustomerIdUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CustomerByCustomerIdInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\CustomerDataCustomerInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerCustomerRepositoryV1GetByIdGet(int $customerId, string $fetch = self::FETCH_OBJECT)
+    public function getV1CustomerByCustomerId(int $customerId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerCustomerRepositoryV1GetByIdGet($customerId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GetV1CustomerByCustomerId($customerId), $fetch);
     }
     /**
      * Create or update a customer.
      *
-     * @param string $customerId
-     * @param \Kiboko\Magento\V2\Model\V1CustomersCustomerIdPutBody $customerCustomerRepositoryV1SavePutBody
+     * @param string $customerId 
+     * @param null|\Kiboko\Magento\V2\Model\V1CustomersCustomerIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerRepositoryV1SavePutBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerRepositoryV1SavePutUnauthorizedException
-     * @throws \Kiboko\Magento\V2\Exception\CustomerCustomerRepositoryV1SavePutInternalServerErrorException
+     * @throws \Kiboko\Magento\V2\Exception\PutV1CustomerByCustomerIdBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\PutV1CustomerByCustomerIdUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\PutV1CustomerByCustomerIdInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\CustomerDataCustomerInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerCustomerRepositoryV1SavePut(string $customerId, \Kiboko\Magento\V2\Model\V1CustomersCustomerIdPutBody $customerCustomerRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function putV1CustomerByCustomerId(string $customerId, ?\Kiboko\Magento\V2\Model\V1CustomersCustomerIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerCustomerRepositoryV1SavePut($customerId, $customerCustomerRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\PutV1CustomerByCustomerId($customerId, $requestBody), $fetch);
     }
     /**
      * Retrieve default billing address for the given customerId.
      *
-     * @param int $customerId
+     * @param int $customerId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1GetDefaultBillingAddressGetBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1GetDefaultBillingAddressGetUnauthorizedException
-     * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1GetDefaultBillingAddressGetInternalServerErrorException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CustomersByCustomerIdBillingAddressBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CustomersByCustomerIdBillingAddressUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CustomersByCustomerIdBillingAddressInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\CustomerDataAddressInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerAccountManagementV1GetDefaultBillingAddressGet(int $customerId, string $fetch = self::FETCH_OBJECT)
+    public function getV1CustomersByCustomerIdBillingAddress(int $customerId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1GetDefaultBillingAddressGet($customerId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GetV1CustomersByCustomerIdBillingAddress($customerId), $fetch);
     }
     /**
      * Creates an empty cart and quote for a specified customer if customer does not have a cart yet.
      *
      * @param int $customerId The customer ID.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCartManagementV1CreateEmptyCartForCustomerPostBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\QuoteCartManagementV1CreateEmptyCartForCustomerPostUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\PostV1CustomersByCustomerIdCartBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\PostV1CustomersByCustomerIdCartUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteCartManagementV1CreateEmptyCartForCustomerPost(int $customerId, string $fetch = self::FETCH_OBJECT)
+    public function postV1CustomersByCustomerIdCart(int $customerId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteCartManagementV1CreateEmptyCartForCustomerPost($customerId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\PostV1CustomersByCustomerIdCart($customerId), $fetch);
     }
     /**
      * Gets the account confirmation status.
      *
-     * @param int $customerId
+     * @param int $customerId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1GetConfirmationStatusGetUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1GetConfirmationStatusGetInternalServerErrorException
@@ -2870,7 +2870,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * Check if password reset token is valid.
      *
      * @param int $customerId If 0 is given then a customer will be matched by the RP token.
-     * @param string $resetPasswordLinkToken
+     * @param string $resetPasswordLinkToken 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1ValidateResetPasswordLinkTokenGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1ValidateResetPasswordLinkTokenGetInternalServerErrorException
@@ -2884,7 +2884,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Check if customer can be deleted.
      *
-     * @param int $customerId
+     * @param int $customerId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1IsReadonlyGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1IsReadonlyGetUnauthorizedException
@@ -2899,32 +2899,32 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve default shipping address for the given customerId.
      *
-     * @param int $customerId
+     * @param int $customerId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1GetDefaultShippingAddressGetBadRequestException
-     * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1GetDefaultShippingAddressGetUnauthorizedException
-     * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1GetDefaultShippingAddressGetInternalServerErrorException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CustomersByCustomerIdShippingAddressBadRequestException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CustomersByCustomerIdShippingAddressUnauthorizedException
+     * @throws \Kiboko\Magento\V2\Exception\GetV1CustomersByCustomerIdShippingAddressInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\CustomerDataAddressInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerAccountManagementV1GetDefaultShippingAddressGet(int $customerId, string $fetch = self::FETCH_OBJECT)
+    public function getV1CustomersByCustomerIdShippingAddress(int $customerId, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1GetDefaultShippingAddressGet($customerId), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GetV1CustomersByCustomerIdShippingAddress($customerId), $fetch);
     }
     /**
      * Activate a customer account using a key that was sent in a confirmation email.
      *
-     * @param string $email
-     * @param \Kiboko\Magento\V2\Model\V1CustomersEmailActivatePutBody $customerAccountManagementV1ActivatePutBody
+     * @param string $email 
+     * @param null|\Kiboko\Magento\V2\Model\V1CustomersEmailActivatePutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1ActivatePutUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\CustomerAccountManagementV1ActivatePutInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\CustomerDataCustomerInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function customerAccountManagementV1ActivatePut(string $email, \Kiboko\Magento\V2\Model\V1CustomersEmailActivatePutBody $customerAccountManagementV1ActivatePutBody, string $fetch = self::FETCH_OBJECT)
+    public function customerAccountManagementV1ActivatePut(string $email, ?\Kiboko\Magento\V2\Model\V1CustomersEmailActivatePutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1ActivatePut($email, $customerAccountManagementV1ActivatePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CustomerAccountManagementV1ActivatePut($email, $requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -2938,7 +2938,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get country and region information for the store.
      *
-     * @param string $countryId
+     * @param string $countryId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\DirectoryCountryInformationAcquirerV1GetCountryInfoGetBadRequestException
      *
@@ -2960,19 +2960,19 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create attribute set from data
      *
-     * @param \Kiboko\Magento\V2\Model\V1EavAttributeSetsPostBody $eavAttributeSetManagementV1CreatePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1EavAttributeSetsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\EavAttributeSetManagementV1CreatePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\EavAttributeSetManagementV1CreatePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\EavDataAttributeSetInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function eavAttributeSetManagementV1CreatePost(\Kiboko\Magento\V2\Model\V1EavAttributeSetsPostBody $eavAttributeSetManagementV1CreatePostBody, string $fetch = self::FETCH_OBJECT)
+    public function eavAttributeSetManagementV1CreatePost(?\Kiboko\Magento\V2\Model\V1EavAttributeSetsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\EavAttributeSetManagementV1CreatePost($eavAttributeSetManagementV1CreatePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\EavAttributeSetManagementV1CreatePost($requestBody), $fetch);
     }
     /**
-     * Retrieve list of Attribute Sets This call returns an array of objects, but detailed information about each object’s attributes might not be included. See https://devdocs.magento.com/codelinks/attributes.html#AttributeSetRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Retrieve list of Attribute Sets This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#AttributeSetRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param array $queryParameters {
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
@@ -2995,7 +2995,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Remove attribute set by given ID
      *
-     * @param int $attributeSetId
+     * @param int $attributeSetId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\EavAttributeSetRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\EavAttributeSetRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -3009,7 +3009,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve attribute set information based on given ID
      *
-     * @param int $attributeSetId
+     * @param int $attributeSetId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\EavAttributeSetRepositoryV1GetGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\EavAttributeSetRepositoryV1GetGetUnauthorizedException
@@ -3023,8 +3023,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save attribute set data
      *
-     * @param string $attributeSetId
-     * @param \Kiboko\Magento\V2\Model\V1EavAttributeSetsAttributeSetIdPutBody $eavAttributeSetRepositoryV1SavePutBody
+     * @param string $attributeSetId 
+     * @param null|\Kiboko\Magento\V2\Model\V1EavAttributeSetsAttributeSetIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\EavAttributeSetRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\EavAttributeSetRepositoryV1SavePutUnauthorizedException
@@ -3032,9 +3032,9 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\EavDataAttributeSetInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function eavAttributeSetRepositoryV1SavePut(string $attributeSetId, \Kiboko\Magento\V2\Model\V1EavAttributeSetsAttributeSetIdPutBody $eavAttributeSetRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function eavAttributeSetRepositoryV1SavePut(string $attributeSetId, ?\Kiboko\Magento\V2\Model\V1EavAttributeSetsAttributeSetIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\EavAttributeSetRepositoryV1SavePut($attributeSetId, $eavAttributeSetRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\EavAttributeSetRepositoryV1SavePut($attributeSetId, $requestBody), $fetch);
     }
     /**
      * Return list of gift wrapping data objects based on search criteria
@@ -3060,21 +3060,21 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create/Update new gift wrapping with data object values
      *
-     * @param \Kiboko\Magento\V2\Model\V1GiftWrappingsPostBody $giftWrappingWrappingRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1GiftWrappingsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftWrappingWrappingRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\GiftWrappingWrappingRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\GiftWrappingDataWrappingInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftWrappingWrappingRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1GiftWrappingsPostBody $giftWrappingWrappingRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function giftWrappingWrappingRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1GiftWrappingsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftWrappingWrappingRepositoryV1SavePost($giftWrappingWrappingRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftWrappingWrappingRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Delete gift wrapping
      *
-     * @param int $id
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftWrappingWrappingRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\GiftWrappingWrappingRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -3088,9 +3088,9 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Return data object for specified wrapping ID and store.
      *
-     * @param int $id
+     * @param int $id 
      * @param array $queryParameters {
-     *     @var int $storeId
+     *     @var int $storeId 
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftWrappingWrappingRepositoryV1GetGetUnauthorizedException
@@ -3104,31 +3104,31 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create/Update new gift wrapping with data object values
      *
-     * @param string $wrappingId
-     * @param \Kiboko\Magento\V2\Model\V1GiftWrappingsWrappingIdPutBody $giftWrappingWrappingRepositoryV1SavePutBody
+     * @param string $wrappingId 
+     * @param null|\Kiboko\Magento\V2\Model\V1GiftWrappingsWrappingIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftWrappingWrappingRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\GiftWrappingWrappingRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\GiftWrappingDataWrappingInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftWrappingWrappingRepositoryV1SavePut(string $wrappingId, \Kiboko\Magento\V2\Model\V1GiftWrappingsWrappingIdPutBody $giftWrappingWrappingRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function giftWrappingWrappingRepositoryV1SavePut(string $wrappingId, ?\Kiboko\Magento\V2\Model\V1GiftWrappingsWrappingIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftWrappingWrappingRepositoryV1SavePut($wrappingId, $giftWrappingWrappingRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftWrappingWrappingRepositoryV1SavePut($wrappingId, $requestBody), $fetch);
     }
     /**
      * Estimate shipping
      *
-     * @param \Kiboko\Magento\V2\Model\V1GiftregistryMineEstimateShippingMethodsPostBody $giftRegistryShippingMethodManagementV1EstimateByRegistryIdPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1GiftregistryMineEstimateShippingMethodsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftRegistryShippingMethodManagementV1EstimateByRegistryIdPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\GiftRegistryShippingMethodManagementV1EstimateByRegistryIdPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataShippingMethodInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftRegistryShippingMethodManagementV1EstimateByRegistryIdPost(\Kiboko\Magento\V2\Model\V1GiftregistryMineEstimateShippingMethodsPostBody $giftRegistryShippingMethodManagementV1EstimateByRegistryIdPostBody, string $fetch = self::FETCH_OBJECT)
+    public function giftRegistryShippingMethodManagementV1EstimateByRegistryIdPost(?\Kiboko\Magento\V2\Model\V1GiftregistryMineEstimateShippingMethodsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftRegistryShippingMethodManagementV1EstimateByRegistryIdPost($giftRegistryShippingMethodManagementV1EstimateByRegistryIdPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftRegistryShippingMethodManagementV1EstimateByRegistryIdPost($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -3143,7 +3143,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Enable a guest user to return information for a specified cart.
      *
-     * @param string $cartId
+     * @param string $cartId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteGuestCartRepositoryV1GetGetBadRequestException
      *
@@ -3157,15 +3157,15 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * Assign a specified customer to a specified shopping cart.
      *
      * @param string $cartId The cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdPutBody $quoteGuestCartManagementV1AssignCustomerPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteGuestCartManagementV1AssignCustomerPutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteGuestCartManagementV1AssignCustomerPut(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdPutBody $quoteGuestCartManagementV1AssignCustomerPutBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteGuestCartManagementV1AssignCustomerPut(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestCartManagementV1AssignCustomerPut($cartId, $quoteGuestCartManagementV1AssignCustomerPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestCartManagementV1AssignCustomerPut($cartId, $requestBody), $fetch);
     }
     /**
      * Return the billing address for a specified quote.
@@ -3184,47 +3184,47 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * Assign a specified billing address to a specified cart.
      *
      * @param string $cartId The cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdBillingAddressPostBody $quoteGuestBillingAddressManagementV1AssignPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdBillingAddressPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteGuestBillingAddressManagementV1AssignPostBadRequestException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteGuestBillingAddressManagementV1AssignPost(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdBillingAddressPostBody $quoteGuestBillingAddressManagementV1AssignPostBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteGuestBillingAddressManagementV1AssignPost(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdBillingAddressPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestBillingAddressManagementV1AssignPost($cartId, $quoteGuestBillingAddressManagementV1AssignPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestBillingAddressManagementV1AssignPost($cartId, $requestBody), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $cartId
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdCheckoutFieldsPostBody $temandoShippingQuoteGuestCartCheckoutFieldManagementV1SaveCheckoutFieldsPostBody
+     * @param string $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdCheckoutFieldsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TemandoShippingQuoteGuestCartCheckoutFieldManagementV1SaveCheckoutFieldsPostBadRequestException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function temandoShippingQuoteGuestCartCheckoutFieldManagementV1SaveCheckoutFieldsPost(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdCheckoutFieldsPostBody $temandoShippingQuoteGuestCartCheckoutFieldManagementV1SaveCheckoutFieldsPostBody, string $fetch = self::FETCH_OBJECT)
+    public function temandoShippingQuoteGuestCartCheckoutFieldManagementV1SaveCheckoutFieldsPost(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdCheckoutFieldsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingQuoteGuestCartCheckoutFieldManagementV1SaveCheckoutFieldsPost($cartId, $temandoShippingQuoteGuestCartCheckoutFieldManagementV1SaveCheckoutFieldsPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingQuoteGuestCartCheckoutFieldManagementV1SaveCheckoutFieldsPost($cartId, $requestBody), $fetch);
     }
     /**
      * Set shipping/billing methods and additional data for cart and collect totals for guest.
      *
      * @param string $cartId The cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdCollectTotalsPutBody $quoteGuestCartTotalManagementV1CollectTotalsPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdCollectTotalsPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataTotalsInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteGuestCartTotalManagementV1CollectTotalsPut(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdCollectTotalsPutBody $quoteGuestCartTotalManagementV1CollectTotalsPutBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteGuestCartTotalManagementV1CollectTotalsPut(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdCollectTotalsPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestCartTotalManagementV1CollectTotalsPut($cartId, $quoteGuestCartTotalManagementV1CollectTotalsPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestCartTotalManagementV1CollectTotalsPut($cartId, $requestBody), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $cartId
+     * @param string $cartId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TemandoShippingCollectionPointGuestCartCollectionPointManagementV1DeleteSearchRequestDeleteInternalServerErrorException
      *
@@ -3235,23 +3235,23 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingCollectionPointGuestCartCollectionPointManagementV1DeleteSearchRequestDelete($cartId), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $cartId
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdCollectionPointSearchRequestPutBody $temandoShippingCollectionPointGuestCartCollectionPointManagementV1SaveSearchRequestPutBody
+     * @param string $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdCollectionPointSearchRequestPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TemandoShippingCollectionPointGuestCartCollectionPointManagementV1SaveSearchRequestPutInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\TemandoShippingDataCollectionPointSearchRequestInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function temandoShippingCollectionPointGuestCartCollectionPointManagementV1SaveSearchRequestPut(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdCollectionPointSearchRequestPutBody $temandoShippingCollectionPointGuestCartCollectionPointManagementV1SaveSearchRequestPutBody, string $fetch = self::FETCH_OBJECT)
+    public function temandoShippingCollectionPointGuestCartCollectionPointManagementV1SaveSearchRequestPut(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdCollectionPointSearchRequestPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingCollectionPointGuestCartCollectionPointManagementV1SaveSearchRequestPut($cartId, $temandoShippingCollectionPointGuestCartCollectionPointManagementV1SaveSearchRequestPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingCollectionPointGuestCartCollectionPointManagementV1SaveSearchRequestPut($cartId, $requestBody), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $cartId
+     * @param string $cartId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return null|\Kiboko\Magento\V2\Model\TemandoShippingDataCollectionPointQuoteCollectionPointInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
@@ -3261,18 +3261,18 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingCollectionPointGuestCartCollectionPointManagementV1GetCollectionPointsGet($cartId), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $cartId
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdCollectionPointSelectPostBody $temandoShippingCollectionPointGuestCartCollectionPointManagementV1SelectCollectionPointPostBody
+     * @param string $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdCollectionPointSelectPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TemandoShippingCollectionPointGuestCartCollectionPointManagementV1SelectCollectionPointPostInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function temandoShippingCollectionPointGuestCartCollectionPointManagementV1SelectCollectionPointPost(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdCollectionPointSelectPostBody $temandoShippingCollectionPointGuestCartCollectionPointManagementV1SelectCollectionPointPostBody, string $fetch = self::FETCH_OBJECT)
+    public function temandoShippingCollectionPointGuestCartCollectionPointManagementV1SelectCollectionPointPost(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdCollectionPointSelectPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingCollectionPointGuestCartCollectionPointManagementV1SelectCollectionPointPost($cartId, $temandoShippingCollectionPointGuestCartCollectionPointManagementV1SelectCollectionPointPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingCollectionPointGuestCartCollectionPointManagementV1SelectCollectionPointPost($cartId, $requestBody), $fetch);
     }
     /**
      * Delete a coupon from a specified cart.
@@ -3318,28 +3318,28 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * Handle selected delivery option.
      *
      * @param string $cartId The shopping cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdDeliveryOptionPostBody $temandoShippingQuoteGuestCartDeliveryOptionManagementV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdDeliveryOptionPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TemandoShippingQuoteGuestCartDeliveryOptionManagementV1SavePostInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function temandoShippingQuoteGuestCartDeliveryOptionManagementV1SavePost(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdDeliveryOptionPostBody $temandoShippingQuoteGuestCartDeliveryOptionManagementV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function temandoShippingQuoteGuestCartDeliveryOptionManagementV1SavePost(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdDeliveryOptionPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingQuoteGuestCartDeliveryOptionManagementV1SavePost($cartId, $temandoShippingQuoteGuestCartDeliveryOptionManagementV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingQuoteGuestCartDeliveryOptionManagementV1SavePost($cartId, $requestBody), $fetch);
     }
     /**
      * Estimate shipping by address and return list of available shipping methods
      *
-     * @param string $cartId
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdEstimateShippingMethodsPostBody $quoteGuestShipmentEstimationV1EstimateByExtendedAddressPostBody
+     * @param string $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdEstimateShippingMethodsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataShippingMethodInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteGuestShipmentEstimationV1EstimateByExtendedAddressPost(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdEstimateShippingMethodsPostBody $quoteGuestShipmentEstimationV1EstimateByExtendedAddressPostBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteGuestShipmentEstimationV1EstimateByExtendedAddressPost(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdEstimateShippingMethodsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestShipmentEstimationV1EstimateByExtendedAddressPost($cartId, $quoteGuestShipmentEstimationV1EstimateByExtendedAddressPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestShipmentEstimationV1EstimateByExtendedAddressPost($cartId, $requestBody), $fetch);
     }
     /**
      * Return the gift message for a specified order.
@@ -3357,15 +3357,15 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * Set the gift message for an entire order.
      *
      * @param string $cartId The cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdGiftMessagePostBody $giftMessageGuestCartRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdGiftMessagePostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftMessageGuestCartRepositoryV1SavePostBadRequestException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftMessageGuestCartRepositoryV1SavePost(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdGiftMessagePostBody $giftMessageGuestCartRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function giftMessageGuestCartRepositoryV1SavePost(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdGiftMessagePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftMessageGuestCartRepositoryV1SavePost($cartId, $giftMessageGuestCartRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftMessageGuestCartRepositoryV1SavePost($cartId, $requestBody), $fetch);
     }
     /**
      * Return the gift message for a specified item in a specified shopping cart.
@@ -3386,15 +3386,15 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @param string $cartId The cart ID.
      * @param int $itemId The item ID.
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdGiftMessageItemIdPostBody $giftMessageGuestItemRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdGiftMessageItemIdPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftMessageGuestItemRepositoryV1SavePostBadRequestException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftMessageGuestItemRepositoryV1SavePost(string $cartId, int $itemId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdGiftMessageItemIdPostBody $giftMessageGuestItemRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function giftMessageGuestItemRepositoryV1SavePost(string $cartId, int $itemId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdGiftMessageItemIdPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftMessageGuestItemRepositoryV1SavePost($cartId, $itemId, $giftMessageGuestItemRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftMessageGuestItemRepositoryV1SavePost($cartId, $itemId, $requestBody), $fetch);
     }
     /**
      * List items that are assigned to a specified cart.
@@ -3412,16 +3412,16 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Add/update the specified cart item.
      *
-     * @param string $cartId
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdItemsPostBody $quoteGuestCartItemRepositoryV1SavePostBody
+     * @param string $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdItemsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteGuestCartItemRepositoryV1SavePostBadRequestException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataCartItemInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteGuestCartItemRepositoryV1SavePost(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdItemsPostBody $quoteGuestCartItemRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteGuestCartItemRepositoryV1SavePost(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdItemsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestCartItemRepositoryV1SavePost($cartId, $quoteGuestCartItemRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestCartItemRepositoryV1SavePost($cartId, $requestBody), $fetch);
     }
     /**
      * Remove the specified item from the specified cart.
@@ -3440,36 +3440,36 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Add/update the specified cart item.
      *
-     * @param string $cartId
-     * @param string $itemId
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdItemsItemIdPutBody $quoteGuestCartItemRepositoryV1SavePutBody
+     * @param string $cartId 
+     * @param string $itemId 
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdItemsItemIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteGuestCartItemRepositoryV1SavePutBadRequestException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataCartItemInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteGuestCartItemRepositoryV1SavePut(string $cartId, string $itemId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdItemsItemIdPutBody $quoteGuestCartItemRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteGuestCartItemRepositoryV1SavePut(string $cartId, string $itemId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdItemsItemIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestCartItemRepositoryV1SavePut($cartId, $itemId, $quoteGuestCartItemRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestCartItemRepositoryV1SavePut($cartId, $itemId, $requestBody), $fetch);
     }
     /**
      * Place an order for a specified cart.
      *
      * @param string $cartId The cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdOrderPutBody $quoteGuestCartManagementV1PlaceOrderPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdOrderPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteGuestCartManagementV1PlaceOrderPutBadRequestException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteGuestCartManagementV1PlaceOrderPut(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdOrderPutBody $quoteGuestCartManagementV1PlaceOrderPutBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteGuestCartManagementV1PlaceOrderPut(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdOrderPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestCartManagementV1PlaceOrderPut($cartId, $quoteGuestCartManagementV1PlaceOrderPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestCartManagementV1PlaceOrderPut($cartId, $requestBody), $fetch);
     }
     /**
      * Get payment information
      *
-     * @param string $cartId
+     * @param string $cartId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return null|\Kiboko\Magento\V2\Model\CheckoutDataPaymentDetailsInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
@@ -3481,19 +3481,19 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Set payment information and place order for a specified cart.
      *
-     * @param string $cartId
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdPaymentInformationPostBody $checkoutGuestPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBody
+     * @param string $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdPaymentInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CheckoutGuestPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBadRequestException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function checkoutGuestPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPost(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdPaymentInformationPostBody $checkoutGuestPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBody, string $fetch = self::FETCH_OBJECT)
+    public function checkoutGuestPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPost(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdPaymentInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutGuestPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPost($cartId, $checkoutGuestPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutGuestPaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPost($cartId, $requestBody), $fetch);
     }
     /**
-     * List available payment methods for a specified shopping cart. This call returns an array of objects, but detailed information about each object’s attributes might not be included.  See https://devdocs.magento.com/codelinks/attributes.html#GuestPaymentMethodManagementInterface to determine which call to use to get detailed information about all attributes for an object.
+     * List available payment methods for a specified shopping cart. This call returns an array of objects, but detailed information about each object’s attributes might not be included.  See http://devdocs.magento.com/codelinks/attributes.html#GuestPaymentMethodManagementInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param string $cartId The cart ID.
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -3522,42 +3522,42 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * Add a specified payment method to a specified shopping cart.
      *
      * @param string $cartId The cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdSelectedPaymentMethodPutBody $quoteGuestPaymentMethodManagementV1SetPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdSelectedPaymentMethodPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\QuoteGuestPaymentMethodManagementV1SetPutBadRequestException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function quoteGuestPaymentMethodManagementV1SetPut(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdSelectedPaymentMethodPutBody $quoteGuestPaymentMethodManagementV1SetPutBody, string $fetch = self::FETCH_OBJECT)
+    public function quoteGuestPaymentMethodManagementV1SetPut(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdSelectedPaymentMethodPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestPaymentMethodManagementV1SetPut($cartId, $quoteGuestPaymentMethodManagementV1SetPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\QuoteGuestPaymentMethodManagementV1SetPut($cartId, $requestBody), $fetch);
     }
     /**
      * Set payment information for a specified cart.
      *
-     * @param string $cartId
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdSetPaymentInformationPostBody $checkoutGuestPaymentInformationManagementV1SavePaymentInformationPostBody
+     * @param string $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdSetPaymentInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CheckoutGuestPaymentInformationManagementV1SavePaymentInformationPostBadRequestException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function checkoutGuestPaymentInformationManagementV1SavePaymentInformationPost(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdSetPaymentInformationPostBody $checkoutGuestPaymentInformationManagementV1SavePaymentInformationPostBody, string $fetch = self::FETCH_OBJECT)
+    public function checkoutGuestPaymentInformationManagementV1SavePaymentInformationPost(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdSetPaymentInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutGuestPaymentInformationManagementV1SavePaymentInformationPost($cartId, $checkoutGuestPaymentInformationManagementV1SavePaymentInformationPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutGuestPaymentInformationManagementV1SavePaymentInformationPost($cartId, $requestBody), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $cartId
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdShippingInformationPostBody $checkoutGuestShippingInformationManagementV1SaveAddressInformationPostBody
+     * @param string $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdShippingInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return null|\Kiboko\Magento\V2\Model\CheckoutDataPaymentDetailsInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function checkoutGuestShippingInformationManagementV1SaveAddressInformationPost(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdShippingInformationPostBody $checkoutGuestShippingInformationManagementV1SaveAddressInformationPostBody, string $fetch = self::FETCH_OBJECT)
+    public function checkoutGuestShippingInformationManagementV1SaveAddressInformationPost(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdShippingInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutGuestShippingInformationManagementV1SaveAddressInformationPost($cartId, $checkoutGuestShippingInformationManagementV1SaveAddressInformationPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutGuestShippingInformationManagementV1SaveAddressInformationPost($cartId, $requestBody), $fetch);
     }
     /**
      * List applicable shipping methods for a specified quote.
@@ -3588,48 +3588,48 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Calculate quote totals based on address and shipping method.
      *
-     * @param string $cartId
-     * @param \Kiboko\Magento\V2\Model\V1GuestCartsCartIdTotalsInformationPostBody $checkoutGuestTotalsInformationManagementV1CalculatePostBody
+     * @param string $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestCartsCartIdTotalsInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataTotalsInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function checkoutGuestTotalsInformationManagementV1CalculatePost(string $cartId, \Kiboko\Magento\V2\Model\V1GuestCartsCartIdTotalsInformationPostBody $checkoutGuestTotalsInformationManagementV1CalculatePostBody, string $fetch = self::FETCH_OBJECT)
+    public function checkoutGuestTotalsInformationManagementV1CalculatePost(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestCartsCartIdTotalsInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutGuestTotalsInformationManagementV1CalculatePost($cartId, $checkoutGuestTotalsInformationManagementV1CalculatePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CheckoutGuestTotalsInformationManagementV1CalculatePost($cartId, $requestBody), $fetch);
     }
     /**
      * Estimate shipping
      *
      * @param string $cartId The shopping cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1GuestGiftregistryCartIdEstimateShippingMethodsPostBody $giftRegistryGuestCartShippingMethodManagementV1EstimateByRegistryIdPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1GuestGiftregistryCartIdEstimateShippingMethodsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\GiftRegistryGuestCartShippingMethodManagementV1EstimateByRegistryIdPostBadRequestException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataShippingMethodInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function giftRegistryGuestCartShippingMethodManagementV1EstimateByRegistryIdPost(string $cartId, \Kiboko\Magento\V2\Model\V1GuestGiftregistryCartIdEstimateShippingMethodsPostBody $giftRegistryGuestCartShippingMethodManagementV1EstimateByRegistryIdPostBody, string $fetch = self::FETCH_OBJECT)
+    public function giftRegistryGuestCartShippingMethodManagementV1EstimateByRegistryIdPost(string $cartId, ?\Kiboko\Magento\V2\Model\V1GuestGiftregistryCartIdEstimateShippingMethodsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftRegistryGuestCartShippingMethodManagementV1EstimateByRegistryIdPost($cartId, $giftRegistryGuestCartShippingMethodManagementV1EstimateByRegistryIdPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\GiftRegistryGuestCartShippingMethodManagementV1EstimateByRegistryIdPost($cartId, $requestBody), $fetch);
     }
     /**
      * Moves teams and users within the company structure.
      *
-     * @param int $id
-     * @param \Kiboko\Magento\V2\Model\V1HierarchyMoveIdPutBody $companyCompanyHierarchyV1MoveNodePutBody
+     * @param int $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1HierarchyMoveIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyCompanyHierarchyV1MoveNodePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function companyCompanyHierarchyV1MoveNodePut(int $id, \Kiboko\Magento\V2\Model\V1HierarchyMoveIdPutBody $companyCompanyHierarchyV1MoveNodePutBody, string $fetch = self::FETCH_OBJECT)
+    public function companyCompanyHierarchyV1MoveNodePut(int $id, ?\Kiboko\Magento\V2\Model\V1HierarchyMoveIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyCompanyHierarchyV1MoveNodePut($id, $companyCompanyHierarchyV1MoveNodePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyCompanyHierarchyV1MoveNodePut($id, $requestBody), $fetch);
     }
     /**
      * Returns the list of teams and company users in the company structure.
      *
-     * @param int $id
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyCompanyHierarchyV1GetCompanyHierarchyGetUnauthorizedException
      *
@@ -3642,46 +3642,46 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create access token for admin given the admin credentials.
      *
-     * @param \Kiboko\Magento\V2\Model\V1IntegrationAdminTokenPostBody $integrationAdminTokenServiceV1CreateAdminAccessTokenPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1IntegrationAdminTokenPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\IntegrationAdminTokenServiceV1CreateAdminAccessTokenPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\IntegrationAdminTokenServiceV1CreateAdminAccessTokenPostInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function integrationAdminTokenServiceV1CreateAdminAccessTokenPost(\Kiboko\Magento\V2\Model\V1IntegrationAdminTokenPostBody $integrationAdminTokenServiceV1CreateAdminAccessTokenPostBody, string $fetch = self::FETCH_OBJECT)
+    public function integrationAdminTokenServiceV1CreateAdminAccessTokenPost(?\Kiboko\Magento\V2\Model\V1IntegrationAdminTokenPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\IntegrationAdminTokenServiceV1CreateAdminAccessTokenPost($integrationAdminTokenServiceV1CreateAdminAccessTokenPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\IntegrationAdminTokenServiceV1CreateAdminAccessTokenPost($requestBody), $fetch);
     }
     /**
      * Create access token for admin given the customer credentials.
      *
-     * @param \Kiboko\Magento\V2\Model\V1IntegrationCustomerTokenPostBody $integrationCustomerTokenServiceV1CreateCustomerAccessTokenPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1IntegrationCustomerTokenPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\IntegrationCustomerTokenServiceV1CreateCustomerAccessTokenPostBadRequestException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function integrationCustomerTokenServiceV1CreateCustomerAccessTokenPost(\Kiboko\Magento\V2\Model\V1IntegrationCustomerTokenPostBody $integrationCustomerTokenServiceV1CreateCustomerAccessTokenPostBody, string $fetch = self::FETCH_OBJECT)
+    public function integrationCustomerTokenServiceV1CreateCustomerAccessTokenPost(?\Kiboko\Magento\V2\Model\V1IntegrationCustomerTokenPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\IntegrationCustomerTokenServiceV1CreateCustomerAccessTokenPost($integrationCustomerTokenServiceV1CreateCustomerAccessTokenPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\IntegrationCustomerTokenServiceV1CreateCustomerAccessTokenPost($requestBody), $fetch);
     }
     /**
      * Create refund for invoice
      *
-     * @param int $invoiceId
-     * @param \Kiboko\Magento\V2\Model\V1InvoiceInvoiceIdRefundPostBody $salesRefundInvoiceV1ExecutePostBody
+     * @param int $invoiceId 
+     * @param null|\Kiboko\Magento\V2\Model\V1InvoiceInvoiceIdRefundPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesRefundInvoiceV1ExecutePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesRefundInvoiceV1ExecutePost(int $invoiceId, \Kiboko\Magento\V2\Model\V1InvoiceInvoiceIdRefundPostBody $salesRefundInvoiceV1ExecutePostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesRefundInvoiceV1ExecutePost(int $invoiceId, ?\Kiboko\Magento\V2\Model\V1InvoiceInvoiceIdRefundPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRefundInvoiceV1ExecutePost($invoiceId, $salesRefundInvoiceV1ExecutePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRefundInvoiceV1ExecutePost($invoiceId, $requestBody), $fetch);
     }
     /**
-     * Lists invoices that match specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See https://devdocs.magento.com/codelinks/attributes.html#InvoiceRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Lists invoices that match specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#InvoiceRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param array $queryParameters {
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
@@ -3704,29 +3704,29 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Performs persist operations for a specified invoice.
      *
-     * @param \Kiboko\Magento\V2\Model\V1InvoicesPostBody $salesInvoiceRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1InvoicesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesInvoiceRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesDataInvoiceInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesInvoiceRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1InvoicesPostBody $salesInvoiceRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesInvoiceRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1InvoicesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesInvoiceRepositoryV1SavePost($salesInvoiceRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesInvoiceRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Performs persist operations for a specified invoice comment.
      *
-     * @param \Kiboko\Magento\V2\Model\V1InvoicesCommentsPostBody $salesInvoiceCommentRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1InvoicesCommentsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesInvoiceCommentRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SalesInvoiceCommentRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesDataInvoiceCommentInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesInvoiceCommentRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1InvoicesCommentsPostBody $salesInvoiceCommentRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesInvoiceCommentRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1InvoicesCommentsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesInvoiceCommentRepositoryV1SavePost($salesInvoiceCommentRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesInvoiceCommentRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Loads a specified invoice.
@@ -3744,7 +3744,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Sets invoice capture.
      *
-     * @param int $id
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesInvoiceManagementV1SetCapturePostUnauthorizedException
      *
@@ -3821,16 +3821,16 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * Assigns a specified billing address to a specified cart.
      *
      * @param int $cartId The cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdBillingAddressPostBody $negotiableQuoteBillingAddressManagementV1AssignPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdBillingAddressPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteBillingAddressManagementV1AssignPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteBillingAddressManagementV1AssignPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function negotiableQuoteBillingAddressManagementV1AssignPost(int $cartId, \Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdBillingAddressPostBody $negotiableQuoteBillingAddressManagementV1AssignPostBody, string $fetch = self::FETCH_OBJECT)
+    public function negotiableQuoteBillingAddressManagementV1AssignPost(int $cartId, ?\Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdBillingAddressPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteBillingAddressManagementV1AssignPost($cartId, $negotiableQuoteBillingAddressManagementV1AssignPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteBillingAddressManagementV1AssignPost($cartId, $requestBody), $fetch);
     }
     /**
      * Deletes a coupon from a specified cart.
@@ -3864,50 +3864,50 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Estimate shipping by address and return list of available shipping methods
      *
-     * @param string $cartId
-     * @param \Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdEstimateShippingMethodsPostBody $negotiableQuoteShipmentEstimationV1EstimateByExtendedAddressPostBody
+     * @param string $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdEstimateShippingMethodsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteShipmentEstimationV1EstimateByExtendedAddressPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataShippingMethodInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function negotiableQuoteShipmentEstimationV1EstimateByExtendedAddressPost(string $cartId, \Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdEstimateShippingMethodsPostBody $negotiableQuoteShipmentEstimationV1EstimateByExtendedAddressPostBody, string $fetch = self::FETCH_OBJECT)
+    public function negotiableQuoteShipmentEstimationV1EstimateByExtendedAddressPost(string $cartId, ?\Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdEstimateShippingMethodsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteShipmentEstimationV1EstimateByExtendedAddressPost($cartId, $negotiableQuoteShipmentEstimationV1EstimateByExtendedAddressPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteShipmentEstimationV1EstimateByExtendedAddressPost($cartId, $requestBody), $fetch);
     }
     /**
      * Estimate shipping
      *
      * @param int $cartId The shopping cart ID.
-     * @param \Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdEstimateShippingMethodsByAddressIdPostBody $negotiableQuoteShippingMethodManagementV1EstimateByAddressIdPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdEstimateShippingMethodsByAddressIdPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteShippingMethodManagementV1EstimateByAddressIdPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\QuoteDataShippingMethodInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function negotiableQuoteShippingMethodManagementV1EstimateByAddressIdPost(int $cartId, \Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdEstimateShippingMethodsByAddressIdPostBody $negotiableQuoteShippingMethodManagementV1EstimateByAddressIdPostBody, string $fetch = self::FETCH_OBJECT)
+    public function negotiableQuoteShippingMethodManagementV1EstimateByAddressIdPost(int $cartId, ?\Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdEstimateShippingMethodsByAddressIdPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteShippingMethodManagementV1EstimateByAddressIdPost($cartId, $negotiableQuoteShippingMethodManagementV1EstimateByAddressIdPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteShippingMethodManagementV1EstimateByAddressIdPost($cartId, $requestBody), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param int $cartId
-     * @param \Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdGiftCardsPostBody $negotiableQuoteGiftCardAccountManagementV1SaveByQuoteIdPostBody
+     * @param int $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdGiftCardsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteGiftCardAccountManagementV1SaveByQuoteIdPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function negotiableQuoteGiftCardAccountManagementV1SaveByQuoteIdPost(int $cartId, \Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdGiftCardsPostBody $negotiableQuoteGiftCardAccountManagementV1SaveByQuoteIdPostBody, string $fetch = self::FETCH_OBJECT)
+    public function negotiableQuoteGiftCardAccountManagementV1SaveByQuoteIdPost(int $cartId, ?\Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdGiftCardsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteGiftCardAccountManagementV1SaveByQuoteIdPost($cartId, $negotiableQuoteGiftCardAccountManagementV1SaveByQuoteIdPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteGiftCardAccountManagementV1SaveByQuoteIdPost($cartId, $requestBody), $fetch);
     }
     /**
      * Remove GiftCard Account entity
      *
-     * @param int $cartId
-     * @param string $giftCardCode
+     * @param int $cartId 
+     * @param string $giftCardCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteGiftCardAccountManagementV1DeleteByQuoteIdDeleteUnauthorizedException
      *
@@ -3920,7 +3920,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get payment information
      *
-     * @param int $cartId
+     * @param int $cartId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuotePaymentInformationManagementV1GetPaymentInformationGetUnauthorizedException
      *
@@ -3933,46 +3933,46 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Set payment information and place order for a specified cart.
      *
-     * @param int $cartId
-     * @param \Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdPaymentInformationPostBody $negotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBody
+     * @param int $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdPaymentInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function negotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPost(int $cartId, \Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdPaymentInformationPostBody $negotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBody, string $fetch = self::FETCH_OBJECT)
+    public function negotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPost(int $cartId, ?\Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdPaymentInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPost($cartId, $negotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPost($cartId, $requestBody), $fetch);
     }
     /**
      * Set payment information for a specified cart.
      *
-     * @param int $cartId
-     * @param \Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdSetPaymentInformationPostBody $negotiableQuotePaymentInformationManagementV1SavePaymentInformationPostBody
+     * @param int $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdSetPaymentInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function negotiableQuotePaymentInformationManagementV1SavePaymentInformationPost(int $cartId, \Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdSetPaymentInformationPostBody $negotiableQuotePaymentInformationManagementV1SavePaymentInformationPostBody, string $fetch = self::FETCH_OBJECT)
+    public function negotiableQuotePaymentInformationManagementV1SavePaymentInformationPost(int $cartId, ?\Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdSetPaymentInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationPost($cartId, $negotiableQuotePaymentInformationManagementV1SavePaymentInformationPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationPost($cartId, $requestBody), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param int $cartId
-     * @param \Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdShippingInformationPostBody $negotiableQuoteShippingInformationManagementV1SaveAddressInformationPostBody
+     * @param int $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdShippingInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteShippingInformationManagementV1SaveAddressInformationPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CheckoutDataPaymentDetailsInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function negotiableQuoteShippingInformationManagementV1SaveAddressInformationPost(int $cartId, \Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdShippingInformationPostBody $negotiableQuoteShippingInformationManagementV1SaveAddressInformationPostBody, string $fetch = self::FETCH_OBJECT)
+    public function negotiableQuoteShippingInformationManagementV1SaveAddressInformationPost(int $cartId, ?\Kiboko\Magento\V2\Model\V1NegotiableCartsCartIdShippingInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteShippingInformationManagementV1SaveAddressInformationPost($cartId, $negotiableQuoteShippingInformationManagementV1SaveAddressInformationPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteShippingInformationManagementV1SaveAddressInformationPost($cartId, $requestBody), $fetch);
     }
     /**
      * Returns quote totals data for a specified cart.
@@ -3992,7 +3992,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * Returns content for one or more files attached on the quote comment.
      *
      * @param array $queryParameters {
-     *     @var array $attachmentIds
+     *     @var array $attachmentIds 
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteAttachmentContentManagementV1GetGetBadRequestException
@@ -4007,69 +4007,69 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Decline the B2B quote. All custom pricing will be removed from this quote. The buyer will be able to place an order using their standard catalog prices and discounts.
      *
-     * @param \Kiboko\Magento\V2\Model\V1NegotiableQuoteDeclinePostBody $negotiableQuoteNegotiableQuoteManagementV1DeclinePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1NegotiableQuoteDeclinePostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteNegotiableQuoteManagementV1DeclinePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function negotiableQuoteNegotiableQuoteManagementV1DeclinePost(\Kiboko\Magento\V2\Model\V1NegotiableQuoteDeclinePostBody $negotiableQuoteNegotiableQuoteManagementV1DeclinePostBody, string $fetch = self::FETCH_OBJECT)
+    public function negotiableQuoteNegotiableQuoteManagementV1DeclinePost(?\Kiboko\Magento\V2\Model\V1NegotiableQuoteDeclinePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteNegotiableQuoteManagementV1DeclinePost($negotiableQuoteNegotiableQuoteManagementV1DeclinePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteNegotiableQuoteManagementV1DeclinePost($requestBody), $fetch);
     }
     /**
      * Refreshes item prices, taxes, discounts, cart rules in the negotiable quote as per the latest changes in the catalog / shared catalog and in the price rules. Depending on the negotiable quote state and totals, all or just some of quote numbers will be recalculated. 'Update Prices' parameter forces refresh on any quote that is not locked for admin user, including the quotes with a negotiated price. The request can be applied to one or more quotes at the same time.
      *
-     * @param \Kiboko\Magento\V2\Model\V1NegotiableQuotePricesUpdatedPostBody $negotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1NegotiableQuotePricesUpdatedPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function negotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPost(\Kiboko\Magento\V2\Model\V1NegotiableQuotePricesUpdatedPostBody $negotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPostBody, string $fetch = self::FETCH_OBJECT)
+    public function negotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPost(?\Kiboko\Magento\V2\Model\V1NegotiableQuotePricesUpdatedPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPost($negotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPost($requestBody), $fetch);
     }
     /**
      * Create a B2B quote based on a regular Magento quote. If the B2B quote requires a shipping address (for negotiation or tax calculations), add it to the regular quote before you create a B2B quote.
      *
-     * @param \Kiboko\Magento\V2\Model\V1NegotiableQuoteRequestPostBody $negotiableQuoteNegotiableQuoteManagementV1CreatePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1NegotiableQuoteRequestPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteNegotiableQuoteManagementV1CreatePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function negotiableQuoteNegotiableQuoteManagementV1CreatePost(\Kiboko\Magento\V2\Model\V1NegotiableQuoteRequestPostBody $negotiableQuoteNegotiableQuoteManagementV1CreatePostBody, string $fetch = self::FETCH_OBJECT)
+    public function negotiableQuoteNegotiableQuoteManagementV1CreatePost(?\Kiboko\Magento\V2\Model\V1NegotiableQuoteRequestPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteNegotiableQuoteManagementV1CreatePost($negotiableQuoteNegotiableQuoteManagementV1CreatePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteNegotiableQuoteManagementV1CreatePost($requestBody), $fetch);
     }
     /**
      * Submit the B2B quote to the customer. The quote status for the customer will be changed to 'Updated', and the customer can work with the quote.
      *
-     * @param \Kiboko\Magento\V2\Model\V1NegotiableQuoteSubmitToCustomerPostBody $negotiableQuoteNegotiableQuoteManagementV1AdminSendPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1NegotiableQuoteSubmitToCustomerPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteNegotiableQuoteManagementV1AdminSendPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function negotiableQuoteNegotiableQuoteManagementV1AdminSendPost(\Kiboko\Magento\V2\Model\V1NegotiableQuoteSubmitToCustomerPostBody $negotiableQuoteNegotiableQuoteManagementV1AdminSendPostBody, string $fetch = self::FETCH_OBJECT)
+    public function negotiableQuoteNegotiableQuoteManagementV1AdminSendPost(?\Kiboko\Magento\V2\Model\V1NegotiableQuoteSubmitToCustomerPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteNegotiableQuoteManagementV1AdminSendPost($negotiableQuoteNegotiableQuoteManagementV1AdminSendPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteNegotiableQuoteManagementV1AdminSendPost($requestBody), $fetch);
     }
     /**
      * Save quote
      *
-     * @param string $quoteId
-     * @param \Kiboko\Magento\V2\Model\V1NegotiableQuoteQuoteIdPutBody $negotiableQuoteNegotiableCartRepositoryV1SavePutBody
+     * @param string $quoteId 
+     * @param null|\Kiboko\Magento\V2\Model\V1NegotiableQuoteQuoteIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteNegotiableCartRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function negotiableQuoteNegotiableCartRepositoryV1SavePut(string $quoteId, \Kiboko\Magento\V2\Model\V1NegotiableQuoteQuoteIdPutBody $negotiableQuoteNegotiableCartRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function negotiableQuoteNegotiableCartRepositoryV1SavePut(string $quoteId, ?\Kiboko\Magento\V2\Model\V1NegotiableQuoteQuoteIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteNegotiableCartRepositoryV1SavePut($quoteId, $negotiableQuoteNegotiableCartRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteNegotiableCartRepositoryV1SavePut($quoteId, $requestBody), $fetch);
     }
     /**
      * Returns comments for a specified negotiable quote.
@@ -4089,61 +4089,61 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * Updates the shipping method on a negotiable quote.
      *
      * @param int $quoteId Negotiable Quote id
-     * @param \Kiboko\Magento\V2\Model\V1NegotiableQuoteQuoteIdShippingMethodPutBody $negotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1NegotiableQuoteQuoteIdShippingMethodPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function negotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPut(int $quoteId, \Kiboko\Magento\V2\Model\V1NegotiableQuoteQuoteIdShippingMethodPutBody $negotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPutBody, string $fetch = self::FETCH_OBJECT)
+    public function negotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPut(int $quoteId, ?\Kiboko\Magento\V2\Model\V1NegotiableQuoteQuoteIdShippingMethodPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPut($quoteId, $negotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPut($quoteId, $requestBody), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param int $orderId
-     * @param \Kiboko\Magento\V2\Model\V1OrderOrderIdInvoicePostBody $salesInvoiceOrderV1ExecutePostBody
+     * @param int $orderId 
+     * @param null|\Kiboko\Magento\V2\Model\V1OrderOrderIdInvoicePostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesInvoiceOrderV1ExecutePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesInvoiceOrderV1ExecutePost(int $orderId, \Kiboko\Magento\V2\Model\V1OrderOrderIdInvoicePostBody $salesInvoiceOrderV1ExecutePostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesInvoiceOrderV1ExecutePost(int $orderId, ?\Kiboko\Magento\V2\Model\V1OrderOrderIdInvoicePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesInvoiceOrderV1ExecutePost($orderId, $salesInvoiceOrderV1ExecutePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesInvoiceOrderV1ExecutePost($orderId, $requestBody), $fetch);
     }
     /**
      * Create offline refund for order
      *
-     * @param int $orderId
-     * @param \Kiboko\Magento\V2\Model\V1OrderOrderIdRefundPostBody $salesRefundOrderV1ExecutePostBody
+     * @param int $orderId 
+     * @param null|\Kiboko\Magento\V2\Model\V1OrderOrderIdRefundPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesRefundOrderV1ExecutePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesRefundOrderV1ExecutePost(int $orderId, \Kiboko\Magento\V2\Model\V1OrderOrderIdRefundPostBody $salesRefundOrderV1ExecutePostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesRefundOrderV1ExecutePost(int $orderId, ?\Kiboko\Magento\V2\Model\V1OrderOrderIdRefundPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRefundOrderV1ExecutePost($orderId, $salesRefundOrderV1ExecutePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRefundOrderV1ExecutePost($orderId, $requestBody), $fetch);
     }
     /**
      * Creates new Shipment for given Order.
      *
-     * @param int $orderId
-     * @param \Kiboko\Magento\V2\Model\V1OrderOrderIdShipPostBody $salesShipOrderV1ExecutePostBody
+     * @param int $orderId 
+     * @param null|\Kiboko\Magento\V2\Model\V1OrderOrderIdShipPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesShipOrderV1ExecutePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesShipOrderV1ExecutePost(int $orderId, \Kiboko\Magento\V2\Model\V1OrderOrderIdShipPostBody $salesShipOrderV1ExecutePostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesShipOrderV1ExecutePost(int $orderId, ?\Kiboko\Magento\V2\Model\V1OrderOrderIdShipPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesShipOrderV1ExecutePost($orderId, $salesShipOrderV1ExecutePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesShipOrderV1ExecutePost($orderId, $requestBody), $fetch);
     }
     /**
-     * Lists orders that match specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See https://devdocs.magento.com/codelinks/attributes.html#OrderRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Lists orders that match specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#OrderRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param array $queryParameters {
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
@@ -4166,31 +4166,31 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Performs persist operations for a specified order.
      *
-     * @param \Kiboko\Magento\V2\Model\V1OrdersPostBody $salesOrderRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1OrdersPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesOrderRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesDataOrderInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesOrderRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1OrdersPostBody $salesOrderRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesOrderRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1OrdersPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesOrderRepositoryV1SavePost($salesOrderRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesOrderRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Performs persist operations for a specified order.
      *
-     * @param \Kiboko\Magento\V2\Model\V1OrdersCreatePutBody $salesOrderRepositoryV1SavePutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1OrdersCreatePutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesOrderRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesDataOrderInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesOrderRepositoryV1SavePut(\Kiboko\Magento\V2\Model\V1OrdersCreatePutBody $salesOrderRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function salesOrderRepositoryV1SavePut(?\Kiboko\Magento\V2\Model\V1OrdersCreatePutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesOrderRepositoryV1SavePut($salesOrderRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesOrderRepositoryV1SavePut($requestBody), $fetch);
     }
     /**
-     * Lists order items that match specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See https://devdocs.magento.com/codelinks/attributes.html#OrderItemRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Lists order items that match specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#OrderItemRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param array $queryParameters {
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
@@ -4266,15 +4266,15 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * Adds a comment to a specified order.
      *
      * @param int $id The order ID.
-     * @param \Kiboko\Magento\V2\Model\V1OrdersIdCommentsPostBody $salesOrderManagementV1AddCommentPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1OrdersIdCommentsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesOrderManagementV1AddCommentPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesOrderManagementV1AddCommentPost(int $id, \Kiboko\Magento\V2\Model\V1OrdersIdCommentsPostBody $salesOrderManagementV1AddCommentPostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesOrderManagementV1AddCommentPost(int $id, ?\Kiboko\Magento\V2\Model\V1OrdersIdCommentsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesOrderManagementV1AddCommentPost($id, $salesOrderManagementV1AddCommentPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesOrderManagementV1AddCommentPost($id, $requestBody), $fetch);
     }
     /**
      * Emails a user a specified order.
@@ -4331,16 +4331,16 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Performs persist operations for a specified order address.
      *
-     * @param string $parentId
-     * @param \Kiboko\Magento\V2\Model\V1OrdersParentIdPutBody $salesOrderAddressRepositoryV1SavePutBody
+     * @param string $parentId 
+     * @param null|\Kiboko\Magento\V2\Model\V1OrdersParentIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesOrderAddressRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesDataOrderAddressInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesOrderAddressRepositoryV1SavePut(string $parentId, \Kiboko\Magento\V2\Model\V1OrdersParentIdPutBody $salesOrderAddressRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function salesOrderAddressRepositoryV1SavePut(string $parentId, ?\Kiboko\Magento\V2\Model\V1OrdersParentIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesOrderAddressRepositoryV1SavePut($parentId, $salesOrderAddressRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesOrderAddressRepositoryV1SavePut($parentId, $requestBody), $fetch);
     }
     /**
      * Get product list
@@ -4366,16 +4366,16 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create product
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsPostBody $catalogProductRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataProductInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1ProductsPostBody $catalogProductRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1ProductsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductRepositoryV1SavePost($catalogProductRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Collect and retrieve the list of product render info This info contains raw prices and formated prices, product name, stock status, store_id, etc
@@ -4388,8 +4388,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
-     *     @var int $storeId
-     *     @var string $currencyCode
+     *     @var int $storeId 
+     *     @var string $currencyCode 
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
@@ -4402,43 +4402,43 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create attribute set from data
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsAttributeSetsPostBody $catalogAttributeSetManagementV1CreatePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsAttributeSetsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogAttributeSetManagementV1CreatePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogAttributeSetManagementV1CreatePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\EavDataAttributeSetInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogAttributeSetManagementV1CreatePost(\Kiboko\Magento\V2\Model\V1ProductsAttributeSetsPostBody $catalogAttributeSetManagementV1CreatePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogAttributeSetManagementV1CreatePost(?\Kiboko\Magento\V2\Model\V1ProductsAttributeSetsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogAttributeSetManagementV1CreatePost($catalogAttributeSetManagementV1CreatePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogAttributeSetManagementV1CreatePost($requestBody), $fetch);
     }
     /**
      * Assign attribute to attribute set
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsAttributeSetsAttributesPostBody $catalogProductAttributeManagementV1AssignPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsAttributeSetsAttributesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeManagementV1AssignPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeManagementV1AssignPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductAttributeManagementV1AssignPost(\Kiboko\Magento\V2\Model\V1ProductsAttributeSetsAttributesPostBody $catalogProductAttributeManagementV1AssignPostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductAttributeManagementV1AssignPost(?\Kiboko\Magento\V2\Model\V1ProductsAttributeSetsAttributesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeManagementV1AssignPost($catalogProductAttributeManagementV1AssignPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeManagementV1AssignPost($requestBody), $fetch);
     }
     /**
      * Save attribute group
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsAttributeSetsGroupsPostBody $catalogProductAttributeGroupRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsAttributeSetsGroupsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeGroupRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\EavDataAttributeGroupInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductAttributeGroupRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1ProductsAttributeSetsGroupsPostBody $catalogProductAttributeGroupRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductAttributeGroupRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1ProductsAttributeSetsGroupsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeGroupRepositoryV1SavePost($catalogProductAttributeGroupRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeGroupRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Retrieve list of attribute groups
@@ -4465,7 +4465,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Remove attribute group by id
      *
-     * @param int $groupId
+     * @param int $groupId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeGroupRepositoryV1DeleteByIdDeleteUnauthorizedException
      *
@@ -4499,7 +4499,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Remove attribute set by given ID
      *
-     * @param int $attributeSetId
+     * @param int $attributeSetId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogAttributeSetRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogAttributeSetRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -4513,7 +4513,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve attribute set information based on given ID
      *
-     * @param int $attributeSetId
+     * @param int $attributeSetId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogAttributeSetRepositoryV1GetGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogAttributeSetRepositoryV1GetGetUnauthorizedException
@@ -4527,8 +4527,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save attribute set data
      *
-     * @param string $attributeSetId
-     * @param \Kiboko\Magento\V2\Model\V1ProductsAttributeSetsAttributeSetIdPutBody $catalogAttributeSetRepositoryV1SavePutBody
+     * @param string $attributeSetId 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsAttributeSetsAttributeSetIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogAttributeSetRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogAttributeSetRepositoryV1SavePutUnauthorizedException
@@ -4536,14 +4536,14 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\EavDataAttributeSetInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogAttributeSetRepositoryV1SavePut(string $attributeSetId, \Kiboko\Magento\V2\Model\V1ProductsAttributeSetsAttributeSetIdPutBody $catalogAttributeSetRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogAttributeSetRepositoryV1SavePut(string $attributeSetId, ?\Kiboko\Magento\V2\Model\V1ProductsAttributeSetsAttributeSetIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogAttributeSetRepositoryV1SavePut($attributeSetId, $catalogAttributeSetRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogAttributeSetRepositoryV1SavePut($attributeSetId, $requestBody), $fetch);
     }
     /**
      * Retrieve related attributes based on given attribute set ID
      *
-     * @param string $attributeSetId
+     * @param string $attributeSetId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeManagementV1GetAttributesGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeManagementV1GetAttributesGetUnauthorizedException
@@ -4557,8 +4557,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Remove attribute from attribute set
      *
-     * @param string $attributeSetId
-     * @param string $attributeCode
+     * @param string $attributeSetId 
+     * @param string $attributeCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeManagementV1UnassignDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeManagementV1UnassignDeleteUnauthorizedException
@@ -4572,16 +4572,16 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save attribute group
      *
-     * @param string $attributeSetId
-     * @param \Kiboko\Magento\V2\Model\V1ProductsAttributeSetsAttributeSetIdGroupsPutBody $catalogProductAttributeGroupRepositoryV1SavePutBody
+     * @param string $attributeSetId 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsAttributeSetsAttributeSetIdGroupsPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeGroupRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\EavDataAttributeGroupInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductAttributeGroupRepositoryV1SavePut(string $attributeSetId, \Kiboko\Magento\V2\Model\V1ProductsAttributeSetsAttributeSetIdGroupsPutBody $catalogProductAttributeGroupRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductAttributeGroupRepositoryV1SavePut(string $attributeSetId, ?\Kiboko\Magento\V2\Model\V1ProductsAttributeSetsAttributeSetIdGroupsPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeGroupRepositoryV1SavePut($attributeSetId, $catalogProductAttributeGroupRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeGroupRepositoryV1SavePut($attributeSetId, $requestBody), $fetch);
     }
     /**
      * Retrieve all attributes for entity type
@@ -4607,16 +4607,16 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save attribute data
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsAttributesPostBody $catalogProductAttributeRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsAttributesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataProductAttributeInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductAttributeRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1ProductsAttributesPostBody $catalogProductAttributeRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductAttributeRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1ProductsAttributesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeRepositoryV1SavePost($catalogProductAttributeRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -4631,7 +4631,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Delete Attribute by id
      *
-     * @param string $attributeCode
+     * @param string $attributeCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -4645,7 +4645,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve specific attribute
      *
-     * @param string $attributeCode
+     * @param string $attributeCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeRepositoryV1GetGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeRepositoryV1GetGetUnauthorizedException
@@ -4659,22 +4659,22 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save attribute data
      *
-     * @param string $attributeCode
-     * @param \Kiboko\Magento\V2\Model\V1ProductsAttributesAttributeCodePutBody $catalogProductAttributeRepositoryV1SavePutBody
+     * @param string $attributeCode 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsAttributesAttributeCodePutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataProductAttributeInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductAttributeRepositoryV1SavePut(string $attributeCode, \Kiboko\Magento\V2\Model\V1ProductsAttributesAttributeCodePutBody $catalogProductAttributeRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductAttributeRepositoryV1SavePut(string $attributeCode, ?\Kiboko\Magento\V2\Model\V1ProductsAttributesAttributeCodePutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeRepositoryV1SavePut($attributeCode, $catalogProductAttributeRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeRepositoryV1SavePut($attributeCode, $requestBody), $fetch);
     }
     /**
      * Retrieve list of attribute options
      *
-     * @param string $attributeCode
+     * @param string $attributeCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeOptionManagementV1GetItemsGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeOptionManagementV1GetItemsGetUnauthorizedException
@@ -4688,23 +4688,23 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Add option to attribute
      *
-     * @param string $attributeCode
-     * @param \Kiboko\Magento\V2\Model\V1ProductsAttributesAttributeCodeOptionsPostBody $catalogProductAttributeOptionManagementV1AddPostBody
+     * @param string $attributeCode 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsAttributesAttributeCodeOptionsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeOptionManagementV1AddPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeOptionManagementV1AddPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductAttributeOptionManagementV1AddPost(string $attributeCode, \Kiboko\Magento\V2\Model\V1ProductsAttributesAttributeCodeOptionsPostBody $catalogProductAttributeOptionManagementV1AddPostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductAttributeOptionManagementV1AddPost(string $attributeCode, ?\Kiboko\Magento\V2\Model\V1ProductsAttributesAttributeCodeOptionsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeOptionManagementV1AddPost($attributeCode, $catalogProductAttributeOptionManagementV1AddPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeOptionManagementV1AddPost($attributeCode, $requestBody), $fetch);
     }
     /**
      * Delete option from attribute
      *
-     * @param string $attributeCode
-     * @param string $optionId
+     * @param string $attributeCode 
+     * @param string $optionId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeOptionManagementV1DeleteDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeOptionManagementV1DeleteDeleteUnauthorizedException
@@ -4718,75 +4718,75 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Add or update product prices. Input item should correspond \Magento\Catalog\Api\Data\CostInterface. If any items will have invalid price, store id or sku, they will be marked as failed and excluded from update list and \Magento\Catalog\Api\Data\PriceUpdateResultInterface[] with problem description will be returned. If there were no failed items during update empty array will be returned. If error occurred during the update exception will be thrown.
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsBasePricesPostBody $catalogBasePriceStorageV1UpdatePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsBasePricesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogBasePriceStorageV1UpdatePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogBasePriceStorageV1UpdatePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataPriceUpdateResultInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogBasePriceStorageV1UpdatePost(\Kiboko\Magento\V2\Model\V1ProductsBasePricesPostBody $catalogBasePriceStorageV1UpdatePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogBasePriceStorageV1UpdatePost(?\Kiboko\Magento\V2\Model\V1ProductsBasePricesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogBasePriceStorageV1UpdatePost($catalogBasePriceStorageV1UpdatePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogBasePriceStorageV1UpdatePost($requestBody), $fetch);
     }
     /**
      * Return product prices. In case of at least one of skus is not found exception will be thrown.
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsBasePricesInformationPostBody $catalogBasePriceStorageV1GetPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsBasePricesInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogBasePriceStorageV1GetPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataBasePriceInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogBasePriceStorageV1GetPost(\Kiboko\Magento\V2\Model\V1ProductsBasePricesInformationPostBody $catalogBasePriceStorageV1GetPostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogBasePriceStorageV1GetPost(?\Kiboko\Magento\V2\Model\V1ProductsBasePricesInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogBasePriceStorageV1GetPost($catalogBasePriceStorageV1GetPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogBasePriceStorageV1GetPost($requestBody), $fetch);
     }
     /**
      * Add or update product cost. Input item should correspond to \Magento\Catalog\Api\Data\CostInterface. If any items will have invalid cost, store id or sku, they will be marked as failed and excluded from update list and \Magento\Catalog\Api\Data\PriceUpdateResultInterface[] with problem description will be returned. If there were no failed items during update empty array will be returned. If error occurred during the update exception will be thrown.
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsCostPostBody $catalogCostStorageV1UpdatePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsCostPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogCostStorageV1UpdatePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataPriceUpdateResultInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogCostStorageV1UpdatePost(\Kiboko\Magento\V2\Model\V1ProductsCostPostBody $catalogCostStorageV1UpdatePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogCostStorageV1UpdatePost(?\Kiboko\Magento\V2\Model\V1ProductsCostPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCostStorageV1UpdatePost($catalogCostStorageV1UpdatePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCostStorageV1UpdatePost($requestBody), $fetch);
     }
     /**
      * Delete product cost. In case of at least one of skus is not found exception will be thrown. If error occurred during the delete exception will be thrown.
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsCostDeletePostBody $catalogCostStorageV1DeletePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsCostDeletePostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogCostStorageV1DeletePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogCostStorageV1DeletePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogCostStorageV1DeletePost(\Kiboko\Magento\V2\Model\V1ProductsCostDeletePostBody $catalogCostStorageV1DeletePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogCostStorageV1DeletePost(?\Kiboko\Magento\V2\Model\V1ProductsCostDeletePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCostStorageV1DeletePost($catalogCostStorageV1DeletePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCostStorageV1DeletePost($requestBody), $fetch);
     }
     /**
      * Return product prices. In case of at least one of skus is not found exception will be thrown.
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsCostInformationPostBody $catalogCostStorageV1GetPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsCostInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogCostStorageV1GetPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogCostStorageV1GetPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataCostInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogCostStorageV1GetPost(\Kiboko\Magento\V2\Model\V1ProductsCostInformationPostBody $catalogCostStorageV1GetPostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogCostStorageV1GetPost(?\Kiboko\Magento\V2\Model\V1ProductsCostInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCostStorageV1GetPost($catalogCostStorageV1GetPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogCostStorageV1GetPost($requestBody), $fetch);
     }
     /**
      * Delete downloadable sample
      *
-     * @param int $id
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\DownloadableSampleRepositoryV1DeleteDeleteUnauthorizedException
      *
@@ -4799,7 +4799,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Delete downloadable link
      *
-     * @param int $id
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\DownloadableLinkRepositoryV1DeleteDeleteUnauthorizedException
      *
@@ -4822,7 +4822,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Provide a list of the product link type attributes
      *
-     * @param string $type
+     * @param string $type 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductLinkTypeListV1GetItemAttributesGetUnauthorizedException
      *
@@ -4835,7 +4835,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve the list of media attributes (fronted input type is media_image) assigned to the given attribute set.
      *
-     * @param string $attributeSetName
+     * @param string $attributeSetName 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductMediaAttributeManagementV1GetListGetUnauthorizedException
      *
@@ -4848,15 +4848,15 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save Custom Option
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsOptionsPostBody $catalogProductCustomOptionRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsOptionsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductCustomOptionRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataProductCustomOptionInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductCustomOptionRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1ProductsOptionsPostBody $catalogProductCustomOptionRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductCustomOptionRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1ProductsOptionsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductCustomOptionRepositoryV1SavePost($catalogProductCustomOptionRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductCustomOptionRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -4871,111 +4871,111 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save Custom Option
      *
-     * @param string $optionId
-     * @param \Kiboko\Magento\V2\Model\V1ProductsOptionsOptionIdPutBody $catalogProductCustomOptionRepositoryV1SavePutBody
+     * @param string $optionId 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsOptionsOptionIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductCustomOptionRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataProductCustomOptionInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductCustomOptionRepositoryV1SavePut(string $optionId, \Kiboko\Magento\V2\Model\V1ProductsOptionsOptionIdPutBody $catalogProductCustomOptionRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductCustomOptionRepositoryV1SavePut(string $optionId, ?\Kiboko\Magento\V2\Model\V1ProductsOptionsOptionIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductCustomOptionRepositoryV1SavePut($optionId, $catalogProductCustomOptionRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductCustomOptionRepositoryV1SavePut($optionId, $requestBody), $fetch);
     }
     /**
      * Add or update product's special price. If any items will have invalid price, store id, sku or dates, they will be marked as failed and excluded from update list and \Magento\Catalog\Api\Data\PriceUpdateResultInterface[] with problem description will be returned. If there were no failed items during update empty array will be returned. If error occurred during the update exception will be thrown.
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsSpecialPricePostBody $catalogSpecialPriceStorageV1UpdatePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsSpecialPricePostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogSpecialPriceStorageV1UpdatePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogSpecialPriceStorageV1UpdatePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataPriceUpdateResultInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogSpecialPriceStorageV1UpdatePost(\Kiboko\Magento\V2\Model\V1ProductsSpecialPricePostBody $catalogSpecialPriceStorageV1UpdatePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogSpecialPriceStorageV1UpdatePost(?\Kiboko\Magento\V2\Model\V1ProductsSpecialPricePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogSpecialPriceStorageV1UpdatePost($catalogSpecialPriceStorageV1UpdatePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogSpecialPriceStorageV1UpdatePost($requestBody), $fetch);
     }
     /**
      * Delete product's special price. If any items will have invalid price, store id, sku or dates, they will be marked as failed and excluded from delete list and \Magento\Catalog\Api\Data\PriceUpdateResultInterface[] with problem description will be returned. If there were no failed items during update empty array will be returned. If error occurred during the delete exception will be thrown.
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsSpecialPriceDeletePostBody $catalogSpecialPriceStorageV1DeletePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsSpecialPriceDeletePostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogSpecialPriceStorageV1DeletePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogSpecialPriceStorageV1DeletePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataPriceUpdateResultInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogSpecialPriceStorageV1DeletePost(\Kiboko\Magento\V2\Model\V1ProductsSpecialPriceDeletePostBody $catalogSpecialPriceStorageV1DeletePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogSpecialPriceStorageV1DeletePost(?\Kiboko\Magento\V2\Model\V1ProductsSpecialPriceDeletePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogSpecialPriceStorageV1DeletePost($catalogSpecialPriceStorageV1DeletePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogSpecialPriceStorageV1DeletePost($requestBody), $fetch);
     }
     /**
      * Return product's special price. In case of at least one of skus is not found exception will be thrown.
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsSpecialPriceInformationPostBody $catalogSpecialPriceStorageV1GetPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsSpecialPriceInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogSpecialPriceStorageV1GetPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogSpecialPriceStorageV1GetPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataSpecialPriceInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogSpecialPriceStorageV1GetPost(\Kiboko\Magento\V2\Model\V1ProductsSpecialPriceInformationPostBody $catalogSpecialPriceStorageV1GetPostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogSpecialPriceStorageV1GetPost(?\Kiboko\Magento\V2\Model\V1ProductsSpecialPriceInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogSpecialPriceStorageV1GetPost($catalogSpecialPriceStorageV1GetPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogSpecialPriceStorageV1GetPost($requestBody), $fetch);
     }
     /**
      * Add or update product prices. If any items will have invalid price, price type, website id, sku, customer group or quantity, they will be marked as failed and excluded from update list and \Magento\Catalog\Api\Data\PriceUpdateResultInterface[] with problem description will be returned. If there were no failed items during update empty array will be returned. If error occurred during the update exception will be thrown.
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsTierPricesPostBody $catalogTierPriceStorageV1UpdatePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsTierPricesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogTierPriceStorageV1UpdatePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataPriceUpdateResultInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogTierPriceStorageV1UpdatePost(\Kiboko\Magento\V2\Model\V1ProductsTierPricesPostBody $catalogTierPriceStorageV1UpdatePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogTierPriceStorageV1UpdatePost(?\Kiboko\Magento\V2\Model\V1ProductsTierPricesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogTierPriceStorageV1UpdatePost($catalogTierPriceStorageV1UpdatePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogTierPriceStorageV1UpdatePost($requestBody), $fetch);
     }
     /**
      * Remove existing tier prices and replace them with the new ones. If any items will have invalid price, price type, website id, sku, customer group or quantity, they will be marked as failed and excluded from replace list and \Magento\Catalog\Api\Data\PriceUpdateResultInterface[] with problem description will be returned. If there were no failed items during update empty array will be returned. If error occurred during the update exception will be thrown.
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsTierPricesPutBody $catalogTierPriceStorageV1ReplacePutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsTierPricesPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogTierPriceStorageV1ReplacePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataPriceUpdateResultInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogTierPriceStorageV1ReplacePut(\Kiboko\Magento\V2\Model\V1ProductsTierPricesPutBody $catalogTierPriceStorageV1ReplacePutBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogTierPriceStorageV1ReplacePut(?\Kiboko\Magento\V2\Model\V1ProductsTierPricesPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogTierPriceStorageV1ReplacePut($catalogTierPriceStorageV1ReplacePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogTierPriceStorageV1ReplacePut($requestBody), $fetch);
     }
     /**
      * Delete product tier prices. If any items will have invalid price, price type, website id, sku, customer group or quantity, they will be marked as failed and excluded from delete list and \Magento\Catalog\Api\Data\PriceUpdateResultInterface[] with problem description will be returned. If there were no failed items during update empty array will be returned. If error occurred during the update exception will be thrown.
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsTierPricesDeletePostBody $catalogTierPriceStorageV1DeletePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsTierPricesDeletePostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogTierPriceStorageV1DeletePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataPriceUpdateResultInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogTierPriceStorageV1DeletePost(\Kiboko\Magento\V2\Model\V1ProductsTierPricesDeletePostBody $catalogTierPriceStorageV1DeletePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogTierPriceStorageV1DeletePost(?\Kiboko\Magento\V2\Model\V1ProductsTierPricesDeletePostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogTierPriceStorageV1DeletePost($catalogTierPriceStorageV1DeletePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogTierPriceStorageV1DeletePost($requestBody), $fetch);
     }
     /**
      * Return product prices. In case of at least one of skus is not found exception will be thrown.
      *
-     * @param \Kiboko\Magento\V2\Model\V1ProductsTierPricesInformationPostBody $catalogTierPriceStorageV1GetPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsTierPricesInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogTierPriceStorageV1GetPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogTierPriceStorageV1GetPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataTierPriceInterface[]|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogTierPriceStorageV1GetPost(\Kiboko\Magento\V2\Model\V1ProductsTierPricesInformationPostBody $catalogTierPriceStorageV1GetPostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogTierPriceStorageV1GetPost(?\Kiboko\Magento\V2\Model\V1ProductsTierPricesInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogTierPriceStorageV1GetPost($catalogTierPriceStorageV1GetPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogTierPriceStorageV1GetPost($requestBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -4988,25 +4988,25 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductTypeListV1GetProductTypesGet(), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $productSku
-     * @param string $itemId
-     * @param \Kiboko\Magento\V2\Model\V1ProductsProductSkuStockItemsItemIdPutBody $catalogInventoryStockRegistryV1UpdateStockItemBySkuPutBody
+     * @param string $productSku 
+     * @param string $itemId 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsProductSkuStockItemsItemIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogInventoryStockRegistryV1UpdateStockItemBySkuPutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogInventoryStockRegistryV1UpdateStockItemBySkuPutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogInventoryStockRegistryV1UpdateStockItemBySkuPut(string $productSku, string $itemId, \Kiboko\Magento\V2\Model\V1ProductsProductSkuStockItemsItemIdPutBody $catalogInventoryStockRegistryV1UpdateStockItemBySkuPutBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogInventoryStockRegistryV1UpdateStockItemBySkuPut(string $productSku, string $itemId, ?\Kiboko\Magento\V2\Model\V1ProductsProductSkuStockItemsItemIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogInventoryStockRegistryV1UpdateStockItemBySkuPut($productSku, $itemId, $catalogInventoryStockRegistryV1UpdateStockItemBySkuPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogInventoryStockRegistryV1UpdateStockItemBySkuPut($productSku, $itemId, $requestBody), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $sku
+     * @param string $sku 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -5020,11 +5020,11 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get info about product by product SKU
      *
-     * @param string $sku
+     * @param string $sku 
      * @param array $queryParameters {
-     *     @var bool $editMode
-     *     @var int $storeId
-     *     @var bool $forceReload
+     *     @var bool $editMode 
+     *     @var int $storeId 
+     *     @var bool $forceReload 
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductRepositoryV1GetGetBadRequestException
@@ -5039,22 +5039,22 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create product
      *
-     * @param string $sku
-     * @param \Kiboko\Magento\V2\Model\V1ProductsSkuPutBody $catalogProductRepositoryV1SavePutBody
+     * @param string $sku 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsSkuPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\CatalogDataProductInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductRepositoryV1SavePut(string $sku, \Kiboko\Magento\V2\Model\V1ProductsSkuPutBody $catalogProductRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductRepositoryV1SavePut(string $sku, ?\Kiboko\Magento\V2\Model\V1ProductsSkuPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductRepositoryV1SavePut($sku, $catalogProductRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductRepositoryV1SavePut($sku, $requestBody), $fetch);
     }
     /**
      * List of links with associated samples
      *
-     * @param string $sku
+     * @param string $sku 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\DownloadableLinkRepositoryV1GetListGetUnauthorizedException
      *
@@ -5067,21 +5067,21 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Update downloadable link of the given product (link type and its resources cannot be changed)
      *
-     * @param string $sku
-     * @param \Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksPostBody $downloadableLinkRepositoryV1SavePostBody
+     * @param string $sku 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\DownloadableLinkRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function downloadableLinkRepositoryV1SavePost(string $sku, \Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksPostBody $downloadableLinkRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function downloadableLinkRepositoryV1SavePost(string $sku, ?\Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\DownloadableLinkRepositoryV1SavePost($sku, $downloadableLinkRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\DownloadableLinkRepositoryV1SavePost($sku, $requestBody), $fetch);
     }
     /**
      * List of samples for downloadable product
      *
-     * @param string $sku
+     * @param string $sku 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\DownloadableSampleRepositoryV1GetListGetUnauthorizedException
      *
@@ -5094,51 +5094,51 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Update downloadable sample of the given product
      *
-     * @param string $sku
-     * @param \Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksSamplesPostBody $downloadableSampleRepositoryV1SavePostBody
+     * @param string $sku 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksSamplesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\DownloadableSampleRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function downloadableSampleRepositoryV1SavePost(string $sku, \Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksSamplesPostBody $downloadableSampleRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function downloadableSampleRepositoryV1SavePost(string $sku, ?\Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksSamplesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\DownloadableSampleRepositoryV1SavePost($sku, $downloadableSampleRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\DownloadableSampleRepositoryV1SavePost($sku, $requestBody), $fetch);
     }
     /**
      * Update downloadable sample of the given product
      *
-     * @param string $sku
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksSamplesIdPutBody $downloadableSampleRepositoryV1SavePutBody
+     * @param string $sku 
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksSamplesIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\DownloadableSampleRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function downloadableSampleRepositoryV1SavePut(string $sku, string $id, \Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksSamplesIdPutBody $downloadableSampleRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function downloadableSampleRepositoryV1SavePut(string $sku, string $id, ?\Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksSamplesIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\DownloadableSampleRepositoryV1SavePut($sku, $id, $downloadableSampleRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\DownloadableSampleRepositoryV1SavePut($sku, $id, $requestBody), $fetch);
     }
     /**
      * Update downloadable link of the given product (link type and its resources cannot be changed)
      *
-     * @param string $sku
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksIdPutBody $downloadableLinkRepositoryV1SavePutBody
+     * @param string $sku 
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\DownloadableLinkRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function downloadableLinkRepositoryV1SavePut(string $sku, string $id, \Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksIdPutBody $downloadableLinkRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function downloadableLinkRepositoryV1SavePut(string $sku, string $id, ?\Kiboko\Magento\V2\Model\V1ProductsSkuDownloadableLinksIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\DownloadableLinkRepositoryV1SavePut($sku, $id, $downloadableLinkRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\DownloadableLinkRepositoryV1SavePut($sku, $id, $requestBody), $fetch);
     }
     /**
      * Get tier price of product
      *
-     * @param string $sku
+     * @param string $sku 
      * @param string $customerGroupId 'all' can be used to specify 'ALL GROUPS'
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductTierPriceManagementV1GetListGetBadRequestException
@@ -5153,9 +5153,9 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Remove tier price from product
      *
-     * @param string $sku
+     * @param string $sku 
      * @param string $customerGroupId 'all' can be used to specify 'ALL GROUPS'
-     * @param float $qty
+     * @param float $qty 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductTierPriceManagementV1RemoveDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductTierPriceManagementV1RemoveDeleteUnauthorizedException
@@ -5169,10 +5169,10 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create tier price for product
      *
-     * @param string $sku
+     * @param string $sku 
      * @param string $customerGroupId 'all' can be used to specify 'ALL GROUPS'
-     * @param float $price
-     * @param float $qty
+     * @param float $price 
+     * @param float $qty 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductTierPriceManagementV1AddPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductTierPriceManagementV1AddPostUnauthorizedException
@@ -5186,38 +5186,38 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Assign a product link to another product
      *
-     * @param string $sku
-     * @param \Kiboko\Magento\V2\Model\V1ProductsSkuLinksPostBody $catalogProductLinkManagementV1SetProductLinksPostBody
+     * @param string $sku 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsSkuLinksPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductLinkManagementV1SetProductLinksPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductLinkManagementV1SetProductLinksPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductLinkManagementV1SetProductLinksPost(string $sku, \Kiboko\Magento\V2\Model\V1ProductsSkuLinksPostBody $catalogProductLinkManagementV1SetProductLinksPostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductLinkManagementV1SetProductLinksPost(string $sku, ?\Kiboko\Magento\V2\Model\V1ProductsSkuLinksPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductLinkManagementV1SetProductLinksPost($sku, $catalogProductLinkManagementV1SetProductLinksPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductLinkManagementV1SetProductLinksPost($sku, $requestBody), $fetch);
     }
     /**
      * Save product link
      *
-     * @param string $sku
-     * @param \Kiboko\Magento\V2\Model\V1ProductsSkuLinksPutBody $catalogProductLinkRepositoryV1SavePutBody
+     * @param string $sku 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsSkuLinksPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductLinkRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductLinkRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductLinkRepositoryV1SavePut(string $sku, \Kiboko\Magento\V2\Model\V1ProductsSkuLinksPutBody $catalogProductLinkRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductLinkRepositoryV1SavePut(string $sku, ?\Kiboko\Magento\V2\Model\V1ProductsSkuLinksPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductLinkRepositoryV1SavePut($sku, $catalogProductLinkRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductLinkRepositoryV1SavePut($sku, $requestBody), $fetch);
     }
     /**
      * Provide the list of links for a specific product
      *
-     * @param string $sku
-     * @param string $type
+     * @param string $sku 
+     * @param string $type 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductLinkManagementV1GetLinkedItemsByTypeGetUnauthorizedException
      *
@@ -5228,11 +5228,11 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductLinkManagementV1GetLinkedItemsByTypeGet($sku, $type), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $sku
-     * @param string $type
-     * @param string $linkedProductSku
+     * @param string $sku 
+     * @param string $type 
+     * @param string $linkedProductSku 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductLinkRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductLinkRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -5246,7 +5246,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve the list of gallery entries associated with given product
      *
-     * @param string $sku
+     * @param string $sku 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeMediaGalleryManagementV1GetListGetUnauthorizedException
      *
@@ -5259,23 +5259,23 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create new gallery entry
      *
-     * @param string $sku
-     * @param \Kiboko\Magento\V2\Model\V1ProductsSkuMediaPostBody $catalogProductAttributeMediaGalleryManagementV1CreatePostBody
+     * @param string $sku 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsSkuMediaPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeMediaGalleryManagementV1CreatePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeMediaGalleryManagementV1CreatePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductAttributeMediaGalleryManagementV1CreatePost(string $sku, \Kiboko\Magento\V2\Model\V1ProductsSkuMediaPostBody $catalogProductAttributeMediaGalleryManagementV1CreatePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductAttributeMediaGalleryManagementV1CreatePost(string $sku, ?\Kiboko\Magento\V2\Model\V1ProductsSkuMediaPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeMediaGalleryManagementV1CreatePost($sku, $catalogProductAttributeMediaGalleryManagementV1CreatePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeMediaGalleryManagementV1CreatePost($sku, $requestBody), $fetch);
     }
     /**
      * Remove gallery entry
      *
-     * @param string $sku
-     * @param int $entryId
+     * @param string $sku 
+     * @param int $entryId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeMediaGalleryManagementV1RemoveDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeMediaGalleryManagementV1RemoveDeleteUnauthorizedException
@@ -5289,8 +5289,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Return information about gallery entry
      *
-     * @param string $sku
-     * @param int $entryId
+     * @param string $sku 
+     * @param int $entryId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeMediaGalleryManagementV1GetGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeMediaGalleryManagementV1GetGetUnauthorizedException
@@ -5304,23 +5304,23 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Update gallery entry
      *
-     * @param string $sku
-     * @param string $entryId
-     * @param \Kiboko\Magento\V2\Model\V1ProductsSkuMediaEntryIdPutBody $catalogProductAttributeMediaGalleryManagementV1UpdatePutBody
+     * @param string $sku 
+     * @param string $entryId 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsSkuMediaEntryIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeMediaGalleryManagementV1UpdatePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductAttributeMediaGalleryManagementV1UpdatePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductAttributeMediaGalleryManagementV1UpdatePut(string $sku, string $entryId, \Kiboko\Magento\V2\Model\V1ProductsSkuMediaEntryIdPutBody $catalogProductAttributeMediaGalleryManagementV1UpdatePutBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductAttributeMediaGalleryManagementV1UpdatePut(string $sku, string $entryId, ?\Kiboko\Magento\V2\Model\V1ProductsSkuMediaEntryIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeMediaGalleryManagementV1UpdatePut($sku, $entryId, $catalogProductAttributeMediaGalleryManagementV1UpdatePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductAttributeMediaGalleryManagementV1UpdatePut($sku, $entryId, $requestBody), $fetch);
     }
     /**
      * Get the list of custom options for a specific product
      *
-     * @param string $sku
+     * @param string $sku 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductCustomOptionRepositoryV1GetListGetUnauthorizedException
      *
@@ -5331,10 +5331,10 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductCustomOptionRepositoryV1GetListGet($sku), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $sku
-     * @param int $optionId
+     * @param string $sku 
+     * @param int $optionId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductCustomOptionRepositoryV1DeleteByIdentifierDeleteUnauthorizedException
      *
@@ -5347,8 +5347,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get custom option for a specific product
      *
-     * @param string $sku
-     * @param int $optionId
+     * @param string $sku 
+     * @param int $optionId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductCustomOptionRepositoryV1GetGetUnauthorizedException
      *
@@ -5361,38 +5361,38 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Assign a product to the website
      *
-     * @param string $sku
-     * @param \Kiboko\Magento\V2\Model\V1ProductsSkuWebsitesPostBody $catalogProductWebsiteLinkRepositoryV1SavePostBody
+     * @param string $sku 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsSkuWebsitesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductWebsiteLinkRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductWebsiteLinkRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductWebsiteLinkRepositoryV1SavePost(string $sku, \Kiboko\Magento\V2\Model\V1ProductsSkuWebsitesPostBody $catalogProductWebsiteLinkRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductWebsiteLinkRepositoryV1SavePost(string $sku, ?\Kiboko\Magento\V2\Model\V1ProductsSkuWebsitesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductWebsiteLinkRepositoryV1SavePost($sku, $catalogProductWebsiteLinkRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductWebsiteLinkRepositoryV1SavePost($sku, $requestBody), $fetch);
     }
     /**
      * Assign a product to the website
      *
-     * @param string $sku
-     * @param \Kiboko\Magento\V2\Model\V1ProductsSkuWebsitesPutBody $catalogProductWebsiteLinkRepositoryV1SavePutBody
+     * @param string $sku 
+     * @param null|\Kiboko\Magento\V2\Model\V1ProductsSkuWebsitesPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductWebsiteLinkRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductWebsiteLinkRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function catalogProductWebsiteLinkRepositoryV1SavePut(string $sku, \Kiboko\Magento\V2\Model\V1ProductsSkuWebsitesPutBody $catalogProductWebsiteLinkRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function catalogProductWebsiteLinkRepositoryV1SavePut(string $sku, ?\Kiboko\Magento\V2\Model\V1ProductsSkuWebsitesPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductWebsiteLinkRepositoryV1SavePut($sku, $catalogProductWebsiteLinkRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogProductWebsiteLinkRepositoryV1SavePut($sku, $requestBody), $fetch);
     }
     /**
      * Remove the website assignment from the product by product sku
      *
-     * @param string $sku
-     * @param int $websiteId
+     * @param string $sku 
+     * @param int $websiteId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductWebsiteLinkRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CatalogProductWebsiteLinkRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -5406,16 +5406,16 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save Requisition List
      *
-     * @param \Kiboko\Magento\V2\Model\V1RequisitionListsPostBody $requisitionListRequisitionListRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1RequisitionListsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\RequisitionListRequisitionListRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\RequisitionListRequisitionListRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\RequisitionListDataRequisitionListInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function requisitionListRequisitionListRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1RequisitionListsPostBody $requisitionListRequisitionListRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function requisitionListRequisitionListRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1RequisitionListsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\RequisitionListRequisitionListRepositoryV1SavePost($requisitionListRequisitionListRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\RequisitionListRequisitionListRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Return list of rma data objects based on search criteria
@@ -5441,35 +5441,35 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save RMA
      *
-     * @param \Kiboko\Magento\V2\Model\V1ReturnsPostBody $rmaRmaManagementV1SaveRmaPostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ReturnsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\RmaRmaManagementV1SaveRmaPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\RmaDataRmaInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function rmaRmaManagementV1SaveRmaPost(\Kiboko\Magento\V2\Model\V1ReturnsPostBody $rmaRmaManagementV1SaveRmaPostBody, string $fetch = self::FETCH_OBJECT)
+    public function rmaRmaManagementV1SaveRmaPost(?\Kiboko\Magento\V2\Model\V1ReturnsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\RmaRmaManagementV1SaveRmaPost($rmaRmaManagementV1SaveRmaPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\RmaRmaManagementV1SaveRmaPost($requestBody), $fetch);
     }
     /**
      * Delete RMA
      *
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1ReturnsIdDeleteBody $rmaRmaRepositoryV1DeleteDeleteBody
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1ReturnsIdDeleteBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\RmaRmaRepositoryV1DeleteDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\RmaRmaRepositoryV1DeleteDeleteUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function rmaRmaRepositoryV1DeleteDelete(string $id, \Kiboko\Magento\V2\Model\V1ReturnsIdDeleteBody $rmaRmaRepositoryV1DeleteDeleteBody, string $fetch = self::FETCH_OBJECT)
+    public function rmaRmaRepositoryV1DeleteDelete(string $id, ?\Kiboko\Magento\V2\Model\V1ReturnsIdDeleteBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\RmaRmaRepositoryV1DeleteDelete($id, $rmaRmaRepositoryV1DeleteDeleteBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\RmaRmaRepositoryV1DeleteDelete($id, $requestBody), $fetch);
     }
     /**
      * Return data object for specified RMA id
      *
-     * @param int $id
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\RmaRmaRepositoryV1GetGetUnauthorizedException
      *
@@ -5482,21 +5482,21 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save RMA
      *
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1ReturnsIdPutBody $rmaRmaManagementV1SaveRmaPutBody
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1ReturnsIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\RmaRmaManagementV1SaveRmaPutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\RmaDataRmaInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function rmaRmaManagementV1SaveRmaPut(string $id, \Kiboko\Magento\V2\Model\V1ReturnsIdPutBody $rmaRmaManagementV1SaveRmaPutBody, string $fetch = self::FETCH_OBJECT)
+    public function rmaRmaManagementV1SaveRmaPut(string $id, ?\Kiboko\Magento\V2\Model\V1ReturnsIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\RmaRmaManagementV1SaveRmaPut($id, $rmaRmaManagementV1SaveRmaPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\RmaRmaManagementV1SaveRmaPut($id, $requestBody), $fetch);
     }
     /**
      * Comments list
      *
-     * @param int $id
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\RmaCommentManagementV1CommentsListGetUnauthorizedException
      *
@@ -5509,22 +5509,22 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Add comment
      *
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1ReturnsIdCommentsPostBody $rmaCommentManagementV1AddCommentPostBody
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1ReturnsIdCommentsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\RmaCommentManagementV1AddCommentPostUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\RmaCommentManagementV1AddCommentPostInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function rmaCommentManagementV1AddCommentPost(string $id, \Kiboko\Magento\V2\Model\V1ReturnsIdCommentsPostBody $rmaCommentManagementV1AddCommentPostBody, string $fetch = self::FETCH_OBJECT)
+    public function rmaCommentManagementV1AddCommentPost(string $id, ?\Kiboko\Magento\V2\Model\V1ReturnsIdCommentsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\RmaCommentManagementV1AddCommentPost($id, $rmaCommentManagementV1AddCommentPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\RmaCommentManagementV1AddCommentPost($id, $requestBody), $fetch);
     }
     /**
      * Get shipping label int the PDF format
      *
-     * @param int $id
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\RmaTrackManagementV1GetShippingLabelPdfGetUnauthorizedException
      *
@@ -5537,7 +5537,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get track list
      *
-     * @param int $id
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\RmaTrackManagementV1GetTracksGetUnauthorizedException
      *
@@ -5550,22 +5550,22 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Add track
      *
-     * @param int $id
-     * @param \Kiboko\Magento\V2\Model\V1ReturnsIdTrackingNumbersPostBody $rmaTrackManagementV1AddTrackPostBody
+     * @param int $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1ReturnsIdTrackingNumbersPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\RmaTrackManagementV1AddTrackPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function rmaTrackManagementV1AddTrackPost(int $id, \Kiboko\Magento\V2\Model\V1ReturnsIdTrackingNumbersPostBody $rmaTrackManagementV1AddTrackPostBody, string $fetch = self::FETCH_OBJECT)
+    public function rmaTrackManagementV1AddTrackPost(int $id, ?\Kiboko\Magento\V2\Model\V1ReturnsIdTrackingNumbersPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\RmaTrackManagementV1AddTrackPost($id, $rmaTrackManagementV1AddTrackPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\RmaTrackManagementV1AddTrackPost($id, $requestBody), $fetch);
     }
     /**
      * Remove track by id
      *
-     * @param int $id
-     * @param int $trackId
+     * @param int $id 
+     * @param int $trackId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\RmaTrackManagementV1RemoveTrackByIdDeleteUnauthorizedException
      *
@@ -5603,7 +5603,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve all attributes filtered by form code
      *
-     * @param string $formCode
+     * @param string $formCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\RmaRmaAttributesManagementV1GetAttributesGetUnauthorizedException
      *
@@ -5616,7 +5616,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Retrieve attribute metadata.
      *
-     * @param string $attributeCode
+     * @param string $attributeCode 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\RmaRmaAttributesManagementV1GetAttributeMetadataGetUnauthorizedException
      *
@@ -5639,7 +5639,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save sales rule.
      *
-     * @param \Kiboko\Magento\V2\Model\V1SalesRulesPostBody $salesRuleRuleRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1SalesRulesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleRuleRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleRuleRepositoryV1SavePostUnauthorizedException
@@ -5647,12 +5647,12 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesRuleDataRuleInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesRuleRuleRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1SalesRulesPostBody $salesRuleRuleRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesRuleRuleRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1SalesRulesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRuleRuleRepositoryV1SavePost($salesRuleRuleRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRuleRuleRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
-     * Retrieve sales rules that match te specified criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See https://devdocs.magento.com/codelinks/attributes.html#RuleRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Retrieve sales rules that match te specified criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#RuleRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param array $queryParameters {
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
@@ -5676,7 +5676,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Delete rule by ID.
      *
-     * @param int $ruleId
+     * @param int $ruleId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleRuleRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleRuleRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -5691,7 +5691,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get rule by ID.
      *
-     * @param int $ruleId
+     * @param int $ruleId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleRuleRepositoryV1GetByIdGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleRuleRepositoryV1GetByIdGetUnauthorizedException
@@ -5706,8 +5706,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save sales rule.
      *
-     * @param string $ruleId
-     * @param \Kiboko\Magento\V2\Model\V1SalesRulesRuleIdPutBody $salesRuleRuleRepositoryV1SavePutBody
+     * @param string $ruleId 
+     * @param null|\Kiboko\Magento\V2\Model\V1SalesRulesRuleIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleRuleRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SalesRuleRuleRepositoryV1SavePutUnauthorizedException
@@ -5715,15 +5715,15 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesRuleDataRuleInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesRuleRuleRepositoryV1SavePut(string $ruleId, \Kiboko\Magento\V2\Model\V1SalesRulesRuleIdPutBody $salesRuleRuleRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function salesRuleRuleRepositoryV1SavePut(string $ruleId, ?\Kiboko\Magento\V2\Model\V1SalesRulesRuleIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRuleRuleRepositoryV1SavePut($ruleId, $salesRuleRuleRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesRuleRuleRepositoryV1SavePut($ruleId, $requestBody), $fetch);
     }
     /**
      * Make Full Text Search and return found Documents
      *
      * @param array $queryParameters {
-     *     @var string $searchCriteria[requestName]
+     *     @var string $searchCriteria[requestName] 
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
@@ -5743,7 +5743,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create or update Shared Catalog service.
      *
-     * @param \Kiboko\Magento\V2\Model\V1SharedCatalogPostBody $sharedCatalogSharedCatalogRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1SharedCatalogPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogSharedCatalogRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogSharedCatalogRepositoryV1SavePostUnauthorizedException
@@ -5751,9 +5751,9 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function sharedCatalogSharedCatalogRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1SharedCatalogPostBody $sharedCatalogSharedCatalogRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function sharedCatalogSharedCatalogRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1SharedCatalogPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogSharedCatalogRepositoryV1SavePost($sharedCatalogSharedCatalogRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogSharedCatalogRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Return the list of shared catalogs and basic properties for each catalog.
@@ -5780,8 +5780,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create or update Shared Catalog service.
      *
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1SharedCatalogIdPutBody $sharedCatalogSharedCatalogRepositoryV1SavePutBody
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1SharedCatalogIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogSharedCatalogRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogSharedCatalogRepositoryV1SavePutUnauthorizedException
@@ -5789,43 +5789,43 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function sharedCatalogSharedCatalogRepositoryV1SavePut(string $id, \Kiboko\Magento\V2\Model\V1SharedCatalogIdPutBody $sharedCatalogSharedCatalogRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function sharedCatalogSharedCatalogRepositoryV1SavePut(string $id, ?\Kiboko\Magento\V2\Model\V1SharedCatalogIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogSharedCatalogRepositoryV1SavePut($id, $sharedCatalogSharedCatalogRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogSharedCatalogRepositoryV1SavePut($id, $requestBody), $fetch);
     }
     /**
      * Add categories into the shared catalog.
      *
-     * @param int $id
-     * @param \Kiboko\Magento\V2\Model\V1SharedCatalogIdAssignCategoriesPostBody $sharedCatalogCategoryManagementV1AssignCategoriesPostBody
+     * @param int $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1SharedCatalogIdAssignCategoriesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogCategoryManagementV1AssignCategoriesPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogCategoryManagementV1AssignCategoriesPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function sharedCatalogCategoryManagementV1AssignCategoriesPost(int $id, \Kiboko\Magento\V2\Model\V1SharedCatalogIdAssignCategoriesPostBody $sharedCatalogCategoryManagementV1AssignCategoriesPostBody, string $fetch = self::FETCH_OBJECT)
+    public function sharedCatalogCategoryManagementV1AssignCategoriesPost(int $id, ?\Kiboko\Magento\V2\Model\V1SharedCatalogIdAssignCategoriesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogCategoryManagementV1AssignCategoriesPost($id, $sharedCatalogCategoryManagementV1AssignCategoriesPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogCategoryManagementV1AssignCategoriesPost($id, $requestBody), $fetch);
     }
     /**
      * Add products into the shared catalog.
      *
-     * @param int $id
-     * @param \Kiboko\Magento\V2\Model\V1SharedCatalogIdAssignProductsPostBody $sharedCatalogProductManagementV1AssignProductsPostBody
+     * @param int $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1SharedCatalogIdAssignProductsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogProductManagementV1AssignProductsPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function sharedCatalogProductManagementV1AssignProductsPost(int $id, \Kiboko\Magento\V2\Model\V1SharedCatalogIdAssignProductsPostBody $sharedCatalogProductManagementV1AssignProductsPostBody, string $fetch = self::FETCH_OBJECT)
+    public function sharedCatalogProductManagementV1AssignProductsPost(int $id, ?\Kiboko\Magento\V2\Model\V1SharedCatalogIdAssignProductsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogProductManagementV1AssignProductsPost($id, $sharedCatalogProductManagementV1AssignProductsPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogProductManagementV1AssignProductsPost($id, $requestBody), $fetch);
     }
     /**
      * Return the list of categories in the selected shared catalog.
      *
-     * @param int $id
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogCategoryManagementV1GetCategoriesGetUnauthorizedException
      *
@@ -5838,7 +5838,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Return the list of product SKUs in the selected shared catalog.
      *
-     * @param int $id
+     * @param int $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogProductManagementV1GetProductsGetUnauthorizedException
      *
@@ -5851,36 +5851,36 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Remove the specified categories from the shared catalog.
      *
-     * @param int $id
-     * @param \Kiboko\Magento\V2\Model\V1SharedCatalogIdUnassignCategoriesPostBody $sharedCatalogCategoryManagementV1UnassignCategoriesPostBody
+     * @param int $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1SharedCatalogIdUnassignCategoriesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogCategoryManagementV1UnassignCategoriesPostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogCategoryManagementV1UnassignCategoriesPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function sharedCatalogCategoryManagementV1UnassignCategoriesPost(int $id, \Kiboko\Magento\V2\Model\V1SharedCatalogIdUnassignCategoriesPostBody $sharedCatalogCategoryManagementV1UnassignCategoriesPostBody, string $fetch = self::FETCH_OBJECT)
+    public function sharedCatalogCategoryManagementV1UnassignCategoriesPost(int $id, ?\Kiboko\Magento\V2\Model\V1SharedCatalogIdUnassignCategoriesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogCategoryManagementV1UnassignCategoriesPost($id, $sharedCatalogCategoryManagementV1UnassignCategoriesPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogCategoryManagementV1UnassignCategoriesPost($id, $requestBody), $fetch);
     }
     /**
      * Remove the specified products from the shared catalog.
      *
-     * @param int $id
-     * @param \Kiboko\Magento\V2\Model\V1SharedCatalogIdUnassignProductsPostBody $sharedCatalogProductManagementV1UnassignProductsPostBody
+     * @param int $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1SharedCatalogIdUnassignProductsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogProductManagementV1UnassignProductsPostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function sharedCatalogProductManagementV1UnassignProductsPost(int $id, \Kiboko\Magento\V2\Model\V1SharedCatalogIdUnassignProductsPostBody $sharedCatalogProductManagementV1UnassignProductsPostBody, string $fetch = self::FETCH_OBJECT)
+    public function sharedCatalogProductManagementV1UnassignProductsPost(int $id, ?\Kiboko\Magento\V2\Model\V1SharedCatalogIdUnassignProductsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogProductManagementV1UnassignProductsPost($id, $sharedCatalogProductManagementV1UnassignProductsPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogProductManagementV1UnassignProductsPost($id, $requestBody), $fetch);
     }
     /**
      * Delete a shared catalog by ID.
      *
-     * @param int $sharedCatalogId
+     * @param int $sharedCatalogId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogSharedCatalogRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogSharedCatalogRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -5895,7 +5895,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Return the following properties for the selected shared catalog: ID, Store Group ID, Name, Type, Description, Customer Group, Tax Class.
      *
-     * @param int $sharedCatalogId
+     * @param int $sharedCatalogId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogSharedCatalogRepositoryV1GetGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogSharedCatalogRepositoryV1GetGetUnauthorizedException
@@ -5909,22 +5909,22 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Assign companies to a shared catalog.
      *
-     * @param int $sharedCatalogId
-     * @param \Kiboko\Magento\V2\Model\V1SharedCatalogSharedCatalogIdAssignCompaniesPostBody $sharedCatalogCompanyManagementV1AssignCompaniesPostBody
+     * @param int $sharedCatalogId 
+     * @param null|\Kiboko\Magento\V2\Model\V1SharedCatalogSharedCatalogIdAssignCompaniesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogCompanyManagementV1AssignCompaniesPostUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogCompanyManagementV1AssignCompaniesPostInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function sharedCatalogCompanyManagementV1AssignCompaniesPost(int $sharedCatalogId, \Kiboko\Magento\V2\Model\V1SharedCatalogSharedCatalogIdAssignCompaniesPostBody $sharedCatalogCompanyManagementV1AssignCompaniesPostBody, string $fetch = self::FETCH_OBJECT)
+    public function sharedCatalogCompanyManagementV1AssignCompaniesPost(int $sharedCatalogId, ?\Kiboko\Magento\V2\Model\V1SharedCatalogSharedCatalogIdAssignCompaniesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogCompanyManagementV1AssignCompaniesPost($sharedCatalogId, $sharedCatalogCompanyManagementV1AssignCompaniesPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogCompanyManagementV1AssignCompaniesPost($sharedCatalogId, $requestBody), $fetch);
     }
     /**
      * Return the list of company IDs for the companies assigned to the selected catalog.
      *
-     * @param int $sharedCatalogId
+     * @param int $sharedCatalogId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogCompanyManagementV1GetCompaniesGetUnauthorizedException
      *
@@ -5937,44 +5937,44 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Unassign companies from a shared catalog.
      *
-     * @param int $sharedCatalogId
-     * @param \Kiboko\Magento\V2\Model\V1SharedCatalogSharedCatalogIdUnassignCompaniesPostBody $sharedCatalogCompanyManagementV1UnassignCompaniesPostBody
+     * @param int $sharedCatalogId 
+     * @param null|\Kiboko\Magento\V2\Model\V1SharedCatalogSharedCatalogIdUnassignCompaniesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogCompanyManagementV1UnassignCompaniesPostUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\SharedCatalogCompanyManagementV1UnassignCompaniesPostInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function sharedCatalogCompanyManagementV1UnassignCompaniesPost(int $sharedCatalogId, \Kiboko\Magento\V2\Model\V1SharedCatalogSharedCatalogIdUnassignCompaniesPostBody $sharedCatalogCompanyManagementV1UnassignCompaniesPostBody, string $fetch = self::FETCH_OBJECT)
+    public function sharedCatalogCompanyManagementV1UnassignCompaniesPost(int $sharedCatalogId, ?\Kiboko\Magento\V2\Model\V1SharedCatalogSharedCatalogIdUnassignCompaniesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogCompanyManagementV1UnassignCompaniesPost($sharedCatalogId, $sharedCatalogCompanyManagementV1UnassignCompaniesPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SharedCatalogCompanyManagementV1UnassignCompaniesPost($sharedCatalogId, $requestBody), $fetch);
     }
     /**
      * Performs persist operations for a specified shipment.
      *
-     * @param \Kiboko\Magento\V2\Model\V1ShipmentPostBody $salesShipmentRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ShipmentPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesShipmentRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesDataShipmentInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesShipmentRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1ShipmentPostBody $salesShipmentRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesShipmentRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1ShipmentPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesShipmentRepositoryV1SavePost($salesShipmentRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesShipmentRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Performs persist operations for a specified shipment track.
      *
-     * @param \Kiboko\Magento\V2\Model\V1ShipmentTrackPostBody $salesShipmentTrackRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1ShipmentTrackPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesShipmentTrackRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SalesShipmentTrackRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesDataShipmentTrackInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesShipmentTrackRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1ShipmentTrackPostBody $salesShipmentTrackRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesShipmentTrackRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1ShipmentTrackPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesShipmentTrackRepositoryV1SavePost($salesShipmentTrackRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesShipmentTrackRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Deletes a specified shipment track by ID.
@@ -6019,17 +6019,17 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Performs persist operations for a specified shipment comment.
      *
-     * @param string $id
-     * @param \Kiboko\Magento\V2\Model\V1ShipmentIdCommentsPostBody $salesShipmentCommentRepositoryV1SavePostBody
+     * @param string $id 
+     * @param null|\Kiboko\Magento\V2\Model\V1ShipmentIdCommentsPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\SalesShipmentCommentRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\SalesShipmentCommentRepositoryV1SavePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\SalesDataShipmentCommentInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function salesShipmentCommentRepositoryV1SavePost(string $id, \Kiboko\Magento\V2\Model\V1ShipmentIdCommentsPostBody $salesShipmentCommentRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function salesShipmentCommentRepositoryV1SavePost(string $id, ?\Kiboko\Magento\V2\Model\V1ShipmentIdCommentsPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesShipmentCommentRepositoryV1SavePost($id, $salesShipmentCommentRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesShipmentCommentRepositoryV1SavePost($id, $requestBody), $fetch);
     }
     /**
      * Emails user a specified shipment.
@@ -6058,7 +6058,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\SalesShipmentManagementV1GetLabelGet($id), $fetch);
     }
     /**
-     * Lists shipments that match specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See https://devdocs.magento.com/codelinks/attributes.html#ShipmentRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Lists shipments that match specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#ShipmentRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param array $queryParameters {
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
@@ -6082,10 +6082,10 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      * Retrieves a list of SKU's with low inventory qty
      *
      * @param array $queryParameters {
-     *     @var int $scopeId
-     *     @var float $qty
-     *     @var int $currentPage
-     *     @var int $pageSize
+     *     @var int $scopeId 
+     *     @var float $qty 
+     *     @var int $currentPage 
+     *     @var int $pageSize 
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogInventoryStockRegistryV1GetLowStockItemsGetUnauthorizedException
@@ -6097,11 +6097,11 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogInventoryStockRegistryV1GetLowStockItemsGet($queryParameters), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $productSku
+     * @param string $productSku 
      * @param array $queryParameters {
-     *     @var int $scopeId
+     *     @var int $scopeId 
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogInventoryStockRegistryV1GetStockItemBySkuGetBadRequestException
@@ -6114,11 +6114,11 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogInventoryStockRegistryV1GetStockItemBySkuGet($productSku, $queryParameters), $fetch);
     }
     /**
+     * 
      *
-     *
-     * @param string $productSku
+     * @param string $productSku 
      * @param array $queryParameters {
-     *     @var int $scopeId
+     *     @var int $scopeId 
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CatalogInventoryStockRegistryV1GetStockStatusBySkuGetBadRequestException
@@ -6131,10 +6131,10 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
         return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CatalogInventoryStockRegistryV1GetStockStatusBySkuGet($productSku, $queryParameters), $fetch);
     }
     /**
-     *
+     * 
      *
      * @param array $queryParameters {
-     *     @var array $storeCodes
+     *     @var array $storeCodes 
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\StoreStoreConfigManagerV1GetStoreConfigsGetUnauthorizedException
@@ -6178,7 +6178,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create a Tax Class
      *
-     * @param \Kiboko\Magento\V2\Model\V1TaxClassesPostBody $taxTaxClassRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1TaxClassesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxClassRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxClassRepositoryV1SavePostUnauthorizedException
@@ -6186,12 +6186,12 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function taxTaxClassRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1TaxClassesPostBody $taxTaxClassRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function taxTaxClassRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1TaxClassesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TaxTaxClassRepositoryV1SavePost($taxTaxClassRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TaxTaxClassRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
-     * Retrieve tax classes which match a specific criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See https://devdocs.magento.com/codelinks/attributes.html#TaxClassRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Retrieve tax classes which match a specific criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#TaxClassRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param array $queryParameters {
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
@@ -6215,8 +6215,8 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create a Tax Class
      *
-     * @param string $classId
-     * @param \Kiboko\Magento\V2\Model\V1TaxClassesClassIdPutBody $taxTaxClassRepositoryV1SavePutBody
+     * @param string $classId 
+     * @param null|\Kiboko\Magento\V2\Model\V1TaxClassesClassIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxClassRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxClassRepositoryV1SavePutUnauthorizedException
@@ -6224,14 +6224,14 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function taxTaxClassRepositoryV1SavePut(string $classId, \Kiboko\Magento\V2\Model\V1TaxClassesClassIdPutBody $taxTaxClassRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function taxTaxClassRepositoryV1SavePut(string $classId, ?\Kiboko\Magento\V2\Model\V1TaxClassesClassIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TaxTaxClassRepositoryV1SavePut($classId, $taxTaxClassRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TaxTaxClassRepositoryV1SavePut($classId, $requestBody), $fetch);
     }
     /**
      * Delete a tax class with the given tax class id.
      *
-     * @param int $taxClassId
+     * @param int $taxClassId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxClassRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxClassRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -6245,7 +6245,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get a tax class with the given tax class id.
      *
-     * @param int $taxClassId
+     * @param int $taxClassId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxClassRepositoryV1GetGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxClassRepositoryV1GetGetUnauthorizedException
@@ -6259,7 +6259,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create or update tax rate
      *
-     * @param \Kiboko\Magento\V2\Model\V1TaxRatesPostBody $taxTaxRateRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1TaxRatesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxRateRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxRateRepositoryV1SavePostUnauthorizedException
@@ -6267,14 +6267,14 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\TaxDataTaxRateInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function taxTaxRateRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1TaxRatesPostBody $taxTaxRateRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function taxTaxRateRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1TaxRatesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TaxTaxRateRepositoryV1SavePost($taxTaxRateRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TaxTaxRateRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Create or update tax rate
      *
-     * @param \Kiboko\Magento\V2\Model\V1TaxRatesPutBody $taxTaxRateRepositoryV1SavePutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1TaxRatesPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxRateRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxRateRepositoryV1SavePutUnauthorizedException
@@ -6282,12 +6282,12 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\TaxDataTaxRateInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function taxTaxRateRepositoryV1SavePut(\Kiboko\Magento\V2\Model\V1TaxRatesPutBody $taxTaxRateRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function taxTaxRateRepositoryV1SavePut(?\Kiboko\Magento\V2\Model\V1TaxRatesPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TaxTaxRateRepositoryV1SavePut($taxTaxRateRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TaxTaxRateRepositoryV1SavePut($requestBody), $fetch);
     }
     /**
-     * Search TaxRates This call returns an array of objects, but detailed information about each object’s attributes might not be included. See https://devdocs.magento.com/codelinks/attributes.html#TaxRateRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Search TaxRates This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#TaxRateRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param array $queryParameters {
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
@@ -6311,7 +6311,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Delete tax rate
      *
-     * @param int $rateId
+     * @param int $rateId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxRateRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxRateRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -6326,7 +6326,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get tax rate
      *
-     * @param int $rateId
+     * @param int $rateId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxRateRepositoryV1GetGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxRateRepositoryV1GetGetUnauthorizedException
@@ -6340,7 +6340,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Save TaxRule
      *
-     * @param \Kiboko\Magento\V2\Model\V1TaxRulesPostBody $taxTaxRuleRepositoryV1SavePostBody
+     * @param null|\Kiboko\Magento\V2\Model\V1TaxRulesPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxRuleRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxRuleRepositoryV1SavePostUnauthorizedException
@@ -6348,14 +6348,14 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\TaxDataTaxRuleInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function taxTaxRuleRepositoryV1SavePost(\Kiboko\Magento\V2\Model\V1TaxRulesPostBody $taxTaxRuleRepositoryV1SavePostBody, string $fetch = self::FETCH_OBJECT)
+    public function taxTaxRuleRepositoryV1SavePost(?\Kiboko\Magento\V2\Model\V1TaxRulesPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TaxTaxRuleRepositoryV1SavePost($taxTaxRuleRepositoryV1SavePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TaxTaxRuleRepositoryV1SavePost($requestBody), $fetch);
     }
     /**
      * Save TaxRule
      *
-     * @param \Kiboko\Magento\V2\Model\V1TaxRulesPutBody $taxTaxRuleRepositoryV1SavePutBody
+     * @param null|\Kiboko\Magento\V2\Model\V1TaxRulesPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxRuleRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxRuleRepositoryV1SavePutUnauthorizedException
@@ -6363,12 +6363,12 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
      *
      * @return null|\Kiboko\Magento\V2\Model\TaxDataTaxRuleInterface|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function taxTaxRuleRepositoryV1SavePut(\Kiboko\Magento\V2\Model\V1TaxRulesPutBody $taxTaxRuleRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function taxTaxRuleRepositoryV1SavePut(?\Kiboko\Magento\V2\Model\V1TaxRulesPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TaxTaxRuleRepositoryV1SavePut($taxTaxRuleRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TaxTaxRuleRepositoryV1SavePut($requestBody), $fetch);
     }
     /**
-     * Search TaxRules This call returns an array of objects, but detailed information about each object’s attributes might not be included. See https://devdocs.magento.com/codelinks/attributes.html#TaxRuleRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Search TaxRules This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#TaxRuleRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param array $queryParameters {
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
@@ -6392,7 +6392,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Delete TaxRule
      *
-     * @param int $ruleId
+     * @param int $ruleId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxRuleRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxRuleRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -6407,7 +6407,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Get TaxRule
      *
-     * @param int $ruleId
+     * @param int $ruleId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TaxTaxRuleRepositoryV1GetGetUnauthorizedException
      *
@@ -6442,22 +6442,22 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Create a team in the company structure.
      *
-     * @param int $companyId
-     * @param \Kiboko\Magento\V2\Model\V1TeamCompanyIdPostBody $companyTeamRepositoryV1CreatePostBody
+     * @param int $companyId 
+     * @param null|\Kiboko\Magento\V2\Model\V1TeamCompanyIdPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyTeamRepositoryV1CreatePostBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CompanyTeamRepositoryV1CreatePostUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function companyTeamRepositoryV1CreatePost(int $companyId, \Kiboko\Magento\V2\Model\V1TeamCompanyIdPostBody $companyTeamRepositoryV1CreatePostBody, string $fetch = self::FETCH_OBJECT)
+    public function companyTeamRepositoryV1CreatePost(int $companyId, ?\Kiboko\Magento\V2\Model\V1TeamCompanyIdPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyTeamRepositoryV1CreatePost($companyId, $companyTeamRepositoryV1CreatePostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyTeamRepositoryV1CreatePost($companyId, $requestBody), $fetch);
     }
     /**
      * Delete a team from the company structure.
      *
-     * @param int $teamId
+     * @param int $teamId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyTeamRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CompanyTeamRepositoryV1DeleteByIdDeleteUnauthorizedException
@@ -6471,7 +6471,7 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Returns data for a team in the company, by entity id.
      *
-     * @param int $teamId
+     * @param int $teamId 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyTeamRepositoryV1GetGetBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CompanyTeamRepositoryV1GetGetUnauthorizedException
@@ -6485,35 +6485,35 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Update a team in the company structure.
      *
-     * @param string $teamId
-     * @param \Kiboko\Magento\V2\Model\V1TeamTeamIdPutBody $companyTeamRepositoryV1SavePutBody
+     * @param string $teamId 
+     * @param null|\Kiboko\Magento\V2\Model\V1TeamTeamIdPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\CompanyTeamRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\V2\Exception\CompanyTeamRepositoryV1SavePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function companyTeamRepositoryV1SavePut(string $teamId, \Kiboko\Magento\V2\Model\V1TeamTeamIdPutBody $companyTeamRepositoryV1SavePutBody, string $fetch = self::FETCH_OBJECT)
+    public function companyTeamRepositoryV1SavePut(string $teamId, ?\Kiboko\Magento\V2\Model\V1TeamTeamIdPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyTeamRepositoryV1SavePut($teamId, $companyTeamRepositoryV1SavePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\CompanyTeamRepositoryV1SavePut($teamId, $requestBody), $fetch);
     }
     /**
      * Assign platform shipment IDs to a core RMA entity.
      *
-     * @param int $rmaId
-     * @param \Kiboko\Magento\V2\Model\V1TemandoRmaRmaIdShipmentsPutBody $temandoShippingRmaRmaShipmentManagementV1AssignShipmentIdsPutBody
+     * @param int $rmaId 
+     * @param null|\Kiboko\Magento\V2\Model\V1TemandoRmaRmaIdShipmentsPutBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\TemandoShippingRmaRmaShipmentManagementV1AssignShipmentIdsPutUnauthorizedException
      * @throws \Kiboko\Magento\V2\Exception\TemandoShippingRmaRmaShipmentManagementV1AssignShipmentIdsPutInternalServerErrorException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function temandoShippingRmaRmaShipmentManagementV1AssignShipmentIdsPut(int $rmaId, \Kiboko\Magento\V2\Model\V1TemandoRmaRmaIdShipmentsPutBody $temandoShippingRmaRmaShipmentManagementV1AssignShipmentIdsPutBody, string $fetch = self::FETCH_OBJECT)
+    public function temandoShippingRmaRmaShipmentManagementV1AssignShipmentIdsPut(int $rmaId, ?\Kiboko\Magento\V2\Model\V1TemandoRmaRmaIdShipmentsPutBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingRmaRmaShipmentManagementV1AssignShipmentIdsPut($rmaId, $temandoShippingRmaRmaShipmentManagementV1AssignShipmentIdsPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\TemandoShippingRmaRmaShipmentManagementV1AssignShipmentIdsPut($rmaId, $requestBody), $fetch);
     }
     /**
-     * Lists transactions that match specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See https://devdocs.magento.com/codelinks/attributes.html#TransactionRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
+     * Lists transactions that match specified search criteria. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#TransactionRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
      * @param array $queryParameters {
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
@@ -6549,22 +6549,25 @@ class Client extends \Kiboko\Magento\V2\Runtime\Client\Client
     /**
      * Proxy handler for guest place order
      *
-     * @param string $cartId
-     * @param \Kiboko\Magento\V2\Model\V1WorldpayGuestCartsCartIdPaymentInformationPostBody $worldpayGuestPaymentInformationManagementProxyV1SavePaymentInformationAndPlaceOrderPostBody
+     * @param string $cartId 
+     * @param null|\Kiboko\Magento\V2\Model\V1WorldpayGuestCartsCartIdPaymentInformationPostBody $requestBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\V2\Exception\WorldpayGuestPaymentInformationManagementProxyV1SavePaymentInformationAndPlaceOrderPostBadRequestException
      *
      * @return null|\Kiboko\Magento\V2\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function worldpayGuestPaymentInformationManagementProxyV1SavePaymentInformationAndPlaceOrderPost(string $cartId, \Kiboko\Magento\V2\Model\V1WorldpayGuestCartsCartIdPaymentInformationPostBody $worldpayGuestPaymentInformationManagementProxyV1SavePaymentInformationAndPlaceOrderPostBody, string $fetch = self::FETCH_OBJECT)
+    public function worldpayGuestPaymentInformationManagementProxyV1SavePaymentInformationAndPlaceOrderPost(string $cartId, ?\Kiboko\Magento\V2\Model\V1WorldpayGuestCartsCartIdPaymentInformationPostBody $requestBody = null, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\WorldpayGuestPaymentInformationManagementProxyV1SavePaymentInformationAndPlaceOrderPost($cartId, $worldpayGuestPaymentInformationManagementProxyV1SavePaymentInformationAndPlaceOrderPostBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\V2\Endpoint\WorldpayGuestPaymentInformationManagementProxyV1SavePaymentInformationAndPlaceOrderPost($cartId, $requestBody), $fetch);
     }
     public static function create($httpClient = null, array $additionalPlugins = array(), array $additionalNormalizers = array())
     {
         if (null === $httpClient) {
             $httpClient = \Http\Discovery\Psr18ClientDiscovery::find();
             $plugins = array();
+            $uri = \Http\Discovery\Psr17FactoryDiscovery::findUrlFactory()->createUri('https://quovadis1954.com/eshop/rest');
+            $plugins[] = new \Http\Client\Common\Plugin\AddHostPlugin($uri);
+            $plugins[] = new \Http\Client\Common\Plugin\AddPathPlugin($uri);
             if (count($additionalPlugins) > 0) {
                 $plugins = array_merge($plugins, $additionalPlugins);
             }

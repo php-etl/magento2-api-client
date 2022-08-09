@@ -5,12 +5,6 @@ namespace Kiboko\Magento\V2\Model;
 class FrameworkCriteriaInterface
 {
     /**
-     * Associated Mapper Interface name
-     *
-     * @var string
-     */
-    protected $mapperInterfaceName;
-    /**
      * Criteria objects added to current Composite Criteria
      *
      * @var FrameworkCriteriaInterface[]
@@ -23,12 +17,6 @@ class FrameworkCriteriaInterface
      */
     protected $filters;
     /**
-     * Ordering criteria
-     *
-     * @var string[]
-     */
-    protected $orders;
-    /**
      * Limit
      *
      * @var string[]
@@ -37,30 +25,21 @@ class FrameworkCriteriaInterface
     /**
      * Associated Mapper Interface name
      *
-     * @return string
+     * @var string
      */
-    public function getMapperInterfaceName(): string
-    {
-        return $this->mapperInterfaceName;
-    }
+    protected $mapperInterfaceName;
     /**
-     * Associated Mapper Interface name
+     * Ordering criteria
      *
-     * @param string $mapperInterfaceName
-     *
-     * @return self
+     * @var string[]
      */
-    public function setMapperInterfaceName(string $mapperInterfaceName): self
-    {
-        $this->mapperInterfaceName = $mapperInterfaceName;
-        return $this;
-    }
+    protected $orders;
     /**
      * Criteria objects added to current Composite Criteria
      *
      * @return FrameworkCriteriaInterface[]
      */
-    public function getCriteriaList(): array
+    public function getCriteriaList() : array
     {
         return $this->criteriaList;
     }
@@ -71,7 +50,7 @@ class FrameworkCriteriaInterface
      *
      * @return self
      */
-    public function setCriteriaList(array $criteriaList): self
+    public function setCriteriaList(array $criteriaList) : self
     {
         $this->criteriaList = $criteriaList;
         return $this;
@@ -81,7 +60,7 @@ class FrameworkCriteriaInterface
      *
      * @return string[]
      */
-    public function getFilters(): array
+    public function getFilters() : array
     {
         return $this->filters;
     }
@@ -92,30 +71,9 @@ class FrameworkCriteriaInterface
      *
      * @return self
      */
-    public function setFilters(array $filters): self
+    public function setFilters(array $filters) : self
     {
         $this->filters = $filters;
-        return $this;
-    }
-    /**
-     * Ordering criteria
-     *
-     * @return string[]
-     */
-    public function getOrders(): array
-    {
-        return $this->orders;
-    }
-    /**
-     * Ordering criteria
-     *
-     * @param string[] $orders
-     *
-     * @return self
-     */
-    public function setOrders(array $orders): self
-    {
-        $this->orders = $orders;
         return $this;
     }
     /**
@@ -123,7 +81,7 @@ class FrameworkCriteriaInterface
      *
      * @return string[]
      */
-    public function getLimit(): array
+    public function getLimit() : array
     {
         return $this->limit;
     }
@@ -134,9 +92,51 @@ class FrameworkCriteriaInterface
      *
      * @return self
      */
-    public function setLimit(array $limit): self
+    public function setLimit(array $limit) : self
     {
         $this->limit = $limit;
+        return $this;
+    }
+    /**
+     * Associated Mapper Interface name
+     *
+     * @return string
+     */
+    public function getMapperInterfaceName() : string
+    {
+        return $this->mapperInterfaceName;
+    }
+    /**
+     * Associated Mapper Interface name
+     *
+     * @param string $mapperInterfaceName
+     *
+     * @return self
+     */
+    public function setMapperInterfaceName(string $mapperInterfaceName) : self
+    {
+        $this->mapperInterfaceName = $mapperInterfaceName;
+        return $this;
+    }
+    /**
+     * Ordering criteria
+     *
+     * @return string[]
+     */
+    public function getOrders() : array
+    {
+        return $this->orders;
+    }
+    /**
+     * Ordering criteria
+     *
+     * @param string[] $orders
+     *
+     * @return self
+     */
+    public function setOrders(array $orders) : self
+    {
+        $this->orders = $orders;
         return $this;
     }
 }

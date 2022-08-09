@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataProductRenderPriceInfoExtensionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductRenderPriceInfoExtensionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductRenderPriceInfoExtensionInterface';
     }
@@ -46,15 +45,15 @@ class CatalogDataProductRenderPriceInfoExtensionInterfaceNormalizer implements D
         if (\array_key_exists('tax_adjustments', $data)) {
             $object->setTaxAdjustments($this->denormalizer->denormalize($data['tax_adjustments'], 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductRenderPriceInfoInterface', 'json', $context));
         }
+        if (\array_key_exists('weee_adjustment', $data)) {
+            $object->setWeeeAdjustment($data['weee_adjustment']);
+        }
         if (\array_key_exists('weee_attributes', $data)) {
             $values = array();
             foreach ($data['weee_attributes'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\WeeeDataProductRenderWeeeAdjustmentAttributeInterface', 'json', $context);
             }
             $object->setWeeeAttributes($values);
-        }
-        if (\array_key_exists('weee_adjustment', $data)) {
-            $object->setWeeeAdjustment($data['weee_adjustment']);
         }
         return $object;
     }
@@ -70,15 +69,15 @@ class CatalogDataProductRenderPriceInfoExtensionInterfaceNormalizer implements D
         if (null !== $object->getTaxAdjustments()) {
             $data['tax_adjustments'] = $this->normalizer->normalize($object->getTaxAdjustments(), 'json', $context);
         }
+        if (null !== $object->getWeeeAdjustment()) {
+            $data['weee_adjustment'] = $object->getWeeeAdjustment();
+        }
         if (null !== $object->getWeeeAttributes()) {
             $values = array();
             foreach ($object->getWeeeAttributes() as $value) {
                 $values[] = $this->normalizer->normalize($value, 'json', $context);
             }
             $data['weee_attributes'] = $values;
-        }
-        if (null !== $object->getWeeeAdjustment()) {
-            $data['weee_adjustment'] = $object->getWeeeAdjustment();
         }
         return $data;
     }

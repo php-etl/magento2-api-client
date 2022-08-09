@@ -275,6 +275,12 @@ class SalesDataOrderPaymentInterface
      */
     protected $entityId;
     /**
+     * ExtensionInterface class for @see \Magento\Sales\Api\Data\OrderPaymentInterface
+     *
+     * @var SalesDataOrderPaymentExtensionInterface
+     */
+    protected $extensionAttributes;
+    /**
      * Last transaction ID.
      *
      * @var string
@@ -329,17 +335,11 @@ class SalesDataOrderPaymentInterface
      */
     protected $shippingRefunded;
     /**
-     * ExtensionInterface class for @see \Magento\Sales\Api\Data\OrderPaymentInterface
-     *
-     * @var SalesDataOrderPaymentExtensionInterface
-     */
-    protected $extensionAttributes;
-    /**
      * Account status.
      *
      * @return string
      */
-    public function getAccountStatus(): string
+    public function getAccountStatus() : string
     {
         return $this->accountStatus;
     }
@@ -350,7 +350,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setAccountStatus(string $accountStatus): self
+    public function setAccountStatus(string $accountStatus) : self
     {
         $this->accountStatus = $accountStatus;
         return $this;
@@ -360,7 +360,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getAdditionalData(): string
+    public function getAdditionalData() : string
     {
         return $this->additionalData;
     }
@@ -371,7 +371,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setAdditionalData(string $additionalData): self
+    public function setAdditionalData(string $additionalData) : self
     {
         $this->additionalData = $additionalData;
         return $this;
@@ -381,7 +381,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string[]
      */
-    public function getAdditionalInformation(): array
+    public function getAdditionalInformation() : array
     {
         return $this->additionalInformation;
     }
@@ -392,7 +392,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setAdditionalInformation(array $additionalInformation): self
+    public function setAdditionalInformation(array $additionalInformation) : self
     {
         $this->additionalInformation = $additionalInformation;
         return $this;
@@ -402,7 +402,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getAddressStatus(): string
+    public function getAddressStatus() : string
     {
         return $this->addressStatus;
     }
@@ -413,7 +413,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setAddressStatus(string $addressStatus): self
+    public function setAddressStatus(string $addressStatus) : self
     {
         $this->addressStatus = $addressStatus;
         return $this;
@@ -423,7 +423,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return float
      */
-    public function getAmountAuthorized(): float
+    public function getAmountAuthorized() : float
     {
         return $this->amountAuthorized;
     }
@@ -434,7 +434,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setAmountAuthorized(float $amountAuthorized): self
+    public function setAmountAuthorized(float $amountAuthorized) : self
     {
         $this->amountAuthorized = $amountAuthorized;
         return $this;
@@ -444,7 +444,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return float
      */
-    public function getAmountCanceled(): float
+    public function getAmountCanceled() : float
     {
         return $this->amountCanceled;
     }
@@ -455,7 +455,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setAmountCanceled(float $amountCanceled): self
+    public function setAmountCanceled(float $amountCanceled) : self
     {
         $this->amountCanceled = $amountCanceled;
         return $this;
@@ -465,7 +465,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return float
      */
-    public function getAmountOrdered(): float
+    public function getAmountOrdered() : float
     {
         return $this->amountOrdered;
     }
@@ -476,7 +476,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setAmountOrdered(float $amountOrdered): self
+    public function setAmountOrdered(float $amountOrdered) : self
     {
         $this->amountOrdered = $amountOrdered;
         return $this;
@@ -486,7 +486,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return float
      */
-    public function getAmountPaid(): float
+    public function getAmountPaid() : float
     {
         return $this->amountPaid;
     }
@@ -497,7 +497,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setAmountPaid(float $amountPaid): self
+    public function setAmountPaid(float $amountPaid) : self
     {
         $this->amountPaid = $amountPaid;
         return $this;
@@ -507,7 +507,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return float
      */
-    public function getAmountRefunded(): float
+    public function getAmountRefunded() : float
     {
         return $this->amountRefunded;
     }
@@ -518,7 +518,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setAmountRefunded(float $amountRefunded): self
+    public function setAmountRefunded(float $amountRefunded) : self
     {
         $this->amountRefunded = $amountRefunded;
         return $this;
@@ -528,7 +528,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getAnetTransMethod(): string
+    public function getAnetTransMethod() : string
     {
         return $this->anetTransMethod;
     }
@@ -539,7 +539,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setAnetTransMethod(string $anetTransMethod): self
+    public function setAnetTransMethod(string $anetTransMethod) : self
     {
         $this->anetTransMethod = $anetTransMethod;
         return $this;
@@ -549,7 +549,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return float
      */
-    public function getBaseAmountAuthorized(): float
+    public function getBaseAmountAuthorized() : float
     {
         return $this->baseAmountAuthorized;
     }
@@ -560,7 +560,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setBaseAmountAuthorized(float $baseAmountAuthorized): self
+    public function setBaseAmountAuthorized(float $baseAmountAuthorized) : self
     {
         $this->baseAmountAuthorized = $baseAmountAuthorized;
         return $this;
@@ -570,7 +570,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return float
      */
-    public function getBaseAmountCanceled(): float
+    public function getBaseAmountCanceled() : float
     {
         return $this->baseAmountCanceled;
     }
@@ -581,7 +581,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setBaseAmountCanceled(float $baseAmountCanceled): self
+    public function setBaseAmountCanceled(float $baseAmountCanceled) : self
     {
         $this->baseAmountCanceled = $baseAmountCanceled;
         return $this;
@@ -591,7 +591,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return float
      */
-    public function getBaseAmountOrdered(): float
+    public function getBaseAmountOrdered() : float
     {
         return $this->baseAmountOrdered;
     }
@@ -602,7 +602,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setBaseAmountOrdered(float $baseAmountOrdered): self
+    public function setBaseAmountOrdered(float $baseAmountOrdered) : self
     {
         $this->baseAmountOrdered = $baseAmountOrdered;
         return $this;
@@ -612,7 +612,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return float
      */
-    public function getBaseAmountPaid(): float
+    public function getBaseAmountPaid() : float
     {
         return $this->baseAmountPaid;
     }
@@ -623,7 +623,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setBaseAmountPaid(float $baseAmountPaid): self
+    public function setBaseAmountPaid(float $baseAmountPaid) : self
     {
         $this->baseAmountPaid = $baseAmountPaid;
         return $this;
@@ -633,7 +633,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return float
      */
-    public function getBaseAmountPaidOnline(): float
+    public function getBaseAmountPaidOnline() : float
     {
         return $this->baseAmountPaidOnline;
     }
@@ -644,7 +644,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setBaseAmountPaidOnline(float $baseAmountPaidOnline): self
+    public function setBaseAmountPaidOnline(float $baseAmountPaidOnline) : self
     {
         $this->baseAmountPaidOnline = $baseAmountPaidOnline;
         return $this;
@@ -654,7 +654,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return float
      */
-    public function getBaseAmountRefunded(): float
+    public function getBaseAmountRefunded() : float
     {
         return $this->baseAmountRefunded;
     }
@@ -665,7 +665,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setBaseAmountRefunded(float $baseAmountRefunded): self
+    public function setBaseAmountRefunded(float $baseAmountRefunded) : self
     {
         $this->baseAmountRefunded = $baseAmountRefunded;
         return $this;
@@ -675,7 +675,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return float
      */
-    public function getBaseAmountRefundedOnline(): float
+    public function getBaseAmountRefundedOnline() : float
     {
         return $this->baseAmountRefundedOnline;
     }
@@ -686,7 +686,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setBaseAmountRefundedOnline(float $baseAmountRefundedOnline): self
+    public function setBaseAmountRefundedOnline(float $baseAmountRefundedOnline) : self
     {
         $this->baseAmountRefundedOnline = $baseAmountRefundedOnline;
         return $this;
@@ -696,7 +696,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return float
      */
-    public function getBaseShippingAmount(): float
+    public function getBaseShippingAmount() : float
     {
         return $this->baseShippingAmount;
     }
@@ -707,7 +707,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setBaseShippingAmount(float $baseShippingAmount): self
+    public function setBaseShippingAmount(float $baseShippingAmount) : self
     {
         $this->baseShippingAmount = $baseShippingAmount;
         return $this;
@@ -717,7 +717,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return float
      */
-    public function getBaseShippingCaptured(): float
+    public function getBaseShippingCaptured() : float
     {
         return $this->baseShippingCaptured;
     }
@@ -728,7 +728,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setBaseShippingCaptured(float $baseShippingCaptured): self
+    public function setBaseShippingCaptured(float $baseShippingCaptured) : self
     {
         $this->baseShippingCaptured = $baseShippingCaptured;
         return $this;
@@ -738,7 +738,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return float
      */
-    public function getBaseShippingRefunded(): float
+    public function getBaseShippingRefunded() : float
     {
         return $this->baseShippingRefunded;
     }
@@ -749,7 +749,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setBaseShippingRefunded(float $baseShippingRefunded): self
+    public function setBaseShippingRefunded(float $baseShippingRefunded) : self
     {
         $this->baseShippingRefunded = $baseShippingRefunded;
         return $this;
@@ -759,7 +759,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcApproval(): string
+    public function getCcApproval() : string
     {
         return $this->ccApproval;
     }
@@ -770,7 +770,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcApproval(string $ccApproval): self
+    public function setCcApproval(string $ccApproval) : self
     {
         $this->ccApproval = $ccApproval;
         return $this;
@@ -780,7 +780,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcAvsStatus(): string
+    public function getCcAvsStatus() : string
     {
         return $this->ccAvsStatus;
     }
@@ -791,7 +791,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcAvsStatus(string $ccAvsStatus): self
+    public function setCcAvsStatus(string $ccAvsStatus) : self
     {
         $this->ccAvsStatus = $ccAvsStatus;
         return $this;
@@ -801,7 +801,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcCidStatus(): string
+    public function getCcCidStatus() : string
     {
         return $this->ccCidStatus;
     }
@@ -812,7 +812,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcCidStatus(string $ccCidStatus): self
+    public function setCcCidStatus(string $ccCidStatus) : self
     {
         $this->ccCidStatus = $ccCidStatus;
         return $this;
@@ -822,7 +822,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcDebugRequestBody(): string
+    public function getCcDebugRequestBody() : string
     {
         return $this->ccDebugRequestBody;
     }
@@ -833,7 +833,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcDebugRequestBody(string $ccDebugRequestBody): self
+    public function setCcDebugRequestBody(string $ccDebugRequestBody) : self
     {
         $this->ccDebugRequestBody = $ccDebugRequestBody;
         return $this;
@@ -843,7 +843,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcDebugResponseBody(): string
+    public function getCcDebugResponseBody() : string
     {
         return $this->ccDebugResponseBody;
     }
@@ -854,7 +854,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcDebugResponseBody(string $ccDebugResponseBody): self
+    public function setCcDebugResponseBody(string $ccDebugResponseBody) : self
     {
         $this->ccDebugResponseBody = $ccDebugResponseBody;
         return $this;
@@ -864,7 +864,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcDebugResponseSerialized(): string
+    public function getCcDebugResponseSerialized() : string
     {
         return $this->ccDebugResponseSerialized;
     }
@@ -875,7 +875,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcDebugResponseSerialized(string $ccDebugResponseSerialized): self
+    public function setCcDebugResponseSerialized(string $ccDebugResponseSerialized) : self
     {
         $this->ccDebugResponseSerialized = $ccDebugResponseSerialized;
         return $this;
@@ -885,7 +885,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcExpMonth(): string
+    public function getCcExpMonth() : string
     {
         return $this->ccExpMonth;
     }
@@ -896,7 +896,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcExpMonth(string $ccExpMonth): self
+    public function setCcExpMonth(string $ccExpMonth) : self
     {
         $this->ccExpMonth = $ccExpMonth;
         return $this;
@@ -906,7 +906,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcExpYear(): string
+    public function getCcExpYear() : string
     {
         return $this->ccExpYear;
     }
@@ -917,7 +917,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcExpYear(string $ccExpYear): self
+    public function setCcExpYear(string $ccExpYear) : self
     {
         $this->ccExpYear = $ccExpYear;
         return $this;
@@ -927,7 +927,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcLast4(): string
+    public function getCcLast4() : string
     {
         return $this->ccLast4;
     }
@@ -938,7 +938,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcLast4(string $ccLast4): self
+    public function setCcLast4(string $ccLast4) : self
     {
         $this->ccLast4 = $ccLast4;
         return $this;
@@ -948,7 +948,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcNumberEnc(): string
+    public function getCcNumberEnc() : string
     {
         return $this->ccNumberEnc;
     }
@@ -959,7 +959,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcNumberEnc(string $ccNumberEnc): self
+    public function setCcNumberEnc(string $ccNumberEnc) : self
     {
         $this->ccNumberEnc = $ccNumberEnc;
         return $this;
@@ -969,7 +969,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcOwner(): string
+    public function getCcOwner() : string
     {
         return $this->ccOwner;
     }
@@ -980,7 +980,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcOwner(string $ccOwner): self
+    public function setCcOwner(string $ccOwner) : self
     {
         $this->ccOwner = $ccOwner;
         return $this;
@@ -990,7 +990,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcSecureVerify(): string
+    public function getCcSecureVerify() : string
     {
         return $this->ccSecureVerify;
     }
@@ -1001,7 +1001,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcSecureVerify(string $ccSecureVerify): self
+    public function setCcSecureVerify(string $ccSecureVerify) : self
     {
         $this->ccSecureVerify = $ccSecureVerify;
         return $this;
@@ -1011,7 +1011,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcSsIssue(): string
+    public function getCcSsIssue() : string
     {
         return $this->ccSsIssue;
     }
@@ -1022,7 +1022,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcSsIssue(string $ccSsIssue): self
+    public function setCcSsIssue(string $ccSsIssue) : self
     {
         $this->ccSsIssue = $ccSsIssue;
         return $this;
@@ -1032,7 +1032,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcSsStartMonth(): string
+    public function getCcSsStartMonth() : string
     {
         return $this->ccSsStartMonth;
     }
@@ -1043,7 +1043,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcSsStartMonth(string $ccSsStartMonth): self
+    public function setCcSsStartMonth(string $ccSsStartMonth) : self
     {
         $this->ccSsStartMonth = $ccSsStartMonth;
         return $this;
@@ -1053,7 +1053,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcSsStartYear(): string
+    public function getCcSsStartYear() : string
     {
         return $this->ccSsStartYear;
     }
@@ -1064,7 +1064,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcSsStartYear(string $ccSsStartYear): self
+    public function setCcSsStartYear(string $ccSsStartYear) : self
     {
         $this->ccSsStartYear = $ccSsStartYear;
         return $this;
@@ -1074,7 +1074,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcStatus(): string
+    public function getCcStatus() : string
     {
         return $this->ccStatus;
     }
@@ -1085,7 +1085,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcStatus(string $ccStatus): self
+    public function setCcStatus(string $ccStatus) : self
     {
         $this->ccStatus = $ccStatus;
         return $this;
@@ -1095,7 +1095,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcStatusDescription(): string
+    public function getCcStatusDescription() : string
     {
         return $this->ccStatusDescription;
     }
@@ -1106,7 +1106,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcStatusDescription(string $ccStatusDescription): self
+    public function setCcStatusDescription(string $ccStatusDescription) : self
     {
         $this->ccStatusDescription = $ccStatusDescription;
         return $this;
@@ -1116,7 +1116,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcTransId(): string
+    public function getCcTransId() : string
     {
         return $this->ccTransId;
     }
@@ -1127,7 +1127,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcTransId(string $ccTransId): self
+    public function setCcTransId(string $ccTransId) : self
     {
         $this->ccTransId = $ccTransId;
         return $this;
@@ -1137,7 +1137,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getCcType(): string
+    public function getCcType() : string
     {
         return $this->ccType;
     }
@@ -1148,7 +1148,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setCcType(string $ccType): self
+    public function setCcType(string $ccType) : self
     {
         $this->ccType = $ccType;
         return $this;
@@ -1158,7 +1158,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getEcheckAccountName(): string
+    public function getEcheckAccountName() : string
     {
         return $this->echeckAccountName;
     }
@@ -1169,7 +1169,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setEcheckAccountName(string $echeckAccountName): self
+    public function setEcheckAccountName(string $echeckAccountName) : self
     {
         $this->echeckAccountName = $echeckAccountName;
         return $this;
@@ -1179,7 +1179,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getEcheckAccountType(): string
+    public function getEcheckAccountType() : string
     {
         return $this->echeckAccountType;
     }
@@ -1190,7 +1190,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setEcheckAccountType(string $echeckAccountType): self
+    public function setEcheckAccountType(string $echeckAccountType) : self
     {
         $this->echeckAccountType = $echeckAccountType;
         return $this;
@@ -1200,7 +1200,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getEcheckBankName(): string
+    public function getEcheckBankName() : string
     {
         return $this->echeckBankName;
     }
@@ -1211,7 +1211,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setEcheckBankName(string $echeckBankName): self
+    public function setEcheckBankName(string $echeckBankName) : self
     {
         $this->echeckBankName = $echeckBankName;
         return $this;
@@ -1221,7 +1221,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getEcheckRoutingNumber(): string
+    public function getEcheckRoutingNumber() : string
     {
         return $this->echeckRoutingNumber;
     }
@@ -1232,7 +1232,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setEcheckRoutingNumber(string $echeckRoutingNumber): self
+    public function setEcheckRoutingNumber(string $echeckRoutingNumber) : self
     {
         $this->echeckRoutingNumber = $echeckRoutingNumber;
         return $this;
@@ -1242,7 +1242,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return string
      */
-    public function getEcheckType(): string
+    public function getEcheckType() : string
     {
         return $this->echeckType;
     }
@@ -1253,7 +1253,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setEcheckType(string $echeckType): self
+    public function setEcheckType(string $echeckType) : self
     {
         $this->echeckType = $echeckType;
         return $this;
@@ -1263,7 +1263,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -1274,198 +1274,9 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
-        return $this;
-    }
-    /**
-     * Last transaction ID.
-     *
-     * @return string
-     */
-    public function getLastTransId(): string
-    {
-        return $this->lastTransId;
-    }
-    /**
-     * Last transaction ID.
-     *
-     * @param string $lastTransId
-     *
-     * @return self
-     */
-    public function setLastTransId(string $lastTransId): self
-    {
-        $this->lastTransId = $lastTransId;
-        return $this;
-    }
-    /**
-     * Method.
-     *
-     * @return string
-     */
-    public function getMethod(): string
-    {
-        return $this->method;
-    }
-    /**
-     * Method.
-     *
-     * @param string $method
-     *
-     * @return self
-     */
-    public function setMethod(string $method): self
-    {
-        $this->method = $method;
-        return $this;
-    }
-    /**
-     * Parent ID.
-     *
-     * @return int
-     */
-    public function getParentId(): int
-    {
-        return $this->parentId;
-    }
-    /**
-     * Parent ID.
-     *
-     * @param int $parentId
-     *
-     * @return self
-     */
-    public function setParentId(int $parentId): self
-    {
-        $this->parentId = $parentId;
-        return $this;
-    }
-    /**
-     * PO number.
-     *
-     * @return string
-     */
-    public function getPoNumber(): string
-    {
-        return $this->poNumber;
-    }
-    /**
-     * PO number.
-     *
-     * @param string $poNumber
-     *
-     * @return self
-     */
-    public function setPoNumber(string $poNumber): self
-    {
-        $this->poNumber = $poNumber;
-        return $this;
-    }
-    /**
-     * Protection eligibility.
-     *
-     * @return string
-     */
-    public function getProtectionEligibility(): string
-    {
-        return $this->protectionEligibility;
-    }
-    /**
-     * Protection eligibility.
-     *
-     * @param string $protectionEligibility
-     *
-     * @return self
-     */
-    public function setProtectionEligibility(string $protectionEligibility): self
-    {
-        $this->protectionEligibility = $protectionEligibility;
-        return $this;
-    }
-    /**
-     * Quote payment ID.
-     *
-     * @return int
-     */
-    public function getQuotePaymentId(): int
-    {
-        return $this->quotePaymentId;
-    }
-    /**
-     * Quote payment ID.
-     *
-     * @param int $quotePaymentId
-     *
-     * @return self
-     */
-    public function setQuotePaymentId(int $quotePaymentId): self
-    {
-        $this->quotePaymentId = $quotePaymentId;
-        return $this;
-    }
-    /**
-     * Shipping amount.
-     *
-     * @return float
-     */
-    public function getShippingAmount(): float
-    {
-        return $this->shippingAmount;
-    }
-    /**
-     * Shipping amount.
-     *
-     * @param float $shippingAmount
-     *
-     * @return self
-     */
-    public function setShippingAmount(float $shippingAmount): self
-    {
-        $this->shippingAmount = $shippingAmount;
-        return $this;
-    }
-    /**
-     * Shipping captured.
-     *
-     * @return float
-     */
-    public function getShippingCaptured(): float
-    {
-        return $this->shippingCaptured;
-    }
-    /**
-     * Shipping captured.
-     *
-     * @param float $shippingCaptured
-     *
-     * @return self
-     */
-    public function setShippingCaptured(float $shippingCaptured): self
-    {
-        $this->shippingCaptured = $shippingCaptured;
-        return $this;
-    }
-    /**
-     * Shipping refunded.
-     *
-     * @return float
-     */
-    public function getShippingRefunded(): float
-    {
-        return $this->shippingRefunded;
-    }
-    /**
-     * Shipping refunded.
-     *
-     * @param float $shippingRefunded
-     *
-     * @return self
-     */
-    public function setShippingRefunded(float $shippingRefunded): self
-    {
-        $this->shippingRefunded = $shippingRefunded;
         return $this;
     }
     /**
@@ -1473,7 +1284,7 @@ class SalesDataOrderPaymentInterface
      *
      * @return SalesDataOrderPaymentExtensionInterface
      */
-    public function getExtensionAttributes(): SalesDataOrderPaymentExtensionInterface
+    public function getExtensionAttributes() : SalesDataOrderPaymentExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -1484,9 +1295,198 @@ class SalesDataOrderPaymentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(SalesDataOrderPaymentExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(SalesDataOrderPaymentExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Last transaction ID.
+     *
+     * @return string
+     */
+    public function getLastTransId() : string
+    {
+        return $this->lastTransId;
+    }
+    /**
+     * Last transaction ID.
+     *
+     * @param string $lastTransId
+     *
+     * @return self
+     */
+    public function setLastTransId(string $lastTransId) : self
+    {
+        $this->lastTransId = $lastTransId;
+        return $this;
+    }
+    /**
+     * Method.
+     *
+     * @return string
+     */
+    public function getMethod() : string
+    {
+        return $this->method;
+    }
+    /**
+     * Method.
+     *
+     * @param string $method
+     *
+     * @return self
+     */
+    public function setMethod(string $method) : self
+    {
+        $this->method = $method;
+        return $this;
+    }
+    /**
+     * Parent ID.
+     *
+     * @return int
+     */
+    public function getParentId() : int
+    {
+        return $this->parentId;
+    }
+    /**
+     * Parent ID.
+     *
+     * @param int $parentId
+     *
+     * @return self
+     */
+    public function setParentId(int $parentId) : self
+    {
+        $this->parentId = $parentId;
+        return $this;
+    }
+    /**
+     * PO number.
+     *
+     * @return string
+     */
+    public function getPoNumber() : string
+    {
+        return $this->poNumber;
+    }
+    /**
+     * PO number.
+     *
+     * @param string $poNumber
+     *
+     * @return self
+     */
+    public function setPoNumber(string $poNumber) : self
+    {
+        $this->poNumber = $poNumber;
+        return $this;
+    }
+    /**
+     * Protection eligibility.
+     *
+     * @return string
+     */
+    public function getProtectionEligibility() : string
+    {
+        return $this->protectionEligibility;
+    }
+    /**
+     * Protection eligibility.
+     *
+     * @param string $protectionEligibility
+     *
+     * @return self
+     */
+    public function setProtectionEligibility(string $protectionEligibility) : self
+    {
+        $this->protectionEligibility = $protectionEligibility;
+        return $this;
+    }
+    /**
+     * Quote payment ID.
+     *
+     * @return int
+     */
+    public function getQuotePaymentId() : int
+    {
+        return $this->quotePaymentId;
+    }
+    /**
+     * Quote payment ID.
+     *
+     * @param int $quotePaymentId
+     *
+     * @return self
+     */
+    public function setQuotePaymentId(int $quotePaymentId) : self
+    {
+        $this->quotePaymentId = $quotePaymentId;
+        return $this;
+    }
+    /**
+     * Shipping amount.
+     *
+     * @return float
+     */
+    public function getShippingAmount() : float
+    {
+        return $this->shippingAmount;
+    }
+    /**
+     * Shipping amount.
+     *
+     * @param float $shippingAmount
+     *
+     * @return self
+     */
+    public function setShippingAmount(float $shippingAmount) : self
+    {
+        $this->shippingAmount = $shippingAmount;
+        return $this;
+    }
+    /**
+     * Shipping captured.
+     *
+     * @return float
+     */
+    public function getShippingCaptured() : float
+    {
+        return $this->shippingCaptured;
+    }
+    /**
+     * Shipping captured.
+     *
+     * @param float $shippingCaptured
+     *
+     * @return self
+     */
+    public function setShippingCaptured(float $shippingCaptured) : self
+    {
+        $this->shippingCaptured = $shippingCaptured;
+        return $this;
+    }
+    /**
+     * Shipping refunded.
+     *
+     * @return float
+     */
+    public function getShippingRefunded() : float
+    {
+        return $this->shippingRefunded;
+    }
+    /**
+     * Shipping refunded.
+     *
+     * @param float $shippingRefunded
+     *
+     * @return self
+     */
+    public function setShippingRefunded(float $shippingRefunded) : self
+    {
+        $this->shippingRefunded = $shippingRefunded;
         return $this;
     }
 }

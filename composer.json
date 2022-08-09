@@ -19,7 +19,8 @@
         "jane-php/open-api-runtime": "^7.3"
     },
     "require-dev": {
-        "jane-php/open-api-2": "^7.3"
+        "jane-php/open-api-3": "^7.3",
+        "phpunit/phpunit": "^9.5"
     },
     "config": {
         "bin-dir": "bin"

@@ -5,7 +5,13 @@ namespace Kiboko\Magento\V2\Model;
 class V1GuestCartsCartIdPaymentInformationPostBody
 {
     /**
+     * Interface AddressInterface
      *
+     * @var QuoteDataAddressInterface
+     */
+    protected $billingAddress;
+    /**
+     * 
      *
      * @var string
      */
@@ -19,57 +25,9 @@ class V1GuestCartsCartIdPaymentInformationPostBody
     /**
      * Interface AddressInterface
      *
-     * @var QuoteDataAddressInterface
-     */
-    protected $billingAddress;
-    /**
-     *
-     *
-     * @return string
-     */
-    public function getEmail(): string
-    {
-        return $this->email;
-    }
-    /**
-     *
-     *
-     * @param string $email
-     *
-     * @return self
-     */
-    public function setEmail(string $email): self
-    {
-        $this->email = $email;
-        return $this;
-    }
-    /**
-     * Interface PaymentInterface
-     *
-     * @return QuoteDataPaymentInterface
-     */
-    public function getPaymentMethod(): QuoteDataPaymentInterface
-    {
-        return $this->paymentMethod;
-    }
-    /**
-     * Interface PaymentInterface
-     *
-     * @param QuoteDataPaymentInterface $paymentMethod
-     *
-     * @return self
-     */
-    public function setPaymentMethod(QuoteDataPaymentInterface $paymentMethod): self
-    {
-        $this->paymentMethod = $paymentMethod;
-        return $this;
-    }
-    /**
-     * Interface AddressInterface
-     *
      * @return QuoteDataAddressInterface
      */
-    public function getBillingAddress(): QuoteDataAddressInterface
+    public function getBillingAddress() : QuoteDataAddressInterface
     {
         return $this->billingAddress;
     }
@@ -80,9 +38,51 @@ class V1GuestCartsCartIdPaymentInformationPostBody
      *
      * @return self
      */
-    public function setBillingAddress(QuoteDataAddressInterface $billingAddress): self
+    public function setBillingAddress(QuoteDataAddressInterface $billingAddress) : self
     {
         $this->billingAddress = $billingAddress;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getEmail() : string
+    {
+        return $this->email;
+    }
+    /**
+     * 
+     *
+     * @param string $email
+     *
+     * @return self
+     */
+    public function setEmail(string $email) : self
+    {
+        $this->email = $email;
+        return $this;
+    }
+    /**
+     * Interface PaymentInterface
+     *
+     * @return QuoteDataPaymentInterface
+     */
+    public function getPaymentMethod() : QuoteDataPaymentInterface
+    {
+        return $this->paymentMethod;
+    }
+    /**
+     * Interface PaymentInterface
+     *
+     * @param QuoteDataPaymentInterface $paymentMethod
+     *
+     * @return self
+     */
+    public function setPaymentMethod(QuoteDataPaymentInterface $paymentMethod) : self
+    {
+        $this->paymentMethod = $paymentMethod;
         return $this;
     }
 }

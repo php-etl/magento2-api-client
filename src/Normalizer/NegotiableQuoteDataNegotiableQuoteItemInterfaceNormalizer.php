@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class NegotiableQuoteDataNegotiableQuoteItemInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\NegotiableQuoteDataNegotiableQuoteItemInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\NegotiableQuoteDataNegotiableQuoteItemInterface';
     }
@@ -40,20 +39,20 @@ class NegotiableQuoteDataNegotiableQuoteItemInterfaceNormalizer implements Denor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
+        }
         if (\array_key_exists('item_id', $data)) {
             $object->setItemId($data['item_id']);
+        }
+        if (\array_key_exists('original_discount_amount', $data)) {
+            $object->setOriginalDiscountAmount($data['original_discount_amount']);
         }
         if (\array_key_exists('original_price', $data)) {
             $object->setOriginalPrice($data['original_price']);
         }
         if (\array_key_exists('original_tax_amount', $data)) {
             $object->setOriginalTaxAmount($data['original_tax_amount']);
-        }
-        if (\array_key_exists('original_discount_amount', $data)) {
-            $object->setOriginalDiscountAmount($data['original_discount_amount']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
         }
         return $object;
     }
@@ -63,13 +62,13 @@ class NegotiableQuoteDataNegotiableQuoteItemInterfaceNormalizer implements Denor
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['item_id'] = $object->getItemId();
-        $data['original_price'] = $object->getOriginalPrice();
-        $data['original_tax_amount'] = $object->getOriginalTaxAmount();
-        $data['original_discount_amount'] = $object->getOriginalDiscountAmount();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
+        $data['item_id'] = $object->getItemId();
+        $data['original_discount_amount'] = $object->getOriginalDiscountAmount();
+        $data['original_price'] = $object->getOriginalPrice();
+        $data['original_tax_amount'] = $object->getOriginalTaxAmount();
         return $data;
     }
 }

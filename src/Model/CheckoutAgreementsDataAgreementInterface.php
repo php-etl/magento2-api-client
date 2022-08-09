@@ -11,11 +11,11 @@ class CheckoutAgreementsDataAgreementInterface
      */
     protected $agreementId;
     /**
-     * Agreement name.
+     * Agreement checkbox text.
      *
      * @var string
      */
-    protected $name;
+    protected $checkboxText;
     /**
      * Agreement content.
      *
@@ -29,11 +29,11 @@ class CheckoutAgreementsDataAgreementInterface
      */
     protected $contentHeight;
     /**
-     * Agreement checkbox text.
+     * ExtensionInterface class for @see \Magento\CheckoutAgreements\Api\Data\AgreementInterface
      *
-     * @var string
+     * @var mixed
      */
-    protected $checkboxText;
+    protected $extensionAttributes;
     /**
      * Agreement status.
      *
@@ -53,17 +53,17 @@ class CheckoutAgreementsDataAgreementInterface
      */
     protected $mode;
     /**
-     * ExtensionInterface class for @see \Magento\CheckoutAgreements\Api\Data\AgreementInterface
+     * Agreement name.
      *
-     * @var mixed
+     * @var string
      */
-    protected $extensionAttributes;
+    protected $name;
     /**
      * Agreement ID.
      *
      * @return int
      */
-    public function getAgreementId(): int
+    public function getAgreementId() : int
     {
         return $this->agreementId;
     }
@@ -74,72 +74,9 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return self
      */
-    public function setAgreementId(int $agreementId): self
+    public function setAgreementId(int $agreementId) : self
     {
         $this->agreementId = $agreementId;
-        return $this;
-    }
-    /**
-     * Agreement name.
-     *
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-    /**
-     * Agreement name.
-     *
-     * @param string $name
-     *
-     * @return self
-     */
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-        return $this;
-    }
-    /**
-     * Agreement content.
-     *
-     * @return string
-     */
-    public function getContent(): string
-    {
-        return $this->content;
-    }
-    /**
-     * Agreement content.
-     *
-     * @param string $content
-     *
-     * @return self
-     */
-    public function setContent(string $content): self
-    {
-        $this->content = $content;
-        return $this;
-    }
-    /**
-     * Agreement content height. Otherwise, null.
-     *
-     * @return string
-     */
-    public function getContentHeight(): string
-    {
-        return $this->contentHeight;
-    }
-    /**
-     * Agreement content height. Otherwise, null.
-     *
-     * @param string $contentHeight
-     *
-     * @return self
-     */
-    public function setContentHeight(string $contentHeight): self
-    {
-        $this->contentHeight = $contentHeight;
         return $this;
     }
     /**
@@ -147,7 +84,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return string
      */
-    public function getCheckboxText(): string
+    public function getCheckboxText() : string
     {
         return $this->checkboxText;
     }
@@ -158,72 +95,51 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return self
      */
-    public function setCheckboxText(string $checkboxText): self
+    public function setCheckboxText(string $checkboxText) : self
     {
         $this->checkboxText = $checkboxText;
         return $this;
     }
     /**
-     * Agreement status.
+     * Agreement content.
      *
-     * @return bool
+     * @return string
      */
-    public function getIsActive(): bool
+    public function getContent() : string
     {
-        return $this->isActive;
+        return $this->content;
     }
     /**
-     * Agreement status.
+     * Agreement content.
      *
-     * @param bool $isActive
+     * @param string $content
      *
      * @return self
      */
-    public function setIsActive(bool $isActive): self
+    public function setContent(string $content) : self
     {
-        $this->isActive = $isActive;
+        $this->content = $content;
         return $this;
     }
     /**
-     * * true - HTML. * false - plain text.
+     * Agreement content height. Otherwise, null.
      *
-     * @return bool
+     * @return string
      */
-    public function getIsHtml(): bool
+    public function getContentHeight() : string
     {
-        return $this->isHtml;
+        return $this->contentHeight;
     }
     /**
-     * * true - HTML. * false - plain text.
+     * Agreement content height. Otherwise, null.
      *
-     * @param bool $isHtml
+     * @param string $contentHeight
      *
      * @return self
      */
-    public function setIsHtml(bool $isHtml): self
+    public function setContentHeight(string $contentHeight) : self
     {
-        $this->isHtml = $isHtml;
-        return $this;
-    }
-    /**
-     * The agreement applied mode.
-     *
-     * @return int
-     */
-    public function getMode(): int
-    {
-        return $this->mode;
-    }
-    /**
-     * The agreement applied mode.
-     *
-     * @param int $mode
-     *
-     * @return self
-     */
-    public function setMode(int $mode): self
-    {
-        $this->mode = $mode;
+        $this->contentHeight = $contentHeight;
         return $this;
     }
     /**
@@ -242,9 +158,93 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Agreement status.
+     *
+     * @return bool
+     */
+    public function getIsActive() : bool
+    {
+        return $this->isActive;
+    }
+    /**
+     * Agreement status.
+     *
+     * @param bool $isActive
+     *
+     * @return self
+     */
+    public function setIsActive(bool $isActive) : self
+    {
+        $this->isActive = $isActive;
+        return $this;
+    }
+    /**
+     * * true - HTML. * false - plain text.
+     *
+     * @return bool
+     */
+    public function getIsHtml() : bool
+    {
+        return $this->isHtml;
+    }
+    /**
+     * * true - HTML. * false - plain text.
+     *
+     * @param bool $isHtml
+     *
+     * @return self
+     */
+    public function setIsHtml(bool $isHtml) : self
+    {
+        $this->isHtml = $isHtml;
+        return $this;
+    }
+    /**
+     * The agreement applied mode.
+     *
+     * @return int
+     */
+    public function getMode() : int
+    {
+        return $this->mode;
+    }
+    /**
+     * The agreement applied mode.
+     *
+     * @param int $mode
+     *
+     * @return self
+     */
+    public function setMode(int $mode) : self
+    {
+        $this->mode = $mode;
+        return $this;
+    }
+    /**
+     * Agreement name.
+     *
+     * @return string
+     */
+    public function getName() : string
+    {
+        return $this->name;
+    }
+    /**
+     * Agreement name.
+     *
+     * @param string $name
+     *
+     * @return self
+     */
+    public function setName(string $name) : self
+    {
+        $this->name = $name;
         return $this;
     }
 }

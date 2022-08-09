@@ -21,7 +21,7 @@ class FrameworkSearchBucketInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -32,7 +32,7 @@ class FrameworkSearchBucketInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -42,7 +42,7 @@ class FrameworkSearchBucketInterface
      *
      * @return FrameworkSearchAggregationValueInterface[]
      */
-    public function getValues(): array
+    public function getValues() : array
     {
         return $this->values;
     }
@@ -53,7 +53,7 @@ class FrameworkSearchBucketInterface
      *
      * @return self
      */
-    public function setValues(array $values): self
+    public function setValues(array $values) : self
     {
         $this->values = $values;
         return $this;

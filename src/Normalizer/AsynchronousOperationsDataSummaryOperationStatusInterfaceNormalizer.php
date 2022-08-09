@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class AsynchronousOperationsDataSummaryOperationStatusInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\AsynchronousOperationsDataSummaryOperationStatusInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\AsynchronousOperationsDataSummaryOperationStatusInterface';
     }
@@ -40,17 +39,17 @@ class AsynchronousOperationsDataSummaryOperationStatusInterfaceNormalizer implem
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('error_code', $data)) {
+            $object->setErrorCode($data['error_code']);
+        }
         if (\array_key_exists('id', $data)) {
             $object->setId($data['id']);
-        }
-        if (\array_key_exists('status', $data)) {
-            $object->setStatus($data['status']);
         }
         if (\array_key_exists('result_message', $data)) {
             $object->setResultMessage($data['result_message']);
         }
-        if (\array_key_exists('error_code', $data)) {
-            $object->setErrorCode($data['error_code']);
+        if (\array_key_exists('status', $data)) {
+            $object->setStatus($data['status']);
         }
         return $object;
     }
@@ -60,10 +59,10 @@ class AsynchronousOperationsDataSummaryOperationStatusInterfaceNormalizer implem
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['id'] = $object->getId();
-        $data['status'] = $object->getStatus();
-        $data['result_message'] = $object->getResultMessage();
         $data['error_code'] = $object->getErrorCode();
+        $data['id'] = $object->getId();
+        $data['result_message'] = $object->getResultMessage();
+        $data['status'] = $object->getStatus();
         return $data;
     }
 }

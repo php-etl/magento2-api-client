@@ -5,17 +5,11 @@ namespace Kiboko\Magento\V2\Model;
 class CompanyCreditDataCreditBalanceOptionsInterface
 {
     /**
-     * Purchase order number.
+     * Currency base.
      *
      * @var string
      */
-    protected $purchaseOrder;
-    /**
-     * Order increment.
-     *
-     * @var string
-     */
-    protected $orderIncrement;
+    protected $currencyBase;
     /**
      * Currency display.
      *
@@ -23,80 +17,23 @@ class CompanyCreditDataCreditBalanceOptionsInterface
      */
     protected $currencyDisplay;
     /**
-     * Currency base.
+     * Order increment.
      *
      * @var string
      */
-    protected $currencyBase;
+    protected $orderIncrement;
     /**
      * Purchase order number.
      *
-     * @return string
+     * @var string
      */
-    public function getPurchaseOrder(): string
-    {
-        return $this->purchaseOrder;
-    }
-    /**
-     * Purchase order number.
-     *
-     * @param string $purchaseOrder
-     *
-     * @return self
-     */
-    public function setPurchaseOrder(string $purchaseOrder): self
-    {
-        $this->purchaseOrder = $purchaseOrder;
-        return $this;
-    }
-    /**
-     * Order increment.
-     *
-     * @return string
-     */
-    public function getOrderIncrement(): string
-    {
-        return $this->orderIncrement;
-    }
-    /**
-     * Order increment.
-     *
-     * @param string $orderIncrement
-     *
-     * @return self
-     */
-    public function setOrderIncrement(string $orderIncrement): self
-    {
-        $this->orderIncrement = $orderIncrement;
-        return $this;
-    }
-    /**
-     * Currency display.
-     *
-     * @return string
-     */
-    public function getCurrencyDisplay(): string
-    {
-        return $this->currencyDisplay;
-    }
-    /**
-     * Currency display.
-     *
-     * @param string $currencyDisplay
-     *
-     * @return self
-     */
-    public function setCurrencyDisplay(string $currencyDisplay): self
-    {
-        $this->currencyDisplay = $currencyDisplay;
-        return $this;
-    }
+    protected $purchaseOrder;
     /**
      * Currency base.
      *
      * @return string
      */
-    public function getCurrencyBase(): string
+    public function getCurrencyBase() : string
     {
         return $this->currencyBase;
     }
@@ -107,9 +44,72 @@ class CompanyCreditDataCreditBalanceOptionsInterface
      *
      * @return self
      */
-    public function setCurrencyBase(string $currencyBase): self
+    public function setCurrencyBase(string $currencyBase) : self
     {
         $this->currencyBase = $currencyBase;
+        return $this;
+    }
+    /**
+     * Currency display.
+     *
+     * @return string
+     */
+    public function getCurrencyDisplay() : string
+    {
+        return $this->currencyDisplay;
+    }
+    /**
+     * Currency display.
+     *
+     * @param string $currencyDisplay
+     *
+     * @return self
+     */
+    public function setCurrencyDisplay(string $currencyDisplay) : self
+    {
+        $this->currencyDisplay = $currencyDisplay;
+        return $this;
+    }
+    /**
+     * Order increment.
+     *
+     * @return string
+     */
+    public function getOrderIncrement() : string
+    {
+        return $this->orderIncrement;
+    }
+    /**
+     * Order increment.
+     *
+     * @param string $orderIncrement
+     *
+     * @return self
+     */
+    public function setOrderIncrement(string $orderIncrement) : self
+    {
+        $this->orderIncrement = $orderIncrement;
+        return $this;
+    }
+    /**
+     * Purchase order number.
+     *
+     * @return string
+     */
+    public function getPurchaseOrder() : string
+    {
+        return $this->purchaseOrder;
+    }
+    /**
+     * Purchase order number.
+     *
+     * @param string $purchaseOrder
+     *
+     * @return self
+     */
+    public function setPurchaseOrder(string $purchaseOrder) : self
+    {
+        $this->purchaseOrder = $purchaseOrder;
         return $this;
     }
 }

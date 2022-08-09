@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class MsrpDataProductRenderMsrpPriceInfoInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\MsrpDataProductRenderMsrpPriceInfoInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\MsrpDataProductRenderMsrpPriceInfoInterface';
     }
@@ -40,8 +39,11 @@ class MsrpDataProductRenderMsrpPriceInfoInterfaceNormalizer implements Denormali
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('msrp_price', $data)) {
-            $object->setMsrpPrice($data['msrp_price']);
+        if (\array_key_exists('explanation_message', $data)) {
+            $object->setExplanationMessage($data['explanation_message']);
+        }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
         }
         if (\array_key_exists('is_applicable', $data)) {
             $object->setIsApplicable($data['is_applicable']);
@@ -52,11 +54,8 @@ class MsrpDataProductRenderMsrpPriceInfoInterfaceNormalizer implements Denormali
         if (\array_key_exists('msrp_message', $data)) {
             $object->setMsrpMessage($data['msrp_message']);
         }
-        if (\array_key_exists('explanation_message', $data)) {
-            $object->setExplanationMessage($data['explanation_message']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
+        if (\array_key_exists('msrp_price', $data)) {
+            $object->setMsrpPrice($data['msrp_price']);
         }
         return $object;
     }
@@ -66,14 +65,14 @@ class MsrpDataProductRenderMsrpPriceInfoInterfaceNormalizer implements Denormali
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['msrp_price'] = $object->getMsrpPrice();
-        $data['is_applicable'] = $object->getIsApplicable();
-        $data['is_shown_price_on_gesture'] = $object->getIsShownPriceOnGesture();
-        $data['msrp_message'] = $object->getMsrpMessage();
         $data['explanation_message'] = $object->getExplanationMessage();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
+        $data['is_applicable'] = $object->getIsApplicable();
+        $data['is_shown_price_on_gesture'] = $object->getIsShownPriceOnGesture();
+        $data['msrp_message'] = $object->getMsrpMessage();
+        $data['msrp_price'] = $object->getMsrpPrice();
         return $data;
     }
 }

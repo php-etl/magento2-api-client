@@ -33,7 +33,7 @@ class EavDataAttributeGroupInterface
      *
      * @return string
      */
-    public function getAttributeGroupId(): string
+    public function getAttributeGroupId() : string
     {
         return $this->attributeGroupId;
     }
@@ -44,7 +44,7 @@ class EavDataAttributeGroupInterface
      *
      * @return self
      */
-    public function setAttributeGroupId(string $attributeGroupId): self
+    public function setAttributeGroupId(string $attributeGroupId) : self
     {
         $this->attributeGroupId = $attributeGroupId;
         return $this;
@@ -54,7 +54,7 @@ class EavDataAttributeGroupInterface
      *
      * @return string
      */
-    public function getAttributeGroupName(): string
+    public function getAttributeGroupName() : string
     {
         return $this->attributeGroupName;
     }
@@ -65,7 +65,7 @@ class EavDataAttributeGroupInterface
      *
      * @return self
      */
-    public function setAttributeGroupName(string $attributeGroupName): self
+    public function setAttributeGroupName(string $attributeGroupName) : self
     {
         $this->attributeGroupName = $attributeGroupName;
         return $this;
@@ -75,7 +75,7 @@ class EavDataAttributeGroupInterface
      *
      * @return int
      */
-    public function getAttributeSetId(): int
+    public function getAttributeSetId() : int
     {
         return $this->attributeSetId;
     }
@@ -86,7 +86,7 @@ class EavDataAttributeGroupInterface
      *
      * @return self
      */
-    public function setAttributeSetId(int $attributeSetId): self
+    public function setAttributeSetId(int $attributeSetId) : self
     {
         $this->attributeSetId = $attributeSetId;
         return $this;
@@ -96,7 +96,7 @@ class EavDataAttributeGroupInterface
      *
      * @return EavDataAttributeGroupExtensionInterface
      */
-    public function getExtensionAttributes(): EavDataAttributeGroupExtensionInterface
+    public function getExtensionAttributes() : EavDataAttributeGroupExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -107,7 +107,7 @@ class EavDataAttributeGroupInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(EavDataAttributeGroupExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(EavDataAttributeGroupExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

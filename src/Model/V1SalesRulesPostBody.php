@@ -15,7 +15,7 @@ class V1SalesRulesPostBody
      *
      * @return SalesRuleDataRuleInterface
      */
-    public function getRule(): SalesRuleDataRuleInterface
+    public function getRule() : SalesRuleDataRuleInterface
     {
         return $this->rule;
     }
@@ -26,7 +26,7 @@ class V1SalesRulesPostBody
      *
      * @return self
      */
-    public function setRule(SalesRuleDataRuleInterface $rule): self
+    public function setRule(SalesRuleDataRuleInterface $rule) : self
     {
         $this->rule = $rule;
         return $this;

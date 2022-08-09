@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class FrameworkSearchAggregationValueInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\FrameworkSearchAggregationValueInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\FrameworkSearchAggregationValueInterface';
     }
@@ -40,15 +39,15 @@ class FrameworkSearchAggregationValueInterfaceNormalizer implements Denormalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('value', $data)) {
-            $object->setValue($data['value']);
-        }
         if (\array_key_exists('metrics', $data)) {
             $values = array();
             foreach ($data['metrics'] as $value) {
                 $values[] = $value;
             }
             $object->setMetrics($values);
+        }
+        if (\array_key_exists('value', $data)) {
+            $object->setValue($data['value']);
         }
         return $object;
     }
@@ -58,12 +57,12 @@ class FrameworkSearchAggregationValueInterfaceNormalizer implements Denormalizer
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['value'] = $object->getValue();
         $values = array();
         foreach ($object->getMetrics() as $value) {
             $values[] = $value;
         }
         $data['metrics'] = $values;
+        $data['value'] = $object->getValue();
         return $data;
     }
 }

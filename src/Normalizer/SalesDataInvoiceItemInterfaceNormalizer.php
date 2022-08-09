@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataInvoiceItemInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataInvoiceItemInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataInvoiceItemInterface';
     }
@@ -73,14 +72,20 @@ class SalesDataInvoiceItemInterfaceNormalizer implements DenormalizerInterface, 
         if (\array_key_exists('discount_amount', $data)) {
             $object->setDiscountAmount($data['discount_amount']);
         }
-        if (\array_key_exists('entity_id', $data)) {
-            $object->setEntityId($data['entity_id']);
-        }
         if (\array_key_exists('discount_tax_compensation_amount', $data)) {
             $object->setDiscountTaxCompensationAmount($data['discount_tax_compensation_amount']);
         }
+        if (\array_key_exists('entity_id', $data)) {
+            $object->setEntityId($data['entity_id']);
+        }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataInvoiceItemExtensionInterface', 'json', $context));
+        }
         if (\array_key_exists('name', $data)) {
             $object->setName($data['name']);
+        }
+        if (\array_key_exists('order_item_id', $data)) {
+            $object->setOrderItemId($data['order_item_id']);
         }
         if (\array_key_exists('parent_id', $data)) {
             $object->setParentId($data['parent_id']);
@@ -94,6 +99,9 @@ class SalesDataInvoiceItemInterfaceNormalizer implements DenormalizerInterface, 
         if (\array_key_exists('product_id', $data)) {
             $object->setProductId($data['product_id']);
         }
+        if (\array_key_exists('qty', $data)) {
+            $object->setQty($data['qty']);
+        }
         if (\array_key_exists('row_total', $data)) {
             $object->setRowTotal($data['row_total']);
         }
@@ -105,15 +113,6 @@ class SalesDataInvoiceItemInterfaceNormalizer implements DenormalizerInterface, 
         }
         if (\array_key_exists('tax_amount', $data)) {
             $object->setTaxAmount($data['tax_amount']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataInvoiceItemExtensionInterface', 'json', $context));
-        }
-        if (\array_key_exists('order_item_id', $data)) {
-            $object->setOrderItemId($data['order_item_id']);
-        }
-        if (\array_key_exists('qty', $data)) {
-            $object->setQty($data['qty']);
         }
         return $object;
     }
@@ -156,15 +155,19 @@ class SalesDataInvoiceItemInterfaceNormalizer implements DenormalizerInterface, 
         if (null !== $object->getDiscountAmount()) {
             $data['discount_amount'] = $object->getDiscountAmount();
         }
+        if (null !== $object->getDiscountTaxCompensationAmount()) {
+            $data['discount_tax_compensation_amount'] = $object->getDiscountTaxCompensationAmount();
+        }
         if (null !== $object->getEntityId()) {
             $data['entity_id'] = $object->getEntityId();
         }
-        if (null !== $object->getDiscountTaxCompensationAmount()) {
-            $data['discount_tax_compensation_amount'] = $object->getDiscountTaxCompensationAmount();
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
         if (null !== $object->getName()) {
             $data['name'] = $object->getName();
         }
+        $data['order_item_id'] = $object->getOrderItemId();
         if (null !== $object->getParentId()) {
             $data['parent_id'] = $object->getParentId();
         }
@@ -177,6 +180,7 @@ class SalesDataInvoiceItemInterfaceNormalizer implements DenormalizerInterface, 
         if (null !== $object->getProductId()) {
             $data['product_id'] = $object->getProductId();
         }
+        $data['qty'] = $object->getQty();
         if (null !== $object->getRowTotal()) {
             $data['row_total'] = $object->getRowTotal();
         }
@@ -187,11 +191,6 @@ class SalesDataInvoiceItemInterfaceNormalizer implements DenormalizerInterface, 
         if (null !== $object->getTaxAmount()) {
             $data['tax_amount'] = $object->getTaxAmount();
         }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
-        }
-        $data['order_item_id'] = $object->getOrderItemId();
-        $data['qty'] = $object->getQty();
         return $data;
     }
 }

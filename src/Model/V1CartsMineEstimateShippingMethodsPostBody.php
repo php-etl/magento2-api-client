@@ -15,7 +15,7 @@ class V1CartsMineEstimateShippingMethodsPostBody
      *
      * @return QuoteDataAddressInterface
      */
-    public function getAddress(): QuoteDataAddressInterface
+    public function getAddress() : QuoteDataAddressInterface
     {
         return $this->address;
     }
@@ -26,7 +26,7 @@ class V1CartsMineEstimateShippingMethodsPostBody
      *
      * @return self
      */
-    public function setAddress(QuoteDataAddressInterface $address): self
+    public function setAddress(QuoteDataAddressInterface $address) : self
     {
         $this->address = $address;
         return $this;

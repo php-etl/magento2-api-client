@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1ProductsSkuDownloadableLinksSamplesPostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\V1ProductsSkuDownloadableLinksSamplesPostBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\V1ProductsSkuDownloadableLinksSamplesPostBody';
     }
@@ -40,11 +39,11 @@ class V1ProductsSkuDownloadableLinksSamplesPostBodyNormalizer implements Denorma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('sample', $data)) {
-            $object->setSample($this->denormalizer->denormalize($data['sample'], 'Kiboko\\Magento\\V2\\Model\\DownloadableDataSampleInterface', 'json', $context));
-        }
         if (\array_key_exists('isGlobalScopeContent', $data)) {
             $object->setIsGlobalScopeContent($data['isGlobalScopeContent']);
+        }
+        if (\array_key_exists('sample', $data)) {
+            $object->setSample($this->denormalizer->denormalize($data['sample'], 'Kiboko\\Magento\\V2\\Model\\DownloadableDataSampleInterface', 'json', $context));
         }
         return $object;
     }
@@ -54,10 +53,10 @@ class V1ProductsSkuDownloadableLinksSamplesPostBodyNormalizer implements Denorma
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['sample'] = $this->normalizer->normalize($object->getSample(), 'json', $context);
         if (null !== $object->getIsGlobalScopeContent()) {
             $data['isGlobalScopeContent'] = $object->getIsGlobalScopeContent();
         }
+        $data['sample'] = $this->normalizer->normalize($object->getSample(), 'json', $context);
         return $data;
     }
 }

@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class ErrorParametersItemNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\ErrorParametersItem';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\ErrorParametersItem';
     }
@@ -40,14 +39,14 @@ class ErrorParametersItemNormalizer implements DenormalizerInterface, Normalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('resources', $data)) {
-            $object->setResources($data['resources']);
-        }
         if (\array_key_exists('fieldName', $data)) {
             $object->setFieldName($data['fieldName']);
         }
         if (\array_key_exists('fieldValue', $data)) {
             $object->setFieldValue($data['fieldValue']);
+        }
+        if (\array_key_exists('resources', $data)) {
+            $object->setResources($data['resources']);
         }
         return $object;
     }
@@ -57,14 +56,14 @@ class ErrorParametersItemNormalizer implements DenormalizerInterface, Normalizer
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getResources()) {
-            $data['resources'] = $object->getResources();
-        }
         if (null !== $object->getFieldName()) {
             $data['fieldName'] = $object->getFieldName();
         }
         if (null !== $object->getFieldValue()) {
             $data['fieldValue'] = $object->getFieldValue();
+        }
+        if (null !== $object->getResources()) {
+            $data['resources'] = $object->getResources();
         }
         return $data;
     }

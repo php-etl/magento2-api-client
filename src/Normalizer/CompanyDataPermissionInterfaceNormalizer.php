@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CompanyDataPermissionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CompanyDataPermissionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CompanyDataPermissionInterface';
     }
@@ -43,14 +42,14 @@ class CompanyDataPermissionInterfaceNormalizer implements DenormalizerInterface,
         if (\array_key_exists('id', $data)) {
             $object->setId($data['id']);
         }
-        if (\array_key_exists('role_id', $data)) {
-            $object->setRoleId($data['role_id']);
+        if (\array_key_exists('permission', $data)) {
+            $object->setPermission($data['permission']);
         }
         if (\array_key_exists('resource_id', $data)) {
             $object->setResourceId($data['resource_id']);
         }
-        if (\array_key_exists('permission', $data)) {
-            $object->setPermission($data['permission']);
+        if (\array_key_exists('role_id', $data)) {
+            $object->setRoleId($data['role_id']);
         }
         return $object;
     }
@@ -63,11 +62,11 @@ class CompanyDataPermissionInterfaceNormalizer implements DenormalizerInterface,
         if (null !== $object->getId()) {
             $data['id'] = $object->getId();
         }
+        $data['permission'] = $object->getPermission();
+        $data['resource_id'] = $object->getResourceId();
         if (null !== $object->getRoleId()) {
             $data['role_id'] = $object->getRoleId();
         }
-        $data['resource_id'] = $object->getResourceId();
-        $data['permission'] = $object->getPermission();
         return $data;
     }
 }

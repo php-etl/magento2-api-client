@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class ConfigurableProductDataConfigurableItemOptionValueInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\ConfigurableProductDataConfigurableItemOptionValueInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\ConfigurableProductDataConfigurableItemOptionValueInterface';
     }
@@ -40,14 +39,14 @@ class ConfigurableProductDataConfigurableItemOptionValueInterfaceNormalizer impl
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
+        }
         if (\array_key_exists('option_id', $data)) {
             $object->setOptionId($data['option_id']);
         }
         if (\array_key_exists('option_value', $data)) {
             $object->setOptionValue($data['option_value']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
         }
         return $object;
     }
@@ -57,12 +56,12 @@ class ConfigurableProductDataConfigurableItemOptionValueInterfaceNormalizer impl
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $object->getExtensionAttributes();
+        }
         $data['option_id'] = $object->getOptionId();
         if (null !== $object->getOptionValue()) {
             $data['option_value'] = $object->getOptionValue();
-        }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $object->getExtensionAttributes();
         }
         return $data;
     }

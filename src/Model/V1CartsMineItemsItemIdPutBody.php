@@ -15,7 +15,7 @@ class V1CartsMineItemsItemIdPutBody
      *
      * @return QuoteDataCartItemInterface
      */
-    public function getCartItem(): QuoteDataCartItemInterface
+    public function getCartItem() : QuoteDataCartItemInterface
     {
         return $this->cartItem;
     }
@@ -26,7 +26,7 @@ class V1CartsMineItemsItemIdPutBody
      *
      * @return self
      */
-    public function setCartItem(QuoteDataCartItemInterface $cartItem): self
+    public function setCartItem(QuoteDataCartItemInterface $cartItem) : self
     {
         $this->cartItem = $cartItem;
         return $this;

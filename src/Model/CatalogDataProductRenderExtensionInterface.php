@@ -5,13 +5,7 @@ namespace Kiboko\Magento\V2\Model;
 class CatalogDataProductRenderExtensionInterface
 {
     /**
-     * Button interface. This interface represents all manner of product buttons: add to cart, add to compare, etc... The buttons describes by this interface should have interaction with backend
-     *
-     * @var CatalogDataProductRenderButtonInterface
-     */
-    protected $wishlistButton;
-    /**
-     *
+     * 
      *
      * @var string
      */
@@ -19,9 +13,36 @@ class CatalogDataProductRenderExtensionInterface
     /**
      * Button interface. This interface represents all manner of product buttons: add to cart, add to compare, etc... The buttons describes by this interface should have interaction with backend
      *
+     * @var CatalogDataProductRenderButtonInterface
+     */
+    protected $wishlistButton;
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getReviewHtml() : string
+    {
+        return $this->reviewHtml;
+    }
+    /**
+     * 
+     *
+     * @param string $reviewHtml
+     *
+     * @return self
+     */
+    public function setReviewHtml(string $reviewHtml) : self
+    {
+        $this->reviewHtml = $reviewHtml;
+        return $this;
+    }
+    /**
+     * Button interface. This interface represents all manner of product buttons: add to cart, add to compare, etc... The buttons describes by this interface should have interaction with backend
+     *
      * @return CatalogDataProductRenderButtonInterface
      */
-    public function getWishlistButton(): CatalogDataProductRenderButtonInterface
+    public function getWishlistButton() : CatalogDataProductRenderButtonInterface
     {
         return $this->wishlistButton;
     }
@@ -32,30 +53,9 @@ class CatalogDataProductRenderExtensionInterface
      *
      * @return self
      */
-    public function setWishlistButton(CatalogDataProductRenderButtonInterface $wishlistButton): self
+    public function setWishlistButton(CatalogDataProductRenderButtonInterface $wishlistButton) : self
     {
         $this->wishlistButton = $wishlistButton;
-        return $this;
-    }
-    /**
-     *
-     *
-     * @return string
-     */
-    public function getReviewHtml(): string
-    {
-        return $this->reviewHtml;
-    }
-    /**
-     *
-     *
-     * @param string $reviewHtml
-     *
-     * @return self
-     */
-    public function setReviewHtml(string $reviewHtml): self
-    {
-        $this->reviewHtml = $reviewHtml;
         return $this;
     }
 }

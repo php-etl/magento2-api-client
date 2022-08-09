@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataTotalInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataTotalInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataTotalInterface';
     }
@@ -67,6 +66,9 @@ class SalesDataTotalInterfaceNormalizer implements DenormalizerInterface, Normal
         if (\array_key_exists('base_shipping_tax_refunded', $data)) {
             $object->setBaseShippingTaxRefunded($data['base_shipping_tax_refunded']);
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
+        }
         if (\array_key_exists('shipping_amount', $data)) {
             $object->setShippingAmount($data['shipping_amount']);
         }
@@ -93,9 +95,6 @@ class SalesDataTotalInterfaceNormalizer implements DenormalizerInterface, Normal
         }
         if (\array_key_exists('shipping_tax_refunded', $data)) {
             $object->setShippingTaxRefunded($data['shipping_tax_refunded']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
         }
         return $object;
     }
@@ -132,6 +131,9 @@ class SalesDataTotalInterfaceNormalizer implements DenormalizerInterface, Normal
         if (null !== $object->getBaseShippingTaxRefunded()) {
             $data['base_shipping_tax_refunded'] = $object->getBaseShippingTaxRefunded();
         }
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $object->getExtensionAttributes();
+        }
         if (null !== $object->getShippingAmount()) {
             $data['shipping_amount'] = $object->getShippingAmount();
         }
@@ -158,9 +160,6 @@ class SalesDataTotalInterfaceNormalizer implements DenormalizerInterface, Normal
         }
         if (null !== $object->getShippingTaxRefunded()) {
             $data['shipping_tax_refunded'] = $object->getShippingTaxRefunded();
-        }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $object->getExtensionAttributes();
         }
         return $data;
     }

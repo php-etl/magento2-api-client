@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CompanyDataTeamInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CompanyDataTeamInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CompanyDataTeamInterface';
     }
@@ -40,11 +39,12 @@ class CompanyDataTeamInterfaceNormalizer implements DenormalizerInterface, Norma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('id', $data)) {
-            $object->setId($data['id']);
-        }
-        if (\array_key_exists('name', $data)) {
-            $object->setName($data['name']);
+        if (\array_key_exists('custom_attributes', $data)) {
+            $values = array();
+            foreach ($data['custom_attributes'] as $value) {
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\FrameworkAttributeInterface', 'json', $context);
+            }
+            $object->setCustomAttributes($values);
         }
         if (\array_key_exists('description', $data)) {
             $object->setDescription($data['description']);
@@ -52,12 +52,11 @@ class CompanyDataTeamInterfaceNormalizer implements DenormalizerInterface, Norma
         if (\array_key_exists('extension_attributes', $data)) {
             $object->setExtensionAttributes($data['extension_attributes']);
         }
-        if (\array_key_exists('custom_attributes', $data)) {
-            $values = array();
-            foreach ($data['custom_attributes'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\FrameworkAttributeInterface', 'json', $context);
-            }
-            $object->setCustomAttributes($values);
+        if (\array_key_exists('id', $data)) {
+            $object->setId($data['id']);
+        }
+        if (\array_key_exists('name', $data)) {
+            $object->setName($data['name']);
         }
         return $object;
     }
@@ -67,11 +66,12 @@ class CompanyDataTeamInterfaceNormalizer implements DenormalizerInterface, Norma
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        if (null !== $object->getId()) {
-            $data['id'] = $object->getId();
-        }
-        if (null !== $object->getName()) {
-            $data['name'] = $object->getName();
+        if (null !== $object->getCustomAttributes()) {
+            $values = array();
+            foreach ($object->getCustomAttributes() as $value) {
+                $values[] = $this->normalizer->normalize($value, 'json', $context);
+            }
+            $data['custom_attributes'] = $values;
         }
         if (null !== $object->getDescription()) {
             $data['description'] = $object->getDescription();
@@ -79,12 +79,11 @@ class CompanyDataTeamInterfaceNormalizer implements DenormalizerInterface, Norma
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
-        if (null !== $object->getCustomAttributes()) {
-            $values = array();
-            foreach ($object->getCustomAttributes() as $value) {
-                $values[] = $this->normalizer->normalize($value, 'json', $context);
-            }
-            $data['custom_attributes'] = $values;
+        if (null !== $object->getId()) {
+            $data['id'] = $object->getId();
+        }
+        if (null !== $object->getName()) {
+            $data['name'] = $object->getName();
         }
         return $data;
     }

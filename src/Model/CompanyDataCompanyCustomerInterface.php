@@ -5,17 +5,23 @@ namespace Kiboko\Magento\V2\Model;
 class CompanyDataCompanyCustomerInterface
 {
     /**
+     * Company ID.
+     *
+     * @var int
+     */
+    protected $companyId;
+    /**
      * Customer ID.
      *
      * @var int
      */
     protected $customerId;
     /**
-     * Company ID.
+     * ExtensionInterface class for @see \Magento\Company\Api\Data\CompanyCustomerInterface
      *
-     * @var int
+     * @var mixed
      */
-    protected $companyId;
+    protected $extensionAttributes;
     /**
      * Get job title.
      *
@@ -35,38 +41,11 @@ class CompanyDataCompanyCustomerInterface
      */
     protected $telephone;
     /**
-     * ExtensionInterface class for @see \Magento\Company\Api\Data\CompanyCustomerInterface
-     *
-     * @var mixed
-     */
-    protected $extensionAttributes;
-    /**
-     * Customer ID.
-     *
-     * @return int
-     */
-    public function getCustomerId(): int
-    {
-        return $this->customerId;
-    }
-    /**
-     * Customer ID.
-     *
-     * @param int $customerId
-     *
-     * @return self
-     */
-    public function setCustomerId(int $customerId): self
-    {
-        $this->customerId = $customerId;
-        return $this;
-    }
-    /**
      * Company ID.
      *
      * @return int
      */
-    public function getCompanyId(): int
+    public function getCompanyId() : int
     {
         return $this->companyId;
     }
@@ -77,72 +56,30 @@ class CompanyDataCompanyCustomerInterface
      *
      * @return self
      */
-    public function setCompanyId(int $companyId): self
+    public function setCompanyId(int $companyId) : self
     {
         $this->companyId = $companyId;
         return $this;
     }
     /**
-     * Get job title.
-     *
-     * @return string
-     */
-    public function getJobTitle(): string
-    {
-        return $this->jobTitle;
-    }
-    /**
-     * Get job title.
-     *
-     * @param string $jobTitle
-     *
-     * @return self
-     */
-    public function setJobTitle(string $jobTitle): self
-    {
-        $this->jobTitle = $jobTitle;
-        return $this;
-    }
-    /**
-     * Customer status.
+     * Customer ID.
      *
      * @return int
      */
-    public function getStatus(): int
+    public function getCustomerId() : int
     {
-        return $this->status;
+        return $this->customerId;
     }
     /**
-     * Customer status.
+     * Customer ID.
      *
-     * @param int $status
+     * @param int $customerId
      *
      * @return self
      */
-    public function setStatus(int $status): self
+    public function setCustomerId(int $customerId) : self
     {
-        $this->status = $status;
-        return $this;
-    }
-    /**
-     * Get telephone.
-     *
-     * @return string
-     */
-    public function getTelephone(): string
-    {
-        return $this->telephone;
-    }
-    /**
-     * Get telephone.
-     *
-     * @param string $telephone
-     *
-     * @return self
-     */
-    public function setTelephone(string $telephone): self
-    {
-        $this->telephone = $telephone;
+        $this->customerId = $customerId;
         return $this;
     }
     /**
@@ -161,9 +98,72 @@ class CompanyDataCompanyCustomerInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Get job title.
+     *
+     * @return string
+     */
+    public function getJobTitle() : string
+    {
+        return $this->jobTitle;
+    }
+    /**
+     * Get job title.
+     *
+     * @param string $jobTitle
+     *
+     * @return self
+     */
+    public function setJobTitle(string $jobTitle) : self
+    {
+        $this->jobTitle = $jobTitle;
+        return $this;
+    }
+    /**
+     * Customer status.
+     *
+     * @return int
+     */
+    public function getStatus() : int
+    {
+        return $this->status;
+    }
+    /**
+     * Customer status.
+     *
+     * @param int $status
+     *
+     * @return self
+     */
+    public function setStatus(int $status) : self
+    {
+        $this->status = $status;
+        return $this;
+    }
+    /**
+     * Get telephone.
+     *
+     * @return string
+     */
+    public function getTelephone() : string
+    {
+        return $this->telephone;
+    }
+    /**
+     * Get telephone.
+     *
+     * @param string $telephone
+     *
+     * @return self
+     */
+    public function setTelephone(string $telephone) : self
+    {
+        $this->telephone = $telephone;
         return $this;
     }
 }

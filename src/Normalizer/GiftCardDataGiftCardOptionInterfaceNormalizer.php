@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class GiftCardDataGiftCardOptionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\GiftCardDataGiftCardOptionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\GiftCardDataGiftCardOptionInterface';
     }
@@ -40,14 +39,20 @@ class GiftCardDataGiftCardOptionInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('giftcard_amount', $data)) {
-            $object->setGiftcardAmount($data['giftcard_amount']);
-        }
         if (\array_key_exists('custom_giftcard_amount', $data)) {
             $object->setCustomGiftcardAmount($data['custom_giftcard_amount']);
         }
-        if (\array_key_exists('giftcard_sender_name', $data)) {
-            $object->setGiftcardSenderName($data['giftcard_sender_name']);
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
+        }
+        if (\array_key_exists('giftcard_amount', $data)) {
+            $object->setGiftcardAmount($data['giftcard_amount']);
+        }
+        if (\array_key_exists('giftcard_message', $data)) {
+            $object->setGiftcardMessage($data['giftcard_message']);
+        }
+        if (\array_key_exists('giftcard_recipient_email', $data)) {
+            $object->setGiftcardRecipientEmail($data['giftcard_recipient_email']);
         }
         if (\array_key_exists('giftcard_recipient_name', $data)) {
             $object->setGiftcardRecipientName($data['giftcard_recipient_name']);
@@ -55,14 +60,8 @@ class GiftCardDataGiftCardOptionInterfaceNormalizer implements DenormalizerInter
         if (\array_key_exists('giftcard_sender_email', $data)) {
             $object->setGiftcardSenderEmail($data['giftcard_sender_email']);
         }
-        if (\array_key_exists('giftcard_recipient_email', $data)) {
-            $object->setGiftcardRecipientEmail($data['giftcard_recipient_email']);
-        }
-        if (\array_key_exists('giftcard_message', $data)) {
-            $object->setGiftcardMessage($data['giftcard_message']);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
+        if (\array_key_exists('giftcard_sender_name', $data)) {
+            $object->setGiftcardSenderName($data['giftcard_sender_name']);
         }
         return $object;
     }
@@ -72,20 +71,20 @@ class GiftCardDataGiftCardOptionInterfaceNormalizer implements DenormalizerInter
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['giftcard_amount'] = $object->getGiftcardAmount();
         if (null !== $object->getCustomGiftcardAmount()) {
             $data['custom_giftcard_amount'] = $object->getCustomGiftcardAmount();
-        }
-        $data['giftcard_sender_name'] = $object->getGiftcardSenderName();
-        $data['giftcard_recipient_name'] = $object->getGiftcardRecipientName();
-        $data['giftcard_sender_email'] = $object->getGiftcardSenderEmail();
-        $data['giftcard_recipient_email'] = $object->getGiftcardRecipientEmail();
-        if (null !== $object->getGiftcardMessage()) {
-            $data['giftcard_message'] = $object->getGiftcardMessage();
         }
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
+        $data['giftcard_amount'] = $object->getGiftcardAmount();
+        if (null !== $object->getGiftcardMessage()) {
+            $data['giftcard_message'] = $object->getGiftcardMessage();
+        }
+        $data['giftcard_recipient_email'] = $object->getGiftcardRecipientEmail();
+        $data['giftcard_recipient_name'] = $object->getGiftcardRecipientName();
+        $data['giftcard_sender_email'] = $object->getGiftcardSenderEmail();
+        $data['giftcard_sender_name'] = $object->getGiftcardSenderName();
         return $data;
     }
 }

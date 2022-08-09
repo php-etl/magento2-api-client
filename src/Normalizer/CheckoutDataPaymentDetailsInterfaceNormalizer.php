@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CheckoutDataPaymentDetailsInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CheckoutDataPaymentDetailsInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CheckoutDataPaymentDetailsInterface';
     }
@@ -40,6 +39,9 @@ class CheckoutDataPaymentDetailsInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
+        }
         if (\array_key_exists('payment_methods', $data)) {
             $values = array();
             foreach ($data['payment_methods'] as $value) {
@@ -50,9 +52,6 @@ class CheckoutDataPaymentDetailsInterfaceNormalizer implements DenormalizerInter
         if (\array_key_exists('totals', $data)) {
             $object->setTotals($this->denormalizer->denormalize($data['totals'], 'Kiboko\\Magento\\V2\\Model\\QuoteDataTotalsInterface', 'json', $context));
         }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
-        }
         return $object;
     }
     /**
@@ -61,15 +60,15 @@ class CheckoutDataPaymentDetailsInterfaceNormalizer implements DenormalizerInter
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $object->getExtensionAttributes();
+        }
         $values = array();
         foreach ($object->getPaymentMethods() as $value) {
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
         $data['payment_methods'] = $values;
         $data['totals'] = $this->normalizer->normalize($object->getTotals(), 'json', $context);
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $object->getExtensionAttributes();
-        }
         return $data;
     }
 }

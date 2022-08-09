@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class TemandoShippingDataCollectionPointSearchRequestInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\TemandoShippingDataCollectionPointSearchRequestInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\TemandoShippingDataCollectionPointSearchRequestInterface';
     }
@@ -40,17 +39,17 @@ class TemandoShippingDataCollectionPointSearchRequestInterfaceNormalizer impleme
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('shipping_address_id', $data)) {
-            $object->setShippingAddressId($data['shipping_address_id']);
-        }
         if (\array_key_exists('country_id', $data)) {
             $object->setCountryId($data['country_id']);
+        }
+        if (\array_key_exists('pending', $data)) {
+            $object->setPending($data['pending']);
         }
         if (\array_key_exists('postcode', $data)) {
             $object->setPostcode($data['postcode']);
         }
-        if (\array_key_exists('pending', $data)) {
-            $object->setPending($data['pending']);
+        if (\array_key_exists('shipping_address_id', $data)) {
+            $object->setShippingAddressId($data['shipping_address_id']);
         }
         return $object;
     }
@@ -60,10 +59,10 @@ class TemandoShippingDataCollectionPointSearchRequestInterfaceNormalizer impleme
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['shipping_address_id'] = $object->getShippingAddressId();
         $data['country_id'] = $object->getCountryId();
-        $data['postcode'] = $object->getPostcode();
         $data['pending'] = $object->getPending();
+        $data['postcode'] = $object->getPostcode();
+        $data['shipping_address_id'] = $object->getShippingAddressId();
         return $data;
     }
 }

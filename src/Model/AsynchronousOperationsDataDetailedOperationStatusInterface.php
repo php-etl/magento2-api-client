@@ -5,11 +5,17 @@ namespace Kiboko\Magento\V2\Model;
 class AsynchronousOperationsDataDetailedOperationStatusInterface
 {
     /**
-     * Serialized Data
+     * Bulk uuid
      *
      * @var string
      */
-    protected $resultSerializedData;
+    protected $bulkUuid;
+    /**
+     * Error code
+     *
+     * @var int
+     */
+    protected $errorCode;
     /**
      * ExtensionInterface class for @see \Magento\AsynchronousOperations\Api\Data\OperationInterface
      *
@@ -23,17 +29,17 @@ class AsynchronousOperationsDataDetailedOperationStatusInterface
      */
     protected $id;
     /**
-     * Bulk uuid
+     * Result message
      *
      * @var string
      */
-    protected $bulkUuid;
+    protected $resultMessage;
     /**
-     * Queue Topic
+     * Serialized Data
      *
      * @var string
      */
-    protected $topicName;
+    protected $resultSerializedData;
     /**
      * Data
      *
@@ -47,36 +53,51 @@ class AsynchronousOperationsDataDetailedOperationStatusInterface
      */
     protected $status;
     /**
-     * Result message
+     * Queue Topic
      *
      * @var string
      */
-    protected $resultMessage;
+    protected $topicName;
     /**
-     * Error code
-     *
-     * @var int
-     */
-    protected $errorCode;
-    /**
-     * Serialized Data
+     * Bulk uuid
      *
      * @return string
      */
-    public function getResultSerializedData(): string
+    public function getBulkUuid() : string
     {
-        return $this->resultSerializedData;
+        return $this->bulkUuid;
     }
     /**
-     * Serialized Data
+     * Bulk uuid
      *
-     * @param string $resultSerializedData
+     * @param string $bulkUuid
      *
      * @return self
      */
-    public function setResultSerializedData(string $resultSerializedData): self
+    public function setBulkUuid(string $bulkUuid) : self
     {
-        $this->resultSerializedData = $resultSerializedData;
+        $this->bulkUuid = $bulkUuid;
+        return $this;
+    }
+    /**
+     * Error code
+     *
+     * @return int
+     */
+    public function getErrorCode() : int
+    {
+        return $this->errorCode;
+    }
+    /**
+     * Error code
+     *
+     * @param int $errorCode
+     *
+     * @return self
+     */
+    public function setErrorCode(int $errorCode) : self
+    {
+        $this->errorCode = $errorCode;
         return $this;
     }
     /**
@@ -95,7 +116,7 @@ class AsynchronousOperationsDataDetailedOperationStatusInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -105,7 +126,7 @@ class AsynchronousOperationsDataDetailedOperationStatusInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -116,93 +137,9 @@ class AsynchronousOperationsDataDetailedOperationStatusInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
-        return $this;
-    }
-    /**
-     * Bulk uuid
-     *
-     * @return string
-     */
-    public function getBulkUuid(): string
-    {
-        return $this->bulkUuid;
-    }
-    /**
-     * Bulk uuid
-     *
-     * @param string $bulkUuid
-     *
-     * @return self
-     */
-    public function setBulkUuid(string $bulkUuid): self
-    {
-        $this->bulkUuid = $bulkUuid;
-        return $this;
-    }
-    /**
-     * Queue Topic
-     *
-     * @return string
-     */
-    public function getTopicName(): string
-    {
-        return $this->topicName;
-    }
-    /**
-     * Queue Topic
-     *
-     * @param string $topicName
-     *
-     * @return self
-     */
-    public function setTopicName(string $topicName): self
-    {
-        $this->topicName = $topicName;
-        return $this;
-    }
-    /**
-     * Data
-     *
-     * @return string
-     */
-    public function getSerializedData(): string
-    {
-        return $this->serializedData;
-    }
-    /**
-     * Data
-     *
-     * @param string $serializedData
-     *
-     * @return self
-     */
-    public function setSerializedData(string $serializedData): self
-    {
-        $this->serializedData = $serializedData;
-        return $this;
-    }
-    /**
-     * Operation status
-     *
-     * @return int
-     */
-    public function getStatus(): int
-    {
-        return $this->status;
-    }
-    /**
-     * Operation status
-     *
-     * @param int $status
-     *
-     * @return self
-     */
-    public function setStatus(int $status): self
-    {
-        $this->status = $status;
         return $this;
     }
     /**
@@ -210,7 +147,7 @@ class AsynchronousOperationsDataDetailedOperationStatusInterface
      *
      * @return string
      */
-    public function getResultMessage(): string
+    public function getResultMessage() : string
     {
         return $this->resultMessage;
     }
@@ -221,30 +158,93 @@ class AsynchronousOperationsDataDetailedOperationStatusInterface
      *
      * @return self
      */
-    public function setResultMessage(string $resultMessage): self
+    public function setResultMessage(string $resultMessage) : self
     {
         $this->resultMessage = $resultMessage;
         return $this;
     }
     /**
-     * Error code
+     * Serialized Data
      *
-     * @return int
+     * @return string
      */
-    public function getErrorCode(): int
+    public function getResultSerializedData() : string
     {
-        return $this->errorCode;
+        return $this->resultSerializedData;
     }
     /**
-     * Error code
+     * Serialized Data
      *
-     * @param int $errorCode
+     * @param string $resultSerializedData
      *
      * @return self
      */
-    public function setErrorCode(int $errorCode): self
+    public function setResultSerializedData(string $resultSerializedData) : self
     {
-        $this->errorCode = $errorCode;
+        $this->resultSerializedData = $resultSerializedData;
+        return $this;
+    }
+    /**
+     * Data
+     *
+     * @return string
+     */
+    public function getSerializedData() : string
+    {
+        return $this->serializedData;
+    }
+    /**
+     * Data
+     *
+     * @param string $serializedData
+     *
+     * @return self
+     */
+    public function setSerializedData(string $serializedData) : self
+    {
+        $this->serializedData = $serializedData;
+        return $this;
+    }
+    /**
+     * Operation status
+     *
+     * @return int
+     */
+    public function getStatus() : int
+    {
+        return $this->status;
+    }
+    /**
+     * Operation status
+     *
+     * @param int $status
+     *
+     * @return self
+     */
+    public function setStatus(int $status) : self
+    {
+        $this->status = $status;
+        return $this;
+    }
+    /**
+     * Queue Topic
+     *
+     * @return string
+     */
+    public function getTopicName() : string
+    {
+        return $this->topicName;
+    }
+    /**
+     * Queue Topic
+     *
+     * @param string $topicName
+     *
+     * @return self
+     */
+    public function setTopicName(string $topicName) : self
+    {
+        $this->topicName = $topicName;
         return $this;
     }
 }

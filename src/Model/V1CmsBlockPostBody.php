@@ -15,7 +15,7 @@ class V1CmsBlockPostBody
      *
      * @return CmsDataBlockInterface
      */
-    public function getBlock(): CmsDataBlockInterface
+    public function getBlock() : CmsDataBlockInterface
     {
         return $this->block;
     }
@@ -26,7 +26,7 @@ class V1CmsBlockPostBody
      *
      * @return self
      */
-    public function setBlock(CmsDataBlockInterface $block): self
+    public function setBlock(CmsDataBlockInterface $block) : self
     {
         $this->block = $block;
         return $this;

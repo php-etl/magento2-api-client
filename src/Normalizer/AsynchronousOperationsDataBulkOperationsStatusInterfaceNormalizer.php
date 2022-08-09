@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class AsynchronousOperationsDataBulkOperationsStatusInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\AsynchronousOperationsDataBulkOperationsStatusInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\AsynchronousOperationsDataBulkOperationsStatusInterface';
     }
@@ -40,6 +39,18 @@ class AsynchronousOperationsDataBulkOperationsStatusInterfaceNormalizer implemen
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
+        if (\array_key_exists('bulk_id', $data)) {
+            $object->setBulkId($data['bulk_id']);
+        }
+        if (\array_key_exists('description', $data)) {
+            $object->setDescription($data['description']);
+        }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
+        }
+        if (\array_key_exists('operation_count', $data)) {
+            $object->setOperationCount($data['operation_count']);
+        }
         if (\array_key_exists('operations_list', $data)) {
             $values = array();
             foreach ($data['operations_list'] as $value) {
@@ -47,23 +58,11 @@ class AsynchronousOperationsDataBulkOperationsStatusInterfaceNormalizer implemen
             }
             $object->setOperationsList($values);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
-        }
-        if (\array_key_exists('bulk_id', $data)) {
-            $object->setBulkId($data['bulk_id']);
-        }
-        if (\array_key_exists('description', $data)) {
-            $object->setDescription($data['description']);
-        }
         if (\array_key_exists('start_time', $data)) {
             $object->setStartTime($data['start_time']);
         }
         if (\array_key_exists('user_id', $data)) {
             $object->setUserId($data['user_id']);
-        }
-        if (\array_key_exists('operation_count', $data)) {
-            $object->setOperationCount($data['operation_count']);
         }
         return $object;
     }
@@ -73,19 +72,19 @@ class AsynchronousOperationsDataBulkOperationsStatusInterfaceNormalizer implemen
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
+        $data['bulk_id'] = $object->getBulkId();
+        $data['description'] = $object->getDescription();
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $object->getExtensionAttributes();
+        }
+        $data['operation_count'] = $object->getOperationCount();
         $values = array();
         foreach ($object->getOperationsList() as $value) {
             $values[] = $this->normalizer->normalize($value, 'json', $context);
         }
         $data['operations_list'] = $values;
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $object->getExtensionAttributes();
-        }
-        $data['bulk_id'] = $object->getBulkId();
-        $data['description'] = $object->getDescription();
         $data['start_time'] = $object->getStartTime();
         $data['user_id'] = $object->getUserId();
-        $data['operation_count'] = $object->getOperationCount();
         return $data;
     }
 }

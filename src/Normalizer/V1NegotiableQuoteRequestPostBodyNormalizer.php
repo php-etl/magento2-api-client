@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1NegotiableQuoteRequestPostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\V1NegotiableQuoteRequestPostBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\V1NegotiableQuoteRequestPostBody';
     }
@@ -40,12 +39,6 @@ class V1NegotiableQuoteRequestPostBodyNormalizer implements DenormalizerInterfac
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('quoteId', $data)) {
-            $object->setQuoteId($data['quoteId']);
-        }
-        if (\array_key_exists('quoteName', $data)) {
-            $object->setQuoteName($data['quoteName']);
-        }
         if (\array_key_exists('comment', $data)) {
             $object->setComment($data['comment']);
         }
@@ -56,6 +49,12 @@ class V1NegotiableQuoteRequestPostBodyNormalizer implements DenormalizerInterfac
             }
             $object->setFiles($values);
         }
+        if (\array_key_exists('quoteId', $data)) {
+            $object->setQuoteId($data['quoteId']);
+        }
+        if (\array_key_exists('quoteName', $data)) {
+            $object->setQuoteName($data['quoteName']);
+        }
         return $object;
     }
     /**
@@ -64,8 +63,6 @@ class V1NegotiableQuoteRequestPostBodyNormalizer implements DenormalizerInterfac
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['quoteId'] = $object->getQuoteId();
-        $data['quoteName'] = $object->getQuoteName();
         if (null !== $object->getComment()) {
             $data['comment'] = $object->getComment();
         }
@@ -76,6 +73,8 @@ class V1NegotiableQuoteRequestPostBodyNormalizer implements DenormalizerInterfac
             }
             $data['files'] = $values;
         }
+        $data['quoteId'] = $object->getQuoteId();
+        $data['quoteName'] = $object->getQuoteName();
         return $data;
     }
 }

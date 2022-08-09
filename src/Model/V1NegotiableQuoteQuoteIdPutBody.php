@@ -15,7 +15,7 @@ class V1NegotiableQuoteQuoteIdPutBody
      *
      * @return QuoteDataCartInterface
      */
-    public function getQuote(): QuoteDataCartInterface
+    public function getQuote() : QuoteDataCartInterface
     {
         return $this->quote;
     }
@@ -26,7 +26,7 @@ class V1NegotiableQuoteQuoteIdPutBody
      *
      * @return self
      */
-    public function setQuote(QuoteDataCartInterface $quote): self
+    public function setQuote(QuoteDataCartInterface $quote) : self
     {
         $this->quote = $quote;
         return $this;

@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataCostInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CatalogDataCostInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CatalogDataCostInterface';
     }
@@ -43,14 +42,14 @@ class CatalogDataCostInterfaceNormalizer implements DenormalizerInterface, Norma
         if (\array_key_exists('cost', $data)) {
             $object->setCost($data['cost']);
         }
-        if (\array_key_exists('store_id', $data)) {
-            $object->setStoreId($data['store_id']);
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($data['extension_attributes']);
         }
         if (\array_key_exists('sku', $data)) {
             $object->setSku($data['sku']);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($data['extension_attributes']);
+        if (\array_key_exists('store_id', $data)) {
+            $object->setStoreId($data['store_id']);
         }
         return $object;
     }
@@ -61,11 +60,11 @@ class CatalogDataCostInterfaceNormalizer implements DenormalizerInterface, Norma
     {
         $data = array();
         $data['cost'] = $object->getCost();
-        $data['store_id'] = $object->getStoreId();
-        $data['sku'] = $object->getSku();
         if (null !== $object->getExtensionAttributes()) {
             $data['extension_attributes'] = $object->getExtensionAttributes();
         }
+        $data['sku'] = $object->getSku();
+        $data['store_id'] = $object->getStoreId();
         return $data;
     }
 }

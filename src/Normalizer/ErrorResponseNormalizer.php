@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class ErrorResponseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\ErrorResponse';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\ErrorResponse';
     }
@@ -40,8 +39,8 @@ class ErrorResponseNormalizer implements DenormalizerInterface, NormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('message', $data)) {
-            $object->setMessage($data['message']);
+        if (\array_key_exists('code', $data)) {
+            $object->setCode($data['code']);
         }
         if (\array_key_exists('errors', $data)) {
             $values = array();
@@ -50,8 +49,8 @@ class ErrorResponseNormalizer implements DenormalizerInterface, NormalizerInterf
             }
             $object->setErrors($values);
         }
-        if (\array_key_exists('code', $data)) {
-            $object->setCode($data['code']);
+        if (\array_key_exists('message', $data)) {
+            $object->setMessage($data['message']);
         }
         if (\array_key_exists('parameters', $data)) {
             $values_1 = array();
@@ -71,7 +70,9 @@ class ErrorResponseNormalizer implements DenormalizerInterface, NormalizerInterf
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['message'] = $object->getMessage();
+        if (null !== $object->getCode()) {
+            $data['code'] = $object->getCode();
+        }
         if (null !== $object->getErrors()) {
             $values = array();
             foreach ($object->getErrors() as $value) {
@@ -79,9 +80,7 @@ class ErrorResponseNormalizer implements DenormalizerInterface, NormalizerInterf
             }
             $data['errors'] = $values;
         }
-        if (null !== $object->getCode()) {
-            $data['code'] = $object->getCode();
-        }
+        $data['message'] = $object->getMessage();
         if (null !== $object->getParameters()) {
             $values_1 = array();
             foreach ($object->getParameters() as $value_1) {

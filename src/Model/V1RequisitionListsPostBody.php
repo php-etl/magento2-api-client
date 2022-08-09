@@ -15,7 +15,7 @@ class V1RequisitionListsPostBody
      *
      * @return RequisitionListDataRequisitionListInterface
      */
-    public function getRequisitionList(): RequisitionListDataRequisitionListInterface
+    public function getRequisitionList() : RequisitionListDataRequisitionListInterface
     {
         return $this->requisitionList;
     }
@@ -26,7 +26,7 @@ class V1RequisitionListsPostBody
      *
      * @return self
      */
-    public function setRequisitionList(RequisitionListDataRequisitionListInterface $requisitionList): self
+    public function setRequisitionList(RequisitionListDataRequisitionListInterface $requisitionList) : self
     {
         $this->requisitionList = $requisitionList;
         return $this;

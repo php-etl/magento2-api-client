@@ -11,23 +11,23 @@ class NegotiableQuoteDataCompanyQuoteConfigInterface
      */
     protected $companyId;
     /**
-     * Quote enabled for company
-     *
-     * @var bool
-     */
-    protected $isQuoteEnabled;
-    /**
      * ExtensionInterface class for @see \Magento\NegotiableQuote\Api\Data\CompanyQuoteConfigInterface
      *
      * @var mixed
      */
     protected $extensionAttributes;
     /**
+     * Quote enabled for company
+     *
+     * @var bool
+     */
+    protected $isQuoteEnabled;
+    /**
      * Company id
      *
      * @return string
      */
-    public function getCompanyId(): string
+    public function getCompanyId() : string
     {
         return $this->companyId;
     }
@@ -38,30 +38,9 @@ class NegotiableQuoteDataCompanyQuoteConfigInterface
      *
      * @return self
      */
-    public function setCompanyId(string $companyId): self
+    public function setCompanyId(string $companyId) : self
     {
         $this->companyId = $companyId;
-        return $this;
-    }
-    /**
-     * Quote enabled for company
-     *
-     * @return bool
-     */
-    public function getIsQuoteEnabled(): bool
-    {
-        return $this->isQuoteEnabled;
-    }
-    /**
-     * Quote enabled for company
-     *
-     * @param bool $isQuoteEnabled
-     *
-     * @return self
-     */
-    public function setIsQuoteEnabled(bool $isQuoteEnabled): self
-    {
-        $this->isQuoteEnabled = $isQuoteEnabled;
         return $this;
     }
     /**
@@ -80,9 +59,30 @@ class NegotiableQuoteDataCompanyQuoteConfigInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Quote enabled for company
+     *
+     * @return bool
+     */
+    public function getIsQuoteEnabled() : bool
+    {
+        return $this->isQuoteEnabled;
+    }
+    /**
+     * Quote enabled for company
+     *
+     * @param bool $isQuoteEnabled
+     *
+     * @return self
+     */
+    public function setIsQuoteEnabled(bool $isQuoteEnabled) : self
+    {
+        $this->isQuoteEnabled = $isQuoteEnabled;
         return $this;
     }
 }

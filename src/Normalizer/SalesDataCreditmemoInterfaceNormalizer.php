@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataCreditmemoInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoInterface';
     }
@@ -64,11 +63,11 @@ class SalesDataCreditmemoInterfaceNormalizer implements DenormalizerInterface, N
         if (\array_key_exists('base_discount_amount', $data)) {
             $object->setBaseDiscountAmount($data['base_discount_amount']);
         }
-        if (\array_key_exists('base_grand_total', $data)) {
-            $object->setBaseGrandTotal($data['base_grand_total']);
-        }
         if (\array_key_exists('base_discount_tax_compensation_amount', $data)) {
             $object->setBaseDiscountTaxCompensationAmount($data['base_discount_tax_compensation_amount']);
+        }
+        if (\array_key_exists('base_grand_total', $data)) {
+            $object->setBaseGrandTotal($data['base_grand_total']);
         }
         if (\array_key_exists('base_shipping_amount', $data)) {
             $object->setBaseShippingAmount($data['base_shipping_amount']);
@@ -100,6 +99,13 @@ class SalesDataCreditmemoInterfaceNormalizer implements DenormalizerInterface, N
         if (\array_key_exists('billing_address_id', $data)) {
             $object->setBillingAddressId($data['billing_address_id']);
         }
+        if (\array_key_exists('comments', $data)) {
+            $values = array();
+            foreach ($data['comments'] as $value) {
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoCommentInterface', 'json', $context);
+            }
+            $object->setComments($values);
+        }
         if (\array_key_exists('created_at', $data)) {
             $object->setCreatedAt($data['created_at']);
         }
@@ -112,11 +118,17 @@ class SalesDataCreditmemoInterfaceNormalizer implements DenormalizerInterface, N
         if (\array_key_exists('discount_description', $data)) {
             $object->setDiscountDescription($data['discount_description']);
         }
+        if (\array_key_exists('discount_tax_compensation_amount', $data)) {
+            $object->setDiscountTaxCompensationAmount($data['discount_tax_compensation_amount']);
+        }
         if (\array_key_exists('email_sent', $data)) {
             $object->setEmailSent($data['email_sent']);
         }
         if (\array_key_exists('entity_id', $data)) {
             $object->setEntityId($data['entity_id']);
+        }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('global_currency_code', $data)) {
             $object->setGlobalCurrencyCode($data['global_currency_code']);
@@ -124,14 +136,18 @@ class SalesDataCreditmemoInterfaceNormalizer implements DenormalizerInterface, N
         if (\array_key_exists('grand_total', $data)) {
             $object->setGrandTotal($data['grand_total']);
         }
-        if (\array_key_exists('discount_tax_compensation_amount', $data)) {
-            $object->setDiscountTaxCompensationAmount($data['discount_tax_compensation_amount']);
-        }
         if (\array_key_exists('increment_id', $data)) {
             $object->setIncrementId($data['increment_id']);
         }
         if (\array_key_exists('invoice_id', $data)) {
             $object->setInvoiceId($data['invoice_id']);
+        }
+        if (\array_key_exists('items', $data)) {
+            $values_1 = array();
+            foreach ($data['items'] as $value_1) {
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoItemInterface', 'json', $context);
+            }
+            $object->setItems($values_1);
         }
         if (\array_key_exists('order_currency_code', $data)) {
             $object->setOrderCurrencyCode($data['order_currency_code']);
@@ -184,23 +200,6 @@ class SalesDataCreditmemoInterfaceNormalizer implements DenormalizerInterface, N
         if (\array_key_exists('updated_at', $data)) {
             $object->setUpdatedAt($data['updated_at']);
         }
-        if (\array_key_exists('items', $data)) {
-            $values = array();
-            foreach ($data['items'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoItemInterface', 'json', $context);
-            }
-            $object->setItems($values);
-        }
-        if (\array_key_exists('comments', $data)) {
-            $values_1 = array();
-            foreach ($data['comments'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoCommentInterface', 'json', $context);
-            }
-            $object->setComments($values_1);
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataCreditmemoExtensionInterface', 'json', $context));
-        }
         return $object;
     }
     /**
@@ -233,11 +232,11 @@ class SalesDataCreditmemoInterfaceNormalizer implements DenormalizerInterface, N
         if (null !== $object->getBaseDiscountAmount()) {
             $data['base_discount_amount'] = $object->getBaseDiscountAmount();
         }
-        if (null !== $object->getBaseGrandTotal()) {
-            $data['base_grand_total'] = $object->getBaseGrandTotal();
-        }
         if (null !== $object->getBaseDiscountTaxCompensationAmount()) {
             $data['base_discount_tax_compensation_amount'] = $object->getBaseDiscountTaxCompensationAmount();
+        }
+        if (null !== $object->getBaseGrandTotal()) {
+            $data['base_grand_total'] = $object->getBaseGrandTotal();
         }
         if (null !== $object->getBaseShippingAmount()) {
             $data['base_shipping_amount'] = $object->getBaseShippingAmount();
@@ -269,6 +268,13 @@ class SalesDataCreditmemoInterfaceNormalizer implements DenormalizerInterface, N
         if (null !== $object->getBillingAddressId()) {
             $data['billing_address_id'] = $object->getBillingAddressId();
         }
+        if (null !== $object->getComments()) {
+            $values = array();
+            foreach ($object->getComments() as $value) {
+                $values[] = $this->normalizer->normalize($value, 'json', $context);
+            }
+            $data['comments'] = $values;
+        }
         if (null !== $object->getCreatedAt()) {
             $data['created_at'] = $object->getCreatedAt();
         }
@@ -281,11 +287,17 @@ class SalesDataCreditmemoInterfaceNormalizer implements DenormalizerInterface, N
         if (null !== $object->getDiscountDescription()) {
             $data['discount_description'] = $object->getDiscountDescription();
         }
+        if (null !== $object->getDiscountTaxCompensationAmount()) {
+            $data['discount_tax_compensation_amount'] = $object->getDiscountTaxCompensationAmount();
+        }
         if (null !== $object->getEmailSent()) {
             $data['email_sent'] = $object->getEmailSent();
         }
         if (null !== $object->getEntityId()) {
             $data['entity_id'] = $object->getEntityId();
+        }
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
         if (null !== $object->getGlobalCurrencyCode()) {
             $data['global_currency_code'] = $object->getGlobalCurrencyCode();
@@ -293,15 +305,17 @@ class SalesDataCreditmemoInterfaceNormalizer implements DenormalizerInterface, N
         if (null !== $object->getGrandTotal()) {
             $data['grand_total'] = $object->getGrandTotal();
         }
-        if (null !== $object->getDiscountTaxCompensationAmount()) {
-            $data['discount_tax_compensation_amount'] = $object->getDiscountTaxCompensationAmount();
-        }
         if (null !== $object->getIncrementId()) {
             $data['increment_id'] = $object->getIncrementId();
         }
         if (null !== $object->getInvoiceId()) {
             $data['invoice_id'] = $object->getInvoiceId();
         }
+        $values_1 = array();
+        foreach ($object->getItems() as $value_1) {
+            $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
+        }
+        $data['items'] = $values_1;
         if (null !== $object->getOrderCurrencyCode()) {
             $data['order_currency_code'] = $object->getOrderCurrencyCode();
         }
@@ -350,21 +364,6 @@ class SalesDataCreditmemoInterfaceNormalizer implements DenormalizerInterface, N
         }
         if (null !== $object->getUpdatedAt()) {
             $data['updated_at'] = $object->getUpdatedAt();
-        }
-        $values = array();
-        foreach ($object->getItems() as $value) {
-            $values[] = $this->normalizer->normalize($value, 'json', $context);
-        }
-        $data['items'] = $values;
-        if (null !== $object->getComments()) {
-            $values_1 = array();
-            foreach ($object->getComments() as $value_1) {
-                $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
-            }
-            $data['comments'] = $values_1;
-        }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
         return $data;
     }

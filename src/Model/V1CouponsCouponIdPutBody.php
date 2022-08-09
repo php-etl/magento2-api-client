@@ -15,7 +15,7 @@ class V1CouponsCouponIdPutBody
      *
      * @return SalesRuleDataCouponInterface
      */
-    public function getCoupon(): SalesRuleDataCouponInterface
+    public function getCoupon() : SalesRuleDataCouponInterface
     {
         return $this->coupon;
     }
@@ -26,7 +26,7 @@ class V1CouponsCouponIdPutBody
      *
      * @return self
      */
-    public function setCoupon(SalesRuleDataCouponInterface $coupon): self
+    public function setCoupon(SalesRuleDataCouponInterface $coupon) : self
     {
         $this->coupon = $coupon;
         return $this;

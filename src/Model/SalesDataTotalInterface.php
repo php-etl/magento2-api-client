@@ -59,6 +59,12 @@ class SalesDataTotalInterface
      */
     protected $baseShippingTaxRefunded;
     /**
+     * ExtensionInterface class for @see \Magento\Sales\Api\Data\TotalInterface
+     *
+     * @var mixed
+     */
+    protected $extensionAttributes;
+    /**
      * Shipping amount.
      *
      * @var float
@@ -113,17 +119,11 @@ class SalesDataTotalInterface
      */
     protected $shippingTaxRefunded;
     /**
-     * ExtensionInterface class for @see \Magento\Sales\Api\Data\TotalInterface
-     *
-     * @var mixed
-     */
-    protected $extensionAttributes;
-    /**
      * Base shipping amount.
      *
      * @return float
      */
-    public function getBaseShippingAmount(): float
+    public function getBaseShippingAmount() : float
     {
         return $this->baseShippingAmount;
     }
@@ -134,7 +134,7 @@ class SalesDataTotalInterface
      *
      * @return self
      */
-    public function setBaseShippingAmount(float $baseShippingAmount): self
+    public function setBaseShippingAmount(float $baseShippingAmount) : self
     {
         $this->baseShippingAmount = $baseShippingAmount;
         return $this;
@@ -144,7 +144,7 @@ class SalesDataTotalInterface
      *
      * @return float
      */
-    public function getBaseShippingCanceled(): float
+    public function getBaseShippingCanceled() : float
     {
         return $this->baseShippingCanceled;
     }
@@ -155,7 +155,7 @@ class SalesDataTotalInterface
      *
      * @return self
      */
-    public function setBaseShippingCanceled(float $baseShippingCanceled): self
+    public function setBaseShippingCanceled(float $baseShippingCanceled) : self
     {
         $this->baseShippingCanceled = $baseShippingCanceled;
         return $this;
@@ -165,7 +165,7 @@ class SalesDataTotalInterface
      *
      * @return float
      */
-    public function getBaseShippingDiscountAmount(): float
+    public function getBaseShippingDiscountAmount() : float
     {
         return $this->baseShippingDiscountAmount;
     }
@@ -176,7 +176,7 @@ class SalesDataTotalInterface
      *
      * @return self
      */
-    public function setBaseShippingDiscountAmount(float $baseShippingDiscountAmount): self
+    public function setBaseShippingDiscountAmount(float $baseShippingDiscountAmount) : self
     {
         $this->baseShippingDiscountAmount = $baseShippingDiscountAmount;
         return $this;
@@ -186,7 +186,7 @@ class SalesDataTotalInterface
      *
      * @return float
      */
-    public function getBaseShippingDiscountTaxCompensationAmnt(): float
+    public function getBaseShippingDiscountTaxCompensationAmnt() : float
     {
         return $this->baseShippingDiscountTaxCompensationAmnt;
     }
@@ -197,7 +197,7 @@ class SalesDataTotalInterface
      *
      * @return self
      */
-    public function setBaseShippingDiscountTaxCompensationAmnt(float $baseShippingDiscountTaxCompensationAmnt): self
+    public function setBaseShippingDiscountTaxCompensationAmnt(float $baseShippingDiscountTaxCompensationAmnt) : self
     {
         $this->baseShippingDiscountTaxCompensationAmnt = $baseShippingDiscountTaxCompensationAmnt;
         return $this;
@@ -207,7 +207,7 @@ class SalesDataTotalInterface
      *
      * @return float
      */
-    public function getBaseShippingInclTax(): float
+    public function getBaseShippingInclTax() : float
     {
         return $this->baseShippingInclTax;
     }
@@ -218,7 +218,7 @@ class SalesDataTotalInterface
      *
      * @return self
      */
-    public function setBaseShippingInclTax(float $baseShippingInclTax): self
+    public function setBaseShippingInclTax(float $baseShippingInclTax) : self
     {
         $this->baseShippingInclTax = $baseShippingInclTax;
         return $this;
@@ -228,7 +228,7 @@ class SalesDataTotalInterface
      *
      * @return float
      */
-    public function getBaseShippingInvoiced(): float
+    public function getBaseShippingInvoiced() : float
     {
         return $this->baseShippingInvoiced;
     }
@@ -239,7 +239,7 @@ class SalesDataTotalInterface
      *
      * @return self
      */
-    public function setBaseShippingInvoiced(float $baseShippingInvoiced): self
+    public function setBaseShippingInvoiced(float $baseShippingInvoiced) : self
     {
         $this->baseShippingInvoiced = $baseShippingInvoiced;
         return $this;
@@ -249,7 +249,7 @@ class SalesDataTotalInterface
      *
      * @return float
      */
-    public function getBaseShippingRefunded(): float
+    public function getBaseShippingRefunded() : float
     {
         return $this->baseShippingRefunded;
     }
@@ -260,7 +260,7 @@ class SalesDataTotalInterface
      *
      * @return self
      */
-    public function setBaseShippingRefunded(float $baseShippingRefunded): self
+    public function setBaseShippingRefunded(float $baseShippingRefunded) : self
     {
         $this->baseShippingRefunded = $baseShippingRefunded;
         return $this;
@@ -270,7 +270,7 @@ class SalesDataTotalInterface
      *
      * @return float
      */
-    public function getBaseShippingTaxAmount(): float
+    public function getBaseShippingTaxAmount() : float
     {
         return $this->baseShippingTaxAmount;
     }
@@ -281,7 +281,7 @@ class SalesDataTotalInterface
      *
      * @return self
      */
-    public function setBaseShippingTaxAmount(float $baseShippingTaxAmount): self
+    public function setBaseShippingTaxAmount(float $baseShippingTaxAmount) : self
     {
         $this->baseShippingTaxAmount = $baseShippingTaxAmount;
         return $this;
@@ -291,7 +291,7 @@ class SalesDataTotalInterface
      *
      * @return float
      */
-    public function getBaseShippingTaxRefunded(): float
+    public function getBaseShippingTaxRefunded() : float
     {
         return $this->baseShippingTaxRefunded;
     }
@@ -302,198 +302,9 @@ class SalesDataTotalInterface
      *
      * @return self
      */
-    public function setBaseShippingTaxRefunded(float $baseShippingTaxRefunded): self
+    public function setBaseShippingTaxRefunded(float $baseShippingTaxRefunded) : self
     {
         $this->baseShippingTaxRefunded = $baseShippingTaxRefunded;
-        return $this;
-    }
-    /**
-     * Shipping amount.
-     *
-     * @return float
-     */
-    public function getShippingAmount(): float
-    {
-        return $this->shippingAmount;
-    }
-    /**
-     * Shipping amount.
-     *
-     * @param float $shippingAmount
-     *
-     * @return self
-     */
-    public function setShippingAmount(float $shippingAmount): self
-    {
-        $this->shippingAmount = $shippingAmount;
-        return $this;
-    }
-    /**
-     * Shipping canceled amount.
-     *
-     * @return float
-     */
-    public function getShippingCanceled(): float
-    {
-        return $this->shippingCanceled;
-    }
-    /**
-     * Shipping canceled amount.
-     *
-     * @param float $shippingCanceled
-     *
-     * @return self
-     */
-    public function setShippingCanceled(float $shippingCanceled): self
-    {
-        $this->shippingCanceled = $shippingCanceled;
-        return $this;
-    }
-    /**
-     * Shipping discount amount.
-     *
-     * @return float
-     */
-    public function getShippingDiscountAmount(): float
-    {
-        return $this->shippingDiscountAmount;
-    }
-    /**
-     * Shipping discount amount.
-     *
-     * @param float $shippingDiscountAmount
-     *
-     * @return self
-     */
-    public function setShippingDiscountAmount(float $shippingDiscountAmount): self
-    {
-        $this->shippingDiscountAmount = $shippingDiscountAmount;
-        return $this;
-    }
-    /**
-     * Shipping discount tax compensation amount.
-     *
-     * @return float
-     */
-    public function getShippingDiscountTaxCompensationAmount(): float
-    {
-        return $this->shippingDiscountTaxCompensationAmount;
-    }
-    /**
-     * Shipping discount tax compensation amount.
-     *
-     * @param float $shippingDiscountTaxCompensationAmount
-     *
-     * @return self
-     */
-    public function setShippingDiscountTaxCompensationAmount(float $shippingDiscountTaxCompensationAmount): self
-    {
-        $this->shippingDiscountTaxCompensationAmount = $shippingDiscountTaxCompensationAmount;
-        return $this;
-    }
-    /**
-     * Shipping including tax amount.
-     *
-     * @return float
-     */
-    public function getShippingInclTax(): float
-    {
-        return $this->shippingInclTax;
-    }
-    /**
-     * Shipping including tax amount.
-     *
-     * @param float $shippingInclTax
-     *
-     * @return self
-     */
-    public function setShippingInclTax(float $shippingInclTax): self
-    {
-        $this->shippingInclTax = $shippingInclTax;
-        return $this;
-    }
-    /**
-     * Shipping invoiced amount.
-     *
-     * @return float
-     */
-    public function getShippingInvoiced(): float
-    {
-        return $this->shippingInvoiced;
-    }
-    /**
-     * Shipping invoiced amount.
-     *
-     * @param float $shippingInvoiced
-     *
-     * @return self
-     */
-    public function setShippingInvoiced(float $shippingInvoiced): self
-    {
-        $this->shippingInvoiced = $shippingInvoiced;
-        return $this;
-    }
-    /**
-     * Shipping refunded amount.
-     *
-     * @return float
-     */
-    public function getShippingRefunded(): float
-    {
-        return $this->shippingRefunded;
-    }
-    /**
-     * Shipping refunded amount.
-     *
-     * @param float $shippingRefunded
-     *
-     * @return self
-     */
-    public function setShippingRefunded(float $shippingRefunded): self
-    {
-        $this->shippingRefunded = $shippingRefunded;
-        return $this;
-    }
-    /**
-     * Shipping tax amount.
-     *
-     * @return float
-     */
-    public function getShippingTaxAmount(): float
-    {
-        return $this->shippingTaxAmount;
-    }
-    /**
-     * Shipping tax amount.
-     *
-     * @param float $shippingTaxAmount
-     *
-     * @return self
-     */
-    public function setShippingTaxAmount(float $shippingTaxAmount): self
-    {
-        $this->shippingTaxAmount = $shippingTaxAmount;
-        return $this;
-    }
-    /**
-     * Shipping tax refunded amount.
-     *
-     * @return float
-     */
-    public function getShippingTaxRefunded(): float
-    {
-        return $this->shippingTaxRefunded;
-    }
-    /**
-     * Shipping tax refunded amount.
-     *
-     * @param float $shippingTaxRefunded
-     *
-     * @return self
-     */
-    public function setShippingTaxRefunded(float $shippingTaxRefunded): self
-    {
-        $this->shippingTaxRefunded = $shippingTaxRefunded;
         return $this;
     }
     /**
@@ -512,9 +323,198 @@ class SalesDataTotalInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Shipping amount.
+     *
+     * @return float
+     */
+    public function getShippingAmount() : float
+    {
+        return $this->shippingAmount;
+    }
+    /**
+     * Shipping amount.
+     *
+     * @param float $shippingAmount
+     *
+     * @return self
+     */
+    public function setShippingAmount(float $shippingAmount) : self
+    {
+        $this->shippingAmount = $shippingAmount;
+        return $this;
+    }
+    /**
+     * Shipping canceled amount.
+     *
+     * @return float
+     */
+    public function getShippingCanceled() : float
+    {
+        return $this->shippingCanceled;
+    }
+    /**
+     * Shipping canceled amount.
+     *
+     * @param float $shippingCanceled
+     *
+     * @return self
+     */
+    public function setShippingCanceled(float $shippingCanceled) : self
+    {
+        $this->shippingCanceled = $shippingCanceled;
+        return $this;
+    }
+    /**
+     * Shipping discount amount.
+     *
+     * @return float
+     */
+    public function getShippingDiscountAmount() : float
+    {
+        return $this->shippingDiscountAmount;
+    }
+    /**
+     * Shipping discount amount.
+     *
+     * @param float $shippingDiscountAmount
+     *
+     * @return self
+     */
+    public function setShippingDiscountAmount(float $shippingDiscountAmount) : self
+    {
+        $this->shippingDiscountAmount = $shippingDiscountAmount;
+        return $this;
+    }
+    /**
+     * Shipping discount tax compensation amount.
+     *
+     * @return float
+     */
+    public function getShippingDiscountTaxCompensationAmount() : float
+    {
+        return $this->shippingDiscountTaxCompensationAmount;
+    }
+    /**
+     * Shipping discount tax compensation amount.
+     *
+     * @param float $shippingDiscountTaxCompensationAmount
+     *
+     * @return self
+     */
+    public function setShippingDiscountTaxCompensationAmount(float $shippingDiscountTaxCompensationAmount) : self
+    {
+        $this->shippingDiscountTaxCompensationAmount = $shippingDiscountTaxCompensationAmount;
+        return $this;
+    }
+    /**
+     * Shipping including tax amount.
+     *
+     * @return float
+     */
+    public function getShippingInclTax() : float
+    {
+        return $this->shippingInclTax;
+    }
+    /**
+     * Shipping including tax amount.
+     *
+     * @param float $shippingInclTax
+     *
+     * @return self
+     */
+    public function setShippingInclTax(float $shippingInclTax) : self
+    {
+        $this->shippingInclTax = $shippingInclTax;
+        return $this;
+    }
+    /**
+     * Shipping invoiced amount.
+     *
+     * @return float
+     */
+    public function getShippingInvoiced() : float
+    {
+        return $this->shippingInvoiced;
+    }
+    /**
+     * Shipping invoiced amount.
+     *
+     * @param float $shippingInvoiced
+     *
+     * @return self
+     */
+    public function setShippingInvoiced(float $shippingInvoiced) : self
+    {
+        $this->shippingInvoiced = $shippingInvoiced;
+        return $this;
+    }
+    /**
+     * Shipping refunded amount.
+     *
+     * @return float
+     */
+    public function getShippingRefunded() : float
+    {
+        return $this->shippingRefunded;
+    }
+    /**
+     * Shipping refunded amount.
+     *
+     * @param float $shippingRefunded
+     *
+     * @return self
+     */
+    public function setShippingRefunded(float $shippingRefunded) : self
+    {
+        $this->shippingRefunded = $shippingRefunded;
+        return $this;
+    }
+    /**
+     * Shipping tax amount.
+     *
+     * @return float
+     */
+    public function getShippingTaxAmount() : float
+    {
+        return $this->shippingTaxAmount;
+    }
+    /**
+     * Shipping tax amount.
+     *
+     * @param float $shippingTaxAmount
+     *
+     * @return self
+     */
+    public function setShippingTaxAmount(float $shippingTaxAmount) : self
+    {
+        $this->shippingTaxAmount = $shippingTaxAmount;
+        return $this;
+    }
+    /**
+     * Shipping tax refunded amount.
+     *
+     * @return float
+     */
+    public function getShippingTaxRefunded() : float
+    {
+        return $this->shippingTaxRefunded;
+    }
+    /**
+     * Shipping tax refunded amount.
+     *
+     * @param float $shippingTaxRefunded
+     *
+     * @return self
+     */
+    public function setShippingTaxRefunded(float $shippingTaxRefunded) : self
+    {
+        $this->shippingTaxRefunded = $shippingTaxRefunded;
         return $this;
     }
 }

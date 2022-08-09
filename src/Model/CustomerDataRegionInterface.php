@@ -5,11 +5,11 @@ namespace Kiboko\Magento\V2\Model;
 class CustomerDataRegionInterface
 {
     /**
-     * Region code
+     * ExtensionInterface class for @see \Magento\Customer\Api\Data\RegionInterface
      *
-     * @var string
+     * @var mixed
      */
-    protected $regionCode;
+    protected $extensionAttributes;
     /**
      * Region
      *
@@ -17,80 +17,17 @@ class CustomerDataRegionInterface
      */
     protected $region;
     /**
+     * Region code
+     *
+     * @var string
+     */
+    protected $regionCode;
+    /**
      * Region id
      *
      * @var int
      */
     protected $regionId;
-    /**
-     * ExtensionInterface class for @see \Magento\Customer\Api\Data\RegionInterface
-     *
-     * @var mixed
-     */
-    protected $extensionAttributes;
-    /**
-     * Region code
-     *
-     * @return string
-     */
-    public function getRegionCode(): string
-    {
-        return $this->regionCode;
-    }
-    /**
-     * Region code
-     *
-     * @param string $regionCode
-     *
-     * @return self
-     */
-    public function setRegionCode(string $regionCode): self
-    {
-        $this->regionCode = $regionCode;
-        return $this;
-    }
-    /**
-     * Region
-     *
-     * @return string
-     */
-    public function getRegion(): string
-    {
-        return $this->region;
-    }
-    /**
-     * Region
-     *
-     * @param string $region
-     *
-     * @return self
-     */
-    public function setRegion(string $region): self
-    {
-        $this->region = $region;
-        return $this;
-    }
-    /**
-     * Region id
-     *
-     * @return int
-     */
-    public function getRegionId(): int
-    {
-        return $this->regionId;
-    }
-    /**
-     * Region id
-     *
-     * @param int $regionId
-     *
-     * @return self
-     */
-    public function setRegionId(int $regionId): self
-    {
-        $this->regionId = $regionId;
-        return $this;
-    }
     /**
      * ExtensionInterface class for @see \Magento\Customer\Api\Data\RegionInterface
      *
@@ -107,9 +44,72 @@ class CustomerDataRegionInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Region
+     *
+     * @return string
+     */
+    public function getRegion() : string
+    {
+        return $this->region;
+    }
+    /**
+     * Region
+     *
+     * @param string $region
+     *
+     * @return self
+     */
+    public function setRegion(string $region) : self
+    {
+        $this->region = $region;
+        return $this;
+    }
+    /**
+     * Region code
+     *
+     * @return string
+     */
+    public function getRegionCode() : string
+    {
+        return $this->regionCode;
+    }
+    /**
+     * Region code
+     *
+     * @param string $regionCode
+     *
+     * @return self
+     */
+    public function setRegionCode(string $regionCode) : self
+    {
+        $this->regionCode = $regionCode;
+        return $this;
+    }
+    /**
+     * Region id
+     *
+     * @return int
+     */
+    public function getRegionId() : int
+    {
+        return $this->regionId;
+    }
+    /**
+     * Region id
+     *
+     * @param int $regionId
+     *
+     * @return self
+     */
+    public function setRegionId(int $regionId) : self
+    {
+        $this->regionId = $regionId;
         return $this;
     }
 }

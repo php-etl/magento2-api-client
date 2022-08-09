@@ -11,23 +11,23 @@ class CatalogDataProductLinkTypeInterface
      */
     protected $code;
     /**
-     * Link type name
-     *
-     * @var string
-     */
-    protected $name;
-    /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductLinkTypeInterface
      *
      * @var mixed
      */
     protected $extensionAttributes;
     /**
+     * Link type name
+     *
+     * @var string
+     */
+    protected $name;
+    /**
      * Link type code
      *
      * @return int
      */
-    public function getCode(): int
+    public function getCode() : int
     {
         return $this->code;
     }
@@ -38,30 +38,9 @@ class CatalogDataProductLinkTypeInterface
      *
      * @return self
      */
-    public function setCode(int $code): self
+    public function setCode(int $code) : self
     {
         $this->code = $code;
-        return $this;
-    }
-    /**
-     * Link type name
-     *
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-    /**
-     * Link type name
-     *
-     * @param string $name
-     *
-     * @return self
-     */
-    public function setName(string $name): self
-    {
-        $this->name = $name;
         return $this;
     }
     /**
@@ -80,9 +59,30 @@ class CatalogDataProductLinkTypeInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Link type name
+     *
+     * @return string
+     */
+    public function getName() : string
+    {
+        return $this->name;
+    }
+    /**
+     * Link type name
+     *
+     * @param string $name
+     *
+     * @return self
+     */
+    public function setName(string $name) : self
+    {
+        $this->name = $name;
         return $this;
     }
 }

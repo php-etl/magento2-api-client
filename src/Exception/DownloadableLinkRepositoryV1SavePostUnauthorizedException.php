@@ -13,7 +13,7 @@ class DownloadableLinkRepositoryV1SavePostUnauthorizedException extends Unauthor
         parent::__construct('401 Unauthorized');
         $this->errorResponse = $errorResponse;
     }
-    public function getErrorResponse(): \Kiboko\Magento\V2\Model\ErrorResponse
+    public function getErrorResponse() : \Kiboko\Magento\V2\Model\ErrorResponse
     {
         return $this->errorResponse;
     }

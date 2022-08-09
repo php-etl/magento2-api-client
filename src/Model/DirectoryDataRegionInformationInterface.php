@@ -5,23 +5,11 @@ namespace Kiboko\Magento\V2\Model;
 class DirectoryDataRegionInformationInterface
 {
     /**
-     * Region id
-     *
-     * @var string
-     */
-    protected $id;
-    /**
      * Region code
      *
      * @var string
      */
     protected $code;
-    /**
-     * Region name
-     *
-     * @var string
-     */
-    protected $name;
     /**
      * ExtensionInterface class for @see \Magento\Directory\Api\Data\RegionInformationInterface
      *
@@ -31,30 +19,21 @@ class DirectoryDataRegionInformationInterface
     /**
      * Region id
      *
-     * @return string
+     * @var string
      */
-    public function getId(): string
-    {
-        return $this->id;
-    }
+    protected $id;
     /**
-     * Region id
+     * Region name
      *
-     * @param string $id
-     *
-     * @return self
+     * @var string
      */
-    public function setId(string $id): self
-    {
-        $this->id = $id;
-        return $this;
-    }
+    protected $name;
     /**
      * Region code
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -65,30 +44,9 @@ class DirectoryDataRegionInformationInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
-        return $this;
-    }
-    /**
-     * Region name
-     *
-     * @return string
-     */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-    /**
-     * Region name
-     *
-     * @param string $name
-     *
-     * @return self
-     */
-    public function setName(string $name): self
-    {
-        $this->name = $name;
         return $this;
     }
     /**
@@ -107,9 +65,51 @@ class DirectoryDataRegionInformationInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
+        return $this;
+    }
+    /**
+     * Region id
+     *
+     * @return string
+     */
+    public function getId() : string
+    {
+        return $this->id;
+    }
+    /**
+     * Region id
+     *
+     * @param string $id
+     *
+     * @return self
+     */
+    public function setId(string $id) : self
+    {
+        $this->id = $id;
+        return $this;
+    }
+    /**
+     * Region name
+     *
+     * @return string
+     */
+    public function getName() : string
+    {
+        return $this->name;
+    }
+    /**
+     * Region name
+     *
+     * @param string $name
+     *
+     * @return self
+     */
+    public function setName(string $name) : self
+    {
+        $this->name = $name;
         return $this;
     }
 }

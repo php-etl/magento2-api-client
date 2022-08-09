@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CompanyCreditDataCreditBalanceOptionsInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\CompanyCreditDataCreditBalanceOptionsInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\CompanyCreditDataCreditBalanceOptionsInterface';
     }
@@ -40,17 +39,17 @@ class CompanyCreditDataCreditBalanceOptionsInterfaceNormalizer implements Denorm
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('purchase_order', $data)) {
-            $object->setPurchaseOrder($data['purchase_order']);
-        }
-        if (\array_key_exists('order_increment', $data)) {
-            $object->setOrderIncrement($data['order_increment']);
+        if (\array_key_exists('currency_base', $data)) {
+            $object->setCurrencyBase($data['currency_base']);
         }
         if (\array_key_exists('currency_display', $data)) {
             $object->setCurrencyDisplay($data['currency_display']);
         }
-        if (\array_key_exists('currency_base', $data)) {
-            $object->setCurrencyBase($data['currency_base']);
+        if (\array_key_exists('order_increment', $data)) {
+            $object->setOrderIncrement($data['order_increment']);
+        }
+        if (\array_key_exists('purchase_order', $data)) {
+            $object->setPurchaseOrder($data['purchase_order']);
         }
         return $object;
     }
@@ -60,10 +59,10 @@ class CompanyCreditDataCreditBalanceOptionsInterfaceNormalizer implements Denorm
     public function normalize($object, $format = null, array $context = array())
     {
         $data = array();
-        $data['purchase_order'] = $object->getPurchaseOrder();
-        $data['order_increment'] = $object->getOrderIncrement();
-        $data['currency_display'] = $object->getCurrencyDisplay();
         $data['currency_base'] = $object->getCurrencyBase();
+        $data['currency_display'] = $object->getCurrencyDisplay();
+        $data['order_increment'] = $object->getOrderIncrement();
+        $data['purchase_order'] = $object->getPurchaseOrder();
         return $data;
     }
 }

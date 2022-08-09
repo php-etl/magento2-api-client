@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderItemInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderItemInterface';
     }
@@ -133,11 +132,26 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
         if (\array_key_exists('discount_refunded', $data)) {
             $object->setDiscountRefunded($data['discount_refunded']);
         }
+        if (\array_key_exists('discount_tax_compensation_amount', $data)) {
+            $object->setDiscountTaxCompensationAmount($data['discount_tax_compensation_amount']);
+        }
+        if (\array_key_exists('discount_tax_compensation_canceled', $data)) {
+            $object->setDiscountTaxCompensationCanceled($data['discount_tax_compensation_canceled']);
+        }
+        if (\array_key_exists('discount_tax_compensation_invoiced', $data)) {
+            $object->setDiscountTaxCompensationInvoiced($data['discount_tax_compensation_invoiced']);
+        }
+        if (\array_key_exists('discount_tax_compensation_refunded', $data)) {
+            $object->setDiscountTaxCompensationRefunded($data['discount_tax_compensation_refunded']);
+        }
         if (\array_key_exists('event_id', $data)) {
             $object->setEventId($data['event_id']);
         }
         if (\array_key_exists('ext_order_item_id', $data)) {
             $object->setExtOrderItemId($data['ext_order_item_id']);
+        }
+        if (\array_key_exists('extension_attributes', $data)) {
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderItemExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('free_shipping', $data)) {
             $object->setFreeShipping($data['free_shipping']);
@@ -181,18 +195,6 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
         if (\array_key_exists('gw_tax_amount_refunded', $data)) {
             $object->setGwTaxAmountRefunded($data['gw_tax_amount_refunded']);
         }
-        if (\array_key_exists('discount_tax_compensation_amount', $data)) {
-            $object->setDiscountTaxCompensationAmount($data['discount_tax_compensation_amount']);
-        }
-        if (\array_key_exists('discount_tax_compensation_canceled', $data)) {
-            $object->setDiscountTaxCompensationCanceled($data['discount_tax_compensation_canceled']);
-        }
-        if (\array_key_exists('discount_tax_compensation_invoiced', $data)) {
-            $object->setDiscountTaxCompensationInvoiced($data['discount_tax_compensation_invoiced']);
-        }
-        if (\array_key_exists('discount_tax_compensation_refunded', $data)) {
-            $object->setDiscountTaxCompensationRefunded($data['discount_tax_compensation_refunded']);
-        }
         if (\array_key_exists('is_qty_decimal', $data)) {
             $object->setIsQtyDecimal($data['is_qty_decimal']);
         }
@@ -220,6 +222,9 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
         if (\array_key_exists('original_price', $data)) {
             $object->setOriginalPrice($data['original_price']);
         }
+        if (\array_key_exists('parent_item', $data)) {
+            $object->setParentItem($this->denormalizer->denormalize($data['parent_item'], 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderItemInterface', 'json', $context));
+        }
         if (\array_key_exists('parent_item_id', $data)) {
             $object->setParentItemId($data['parent_item_id']);
         }
@@ -231,6 +236,9 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
         }
         if (\array_key_exists('product_id', $data)) {
             $object->setProductId($data['product_id']);
+        }
+        if (\array_key_exists('product_option', $data)) {
+            $object->setProductOption($this->denormalizer->denormalize($data['product_option'], 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductOptionInterface', 'json', $context));
         }
         if (\array_key_exists('product_type', $data)) {
             $object->setProductType($data['product_type']);
@@ -315,15 +323,6 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
         }
         if (\array_key_exists('weight', $data)) {
             $object->setWeight($data['weight']);
-        }
-        if (\array_key_exists('parent_item', $data)) {
-            $object->setParentItem($this->denormalizer->denormalize($data['parent_item'], 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderItemInterface', 'json', $context));
-        }
-        if (\array_key_exists('product_option', $data)) {
-            $object->setProductOption($this->denormalizer->denormalize($data['product_option'], 'Kiboko\\Magento\\V2\\Model\\CatalogDataProductOptionInterface', 'json', $context));
-        }
-        if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2\\Model\\SalesDataOrderItemExtensionInterface', 'json', $context));
         }
         return $object;
     }
@@ -426,11 +425,26 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
         if (null !== $object->getDiscountRefunded()) {
             $data['discount_refunded'] = $object->getDiscountRefunded();
         }
+        if (null !== $object->getDiscountTaxCompensationAmount()) {
+            $data['discount_tax_compensation_amount'] = $object->getDiscountTaxCompensationAmount();
+        }
+        if (null !== $object->getDiscountTaxCompensationCanceled()) {
+            $data['discount_tax_compensation_canceled'] = $object->getDiscountTaxCompensationCanceled();
+        }
+        if (null !== $object->getDiscountTaxCompensationInvoiced()) {
+            $data['discount_tax_compensation_invoiced'] = $object->getDiscountTaxCompensationInvoiced();
+        }
+        if (null !== $object->getDiscountTaxCompensationRefunded()) {
+            $data['discount_tax_compensation_refunded'] = $object->getDiscountTaxCompensationRefunded();
+        }
         if (null !== $object->getEventId()) {
             $data['event_id'] = $object->getEventId();
         }
         if (null !== $object->getExtOrderItemId()) {
             $data['ext_order_item_id'] = $object->getExtOrderItemId();
+        }
+        if (null !== $object->getExtensionAttributes()) {
+            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
         if (null !== $object->getFreeShipping()) {
             $data['free_shipping'] = $object->getFreeShipping();
@@ -474,18 +488,6 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
         if (null !== $object->getGwTaxAmountRefunded()) {
             $data['gw_tax_amount_refunded'] = $object->getGwTaxAmountRefunded();
         }
-        if (null !== $object->getDiscountTaxCompensationAmount()) {
-            $data['discount_tax_compensation_amount'] = $object->getDiscountTaxCompensationAmount();
-        }
-        if (null !== $object->getDiscountTaxCompensationCanceled()) {
-            $data['discount_tax_compensation_canceled'] = $object->getDiscountTaxCompensationCanceled();
-        }
-        if (null !== $object->getDiscountTaxCompensationInvoiced()) {
-            $data['discount_tax_compensation_invoiced'] = $object->getDiscountTaxCompensationInvoiced();
-        }
-        if (null !== $object->getDiscountTaxCompensationRefunded()) {
-            $data['discount_tax_compensation_refunded'] = $object->getDiscountTaxCompensationRefunded();
-        }
         if (null !== $object->getIsQtyDecimal()) {
             $data['is_qty_decimal'] = $object->getIsQtyDecimal();
         }
@@ -513,6 +515,9 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
         if (null !== $object->getOriginalPrice()) {
             $data['original_price'] = $object->getOriginalPrice();
         }
+        if (null !== $object->getParentItem()) {
+            $data['parent_item'] = $this->normalizer->normalize($object->getParentItem(), 'json', $context);
+        }
         if (null !== $object->getParentItemId()) {
             $data['parent_item_id'] = $object->getParentItemId();
         }
@@ -524,6 +529,9 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
         }
         if (null !== $object->getProductId()) {
             $data['product_id'] = $object->getProductId();
+        }
+        if (null !== $object->getProductOption()) {
+            $data['product_option'] = $this->normalizer->normalize($object->getProductOption(), 'json', $context);
         }
         if (null !== $object->getProductType()) {
             $data['product_type'] = $object->getProductType();
@@ -606,15 +614,6 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
         }
         if (null !== $object->getWeight()) {
             $data['weight'] = $object->getWeight();
-        }
-        if (null !== $object->getParentItem()) {
-            $data['parent_item'] = $this->normalizer->normalize($object->getParentItem(), 'json', $context);
-        }
-        if (null !== $object->getProductOption()) {
-            $data['product_option'] = $this->normalizer->normalize($object->getProductOption(), 'json', $context);
-        }
-        if (null !== $object->getExtensionAttributes()) {
-            $data['extension_attributes'] = $this->normalizer->normalize($object->getExtensionAttributes(), 'json', $context);
         }
         return $data;
     }

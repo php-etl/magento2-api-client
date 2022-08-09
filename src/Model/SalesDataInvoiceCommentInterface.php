@@ -5,35 +5,11 @@ namespace Kiboko\Magento\V2\Model;
 class SalesDataInvoiceCommentInterface
 {
     /**
-     * Is-customer-notified flag value.
-     *
-     * @var int
-     */
-    protected $isCustomerNotified;
-    /**
-     * Parent ID.
-     *
-     * @var int
-     */
-    protected $parentId;
-    /**
-     * ExtensionInterface class for @see \Magento\Sales\Api\Data\InvoiceCommentInterface
-     *
-     * @var mixed
-     */
-    protected $extensionAttributes;
-    /**
      * Comment.
      *
      * @var string
      */
     protected $comment;
-    /**
-     * Is-visible-on-storefront flag value.
-     *
-     * @var int
-     */
-    protected $isVisibleOnFront;
     /**
      * Created-at timestamp.
      *
@@ -47,45 +23,90 @@ class SalesDataInvoiceCommentInterface
      */
     protected $entityId;
     /**
-     * Is-customer-notified flag value.
+     * ExtensionInterface class for @see \Magento\Sales\Api\Data\InvoiceCommentInterface
      *
-     * @return int
+     * @var mixed
      */
-    public function getIsCustomerNotified(): int
-    {
-        return $this->isCustomerNotified;
-    }
+    protected $extensionAttributes;
     /**
      * Is-customer-notified flag value.
      *
-     * @param int $isCustomerNotified
+     * @var int
+     */
+    protected $isCustomerNotified;
+    /**
+     * Is-visible-on-storefront flag value.
+     *
+     * @var int
+     */
+    protected $isVisibleOnFront;
+    /**
+     * Parent ID.
+     *
+     * @var int
+     */
+    protected $parentId;
+    /**
+     * Comment.
+     *
+     * @return string
+     */
+    public function getComment() : string
+    {
+        return $this->comment;
+    }
+    /**
+     * Comment.
+     *
+     * @param string $comment
      *
      * @return self
      */
-    public function setIsCustomerNotified(int $isCustomerNotified): self
+    public function setComment(string $comment) : self
     {
-        $this->isCustomerNotified = $isCustomerNotified;
+        $this->comment = $comment;
         return $this;
     }
     /**
-     * Parent ID.
+     * Created-at timestamp.
      *
-     * @return int
+     * @return string
      */
-    public function getParentId(): int
+    public function getCreatedAt() : string
     {
-        return $this->parentId;
+        return $this->createdAt;
     }
     /**
-     * Parent ID.
+     * Created-at timestamp.
      *
-     * @param int $parentId
+     * @param string $createdAt
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setCreatedAt(string $createdAt) : self
     {
-        $this->parentId = $parentId;
+        $this->createdAt = $createdAt;
+        return $this;
+    }
+    /**
+     * Invoice ID.
+     *
+     * @return int
+     */
+    public function getEntityId() : int
+    {
+        return $this->entityId;
+    }
+    /**
+     * Invoice ID.
+     *
+     * @param int $entityId
+     *
+     * @return self
+     */
+    public function setEntityId(int $entityId) : self
+    {
+        $this->entityId = $entityId;
         return $this;
     }
     /**
@@ -104,30 +125,30 @@ class SalesDataInvoiceCommentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
     }
     /**
-     * Comment.
+     * Is-customer-notified flag value.
      *
-     * @return string
+     * @return int
      */
-    public function getComment(): string
+    public function getIsCustomerNotified() : int
     {
-        return $this->comment;
+        return $this->isCustomerNotified;
     }
     /**
-     * Comment.
+     * Is-customer-notified flag value.
      *
-     * @param string $comment
+     * @param int $isCustomerNotified
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setIsCustomerNotified(int $isCustomerNotified) : self
     {
-        $this->comment = $comment;
+        $this->isCustomerNotified = $isCustomerNotified;
         return $this;
     }
     /**
@@ -135,7 +156,7 @@ class SalesDataInvoiceCommentInterface
      *
      * @return int
      */
-    public function getIsVisibleOnFront(): int
+    public function getIsVisibleOnFront() : int
     {
         return $this->isVisibleOnFront;
     }
@@ -146,51 +167,30 @@ class SalesDataInvoiceCommentInterface
      *
      * @return self
      */
-    public function setIsVisibleOnFront(int $isVisibleOnFront): self
+    public function setIsVisibleOnFront(int $isVisibleOnFront) : self
     {
         $this->isVisibleOnFront = $isVisibleOnFront;
         return $this;
     }
     /**
-     * Created-at timestamp.
-     *
-     * @return string
-     */
-    public function getCreatedAt(): string
-    {
-        return $this->createdAt;
-    }
-    /**
-     * Created-at timestamp.
-     *
-     * @param string $createdAt
-     *
-     * @return self
-     */
-    public function setCreatedAt(string $createdAt): self
-    {
-        $this->createdAt = $createdAt;
-        return $this;
-    }
-    /**
-     * Invoice ID.
+     * Parent ID.
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getParentId() : int
     {
-        return $this->entityId;
+        return $this->parentId;
     }
     /**
-     * Invoice ID.
+     * Parent ID.
      *
-     * @param int $entityId
+     * @param int $parentId
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setParentId(int $parentId) : self
     {
-        $this->entityId = $entityId;
+        $this->parentId = $parentId;
         return $this;
     }
 }
