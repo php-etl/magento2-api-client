@@ -5,6 +5,17 @@ namespace Kiboko\Magento\v2_4\Endpoint;
 class NegotiableQuoteAttachmentContentManagementV1GetGet extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
+    /**
+     * Returns content for one or more files attached on the quote comment.
+     *
+     * @param array $queryParameters {
+     *     @var array $attachmentIds
+     * }
+     */
+    public function __construct(array $queryParameters = array())
+    {
+        $this->queryParameters = $queryParameters;
+    }
     public function getMethod(): string
     {
         return 'GET';
@@ -17,26 +28,41 @@ class NegotiableQuoteAttachmentContentManagementV1GetGet extends \Kiboko\Magento
     {
         return array(array(), null);
     }
+    public function getExtraHeaders(): array
+    {
+        return array('Accept' => array('application/json'));
+    }
+    protected function getQueryOptionsResolver(): \Symfony\Component\OptionsResolver\OptionsResolver
+    {
+        $optionsResolver = parent::getQueryOptionsResolver();
+        $optionsResolver->setDefined(array('attachmentIds'));
+        $optionsResolver->setRequired(array('attachmentIds'));
+        $optionsResolver->setDefaults(array());
+        $optionsResolver->setAllowedTypes('attachmentIds', array('array'));
+        return $optionsResolver;
+    }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_4\Exception\NegotiableQuoteAttachmentContentManagementV1GetGetBadRequestException
      * @throws \Kiboko\Magento\v2_4\Exception\NegotiableQuoteAttachmentContentManagementV1GetGetUnauthorizedException
      *
-     * @return null
+     * @return null|\Kiboko\Magento\v2_4\Model\NegotiableQuoteDataAttachmentContentInterface[]|\Kiboko\Magento\v2_4\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (200 === $status) {
-            return null;
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\NegotiableQuoteDataAttachmentContentInterface[]', 'json');
         }
-        if (400 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\NegotiableQuoteAttachmentContentManagementV1GetGetBadRequestException();
+        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_4\Exception\NegotiableQuoteAttachmentContentManagementV1GetGetBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
         }
-        if (401 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\NegotiableQuoteAttachmentContentManagementV1GetGetUnauthorizedException();
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_4\Exception\NegotiableQuoteAttachmentContentManagementV1GetGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
         }
-        return null;
+        if (mb_strpos($contentType, 'application/json') !== false) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        }
     }
     public function getAuthenticationScopes(): array
     {

@@ -17,22 +17,28 @@ class TemandoShippingCollectionPointCartCollectionPointManagementV1GetCollection
     {
         return array(array(), null);
     }
+    public function getExtraHeaders(): array
+    {
+        return array('Accept' => array('application/json'));
+    }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_2\Exception\TemandoShippingCollectionPointCartCollectionPointManagementV1GetCollectionPointsGetUnauthorizedException
      *
-     * @return null
+     * @return null|\Kiboko\Magento\v2_2\Model\TemandoShippingDataCollectionPointQuoteCollectionPointInterface[]|\Kiboko\Magento\v2_2\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (200 === $status) {
-            return null;
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\TemandoShippingDataCollectionPointQuoteCollectionPointInterface[]', 'json');
         }
-        if (401 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\TemandoShippingCollectionPointCartCollectionPointManagementV1GetCollectionPointsGetUnauthorizedException();
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_2\Exception\TemandoShippingCollectionPointCartCollectionPointManagementV1GetCollectionPointsGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
         }
-        return null;
+        if (mb_strpos($contentType, 'application/json') !== false) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+        }
     }
     public function getAuthenticationScopes(): array
     {

@@ -17,22 +17,28 @@ class CatalogProductCustomOptionTypeListV1GetItemsGet extends \Kiboko\Magento\v2
     {
         return array(array(), null);
     }
+    public function getExtraHeaders(): array
+    {
+        return array('Accept' => array('application/json'));
+    }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_2\Exception\CatalogProductCustomOptionTypeListV1GetItemsGetUnauthorizedException
      *
-     * @return null
+     * @return null|\Kiboko\Magento\v2_2\Model\CatalogDataProductCustomOptionTypeInterface[]|\Kiboko\Magento\v2_2\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (200 === $status) {
-            return null;
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductCustomOptionTypeInterface[]', 'json');
         }
-        if (401 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\CatalogProductCustomOptionTypeListV1GetItemsGetUnauthorizedException();
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_2\Exception\CatalogProductCustomOptionTypeListV1GetItemsGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
         }
-        return null;
+        if (mb_strpos($contentType, 'application/json') !== false) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+        }
     }
     public function getAuthenticationScopes(): array
     {

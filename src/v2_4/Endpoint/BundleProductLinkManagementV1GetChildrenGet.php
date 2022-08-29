@@ -5,17 +5,44 @@ namespace Kiboko\Magento\v2_4\Endpoint;
 class BundleProductLinkManagementV1GetChildrenGet extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
+    protected $productSku;
+    /**
+     * Get all children for Bundle product
+     *
+     * @param string $productSku
+     * @param array $queryParameters {
+     *     @var int $optionId
+     * }
+     */
+    public function __construct(string $productSku, array $queryParameters = array())
+    {
+        $this->productSku = $productSku;
+        $this->queryParameters = $queryParameters;
+    }
     public function getMethod(): string
     {
         return 'GET';
     }
     public function getUri(): string
     {
-        return '/V1/bundle-products/{productSku}/children';
+        return str_replace(array('{productSku}'), array($this->productSku), '/V1/bundle-products/{productSku}/children');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
+    }
+    public function getExtraHeaders(): array
+    {
+        return array('Accept' => array('application/json'));
+    }
+    protected function getQueryOptionsResolver(): \Symfony\Component\OptionsResolver\OptionsResolver
+    {
+        $optionsResolver = parent::getQueryOptionsResolver();
+        $optionsResolver->setDefined(array('optionId'));
+        $optionsResolver->setRequired(array());
+        $optionsResolver->setDefaults(array());
+        $optionsResolver->setAllowedTypes('optionId', array('int'));
+        return $optionsResolver;
     }
     /**
      * {@inheritdoc}
@@ -23,20 +50,22 @@ class BundleProductLinkManagementV1GetChildrenGet extends \Kiboko\Magento\v2_4\R
      * @throws \Kiboko\Magento\v2_4\Exception\BundleProductLinkManagementV1GetChildrenGetBadRequestException
      * @throws \Kiboko\Magento\v2_4\Exception\BundleProductLinkManagementV1GetChildrenGetUnauthorizedException
      *
-     * @return null
+     * @return null|\Kiboko\Magento\v2_4\Model\BundleDataLinkInterface[]|\Kiboko\Magento\v2_4\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (200 === $status) {
-            return null;
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\BundleDataLinkInterface[]', 'json');
         }
-        if (400 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\BundleProductLinkManagementV1GetChildrenGetBadRequestException();
+        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_4\Exception\BundleProductLinkManagementV1GetChildrenGetBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
         }
-        if (401 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\BundleProductLinkManagementV1GetChildrenGetUnauthorizedException();
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_4\Exception\BundleProductLinkManagementV1GetChildrenGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
         }
-        return null;
+        if (mb_strpos($contentType, 'application/json') !== false) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        }
     }
     public function getAuthenticationScopes(): array
     {

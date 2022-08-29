@@ -17,22 +17,28 @@ class StoreWebsiteRepositoryV1GetListGet extends \Kiboko\Magento\v2_4\Runtime\Cl
     {
         return array(array(), null);
     }
+    public function getExtraHeaders(): array
+    {
+        return array('Accept' => array('application/json'));
+    }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_4\Exception\StoreWebsiteRepositoryV1GetListGetUnauthorizedException
      *
-     * @return null
+     * @return null|\Kiboko\Magento\v2_4\Model\StoreDataWebsiteInterface[]|\Kiboko\Magento\v2_4\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (200 === $status) {
-            return null;
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\StoreDataWebsiteInterface[]', 'json');
         }
-        if (401 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\StoreWebsiteRepositoryV1GetListGetUnauthorizedException();
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_4\Exception\StoreWebsiteRepositoryV1GetListGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
         }
-        return null;
+        if (mb_strpos($contentType, 'application/json') !== false) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        }
     }
     public function getAuthenticationScopes(): array
     {

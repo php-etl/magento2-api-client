@@ -5,17 +5,39 @@ namespace Kiboko\Magento\v2_4\Endpoint;
 class RmaRmaRepositoryV1DeleteDelete extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
+    protected $id;
+    /**
+     * Delete RMA
+     *
+     * @param string $id
+     * @param null|\Kiboko\Magento\v2_4\Model\V1ReturnsIdDeleteBody $requestBody
+     */
+    public function __construct(string $id, ?\Kiboko\Magento\v2_4\Model\V1ReturnsIdDeleteBody $requestBody = null)
+    {
+        $this->id = $id;
+        $this->body = $requestBody;
+    }
     public function getMethod(): string
     {
         return 'DELETE';
     }
     public function getUri(): string
     {
-        return '/V1/returns/{id}';
+        return str_replace(array('{id}'), array($this->id), '/V1/returns/{id}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
+        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1ReturnsIdDeleteBody) {
+            return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
+        }
+        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1ReturnsIdDeleteBody) {
+            return array(array('Content-Type' => array('application/xml')), $this->body);
+        }
         return array(array(), null);
+    }
+    public function getExtraHeaders(): array
+    {
+        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
@@ -23,20 +45,22 @@ class RmaRmaRepositoryV1DeleteDelete extends \Kiboko\Magento\v2_4\Runtime\Client
      * @throws \Kiboko\Magento\v2_4\Exception\RmaRmaRepositoryV1DeleteDeleteBadRequestException
      * @throws \Kiboko\Magento\v2_4\Exception\RmaRmaRepositoryV1DeleteDeleteUnauthorizedException
      *
-     * @return null
+     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (200 === $status) {
-            return null;
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            return json_decode($body);
         }
-        if (400 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\RmaRmaRepositoryV1DeleteDeleteBadRequestException();
+        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_4\Exception\RmaRmaRepositoryV1DeleteDeleteBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
         }
-        if (401 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\RmaRmaRepositoryV1DeleteDeleteUnauthorizedException();
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_4\Exception\RmaRmaRepositoryV1DeleteDeleteUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
         }
-        return null;
+        if (mb_strpos($contentType, 'application/json') !== false) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        }
     }
     public function getAuthenticationScopes(): array
     {

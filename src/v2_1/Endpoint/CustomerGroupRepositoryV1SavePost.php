@@ -5,6 +5,15 @@ namespace Kiboko\Magento\v2_1\Endpoint;
 class CustomerGroupRepositoryV1SavePost extends \Kiboko\Magento\v2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_1\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_1\Runtime\Client\EndpointTrait;
+    /**
+     * Save customer group.
+     *
+     * @param null|\Kiboko\Magento\v2_1\Model\V1CustomerGroupsPostBody $requestBody
+     */
+    public function __construct(?\Kiboko\Magento\v2_1\Model\V1CustomerGroupsPostBody $requestBody = null)
+    {
+        $this->body = $requestBody;
+    }
     public function getMethod(): string
     {
         return 'POST';
@@ -15,7 +24,17 @@ class CustomerGroupRepositoryV1SavePost extends \Kiboko\Magento\v2_1\Runtime\Cli
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
+        if ($this->body instanceof \Kiboko\Magento\v2_1\Model\V1CustomerGroupsPostBody) {
+            return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
+        }
+        if ($this->body instanceof \Kiboko\Magento\v2_1\Model\V1CustomerGroupsPostBody) {
+            return array(array('Content-Type' => array('application/xml')), $this->body);
+        }
         return array(array(), null);
+    }
+    public function getExtraHeaders(): array
+    {
+        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
@@ -24,23 +43,25 @@ class CustomerGroupRepositoryV1SavePost extends \Kiboko\Magento\v2_1\Runtime\Cli
      * @throws \Kiboko\Magento\v2_1\Exception\CustomerGroupRepositoryV1SavePostUnauthorizedException
      * @throws \Kiboko\Magento\v2_1\Exception\CustomerGroupRepositoryV1SavePostInternalServerErrorException
      *
-     * @return null
+     * @return null|\Kiboko\Magento\v2_1\Model\CustomerDataGroupInterface|\Kiboko\Magento\v2_1\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (200 === $status) {
-            return null;
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\CustomerDataGroupInterface', 'json');
         }
-        if (400 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\CustomerGroupRepositoryV1SavePostBadRequestException();
+        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_1\Exception\CustomerGroupRepositoryV1SavePostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
         }
-        if (401 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\CustomerGroupRepositoryV1SavePostUnauthorizedException();
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_1\Exception\CustomerGroupRepositoryV1SavePostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
         }
-        if (500 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\CustomerGroupRepositoryV1SavePostInternalServerErrorException();
+        if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_1\Exception\CustomerGroupRepositoryV1SavePostInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
         }
-        return null;
+        if (mb_strpos($contentType, 'application/json') !== false) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+        }
     }
     public function getAuthenticationScopes(): array
     {

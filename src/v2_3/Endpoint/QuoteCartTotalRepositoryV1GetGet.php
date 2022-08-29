@@ -17,26 +17,32 @@ class QuoteCartTotalRepositoryV1GetGet extends \Kiboko\Magento\v2_3\Runtime\Clie
     {
         return array(array(), null);
     }
+    public function getExtraHeaders(): array
+    {
+        return array('Accept' => array('application/json'));
+    }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_3\Exception\QuoteCartTotalRepositoryV1GetGetBadRequestException
      * @throws \Kiboko\Magento\v2_3\Exception\QuoteCartTotalRepositoryV1GetGetUnauthorizedException
      *
-     * @return null
+     * @return null|\Kiboko\Magento\v2_3\Model\QuoteDataTotalsInterface|\Kiboko\Magento\v2_3\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (200 === $status) {
-            return null;
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataTotalsInterface', 'json');
         }
-        if (400 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\QuoteCartTotalRepositoryV1GetGetBadRequestException();
+        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_3\Exception\QuoteCartTotalRepositoryV1GetGetBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
         }
-        if (401 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\QuoteCartTotalRepositoryV1GetGetUnauthorizedException();
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_3\Exception\QuoteCartTotalRepositoryV1GetGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
         }
-        return null;
+        if (mb_strpos($contentType, 'application/json') !== false) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
+        }
     }
     public function getAuthenticationScopes(): array
     {

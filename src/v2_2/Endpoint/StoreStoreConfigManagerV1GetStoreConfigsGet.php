@@ -5,6 +5,17 @@ namespace Kiboko\Magento\v2_2\Endpoint;
 class StoreStoreConfigManagerV1GetStoreConfigsGet extends \Kiboko\Magento\v2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_2\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_2\Runtime\Client\EndpointTrait;
+    /**
+     *
+     *
+     * @param array $queryParameters {
+     *     @var array $storeCodes
+     * }
+     */
+    public function __construct(array $queryParameters = array())
+    {
+        $this->queryParameters = $queryParameters;
+    }
     public function getMethod(): string
     {
         return 'GET';
@@ -17,22 +28,37 @@ class StoreStoreConfigManagerV1GetStoreConfigsGet extends \Kiboko\Magento\v2_2\R
     {
         return array(array(), null);
     }
+    public function getExtraHeaders(): array
+    {
+        return array('Accept' => array('application/json'));
+    }
+    protected function getQueryOptionsResolver(): \Symfony\Component\OptionsResolver\OptionsResolver
+    {
+        $optionsResolver = parent::getQueryOptionsResolver();
+        $optionsResolver->setDefined(array('storeCodes'));
+        $optionsResolver->setRequired(array());
+        $optionsResolver->setDefaults(array());
+        $optionsResolver->setAllowedTypes('storeCodes', array('array'));
+        return $optionsResolver;
+    }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_2\Exception\StoreStoreConfigManagerV1GetStoreConfigsGetUnauthorizedException
      *
-     * @return null
+     * @return null|\Kiboko\Magento\v2_2\Model\StoreDataStoreConfigInterface[]|\Kiboko\Magento\v2_2\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (200 === $status) {
-            return null;
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\StoreDataStoreConfigInterface[]', 'json');
         }
-        if (401 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\StoreStoreConfigManagerV1GetStoreConfigsGetUnauthorizedException();
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_2\Exception\StoreStoreConfigManagerV1GetStoreConfigsGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
         }
-        return null;
+        if (mb_strpos($contentType, 'application/json') !== false) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+        }
     }
     public function getAuthenticationScopes(): array
     {

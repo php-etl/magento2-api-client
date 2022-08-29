@@ -5,17 +5,39 @@ namespace Kiboko\Magento\v2_2\Endpoint;
 class QuoteCartItemRepositoryV1SavePut extends \Kiboko\Magento\v2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_2\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_2\Runtime\Client\EndpointTrait;
+    protected $itemId;
+    /**
+     * Add/update the specified cart item.
+     *
+     * @param string $itemId
+     * @param null|\Kiboko\Magento\v2_2\Model\V1CartsMineItemsItemIdPutBody $requestBody
+     */
+    public function __construct(string $itemId, ?\Kiboko\Magento\v2_2\Model\V1CartsMineItemsItemIdPutBody $requestBody = null)
+    {
+        $this->itemId = $itemId;
+        $this->body = $requestBody;
+    }
     public function getMethod(): string
     {
         return 'PUT';
     }
     public function getUri(): string
     {
-        return '/V1/carts/mine/items/{itemId}';
+        return str_replace(array('{itemId}'), array($this->itemId), '/V1/carts/mine/items/{itemId}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
+        if ($this->body instanceof \Kiboko\Magento\v2_2\Model\V1CartsMineItemsItemIdPutBody) {
+            return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
+        }
+        if ($this->body instanceof \Kiboko\Magento\v2_2\Model\V1CartsMineItemsItemIdPutBody) {
+            return array(array('Content-Type' => array('application/xml')), $this->body);
+        }
         return array(array(), null);
+    }
+    public function getExtraHeaders(): array
+    {
+        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
@@ -23,20 +45,22 @@ class QuoteCartItemRepositoryV1SavePut extends \Kiboko\Magento\v2_2\Runtime\Clie
      * @throws \Kiboko\Magento\v2_2\Exception\QuoteCartItemRepositoryV1SavePutBadRequestException
      * @throws \Kiboko\Magento\v2_2\Exception\QuoteCartItemRepositoryV1SavePutUnauthorizedException
      *
-     * @return null
+     * @return null|\Kiboko\Magento\v2_2\Model\QuoteDataCartItemInterface|\Kiboko\Magento\v2_2\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (200 === $status) {
-            return null;
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\QuoteDataCartItemInterface', 'json');
         }
-        if (400 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\QuoteCartItemRepositoryV1SavePutBadRequestException();
+        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_2\Exception\QuoteCartItemRepositoryV1SavePutBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
         }
-        if (401 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\QuoteCartItemRepositoryV1SavePutUnauthorizedException();
+        if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_2\Exception\QuoteCartItemRepositoryV1SavePutUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
         }
-        return null;
+        if (mb_strpos($contentType, 'application/json') !== false) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+        }
     }
     public function getAuthenticationScopes(): array
     {

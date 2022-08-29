@@ -5,17 +5,34 @@ namespace Kiboko\Magento\v2_2\Endpoint;
 class CustomerAccountManagementV1ValidateResetPasswordLinkTokenGet extends \Kiboko\Magento\v2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_2\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_2\Runtime\Client\EndpointTrait;
+    protected $customerId;
+    protected $resetPasswordLinkToken;
+    /**
+     * Check if password reset token is valid.
+     *
+     * @param int $customerId If 0 is given then a customer will be matched by the RP token.
+     * @param string $resetPasswordLinkToken
+     */
+    public function __construct(int $customerId, string $resetPasswordLinkToken)
+    {
+        $this->customerId = $customerId;
+        $this->resetPasswordLinkToken = $resetPasswordLinkToken;
+    }
     public function getMethod(): string
     {
         return 'GET';
     }
     public function getUri(): string
     {
-        return '/V1/customers/{customerId}/password/resetLinkToken/{resetPasswordLinkToken}';
+        return str_replace(array('{customerId}', '{resetPasswordLinkToken}'), array($this->customerId, $this->resetPasswordLinkToken), '/V1/customers/{customerId}/password/resetLinkToken/{resetPasswordLinkToken}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
+    }
+    public function getExtraHeaders(): array
+    {
+        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
@@ -23,20 +40,22 @@ class CustomerAccountManagementV1ValidateResetPasswordLinkTokenGet extends \Kibo
      * @throws \Kiboko\Magento\v2_2\Exception\CustomerAccountManagementV1ValidateResetPasswordLinkTokenGetBadRequestException
      * @throws \Kiboko\Magento\v2_2\Exception\CustomerAccountManagementV1ValidateResetPasswordLinkTokenGetInternalServerErrorException
      *
-     * @return null
+     * @return null|\Kiboko\Magento\v2_2\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        if (200 === $status) {
-            return null;
+        if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            return json_decode($body);
         }
-        if (400 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\CustomerAccountManagementV1ValidateResetPasswordLinkTokenGetBadRequestException();
+        if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_2\Exception\CustomerAccountManagementV1ValidateResetPasswordLinkTokenGetBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
         }
-        if (500 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\CustomerAccountManagementV1ValidateResetPasswordLinkTokenGetInternalServerErrorException();
+        if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/json') !== false)) {
+            throw new \Kiboko\Magento\v2_2\Exception\CustomerAccountManagementV1ValidateResetPasswordLinkTokenGetInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
         }
-        return null;
+        if (mb_strpos($contentType, 'application/json') !== false) {
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+        }
     }
     public function getAuthenticationScopes(): array
     {
