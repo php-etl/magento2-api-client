@@ -4,32 +4,18 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class GiftWrappingWrappingRepositoryV1DeleteByIdDelete extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    protected $id;
-    /**
-     * Delete gift wrapping
-     *
-     * @param int $id 
-     */
-    public function __construct(int $id)
-    {
-        $this->id = $id;
-    }
     use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'DELETE';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
-        return str_replace(array('{id}'), array($this->id), '/V1/gift-wrappings/{id}');
+        return '/V1/gift-wrappings/{id}';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders() : array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
@@ -37,22 +23,22 @@ class GiftWrappingWrappingRepositoryV1DeleteByIdDelete extends \Kiboko\Magento\v
      * @throws \Kiboko\Magento\v2_3\Exception\GiftWrappingWrappingRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\v2_3\Exception\GiftWrappingWrappingRepositoryV1DeleteByIdDeleteUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_3\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\GiftWrappingWrappingRepositoryV1DeleteByIdDeleteBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\GiftWrappingWrappingRepositoryV1DeleteByIdDeleteBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\GiftWrappingWrappingRepositoryV1DeleteByIdDeleteUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\GiftWrappingWrappingRepositoryV1DeleteByIdDeleteUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
+        return null;
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return array();
     }

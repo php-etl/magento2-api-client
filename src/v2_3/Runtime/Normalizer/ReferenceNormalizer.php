@@ -4,6 +4,7 @@ namespace Kiboko\Magento\v2_3\Runtime\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 class ReferenceNormalizer implements NormalizerInterface
 {
     /**
@@ -18,7 +19,7 @@ class ReferenceNormalizer implements NormalizerInterface
     /**
      * {@inheritdoc}
      */
-    public function supportsNormalization($data, $format = null) : bool
+    public function supportsNormalization($data, $format = null): bool
     {
         return $data instanceof Reference;
     }

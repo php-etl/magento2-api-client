@@ -17,26 +17,22 @@ class QuoteGuestCartManagementV1CreateEmptyCartPost extends \Kiboko\Magento\v2_2
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
-    }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_2\Exception\QuoteGuestCartManagementV1CreateEmptyCartPostBadRequestException
      *
-     * @return null|\Kiboko\Magento\v2_2\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\QuoteGuestCartManagementV1CreateEmptyCartPostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\QuoteGuestCartManagementV1CreateEmptyCartPostBadRequestException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

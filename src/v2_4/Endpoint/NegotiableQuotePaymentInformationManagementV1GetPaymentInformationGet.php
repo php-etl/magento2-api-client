@@ -5,48 +5,34 @@ namespace Kiboko\Magento\v2_4\Endpoint;
 class NegotiableQuotePaymentInformationManagementV1GetPaymentInformationGet extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
-    protected $cartId;
-    /**
-     * Get payment information
-     *
-     * @param int $cartId
-     */
-    public function __construct(int $cartId)
-    {
-        $this->cartId = $cartId;
-    }
     public function getMethod(): string
     {
         return 'GET';
     }
     public function getUri(): string
     {
-        return str_replace(array('{cartId}'), array($this->cartId), '/V1/negotiable-carts/{cartId}/payment-information');
+        return '/V1/negotiable-carts/{cartId}/payment-information';
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_4\Exception\NegotiableQuotePaymentInformationManagementV1GetPaymentInformationGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\CheckoutDataPaymentDetailsInterface|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\CheckoutDataPaymentDetailsInterface', 'json');
+            return null;
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\NegotiableQuotePaymentInformationManagementV1GetPaymentInformationGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\NegotiableQuotePaymentInformationManagementV1GetPaymentInformationGetUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

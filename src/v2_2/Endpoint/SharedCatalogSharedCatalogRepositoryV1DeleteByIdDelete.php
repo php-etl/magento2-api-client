@@ -5,31 +5,17 @@ namespace Kiboko\Magento\v2_2\Endpoint;
 class SharedCatalogSharedCatalogRepositoryV1DeleteByIdDelete extends \Kiboko\Magento\v2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_2\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_2\Runtime\Client\EndpointTrait;
-    protected $sharedCatalogId;
-    /**
-     * Delete a shared catalog by ID.
-     *
-     * @param int $sharedCatalogId
-     */
-    public function __construct(int $sharedCatalogId)
-    {
-        $this->sharedCatalogId = $sharedCatalogId;
-    }
     public function getMethod(): string
     {
         return 'DELETE';
     }
     public function getUri(): string
     {
-        return str_replace(array('{sharedCatalogId}'), array($this->sharedCatalogId), '/V1/sharedCatalog/{sharedCatalogId}');
+        return '/V1/sharedCatalog/{sharedCatalogId}';
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
@@ -38,23 +24,23 @@ class SharedCatalogSharedCatalogRepositoryV1DeleteByIdDelete extends \Kiboko\Mag
      * @throws \Kiboko\Magento\v2_2\Exception\SharedCatalogSharedCatalogRepositoryV1DeleteByIdDeleteUnauthorizedException
      * @throws \Kiboko\Magento\v2_2\Exception\SharedCatalogSharedCatalogRepositoryV1DeleteByIdDeleteInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_2\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\SharedCatalogSharedCatalogRepositoryV1DeleteByIdDeleteBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\SharedCatalogSharedCatalogRepositoryV1DeleteByIdDeleteBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\SharedCatalogSharedCatalogRepositoryV1DeleteByIdDeleteUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\SharedCatalogSharedCatalogRepositoryV1DeleteByIdDeleteUnauthorizedException();
         }
         if (500 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\SharedCatalogSharedCatalogRepositoryV1DeleteByIdDeleteInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\SharedCatalogSharedCatalogRepositoryV1DeleteByIdDeleteInternalServerErrorException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

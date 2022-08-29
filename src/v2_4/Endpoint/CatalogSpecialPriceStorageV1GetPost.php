@@ -5,15 +5,6 @@ namespace Kiboko\Magento\v2_4\Endpoint;
 class CatalogSpecialPriceStorageV1GetPost extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
-    /**
-     * Return product's special price. In case of at least one of skus is not found exception will be thrown.
-     *
-     * @param \Kiboko\Magento\v2_4\Model\V1ProductsSpecialPriceInformationPostBody $catalogSpecialPriceStorageV1GetPostBody
-     */
-    public function __construct(\Kiboko\Magento\v2_4\Model\V1ProductsSpecialPriceInformationPostBody $catalogSpecialPriceStorageV1GetPostBody)
-    {
-        $this->body = $catalogSpecialPriceStorageV1GetPostBody;
-    }
     public function getMethod(): string
     {
         return 'POST';
@@ -24,11 +15,7 @@ class CatalogSpecialPriceStorageV1GetPost extends \Kiboko\Magento\v2_4\Runtime\C
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        return $this->getSerializedBody($serializer);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
+        return array(array(), null);
     }
     /**
      * {@inheritdoc}
@@ -36,20 +23,20 @@ class CatalogSpecialPriceStorageV1GetPost extends \Kiboko\Magento\v2_4\Runtime\C
      * @throws \Kiboko\Magento\v2_4\Exception\CatalogSpecialPriceStorageV1GetPostBadRequestException
      * @throws \Kiboko\Magento\v2_4\Exception\CatalogSpecialPriceStorageV1GetPostUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\CatalogDataSpecialPriceInterface[]|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\CatalogDataSpecialPriceInterface[]', 'json');
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\CatalogSpecialPriceStorageV1GetPostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\CatalogSpecialPriceStorageV1GetPostBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\CatalogSpecialPriceStorageV1GetPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\CatalogSpecialPriceStorageV1GetPostUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

@@ -17,30 +17,26 @@ class TemandoShippingCollectionPointCartCollectionPointManagementV1DeleteSearchR
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
-    }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_2\Exception\TemandoShippingCollectionPointCartCollectionPointManagementV1DeleteSearchRequestDeleteUnauthorizedException
      * @throws \Kiboko\Magento\v2_2\Exception\TemandoShippingCollectionPointCartCollectionPointManagementV1DeleteSearchRequestDeleteInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_2\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\TemandoShippingCollectionPointCartCollectionPointManagementV1DeleteSearchRequestDeleteUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\TemandoShippingCollectionPointCartCollectionPointManagementV1DeleteSearchRequestDeleteUnauthorizedException();
         }
         if (500 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\TemandoShippingCollectionPointCartCollectionPointManagementV1DeleteSearchRequestDeleteInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\TemandoShippingCollectionPointCartCollectionPointManagementV1DeleteSearchRequestDeleteInternalServerErrorException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

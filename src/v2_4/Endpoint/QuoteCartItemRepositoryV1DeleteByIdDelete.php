@@ -5,34 +5,17 @@ namespace Kiboko\Magento\v2_4\Endpoint;
 class QuoteCartItemRepositoryV1DeleteByIdDelete extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
-    protected $cartId;
-    protected $itemId;
-    /**
-     * Removes the specified item from the specified cart.
-     *
-     * @param int $cartId The cart ID.
-     * @param int $itemId The item ID of the item to be removed.
-     */
-    public function __construct(int $cartId, int $itemId)
-    {
-        $this->cartId = $cartId;
-        $this->itemId = $itemId;
-    }
     public function getMethod(): string
     {
         return 'DELETE';
     }
     public function getUri(): string
     {
-        return str_replace(array('{cartId}', '{itemId}'), array($this->cartId, $this->itemId), '/V1/carts/{cartId}/items/{itemId}');
+        return '/V1/carts/mine/items/{itemId}';
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
@@ -40,20 +23,20 @@ class QuoteCartItemRepositoryV1DeleteByIdDelete extends \Kiboko\Magento\v2_4\Run
      * @throws \Kiboko\Magento\v2_4\Exception\QuoteCartItemRepositoryV1DeleteByIdDeleteBadRequestException
      * @throws \Kiboko\Magento\v2_4\Exception\QuoteCartItemRepositoryV1DeleteByIdDeleteUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\QuoteCartItemRepositoryV1DeleteByIdDeleteBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\QuoteCartItemRepositoryV1DeleteByIdDeleteBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\QuoteCartItemRepositoryV1DeleteByIdDeleteUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\QuoteCartItemRepositoryV1DeleteByIdDeleteUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

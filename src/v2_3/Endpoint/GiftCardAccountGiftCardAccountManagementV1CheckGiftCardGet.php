@@ -4,55 +4,41 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class GiftCardAccountGiftCardAccountManagementV1CheckGiftCardGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    protected $giftCardCode;
-    /**
-     * Check gift card balance if applied to given cart.
-     *
-     * @param string $giftCardCode 
-     */
-    public function __construct(string $giftCardCode)
-    {
-        $this->giftCardCode = $giftCardCode;
-    }
     use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'GET';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
-        return str_replace(array('{giftCardCode}'), array($this->giftCardCode), '/V1/carts/mine/checkGiftCard/{giftCardCode}');
+        return '/V1/carts/mine/checkGiftCard/{giftCardCode}';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders() : array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
      *
+     * @throws \Kiboko\Magento\v2_3\Exception\GiftCardAccountGiftCardAccountManagementV1CheckGiftCardGetBadRequestException
      * @throws \Kiboko\Magento\v2_3\Exception\GiftCardAccountGiftCardAccountManagementV1CheckGiftCardGetUnauthorizedException
-     * @throws \Kiboko\Magento\v2_3\Exception\GiftCardAccountGiftCardAccountManagementV1CheckGiftCardGetInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_3\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
+        }
+        if (400 === $status) {
+            throw new \Kiboko\Magento\v2_3\Exception\GiftCardAccountGiftCardAccountManagementV1CheckGiftCardGetBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\GiftCardAccountGiftCardAccountManagementV1CheckGiftCardGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\GiftCardAccountGiftCardAccountManagementV1CheckGiftCardGetUnauthorizedException();
         }
-        if (500 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\GiftCardAccountGiftCardAccountManagementV1CheckGiftCardGetInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
-        }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
+        return null;
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return array();
     }

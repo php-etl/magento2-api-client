@@ -5,48 +5,34 @@ namespace Kiboko\Magento\v2_2\Endpoint;
 class TaxTaxRuleRepositoryV1GetGet extends \Kiboko\Magento\v2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_2\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_2\Runtime\Client\EndpointTrait;
-    protected $ruleId;
-    /**
-     * Get TaxRule
-     *
-     * @param int $ruleId
-     */
-    public function __construct(int $ruleId)
-    {
-        $this->ruleId = $ruleId;
-    }
     public function getMethod(): string
     {
         return 'GET';
     }
     public function getUri(): string
     {
-        return str_replace(array('{ruleId}'), array($this->ruleId), '/V1/taxRules/{ruleId}');
+        return '/V1/taxRules/{ruleId}';
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_2\Exception\TaxTaxRuleRepositoryV1GetGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_2\Model\TaxDataTaxRuleInterface|\Kiboko\Magento\v2_2\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\TaxDataTaxRuleInterface', 'json');
+            return null;
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\TaxTaxRuleRepositoryV1GetGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\TaxTaxRuleRepositoryV1GetGetUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

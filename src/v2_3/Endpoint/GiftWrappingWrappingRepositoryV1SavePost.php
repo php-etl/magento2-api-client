@@ -4,31 +4,18 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class GiftWrappingWrappingRepositoryV1SavePost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    /**
-     * Create/Update new gift wrapping with data object values
-     *
-     * @param \Kiboko\Magento\v2_3\Model\V1GiftWrappingsPostBody $giftWrappingWrappingRepositoryV1SavePostBody 
-     */
-    public function __construct(\Kiboko\Magento\v2_3\Model\V1GiftWrappingsPostBody $giftWrappingWrappingRepositoryV1SavePostBody)
-    {
-        $this->body = $giftWrappingWrappingRepositoryV1SavePostBody;
-    }
     use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'POST';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
         return '/V1/gift-wrappings';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        return $this->getSerializedBody($serializer);
-    }
-    public function getExtraHeaders() : array
-    {
-        return array('Accept' => array('application/json'));
+        return array(array(), null);
     }
     /**
      * {@inheritdoc}
@@ -36,22 +23,22 @@ class GiftWrappingWrappingRepositoryV1SavePost extends \Kiboko\Magento\v2_3\Runt
      * @throws \Kiboko\Magento\v2_3\Exception\GiftWrappingWrappingRepositoryV1SavePostBadRequestException
      * @throws \Kiboko\Magento\v2_3\Exception\GiftWrappingWrappingRepositoryV1SavePostUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_3\Model\GiftWrappingDataWrappingInterface|\Kiboko\Magento\v2_3\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\GiftWrappingDataWrappingInterface', 'json');
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\GiftWrappingWrappingRepositoryV1SavePostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\GiftWrappingWrappingRepositoryV1SavePostBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\GiftWrappingWrappingRepositoryV1SavePostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\GiftWrappingWrappingRepositoryV1SavePostUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
+        return null;
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return array();
     }

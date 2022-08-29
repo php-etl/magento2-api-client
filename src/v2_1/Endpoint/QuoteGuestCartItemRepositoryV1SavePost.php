@@ -4,49 +4,37 @@ namespace Kiboko\Magento\v2_1\Endpoint;
 
 class QuoteGuestCartItemRepositoryV1SavePost extends \Kiboko\Magento\v2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_1\Runtime\Client\Endpoint
 {
-    protected $cartId;
-    /**
-     * Add the specified item to the specified cart.
-     *
-     * @param string $cartId 
-     * @param \Kiboko\Magento\v2_1\Model\V1GuestCartsCartIdItemsPostBody $$body 
-     */
-    public function __construct(string $cartId, \Kiboko\Magento\v2_1\Model\V1GuestCartsCartIdItemsPostBody $$body)
-    {
-        $this->cartId = $cartId;
-        $this->body = $$body;
-    }
     use \Kiboko\Magento\v2_1\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'POST';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
-        return str_replace(array('{cartId}'), array($this->cartId), '/V1/guest-carts/{cartId}/items');
+        return '/V1/guest-carts/{cartId}/items';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        return $this->getSerializedBody($serializer);
+        return array(array(), null);
     }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_1\Exception\QuoteGuestCartItemRepositoryV1SavePostBadRequestException
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\QuoteDataCartItemInterface|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\QuoteDataCartItemInterface', 'json');
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\QuoteGuestCartItemRepositoryV1SavePostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_1\Exception\QuoteGuestCartItemRepositoryV1SavePostBadRequestException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+        return null;
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return array();
     }

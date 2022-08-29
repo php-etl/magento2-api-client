@@ -5,23 +5,13 @@ namespace Kiboko\Magento\v2_1\Endpoint;
 class QuoteGuestPaymentMethodManagementV1GetListGet extends \Kiboko\Magento\v2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_1\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_1\Runtime\Client\EndpointTrait;
-    protected $cartId;
-    /**
-     * List available payment methods for a specified shopping cart. This call returns an array of objects, but detailed information about each object’s attributes might not be included.  See http://devdocs.magento.com/codelinks/attributes.html#GuestPaymentMethodManagementInterface to determine which call to use to get detailed information about all attributes for an object.
-     *
-     * @param string $cartId The cart ID.
-     */
-    public function __construct(string $cartId)
-    {
-        $this->cartId = $cartId;
-    }
     public function getMethod(): string
     {
         return 'GET';
     }
     public function getUri(): string
     {
-        return str_replace(array('{cartId}'), array($this->cartId), '/V1/guest-carts/{cartId}/payment-methods');
+        return '/V1/guest-carts/{cartId}/payment-methods';
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
@@ -32,17 +22,17 @@ class QuoteGuestPaymentMethodManagementV1GetListGet extends \Kiboko\Magento\v2_1
      *
      * @throws \Kiboko\Magento\v2_1\Exception\QuoteGuestPaymentMethodManagementV1GetListGetBadRequestException
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\QuoteDataPaymentMethodInterface[]|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\QuoteDataPaymentMethodInterface[]', 'json');
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\QuoteGuestPaymentMethodManagementV1GetListGetBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_1\Exception\QuoteGuestPaymentMethodManagementV1GetListGetBadRequestException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

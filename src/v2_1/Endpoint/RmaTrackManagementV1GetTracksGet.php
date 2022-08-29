@@ -5,23 +5,13 @@ namespace Kiboko\Magento\v2_1\Endpoint;
 class RmaTrackManagementV1GetTracksGet extends \Kiboko\Magento\v2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_1\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_1\Runtime\Client\EndpointTrait;
-    protected $id;
-    /**
-     * Get track list
-     *
-     * @param int $id
-     */
-    public function __construct(int $id)
-    {
-        $this->id = $id;
-    }
     public function getMethod(): string
     {
         return 'GET';
     }
     public function getUri(): string
     {
-        return str_replace(array('{id}'), array($this->id), '/V1/returns/{id}/tracking-numbers');
+        return '/V1/returns/{id}/tracking-numbers';
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
@@ -32,17 +22,17 @@ class RmaTrackManagementV1GetTracksGet extends \Kiboko\Magento\v2_1\Runtime\Clie
      *
      * @throws \Kiboko\Magento\v2_1\Exception\RmaTrackManagementV1GetTracksGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\RmaDataTrackSearchResultInterface|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\RmaDataTrackSearchResultInterface', 'json');
+            return null;
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\RmaTrackManagementV1GetTracksGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_1\Exception\RmaTrackManagementV1GetTracksGetUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

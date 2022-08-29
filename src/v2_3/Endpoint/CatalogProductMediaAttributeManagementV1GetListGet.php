@@ -4,51 +4,37 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CatalogProductMediaAttributeManagementV1GetListGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    protected $attributeSetName;
-    /**
-     * Retrieve the list of media attributes (fronted input type is media_image) assigned to the given attribute set.
-     *
-     * @param string $attributeSetName 
-     */
-    public function __construct(string $attributeSetName)
-    {
-        $this->attributeSetName = $attributeSetName;
-    }
     use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'GET';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
-        return str_replace(array('{attributeSetName}'), array($this->attributeSetName), '/V1/products/media/types/{attributeSetName}');
+        return '/V1/products/media/types/{attributeSetName}';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders() : array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_3\Exception\CatalogProductMediaAttributeManagementV1GetListGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_3\Model\CatalogDataProductAttributeInterface[]|\Kiboko\Magento\v2_3\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataProductAttributeInterface[]', 'json');
+            return null;
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\CatalogProductMediaAttributeManagementV1GetListGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\CatalogProductMediaAttributeManagementV1GetListGetUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
+        return null;
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return array();
     }

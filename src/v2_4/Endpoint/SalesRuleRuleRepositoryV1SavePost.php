@@ -5,15 +5,6 @@ namespace Kiboko\Magento\v2_4\Endpoint;
 class SalesRuleRuleRepositoryV1SavePost extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
-    /**
-     * Save sales rule.
-     *
-     * @param \Kiboko\Magento\v2_4\Model\V1SalesRulesPostBody $salesRuleRuleRepositoryV1SavePostBody
-     */
-    public function __construct(\Kiboko\Magento\v2_4\Model\V1SalesRulesPostBody $salesRuleRuleRepositoryV1SavePostBody)
-    {
-        $this->body = $salesRuleRuleRepositoryV1SavePostBody;
-    }
     public function getMethod(): string
     {
         return 'POST';
@@ -24,11 +15,7 @@ class SalesRuleRuleRepositoryV1SavePost extends \Kiboko\Magento\v2_4\Runtime\Cli
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        return $this->getSerializedBody($serializer);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
+        return array(array(), null);
     }
     /**
      * {@inheritdoc}
@@ -37,23 +24,23 @@ class SalesRuleRuleRepositoryV1SavePost extends \Kiboko\Magento\v2_4\Runtime\Cli
      * @throws \Kiboko\Magento\v2_4\Exception\SalesRuleRuleRepositoryV1SavePostUnauthorizedException
      * @throws \Kiboko\Magento\v2_4\Exception\SalesRuleRuleRepositoryV1SavePostInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\SalesRuleDataRuleInterface|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\SalesRuleDataRuleInterface', 'json');
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleRuleRepositoryV1SavePostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleRuleRepositoryV1SavePostBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleRuleRepositoryV1SavePostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleRuleRepositoryV1SavePostUnauthorizedException();
         }
         if (500 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleRuleRepositoryV1SavePostInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleRuleRepositoryV1SavePostInternalServerErrorException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

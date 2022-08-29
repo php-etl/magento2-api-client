@@ -5,48 +5,34 @@ namespace Kiboko\Magento\v2_2\Endpoint;
 class SalesOrderItemRepositoryV1GetGet extends \Kiboko\Magento\v2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_2\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_2\Runtime\Client\EndpointTrait;
-    protected $id;
-    /**
-     * Loads a specified order item.
-     *
-     * @param int $id The order item ID.
-     */
-    public function __construct(int $id)
-    {
-        $this->id = $id;
-    }
     public function getMethod(): string
     {
         return 'GET';
     }
     public function getUri(): string
     {
-        return str_replace(array('{id}'), array($this->id), '/V1/orders/items/{id}');
+        return '/V1/orders/items/{id}';
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_2\Exception\SalesOrderItemRepositoryV1GetGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_2\Model\SalesDataOrderItemInterface|\Kiboko\Magento\v2_2\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\SalesDataOrderItemInterface', 'json');
+            return null;
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\SalesOrderItemRepositoryV1GetGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\SalesOrderItemRepositoryV1GetGetUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

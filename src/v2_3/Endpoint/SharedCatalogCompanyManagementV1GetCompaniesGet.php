@@ -4,51 +4,37 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class SharedCatalogCompanyManagementV1GetCompaniesGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    protected $sharedCatalogId;
-    /**
-     * Return the list of company IDs for the companies assigned to the selected catalog.
-     *
-     * @param int $sharedCatalogId 
-     */
-    public function __construct(int $sharedCatalogId)
-    {
-        $this->sharedCatalogId = $sharedCatalogId;
-    }
     use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'GET';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
-        return str_replace(array('{sharedCatalogId}'), array($this->sharedCatalogId), '/V1/sharedCatalog/{sharedCatalogId}/companies');
+        return '/V1/sharedCatalog/{sharedCatalogId}/companies';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders() : array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_3\Exception\SharedCatalogCompanyManagementV1GetCompaniesGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_3\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\SharedCatalogCompanyManagementV1GetCompaniesGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\SharedCatalogCompanyManagementV1GetCompaniesGetUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
+        return null;
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return array();
     }

@@ -4,32 +4,18 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CustomerAccountManagementV1GetConfirmationStatusGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    protected $customerId;
-    /**
-     * Gets the account confirmation status.
-     *
-     * @param int $customerId 
-     */
-    public function __construct(int $customerId)
-    {
-        $this->customerId = $customerId;
-    }
     use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'GET';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
-        return str_replace(array('{customerId}'), array($this->customerId), '/V1/customers/{customerId}/confirm');
+        return '/V1/customers/{customerId}/confirm';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders() : array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
@@ -37,22 +23,22 @@ class CustomerAccountManagementV1GetConfirmationStatusGet extends \Kiboko\Magent
      * @throws \Kiboko\Magento\v2_3\Exception\CustomerAccountManagementV1GetConfirmationStatusGetUnauthorizedException
      * @throws \Kiboko\Magento\v2_3\Exception\CustomerAccountManagementV1GetConfirmationStatusGetInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_3\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\CustomerAccountManagementV1GetConfirmationStatusGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\CustomerAccountManagementV1GetConfirmationStatusGetUnauthorizedException();
         }
         if (500 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\CustomerAccountManagementV1GetConfirmationStatusGetInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\CustomerAccountManagementV1GetConfirmationStatusGetInternalServerErrorException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
+        return null;
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return array();
     }

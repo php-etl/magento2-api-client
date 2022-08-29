@@ -4,54 +4,37 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class QuoteGuestCouponManagementV1SetPut extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    protected $cartId;
-    protected $couponCode;
-    /**
-     * Add a coupon by code to a specified cart.
-     *
-     * @param string $cartId The cart ID.
-     * @param string $couponCode The coupon code data.
-     */
-    public function __construct(string $cartId, string $couponCode)
-    {
-        $this->cartId = $cartId;
-        $this->couponCode = $couponCode;
-    }
     use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'PUT';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
-        return str_replace(array('{cartId}', '{couponCode}'), array($this->cartId, $this->couponCode), '/V1/guest-carts/{cartId}/coupons/{couponCode}');
+        return '/V1/guest-carts/{cartId}/coupons/{couponCode}';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders() : array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_3\Exception\QuoteGuestCouponManagementV1SetPutBadRequestException
      *
-     * @return null|\Kiboko\Magento\v2_3\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\QuoteGuestCouponManagementV1SetPutBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\QuoteGuestCouponManagementV1SetPutBadRequestException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
+        return null;
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return array();
     }

@@ -4,35 +4,18 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CatalogProductAttributeMediaGalleryManagementV1GetGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    protected $sku;
-    protected $entryId;
-    /**
-     * Return information about gallery entry
-     *
-     * @param string $sku 
-     * @param int $entryId 
-     */
-    public function __construct(string $sku, int $entryId)
-    {
-        $this->sku = $sku;
-        $this->entryId = $entryId;
-    }
     use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'GET';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
-        return str_replace(array('{sku}', '{entryId}'), array($this->sku, $this->entryId), '/V1/products/{sku}/media/{entryId}');
+        return '/V1/products/{sku}/media/{entryId}';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders() : array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
@@ -40,22 +23,22 @@ class CatalogProductAttributeMediaGalleryManagementV1GetGet extends \Kiboko\Mage
      * @throws \Kiboko\Magento\v2_3\Exception\CatalogProductAttributeMediaGalleryManagementV1GetGetBadRequestException
      * @throws \Kiboko\Magento\v2_3\Exception\CatalogProductAttributeMediaGalleryManagementV1GetGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_3\Model\CatalogDataProductAttributeMediaGalleryEntryInterface|\Kiboko\Magento\v2_3\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataProductAttributeMediaGalleryEntryInterface', 'json');
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\CatalogProductAttributeMediaGalleryManagementV1GetGetBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\CatalogProductAttributeMediaGalleryManagementV1GetGetBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\CatalogProductAttributeMediaGalleryManagementV1GetGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\CatalogProductAttributeMediaGalleryManagementV1GetGetUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
+        return null;
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return array();
     }

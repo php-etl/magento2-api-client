@@ -5,15 +5,6 @@ namespace Kiboko\Magento\v2_4\Endpoint;
 class CheckoutPaymentInformationManagementV1SavePaymentInformationPost extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
-    /**
-     * Set payment information for a specified cart.
-     *
-     * @param \Kiboko\Magento\v2_4\Model\V1CartsMineSetPaymentInformationPostBody $checkoutPaymentInformationManagementV1SavePaymentInformationPostBody
-     */
-    public function __construct(\Kiboko\Magento\v2_4\Model\V1CartsMineSetPaymentInformationPostBody $checkoutPaymentInformationManagementV1SavePaymentInformationPostBody)
-    {
-        $this->body = $checkoutPaymentInformationManagementV1SavePaymentInformationPostBody;
-    }
     public function getMethod(): string
     {
         return 'POST';
@@ -24,11 +15,7 @@ class CheckoutPaymentInformationManagementV1SavePaymentInformationPost extends \
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        return $this->getSerializedBody($serializer);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
+        return array(array(), null);
     }
     /**
      * {@inheritdoc}
@@ -36,20 +23,20 @@ class CheckoutPaymentInformationManagementV1SavePaymentInformationPost extends \
      * @throws \Kiboko\Magento\v2_4\Exception\CheckoutPaymentInformationManagementV1SavePaymentInformationPostBadRequestException
      * @throws \Kiboko\Magento\v2_4\Exception\CheckoutPaymentInformationManagementV1SavePaymentInformationPostUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\CheckoutPaymentInformationManagementV1SavePaymentInformationPostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\CheckoutPaymentInformationManagementV1SavePaymentInformationPostBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\CheckoutPaymentInformationManagementV1SavePaymentInformationPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\CheckoutPaymentInformationManagementV1SavePaymentInformationPostUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

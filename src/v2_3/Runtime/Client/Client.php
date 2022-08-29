@@ -9,6 +9,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\StreamInterface;
 use Symfony\Component\Serializer\SerializerInterface;
+
 abstract class Client
 {
     public const FETCH_RESPONSE = 'response';
@@ -44,11 +45,11 @@ abstract class Client
         }
         return $endpoint->parseResponse($this->processEndpoint($endpoint), $this->serializer, $fetch);
     }
-    public function executeRawEndpoint(Endpoint $endpoint) : ResponseInterface
+    public function executeRawEndpoint(Endpoint $endpoint): ResponseInterface
     {
         return $this->processEndpoint($endpoint);
     }
-    private function processEndpoint(Endpoint $endpoint) : ResponseInterface
+    private function processEndpoint(Endpoint $endpoint): ResponseInterface
     {
         [$bodyHeaders, $body] = $endpoint->getBody($this->serializer, $this->streamFactory);
         $queryString = $endpoint->getQueryString();

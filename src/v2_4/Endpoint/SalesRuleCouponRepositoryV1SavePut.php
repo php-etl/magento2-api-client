@@ -5,33 +5,17 @@ namespace Kiboko\Magento\v2_4\Endpoint;
 class SalesRuleCouponRepositoryV1SavePut extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
-    protected $couponId;
-    /**
-     * Save a coupon.
-     *
-     * @param string $couponId
-     * @param \Kiboko\Magento\v2_4\Model\V1CouponsCouponIdPutBody $salesRuleCouponRepositoryV1SavePutBody
-     */
-    public function __construct(string $couponId, \Kiboko\Magento\v2_4\Model\V1CouponsCouponIdPutBody $salesRuleCouponRepositoryV1SavePutBody)
-    {
-        $this->couponId = $couponId;
-        $this->body = $salesRuleCouponRepositoryV1SavePutBody;
-    }
     public function getMethod(): string
     {
         return 'PUT';
     }
     public function getUri(): string
     {
-        return str_replace(array('{couponId}'), array($this->couponId), '/V1/coupons/{couponId}');
+        return '/V1/coupons/{couponId}';
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        return $this->getSerializedBody($serializer);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
+        return array(array(), null);
     }
     /**
      * {@inheritdoc}
@@ -40,23 +24,23 @@ class SalesRuleCouponRepositoryV1SavePut extends \Kiboko\Magento\v2_4\Runtime\Cl
      * @throws \Kiboko\Magento\v2_4\Exception\SalesRuleCouponRepositoryV1SavePutUnauthorizedException
      * @throws \Kiboko\Magento\v2_4\Exception\SalesRuleCouponRepositoryV1SavePutInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\SalesRuleDataCouponInterface|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\SalesRuleDataCouponInterface', 'json');
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleCouponRepositoryV1SavePutBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleCouponRepositoryV1SavePutBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleCouponRepositoryV1SavePutUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleCouponRepositoryV1SavePutUnauthorizedException();
         }
         if (500 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleCouponRepositoryV1SavePutInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleCouponRepositoryV1SavePutInternalServerErrorException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

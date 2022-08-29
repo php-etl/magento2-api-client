@@ -5,46 +5,30 @@ namespace Kiboko\Magento\v2_4\Endpoint;
 class CheckoutGuestTotalsInformationManagementV1CalculatePost extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
-    protected $cartId;
-    /**
-     * Calculate quote totals based on address and shipping method.
-     *
-     * @param string $cartId
-     * @param \Kiboko\Magento\v2_4\Model\V1GuestCartsCartIdTotalsInformationPostBody $checkoutGuestTotalsInformationManagementV1CalculatePostBody
-     */
-    public function __construct(string $cartId, \Kiboko\Magento\v2_4\Model\V1GuestCartsCartIdTotalsInformationPostBody $checkoutGuestTotalsInformationManagementV1CalculatePostBody)
-    {
-        $this->cartId = $cartId;
-        $this->body = $checkoutGuestTotalsInformationManagementV1CalculatePostBody;
-    }
     public function getMethod(): string
     {
         return 'POST';
     }
     public function getUri(): string
     {
-        return str_replace(array('{cartId}'), array($this->cartId), '/V1/guest-carts/{cartId}/totals-information');
+        return '/V1/guest-carts/{cartId}/totals-information';
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        return $this->getSerializedBody($serializer);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
+        return array(array(), null);
     }
     /**
      * {@inheritdoc}
      *
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\QuoteDataTotalsInterface|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataTotalsInterface', 'json');
+            return null;
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

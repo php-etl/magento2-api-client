@@ -4,32 +4,18 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class QuoteCartRepositoryV1GetGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    protected $cartId;
-    /**
-     * Enables an administrative user to return information for a specified cart.
-     *
-     * @param int $cartId 
-     */
-    public function __construct(int $cartId)
-    {
-        $this->cartId = $cartId;
-    }
     use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'GET';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
-        return str_replace(array('{cartId}'), array($this->cartId), '/V1/carts/{cartId}');
+        return '/V1/carts/{cartId}';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders() : array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
@@ -37,22 +23,22 @@ class QuoteCartRepositoryV1GetGet extends \Kiboko\Magento\v2_3\Runtime\Client\Ba
      * @throws \Kiboko\Magento\v2_3\Exception\QuoteCartRepositoryV1GetGetBadRequestException
      * @throws \Kiboko\Magento\v2_3\Exception\QuoteCartRepositoryV1GetGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_3\Model\QuoteDataCartInterface|\Kiboko\Magento\v2_3\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataCartInterface', 'json');
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\QuoteCartRepositoryV1GetGetBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\QuoteCartRepositoryV1GetGetBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\QuoteCartRepositoryV1GetGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\QuoteCartRepositoryV1GetGetUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
+        return null;
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return array();
     }

@@ -5,17 +5,6 @@ namespace Kiboko\Magento\v2_1\Endpoint;
 class CustomerAddressMetadataV1GetCustomAttributesMetadataGet extends \Kiboko\Magento\v2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_1\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_1\Runtime\Client\EndpointTrait;
-    /**
-     * Get custom attributes metadata for the given data interface.
-     *
-     * @param array $queryParameters {
-     *     @var string $dataInterfaceName
-     * }
-     */
-    public function __construct(array $queryParameters = array())
-    {
-        $this->queryParameters = $queryParameters;
-    }
     public function getMethod(): string
     {
         return 'GET';
@@ -28,35 +17,26 @@ class CustomerAddressMetadataV1GetCustomAttributesMetadataGet extends \Kiboko\Ma
     {
         return array(array(), null);
     }
-    protected function getQueryOptionsResolver(): \Symfony\Component\OptionsResolver\OptionsResolver
-    {
-        $optionsResolver = parent::getQueryOptionsResolver();
-        $optionsResolver->setDefined(array('dataInterfaceName'));
-        $optionsResolver->setRequired(array());
-        $optionsResolver->setDefaults(array());
-        $optionsResolver->setAllowedTypes('dataInterfaceName', array('string'));
-        return $optionsResolver;
-    }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_1\Exception\CustomerAddressMetadataV1GetCustomAttributesMetadataGetUnauthorizedException
      * @throws \Kiboko\Magento\v2_1\Exception\CustomerAddressMetadataV1GetCustomAttributesMetadataGetInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\CustomerDataAttributeMetadataInterface[]|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\CustomerDataAttributeMetadataInterface[]', 'json');
+            return null;
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\CustomerAddressMetadataV1GetCustomAttributesMetadataGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_1\Exception\CustomerAddressMetadataV1GetCustomAttributesMetadataGetUnauthorizedException();
         }
         if (500 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\CustomerAddressMetadataV1GetCustomAttributesMetadataGetInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_1\Exception\CustomerAddressMetadataV1GetCustomAttributesMetadataGetInternalServerErrorException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

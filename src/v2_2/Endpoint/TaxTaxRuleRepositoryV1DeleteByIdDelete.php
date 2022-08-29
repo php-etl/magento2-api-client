@@ -5,31 +5,17 @@ namespace Kiboko\Magento\v2_2\Endpoint;
 class TaxTaxRuleRepositoryV1DeleteByIdDelete extends \Kiboko\Magento\v2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_2\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_2\Runtime\Client\EndpointTrait;
-    protected $ruleId;
-    /**
-     * Delete TaxRule
-     *
-     * @param int $ruleId
-     */
-    public function __construct(int $ruleId)
-    {
-        $this->ruleId = $ruleId;
-    }
     public function getMethod(): string
     {
         return 'DELETE';
     }
     public function getUri(): string
     {
-        return str_replace(array('{ruleId}'), array($this->ruleId), '/V1/taxRules/{ruleId}');
+        return '/V1/taxRules/{ruleId}';
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
@@ -38,23 +24,23 @@ class TaxTaxRuleRepositoryV1DeleteByIdDelete extends \Kiboko\Magento\v2_2\Runtim
      * @throws \Kiboko\Magento\v2_2\Exception\TaxTaxRuleRepositoryV1DeleteByIdDeleteUnauthorizedException
      * @throws \Kiboko\Magento\v2_2\Exception\TaxTaxRuleRepositoryV1DeleteByIdDeleteInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_2\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\TaxTaxRuleRepositoryV1DeleteByIdDeleteBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\TaxTaxRuleRepositoryV1DeleteByIdDeleteBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\TaxTaxRuleRepositoryV1DeleteByIdDeleteUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\TaxTaxRuleRepositoryV1DeleteByIdDeleteUnauthorizedException();
         }
         if (500 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\TaxTaxRuleRepositoryV1DeleteByIdDeleteInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\TaxTaxRuleRepositoryV1DeleteByIdDeleteInternalServerErrorException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

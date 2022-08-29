@@ -20,27 +20,27 @@ class CustomerCustomerRepositoryV1GetByIdGet extends \Kiboko\Magento\v2_1\Runtim
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_1\Exception\CustomerCustomerRepositoryV1GetByIdGetUnauthorizedException
      * @throws \Kiboko\Magento\v2_1\Exception\CustomerCustomerRepositoryV1GetByIdGetBadRequestException
+     * @throws \Kiboko\Magento\v2_1\Exception\CustomerCustomerRepositoryV1GetByIdGetUnauthorizedException
      * @throws \Kiboko\Magento\v2_1\Exception\CustomerCustomerRepositoryV1GetByIdGetInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\CustomerDataCustomerInterface|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\CustomerDataCustomerInterface', 'json');
-        }
-        if (401 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\CustomerCustomerRepositoryV1GetByIdGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\CustomerCustomerRepositoryV1GetByIdGetBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_1\Exception\CustomerCustomerRepositoryV1GetByIdGetBadRequestException();
+        }
+        if (401 === $status) {
+            throw new \Kiboko\Magento\v2_1\Exception\CustomerCustomerRepositoryV1GetByIdGetUnauthorizedException();
         }
         if (500 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\CustomerCustomerRepositoryV1GetByIdGetInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_1\Exception\CustomerCustomerRepositoryV1GetByIdGetInternalServerErrorException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

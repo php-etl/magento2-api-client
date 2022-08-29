@@ -20,23 +20,23 @@ class QuoteCouponManagementV1GetGet extends \Kiboko\Magento\v2_1\Runtime\Client\
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_1\Exception\QuoteCouponManagementV1GetGetUnauthorizedException
      * @throws \Kiboko\Magento\v2_1\Exception\QuoteCouponManagementV1GetGetBadRequestException
+     * @throws \Kiboko\Magento\v2_1\Exception\QuoteCouponManagementV1GetGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
-        }
-        if (401 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\QuoteCouponManagementV1GetGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\QuoteCouponManagementV1GetGetBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_1\Exception\QuoteCouponManagementV1GetGetBadRequestException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+        if (401 === $status) {
+            throw new \Kiboko\Magento\v2_1\Exception\QuoteCouponManagementV1GetGetUnauthorizedException();
+        }
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

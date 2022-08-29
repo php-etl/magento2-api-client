@@ -5,20 +5,6 @@ namespace Kiboko\Magento\v2_1\Endpoint;
 class CatalogInventoryStockRegistryV1GetLowStockItemsGet extends \Kiboko\Magento\v2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_1\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_1\Runtime\Client\EndpointTrait;
-    /**
-     * Retrieves a list of SKU's with low inventory qty
-     *
-     * @param array $queryParameters {
-     *     @var int $scopeId
-     *     @var float $qty
-     *     @var int $currentPage
-     *     @var int $pageSize
-     * }
-     */
-    public function __construct(array $queryParameters = array())
-    {
-        $this->queryParameters = $queryParameters;
-    }
     public function getMethod(): string
     {
         return 'GET';
@@ -31,34 +17,22 @@ class CatalogInventoryStockRegistryV1GetLowStockItemsGet extends \Kiboko\Magento
     {
         return array(array(), null);
     }
-    protected function getQueryOptionsResolver(): \Symfony\Component\OptionsResolver\OptionsResolver
-    {
-        $optionsResolver = parent::getQueryOptionsResolver();
-        $optionsResolver->setDefined(array('scopeId', 'qty', 'currentPage', 'pageSize'));
-        $optionsResolver->setRequired(array('scopeId', 'qty'));
-        $optionsResolver->setDefaults(array());
-        $optionsResolver->setAllowedTypes('scopeId', array('int'));
-        $optionsResolver->setAllowedTypes('qty', array('float'));
-        $optionsResolver->setAllowedTypes('currentPage', array('int'));
-        $optionsResolver->setAllowedTypes('pageSize', array('int'));
-        return $optionsResolver;
-    }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_1\Exception\CatalogInventoryStockRegistryV1GetLowStockItemsGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\CatalogInventoryDataStockStatusCollectionInterface|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\CatalogInventoryDataStockStatusCollectionInterface', 'json');
+            return null;
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\CatalogInventoryStockRegistryV1GetLowStockItemsGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_1\Exception\CatalogInventoryStockRegistryV1GetLowStockItemsGetUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

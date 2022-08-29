@@ -17,19 +17,15 @@ class AmazonPaymentOrderInformationManagementV1RemoveOrderReferenceDelete extend
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
-    }
     /**
      * {@inheritdoc}
      *
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

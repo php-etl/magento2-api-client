@@ -5,15 +5,6 @@ namespace Kiboko\Magento\v2_4\Endpoint;
 class SalesRuleCouponManagementV1GeneratePost extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
-    /**
-     * Generate coupon for a rule
-     *
-     * @param \Kiboko\Magento\v2_4\Model\V1CouponsGeneratePostBody $salesRuleCouponManagementV1GeneratePostBody
-     */
-    public function __construct(\Kiboko\Magento\v2_4\Model\V1CouponsGeneratePostBody $salesRuleCouponManagementV1GeneratePostBody)
-    {
-        $this->body = $salesRuleCouponManagementV1GeneratePostBody;
-    }
     public function getMethod(): string
     {
         return 'POST';
@@ -24,11 +15,7 @@ class SalesRuleCouponManagementV1GeneratePost extends \Kiboko\Magento\v2_4\Runti
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        return $this->getSerializedBody($serializer);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
+        return array(array(), null);
     }
     /**
      * {@inheritdoc}
@@ -36,20 +23,20 @@ class SalesRuleCouponManagementV1GeneratePost extends \Kiboko\Magento\v2_4\Runti
      * @throws \Kiboko\Magento\v2_4\Exception\SalesRuleCouponManagementV1GeneratePostUnauthorizedException
      * @throws \Kiboko\Magento\v2_4\Exception\SalesRuleCouponManagementV1GeneratePostInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleCouponManagementV1GeneratePostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleCouponManagementV1GeneratePostUnauthorizedException();
         }
         if (500 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleCouponManagementV1GeneratePostInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\SalesRuleCouponManagementV1GeneratePostInternalServerErrorException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

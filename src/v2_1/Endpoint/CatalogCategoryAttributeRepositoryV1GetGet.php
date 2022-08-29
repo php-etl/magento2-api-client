@@ -5,23 +5,13 @@ namespace Kiboko\Magento\v2_1\Endpoint;
 class CatalogCategoryAttributeRepositoryV1GetGet extends \Kiboko\Magento\v2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_1\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_1\Runtime\Client\EndpointTrait;
-    protected $attributeCode;
-    /**
-     * Retrieve specific attribute
-     *
-     * @param string $attributeCode
-     */
-    public function __construct(string $attributeCode)
-    {
-        $this->attributeCode = $attributeCode;
-    }
     public function getMethod(): string
     {
         return 'GET';
     }
     public function getUri(): string
     {
-        return str_replace(array('{attributeCode}'), array($this->attributeCode), '/V1/categories/attributes/{attributeCode}');
+        return '/V1/categories/attributes/{attributeCode}';
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
@@ -32,17 +22,17 @@ class CatalogCategoryAttributeRepositoryV1GetGet extends \Kiboko\Magento\v2_1\Ru
      *
      * @throws \Kiboko\Magento\v2_1\Exception\CatalogCategoryAttributeRepositoryV1GetGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\CatalogDataCategoryAttributeInterface|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\CatalogDataCategoryAttributeInterface', 'json');
+            return null;
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\CatalogCategoryAttributeRepositoryV1GetGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_1\Exception\CatalogCategoryAttributeRepositoryV1GetGetUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

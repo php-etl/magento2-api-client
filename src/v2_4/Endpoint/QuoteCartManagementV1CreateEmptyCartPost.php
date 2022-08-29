@@ -17,30 +17,26 @@ class QuoteCartManagementV1CreateEmptyCartPost extends \Kiboko\Magento\v2_4\Runt
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
-    }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_4\Exception\QuoteCartManagementV1CreateEmptyCartPostBadRequestException
      * @throws \Kiboko\Magento\v2_4\Exception\QuoteCartManagementV1CreateEmptyCartPostUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\QuoteCartManagementV1CreateEmptyCartPostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\QuoteCartManagementV1CreateEmptyCartPostBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\QuoteCartManagementV1CreateEmptyCartPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\QuoteCartManagementV1CreateEmptyCartPostUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

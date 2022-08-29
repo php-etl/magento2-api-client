@@ -5,31 +5,17 @@ namespace Kiboko\Magento\v2_4\Endpoint;
 class CatalogAttributeSetRepositoryV1GetGet extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
-    protected $attributeSetId;
-    /**
-     * Retrieve attribute set information based on given ID
-     *
-     * @param int $attributeSetId
-     */
-    public function __construct(int $attributeSetId)
-    {
-        $this->attributeSetId = $attributeSetId;
-    }
     public function getMethod(): string
     {
         return 'GET';
     }
     public function getUri(): string
     {
-        return str_replace(array('{attributeSetId}'), array($this->attributeSetId), '/V1/products/attribute-sets/{attributeSetId}');
+        return '/V1/products/attribute-sets/{attributeSetId}';
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
@@ -37,20 +23,20 @@ class CatalogAttributeSetRepositoryV1GetGet extends \Kiboko\Magento\v2_4\Runtime
      * @throws \Kiboko\Magento\v2_4\Exception\CatalogAttributeSetRepositoryV1GetGetBadRequestException
      * @throws \Kiboko\Magento\v2_4\Exception\CatalogAttributeSetRepositoryV1GetGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\EavDataAttributeSetInterface|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\EavDataAttributeSetInterface', 'json');
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\CatalogAttributeSetRepositoryV1GetGetBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\CatalogAttributeSetRepositoryV1GetGetBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\CatalogAttributeSetRepositoryV1GetGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\CatalogAttributeSetRepositoryV1GetGetUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

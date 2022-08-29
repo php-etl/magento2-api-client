@@ -5,15 +5,6 @@ namespace Kiboko\Magento\v2_2\Endpoint;
 class SalesInvoiceRepositoryV1SavePost extends \Kiboko\Magento\v2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_2\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_2\Runtime\Client\EndpointTrait;
-    /**
-     * Performs persist operations for a specified invoice.
-     *
-     * @param \Kiboko\Magento\v2_2\Model\V1InvoicesPostBody $salesInvoiceRepositoryV1SavePostBody
-     */
-    public function __construct(\Kiboko\Magento\v2_2\Model\V1InvoicesPostBody $salesInvoiceRepositoryV1SavePostBody)
-    {
-        $this->body = $salesInvoiceRepositoryV1SavePostBody;
-    }
     public function getMethod(): string
     {
         return 'POST';
@@ -24,28 +15,24 @@ class SalesInvoiceRepositoryV1SavePost extends \Kiboko\Magento\v2_2\Runtime\Clie
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        return $this->getSerializedBody($serializer);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
+        return array(array(), null);
     }
     /**
      * {@inheritdoc}
      *
      * @throws \Kiboko\Magento\v2_2\Exception\SalesInvoiceRepositoryV1SavePostUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_2\Model\SalesDataInvoiceInterface|\Kiboko\Magento\v2_2\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\SalesDataInvoiceInterface', 'json');
+            return null;
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\SalesInvoiceRepositoryV1SavePostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\SalesInvoiceRepositoryV1SavePostUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

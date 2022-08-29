@@ -5,33 +5,17 @@ namespace Kiboko\Magento\v2_4\Endpoint;
 class CatalogCategoryManagementV1MovePut extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
-    protected $categoryId;
-    /**
-     * Move category
-     *
-     * @param int $categoryId
-     * @param \Kiboko\Magento\v2_4\Model\V1CategoriesCategoryIdMovePutBody $catalogCategoryManagementV1MovePutBody
-     */
-    public function __construct(int $categoryId, \Kiboko\Magento\v2_4\Model\V1CategoriesCategoryIdMovePutBody $catalogCategoryManagementV1MovePutBody)
-    {
-        $this->categoryId = $categoryId;
-        $this->body = $catalogCategoryManagementV1MovePutBody;
-    }
     public function getMethod(): string
     {
         return 'PUT';
     }
     public function getUri(): string
     {
-        return str_replace(array('{categoryId}'), array($this->categoryId), '/V1/categories/{categoryId}/move');
+        return '/V1/categories/{categoryId}/move';
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        return $this->getSerializedBody($serializer);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
+        return array(array(), null);
     }
     /**
      * {@inheritdoc}
@@ -40,23 +24,23 @@ class CatalogCategoryManagementV1MovePut extends \Kiboko\Magento\v2_4\Runtime\Cl
      * @throws \Kiboko\Magento\v2_4\Exception\CatalogCategoryManagementV1MovePutUnauthorizedException
      * @throws \Kiboko\Magento\v2_4\Exception\CatalogCategoryManagementV1MovePutInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\CatalogCategoryManagementV1MovePutBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\CatalogCategoryManagementV1MovePutBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\CatalogCategoryManagementV1MovePutUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\CatalogCategoryManagementV1MovePutUnauthorizedException();
         }
         if (500 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\CatalogCategoryManagementV1MovePutInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\CatalogCategoryManagementV1MovePutInternalServerErrorException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

@@ -5,15 +5,6 @@ namespace Kiboko\Magento\v2_4\Endpoint;
 class SharedCatalogSharedCatalogRepositoryV1SavePost extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
-    /**
-     * Create or update Shared Catalog service.
-     *
-     * @param \Kiboko\Magento\v2_4\Model\V1SharedCatalogPostBody $sharedCatalogSharedCatalogRepositoryV1SavePostBody
-     */
-    public function __construct(\Kiboko\Magento\v2_4\Model\V1SharedCatalogPostBody $sharedCatalogSharedCatalogRepositoryV1SavePostBody)
-    {
-        $this->body = $sharedCatalogSharedCatalogRepositoryV1SavePostBody;
-    }
     public function getMethod(): string
     {
         return 'POST';
@@ -24,11 +15,7 @@ class SharedCatalogSharedCatalogRepositoryV1SavePost extends \Kiboko\Magento\v2_
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        return $this->getSerializedBody($serializer);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
+        return array(array(), null);
     }
     /**
      * {@inheritdoc}
@@ -37,23 +24,23 @@ class SharedCatalogSharedCatalogRepositoryV1SavePost extends \Kiboko\Magento\v2_
      * @throws \Kiboko\Magento\v2_4\Exception\SharedCatalogSharedCatalogRepositoryV1SavePostUnauthorizedException
      * @throws \Kiboko\Magento\v2_4\Exception\SharedCatalogSharedCatalogRepositoryV1SavePostInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\SharedCatalogSharedCatalogRepositoryV1SavePostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\SharedCatalogSharedCatalogRepositoryV1SavePostBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\SharedCatalogSharedCatalogRepositoryV1SavePostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\SharedCatalogSharedCatalogRepositoryV1SavePostUnauthorizedException();
         }
         if (500 === $status) {
-            throw new \Kiboko\Magento\v2_4\Exception\SharedCatalogSharedCatalogRepositoryV1SavePostInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_4\Exception\SharedCatalogSharedCatalogRepositoryV1SavePostInternalServerErrorException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

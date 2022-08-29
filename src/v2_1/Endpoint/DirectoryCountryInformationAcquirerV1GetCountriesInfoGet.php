@@ -21,14 +21,14 @@ class DirectoryCountryInformationAcquirerV1GetCountriesInfoGet extends \Kiboko\M
      * {@inheritdoc}
      *
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\DirectoryDataCountryInformationInterface[]|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\DirectoryDataCountryInformationInterface[]', 'json');
+            return null;
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

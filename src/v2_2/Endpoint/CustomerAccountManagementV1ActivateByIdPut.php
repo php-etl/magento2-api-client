@@ -5,15 +5,6 @@ namespace Kiboko\Magento\v2_2\Endpoint;
 class CustomerAccountManagementV1ActivateByIdPut extends \Kiboko\Magento\v2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_2\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_2\Runtime\Client\EndpointTrait;
-    /**
-     * Activate a customer account using a key that was sent in a confirmation email.
-     *
-     * @param \Kiboko\Magento\v2_2\Model\V1CustomersMeActivatePutBody $customerAccountManagementV1ActivateByIdPutBody
-     */
-    public function __construct(\Kiboko\Magento\v2_2\Model\V1CustomersMeActivatePutBody $customerAccountManagementV1ActivateByIdPutBody)
-    {
-        $this->body = $customerAccountManagementV1ActivateByIdPutBody;
-    }
     public function getMethod(): string
     {
         return 'PUT';
@@ -24,11 +15,7 @@ class CustomerAccountManagementV1ActivateByIdPut extends \Kiboko\Magento\v2_2\Ru
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        return $this->getSerializedBody($serializer);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
+        return array(array(), null);
     }
     /**
      * {@inheritdoc}
@@ -36,20 +23,20 @@ class CustomerAccountManagementV1ActivateByIdPut extends \Kiboko\Magento\v2_2\Ru
      * @throws \Kiboko\Magento\v2_2\Exception\CustomerAccountManagementV1ActivateByIdPutUnauthorizedException
      * @throws \Kiboko\Magento\v2_2\Exception\CustomerAccountManagementV1ActivateByIdPutInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_2\Model\CustomerDataCustomerInterface|\Kiboko\Magento\v2_2\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\CustomerDataCustomerInterface', 'json');
+            return null;
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\CustomerAccountManagementV1ActivateByIdPutUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\CustomerAccountManagementV1ActivateByIdPutUnauthorizedException();
         }
         if (500 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\CustomerAccountManagementV1ActivateByIdPutInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\CustomerAccountManagementV1ActivateByIdPutInternalServerErrorException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

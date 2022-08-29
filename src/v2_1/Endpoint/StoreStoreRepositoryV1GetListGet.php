@@ -22,17 +22,17 @@ class StoreStoreRepositoryV1GetListGet extends \Kiboko\Magento\v2_1\Runtime\Clie
      *
      * @throws \Kiboko\Magento\v2_1\Exception\StoreStoreRepositoryV1GetListGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\StoreDataStoreInterface[]|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\StoreDataStoreInterface[]', 'json');
+            return null;
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_1\Exception\StoreStoreRepositoryV1GetListGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_1\Exception\StoreStoreRepositoryV1GetListGetUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

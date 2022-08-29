@@ -5,31 +5,17 @@ namespace Kiboko\Magento\v2_2\Endpoint;
 class CustomerGroupRepositoryV1GetByIdGet extends \Kiboko\Magento\v2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_2\Runtime\Client\Endpoint
 {
     use \Kiboko\Magento\v2_2\Runtime\Client\EndpointTrait;
-    protected $id;
-    /**
-     * Get customer group by group ID.
-     *
-     * @param int $id
-     */
-    public function __construct(int $id)
-    {
-        $this->id = $id;
-    }
     public function getMethod(): string
     {
         return 'GET';
     }
     public function getUri(): string
     {
-        return str_replace(array('{id}'), array($this->id), '/V1/customerGroups/{id}');
+        return '/V1/customerGroups/{id}';
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
         return array(array(), null);
-    }
-    public function getExtraHeaders(): array
-    {
-        return array('Accept' => array('application/json'));
     }
     /**
      * {@inheritdoc}
@@ -38,23 +24,23 @@ class CustomerGroupRepositoryV1GetByIdGet extends \Kiboko\Magento\v2_2\Runtime\C
      * @throws \Kiboko\Magento\v2_2\Exception\CustomerGroupRepositoryV1GetByIdGetUnauthorizedException
      * @throws \Kiboko\Magento\v2_2\Exception\CustomerGroupRepositoryV1GetByIdGetInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_2\Model\CustomerDataGroupInterface|\Kiboko\Magento\v2_2\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\CustomerDataGroupInterface', 'json');
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\CustomerGroupRepositoryV1GetByIdGetBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\CustomerGroupRepositoryV1GetByIdGetBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\CustomerGroupRepositoryV1GetByIdGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\CustomerGroupRepositoryV1GetByIdGetUnauthorizedException();
         }
         if (500 === $status) {
-            throw new \Kiboko\Magento\v2_2\Exception\CustomerGroupRepositoryV1GetByIdGetInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_2\Exception\CustomerGroupRepositoryV1GetByIdGetInternalServerErrorException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

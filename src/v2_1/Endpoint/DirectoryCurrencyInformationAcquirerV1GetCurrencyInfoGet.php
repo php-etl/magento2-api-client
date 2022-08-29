@@ -21,14 +21,14 @@ class DirectoryCurrencyInformationAcquirerV1GetCurrencyInfoGet extends \Kiboko\M
      * {@inheritdoc}
      *
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\DirectoryDataCurrencyInformationInterface|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\DirectoryDataCurrencyInformationInterface', 'json');
+            return null;
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+        return null;
     }
     public function getAuthenticationScopes(): array
     {

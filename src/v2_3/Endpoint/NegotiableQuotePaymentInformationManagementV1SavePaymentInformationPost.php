@@ -4,34 +4,18 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class NegotiableQuotePaymentInformationManagementV1SavePaymentInformationPost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    protected $cartId;
-    /**
-     * Set payment information for a specified cart.
-     *
-     * @param int $cartId 
-     * @param \Kiboko\Magento\v2_3\Model\V1NegotiableCartsCartIdSetPaymentInformationPostBody $negotiableQuotePaymentInformationManagementV1SavePaymentInformationPostBody 
-     */
-    public function __construct(int $cartId, \Kiboko\Magento\v2_3\Model\V1NegotiableCartsCartIdSetPaymentInformationPostBody $negotiableQuotePaymentInformationManagementV1SavePaymentInformationPostBody)
-    {
-        $this->cartId = $cartId;
-        $this->body = $negotiableQuotePaymentInformationManagementV1SavePaymentInformationPostBody;
-    }
     use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
-    public function getMethod() : string
+    public function getMethod(): string
     {
         return 'POST';
     }
-    public function getUri() : string
+    public function getUri(): string
     {
-        return str_replace(array('{cartId}'), array($this->cartId), '/V1/negotiable-carts/{cartId}/set-payment-information');
+        return '/V1/negotiable-carts/{cartId}/set-payment-information';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        return $this->getSerializedBody($serializer);
-    }
-    public function getExtraHeaders() : array
-    {
-        return array('Accept' => array('application/json'));
+        return array(array(), null);
     }
     /**
      * {@inheritdoc}
@@ -39,22 +23,22 @@ class NegotiableQuotePaymentInformationManagementV1SavePaymentInformationPost ex
      * @throws \Kiboko\Magento\v2_3\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationPostBadRequestException
      * @throws \Kiboko\Magento\v2_3\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationPostUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_3\Model\ErrorResponse
+     * @return null
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return json_decode($body);
+            return null;
         }
         if (400 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationPostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationPostBadRequestException();
         }
         if (401 === $status) {
-            throw new \Kiboko\Magento\v2_3\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\v2_3\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationPostUnauthorizedException();
         }
-        return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
+        return null;
     }
-    public function getAuthenticationScopes() : array
+    public function getAuthenticationScopes(): array
     {
         return array();
     }
