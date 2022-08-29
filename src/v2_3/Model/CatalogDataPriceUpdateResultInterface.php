@@ -27,7 +27,7 @@ class CatalogDataPriceUpdateResultInterface
      *
      * @return string
      */
-    public function getMessage(): string
+    public function getMessage() : string
     {
         return $this->message;
     }
@@ -38,7 +38,7 @@ class CatalogDataPriceUpdateResultInterface
      *
      * @return self
      */
-    public function setMessage(string $message): self
+    public function setMessage(string $message) : self
     {
         $this->message = $message;
         return $this;
@@ -48,7 +48,7 @@ class CatalogDataPriceUpdateResultInterface
      *
      * @return string[]
      */
-    public function getParameters(): array
+    public function getParameters() : array
     {
         return $this->parameters;
     }
@@ -59,7 +59,7 @@ class CatalogDataPriceUpdateResultInterface
      *
      * @return self
      */
-    public function setParameters(array $parameters): self
+    public function setParameters(array $parameters) : self
     {
         $this->parameters = $parameters;
         return $this;
@@ -80,7 +80,7 @@ class CatalogDataPriceUpdateResultInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

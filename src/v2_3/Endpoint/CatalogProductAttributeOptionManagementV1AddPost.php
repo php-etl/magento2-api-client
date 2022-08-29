@@ -4,32 +4,32 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CatalogProductAttributeOptionManagementV1AddPost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $attributeCode;
     /**
      * Add option to attribute
      *
-     * @param string $attributeCode
-     * @param \Kiboko\Magento\v2_3\Model\V1ProductsAttributesAttributeCodeOptionsPostBody $catalogProductAttributeOptionManagementV1AddPostBody
+     * @param string $attributeCode 
+     * @param \Kiboko\Magento\v2_3\Model\V1ProductsAttributesAttributeCodeOptionsPostBody $catalogProductAttributeOptionManagementV1AddPostBody 
      */
     public function __construct(string $attributeCode, \Kiboko\Magento\v2_3\Model\V1ProductsAttributesAttributeCodeOptionsPostBody $catalogProductAttributeOptionManagementV1AddPostBody)
     {
         $this->attributeCode = $attributeCode;
         $this->body = $catalogProductAttributeOptionManagementV1AddPostBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'POST';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{attributeCode}'), array($this->attributeCode), '/V1/products/attributes/{attributeCode}/options');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -54,7 +54,7 @@ class CatalogProductAttributeOptionManagementV1AddPost extends \Kiboko\Magento\v
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

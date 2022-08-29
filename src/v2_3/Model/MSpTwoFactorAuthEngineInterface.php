@@ -21,7 +21,7 @@ class MSpTwoFactorAuthEngineInterface
      *
      * @return bool
      */
-    public function getEnabled(): bool
+    public function getEnabled() : bool
     {
         return $this->enabled;
     }
@@ -32,7 +32,7 @@ class MSpTwoFactorAuthEngineInterface
      *
      * @return self
      */
-    public function setEnabled(bool $enabled): self
+    public function setEnabled(bool $enabled) : self
     {
         $this->enabled = $enabled;
         return $this;
@@ -42,7 +42,7 @@ class MSpTwoFactorAuthEngineInterface
      *
      * @return bool
      */
-    public function getTrustedDevicesAllowed(): bool
+    public function getTrustedDevicesAllowed() : bool
     {
         return $this->trustedDevicesAllowed;
     }
@@ -53,7 +53,7 @@ class MSpTwoFactorAuthEngineInterface
      *
      * @return self
      */
-    public function setTrustedDevicesAllowed(bool $trustedDevicesAllowed): self
+    public function setTrustedDevicesAllowed(bool $trustedDevicesAllowed) : self
     {
         $this->trustedDevicesAllowed = $trustedDevicesAllowed;
         return $this;

@@ -33,7 +33,7 @@ class CatalogDataProductRenderButtonInterface
      *
      * @return string
      */
-    public function getPostData(): string
+    public function getPostData() : string
     {
         return $this->postData;
     }
@@ -44,7 +44,7 @@ class CatalogDataProductRenderButtonInterface
      *
      * @return self
      */
-    public function setPostData(string $postData): self
+    public function setPostData(string $postData) : self
     {
         $this->postData = $postData;
         return $this;
@@ -54,7 +54,7 @@ class CatalogDataProductRenderButtonInterface
      *
      * @return string
      */
-    public function getUrl(): string
+    public function getUrl() : string
     {
         return $this->url;
     }
@@ -65,7 +65,7 @@ class CatalogDataProductRenderButtonInterface
      *
      * @return self
      */
-    public function setUrl(string $url): self
+    public function setUrl(string $url) : self
     {
         $this->url = $url;
         return $this;
@@ -75,7 +75,7 @@ class CatalogDataProductRenderButtonInterface
      *
      * @return bool
      */
-    public function getRequiredOptions(): bool
+    public function getRequiredOptions() : bool
     {
         return $this->requiredOptions;
     }
@@ -86,7 +86,7 @@ class CatalogDataProductRenderButtonInterface
      *
      * @return self
      */
-    public function setRequiredOptions(bool $requiredOptions): self
+    public function setRequiredOptions(bool $requiredOptions) : self
     {
         $this->requiredOptions = $requiredOptions;
         return $this;
@@ -107,7 +107,7 @@ class CatalogDataProductRenderButtonInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

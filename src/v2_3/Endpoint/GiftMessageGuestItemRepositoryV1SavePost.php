@@ -4,7 +4,6 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class GiftMessageGuestItemRepositoryV1SavePost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $cartId;
     protected $itemId;
     /**
@@ -12,7 +11,7 @@ class GiftMessageGuestItemRepositoryV1SavePost extends \Kiboko\Magento\v2_3\Runt
      *
      * @param string $cartId The cart ID.
      * @param int $itemId The item ID.
-     * @param \Kiboko\Magento\v2_3\Model\V1GuestCartsCartIdGiftMessageItemIdPostBody $giftMessageGuestItemRepositoryV1SavePostBody
+     * @param \Kiboko\Magento\v2_3\Model\V1GuestCartsCartIdGiftMessageItemIdPostBody $giftMessageGuestItemRepositoryV1SavePostBody 
      */
     public function __construct(string $cartId, int $itemId, \Kiboko\Magento\v2_3\Model\V1GuestCartsCartIdGiftMessageItemIdPostBody $giftMessageGuestItemRepositoryV1SavePostBody)
     {
@@ -20,19 +19,20 @@ class GiftMessageGuestItemRepositoryV1SavePost extends \Kiboko\Magento\v2_3\Runt
         $this->itemId = $itemId;
         $this->body = $giftMessageGuestItemRepositoryV1SavePostBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'POST';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{cartId}', '{itemId}'), array($this->cartId, $this->itemId), '/V1/guest-carts/{cartId}/gift-message/{itemId}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -53,7 +53,7 @@ class GiftMessageGuestItemRepositoryV1SavePost extends \Kiboko\Magento\v2_3\Runt
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

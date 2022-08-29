@@ -33,7 +33,7 @@ class SalesRuleDataDiscountDataInterface
      *
      * @return float
      */
-    public function getAmount(): float
+    public function getAmount() : float
     {
         return $this->amount;
     }
@@ -44,7 +44,7 @@ class SalesRuleDataDiscountDataInterface
      *
      * @return self
      */
-    public function setAmount(float $amount): self
+    public function setAmount(float $amount) : self
     {
         $this->amount = $amount;
         return $this;
@@ -54,7 +54,7 @@ class SalesRuleDataDiscountDataInterface
      *
      * @return float
      */
-    public function getBaseAmount(): float
+    public function getBaseAmount() : float
     {
         return $this->baseAmount;
     }
@@ -65,7 +65,7 @@ class SalesRuleDataDiscountDataInterface
      *
      * @return self
      */
-    public function setBaseAmount(float $baseAmount): self
+    public function setBaseAmount(float $baseAmount) : self
     {
         $this->baseAmount = $baseAmount;
         return $this;
@@ -75,7 +75,7 @@ class SalesRuleDataDiscountDataInterface
      *
      * @return float
      */
-    public function getOriginalAmount(): float
+    public function getOriginalAmount() : float
     {
         return $this->originalAmount;
     }
@@ -86,7 +86,7 @@ class SalesRuleDataDiscountDataInterface
      *
      * @return self
      */
-    public function setOriginalAmount(float $originalAmount): self
+    public function setOriginalAmount(float $originalAmount) : self
     {
         $this->originalAmount = $originalAmount;
         return $this;
@@ -96,7 +96,7 @@ class SalesRuleDataDiscountDataInterface
      *
      * @return float
      */
-    public function getBaseOriginalAmount(): float
+    public function getBaseOriginalAmount() : float
     {
         return $this->baseOriginalAmount;
     }
@@ -107,7 +107,7 @@ class SalesRuleDataDiscountDataInterface
      *
      * @return self
      */
-    public function setBaseOriginalAmount(float $baseOriginalAmount): self
+    public function setBaseOriginalAmount(float $baseOriginalAmount) : self
     {
         $this->baseOriginalAmount = $baseOriginalAmount;
         return $this;

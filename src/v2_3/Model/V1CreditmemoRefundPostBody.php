@@ -11,7 +11,7 @@ class V1CreditmemoRefundPostBody
      */
     protected $creditmemo;
     /**
-     *
+     * 
      *
      * @var bool
      */
@@ -21,7 +21,7 @@ class V1CreditmemoRefundPostBody
      *
      * @return SalesDataCreditmemoInterface
      */
-    public function getCreditmemo(): SalesDataCreditmemoInterface
+    public function getCreditmemo() : SalesDataCreditmemoInterface
     {
         return $this->creditmemo;
     }
@@ -32,28 +32,28 @@ class V1CreditmemoRefundPostBody
      *
      * @return self
      */
-    public function setCreditmemo(SalesDataCreditmemoInterface $creditmemo): self
+    public function setCreditmemo(SalesDataCreditmemoInterface $creditmemo) : self
     {
         $this->creditmemo = $creditmemo;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return bool
      */
-    public function getOfflineRequested(): bool
+    public function getOfflineRequested() : bool
     {
         return $this->offlineRequested;
     }
     /**
-     *
+     * 
      *
      * @param bool $offlineRequested
      *
      * @return self
      */
-    public function setOfflineRequested(bool $offlineRequested): self
+    public function setOfflineRequested(bool $offlineRequested) : self
     {
         $this->offlineRequested = $offlineRequested;
         return $this;

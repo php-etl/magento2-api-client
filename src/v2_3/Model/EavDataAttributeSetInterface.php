@@ -39,7 +39,7 @@ class EavDataAttributeSetInterface
      *
      * @return int
      */
-    public function getAttributeSetId(): int
+    public function getAttributeSetId() : int
     {
         return $this->attributeSetId;
     }
@@ -50,7 +50,7 @@ class EavDataAttributeSetInterface
      *
      * @return self
      */
-    public function setAttributeSetId(int $attributeSetId): self
+    public function setAttributeSetId(int $attributeSetId) : self
     {
         $this->attributeSetId = $attributeSetId;
         return $this;
@@ -60,7 +60,7 @@ class EavDataAttributeSetInterface
      *
      * @return string
      */
-    public function getAttributeSetName(): string
+    public function getAttributeSetName() : string
     {
         return $this->attributeSetName;
     }
@@ -71,7 +71,7 @@ class EavDataAttributeSetInterface
      *
      * @return self
      */
-    public function setAttributeSetName(string $attributeSetName): self
+    public function setAttributeSetName(string $attributeSetName) : self
     {
         $this->attributeSetName = $attributeSetName;
         return $this;
@@ -81,7 +81,7 @@ class EavDataAttributeSetInterface
      *
      * @return int
      */
-    public function getSortOrder(): int
+    public function getSortOrder() : int
     {
         return $this->sortOrder;
     }
@@ -92,7 +92,7 @@ class EavDataAttributeSetInterface
      *
      * @return self
      */
-    public function setSortOrder(int $sortOrder): self
+    public function setSortOrder(int $sortOrder) : self
     {
         $this->sortOrder = $sortOrder;
         return $this;
@@ -102,7 +102,7 @@ class EavDataAttributeSetInterface
      *
      * @return int
      */
-    public function getEntityTypeId(): int
+    public function getEntityTypeId() : int
     {
         return $this->entityTypeId;
     }
@@ -113,7 +113,7 @@ class EavDataAttributeSetInterface
      *
      * @return self
      */
-    public function setEntityTypeId(int $entityTypeId): self
+    public function setEntityTypeId(int $entityTypeId) : self
     {
         $this->entityTypeId = $entityTypeId;
         return $this;
@@ -134,7 +134,7 @@ class EavDataAttributeSetInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class QuoteDataCurrencyInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataCurrencyInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataCurrencyInterface';
     }
@@ -38,16 +37,16 @@ class QuoteDataCurrencyInterfaceNormalizer implements DenormalizerInterface, Nor
         }
         $object = new \Kiboko\Magento\v2_3\Model\QuoteDataCurrencyInterface();
         if (\array_key_exists('store_to_base_rate', $data) && \is_int($data['store_to_base_rate'])) {
-            $data['store_to_base_rate'] = (float) $data['store_to_base_rate'];
+            $data['store_to_base_rate'] = (double) $data['store_to_base_rate'];
         }
         if (\array_key_exists('store_to_quote_rate', $data) && \is_int($data['store_to_quote_rate'])) {
-            $data['store_to_quote_rate'] = (float) $data['store_to_quote_rate'];
+            $data['store_to_quote_rate'] = (double) $data['store_to_quote_rate'];
         }
         if (\array_key_exists('base_to_global_rate', $data) && \is_int($data['base_to_global_rate'])) {
-            $data['base_to_global_rate'] = (float) $data['base_to_global_rate'];
+            $data['base_to_global_rate'] = (double) $data['base_to_global_rate'];
         }
         if (\array_key_exists('base_to_quote_rate', $data) && \is_int($data['base_to_quote_rate'])) {
-            $data['base_to_quote_rate'] = (float) $data['base_to_quote_rate'];
+            $data['base_to_quote_rate'] = (double) $data['base_to_quote_rate'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

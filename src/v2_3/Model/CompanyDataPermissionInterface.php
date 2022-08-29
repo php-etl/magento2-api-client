@@ -33,7 +33,7 @@ class CompanyDataPermissionInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -44,7 +44,7 @@ class CompanyDataPermissionInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -54,7 +54,7 @@ class CompanyDataPermissionInterface
      *
      * @return int
      */
-    public function getRoleId(): int
+    public function getRoleId() : int
     {
         return $this->roleId;
     }
@@ -65,7 +65,7 @@ class CompanyDataPermissionInterface
      *
      * @return self
      */
-    public function setRoleId(int $roleId): self
+    public function setRoleId(int $roleId) : self
     {
         $this->roleId = $roleId;
         return $this;
@@ -75,7 +75,7 @@ class CompanyDataPermissionInterface
      *
      * @return string
      */
-    public function getResourceId(): string
+    public function getResourceId() : string
     {
         return $this->resourceId;
     }
@@ -86,7 +86,7 @@ class CompanyDataPermissionInterface
      *
      * @return self
      */
-    public function setResourceId(string $resourceId): self
+    public function setResourceId(string $resourceId) : self
     {
         $this->resourceId = $resourceId;
         return $this;
@@ -96,7 +96,7 @@ class CompanyDataPermissionInterface
      *
      * @return string
      */
-    public function getPermission(): string
+    public function getPermission() : string
     {
         return $this->permission;
     }
@@ -107,7 +107,7 @@ class CompanyDataPermissionInterface
      *
      * @return self
      */
-    public function setPermission(string $permission): self
+    public function setPermission(string $permission) : self
     {
         $this->permission = $permission;
         return $this;

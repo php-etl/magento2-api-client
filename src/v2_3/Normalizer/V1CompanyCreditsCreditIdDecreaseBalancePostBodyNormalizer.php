@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class V1CompanyCreditsCreditIdDecreaseBalancePostBodyNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\V1CompanyCreditsCreditIdDecreaseBalancePostBody';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\V1CompanyCreditsCreditIdDecreaseBalancePostBody';
     }
@@ -38,7 +37,7 @@ class V1CompanyCreditsCreditIdDecreaseBalancePostBodyNormalizer implements Denor
         }
         $object = new \Kiboko\Magento\v2_3\Model\V1CompanyCreditsCreditIdDecreaseBalancePostBody();
         if (\array_key_exists('value', $data) && \is_int($data['value'])) {
-            $data['value'] = (float) $data['value'];
+            $data['value'] = (double) $data['value'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

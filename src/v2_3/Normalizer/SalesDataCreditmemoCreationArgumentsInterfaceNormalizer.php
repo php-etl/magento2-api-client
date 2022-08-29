@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataCreditmemoCreationArgumentsInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataCreditmemoCreationArgumentsInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataCreditmemoCreationArgumentsInterface';
     }
@@ -38,13 +37,13 @@ class SalesDataCreditmemoCreationArgumentsInterfaceNormalizer implements Denorma
         }
         $object = new \Kiboko\Magento\v2_3\Model\SalesDataCreditmemoCreationArgumentsInterface();
         if (\array_key_exists('shipping_amount', $data) && \is_int($data['shipping_amount'])) {
-            $data['shipping_amount'] = (float) $data['shipping_amount'];
+            $data['shipping_amount'] = (double) $data['shipping_amount'];
         }
         if (\array_key_exists('adjustment_positive', $data) && \is_int($data['adjustment_positive'])) {
-            $data['adjustment_positive'] = (float) $data['adjustment_positive'];
+            $data['adjustment_positive'] = (double) $data['adjustment_positive'];
         }
         if (\array_key_exists('adjustment_negative', $data) && \is_int($data['adjustment_negative'])) {
-            $data['adjustment_negative'] = (float) $data['adjustment_negative'];
+            $data['adjustment_negative'] = (double) $data['adjustment_negative'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

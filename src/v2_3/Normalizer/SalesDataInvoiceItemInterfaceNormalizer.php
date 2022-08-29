@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataInvoiceItemInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataInvoiceItemInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataInvoiceItemInterface';
     }
@@ -38,52 +37,52 @@ class SalesDataInvoiceItemInterfaceNormalizer implements DenormalizerInterface, 
         }
         $object = new \Kiboko\Magento\v2_3\Model\SalesDataInvoiceItemInterface();
         if (\array_key_exists('base_cost', $data) && \is_int($data['base_cost'])) {
-            $data['base_cost'] = (float) $data['base_cost'];
+            $data['base_cost'] = (double) $data['base_cost'];
         }
         if (\array_key_exists('base_discount_amount', $data) && \is_int($data['base_discount_amount'])) {
-            $data['base_discount_amount'] = (float) $data['base_discount_amount'];
+            $data['base_discount_amount'] = (double) $data['base_discount_amount'];
         }
         if (\array_key_exists('base_discount_tax_compensation_amount', $data) && \is_int($data['base_discount_tax_compensation_amount'])) {
-            $data['base_discount_tax_compensation_amount'] = (float) $data['base_discount_tax_compensation_amount'];
+            $data['base_discount_tax_compensation_amount'] = (double) $data['base_discount_tax_compensation_amount'];
         }
         if (\array_key_exists('base_price', $data) && \is_int($data['base_price'])) {
-            $data['base_price'] = (float) $data['base_price'];
+            $data['base_price'] = (double) $data['base_price'];
         }
         if (\array_key_exists('base_price_incl_tax', $data) && \is_int($data['base_price_incl_tax'])) {
-            $data['base_price_incl_tax'] = (float) $data['base_price_incl_tax'];
+            $data['base_price_incl_tax'] = (double) $data['base_price_incl_tax'];
         }
         if (\array_key_exists('base_row_total', $data) && \is_int($data['base_row_total'])) {
-            $data['base_row_total'] = (float) $data['base_row_total'];
+            $data['base_row_total'] = (double) $data['base_row_total'];
         }
         if (\array_key_exists('base_row_total_incl_tax', $data) && \is_int($data['base_row_total_incl_tax'])) {
-            $data['base_row_total_incl_tax'] = (float) $data['base_row_total_incl_tax'];
+            $data['base_row_total_incl_tax'] = (double) $data['base_row_total_incl_tax'];
         }
         if (\array_key_exists('base_tax_amount', $data) && \is_int($data['base_tax_amount'])) {
-            $data['base_tax_amount'] = (float) $data['base_tax_amount'];
+            $data['base_tax_amount'] = (double) $data['base_tax_amount'];
         }
         if (\array_key_exists('discount_amount', $data) && \is_int($data['discount_amount'])) {
-            $data['discount_amount'] = (float) $data['discount_amount'];
+            $data['discount_amount'] = (double) $data['discount_amount'];
         }
         if (\array_key_exists('discount_tax_compensation_amount', $data) && \is_int($data['discount_tax_compensation_amount'])) {
-            $data['discount_tax_compensation_amount'] = (float) $data['discount_tax_compensation_amount'];
+            $data['discount_tax_compensation_amount'] = (double) $data['discount_tax_compensation_amount'];
         }
         if (\array_key_exists('price', $data) && \is_int($data['price'])) {
-            $data['price'] = (float) $data['price'];
+            $data['price'] = (double) $data['price'];
         }
         if (\array_key_exists('price_incl_tax', $data) && \is_int($data['price_incl_tax'])) {
-            $data['price_incl_tax'] = (float) $data['price_incl_tax'];
+            $data['price_incl_tax'] = (double) $data['price_incl_tax'];
         }
         if (\array_key_exists('row_total', $data) && \is_int($data['row_total'])) {
-            $data['row_total'] = (float) $data['row_total'];
+            $data['row_total'] = (double) $data['row_total'];
         }
         if (\array_key_exists('row_total_incl_tax', $data) && \is_int($data['row_total_incl_tax'])) {
-            $data['row_total_incl_tax'] = (float) $data['row_total_incl_tax'];
+            $data['row_total_incl_tax'] = (double) $data['row_total_incl_tax'];
         }
         if (\array_key_exists('tax_amount', $data) && \is_int($data['tax_amount'])) {
-            $data['tax_amount'] = (float) $data['tax_amount'];
+            $data['tax_amount'] = (double) $data['tax_amount'];
         }
         if (\array_key_exists('qty', $data) && \is_int($data['qty'])) {
-            $data['qty'] = (float) $data['qty'];
+            $data['qty'] = (double) $data['qty'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

@@ -39,7 +39,7 @@ class CustomerDataGroupInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -50,7 +50,7 @@ class CustomerDataGroupInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -60,7 +60,7 @@ class CustomerDataGroupInterface
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -71,7 +71,7 @@ class CustomerDataGroupInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
@@ -81,7 +81,7 @@ class CustomerDataGroupInterface
      *
      * @return int
      */
-    public function getTaxClassId(): int
+    public function getTaxClassId() : int
     {
         return $this->taxClassId;
     }
@@ -92,7 +92,7 @@ class CustomerDataGroupInterface
      *
      * @return self
      */
-    public function setTaxClassId(int $taxClassId): self
+    public function setTaxClassId(int $taxClassId) : self
     {
         $this->taxClassId = $taxClassId;
         return $this;
@@ -102,7 +102,7 @@ class CustomerDataGroupInterface
      *
      * @return string
      */
-    public function getTaxClassName(): string
+    public function getTaxClassName() : string
     {
         return $this->taxClassName;
     }
@@ -113,7 +113,7 @@ class CustomerDataGroupInterface
      *
      * @return self
      */
-    public function setTaxClassName(string $taxClassName): self
+    public function setTaxClassName(string $taxClassName) : self
     {
         $this->taxClassName = $taxClassName;
         return $this;
@@ -134,7 +134,7 @@ class CustomerDataGroupInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

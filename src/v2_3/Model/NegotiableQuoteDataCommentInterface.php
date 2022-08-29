@@ -69,7 +69,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -80,7 +80,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
         return $this;
@@ -90,7 +90,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return int
      */
-    public function getParentId(): int
+    public function getParentId() : int
     {
         return $this->parentId;
     }
@@ -101,7 +101,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(int $parentId) : self
     {
         $this->parentId = $parentId;
         return $this;
@@ -111,7 +111,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return int
      */
-    public function getCreatorType(): int
+    public function getCreatorType() : int
     {
         return $this->creatorType;
     }
@@ -122,7 +122,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return self
      */
-    public function setCreatorType(int $creatorType): self
+    public function setCreatorType(int $creatorType) : self
     {
         $this->creatorType = $creatorType;
         return $this;
@@ -132,7 +132,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return int
      */
-    public function getIsDecline(): int
+    public function getIsDecline() : int
     {
         return $this->isDecline;
     }
@@ -143,7 +143,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return self
      */
-    public function setIsDecline(int $isDecline): self
+    public function setIsDecline(int $isDecline) : self
     {
         $this->isDecline = $isDecline;
         return $this;
@@ -153,7 +153,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return int
      */
-    public function getIsDraft(): int
+    public function getIsDraft() : int
     {
         return $this->isDraft;
     }
@@ -164,7 +164,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return self
      */
-    public function setIsDraft(int $isDraft): self
+    public function setIsDraft(int $isDraft) : self
     {
         $this->isDraft = $isDraft;
         return $this;
@@ -174,7 +174,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return int
      */
-    public function getCreatorId(): int
+    public function getCreatorId() : int
     {
         return $this->creatorId;
     }
@@ -185,7 +185,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return self
      */
-    public function setCreatorId(int $creatorId): self
+    public function setCreatorId(int $creatorId) : self
     {
         $this->creatorId = $creatorId;
         return $this;
@@ -195,7 +195,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return string
      */
-    public function getComment(): string
+    public function getComment() : string
     {
         return $this->comment;
     }
@@ -206,7 +206,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(string $comment) : self
     {
         $this->comment = $comment;
         return $this;
@@ -216,7 +216,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -227,7 +227,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -248,7 +248,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -258,7 +258,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return NegotiableQuoteDataCommentAttachmentInterface[]
      */
-    public function getAttachments(): array
+    public function getAttachments() : array
     {
         return $this->attachments;
     }
@@ -269,7 +269,7 @@ class NegotiableQuoteDataCommentInterface
      *
      * @return self
      */
-    public function setAttachments(array $attachments): self
+    public function setAttachments(array $attachments) : self
     {
         $this->attachments = $attachments;
         return $this;

@@ -15,7 +15,7 @@ class V1SharedCatalogPostBody
      *
      * @return SharedCatalogDataSharedCatalogInterface
      */
-    public function getSharedCatalog(): SharedCatalogDataSharedCatalogInterface
+    public function getSharedCatalog() : SharedCatalogDataSharedCatalogInterface
     {
         return $this->sharedCatalog;
     }
@@ -26,7 +26,7 @@ class V1SharedCatalogPostBody
      *
      * @return self
      */
-    public function setSharedCatalog(SharedCatalogDataSharedCatalogInterface $sharedCatalog): self
+    public function setSharedCatalog(SharedCatalogDataSharedCatalogInterface $sharedCatalog) : self
     {
         $this->sharedCatalog = $sharedCatalog;
         return $this;

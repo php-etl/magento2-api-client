@@ -27,7 +27,7 @@ class CatalogDataProductTypeInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -38,7 +38,7 @@ class CatalogDataProductTypeInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -48,7 +48,7 @@ class CatalogDataProductTypeInterface
      *
      * @return string
      */
-    public function getLabel(): string
+    public function getLabel() : string
     {
         return $this->label;
     }
@@ -59,7 +59,7 @@ class CatalogDataProductTypeInterface
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(string $label) : self
     {
         $this->label = $label;
         return $this;
@@ -80,7 +80,7 @@ class CatalogDataProductTypeInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

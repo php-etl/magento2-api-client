@@ -11,7 +11,7 @@ class V1ProductsAttributeSetsPostBody
      */
     protected $attributeSet;
     /**
-     *
+     * 
      *
      * @var int
      */
@@ -21,7 +21,7 @@ class V1ProductsAttributeSetsPostBody
      *
      * @return EavDataAttributeSetInterface
      */
-    public function getAttributeSet(): EavDataAttributeSetInterface
+    public function getAttributeSet() : EavDataAttributeSetInterface
     {
         return $this->attributeSet;
     }
@@ -32,28 +32,28 @@ class V1ProductsAttributeSetsPostBody
      *
      * @return self
      */
-    public function setAttributeSet(EavDataAttributeSetInterface $attributeSet): self
+    public function setAttributeSet(EavDataAttributeSetInterface $attributeSet) : self
     {
         $this->attributeSet = $attributeSet;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getSkeletonId(): int
+    public function getSkeletonId() : int
     {
         return $this->skeletonId;
     }
     /**
-     *
+     * 
      *
      * @param int $skeletonId
      *
      * @return self
      */
-    public function setSkeletonId(int $skeletonId): self
+    public function setSkeletonId(int $skeletonId) : self
     {
         $this->skeletonId = $skeletonId;
         return $this;

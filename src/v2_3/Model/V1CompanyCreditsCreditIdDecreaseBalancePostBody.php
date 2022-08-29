@@ -5,19 +5,19 @@ namespace Kiboko\Magento\v2_3\Model;
 class V1CompanyCreditsCreditIdDecreaseBalancePostBody
 {
     /**
-     *
+     * 
      *
      * @var float
      */
     protected $value;
     /**
-     *
+     * 
      *
      * @var string
      */
     protected $currency;
     /**
-     *
+     * 
      *
      * @var int
      */
@@ -35,64 +35,64 @@ class V1CompanyCreditsCreditIdDecreaseBalancePostBody
      */
     protected $options;
     /**
-     *
+     * 
      *
      * @return float
      */
-    public function getValue(): float
+    public function getValue() : float
     {
         return $this->value;
     }
     /**
-     *
+     * 
      *
      * @param float $value
      *
      * @return self
      */
-    public function setValue(float $value): self
+    public function setValue(float $value) : self
     {
         $this->value = $value;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getCurrency(): string
+    public function getCurrency() : string
     {
         return $this->currency;
     }
     /**
-     *
+     * 
      *
      * @param string $currency
      *
      * @return self
      */
-    public function setCurrency(string $currency): self
+    public function setCurrency(string $currency) : self
     {
         $this->currency = $currency;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getOperationType(): int
+    public function getOperationType() : int
     {
         return $this->operationType;
     }
     /**
-     *
+     * 
      *
      * @param int $operationType
      *
      * @return self
      */
-    public function setOperationType(int $operationType): self
+    public function setOperationType(int $operationType) : self
     {
         $this->operationType = $operationType;
         return $this;
@@ -102,7 +102,7 @@ class V1CompanyCreditsCreditIdDecreaseBalancePostBody
      *
      * @return string
      */
-    public function getComment(): string
+    public function getComment() : string
     {
         return $this->comment;
     }
@@ -113,7 +113,7 @@ class V1CompanyCreditsCreditIdDecreaseBalancePostBody
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(string $comment) : self
     {
         $this->comment = $comment;
         return $this;
@@ -123,7 +123,7 @@ class V1CompanyCreditsCreditIdDecreaseBalancePostBody
      *
      * @return CompanyCreditDataCreditBalanceOptionsInterface
      */
-    public function getOptions(): CompanyCreditDataCreditBalanceOptionsInterface
+    public function getOptions() : CompanyCreditDataCreditBalanceOptionsInterface
     {
         return $this->options;
     }
@@ -134,7 +134,7 @@ class V1CompanyCreditsCreditIdDecreaseBalancePostBody
      *
      * @return self
      */
-    public function setOptions(CompanyCreditDataCreditBalanceOptionsInterface $options): self
+    public function setOptions(CompanyCreditDataCreditBalanceOptionsInterface $options) : self
     {
         $this->options = $options;
         return $this;

@@ -21,7 +21,7 @@ class V1NegotiableCartsCartIdPaymentInformationPostBody
      *
      * @return QuoteDataPaymentInterface
      */
-    public function getPaymentMethod(): QuoteDataPaymentInterface
+    public function getPaymentMethod() : QuoteDataPaymentInterface
     {
         return $this->paymentMethod;
     }
@@ -32,7 +32,7 @@ class V1NegotiableCartsCartIdPaymentInformationPostBody
      *
      * @return self
      */
-    public function setPaymentMethod(QuoteDataPaymentInterface $paymentMethod): self
+    public function setPaymentMethod(QuoteDataPaymentInterface $paymentMethod) : self
     {
         $this->paymentMethod = $paymentMethod;
         return $this;
@@ -42,7 +42,7 @@ class V1NegotiableCartsCartIdPaymentInformationPostBody
      *
      * @return QuoteDataAddressInterface
      */
-    public function getBillingAddress(): QuoteDataAddressInterface
+    public function getBillingAddress() : QuoteDataAddressInterface
     {
         return $this->billingAddress;
     }
@@ -53,7 +53,7 @@ class V1NegotiableCartsCartIdPaymentInformationPostBody
      *
      * @return self
      */
-    public function setBillingAddress(QuoteDataAddressInterface $billingAddress): self
+    public function setBillingAddress(QuoteDataAddressInterface $billingAddress) : self
     {
         $this->billingAddress = $billingAddress;
         return $this;

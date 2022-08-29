@@ -33,7 +33,7 @@ class CompanyCreditDataCreditBalanceOptionsInterface
      *
      * @return string
      */
-    public function getPurchaseOrder(): string
+    public function getPurchaseOrder() : string
     {
         return $this->purchaseOrder;
     }
@@ -44,7 +44,7 @@ class CompanyCreditDataCreditBalanceOptionsInterface
      *
      * @return self
      */
-    public function setPurchaseOrder(string $purchaseOrder): self
+    public function setPurchaseOrder(string $purchaseOrder) : self
     {
         $this->purchaseOrder = $purchaseOrder;
         return $this;
@@ -54,7 +54,7 @@ class CompanyCreditDataCreditBalanceOptionsInterface
      *
      * @return string
      */
-    public function getOrderIncrement(): string
+    public function getOrderIncrement() : string
     {
         return $this->orderIncrement;
     }
@@ -65,7 +65,7 @@ class CompanyCreditDataCreditBalanceOptionsInterface
      *
      * @return self
      */
-    public function setOrderIncrement(string $orderIncrement): self
+    public function setOrderIncrement(string $orderIncrement) : self
     {
         $this->orderIncrement = $orderIncrement;
         return $this;
@@ -75,7 +75,7 @@ class CompanyCreditDataCreditBalanceOptionsInterface
      *
      * @return string
      */
-    public function getCurrencyDisplay(): string
+    public function getCurrencyDisplay() : string
     {
         return $this->currencyDisplay;
     }
@@ -86,7 +86,7 @@ class CompanyCreditDataCreditBalanceOptionsInterface
      *
      * @return self
      */
-    public function setCurrencyDisplay(string $currencyDisplay): self
+    public function setCurrencyDisplay(string $currencyDisplay) : self
     {
         $this->currencyDisplay = $currencyDisplay;
         return $this;
@@ -96,7 +96,7 @@ class CompanyCreditDataCreditBalanceOptionsInterface
      *
      * @return string
      */
-    public function getCurrencyBase(): string
+    public function getCurrencyBase() : string
     {
         return $this->currencyBase;
     }
@@ -107,7 +107,7 @@ class CompanyCreditDataCreditBalanceOptionsInterface
      *
      * @return self
      */
-    public function setCurrencyBase(string $currencyBase): self
+    public function setCurrencyBase(string $currencyBase) : self
     {
         $this->currencyBase = $currencyBase;
         return $this;

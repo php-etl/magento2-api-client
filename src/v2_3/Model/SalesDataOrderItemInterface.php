@@ -579,7 +579,7 @@ class SalesDataOrderItemInterface
      *
      * @return string
      */
-    public function getAdditionalData(): string
+    public function getAdditionalData() : string
     {
         return $this->additionalData;
     }
@@ -590,7 +590,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setAdditionalData(string $additionalData): self
+    public function setAdditionalData(string $additionalData) : self
     {
         $this->additionalData = $additionalData;
         return $this;
@@ -600,7 +600,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getAmountRefunded(): float
+    public function getAmountRefunded() : float
     {
         return $this->amountRefunded;
     }
@@ -611,7 +611,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setAmountRefunded(float $amountRefunded): self
+    public function setAmountRefunded(float $amountRefunded) : self
     {
         $this->amountRefunded = $amountRefunded;
         return $this;
@@ -621,7 +621,7 @@ class SalesDataOrderItemInterface
      *
      * @return string
      */
-    public function getAppliedRuleIds(): string
+    public function getAppliedRuleIds() : string
     {
         return $this->appliedRuleIds;
     }
@@ -632,7 +632,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setAppliedRuleIds(string $appliedRuleIds): self
+    public function setAppliedRuleIds(string $appliedRuleIds) : self
     {
         $this->appliedRuleIds = $appliedRuleIds;
         return $this;
@@ -642,7 +642,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseAmountRefunded(): float
+    public function getBaseAmountRefunded() : float
     {
         return $this->baseAmountRefunded;
     }
@@ -653,7 +653,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseAmountRefunded(float $baseAmountRefunded): self
+    public function setBaseAmountRefunded(float $baseAmountRefunded) : self
     {
         $this->baseAmountRefunded = $baseAmountRefunded;
         return $this;
@@ -663,7 +663,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseCost(): float
+    public function getBaseCost() : float
     {
         return $this->baseCost;
     }
@@ -674,7 +674,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseCost(float $baseCost): self
+    public function setBaseCost(float $baseCost) : self
     {
         $this->baseCost = $baseCost;
         return $this;
@@ -684,7 +684,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseDiscountAmount(): float
+    public function getBaseDiscountAmount() : float
     {
         return $this->baseDiscountAmount;
     }
@@ -695,7 +695,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseDiscountAmount(float $baseDiscountAmount): self
+    public function setBaseDiscountAmount(float $baseDiscountAmount) : self
     {
         $this->baseDiscountAmount = $baseDiscountAmount;
         return $this;
@@ -705,7 +705,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseDiscountInvoiced(): float
+    public function getBaseDiscountInvoiced() : float
     {
         return $this->baseDiscountInvoiced;
     }
@@ -716,7 +716,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseDiscountInvoiced(float $baseDiscountInvoiced): self
+    public function setBaseDiscountInvoiced(float $baseDiscountInvoiced) : self
     {
         $this->baseDiscountInvoiced = $baseDiscountInvoiced;
         return $this;
@@ -726,7 +726,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseDiscountRefunded(): float
+    public function getBaseDiscountRefunded() : float
     {
         return $this->baseDiscountRefunded;
     }
@@ -737,7 +737,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseDiscountRefunded(float $baseDiscountRefunded): self
+    public function setBaseDiscountRefunded(float $baseDiscountRefunded) : self
     {
         $this->baseDiscountRefunded = $baseDiscountRefunded;
         return $this;
@@ -747,7 +747,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseDiscountTaxCompensationAmount(): float
+    public function getBaseDiscountTaxCompensationAmount() : float
     {
         return $this->baseDiscountTaxCompensationAmount;
     }
@@ -758,7 +758,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseDiscountTaxCompensationAmount(float $baseDiscountTaxCompensationAmount): self
+    public function setBaseDiscountTaxCompensationAmount(float $baseDiscountTaxCompensationAmount) : self
     {
         $this->baseDiscountTaxCompensationAmount = $baseDiscountTaxCompensationAmount;
         return $this;
@@ -768,7 +768,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseDiscountTaxCompensationInvoiced(): float
+    public function getBaseDiscountTaxCompensationInvoiced() : float
     {
         return $this->baseDiscountTaxCompensationInvoiced;
     }
@@ -779,7 +779,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseDiscountTaxCompensationInvoiced(float $baseDiscountTaxCompensationInvoiced): self
+    public function setBaseDiscountTaxCompensationInvoiced(float $baseDiscountTaxCompensationInvoiced) : self
     {
         $this->baseDiscountTaxCompensationInvoiced = $baseDiscountTaxCompensationInvoiced;
         return $this;
@@ -789,7 +789,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseDiscountTaxCompensationRefunded(): float
+    public function getBaseDiscountTaxCompensationRefunded() : float
     {
         return $this->baseDiscountTaxCompensationRefunded;
     }
@@ -800,7 +800,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseDiscountTaxCompensationRefunded(float $baseDiscountTaxCompensationRefunded): self
+    public function setBaseDiscountTaxCompensationRefunded(float $baseDiscountTaxCompensationRefunded) : self
     {
         $this->baseDiscountTaxCompensationRefunded = $baseDiscountTaxCompensationRefunded;
         return $this;
@@ -810,7 +810,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseOriginalPrice(): float
+    public function getBaseOriginalPrice() : float
     {
         return $this->baseOriginalPrice;
     }
@@ -821,7 +821,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseOriginalPrice(float $baseOriginalPrice): self
+    public function setBaseOriginalPrice(float $baseOriginalPrice) : self
     {
         $this->baseOriginalPrice = $baseOriginalPrice;
         return $this;
@@ -831,7 +831,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBasePrice(): float
+    public function getBasePrice() : float
     {
         return $this->basePrice;
     }
@@ -842,7 +842,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBasePrice(float $basePrice): self
+    public function setBasePrice(float $basePrice) : self
     {
         $this->basePrice = $basePrice;
         return $this;
@@ -852,7 +852,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBasePriceInclTax(): float
+    public function getBasePriceInclTax() : float
     {
         return $this->basePriceInclTax;
     }
@@ -863,7 +863,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBasePriceInclTax(float $basePriceInclTax): self
+    public function setBasePriceInclTax(float $basePriceInclTax) : self
     {
         $this->basePriceInclTax = $basePriceInclTax;
         return $this;
@@ -873,7 +873,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseRowInvoiced(): float
+    public function getBaseRowInvoiced() : float
     {
         return $this->baseRowInvoiced;
     }
@@ -884,7 +884,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseRowInvoiced(float $baseRowInvoiced): self
+    public function setBaseRowInvoiced(float $baseRowInvoiced) : self
     {
         $this->baseRowInvoiced = $baseRowInvoiced;
         return $this;
@@ -894,7 +894,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseRowTotal(): float
+    public function getBaseRowTotal() : float
     {
         return $this->baseRowTotal;
     }
@@ -905,7 +905,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseRowTotal(float $baseRowTotal): self
+    public function setBaseRowTotal(float $baseRowTotal) : self
     {
         $this->baseRowTotal = $baseRowTotal;
         return $this;
@@ -915,7 +915,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseRowTotalInclTax(): float
+    public function getBaseRowTotalInclTax() : float
     {
         return $this->baseRowTotalInclTax;
     }
@@ -926,7 +926,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseRowTotalInclTax(float $baseRowTotalInclTax): self
+    public function setBaseRowTotalInclTax(float $baseRowTotalInclTax) : self
     {
         $this->baseRowTotalInclTax = $baseRowTotalInclTax;
         return $this;
@@ -936,7 +936,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseTaxAmount(): float
+    public function getBaseTaxAmount() : float
     {
         return $this->baseTaxAmount;
     }
@@ -947,7 +947,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseTaxAmount(float $baseTaxAmount): self
+    public function setBaseTaxAmount(float $baseTaxAmount) : self
     {
         $this->baseTaxAmount = $baseTaxAmount;
         return $this;
@@ -957,7 +957,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseTaxBeforeDiscount(): float
+    public function getBaseTaxBeforeDiscount() : float
     {
         return $this->baseTaxBeforeDiscount;
     }
@@ -968,7 +968,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseTaxBeforeDiscount(float $baseTaxBeforeDiscount): self
+    public function setBaseTaxBeforeDiscount(float $baseTaxBeforeDiscount) : self
     {
         $this->baseTaxBeforeDiscount = $baseTaxBeforeDiscount;
         return $this;
@@ -978,7 +978,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseTaxInvoiced(): float
+    public function getBaseTaxInvoiced() : float
     {
         return $this->baseTaxInvoiced;
     }
@@ -989,7 +989,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseTaxInvoiced(float $baseTaxInvoiced): self
+    public function setBaseTaxInvoiced(float $baseTaxInvoiced) : self
     {
         $this->baseTaxInvoiced = $baseTaxInvoiced;
         return $this;
@@ -999,7 +999,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseTaxRefunded(): float
+    public function getBaseTaxRefunded() : float
     {
         return $this->baseTaxRefunded;
     }
@@ -1010,7 +1010,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseTaxRefunded(float $baseTaxRefunded): self
+    public function setBaseTaxRefunded(float $baseTaxRefunded) : self
     {
         $this->baseTaxRefunded = $baseTaxRefunded;
         return $this;
@@ -1020,7 +1020,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseWeeeTaxAppliedAmount(): float
+    public function getBaseWeeeTaxAppliedAmount() : float
     {
         return $this->baseWeeeTaxAppliedAmount;
     }
@@ -1031,7 +1031,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseWeeeTaxAppliedAmount(float $baseWeeeTaxAppliedAmount): self
+    public function setBaseWeeeTaxAppliedAmount(float $baseWeeeTaxAppliedAmount) : self
     {
         $this->baseWeeeTaxAppliedAmount = $baseWeeeTaxAppliedAmount;
         return $this;
@@ -1041,7 +1041,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseWeeeTaxAppliedRowAmnt(): float
+    public function getBaseWeeeTaxAppliedRowAmnt() : float
     {
         return $this->baseWeeeTaxAppliedRowAmnt;
     }
@@ -1052,7 +1052,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseWeeeTaxAppliedRowAmnt(float $baseWeeeTaxAppliedRowAmnt): self
+    public function setBaseWeeeTaxAppliedRowAmnt(float $baseWeeeTaxAppliedRowAmnt) : self
     {
         $this->baseWeeeTaxAppliedRowAmnt = $baseWeeeTaxAppliedRowAmnt;
         return $this;
@@ -1062,7 +1062,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseWeeeTaxDisposition(): float
+    public function getBaseWeeeTaxDisposition() : float
     {
         return $this->baseWeeeTaxDisposition;
     }
@@ -1073,7 +1073,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseWeeeTaxDisposition(float $baseWeeeTaxDisposition): self
+    public function setBaseWeeeTaxDisposition(float $baseWeeeTaxDisposition) : self
     {
         $this->baseWeeeTaxDisposition = $baseWeeeTaxDisposition;
         return $this;
@@ -1083,7 +1083,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getBaseWeeeTaxRowDisposition(): float
+    public function getBaseWeeeTaxRowDisposition() : float
     {
         return $this->baseWeeeTaxRowDisposition;
     }
@@ -1094,7 +1094,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setBaseWeeeTaxRowDisposition(float $baseWeeeTaxRowDisposition): self
+    public function setBaseWeeeTaxRowDisposition(float $baseWeeeTaxRowDisposition) : self
     {
         $this->baseWeeeTaxRowDisposition = $baseWeeeTaxRowDisposition;
         return $this;
@@ -1104,7 +1104,7 @@ class SalesDataOrderItemInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -1115,7 +1115,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -1125,7 +1125,7 @@ class SalesDataOrderItemInterface
      *
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription() : string
     {
         return $this->description;
     }
@@ -1136,7 +1136,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setDescription(string $description): self
+    public function setDescription(string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -1146,7 +1146,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getDiscountAmount(): float
+    public function getDiscountAmount() : float
     {
         return $this->discountAmount;
     }
@@ -1157,7 +1157,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setDiscountAmount(float $discountAmount): self
+    public function setDiscountAmount(float $discountAmount) : self
     {
         $this->discountAmount = $discountAmount;
         return $this;
@@ -1167,7 +1167,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getDiscountInvoiced(): float
+    public function getDiscountInvoiced() : float
     {
         return $this->discountInvoiced;
     }
@@ -1178,7 +1178,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setDiscountInvoiced(float $discountInvoiced): self
+    public function setDiscountInvoiced(float $discountInvoiced) : self
     {
         $this->discountInvoiced = $discountInvoiced;
         return $this;
@@ -1188,7 +1188,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getDiscountPercent(): float
+    public function getDiscountPercent() : float
     {
         return $this->discountPercent;
     }
@@ -1199,7 +1199,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setDiscountPercent(float $discountPercent): self
+    public function setDiscountPercent(float $discountPercent) : self
     {
         $this->discountPercent = $discountPercent;
         return $this;
@@ -1209,7 +1209,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getDiscountRefunded(): float
+    public function getDiscountRefunded() : float
     {
         return $this->discountRefunded;
     }
@@ -1220,7 +1220,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setDiscountRefunded(float $discountRefunded): self
+    public function setDiscountRefunded(float $discountRefunded) : self
     {
         $this->discountRefunded = $discountRefunded;
         return $this;
@@ -1230,7 +1230,7 @@ class SalesDataOrderItemInterface
      *
      * @return int
      */
-    public function getEventId(): int
+    public function getEventId() : int
     {
         return $this->eventId;
     }
@@ -1241,7 +1241,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setEventId(int $eventId): self
+    public function setEventId(int $eventId) : self
     {
         $this->eventId = $eventId;
         return $this;
@@ -1251,7 +1251,7 @@ class SalesDataOrderItemInterface
      *
      * @return string
      */
-    public function getExtOrderItemId(): string
+    public function getExtOrderItemId() : string
     {
         return $this->extOrderItemId;
     }
@@ -1262,7 +1262,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setExtOrderItemId(string $extOrderItemId): self
+    public function setExtOrderItemId(string $extOrderItemId) : self
     {
         $this->extOrderItemId = $extOrderItemId;
         return $this;
@@ -1272,7 +1272,7 @@ class SalesDataOrderItemInterface
      *
      * @return int
      */
-    public function getFreeShipping(): int
+    public function getFreeShipping() : int
     {
         return $this->freeShipping;
     }
@@ -1283,7 +1283,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setFreeShipping(int $freeShipping): self
+    public function setFreeShipping(int $freeShipping) : self
     {
         $this->freeShipping = $freeShipping;
         return $this;
@@ -1293,7 +1293,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getGwBasePrice(): float
+    public function getGwBasePrice() : float
     {
         return $this->gwBasePrice;
     }
@@ -1304,7 +1304,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setGwBasePrice(float $gwBasePrice): self
+    public function setGwBasePrice(float $gwBasePrice) : self
     {
         $this->gwBasePrice = $gwBasePrice;
         return $this;
@@ -1314,7 +1314,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getGwBasePriceInvoiced(): float
+    public function getGwBasePriceInvoiced() : float
     {
         return $this->gwBasePriceInvoiced;
     }
@@ -1325,7 +1325,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setGwBasePriceInvoiced(float $gwBasePriceInvoiced): self
+    public function setGwBasePriceInvoiced(float $gwBasePriceInvoiced) : self
     {
         $this->gwBasePriceInvoiced = $gwBasePriceInvoiced;
         return $this;
@@ -1335,7 +1335,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getGwBasePriceRefunded(): float
+    public function getGwBasePriceRefunded() : float
     {
         return $this->gwBasePriceRefunded;
     }
@@ -1346,7 +1346,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setGwBasePriceRefunded(float $gwBasePriceRefunded): self
+    public function setGwBasePriceRefunded(float $gwBasePriceRefunded) : self
     {
         $this->gwBasePriceRefunded = $gwBasePriceRefunded;
         return $this;
@@ -1356,7 +1356,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getGwBaseTaxAmount(): float
+    public function getGwBaseTaxAmount() : float
     {
         return $this->gwBaseTaxAmount;
     }
@@ -1367,7 +1367,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setGwBaseTaxAmount(float $gwBaseTaxAmount): self
+    public function setGwBaseTaxAmount(float $gwBaseTaxAmount) : self
     {
         $this->gwBaseTaxAmount = $gwBaseTaxAmount;
         return $this;
@@ -1377,7 +1377,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getGwBaseTaxAmountInvoiced(): float
+    public function getGwBaseTaxAmountInvoiced() : float
     {
         return $this->gwBaseTaxAmountInvoiced;
     }
@@ -1388,7 +1388,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setGwBaseTaxAmountInvoiced(float $gwBaseTaxAmountInvoiced): self
+    public function setGwBaseTaxAmountInvoiced(float $gwBaseTaxAmountInvoiced) : self
     {
         $this->gwBaseTaxAmountInvoiced = $gwBaseTaxAmountInvoiced;
         return $this;
@@ -1398,7 +1398,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getGwBaseTaxAmountRefunded(): float
+    public function getGwBaseTaxAmountRefunded() : float
     {
         return $this->gwBaseTaxAmountRefunded;
     }
@@ -1409,7 +1409,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setGwBaseTaxAmountRefunded(float $gwBaseTaxAmountRefunded): self
+    public function setGwBaseTaxAmountRefunded(float $gwBaseTaxAmountRefunded) : self
     {
         $this->gwBaseTaxAmountRefunded = $gwBaseTaxAmountRefunded;
         return $this;
@@ -1419,7 +1419,7 @@ class SalesDataOrderItemInterface
      *
      * @return int
      */
-    public function getGwId(): int
+    public function getGwId() : int
     {
         return $this->gwId;
     }
@@ -1430,7 +1430,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setGwId(int $gwId): self
+    public function setGwId(int $gwId) : self
     {
         $this->gwId = $gwId;
         return $this;
@@ -1440,7 +1440,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getGwPrice(): float
+    public function getGwPrice() : float
     {
         return $this->gwPrice;
     }
@@ -1451,7 +1451,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setGwPrice(float $gwPrice): self
+    public function setGwPrice(float $gwPrice) : self
     {
         $this->gwPrice = $gwPrice;
         return $this;
@@ -1461,7 +1461,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getGwPriceInvoiced(): float
+    public function getGwPriceInvoiced() : float
     {
         return $this->gwPriceInvoiced;
     }
@@ -1472,7 +1472,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setGwPriceInvoiced(float $gwPriceInvoiced): self
+    public function setGwPriceInvoiced(float $gwPriceInvoiced) : self
     {
         $this->gwPriceInvoiced = $gwPriceInvoiced;
         return $this;
@@ -1482,7 +1482,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getGwPriceRefunded(): float
+    public function getGwPriceRefunded() : float
     {
         return $this->gwPriceRefunded;
     }
@@ -1493,7 +1493,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setGwPriceRefunded(float $gwPriceRefunded): self
+    public function setGwPriceRefunded(float $gwPriceRefunded) : self
     {
         $this->gwPriceRefunded = $gwPriceRefunded;
         return $this;
@@ -1503,7 +1503,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getGwTaxAmount(): float
+    public function getGwTaxAmount() : float
     {
         return $this->gwTaxAmount;
     }
@@ -1514,7 +1514,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setGwTaxAmount(float $gwTaxAmount): self
+    public function setGwTaxAmount(float $gwTaxAmount) : self
     {
         $this->gwTaxAmount = $gwTaxAmount;
         return $this;
@@ -1524,7 +1524,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getGwTaxAmountInvoiced(): float
+    public function getGwTaxAmountInvoiced() : float
     {
         return $this->gwTaxAmountInvoiced;
     }
@@ -1535,7 +1535,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setGwTaxAmountInvoiced(float $gwTaxAmountInvoiced): self
+    public function setGwTaxAmountInvoiced(float $gwTaxAmountInvoiced) : self
     {
         $this->gwTaxAmountInvoiced = $gwTaxAmountInvoiced;
         return $this;
@@ -1545,7 +1545,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getGwTaxAmountRefunded(): float
+    public function getGwTaxAmountRefunded() : float
     {
         return $this->gwTaxAmountRefunded;
     }
@@ -1556,7 +1556,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setGwTaxAmountRefunded(float $gwTaxAmountRefunded): self
+    public function setGwTaxAmountRefunded(float $gwTaxAmountRefunded) : self
     {
         $this->gwTaxAmountRefunded = $gwTaxAmountRefunded;
         return $this;
@@ -1566,7 +1566,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getDiscountTaxCompensationAmount(): float
+    public function getDiscountTaxCompensationAmount() : float
     {
         return $this->discountTaxCompensationAmount;
     }
@@ -1577,7 +1577,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setDiscountTaxCompensationAmount(float $discountTaxCompensationAmount): self
+    public function setDiscountTaxCompensationAmount(float $discountTaxCompensationAmount) : self
     {
         $this->discountTaxCompensationAmount = $discountTaxCompensationAmount;
         return $this;
@@ -1587,7 +1587,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getDiscountTaxCompensationCanceled(): float
+    public function getDiscountTaxCompensationCanceled() : float
     {
         return $this->discountTaxCompensationCanceled;
     }
@@ -1598,7 +1598,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setDiscountTaxCompensationCanceled(float $discountTaxCompensationCanceled): self
+    public function setDiscountTaxCompensationCanceled(float $discountTaxCompensationCanceled) : self
     {
         $this->discountTaxCompensationCanceled = $discountTaxCompensationCanceled;
         return $this;
@@ -1608,7 +1608,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getDiscountTaxCompensationInvoiced(): float
+    public function getDiscountTaxCompensationInvoiced() : float
     {
         return $this->discountTaxCompensationInvoiced;
     }
@@ -1619,7 +1619,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setDiscountTaxCompensationInvoiced(float $discountTaxCompensationInvoiced): self
+    public function setDiscountTaxCompensationInvoiced(float $discountTaxCompensationInvoiced) : self
     {
         $this->discountTaxCompensationInvoiced = $discountTaxCompensationInvoiced;
         return $this;
@@ -1629,7 +1629,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getDiscountTaxCompensationRefunded(): float
+    public function getDiscountTaxCompensationRefunded() : float
     {
         return $this->discountTaxCompensationRefunded;
     }
@@ -1640,7 +1640,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setDiscountTaxCompensationRefunded(float $discountTaxCompensationRefunded): self
+    public function setDiscountTaxCompensationRefunded(float $discountTaxCompensationRefunded) : self
     {
         $this->discountTaxCompensationRefunded = $discountTaxCompensationRefunded;
         return $this;
@@ -1650,7 +1650,7 @@ class SalesDataOrderItemInterface
      *
      * @return int
      */
-    public function getIsQtyDecimal(): int
+    public function getIsQtyDecimal() : int
     {
         return $this->isQtyDecimal;
     }
@@ -1661,7 +1661,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setIsQtyDecimal(int $isQtyDecimal): self
+    public function setIsQtyDecimal(int $isQtyDecimal) : self
     {
         $this->isQtyDecimal = $isQtyDecimal;
         return $this;
@@ -1671,7 +1671,7 @@ class SalesDataOrderItemInterface
      *
      * @return int
      */
-    public function getIsVirtual(): int
+    public function getIsVirtual() : int
     {
         return $this->isVirtual;
     }
@@ -1682,7 +1682,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setIsVirtual(int $isVirtual): self
+    public function setIsVirtual(int $isVirtual) : self
     {
         $this->isVirtual = $isVirtual;
         return $this;
@@ -1692,7 +1692,7 @@ class SalesDataOrderItemInterface
      *
      * @return int
      */
-    public function getItemId(): int
+    public function getItemId() : int
     {
         return $this->itemId;
     }
@@ -1703,7 +1703,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setItemId(int $itemId): self
+    public function setItemId(int $itemId) : self
     {
         $this->itemId = $itemId;
         return $this;
@@ -1713,7 +1713,7 @@ class SalesDataOrderItemInterface
      *
      * @return int
      */
-    public function getLockedDoInvoice(): int
+    public function getLockedDoInvoice() : int
     {
         return $this->lockedDoInvoice;
     }
@@ -1724,7 +1724,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setLockedDoInvoice(int $lockedDoInvoice): self
+    public function setLockedDoInvoice(int $lockedDoInvoice) : self
     {
         $this->lockedDoInvoice = $lockedDoInvoice;
         return $this;
@@ -1734,7 +1734,7 @@ class SalesDataOrderItemInterface
      *
      * @return int
      */
-    public function getLockedDoShip(): int
+    public function getLockedDoShip() : int
     {
         return $this->lockedDoShip;
     }
@@ -1745,7 +1745,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setLockedDoShip(int $lockedDoShip): self
+    public function setLockedDoShip(int $lockedDoShip) : self
     {
         $this->lockedDoShip = $lockedDoShip;
         return $this;
@@ -1755,7 +1755,7 @@ class SalesDataOrderItemInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -1766,7 +1766,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -1776,7 +1776,7 @@ class SalesDataOrderItemInterface
      *
      * @return int
      */
-    public function getNoDiscount(): int
+    public function getNoDiscount() : int
     {
         return $this->noDiscount;
     }
@@ -1787,7 +1787,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setNoDiscount(int $noDiscount): self
+    public function setNoDiscount(int $noDiscount) : self
     {
         $this->noDiscount = $noDiscount;
         return $this;
@@ -1797,7 +1797,7 @@ class SalesDataOrderItemInterface
      *
      * @return int
      */
-    public function getOrderId(): int
+    public function getOrderId() : int
     {
         return $this->orderId;
     }
@@ -1808,7 +1808,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setOrderId(int $orderId): self
+    public function setOrderId(int $orderId) : self
     {
         $this->orderId = $orderId;
         return $this;
@@ -1818,7 +1818,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getOriginalPrice(): float
+    public function getOriginalPrice() : float
     {
         return $this->originalPrice;
     }
@@ -1829,7 +1829,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setOriginalPrice(float $originalPrice): self
+    public function setOriginalPrice(float $originalPrice) : self
     {
         $this->originalPrice = $originalPrice;
         return $this;
@@ -1839,7 +1839,7 @@ class SalesDataOrderItemInterface
      *
      * @return int
      */
-    public function getParentItemId(): int
+    public function getParentItemId() : int
     {
         return $this->parentItemId;
     }
@@ -1850,7 +1850,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setParentItemId(int $parentItemId): self
+    public function setParentItemId(int $parentItemId) : self
     {
         $this->parentItemId = $parentItemId;
         return $this;
@@ -1860,7 +1860,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getPrice(): float
+    public function getPrice() : float
     {
         return $this->price;
     }
@@ -1871,7 +1871,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(float $price) : self
     {
         $this->price = $price;
         return $this;
@@ -1881,7 +1881,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getPriceInclTax(): float
+    public function getPriceInclTax() : float
     {
         return $this->priceInclTax;
     }
@@ -1892,7 +1892,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setPriceInclTax(float $priceInclTax): self
+    public function setPriceInclTax(float $priceInclTax) : self
     {
         $this->priceInclTax = $priceInclTax;
         return $this;
@@ -1902,7 +1902,7 @@ class SalesDataOrderItemInterface
      *
      * @return int
      */
-    public function getProductId(): int
+    public function getProductId() : int
     {
         return $this->productId;
     }
@@ -1913,7 +1913,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setProductId(int $productId): self
+    public function setProductId(int $productId) : self
     {
         $this->productId = $productId;
         return $this;
@@ -1923,7 +1923,7 @@ class SalesDataOrderItemInterface
      *
      * @return string
      */
-    public function getProductType(): string
+    public function getProductType() : string
     {
         return $this->productType;
     }
@@ -1934,7 +1934,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setProductType(string $productType): self
+    public function setProductType(string $productType) : self
     {
         $this->productType = $productType;
         return $this;
@@ -1944,7 +1944,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getQtyBackordered(): float
+    public function getQtyBackordered() : float
     {
         return $this->qtyBackordered;
     }
@@ -1955,7 +1955,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setQtyBackordered(float $qtyBackordered): self
+    public function setQtyBackordered(float $qtyBackordered) : self
     {
         $this->qtyBackordered = $qtyBackordered;
         return $this;
@@ -1965,7 +1965,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getQtyCanceled(): float
+    public function getQtyCanceled() : float
     {
         return $this->qtyCanceled;
     }
@@ -1976,7 +1976,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setQtyCanceled(float $qtyCanceled): self
+    public function setQtyCanceled(float $qtyCanceled) : self
     {
         $this->qtyCanceled = $qtyCanceled;
         return $this;
@@ -1986,7 +1986,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getQtyInvoiced(): float
+    public function getQtyInvoiced() : float
     {
         return $this->qtyInvoiced;
     }
@@ -1997,7 +1997,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setQtyInvoiced(float $qtyInvoiced): self
+    public function setQtyInvoiced(float $qtyInvoiced) : self
     {
         $this->qtyInvoiced = $qtyInvoiced;
         return $this;
@@ -2007,7 +2007,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getQtyOrdered(): float
+    public function getQtyOrdered() : float
     {
         return $this->qtyOrdered;
     }
@@ -2018,7 +2018,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setQtyOrdered(float $qtyOrdered): self
+    public function setQtyOrdered(float $qtyOrdered) : self
     {
         $this->qtyOrdered = $qtyOrdered;
         return $this;
@@ -2028,7 +2028,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getQtyRefunded(): float
+    public function getQtyRefunded() : float
     {
         return $this->qtyRefunded;
     }
@@ -2039,7 +2039,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setQtyRefunded(float $qtyRefunded): self
+    public function setQtyRefunded(float $qtyRefunded) : self
     {
         $this->qtyRefunded = $qtyRefunded;
         return $this;
@@ -2049,7 +2049,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getQtyReturned(): float
+    public function getQtyReturned() : float
     {
         return $this->qtyReturned;
     }
@@ -2060,7 +2060,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setQtyReturned(float $qtyReturned): self
+    public function setQtyReturned(float $qtyReturned) : self
     {
         $this->qtyReturned = $qtyReturned;
         return $this;
@@ -2070,7 +2070,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getQtyShipped(): float
+    public function getQtyShipped() : float
     {
         return $this->qtyShipped;
     }
@@ -2081,7 +2081,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setQtyShipped(float $qtyShipped): self
+    public function setQtyShipped(float $qtyShipped) : self
     {
         $this->qtyShipped = $qtyShipped;
         return $this;
@@ -2091,7 +2091,7 @@ class SalesDataOrderItemInterface
      *
      * @return int
      */
-    public function getQuoteItemId(): int
+    public function getQuoteItemId() : int
     {
         return $this->quoteItemId;
     }
@@ -2102,7 +2102,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setQuoteItemId(int $quoteItemId): self
+    public function setQuoteItemId(int $quoteItemId) : self
     {
         $this->quoteItemId = $quoteItemId;
         return $this;
@@ -2112,7 +2112,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getRowInvoiced(): float
+    public function getRowInvoiced() : float
     {
         return $this->rowInvoiced;
     }
@@ -2123,7 +2123,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setRowInvoiced(float $rowInvoiced): self
+    public function setRowInvoiced(float $rowInvoiced) : self
     {
         $this->rowInvoiced = $rowInvoiced;
         return $this;
@@ -2133,7 +2133,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getRowTotal(): float
+    public function getRowTotal() : float
     {
         return $this->rowTotal;
     }
@@ -2144,7 +2144,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setRowTotal(float $rowTotal): self
+    public function setRowTotal(float $rowTotal) : self
     {
         $this->rowTotal = $rowTotal;
         return $this;
@@ -2154,7 +2154,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getRowTotalInclTax(): float
+    public function getRowTotalInclTax() : float
     {
         return $this->rowTotalInclTax;
     }
@@ -2165,7 +2165,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setRowTotalInclTax(float $rowTotalInclTax): self
+    public function setRowTotalInclTax(float $rowTotalInclTax) : self
     {
         $this->rowTotalInclTax = $rowTotalInclTax;
         return $this;
@@ -2175,7 +2175,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getRowWeight(): float
+    public function getRowWeight() : float
     {
         return $this->rowWeight;
     }
@@ -2186,7 +2186,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setRowWeight(float $rowWeight): self
+    public function setRowWeight(float $rowWeight) : self
     {
         $this->rowWeight = $rowWeight;
         return $this;
@@ -2196,7 +2196,7 @@ class SalesDataOrderItemInterface
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
@@ -2207,7 +2207,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -2217,7 +2217,7 @@ class SalesDataOrderItemInterface
      *
      * @return int
      */
-    public function getStoreId(): int
+    public function getStoreId() : int
     {
         return $this->storeId;
     }
@@ -2228,7 +2228,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(int $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;
@@ -2238,7 +2238,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getTaxAmount(): float
+    public function getTaxAmount() : float
     {
         return $this->taxAmount;
     }
@@ -2249,7 +2249,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setTaxAmount(float $taxAmount): self
+    public function setTaxAmount(float $taxAmount) : self
     {
         $this->taxAmount = $taxAmount;
         return $this;
@@ -2259,7 +2259,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getTaxBeforeDiscount(): float
+    public function getTaxBeforeDiscount() : float
     {
         return $this->taxBeforeDiscount;
     }
@@ -2270,7 +2270,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setTaxBeforeDiscount(float $taxBeforeDiscount): self
+    public function setTaxBeforeDiscount(float $taxBeforeDiscount) : self
     {
         $this->taxBeforeDiscount = $taxBeforeDiscount;
         return $this;
@@ -2280,7 +2280,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getTaxCanceled(): float
+    public function getTaxCanceled() : float
     {
         return $this->taxCanceled;
     }
@@ -2291,7 +2291,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setTaxCanceled(float $taxCanceled): self
+    public function setTaxCanceled(float $taxCanceled) : self
     {
         $this->taxCanceled = $taxCanceled;
         return $this;
@@ -2301,7 +2301,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getTaxInvoiced(): float
+    public function getTaxInvoiced() : float
     {
         return $this->taxInvoiced;
     }
@@ -2312,7 +2312,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setTaxInvoiced(float $taxInvoiced): self
+    public function setTaxInvoiced(float $taxInvoiced) : self
     {
         $this->taxInvoiced = $taxInvoiced;
         return $this;
@@ -2322,7 +2322,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getTaxPercent(): float
+    public function getTaxPercent() : float
     {
         return $this->taxPercent;
     }
@@ -2333,7 +2333,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setTaxPercent(float $taxPercent): self
+    public function setTaxPercent(float $taxPercent) : self
     {
         $this->taxPercent = $taxPercent;
         return $this;
@@ -2343,7 +2343,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getTaxRefunded(): float
+    public function getTaxRefunded() : float
     {
         return $this->taxRefunded;
     }
@@ -2354,7 +2354,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setTaxRefunded(float $taxRefunded): self
+    public function setTaxRefunded(float $taxRefunded) : self
     {
         $this->taxRefunded = $taxRefunded;
         return $this;
@@ -2364,7 +2364,7 @@ class SalesDataOrderItemInterface
      *
      * @return string
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt() : string
     {
         return $this->updatedAt;
     }
@@ -2375,7 +2375,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(string $updatedAt) : self
     {
         $this->updatedAt = $updatedAt;
         return $this;
@@ -2385,7 +2385,7 @@ class SalesDataOrderItemInterface
      *
      * @return string
      */
-    public function getWeeeTaxApplied(): string
+    public function getWeeeTaxApplied() : string
     {
         return $this->weeeTaxApplied;
     }
@@ -2396,7 +2396,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setWeeeTaxApplied(string $weeeTaxApplied): self
+    public function setWeeeTaxApplied(string $weeeTaxApplied) : self
     {
         $this->weeeTaxApplied = $weeeTaxApplied;
         return $this;
@@ -2406,7 +2406,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getWeeeTaxAppliedAmount(): float
+    public function getWeeeTaxAppliedAmount() : float
     {
         return $this->weeeTaxAppliedAmount;
     }
@@ -2417,7 +2417,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setWeeeTaxAppliedAmount(float $weeeTaxAppliedAmount): self
+    public function setWeeeTaxAppliedAmount(float $weeeTaxAppliedAmount) : self
     {
         $this->weeeTaxAppliedAmount = $weeeTaxAppliedAmount;
         return $this;
@@ -2427,7 +2427,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getWeeeTaxAppliedRowAmount(): float
+    public function getWeeeTaxAppliedRowAmount() : float
     {
         return $this->weeeTaxAppliedRowAmount;
     }
@@ -2438,7 +2438,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setWeeeTaxAppliedRowAmount(float $weeeTaxAppliedRowAmount): self
+    public function setWeeeTaxAppliedRowAmount(float $weeeTaxAppliedRowAmount) : self
     {
         $this->weeeTaxAppliedRowAmount = $weeeTaxAppliedRowAmount;
         return $this;
@@ -2448,7 +2448,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getWeeeTaxDisposition(): float
+    public function getWeeeTaxDisposition() : float
     {
         return $this->weeeTaxDisposition;
     }
@@ -2459,7 +2459,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setWeeeTaxDisposition(float $weeeTaxDisposition): self
+    public function setWeeeTaxDisposition(float $weeeTaxDisposition) : self
     {
         $this->weeeTaxDisposition = $weeeTaxDisposition;
         return $this;
@@ -2469,7 +2469,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getWeeeTaxRowDisposition(): float
+    public function getWeeeTaxRowDisposition() : float
     {
         return $this->weeeTaxRowDisposition;
     }
@@ -2480,7 +2480,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setWeeeTaxRowDisposition(float $weeeTaxRowDisposition): self
+    public function setWeeeTaxRowDisposition(float $weeeTaxRowDisposition) : self
     {
         $this->weeeTaxRowDisposition = $weeeTaxRowDisposition;
         return $this;
@@ -2490,7 +2490,7 @@ class SalesDataOrderItemInterface
      *
      * @return float
      */
-    public function getWeight(): float
+    public function getWeight() : float
     {
         return $this->weight;
     }
@@ -2501,7 +2501,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setWeight(float $weight): self
+    public function setWeight(float $weight) : self
     {
         $this->weight = $weight;
         return $this;
@@ -2511,7 +2511,7 @@ class SalesDataOrderItemInterface
      *
      * @return SalesDataOrderItemInterface
      */
-    public function getParentItem(): SalesDataOrderItemInterface
+    public function getParentItem() : SalesDataOrderItemInterface
     {
         return $this->parentItem;
     }
@@ -2522,7 +2522,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setParentItem(SalesDataOrderItemInterface $parentItem): self
+    public function setParentItem(SalesDataOrderItemInterface $parentItem) : self
     {
         $this->parentItem = $parentItem;
         return $this;
@@ -2532,7 +2532,7 @@ class SalesDataOrderItemInterface
      *
      * @return CatalogDataProductOptionInterface
      */
-    public function getProductOption(): CatalogDataProductOptionInterface
+    public function getProductOption() : CatalogDataProductOptionInterface
     {
         return $this->productOption;
     }
@@ -2543,7 +2543,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setProductOption(CatalogDataProductOptionInterface $productOption): self
+    public function setProductOption(CatalogDataProductOptionInterface $productOption) : self
     {
         $this->productOption = $productOption;
         return $this;
@@ -2553,7 +2553,7 @@ class SalesDataOrderItemInterface
      *
      * @return SalesDataOrderItemExtensionInterface
      */
-    public function getExtensionAttributes(): SalesDataOrderItemExtensionInterface
+    public function getExtensionAttributes() : SalesDataOrderItemExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -2564,7 +2564,7 @@ class SalesDataOrderItemInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(SalesDataOrderItemExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(SalesDataOrderItemExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

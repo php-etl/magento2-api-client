@@ -63,7 +63,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -74,7 +74,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -84,7 +84,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -95,7 +95,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -105,7 +105,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription() : string
     {
         return $this->description;
     }
@@ -116,7 +116,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return self
      */
-    public function setDescription(string $description): self
+    public function setDescription(string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -126,7 +126,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return int
      */
-    public function getCustomerGroupId(): int
+    public function getCustomerGroupId() : int
     {
         return $this->customerGroupId;
     }
@@ -137,7 +137,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return self
      */
-    public function setCustomerGroupId(int $customerGroupId): self
+    public function setCustomerGroupId(int $customerGroupId) : self
     {
         $this->customerGroupId = $customerGroupId;
         return $this;
@@ -147,7 +147,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return int
      */
-    public function getType(): int
+    public function getType() : int
     {
         return $this->type;
     }
@@ -158,7 +158,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return self
      */
-    public function setType(int $type): self
+    public function setType(int $type) : self
     {
         $this->type = $type;
         return $this;
@@ -168,7 +168,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -179,7 +179,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -189,7 +189,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return int
      */
-    public function getCreatedBy(): int
+    public function getCreatedBy() : int
     {
         return $this->createdBy;
     }
@@ -200,7 +200,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return self
      */
-    public function setCreatedBy(int $createdBy): self
+    public function setCreatedBy(int $createdBy) : self
     {
         $this->createdBy = $createdBy;
         return $this;
@@ -210,7 +210,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return int
      */
-    public function getStoreId(): int
+    public function getStoreId() : int
     {
         return $this->storeId;
     }
@@ -221,7 +221,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(int $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;
@@ -231,7 +231,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return int
      */
-    public function getTaxClassId(): int
+    public function getTaxClassId() : int
     {
         return $this->taxClassId;
     }
@@ -242,7 +242,7 @@ class SharedCatalogDataSharedCatalogInterface
      *
      * @return self
      */
-    public function setTaxClassId(int $taxClassId): self
+    public function setTaxClassId(int $taxClassId) : self
     {
         $this->taxClassId = $taxClassId;
         return $this;

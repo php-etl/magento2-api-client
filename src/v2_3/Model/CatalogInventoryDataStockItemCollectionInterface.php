@@ -27,7 +27,7 @@ class CatalogInventoryDataStockItemCollectionInterface
      *
      * @return CatalogInventoryDataStockItemInterface[]
      */
-    public function getItems(): array
+    public function getItems() : array
     {
         return $this->items;
     }
@@ -38,7 +38,7 @@ class CatalogInventoryDataStockItemCollectionInterface
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(array $items) : self
     {
         $this->items = $items;
         return $this;
@@ -48,7 +48,7 @@ class CatalogInventoryDataStockItemCollectionInterface
      *
      * @return CatalogInventoryStockItemCriteriaInterface
      */
-    public function getSearchCriteria(): CatalogInventoryStockItemCriteriaInterface
+    public function getSearchCriteria() : CatalogInventoryStockItemCriteriaInterface
     {
         return $this->searchCriteria;
     }
@@ -59,7 +59,7 @@ class CatalogInventoryDataStockItemCollectionInterface
      *
      * @return self
      */
-    public function setSearchCriteria(CatalogInventoryStockItemCriteriaInterface $searchCriteria): self
+    public function setSearchCriteria(CatalogInventoryStockItemCriteriaInterface $searchCriteria) : self
     {
         $this->searchCriteria = $searchCriteria;
         return $this;
@@ -69,7 +69,7 @@ class CatalogInventoryDataStockItemCollectionInterface
      *
      * @return int
      */
-    public function getTotalCount(): int
+    public function getTotalCount() : int
     {
         return $this->totalCount;
     }
@@ -80,7 +80,7 @@ class CatalogInventoryDataStockItemCollectionInterface
      *
      * @return self
      */
-    public function setTotalCount(int $totalCount): self
+    public function setTotalCount(int $totalCount) : self
     {
         $this->totalCount = $totalCount;
         return $this;

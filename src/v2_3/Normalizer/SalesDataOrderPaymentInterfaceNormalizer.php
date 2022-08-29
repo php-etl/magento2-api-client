@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataOrderPaymentInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataOrderPaymentInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataOrderPaymentInterface';
     }
@@ -38,58 +37,58 @@ class SalesDataOrderPaymentInterfaceNormalizer implements DenormalizerInterface,
         }
         $object = new \Kiboko\Magento\v2_3\Model\SalesDataOrderPaymentInterface();
         if (\array_key_exists('amount_authorized', $data) && \is_int($data['amount_authorized'])) {
-            $data['amount_authorized'] = (float) $data['amount_authorized'];
+            $data['amount_authorized'] = (double) $data['amount_authorized'];
         }
         if (\array_key_exists('amount_canceled', $data) && \is_int($data['amount_canceled'])) {
-            $data['amount_canceled'] = (float) $data['amount_canceled'];
+            $data['amount_canceled'] = (double) $data['amount_canceled'];
         }
         if (\array_key_exists('amount_ordered', $data) && \is_int($data['amount_ordered'])) {
-            $data['amount_ordered'] = (float) $data['amount_ordered'];
+            $data['amount_ordered'] = (double) $data['amount_ordered'];
         }
         if (\array_key_exists('amount_paid', $data) && \is_int($data['amount_paid'])) {
-            $data['amount_paid'] = (float) $data['amount_paid'];
+            $data['amount_paid'] = (double) $data['amount_paid'];
         }
         if (\array_key_exists('amount_refunded', $data) && \is_int($data['amount_refunded'])) {
-            $data['amount_refunded'] = (float) $data['amount_refunded'];
+            $data['amount_refunded'] = (double) $data['amount_refunded'];
         }
         if (\array_key_exists('base_amount_authorized', $data) && \is_int($data['base_amount_authorized'])) {
-            $data['base_amount_authorized'] = (float) $data['base_amount_authorized'];
+            $data['base_amount_authorized'] = (double) $data['base_amount_authorized'];
         }
         if (\array_key_exists('base_amount_canceled', $data) && \is_int($data['base_amount_canceled'])) {
-            $data['base_amount_canceled'] = (float) $data['base_amount_canceled'];
+            $data['base_amount_canceled'] = (double) $data['base_amount_canceled'];
         }
         if (\array_key_exists('base_amount_ordered', $data) && \is_int($data['base_amount_ordered'])) {
-            $data['base_amount_ordered'] = (float) $data['base_amount_ordered'];
+            $data['base_amount_ordered'] = (double) $data['base_amount_ordered'];
         }
         if (\array_key_exists('base_amount_paid', $data) && \is_int($data['base_amount_paid'])) {
-            $data['base_amount_paid'] = (float) $data['base_amount_paid'];
+            $data['base_amount_paid'] = (double) $data['base_amount_paid'];
         }
         if (\array_key_exists('base_amount_paid_online', $data) && \is_int($data['base_amount_paid_online'])) {
-            $data['base_amount_paid_online'] = (float) $data['base_amount_paid_online'];
+            $data['base_amount_paid_online'] = (double) $data['base_amount_paid_online'];
         }
         if (\array_key_exists('base_amount_refunded', $data) && \is_int($data['base_amount_refunded'])) {
-            $data['base_amount_refunded'] = (float) $data['base_amount_refunded'];
+            $data['base_amount_refunded'] = (double) $data['base_amount_refunded'];
         }
         if (\array_key_exists('base_amount_refunded_online', $data) && \is_int($data['base_amount_refunded_online'])) {
-            $data['base_amount_refunded_online'] = (float) $data['base_amount_refunded_online'];
+            $data['base_amount_refunded_online'] = (double) $data['base_amount_refunded_online'];
         }
         if (\array_key_exists('base_shipping_amount', $data) && \is_int($data['base_shipping_amount'])) {
-            $data['base_shipping_amount'] = (float) $data['base_shipping_amount'];
+            $data['base_shipping_amount'] = (double) $data['base_shipping_amount'];
         }
         if (\array_key_exists('base_shipping_captured', $data) && \is_int($data['base_shipping_captured'])) {
-            $data['base_shipping_captured'] = (float) $data['base_shipping_captured'];
+            $data['base_shipping_captured'] = (double) $data['base_shipping_captured'];
         }
         if (\array_key_exists('base_shipping_refunded', $data) && \is_int($data['base_shipping_refunded'])) {
-            $data['base_shipping_refunded'] = (float) $data['base_shipping_refunded'];
+            $data['base_shipping_refunded'] = (double) $data['base_shipping_refunded'];
         }
         if (\array_key_exists('shipping_amount', $data) && \is_int($data['shipping_amount'])) {
-            $data['shipping_amount'] = (float) $data['shipping_amount'];
+            $data['shipping_amount'] = (double) $data['shipping_amount'];
         }
         if (\array_key_exists('shipping_captured', $data) && \is_int($data['shipping_captured'])) {
-            $data['shipping_captured'] = (float) $data['shipping_captured'];
+            $data['shipping_captured'] = (double) $data['shipping_captured'];
         }
         if (\array_key_exists('shipping_refunded', $data) && \is_int($data['shipping_refunded'])) {
-            $data['shipping_refunded'] = (float) $data['shipping_refunded'];
+            $data['shipping_refunded'] = (double) $data['shipping_refunded'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

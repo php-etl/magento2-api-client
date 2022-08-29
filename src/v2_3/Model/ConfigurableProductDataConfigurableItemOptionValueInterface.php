@@ -27,7 +27,7 @@ class ConfigurableProductDataConfigurableItemOptionValueInterface
      *
      * @return string
      */
-    public function getOptionId(): string
+    public function getOptionId() : string
     {
         return $this->optionId;
     }
@@ -38,7 +38,7 @@ class ConfigurableProductDataConfigurableItemOptionValueInterface
      *
      * @return self
      */
-    public function setOptionId(string $optionId): self
+    public function setOptionId(string $optionId) : self
     {
         $this->optionId = $optionId;
         return $this;
@@ -48,7 +48,7 @@ class ConfigurableProductDataConfigurableItemOptionValueInterface
      *
      * @return int
      */
-    public function getOptionValue(): int
+    public function getOptionValue() : int
     {
         return $this->optionValue;
     }
@@ -59,7 +59,7 @@ class ConfigurableProductDataConfigurableItemOptionValueInterface
      *
      * @return self
      */
-    public function setOptionValue(int $optionValue): self
+    public function setOptionValue(int $optionValue) : self
     {
         $this->optionValue = $optionValue;
         return $this;
@@ -80,7 +80,7 @@ class ConfigurableProductDataConfigurableItemOptionValueInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

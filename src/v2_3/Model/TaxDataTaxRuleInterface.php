@@ -63,7 +63,7 @@ class TaxDataTaxRuleInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -74,7 +74,7 @@ class TaxDataTaxRuleInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -84,7 +84,7 @@ class TaxDataTaxRuleInterface
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -95,7 +95,7 @@ class TaxDataTaxRuleInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
@@ -105,7 +105,7 @@ class TaxDataTaxRuleInterface
      *
      * @return int
      */
-    public function getPriority(): int
+    public function getPriority() : int
     {
         return $this->priority;
     }
@@ -116,7 +116,7 @@ class TaxDataTaxRuleInterface
      *
      * @return self
      */
-    public function setPriority(int $priority): self
+    public function setPriority(int $priority) : self
     {
         $this->priority = $priority;
         return $this;
@@ -126,7 +126,7 @@ class TaxDataTaxRuleInterface
      *
      * @return int
      */
-    public function getPosition(): int
+    public function getPosition() : int
     {
         return $this->position;
     }
@@ -137,7 +137,7 @@ class TaxDataTaxRuleInterface
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(int $position) : self
     {
         $this->position = $position;
         return $this;
@@ -147,7 +147,7 @@ class TaxDataTaxRuleInterface
      *
      * @return int[]
      */
-    public function getCustomerTaxClassIds(): array
+    public function getCustomerTaxClassIds() : array
     {
         return $this->customerTaxClassIds;
     }
@@ -158,7 +158,7 @@ class TaxDataTaxRuleInterface
      *
      * @return self
      */
-    public function setCustomerTaxClassIds(array $customerTaxClassIds): self
+    public function setCustomerTaxClassIds(array $customerTaxClassIds) : self
     {
         $this->customerTaxClassIds = $customerTaxClassIds;
         return $this;
@@ -168,7 +168,7 @@ class TaxDataTaxRuleInterface
      *
      * @return int[]
      */
-    public function getProductTaxClassIds(): array
+    public function getProductTaxClassIds() : array
     {
         return $this->productTaxClassIds;
     }
@@ -179,7 +179,7 @@ class TaxDataTaxRuleInterface
      *
      * @return self
      */
-    public function setProductTaxClassIds(array $productTaxClassIds): self
+    public function setProductTaxClassIds(array $productTaxClassIds) : self
     {
         $this->productTaxClassIds = $productTaxClassIds;
         return $this;
@@ -189,7 +189,7 @@ class TaxDataTaxRuleInterface
      *
      * @return int[]
      */
-    public function getTaxRateIds(): array
+    public function getTaxRateIds() : array
     {
         return $this->taxRateIds;
     }
@@ -200,7 +200,7 @@ class TaxDataTaxRuleInterface
      *
      * @return self
      */
-    public function setTaxRateIds(array $taxRateIds): self
+    public function setTaxRateIds(array $taxRateIds) : self
     {
         $this->taxRateIds = $taxRateIds;
         return $this;
@@ -210,7 +210,7 @@ class TaxDataTaxRuleInterface
      *
      * @return bool
      */
-    public function getCalculateSubtotal(): bool
+    public function getCalculateSubtotal() : bool
     {
         return $this->calculateSubtotal;
     }
@@ -221,7 +221,7 @@ class TaxDataTaxRuleInterface
      *
      * @return self
      */
-    public function setCalculateSubtotal(bool $calculateSubtotal): self
+    public function setCalculateSubtotal(bool $calculateSubtotal) : self
     {
         $this->calculateSubtotal = $calculateSubtotal;
         return $this;
@@ -242,7 +242,7 @@ class TaxDataTaxRuleInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

@@ -33,7 +33,7 @@ class InventoryApiDataStockSourceLinkInterface
      *
      * @return int
      */
-    public function getStockId(): int
+    public function getStockId() : int
     {
         return $this->stockId;
     }
@@ -44,7 +44,7 @@ class InventoryApiDataStockSourceLinkInterface
      *
      * @return self
      */
-    public function setStockId(int $stockId): self
+    public function setStockId(int $stockId) : self
     {
         $this->stockId = $stockId;
         return $this;
@@ -54,7 +54,7 @@ class InventoryApiDataStockSourceLinkInterface
      *
      * @return string
      */
-    public function getSourceCode(): string
+    public function getSourceCode() : string
     {
         return $this->sourceCode;
     }
@@ -65,7 +65,7 @@ class InventoryApiDataStockSourceLinkInterface
      *
      * @return self
      */
-    public function setSourceCode(string $sourceCode): self
+    public function setSourceCode(string $sourceCode) : self
     {
         $this->sourceCode = $sourceCode;
         return $this;
@@ -75,7 +75,7 @@ class InventoryApiDataStockSourceLinkInterface
      *
      * @return int
      */
-    public function getPriority(): int
+    public function getPriority() : int
     {
         return $this->priority;
     }
@@ -86,7 +86,7 @@ class InventoryApiDataStockSourceLinkInterface
      *
      * @return self
      */
-    public function setPriority(int $priority): self
+    public function setPriority(int $priority) : self
     {
         $this->priority = $priority;
         return $this;
@@ -107,7 +107,7 @@ class InventoryApiDataStockSourceLinkInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

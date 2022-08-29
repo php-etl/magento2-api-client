@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataProductInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataProductInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataProductInterface';
     }
@@ -38,10 +37,10 @@ class CatalogDataProductInterfaceNormalizer implements DenormalizerInterface, No
         }
         $object = new \Kiboko\Magento\v2_3\Model\CatalogDataProductInterface();
         if (\array_key_exists('price', $data) && \is_int($data['price'])) {
-            $data['price'] = (float) $data['price'];
+            $data['price'] = (double) $data['price'];
         }
         if (\array_key_exists('weight', $data) && \is_int($data['weight'])) {
-            $data['weight'] = (float) $data['weight'];
+            $data['weight'] = (double) $data['weight'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

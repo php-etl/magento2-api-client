@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesRuleDataRuleInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\SalesRuleDataRuleInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\SalesRuleDataRuleInterface';
     }
@@ -38,10 +37,10 @@ class SalesRuleDataRuleInterfaceNormalizer implements DenormalizerInterface, Nor
         }
         $object = new \Kiboko\Magento\v2_3\Model\SalesRuleDataRuleInterface();
         if (\array_key_exists('discount_amount', $data) && \is_int($data['discount_amount'])) {
-            $data['discount_amount'] = (float) $data['discount_amount'];
+            $data['discount_amount'] = (double) $data['discount_amount'];
         }
         if (\array_key_exists('discount_qty', $data) && \is_int($data['discount_qty'])) {
-            $data['discount_qty'] = (float) $data['discount_qty'];
+            $data['discount_qty'] = (double) $data['discount_qty'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

@@ -39,7 +39,7 @@ class TaxDataOrderTaxDetailsItemInterface
      *
      * @return string
      */
-    public function getType(): string
+    public function getType() : string
     {
         return $this->type;
     }
@@ -50,7 +50,7 @@ class TaxDataOrderTaxDetailsItemInterface
      *
      * @return self
      */
-    public function setType(string $type): self
+    public function setType(string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -60,7 +60,7 @@ class TaxDataOrderTaxDetailsItemInterface
      *
      * @return int
      */
-    public function getItemId(): int
+    public function getItemId() : int
     {
         return $this->itemId;
     }
@@ -71,7 +71,7 @@ class TaxDataOrderTaxDetailsItemInterface
      *
      * @return self
      */
-    public function setItemId(int $itemId): self
+    public function setItemId(int $itemId) : self
     {
         $this->itemId = $itemId;
         return $this;
@@ -81,7 +81,7 @@ class TaxDataOrderTaxDetailsItemInterface
      *
      * @return int
      */
-    public function getAssociatedItemId(): int
+    public function getAssociatedItemId() : int
     {
         return $this->associatedItemId;
     }
@@ -92,7 +92,7 @@ class TaxDataOrderTaxDetailsItemInterface
      *
      * @return self
      */
-    public function setAssociatedItemId(int $associatedItemId): self
+    public function setAssociatedItemId(int $associatedItemId) : self
     {
         $this->associatedItemId = $associatedItemId;
         return $this;
@@ -102,7 +102,7 @@ class TaxDataOrderTaxDetailsItemInterface
      *
      * @return TaxDataOrderTaxDetailsAppliedTaxInterface[]
      */
-    public function getAppliedTaxes(): array
+    public function getAppliedTaxes() : array
     {
         return $this->appliedTaxes;
     }
@@ -113,7 +113,7 @@ class TaxDataOrderTaxDetailsItemInterface
      *
      * @return self
      */
-    public function setAppliedTaxes(array $appliedTaxes): self
+    public function setAppliedTaxes(array $appliedTaxes) : self
     {
         $this->appliedTaxes = $appliedTaxes;
         return $this;
@@ -134,7 +134,7 @@ class TaxDataOrderTaxDetailsItemInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

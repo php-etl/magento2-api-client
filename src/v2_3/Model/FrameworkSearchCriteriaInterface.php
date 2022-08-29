@@ -33,7 +33,7 @@ class FrameworkSearchCriteriaInterface
      *
      * @return FrameworkSearchFilterGroup[]
      */
-    public function getFilterGroups(): array
+    public function getFilterGroups() : array
     {
         return $this->filterGroups;
     }
@@ -44,7 +44,7 @@ class FrameworkSearchCriteriaInterface
      *
      * @return self
      */
-    public function setFilterGroups(array $filterGroups): self
+    public function setFilterGroups(array $filterGroups) : self
     {
         $this->filterGroups = $filterGroups;
         return $this;
@@ -54,7 +54,7 @@ class FrameworkSearchCriteriaInterface
      *
      * @return FrameworkSortOrder[]
      */
-    public function getSortOrders(): array
+    public function getSortOrders() : array
     {
         return $this->sortOrders;
     }
@@ -65,7 +65,7 @@ class FrameworkSearchCriteriaInterface
      *
      * @return self
      */
-    public function setSortOrders(array $sortOrders): self
+    public function setSortOrders(array $sortOrders) : self
     {
         $this->sortOrders = $sortOrders;
         return $this;
@@ -75,7 +75,7 @@ class FrameworkSearchCriteriaInterface
      *
      * @return int
      */
-    public function getPageSize(): int
+    public function getPageSize() : int
     {
         return $this->pageSize;
     }
@@ -86,7 +86,7 @@ class FrameworkSearchCriteriaInterface
      *
      * @return self
      */
-    public function setPageSize(int $pageSize): self
+    public function setPageSize(int $pageSize) : self
     {
         $this->pageSize = $pageSize;
         return $this;
@@ -96,7 +96,7 @@ class FrameworkSearchCriteriaInterface
      *
      * @return int
      */
-    public function getCurrentPage(): int
+    public function getCurrentPage() : int
     {
         return $this->currentPage;
     }
@@ -107,7 +107,7 @@ class FrameworkSearchCriteriaInterface
      *
      * @return self
      */
-    public function setCurrentPage(int $currentPage): self
+    public function setCurrentPage(int $currentPage) : self
     {
         $this->currentPage = $currentPage;
         return $this;

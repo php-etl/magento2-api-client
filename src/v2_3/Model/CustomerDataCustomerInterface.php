@@ -147,7 +147,7 @@ class CustomerDataCustomerInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -158,7 +158,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -168,7 +168,7 @@ class CustomerDataCustomerInterface
      *
      * @return int
      */
-    public function getGroupId(): int
+    public function getGroupId() : int
     {
         return $this->groupId;
     }
@@ -179,7 +179,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setGroupId(int $groupId): self
+    public function setGroupId(int $groupId) : self
     {
         $this->groupId = $groupId;
         return $this;
@@ -189,7 +189,7 @@ class CustomerDataCustomerInterface
      *
      * @return string
      */
-    public function getDefaultBilling(): string
+    public function getDefaultBilling() : string
     {
         return $this->defaultBilling;
     }
@@ -200,7 +200,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setDefaultBilling(string $defaultBilling): self
+    public function setDefaultBilling(string $defaultBilling) : self
     {
         $this->defaultBilling = $defaultBilling;
         return $this;
@@ -210,7 +210,7 @@ class CustomerDataCustomerInterface
      *
      * @return string
      */
-    public function getDefaultShipping(): string
+    public function getDefaultShipping() : string
     {
         return $this->defaultShipping;
     }
@@ -221,7 +221,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setDefaultShipping(string $defaultShipping): self
+    public function setDefaultShipping(string $defaultShipping) : self
     {
         $this->defaultShipping = $defaultShipping;
         return $this;
@@ -231,7 +231,7 @@ class CustomerDataCustomerInterface
      *
      * @return string
      */
-    public function getConfirmation(): string
+    public function getConfirmation() : string
     {
         return $this->confirmation;
     }
@@ -242,7 +242,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setConfirmation(string $confirmation): self
+    public function setConfirmation(string $confirmation) : self
     {
         $this->confirmation = $confirmation;
         return $this;
@@ -252,7 +252,7 @@ class CustomerDataCustomerInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -263,7 +263,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -273,7 +273,7 @@ class CustomerDataCustomerInterface
      *
      * @return string
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt() : string
     {
         return $this->updatedAt;
     }
@@ -284,7 +284,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(string $updatedAt) : self
     {
         $this->updatedAt = $updatedAt;
         return $this;
@@ -294,7 +294,7 @@ class CustomerDataCustomerInterface
      *
      * @return string
      */
-    public function getCreatedIn(): string
+    public function getCreatedIn() : string
     {
         return $this->createdIn;
     }
@@ -305,7 +305,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setCreatedIn(string $createdIn): self
+    public function setCreatedIn(string $createdIn) : self
     {
         $this->createdIn = $createdIn;
         return $this;
@@ -315,7 +315,7 @@ class CustomerDataCustomerInterface
      *
      * @return string
      */
-    public function getDob(): string
+    public function getDob() : string
     {
         return $this->dob;
     }
@@ -326,7 +326,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setDob(string $dob): self
+    public function setDob(string $dob) : self
     {
         $this->dob = $dob;
         return $this;
@@ -336,7 +336,7 @@ class CustomerDataCustomerInterface
      *
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail() : string
     {
         return $this->email;
     }
@@ -347,7 +347,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setEmail(string $email): self
+    public function setEmail(string $email) : self
     {
         $this->email = $email;
         return $this;
@@ -357,7 +357,7 @@ class CustomerDataCustomerInterface
      *
      * @return string
      */
-    public function getFirstname(): string
+    public function getFirstname() : string
     {
         return $this->firstname;
     }
@@ -368,7 +368,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setFirstname(string $firstname): self
+    public function setFirstname(string $firstname) : self
     {
         $this->firstname = $firstname;
         return $this;
@@ -378,7 +378,7 @@ class CustomerDataCustomerInterface
      *
      * @return string
      */
-    public function getLastname(): string
+    public function getLastname() : string
     {
         return $this->lastname;
     }
@@ -389,7 +389,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setLastname(string $lastname): self
+    public function setLastname(string $lastname) : self
     {
         $this->lastname = $lastname;
         return $this;
@@ -399,7 +399,7 @@ class CustomerDataCustomerInterface
      *
      * @return string
      */
-    public function getMiddlename(): string
+    public function getMiddlename() : string
     {
         return $this->middlename;
     }
@@ -410,7 +410,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setMiddlename(string $middlename): self
+    public function setMiddlename(string $middlename) : self
     {
         $this->middlename = $middlename;
         return $this;
@@ -420,7 +420,7 @@ class CustomerDataCustomerInterface
      *
      * @return string
      */
-    public function getPrefix(): string
+    public function getPrefix() : string
     {
         return $this->prefix;
     }
@@ -431,7 +431,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setPrefix(string $prefix): self
+    public function setPrefix(string $prefix) : self
     {
         $this->prefix = $prefix;
         return $this;
@@ -441,7 +441,7 @@ class CustomerDataCustomerInterface
      *
      * @return string
      */
-    public function getSuffix(): string
+    public function getSuffix() : string
     {
         return $this->suffix;
     }
@@ -452,7 +452,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setSuffix(string $suffix): self
+    public function setSuffix(string $suffix) : self
     {
         $this->suffix = $suffix;
         return $this;
@@ -462,7 +462,7 @@ class CustomerDataCustomerInterface
      *
      * @return int
      */
-    public function getGender(): int
+    public function getGender() : int
     {
         return $this->gender;
     }
@@ -473,7 +473,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setGender(int $gender): self
+    public function setGender(int $gender) : self
     {
         $this->gender = $gender;
         return $this;
@@ -483,7 +483,7 @@ class CustomerDataCustomerInterface
      *
      * @return int
      */
-    public function getStoreId(): int
+    public function getStoreId() : int
     {
         return $this->storeId;
     }
@@ -494,7 +494,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(int $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;
@@ -504,7 +504,7 @@ class CustomerDataCustomerInterface
      *
      * @return string
      */
-    public function getTaxvat(): string
+    public function getTaxvat() : string
     {
         return $this->taxvat;
     }
@@ -515,7 +515,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setTaxvat(string $taxvat): self
+    public function setTaxvat(string $taxvat) : self
     {
         $this->taxvat = $taxvat;
         return $this;
@@ -525,7 +525,7 @@ class CustomerDataCustomerInterface
      *
      * @return int
      */
-    public function getWebsiteId(): int
+    public function getWebsiteId() : int
     {
         return $this->websiteId;
     }
@@ -536,7 +536,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setWebsiteId(int $websiteId): self
+    public function setWebsiteId(int $websiteId) : self
     {
         $this->websiteId = $websiteId;
         return $this;
@@ -546,7 +546,7 @@ class CustomerDataCustomerInterface
      *
      * @return CustomerDataAddressInterface[]
      */
-    public function getAddresses(): array
+    public function getAddresses() : array
     {
         return $this->addresses;
     }
@@ -557,7 +557,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setAddresses(array $addresses): self
+    public function setAddresses(array $addresses) : self
     {
         $this->addresses = $addresses;
         return $this;
@@ -567,7 +567,7 @@ class CustomerDataCustomerInterface
      *
      * @return int
      */
-    public function getDisableAutoGroupChange(): int
+    public function getDisableAutoGroupChange() : int
     {
         return $this->disableAutoGroupChange;
     }
@@ -578,7 +578,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setDisableAutoGroupChange(int $disableAutoGroupChange): self
+    public function setDisableAutoGroupChange(int $disableAutoGroupChange) : self
     {
         $this->disableAutoGroupChange = $disableAutoGroupChange;
         return $this;
@@ -588,7 +588,7 @@ class CustomerDataCustomerInterface
      *
      * @return CustomerDataCustomerExtensionInterface
      */
-    public function getExtensionAttributes(): CustomerDataCustomerExtensionInterface
+    public function getExtensionAttributes() : CustomerDataCustomerExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -599,7 +599,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(CustomerDataCustomerExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(CustomerDataCustomerExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -609,7 +609,7 @@ class CustomerDataCustomerInterface
      *
      * @return FrameworkAttributeInterface[]
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes() : array
     {
         return $this->customAttributes;
     }
@@ -620,7 +620,7 @@ class CustomerDataCustomerInterface
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(array $customAttributes) : self
     {
         $this->customAttributes = $customAttributes;
         return $this;

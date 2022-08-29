@@ -15,7 +15,7 @@ class V1InventorySourcesSourceCodePutBody
      *
      * @return InventoryApiDataSourceInterface
      */
-    public function getSource(): InventoryApiDataSourceInterface
+    public function getSource() : InventoryApiDataSourceInterface
     {
         return $this->source;
     }
@@ -26,7 +26,7 @@ class V1InventorySourcesSourceCodePutBody
      *
      * @return self
      */
-    public function setSource(InventoryApiDataSourceInterface $source): self
+    public function setSource(InventoryApiDataSourceInterface $source) : self
     {
         $this->source = $source;
         return $this;

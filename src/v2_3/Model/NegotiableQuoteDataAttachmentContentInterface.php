@@ -33,7 +33,7 @@ class NegotiableQuoteDataAttachmentContentInterface
      *
      * @return string
      */
-    public function getBase64EncodedData(): string
+    public function getBase64EncodedData() : string
     {
         return $this->base64EncodedData;
     }
@@ -44,7 +44,7 @@ class NegotiableQuoteDataAttachmentContentInterface
      *
      * @return self
      */
-    public function setBase64EncodedData(string $base64EncodedData): self
+    public function setBase64EncodedData(string $base64EncodedData) : self
     {
         $this->base64EncodedData = $base64EncodedData;
         return $this;
@@ -54,7 +54,7 @@ class NegotiableQuoteDataAttachmentContentInterface
      *
      * @return string
      */
-    public function getType(): string
+    public function getType() : string
     {
         return $this->type;
     }
@@ -65,7 +65,7 @@ class NegotiableQuoteDataAttachmentContentInterface
      *
      * @return self
      */
-    public function setType(string $type): self
+    public function setType(string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -75,7 +75,7 @@ class NegotiableQuoteDataAttachmentContentInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -86,7 +86,7 @@ class NegotiableQuoteDataAttachmentContentInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -107,7 +107,7 @@ class NegotiableQuoteDataAttachmentContentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

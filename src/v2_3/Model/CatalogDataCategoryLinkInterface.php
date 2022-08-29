@@ -27,7 +27,7 @@ class CatalogDataCategoryLinkInterface
      *
      * @return int
      */
-    public function getPosition(): int
+    public function getPosition() : int
     {
         return $this->position;
     }
@@ -38,7 +38,7 @@ class CatalogDataCategoryLinkInterface
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(int $position) : self
     {
         $this->position = $position;
         return $this;
@@ -48,7 +48,7 @@ class CatalogDataCategoryLinkInterface
      *
      * @return string
      */
-    public function getCategoryId(): string
+    public function getCategoryId() : string
     {
         return $this->categoryId;
     }
@@ -59,7 +59,7 @@ class CatalogDataCategoryLinkInterface
      *
      * @return self
      */
-    public function setCategoryId(string $categoryId): self
+    public function setCategoryId(string $categoryId) : self
     {
         $this->categoryId = $categoryId;
         return $this;
@@ -80,7 +80,7 @@ class CatalogDataCategoryLinkInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

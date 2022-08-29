@@ -105,7 +105,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return int
      */
-    public function getItemsCount(): int
+    public function getItemsCount() : int
     {
         return $this->itemsCount;
     }
@@ -116,7 +116,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setItemsCount(int $itemsCount): self
+    public function setItemsCount(int $itemsCount) : self
     {
         $this->itemsCount = $itemsCount;
         return $this;
@@ -126,7 +126,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return string
      */
-    public function getQuoteStatus(): string
+    public function getQuoteStatus() : string
     {
         return $this->quoteStatus;
     }
@@ -137,7 +137,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setQuoteStatus(string $quoteStatus): self
+    public function setQuoteStatus(string $quoteStatus) : self
     {
         $this->quoteStatus = $quoteStatus;
         return $this;
@@ -147,7 +147,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -158,7 +158,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -168,7 +168,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return string
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt() : string
     {
         return $this->updatedAt;
     }
@@ -179,7 +179,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(string $updatedAt) : self
     {
         $this->updatedAt = $updatedAt;
         return $this;
@@ -189,7 +189,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return int
      */
-    public function getCustomerGroup(): int
+    public function getCustomerGroup() : int
     {
         return $this->customerGroup;
     }
@@ -200,7 +200,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setCustomerGroup(int $customerGroup): self
+    public function setCustomerGroup(int $customerGroup) : self
     {
         $this->customerGroup = $customerGroup;
         return $this;
@@ -210,7 +210,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return float
      */
-    public function getBaseToQuoteRate(): float
+    public function getBaseToQuoteRate() : float
     {
         return $this->baseToQuoteRate;
     }
@@ -221,7 +221,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setBaseToQuoteRate(float $baseToQuoteRate): self
+    public function setBaseToQuoteRate(float $baseToQuoteRate) : self
     {
         $this->baseToQuoteRate = $baseToQuoteRate;
         return $this;
@@ -231,7 +231,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return float
      */
-    public function getCostTotal(): float
+    public function getCostTotal() : float
     {
         return $this->costTotal;
     }
@@ -242,7 +242,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setCostTotal(float $costTotal): self
+    public function setCostTotal(float $costTotal) : self
     {
         $this->costTotal = $costTotal;
         return $this;
@@ -252,7 +252,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return float
      */
-    public function getBaseCostTotal(): float
+    public function getBaseCostTotal() : float
     {
         return $this->baseCostTotal;
     }
@@ -263,7 +263,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setBaseCostTotal(float $baseCostTotal): self
+    public function setBaseCostTotal(float $baseCostTotal) : self
     {
         $this->baseCostTotal = $baseCostTotal;
         return $this;
@@ -273,7 +273,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return float
      */
-    public function getOriginalTotal(): float
+    public function getOriginalTotal() : float
     {
         return $this->originalTotal;
     }
@@ -284,7 +284,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setOriginalTotal(float $originalTotal): self
+    public function setOriginalTotal(float $originalTotal) : self
     {
         $this->originalTotal = $originalTotal;
         return $this;
@@ -294,7 +294,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return float
      */
-    public function getBaseOriginalTotal(): float
+    public function getBaseOriginalTotal() : float
     {
         return $this->baseOriginalTotal;
     }
@@ -305,7 +305,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setBaseOriginalTotal(float $baseOriginalTotal): self
+    public function setBaseOriginalTotal(float $baseOriginalTotal) : self
     {
         $this->baseOriginalTotal = $baseOriginalTotal;
         return $this;
@@ -315,7 +315,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return float
      */
-    public function getOriginalTax(): float
+    public function getOriginalTax() : float
     {
         return $this->originalTax;
     }
@@ -326,7 +326,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setOriginalTax(float $originalTax): self
+    public function setOriginalTax(float $originalTax) : self
     {
         $this->originalTax = $originalTax;
         return $this;
@@ -336,7 +336,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return float
      */
-    public function getBaseOriginalTax(): float
+    public function getBaseOriginalTax() : float
     {
         return $this->baseOriginalTax;
     }
@@ -347,7 +347,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setBaseOriginalTax(float $baseOriginalTax): self
+    public function setBaseOriginalTax(float $baseOriginalTax) : self
     {
         $this->baseOriginalTax = $baseOriginalTax;
         return $this;
@@ -357,7 +357,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return float
      */
-    public function getOriginalPriceInclTax(): float
+    public function getOriginalPriceInclTax() : float
     {
         return $this->originalPriceInclTax;
     }
@@ -368,7 +368,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setOriginalPriceInclTax(float $originalPriceInclTax): self
+    public function setOriginalPriceInclTax(float $originalPriceInclTax) : self
     {
         $this->originalPriceInclTax = $originalPriceInclTax;
         return $this;
@@ -378,7 +378,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return float
      */
-    public function getBaseOriginalPriceInclTax(): float
+    public function getBaseOriginalPriceInclTax() : float
     {
         return $this->baseOriginalPriceInclTax;
     }
@@ -389,7 +389,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setBaseOriginalPriceInclTax(float $baseOriginalPriceInclTax): self
+    public function setBaseOriginalPriceInclTax(float $baseOriginalPriceInclTax) : self
     {
         $this->baseOriginalPriceInclTax = $baseOriginalPriceInclTax;
         return $this;
@@ -399,7 +399,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return int
      */
-    public function getNegotiatedPriceType(): int
+    public function getNegotiatedPriceType() : int
     {
         return $this->negotiatedPriceType;
     }
@@ -410,7 +410,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setNegotiatedPriceType(int $negotiatedPriceType): self
+    public function setNegotiatedPriceType(int $negotiatedPriceType) : self
     {
         $this->negotiatedPriceType = $negotiatedPriceType;
         return $this;
@@ -420,7 +420,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return float
      */
-    public function getNegotiatedPriceValue(): float
+    public function getNegotiatedPriceValue() : float
     {
         return $this->negotiatedPriceValue;
     }
@@ -431,7 +431,7 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterface
      *
      * @return self
      */
-    public function setNegotiatedPriceValue(float $negotiatedPriceValue): self
+    public function setNegotiatedPriceValue(float $negotiatedPriceValue) : self
     {
         $this->negotiatedPriceValue = $negotiatedPriceValue;
         return $this;

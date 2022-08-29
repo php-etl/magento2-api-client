@@ -63,7 +63,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -74,7 +74,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -84,7 +84,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return int
      */
-    public function getMediaGalleryId(): int
+    public function getMediaGalleryId() : int
     {
         return $this->mediaGalleryId;
     }
@@ -95,7 +95,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return self
      */
-    public function setMediaGalleryId(int $mediaGalleryId): self
+    public function setMediaGalleryId(int $mediaGalleryId) : self
     {
         $this->mediaGalleryId = $mediaGalleryId;
         return $this;
@@ -105,7 +105,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return int
      */
-    public function getCategoryId(): int
+    public function getCategoryId() : int
     {
         return $this->categoryId;
     }
@@ -116,7 +116,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return self
      */
-    public function setCategoryId(int $categoryId): self
+    public function setCategoryId(int $categoryId) : self
     {
         $this->categoryId = $categoryId;
         return $this;
@@ -126,7 +126,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return AdobeStockAssetApiDataCategoryInterface
      */
-    public function getCategory(): AdobeStockAssetApiDataCategoryInterface
+    public function getCategory() : AdobeStockAssetApiDataCategoryInterface
     {
         return $this->category;
     }
@@ -137,7 +137,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return self
      */
-    public function setCategory(AdobeStockAssetApiDataCategoryInterface $category): self
+    public function setCategory(AdobeStockAssetApiDataCategoryInterface $category) : self
     {
         $this->category = $category;
         return $this;
@@ -147,7 +147,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return int
      */
-    public function getCreatorId(): int
+    public function getCreatorId() : int
     {
         return $this->creatorId;
     }
@@ -158,7 +158,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return self
      */
-    public function setCreatorId(int $creatorId): self
+    public function setCreatorId(int $creatorId) : self
     {
         $this->creatorId = $creatorId;
         return $this;
@@ -168,7 +168,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return AdobeStockAssetApiDataCreatorInterface
      */
-    public function getCreator(): AdobeStockAssetApiDataCreatorInterface
+    public function getCreator() : AdobeStockAssetApiDataCreatorInterface
     {
         return $this->creator;
     }
@@ -179,7 +179,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return self
      */
-    public function setCreator(AdobeStockAssetApiDataCreatorInterface $creator): self
+    public function setCreator(AdobeStockAssetApiDataCreatorInterface $creator) : self
     {
         $this->creator = $creator;
         return $this;
@@ -189,7 +189,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return int
      */
-    public function getIsLicensed(): int
+    public function getIsLicensed() : int
     {
         return $this->isLicensed;
     }
@@ -200,7 +200,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return self
      */
-    public function setIsLicensed(int $isLicensed): self
+    public function setIsLicensed(int $isLicensed) : self
     {
         $this->isLicensed = $isLicensed;
         return $this;
@@ -210,7 +210,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return string
      */
-    public function getCreationDate(): string
+    public function getCreationDate() : string
     {
         return $this->creationDate;
     }
@@ -221,7 +221,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return self
      */
-    public function setCreationDate(string $creationDate): self
+    public function setCreationDate(string $creationDate) : self
     {
         $this->creationDate = $creationDate;
         return $this;
@@ -242,7 +242,7 @@ class AdobeStockAssetApiDataAssetInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

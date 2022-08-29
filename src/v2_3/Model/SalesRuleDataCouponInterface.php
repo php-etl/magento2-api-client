@@ -75,7 +75,7 @@ class SalesRuleDataCouponInterface
      *
      * @return int
      */
-    public function getCouponId(): int
+    public function getCouponId() : int
     {
         return $this->couponId;
     }
@@ -86,7 +86,7 @@ class SalesRuleDataCouponInterface
      *
      * @return self
      */
-    public function setCouponId(int $couponId): self
+    public function setCouponId(int $couponId) : self
     {
         $this->couponId = $couponId;
         return $this;
@@ -96,7 +96,7 @@ class SalesRuleDataCouponInterface
      *
      * @return int
      */
-    public function getRuleId(): int
+    public function getRuleId() : int
     {
         return $this->ruleId;
     }
@@ -107,7 +107,7 @@ class SalesRuleDataCouponInterface
      *
      * @return self
      */
-    public function setRuleId(int $ruleId): self
+    public function setRuleId(int $ruleId) : self
     {
         $this->ruleId = $ruleId;
         return $this;
@@ -117,7 +117,7 @@ class SalesRuleDataCouponInterface
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -128,7 +128,7 @@ class SalesRuleDataCouponInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
@@ -138,7 +138,7 @@ class SalesRuleDataCouponInterface
      *
      * @return int
      */
-    public function getUsageLimit(): int
+    public function getUsageLimit() : int
     {
         return $this->usageLimit;
     }
@@ -149,7 +149,7 @@ class SalesRuleDataCouponInterface
      *
      * @return self
      */
-    public function setUsageLimit(int $usageLimit): self
+    public function setUsageLimit(int $usageLimit) : self
     {
         $this->usageLimit = $usageLimit;
         return $this;
@@ -159,7 +159,7 @@ class SalesRuleDataCouponInterface
      *
      * @return int
      */
-    public function getUsagePerCustomer(): int
+    public function getUsagePerCustomer() : int
     {
         return $this->usagePerCustomer;
     }
@@ -170,7 +170,7 @@ class SalesRuleDataCouponInterface
      *
      * @return self
      */
-    public function setUsagePerCustomer(int $usagePerCustomer): self
+    public function setUsagePerCustomer(int $usagePerCustomer) : self
     {
         $this->usagePerCustomer = $usagePerCustomer;
         return $this;
@@ -180,7 +180,7 @@ class SalesRuleDataCouponInterface
      *
      * @return int
      */
-    public function getTimesUsed(): int
+    public function getTimesUsed() : int
     {
         return $this->timesUsed;
     }
@@ -191,7 +191,7 @@ class SalesRuleDataCouponInterface
      *
      * @return self
      */
-    public function setTimesUsed(int $timesUsed): self
+    public function setTimesUsed(int $timesUsed) : self
     {
         $this->timesUsed = $timesUsed;
         return $this;
@@ -201,7 +201,7 @@ class SalesRuleDataCouponInterface
      *
      * @return string
      */
-    public function getExpirationDate(): string
+    public function getExpirationDate() : string
     {
         return $this->expirationDate;
     }
@@ -212,7 +212,7 @@ class SalesRuleDataCouponInterface
      *
      * @return self
      */
-    public function setExpirationDate(string $expirationDate): self
+    public function setExpirationDate(string $expirationDate) : self
     {
         $this->expirationDate = $expirationDate;
         return $this;
@@ -222,7 +222,7 @@ class SalesRuleDataCouponInterface
      *
      * @return bool
      */
-    public function getIsPrimary(): bool
+    public function getIsPrimary() : bool
     {
         return $this->isPrimary;
     }
@@ -233,7 +233,7 @@ class SalesRuleDataCouponInterface
      *
      * @return self
      */
-    public function setIsPrimary(bool $isPrimary): self
+    public function setIsPrimary(bool $isPrimary) : self
     {
         $this->isPrimary = $isPrimary;
         return $this;
@@ -243,7 +243,7 @@ class SalesRuleDataCouponInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -254,7 +254,7 @@ class SalesRuleDataCouponInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -264,7 +264,7 @@ class SalesRuleDataCouponInterface
      *
      * @return int
      */
-    public function getType(): int
+    public function getType() : int
     {
         return $this->type;
     }
@@ -275,7 +275,7 @@ class SalesRuleDataCouponInterface
      *
      * @return self
      */
-    public function setType(int $type): self
+    public function setType(int $type) : self
     {
         $this->type = $type;
         return $this;
@@ -285,7 +285,7 @@ class SalesRuleDataCouponInterface
      *
      * @return SalesRuleDataCouponExtensionInterface
      */
-    public function getExtensionAttributes(): SalesRuleDataCouponExtensionInterface
+    public function getExtensionAttributes() : SalesRuleDataCouponExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -296,7 +296,7 @@ class SalesRuleDataCouponInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(SalesRuleDataCouponExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(SalesRuleDataCouponExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

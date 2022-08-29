@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class TaxDataGrandTotalDetailsInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\TaxDataGrandTotalDetailsInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\TaxDataGrandTotalDetailsInterface';
     }
@@ -38,7 +37,7 @@ class TaxDataGrandTotalDetailsInterfaceNormalizer implements DenormalizerInterfa
         }
         $object = new \Kiboko\Magento\v2_3\Model\TaxDataGrandTotalDetailsInterface();
         if (\array_key_exists('amount', $data) && \is_int($data['amount'])) {
-            $data['amount'] = (float) $data['amount'];
+            $data['amount'] = (double) $data['amount'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

@@ -33,7 +33,7 @@ class QuoteDataPaymentInterface
      *
      * @return string
      */
-    public function getPoNumber(): string
+    public function getPoNumber() : string
     {
         return $this->poNumber;
     }
@@ -44,7 +44,7 @@ class QuoteDataPaymentInterface
      *
      * @return self
      */
-    public function setPoNumber(string $poNumber): self
+    public function setPoNumber(string $poNumber) : self
     {
         $this->poNumber = $poNumber;
         return $this;
@@ -54,7 +54,7 @@ class QuoteDataPaymentInterface
      *
      * @return string
      */
-    public function getMethod(): string
+    public function getMethod() : string
     {
         return $this->method;
     }
@@ -65,7 +65,7 @@ class QuoteDataPaymentInterface
      *
      * @return self
      */
-    public function setMethod(string $method): self
+    public function setMethod(string $method) : self
     {
         $this->method = $method;
         return $this;
@@ -75,7 +75,7 @@ class QuoteDataPaymentInterface
      *
      * @return string[]
      */
-    public function getAdditionalData(): array
+    public function getAdditionalData() : array
     {
         return $this->additionalData;
     }
@@ -86,7 +86,7 @@ class QuoteDataPaymentInterface
      *
      * @return self
      */
-    public function setAdditionalData(array $additionalData): self
+    public function setAdditionalData(array $additionalData) : self
     {
         $this->additionalData = $additionalData;
         return $this;
@@ -96,7 +96,7 @@ class QuoteDataPaymentInterface
      *
      * @return QuoteDataPaymentExtensionInterface
      */
-    public function getExtensionAttributes(): QuoteDataPaymentExtensionInterface
+    public function getExtensionAttributes() : QuoteDataPaymentExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -107,7 +107,7 @@ class QuoteDataPaymentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(QuoteDataPaymentExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(QuoteDataPaymentExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

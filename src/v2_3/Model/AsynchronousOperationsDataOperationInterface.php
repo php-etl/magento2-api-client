@@ -63,7 +63,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return AsynchronousOperationsDataOperationExtensionInterface
      */
-    public function getExtensionAttributes(): AsynchronousOperationsDataOperationExtensionInterface
+    public function getExtensionAttributes() : AsynchronousOperationsDataOperationExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -74,7 +74,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(AsynchronousOperationsDataOperationExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(AsynchronousOperationsDataOperationExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -84,7 +84,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -95,7 +95,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -105,7 +105,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return string
      */
-    public function getBulkUuid(): string
+    public function getBulkUuid() : string
     {
         return $this->bulkUuid;
     }
@@ -116,7 +116,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return self
      */
-    public function setBulkUuid(string $bulkUuid): self
+    public function setBulkUuid(string $bulkUuid) : self
     {
         $this->bulkUuid = $bulkUuid;
         return $this;
@@ -126,7 +126,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return string
      */
-    public function getTopicName(): string
+    public function getTopicName() : string
     {
         return $this->topicName;
     }
@@ -137,7 +137,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return self
      */
-    public function setTopicName(string $topicName): self
+    public function setTopicName(string $topicName) : self
     {
         $this->topicName = $topicName;
         return $this;
@@ -147,7 +147,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return string
      */
-    public function getSerializedData(): string
+    public function getSerializedData() : string
     {
         return $this->serializedData;
     }
@@ -158,7 +158,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return self
      */
-    public function setSerializedData(string $serializedData): self
+    public function setSerializedData(string $serializedData) : self
     {
         $this->serializedData = $serializedData;
         return $this;
@@ -168,7 +168,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return string
      */
-    public function getResultSerializedData(): string
+    public function getResultSerializedData() : string
     {
         return $this->resultSerializedData;
     }
@@ -179,7 +179,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return self
      */
-    public function setResultSerializedData(string $resultSerializedData): self
+    public function setResultSerializedData(string $resultSerializedData) : self
     {
         $this->resultSerializedData = $resultSerializedData;
         return $this;
@@ -189,7 +189,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return int
      */
-    public function getStatus(): int
+    public function getStatus() : int
     {
         return $this->status;
     }
@@ -200,7 +200,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return self
      */
-    public function setStatus(int $status): self
+    public function setStatus(int $status) : self
     {
         $this->status = $status;
         return $this;
@@ -210,7 +210,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return string
      */
-    public function getResultMessage(): string
+    public function getResultMessage() : string
     {
         return $this->resultMessage;
     }
@@ -221,7 +221,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return self
      */
-    public function setResultMessage(string $resultMessage): self
+    public function setResultMessage(string $resultMessage) : self
     {
         $this->resultMessage = $resultMessage;
         return $this;
@@ -231,7 +231,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return int
      */
-    public function getErrorCode(): int
+    public function getErrorCode() : int
     {
         return $this->errorCode;
     }
@@ -242,7 +242,7 @@ class AsynchronousOperationsDataOperationInterface
      *
      * @return self
      */
-    public function setErrorCode(int $errorCode): self
+    public function setErrorCode(int $errorCode) : self
     {
         $this->errorCode = $errorCode;
         return $this;

@@ -33,7 +33,7 @@ class SalesDataShippingInterface
      *
      * @return SalesDataOrderAddressInterface
      */
-    public function getAddress(): SalesDataOrderAddressInterface
+    public function getAddress() : SalesDataOrderAddressInterface
     {
         return $this->address;
     }
@@ -44,7 +44,7 @@ class SalesDataShippingInterface
      *
      * @return self
      */
-    public function setAddress(SalesDataOrderAddressInterface $address): self
+    public function setAddress(SalesDataOrderAddressInterface $address) : self
     {
         $this->address = $address;
         return $this;
@@ -54,7 +54,7 @@ class SalesDataShippingInterface
      *
      * @return string
      */
-    public function getMethod(): string
+    public function getMethod() : string
     {
         return $this->method;
     }
@@ -65,7 +65,7 @@ class SalesDataShippingInterface
      *
      * @return self
      */
-    public function setMethod(string $method): self
+    public function setMethod(string $method) : self
     {
         $this->method = $method;
         return $this;
@@ -75,7 +75,7 @@ class SalesDataShippingInterface
      *
      * @return SalesDataTotalInterface
      */
-    public function getTotal(): SalesDataTotalInterface
+    public function getTotal() : SalesDataTotalInterface
     {
         return $this->total;
     }
@@ -86,7 +86,7 @@ class SalesDataShippingInterface
      *
      * @return self
      */
-    public function setTotal(SalesDataTotalInterface $total): self
+    public function setTotal(SalesDataTotalInterface $total) : self
     {
         $this->total = $total;
         return $this;
@@ -107,7 +107,7 @@ class SalesDataShippingInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

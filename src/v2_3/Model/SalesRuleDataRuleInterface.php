@@ -177,7 +177,7 @@ class SalesRuleDataRuleInterface
      *
      * @return int
      */
-    public function getRuleId(): int
+    public function getRuleId() : int
     {
         return $this->ruleId;
     }
@@ -188,7 +188,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setRuleId(int $ruleId): self
+    public function setRuleId(int $ruleId) : self
     {
         $this->ruleId = $ruleId;
         return $this;
@@ -198,7 +198,7 @@ class SalesRuleDataRuleInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -209,7 +209,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -219,7 +219,7 @@ class SalesRuleDataRuleInterface
      *
      * @return SalesRuleDataRuleLabelInterface[]
      */
-    public function getStoreLabels(): array
+    public function getStoreLabels() : array
     {
         return $this->storeLabels;
     }
@@ -230,7 +230,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setStoreLabels(array $storeLabels): self
+    public function setStoreLabels(array $storeLabels) : self
     {
         $this->storeLabels = $storeLabels;
         return $this;
@@ -240,7 +240,7 @@ class SalesRuleDataRuleInterface
      *
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription() : string
     {
         return $this->description;
     }
@@ -251,7 +251,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setDescription(string $description): self
+    public function setDescription(string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -261,7 +261,7 @@ class SalesRuleDataRuleInterface
      *
      * @return int[]
      */
-    public function getWebsiteIds(): array
+    public function getWebsiteIds() : array
     {
         return $this->websiteIds;
     }
@@ -272,7 +272,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setWebsiteIds(array $websiteIds): self
+    public function setWebsiteIds(array $websiteIds) : self
     {
         $this->websiteIds = $websiteIds;
         return $this;
@@ -282,7 +282,7 @@ class SalesRuleDataRuleInterface
      *
      * @return int[]
      */
-    public function getCustomerGroupIds(): array
+    public function getCustomerGroupIds() : array
     {
         return $this->customerGroupIds;
     }
@@ -293,7 +293,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setCustomerGroupIds(array $customerGroupIds): self
+    public function setCustomerGroupIds(array $customerGroupIds) : self
     {
         $this->customerGroupIds = $customerGroupIds;
         return $this;
@@ -303,7 +303,7 @@ class SalesRuleDataRuleInterface
      *
      * @return string
      */
-    public function getFromDate(): string
+    public function getFromDate() : string
     {
         return $this->fromDate;
     }
@@ -314,7 +314,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setFromDate(string $fromDate): self
+    public function setFromDate(string $fromDate) : self
     {
         $this->fromDate = $fromDate;
         return $this;
@@ -324,7 +324,7 @@ class SalesRuleDataRuleInterface
      *
      * @return string
      */
-    public function getToDate(): string
+    public function getToDate() : string
     {
         return $this->toDate;
     }
@@ -335,7 +335,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setToDate(string $toDate): self
+    public function setToDate(string $toDate) : self
     {
         $this->toDate = $toDate;
         return $this;
@@ -345,7 +345,7 @@ class SalesRuleDataRuleInterface
      *
      * @return int
      */
-    public function getUsesPerCustomer(): int
+    public function getUsesPerCustomer() : int
     {
         return $this->usesPerCustomer;
     }
@@ -356,7 +356,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setUsesPerCustomer(int $usesPerCustomer): self
+    public function setUsesPerCustomer(int $usesPerCustomer) : self
     {
         $this->usesPerCustomer = $usesPerCustomer;
         return $this;
@@ -366,7 +366,7 @@ class SalesRuleDataRuleInterface
      *
      * @return bool
      */
-    public function getIsActive(): bool
+    public function getIsActive() : bool
     {
         return $this->isActive;
     }
@@ -377,7 +377,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setIsActive(bool $isActive): self
+    public function setIsActive(bool $isActive) : self
     {
         $this->isActive = $isActive;
         return $this;
@@ -387,7 +387,7 @@ class SalesRuleDataRuleInterface
      *
      * @return SalesRuleDataConditionInterface
      */
-    public function getCondition(): SalesRuleDataConditionInterface
+    public function getCondition() : SalesRuleDataConditionInterface
     {
         return $this->condition;
     }
@@ -398,7 +398,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setCondition(SalesRuleDataConditionInterface $condition): self
+    public function setCondition(SalesRuleDataConditionInterface $condition) : self
     {
         $this->condition = $condition;
         return $this;
@@ -408,7 +408,7 @@ class SalesRuleDataRuleInterface
      *
      * @return SalesRuleDataConditionInterface
      */
-    public function getActionCondition(): SalesRuleDataConditionInterface
+    public function getActionCondition() : SalesRuleDataConditionInterface
     {
         return $this->actionCondition;
     }
@@ -419,7 +419,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setActionCondition(SalesRuleDataConditionInterface $actionCondition): self
+    public function setActionCondition(SalesRuleDataConditionInterface $actionCondition) : self
     {
         $this->actionCondition = $actionCondition;
         return $this;
@@ -429,7 +429,7 @@ class SalesRuleDataRuleInterface
      *
      * @return bool
      */
-    public function getStopRulesProcessing(): bool
+    public function getStopRulesProcessing() : bool
     {
         return $this->stopRulesProcessing;
     }
@@ -440,7 +440,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setStopRulesProcessing(bool $stopRulesProcessing): self
+    public function setStopRulesProcessing(bool $stopRulesProcessing) : self
     {
         $this->stopRulesProcessing = $stopRulesProcessing;
         return $this;
@@ -450,7 +450,7 @@ class SalesRuleDataRuleInterface
      *
      * @return bool
      */
-    public function getIsAdvanced(): bool
+    public function getIsAdvanced() : bool
     {
         return $this->isAdvanced;
     }
@@ -461,7 +461,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setIsAdvanced(bool $isAdvanced): self
+    public function setIsAdvanced(bool $isAdvanced) : self
     {
         $this->isAdvanced = $isAdvanced;
         return $this;
@@ -471,7 +471,7 @@ class SalesRuleDataRuleInterface
      *
      * @return int[]
      */
-    public function getProductIds(): array
+    public function getProductIds() : array
     {
         return $this->productIds;
     }
@@ -482,7 +482,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setProductIds(array $productIds): self
+    public function setProductIds(array $productIds) : self
     {
         $this->productIds = $productIds;
         return $this;
@@ -492,7 +492,7 @@ class SalesRuleDataRuleInterface
      *
      * @return int
      */
-    public function getSortOrder(): int
+    public function getSortOrder() : int
     {
         return $this->sortOrder;
     }
@@ -503,7 +503,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setSortOrder(int $sortOrder): self
+    public function setSortOrder(int $sortOrder) : self
     {
         $this->sortOrder = $sortOrder;
         return $this;
@@ -513,7 +513,7 @@ class SalesRuleDataRuleInterface
      *
      * @return string
      */
-    public function getSimpleAction(): string
+    public function getSimpleAction() : string
     {
         return $this->simpleAction;
     }
@@ -524,7 +524,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setSimpleAction(string $simpleAction): self
+    public function setSimpleAction(string $simpleAction) : self
     {
         $this->simpleAction = $simpleAction;
         return $this;
@@ -534,7 +534,7 @@ class SalesRuleDataRuleInterface
      *
      * @return float
      */
-    public function getDiscountAmount(): float
+    public function getDiscountAmount() : float
     {
         return $this->discountAmount;
     }
@@ -545,7 +545,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setDiscountAmount(float $discountAmount): self
+    public function setDiscountAmount(float $discountAmount) : self
     {
         $this->discountAmount = $discountAmount;
         return $this;
@@ -555,7 +555,7 @@ class SalesRuleDataRuleInterface
      *
      * @return float
      */
-    public function getDiscountQty(): float
+    public function getDiscountQty() : float
     {
         return $this->discountQty;
     }
@@ -566,7 +566,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setDiscountQty(float $discountQty): self
+    public function setDiscountQty(float $discountQty) : self
     {
         $this->discountQty = $discountQty;
         return $this;
@@ -576,7 +576,7 @@ class SalesRuleDataRuleInterface
      *
      * @return int
      */
-    public function getDiscountStep(): int
+    public function getDiscountStep() : int
     {
         return $this->discountStep;
     }
@@ -587,7 +587,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setDiscountStep(int $discountStep): self
+    public function setDiscountStep(int $discountStep) : self
     {
         $this->discountStep = $discountStep;
         return $this;
@@ -597,7 +597,7 @@ class SalesRuleDataRuleInterface
      *
      * @return bool
      */
-    public function getApplyToShipping(): bool
+    public function getApplyToShipping() : bool
     {
         return $this->applyToShipping;
     }
@@ -608,7 +608,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setApplyToShipping(bool $applyToShipping): self
+    public function setApplyToShipping(bool $applyToShipping) : self
     {
         $this->applyToShipping = $applyToShipping;
         return $this;
@@ -618,7 +618,7 @@ class SalesRuleDataRuleInterface
      *
      * @return int
      */
-    public function getTimesUsed(): int
+    public function getTimesUsed() : int
     {
         return $this->timesUsed;
     }
@@ -629,7 +629,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setTimesUsed(int $timesUsed): self
+    public function setTimesUsed(int $timesUsed) : self
     {
         $this->timesUsed = $timesUsed;
         return $this;
@@ -639,7 +639,7 @@ class SalesRuleDataRuleInterface
      *
      * @return bool
      */
-    public function getIsRss(): bool
+    public function getIsRss() : bool
     {
         return $this->isRss;
     }
@@ -650,7 +650,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setIsRss(bool $isRss): self
+    public function setIsRss(bool $isRss) : self
     {
         $this->isRss = $isRss;
         return $this;
@@ -660,7 +660,7 @@ class SalesRuleDataRuleInterface
      *
      * @return string
      */
-    public function getCouponType(): string
+    public function getCouponType() : string
     {
         return $this->couponType;
     }
@@ -671,7 +671,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setCouponType(string $couponType): self
+    public function setCouponType(string $couponType) : self
     {
         $this->couponType = $couponType;
         return $this;
@@ -681,7 +681,7 @@ class SalesRuleDataRuleInterface
      *
      * @return bool
      */
-    public function getUseAutoGeneration(): bool
+    public function getUseAutoGeneration() : bool
     {
         return $this->useAutoGeneration;
     }
@@ -692,7 +692,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setUseAutoGeneration(bool $useAutoGeneration): self
+    public function setUseAutoGeneration(bool $useAutoGeneration) : self
     {
         $this->useAutoGeneration = $useAutoGeneration;
         return $this;
@@ -702,7 +702,7 @@ class SalesRuleDataRuleInterface
      *
      * @return int
      */
-    public function getUsesPerCoupon(): int
+    public function getUsesPerCoupon() : int
     {
         return $this->usesPerCoupon;
     }
@@ -713,7 +713,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setUsesPerCoupon(int $usesPerCoupon): self
+    public function setUsesPerCoupon(int $usesPerCoupon) : self
     {
         $this->usesPerCoupon = $usesPerCoupon;
         return $this;
@@ -723,7 +723,7 @@ class SalesRuleDataRuleInterface
      *
      * @return string
      */
-    public function getSimpleFreeShipping(): string
+    public function getSimpleFreeShipping() : string
     {
         return $this->simpleFreeShipping;
     }
@@ -734,7 +734,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setSimpleFreeShipping(string $simpleFreeShipping): self
+    public function setSimpleFreeShipping(string $simpleFreeShipping) : self
     {
         $this->simpleFreeShipping = $simpleFreeShipping;
         return $this;
@@ -744,7 +744,7 @@ class SalesRuleDataRuleInterface
      *
      * @return SalesRuleDataRuleExtensionInterface
      */
-    public function getExtensionAttributes(): SalesRuleDataRuleExtensionInterface
+    public function getExtensionAttributes() : SalesRuleDataRuleExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -755,7 +755,7 @@ class SalesRuleDataRuleInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(SalesRuleDataRuleExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(SalesRuleDataRuleExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

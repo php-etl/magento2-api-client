@@ -33,7 +33,7 @@ class GiftCardAccountDataGiftCardInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -44,7 +44,7 @@ class GiftCardAccountDataGiftCardInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -54,7 +54,7 @@ class GiftCardAccountDataGiftCardInterface
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -65,7 +65,7 @@ class GiftCardAccountDataGiftCardInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
@@ -75,7 +75,7 @@ class GiftCardAccountDataGiftCardInterface
      *
      * @return float
      */
-    public function getAmount(): float
+    public function getAmount() : float
     {
         return $this->amount;
     }
@@ -86,7 +86,7 @@ class GiftCardAccountDataGiftCardInterface
      *
      * @return self
      */
-    public function setAmount(float $amount): self
+    public function setAmount(float $amount) : self
     {
         $this->amount = $amount;
         return $this;
@@ -96,7 +96,7 @@ class GiftCardAccountDataGiftCardInterface
      *
      * @return float
      */
-    public function getBaseAmount(): float
+    public function getBaseAmount() : float
     {
         return $this->baseAmount;
     }
@@ -107,7 +107,7 @@ class GiftCardAccountDataGiftCardInterface
      *
      * @return self
      */
-    public function setBaseAmount(float $baseAmount): self
+    public function setBaseAmount(float $baseAmount) : self
     {
         $this->baseAmount = $baseAmount;
         return $this;

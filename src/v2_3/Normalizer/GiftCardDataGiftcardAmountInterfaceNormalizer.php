@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class GiftCardDataGiftcardAmountInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\GiftCardDataGiftcardAmountInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\GiftCardDataGiftcardAmountInterface';
     }
@@ -38,10 +37,10 @@ class GiftCardDataGiftcardAmountInterfaceNormalizer implements DenormalizerInter
         }
         $object = new \Kiboko\Magento\v2_3\Model\GiftCardDataGiftcardAmountInterface();
         if (\array_key_exists('value', $data) && \is_int($data['value'])) {
-            $data['value'] = (float) $data['value'];
+            $data['value'] = (double) $data['value'];
         }
         if (\array_key_exists('website_value', $data) && \is_int($data['website_value'])) {
-            $data['website_value'] = (float) $data['website_value'];
+            $data['website_value'] = (double) $data['website_value'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

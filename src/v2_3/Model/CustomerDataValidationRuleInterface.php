@@ -21,7 +21,7 @@ class CustomerDataValidationRuleInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -32,7 +32,7 @@ class CustomerDataValidationRuleInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -42,7 +42,7 @@ class CustomerDataValidationRuleInterface
      *
      * @return string
      */
-    public function getValue(): string
+    public function getValue() : string
     {
         return $this->value;
     }
@@ -53,7 +53,7 @@ class CustomerDataValidationRuleInterface
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(string $value) : self
     {
         $this->value = $value;
         return $this;

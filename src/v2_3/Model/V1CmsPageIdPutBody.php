@@ -15,7 +15,7 @@ class V1CmsPageIdPutBody
      *
      * @return CmsDataPageInterface
      */
-    public function getPage(): CmsDataPageInterface
+    public function getPage() : CmsDataPageInterface
     {
         return $this->page;
     }
@@ -26,7 +26,7 @@ class V1CmsPageIdPutBody
      *
      * @return self
      */
-    public function setPage(CmsDataPageInterface $page): self
+    public function setPage(CmsDataPageInterface $page) : self
     {
         $this->page = $page;
         return $this;

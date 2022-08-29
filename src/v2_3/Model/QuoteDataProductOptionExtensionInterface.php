@@ -5,19 +5,19 @@ namespace Kiboko\Magento\v2_3\Model;
 class QuoteDataProductOptionExtensionInterface
 {
     /**
-     *
+     * 
      *
      * @var CatalogDataCustomOptionInterface[]
      */
     protected $customOptions;
     /**
-     *
+     * 
      *
      * @var BundleDataBundleOptionInterface[]
      */
     protected $bundleOptions;
     /**
-     *
+     * 
      *
      * @var ConfigurableProductDataConfigurableItemOptionValueInterface[]
      */
@@ -35,64 +35,64 @@ class QuoteDataProductOptionExtensionInterface
      */
     protected $giftcardItemOption;
     /**
-     *
+     * 
      *
      * @return CatalogDataCustomOptionInterface[]
      */
-    public function getCustomOptions(): array
+    public function getCustomOptions() : array
     {
         return $this->customOptions;
     }
     /**
-     *
+     * 
      *
      * @param CatalogDataCustomOptionInterface[] $customOptions
      *
      * @return self
      */
-    public function setCustomOptions(array $customOptions): self
+    public function setCustomOptions(array $customOptions) : self
     {
         $this->customOptions = $customOptions;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return BundleDataBundleOptionInterface[]
      */
-    public function getBundleOptions(): array
+    public function getBundleOptions() : array
     {
         return $this->bundleOptions;
     }
     /**
-     *
+     * 
      *
      * @param BundleDataBundleOptionInterface[] $bundleOptions
      *
      * @return self
      */
-    public function setBundleOptions(array $bundleOptions): self
+    public function setBundleOptions(array $bundleOptions) : self
     {
         $this->bundleOptions = $bundleOptions;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return ConfigurableProductDataConfigurableItemOptionValueInterface[]
      */
-    public function getConfigurableItemOptions(): array
+    public function getConfigurableItemOptions() : array
     {
         return $this->configurableItemOptions;
     }
     /**
-     *
+     * 
      *
      * @param ConfigurableProductDataConfigurableItemOptionValueInterface[] $configurableItemOptions
      *
      * @return self
      */
-    public function setConfigurableItemOptions(array $configurableItemOptions): self
+    public function setConfigurableItemOptions(array $configurableItemOptions) : self
     {
         $this->configurableItemOptions = $configurableItemOptions;
         return $this;
@@ -102,7 +102,7 @@ class QuoteDataProductOptionExtensionInterface
      *
      * @return DownloadableDataDownloadableOptionInterface
      */
-    public function getDownloadableOption(): DownloadableDataDownloadableOptionInterface
+    public function getDownloadableOption() : DownloadableDataDownloadableOptionInterface
     {
         return $this->downloadableOption;
     }
@@ -113,7 +113,7 @@ class QuoteDataProductOptionExtensionInterface
      *
      * @return self
      */
-    public function setDownloadableOption(DownloadableDataDownloadableOptionInterface $downloadableOption): self
+    public function setDownloadableOption(DownloadableDataDownloadableOptionInterface $downloadableOption) : self
     {
         $this->downloadableOption = $downloadableOption;
         return $this;
@@ -123,7 +123,7 @@ class QuoteDataProductOptionExtensionInterface
      *
      * @return GiftCardDataGiftCardOptionInterface
      */
-    public function getGiftcardItemOption(): GiftCardDataGiftCardOptionInterface
+    public function getGiftcardItemOption() : GiftCardDataGiftCardOptionInterface
     {
         return $this->giftcardItemOption;
     }
@@ -134,7 +134,7 @@ class QuoteDataProductOptionExtensionInterface
      *
      * @return self
      */
-    public function setGiftcardItemOption(GiftCardDataGiftCardOptionInterface $giftcardItemOption): self
+    public function setGiftcardItemOption(GiftCardDataGiftCardOptionInterface $giftcardItemOption) : self
     {
         $this->giftcardItemOption = $giftcardItemOption;
         return $this;

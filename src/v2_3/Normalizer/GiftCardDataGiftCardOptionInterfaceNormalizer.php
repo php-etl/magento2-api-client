@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class GiftCardDataGiftCardOptionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\GiftCardDataGiftCardOptionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\GiftCardDataGiftCardOptionInterface';
     }
@@ -38,7 +37,7 @@ class GiftCardDataGiftCardOptionInterfaceNormalizer implements DenormalizerInter
         }
         $object = new \Kiboko\Magento\v2_3\Model\GiftCardDataGiftCardOptionInterface();
         if (\array_key_exists('custom_giftcard_amount', $data) && \is_int($data['custom_giftcard_amount'])) {
-            $data['custom_giftcard_amount'] = (float) $data['custom_giftcard_amount'];
+            $data['custom_giftcard_amount'] = (double) $data['custom_giftcard_amount'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

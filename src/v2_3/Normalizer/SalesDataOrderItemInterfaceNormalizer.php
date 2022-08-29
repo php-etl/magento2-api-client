@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataOrderItemInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataOrderItemInterface';
     }
@@ -38,208 +37,208 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
         }
         $object = new \Kiboko\Magento\v2_3\Model\SalesDataOrderItemInterface();
         if (\array_key_exists('amount_refunded', $data) && \is_int($data['amount_refunded'])) {
-            $data['amount_refunded'] = (float) $data['amount_refunded'];
+            $data['amount_refunded'] = (double) $data['amount_refunded'];
         }
         if (\array_key_exists('base_amount_refunded', $data) && \is_int($data['base_amount_refunded'])) {
-            $data['base_amount_refunded'] = (float) $data['base_amount_refunded'];
+            $data['base_amount_refunded'] = (double) $data['base_amount_refunded'];
         }
         if (\array_key_exists('base_cost', $data) && \is_int($data['base_cost'])) {
-            $data['base_cost'] = (float) $data['base_cost'];
+            $data['base_cost'] = (double) $data['base_cost'];
         }
         if (\array_key_exists('base_discount_amount', $data) && \is_int($data['base_discount_amount'])) {
-            $data['base_discount_amount'] = (float) $data['base_discount_amount'];
+            $data['base_discount_amount'] = (double) $data['base_discount_amount'];
         }
         if (\array_key_exists('base_discount_invoiced', $data) && \is_int($data['base_discount_invoiced'])) {
-            $data['base_discount_invoiced'] = (float) $data['base_discount_invoiced'];
+            $data['base_discount_invoiced'] = (double) $data['base_discount_invoiced'];
         }
         if (\array_key_exists('base_discount_refunded', $data) && \is_int($data['base_discount_refunded'])) {
-            $data['base_discount_refunded'] = (float) $data['base_discount_refunded'];
+            $data['base_discount_refunded'] = (double) $data['base_discount_refunded'];
         }
         if (\array_key_exists('base_discount_tax_compensation_amount', $data) && \is_int($data['base_discount_tax_compensation_amount'])) {
-            $data['base_discount_tax_compensation_amount'] = (float) $data['base_discount_tax_compensation_amount'];
+            $data['base_discount_tax_compensation_amount'] = (double) $data['base_discount_tax_compensation_amount'];
         }
         if (\array_key_exists('base_discount_tax_compensation_invoiced', $data) && \is_int($data['base_discount_tax_compensation_invoiced'])) {
-            $data['base_discount_tax_compensation_invoiced'] = (float) $data['base_discount_tax_compensation_invoiced'];
+            $data['base_discount_tax_compensation_invoiced'] = (double) $data['base_discount_tax_compensation_invoiced'];
         }
         if (\array_key_exists('base_discount_tax_compensation_refunded', $data) && \is_int($data['base_discount_tax_compensation_refunded'])) {
-            $data['base_discount_tax_compensation_refunded'] = (float) $data['base_discount_tax_compensation_refunded'];
+            $data['base_discount_tax_compensation_refunded'] = (double) $data['base_discount_tax_compensation_refunded'];
         }
         if (\array_key_exists('base_original_price', $data) && \is_int($data['base_original_price'])) {
-            $data['base_original_price'] = (float) $data['base_original_price'];
+            $data['base_original_price'] = (double) $data['base_original_price'];
         }
         if (\array_key_exists('base_price', $data) && \is_int($data['base_price'])) {
-            $data['base_price'] = (float) $data['base_price'];
+            $data['base_price'] = (double) $data['base_price'];
         }
         if (\array_key_exists('base_price_incl_tax', $data) && \is_int($data['base_price_incl_tax'])) {
-            $data['base_price_incl_tax'] = (float) $data['base_price_incl_tax'];
+            $data['base_price_incl_tax'] = (double) $data['base_price_incl_tax'];
         }
         if (\array_key_exists('base_row_invoiced', $data) && \is_int($data['base_row_invoiced'])) {
-            $data['base_row_invoiced'] = (float) $data['base_row_invoiced'];
+            $data['base_row_invoiced'] = (double) $data['base_row_invoiced'];
         }
         if (\array_key_exists('base_row_total', $data) && \is_int($data['base_row_total'])) {
-            $data['base_row_total'] = (float) $data['base_row_total'];
+            $data['base_row_total'] = (double) $data['base_row_total'];
         }
         if (\array_key_exists('base_row_total_incl_tax', $data) && \is_int($data['base_row_total_incl_tax'])) {
-            $data['base_row_total_incl_tax'] = (float) $data['base_row_total_incl_tax'];
+            $data['base_row_total_incl_tax'] = (double) $data['base_row_total_incl_tax'];
         }
         if (\array_key_exists('base_tax_amount', $data) && \is_int($data['base_tax_amount'])) {
-            $data['base_tax_amount'] = (float) $data['base_tax_amount'];
+            $data['base_tax_amount'] = (double) $data['base_tax_amount'];
         }
         if (\array_key_exists('base_tax_before_discount', $data) && \is_int($data['base_tax_before_discount'])) {
-            $data['base_tax_before_discount'] = (float) $data['base_tax_before_discount'];
+            $data['base_tax_before_discount'] = (double) $data['base_tax_before_discount'];
         }
         if (\array_key_exists('base_tax_invoiced', $data) && \is_int($data['base_tax_invoiced'])) {
-            $data['base_tax_invoiced'] = (float) $data['base_tax_invoiced'];
+            $data['base_tax_invoiced'] = (double) $data['base_tax_invoiced'];
         }
         if (\array_key_exists('base_tax_refunded', $data) && \is_int($data['base_tax_refunded'])) {
-            $data['base_tax_refunded'] = (float) $data['base_tax_refunded'];
+            $data['base_tax_refunded'] = (double) $data['base_tax_refunded'];
         }
         if (\array_key_exists('base_weee_tax_applied_amount', $data) && \is_int($data['base_weee_tax_applied_amount'])) {
-            $data['base_weee_tax_applied_amount'] = (float) $data['base_weee_tax_applied_amount'];
+            $data['base_weee_tax_applied_amount'] = (double) $data['base_weee_tax_applied_amount'];
         }
         if (\array_key_exists('base_weee_tax_applied_row_amnt', $data) && \is_int($data['base_weee_tax_applied_row_amnt'])) {
-            $data['base_weee_tax_applied_row_amnt'] = (float) $data['base_weee_tax_applied_row_amnt'];
+            $data['base_weee_tax_applied_row_amnt'] = (double) $data['base_weee_tax_applied_row_amnt'];
         }
         if (\array_key_exists('base_weee_tax_disposition', $data) && \is_int($data['base_weee_tax_disposition'])) {
-            $data['base_weee_tax_disposition'] = (float) $data['base_weee_tax_disposition'];
+            $data['base_weee_tax_disposition'] = (double) $data['base_weee_tax_disposition'];
         }
         if (\array_key_exists('base_weee_tax_row_disposition', $data) && \is_int($data['base_weee_tax_row_disposition'])) {
-            $data['base_weee_tax_row_disposition'] = (float) $data['base_weee_tax_row_disposition'];
+            $data['base_weee_tax_row_disposition'] = (double) $data['base_weee_tax_row_disposition'];
         }
         if (\array_key_exists('discount_amount', $data) && \is_int($data['discount_amount'])) {
-            $data['discount_amount'] = (float) $data['discount_amount'];
+            $data['discount_amount'] = (double) $data['discount_amount'];
         }
         if (\array_key_exists('discount_invoiced', $data) && \is_int($data['discount_invoiced'])) {
-            $data['discount_invoiced'] = (float) $data['discount_invoiced'];
+            $data['discount_invoiced'] = (double) $data['discount_invoiced'];
         }
         if (\array_key_exists('discount_percent', $data) && \is_int($data['discount_percent'])) {
-            $data['discount_percent'] = (float) $data['discount_percent'];
+            $data['discount_percent'] = (double) $data['discount_percent'];
         }
         if (\array_key_exists('discount_refunded', $data) && \is_int($data['discount_refunded'])) {
-            $data['discount_refunded'] = (float) $data['discount_refunded'];
+            $data['discount_refunded'] = (double) $data['discount_refunded'];
         }
         if (\array_key_exists('gw_base_price', $data) && \is_int($data['gw_base_price'])) {
-            $data['gw_base_price'] = (float) $data['gw_base_price'];
+            $data['gw_base_price'] = (double) $data['gw_base_price'];
         }
         if (\array_key_exists('gw_base_price_invoiced', $data) && \is_int($data['gw_base_price_invoiced'])) {
-            $data['gw_base_price_invoiced'] = (float) $data['gw_base_price_invoiced'];
+            $data['gw_base_price_invoiced'] = (double) $data['gw_base_price_invoiced'];
         }
         if (\array_key_exists('gw_base_price_refunded', $data) && \is_int($data['gw_base_price_refunded'])) {
-            $data['gw_base_price_refunded'] = (float) $data['gw_base_price_refunded'];
+            $data['gw_base_price_refunded'] = (double) $data['gw_base_price_refunded'];
         }
         if (\array_key_exists('gw_base_tax_amount', $data) && \is_int($data['gw_base_tax_amount'])) {
-            $data['gw_base_tax_amount'] = (float) $data['gw_base_tax_amount'];
+            $data['gw_base_tax_amount'] = (double) $data['gw_base_tax_amount'];
         }
         if (\array_key_exists('gw_base_tax_amount_invoiced', $data) && \is_int($data['gw_base_tax_amount_invoiced'])) {
-            $data['gw_base_tax_amount_invoiced'] = (float) $data['gw_base_tax_amount_invoiced'];
+            $data['gw_base_tax_amount_invoiced'] = (double) $data['gw_base_tax_amount_invoiced'];
         }
         if (\array_key_exists('gw_base_tax_amount_refunded', $data) && \is_int($data['gw_base_tax_amount_refunded'])) {
-            $data['gw_base_tax_amount_refunded'] = (float) $data['gw_base_tax_amount_refunded'];
+            $data['gw_base_tax_amount_refunded'] = (double) $data['gw_base_tax_amount_refunded'];
         }
         if (\array_key_exists('gw_price', $data) && \is_int($data['gw_price'])) {
-            $data['gw_price'] = (float) $data['gw_price'];
+            $data['gw_price'] = (double) $data['gw_price'];
         }
         if (\array_key_exists('gw_price_invoiced', $data) && \is_int($data['gw_price_invoiced'])) {
-            $data['gw_price_invoiced'] = (float) $data['gw_price_invoiced'];
+            $data['gw_price_invoiced'] = (double) $data['gw_price_invoiced'];
         }
         if (\array_key_exists('gw_price_refunded', $data) && \is_int($data['gw_price_refunded'])) {
-            $data['gw_price_refunded'] = (float) $data['gw_price_refunded'];
+            $data['gw_price_refunded'] = (double) $data['gw_price_refunded'];
         }
         if (\array_key_exists('gw_tax_amount', $data) && \is_int($data['gw_tax_amount'])) {
-            $data['gw_tax_amount'] = (float) $data['gw_tax_amount'];
+            $data['gw_tax_amount'] = (double) $data['gw_tax_amount'];
         }
         if (\array_key_exists('gw_tax_amount_invoiced', $data) && \is_int($data['gw_tax_amount_invoiced'])) {
-            $data['gw_tax_amount_invoiced'] = (float) $data['gw_tax_amount_invoiced'];
+            $data['gw_tax_amount_invoiced'] = (double) $data['gw_tax_amount_invoiced'];
         }
         if (\array_key_exists('gw_tax_amount_refunded', $data) && \is_int($data['gw_tax_amount_refunded'])) {
-            $data['gw_tax_amount_refunded'] = (float) $data['gw_tax_amount_refunded'];
+            $data['gw_tax_amount_refunded'] = (double) $data['gw_tax_amount_refunded'];
         }
         if (\array_key_exists('discount_tax_compensation_amount', $data) && \is_int($data['discount_tax_compensation_amount'])) {
-            $data['discount_tax_compensation_amount'] = (float) $data['discount_tax_compensation_amount'];
+            $data['discount_tax_compensation_amount'] = (double) $data['discount_tax_compensation_amount'];
         }
         if (\array_key_exists('discount_tax_compensation_canceled', $data) && \is_int($data['discount_tax_compensation_canceled'])) {
-            $data['discount_tax_compensation_canceled'] = (float) $data['discount_tax_compensation_canceled'];
+            $data['discount_tax_compensation_canceled'] = (double) $data['discount_tax_compensation_canceled'];
         }
         if (\array_key_exists('discount_tax_compensation_invoiced', $data) && \is_int($data['discount_tax_compensation_invoiced'])) {
-            $data['discount_tax_compensation_invoiced'] = (float) $data['discount_tax_compensation_invoiced'];
+            $data['discount_tax_compensation_invoiced'] = (double) $data['discount_tax_compensation_invoiced'];
         }
         if (\array_key_exists('discount_tax_compensation_refunded', $data) && \is_int($data['discount_tax_compensation_refunded'])) {
-            $data['discount_tax_compensation_refunded'] = (float) $data['discount_tax_compensation_refunded'];
+            $data['discount_tax_compensation_refunded'] = (double) $data['discount_tax_compensation_refunded'];
         }
         if (\array_key_exists('original_price', $data) && \is_int($data['original_price'])) {
-            $data['original_price'] = (float) $data['original_price'];
+            $data['original_price'] = (double) $data['original_price'];
         }
         if (\array_key_exists('price', $data) && \is_int($data['price'])) {
-            $data['price'] = (float) $data['price'];
+            $data['price'] = (double) $data['price'];
         }
         if (\array_key_exists('price_incl_tax', $data) && \is_int($data['price_incl_tax'])) {
-            $data['price_incl_tax'] = (float) $data['price_incl_tax'];
+            $data['price_incl_tax'] = (double) $data['price_incl_tax'];
         }
         if (\array_key_exists('qty_backordered', $data) && \is_int($data['qty_backordered'])) {
-            $data['qty_backordered'] = (float) $data['qty_backordered'];
+            $data['qty_backordered'] = (double) $data['qty_backordered'];
         }
         if (\array_key_exists('qty_canceled', $data) && \is_int($data['qty_canceled'])) {
-            $data['qty_canceled'] = (float) $data['qty_canceled'];
+            $data['qty_canceled'] = (double) $data['qty_canceled'];
         }
         if (\array_key_exists('qty_invoiced', $data) && \is_int($data['qty_invoiced'])) {
-            $data['qty_invoiced'] = (float) $data['qty_invoiced'];
+            $data['qty_invoiced'] = (double) $data['qty_invoiced'];
         }
         if (\array_key_exists('qty_ordered', $data) && \is_int($data['qty_ordered'])) {
-            $data['qty_ordered'] = (float) $data['qty_ordered'];
+            $data['qty_ordered'] = (double) $data['qty_ordered'];
         }
         if (\array_key_exists('qty_refunded', $data) && \is_int($data['qty_refunded'])) {
-            $data['qty_refunded'] = (float) $data['qty_refunded'];
+            $data['qty_refunded'] = (double) $data['qty_refunded'];
         }
         if (\array_key_exists('qty_returned', $data) && \is_int($data['qty_returned'])) {
-            $data['qty_returned'] = (float) $data['qty_returned'];
+            $data['qty_returned'] = (double) $data['qty_returned'];
         }
         if (\array_key_exists('qty_shipped', $data) && \is_int($data['qty_shipped'])) {
-            $data['qty_shipped'] = (float) $data['qty_shipped'];
+            $data['qty_shipped'] = (double) $data['qty_shipped'];
         }
         if (\array_key_exists('row_invoiced', $data) && \is_int($data['row_invoiced'])) {
-            $data['row_invoiced'] = (float) $data['row_invoiced'];
+            $data['row_invoiced'] = (double) $data['row_invoiced'];
         }
         if (\array_key_exists('row_total', $data) && \is_int($data['row_total'])) {
-            $data['row_total'] = (float) $data['row_total'];
+            $data['row_total'] = (double) $data['row_total'];
         }
         if (\array_key_exists('row_total_incl_tax', $data) && \is_int($data['row_total_incl_tax'])) {
-            $data['row_total_incl_tax'] = (float) $data['row_total_incl_tax'];
+            $data['row_total_incl_tax'] = (double) $data['row_total_incl_tax'];
         }
         if (\array_key_exists('row_weight', $data) && \is_int($data['row_weight'])) {
-            $data['row_weight'] = (float) $data['row_weight'];
+            $data['row_weight'] = (double) $data['row_weight'];
         }
         if (\array_key_exists('tax_amount', $data) && \is_int($data['tax_amount'])) {
-            $data['tax_amount'] = (float) $data['tax_amount'];
+            $data['tax_amount'] = (double) $data['tax_amount'];
         }
         if (\array_key_exists('tax_before_discount', $data) && \is_int($data['tax_before_discount'])) {
-            $data['tax_before_discount'] = (float) $data['tax_before_discount'];
+            $data['tax_before_discount'] = (double) $data['tax_before_discount'];
         }
         if (\array_key_exists('tax_canceled', $data) && \is_int($data['tax_canceled'])) {
-            $data['tax_canceled'] = (float) $data['tax_canceled'];
+            $data['tax_canceled'] = (double) $data['tax_canceled'];
         }
         if (\array_key_exists('tax_invoiced', $data) && \is_int($data['tax_invoiced'])) {
-            $data['tax_invoiced'] = (float) $data['tax_invoiced'];
+            $data['tax_invoiced'] = (double) $data['tax_invoiced'];
         }
         if (\array_key_exists('tax_percent', $data) && \is_int($data['tax_percent'])) {
-            $data['tax_percent'] = (float) $data['tax_percent'];
+            $data['tax_percent'] = (double) $data['tax_percent'];
         }
         if (\array_key_exists('tax_refunded', $data) && \is_int($data['tax_refunded'])) {
-            $data['tax_refunded'] = (float) $data['tax_refunded'];
+            $data['tax_refunded'] = (double) $data['tax_refunded'];
         }
         if (\array_key_exists('weee_tax_applied_amount', $data) && \is_int($data['weee_tax_applied_amount'])) {
-            $data['weee_tax_applied_amount'] = (float) $data['weee_tax_applied_amount'];
+            $data['weee_tax_applied_amount'] = (double) $data['weee_tax_applied_amount'];
         }
         if (\array_key_exists('weee_tax_applied_row_amount', $data) && \is_int($data['weee_tax_applied_row_amount'])) {
-            $data['weee_tax_applied_row_amount'] = (float) $data['weee_tax_applied_row_amount'];
+            $data['weee_tax_applied_row_amount'] = (double) $data['weee_tax_applied_row_amount'];
         }
         if (\array_key_exists('weee_tax_disposition', $data) && \is_int($data['weee_tax_disposition'])) {
-            $data['weee_tax_disposition'] = (float) $data['weee_tax_disposition'];
+            $data['weee_tax_disposition'] = (double) $data['weee_tax_disposition'];
         }
         if (\array_key_exists('weee_tax_row_disposition', $data) && \is_int($data['weee_tax_row_disposition'])) {
-            $data['weee_tax_row_disposition'] = (float) $data['weee_tax_row_disposition'];
+            $data['weee_tax_row_disposition'] = (double) $data['weee_tax_row_disposition'];
         }
         if (\array_key_exists('weight', $data) && \is_int($data['weight'])) {
-            $data['weight'] = (float) $data['weight'];
+            $data['weight'] = (double) $data['weight'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

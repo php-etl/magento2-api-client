@@ -5,7 +5,7 @@ namespace Kiboko\Magento\v2_3\Model;
 class QuoteDataCartExtensionInterface
 {
     /**
-     *
+     * 
      *
      * @var QuoteDataShippingAssignmentInterface[]
      */
@@ -17,28 +17,28 @@ class QuoteDataCartExtensionInterface
      */
     protected $negotiableQuote;
     /**
-     *
+     * 
      *
      * @var AmazonPaymentDataQuoteLinkInterface
      */
     protected $amazonOrderReferenceId;
     /**
-     *
+     * 
      *
      * @return QuoteDataShippingAssignmentInterface[]
      */
-    public function getShippingAssignments(): array
+    public function getShippingAssignments() : array
     {
         return $this->shippingAssignments;
     }
     /**
-     *
+     * 
      *
      * @param QuoteDataShippingAssignmentInterface[] $shippingAssignments
      *
      * @return self
      */
-    public function setShippingAssignments(array $shippingAssignments): self
+    public function setShippingAssignments(array $shippingAssignments) : self
     {
         $this->shippingAssignments = $shippingAssignments;
         return $this;
@@ -48,7 +48,7 @@ class QuoteDataCartExtensionInterface
      *
      * @return NegotiableQuoteDataNegotiableQuoteInterface
      */
-    public function getNegotiableQuote(): NegotiableQuoteDataNegotiableQuoteInterface
+    public function getNegotiableQuote() : NegotiableQuoteDataNegotiableQuoteInterface
     {
         return $this->negotiableQuote;
     }
@@ -59,28 +59,28 @@ class QuoteDataCartExtensionInterface
      *
      * @return self
      */
-    public function setNegotiableQuote(NegotiableQuoteDataNegotiableQuoteInterface $negotiableQuote): self
+    public function setNegotiableQuote(NegotiableQuoteDataNegotiableQuoteInterface $negotiableQuote) : self
     {
         $this->negotiableQuote = $negotiableQuote;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return AmazonPaymentDataQuoteLinkInterface
      */
-    public function getAmazonOrderReferenceId(): AmazonPaymentDataQuoteLinkInterface
+    public function getAmazonOrderReferenceId() : AmazonPaymentDataQuoteLinkInterface
     {
         return $this->amazonOrderReferenceId;
     }
     /**
-     *
+     * 
      *
      * @param AmazonPaymentDataQuoteLinkInterface $amazonOrderReferenceId
      *
      * @return self
      */
-    public function setAmazonOrderReferenceId(AmazonPaymentDataQuoteLinkInterface $amazonOrderReferenceId): self
+    public function setAmazonOrderReferenceId(AmazonPaymentDataQuoteLinkInterface $amazonOrderReferenceId) : self
     {
         $this->amazonOrderReferenceId = $amazonOrderReferenceId;
         return $this;

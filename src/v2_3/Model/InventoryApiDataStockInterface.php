@@ -27,7 +27,7 @@ class InventoryApiDataStockInterface
      *
      * @return int
      */
-    public function getStockId(): int
+    public function getStockId() : int
     {
         return $this->stockId;
     }
@@ -38,7 +38,7 @@ class InventoryApiDataStockInterface
      *
      * @return self
      */
-    public function setStockId(int $stockId): self
+    public function setStockId(int $stockId) : self
     {
         $this->stockId = $stockId;
         return $this;
@@ -48,7 +48,7 @@ class InventoryApiDataStockInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -59,7 +59,7 @@ class InventoryApiDataStockInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -69,7 +69,7 @@ class InventoryApiDataStockInterface
      *
      * @return InventoryApiDataStockExtensionInterface
      */
-    public function getExtensionAttributes(): InventoryApiDataStockExtensionInterface
+    public function getExtensionAttributes() : InventoryApiDataStockExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -80,7 +80,7 @@ class InventoryApiDataStockInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(InventoryApiDataStockExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(InventoryApiDataStockExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

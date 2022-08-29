@@ -15,7 +15,7 @@ class QuoteDataTotalsItemExtensionInterface
      *
      * @return NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      */
-    public function getNegotiableQuoteItemTotals(): NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
+    public function getNegotiableQuoteItemTotals() : NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
     {
         return $this->negotiableQuoteItemTotals;
     }
@@ -26,7 +26,7 @@ class QuoteDataTotalsItemExtensionInterface
      *
      * @return self
      */
-    public function setNegotiableQuoteItemTotals(NegotiableQuoteDataNegotiableQuoteItemTotalsInterface $negotiableQuoteItemTotals): self
+    public function setNegotiableQuoteItemTotals(NegotiableQuoteDataNegotiableQuoteItemTotalsInterface $negotiableQuoteItemTotals) : self
     {
         $this->negotiableQuoteItemTotals = $negotiableQuoteItemTotals;
         return $this;

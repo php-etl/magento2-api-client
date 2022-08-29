@@ -4,13 +4,12 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CatalogProductTierPriceManagementV1GetListGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $sku;
     protected $customerGroupId;
     /**
      * Get tier price of product
      *
-     * @param string $sku
+     * @param string $sku 
      * @param string $customerGroupId 'all' can be used to specify 'ALL GROUPS'
      */
     public function __construct(string $sku, string $customerGroupId)
@@ -18,19 +17,20 @@ class CatalogProductTierPriceManagementV1GetListGet extends \Kiboko\Magento\v2_3
         $this->sku = $sku;
         $this->customerGroupId = $customerGroupId;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'GET';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{sku}', '{customerGroupId}'), array($this->sku, $this->customerGroupId), '/V1/products/{sku}/group-prices/{customerGroupId}/tiers');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -55,7 +55,7 @@ class CatalogProductTierPriceManagementV1GetListGet extends \Kiboko\Magento\v2_3
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

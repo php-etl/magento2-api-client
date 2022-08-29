@@ -57,7 +57,7 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
      *
      * @return AsynchronousOperationsDataOperationInterface[]
      */
-    public function getOperationsList(): array
+    public function getOperationsList() : array
     {
         return $this->operationsList;
     }
@@ -68,7 +68,7 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
      *
      * @return self
      */
-    public function setOperationsList(array $operationsList): self
+    public function setOperationsList(array $operationsList) : self
     {
         $this->operationsList = $operationsList;
         return $this;
@@ -89,7 +89,7 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -99,7 +99,7 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
      *
      * @return int
      */
-    public function getUserType(): int
+    public function getUserType() : int
     {
         return $this->userType;
     }
@@ -110,7 +110,7 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
      *
      * @return self
      */
-    public function setUserType(int $userType): self
+    public function setUserType(int $userType) : self
     {
         $this->userType = $userType;
         return $this;
@@ -120,7 +120,7 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
      *
      * @return string
      */
-    public function getBulkId(): string
+    public function getBulkId() : string
     {
         return $this->bulkId;
     }
@@ -131,7 +131,7 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
      *
      * @return self
      */
-    public function setBulkId(string $bulkId): self
+    public function setBulkId(string $bulkId) : self
     {
         $this->bulkId = $bulkId;
         return $this;
@@ -141,7 +141,7 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
      *
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription() : string
     {
         return $this->description;
     }
@@ -152,7 +152,7 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
      *
      * @return self
      */
-    public function setDescription(string $description): self
+    public function setDescription(string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -162,7 +162,7 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
      *
      * @return string
      */
-    public function getStartTime(): string
+    public function getStartTime() : string
     {
         return $this->startTime;
     }
@@ -173,7 +173,7 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
      *
      * @return self
      */
-    public function setStartTime(string $startTime): self
+    public function setStartTime(string $startTime) : self
     {
         $this->startTime = $startTime;
         return $this;
@@ -183,7 +183,7 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
      *
      * @return int
      */
-    public function getUserId(): int
+    public function getUserId() : int
     {
         return $this->userId;
     }
@@ -194,7 +194,7 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
      *
      * @return self
      */
-    public function setUserId(int $userId): self
+    public function setUserId(int $userId) : self
     {
         $this->userId = $userId;
         return $this;
@@ -204,7 +204,7 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
      *
      * @return int
      */
-    public function getOperationCount(): int
+    public function getOperationCount() : int
     {
         return $this->operationCount;
     }
@@ -215,7 +215,7 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
      *
      * @return self
      */
-    public function setOperationCount(int $operationCount): self
+    public function setOperationCount(int $operationCount) : self
     {
         $this->operationCount = $operationCount;
         return $this;

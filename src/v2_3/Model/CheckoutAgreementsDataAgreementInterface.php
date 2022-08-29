@@ -63,7 +63,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return int
      */
-    public function getAgreementId(): int
+    public function getAgreementId() : int
     {
         return $this->agreementId;
     }
@@ -74,7 +74,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return self
      */
-    public function setAgreementId(int $agreementId): self
+    public function setAgreementId(int $agreementId) : self
     {
         $this->agreementId = $agreementId;
         return $this;
@@ -84,7 +84,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -95,7 +95,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -105,7 +105,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return string
      */
-    public function getContent(): string
+    public function getContent() : string
     {
         return $this->content;
     }
@@ -116,7 +116,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return self
      */
-    public function setContent(string $content): self
+    public function setContent(string $content) : self
     {
         $this->content = $content;
         return $this;
@@ -126,7 +126,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return string
      */
-    public function getContentHeight(): string
+    public function getContentHeight() : string
     {
         return $this->contentHeight;
     }
@@ -137,7 +137,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return self
      */
-    public function setContentHeight(string $contentHeight): self
+    public function setContentHeight(string $contentHeight) : self
     {
         $this->contentHeight = $contentHeight;
         return $this;
@@ -147,7 +147,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return string
      */
-    public function getCheckboxText(): string
+    public function getCheckboxText() : string
     {
         return $this->checkboxText;
     }
@@ -158,7 +158,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return self
      */
-    public function setCheckboxText(string $checkboxText): self
+    public function setCheckboxText(string $checkboxText) : self
     {
         $this->checkboxText = $checkboxText;
         return $this;
@@ -168,7 +168,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return bool
      */
-    public function getIsActive(): bool
+    public function getIsActive() : bool
     {
         return $this->isActive;
     }
@@ -179,7 +179,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return self
      */
-    public function setIsActive(bool $isActive): self
+    public function setIsActive(bool $isActive) : self
     {
         $this->isActive = $isActive;
         return $this;
@@ -189,7 +189,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return bool
      */
-    public function getIsHtml(): bool
+    public function getIsHtml() : bool
     {
         return $this->isHtml;
     }
@@ -200,7 +200,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return self
      */
-    public function setIsHtml(bool $isHtml): self
+    public function setIsHtml(bool $isHtml) : self
     {
         $this->isHtml = $isHtml;
         return $this;
@@ -210,7 +210,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return int
      */
-    public function getMode(): int
+    public function getMode() : int
     {
         return $this->mode;
     }
@@ -221,7 +221,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return self
      */
-    public function setMode(int $mode): self
+    public function setMode(int $mode) : self
     {
         $this->mode = $mode;
         return $this;
@@ -242,7 +242,7 @@ class CheckoutAgreementsDataAgreementInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

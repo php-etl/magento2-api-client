@@ -39,7 +39,7 @@ class InventoryApiDataSourceItemInterface
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
@@ -50,7 +50,7 @@ class InventoryApiDataSourceItemInterface
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -60,7 +60,7 @@ class InventoryApiDataSourceItemInterface
      *
      * @return string
      */
-    public function getSourceCode(): string
+    public function getSourceCode() : string
     {
         return $this->sourceCode;
     }
@@ -71,7 +71,7 @@ class InventoryApiDataSourceItemInterface
      *
      * @return self
      */
-    public function setSourceCode(string $sourceCode): self
+    public function setSourceCode(string $sourceCode) : self
     {
         $this->sourceCode = $sourceCode;
         return $this;
@@ -81,7 +81,7 @@ class InventoryApiDataSourceItemInterface
      *
      * @return float
      */
-    public function getQuantity(): float
+    public function getQuantity() : float
     {
         return $this->quantity;
     }
@@ -92,7 +92,7 @@ class InventoryApiDataSourceItemInterface
      *
      * @return self
      */
-    public function setQuantity(float $quantity): self
+    public function setQuantity(float $quantity) : self
     {
         $this->quantity = $quantity;
         return $this;
@@ -102,7 +102,7 @@ class InventoryApiDataSourceItemInterface
      *
      * @return int
      */
-    public function getStatus(): int
+    public function getStatus() : int
     {
         return $this->status;
     }
@@ -113,7 +113,7 @@ class InventoryApiDataSourceItemInterface
      *
      * @return self
      */
-    public function setStatus(int $status): self
+    public function setStatus(int $status) : self
     {
         $this->status = $status;
         return $this;
@@ -134,7 +134,7 @@ class InventoryApiDataSourceItemInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

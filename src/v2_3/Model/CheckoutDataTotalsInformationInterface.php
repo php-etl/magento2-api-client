@@ -39,7 +39,7 @@ class CheckoutDataTotalsInformationInterface
      *
      * @return QuoteDataAddressInterface
      */
-    public function getAddress(): QuoteDataAddressInterface
+    public function getAddress() : QuoteDataAddressInterface
     {
         return $this->address;
     }
@@ -50,7 +50,7 @@ class CheckoutDataTotalsInformationInterface
      *
      * @return self
      */
-    public function setAddress(QuoteDataAddressInterface $address): self
+    public function setAddress(QuoteDataAddressInterface $address) : self
     {
         $this->address = $address;
         return $this;
@@ -60,7 +60,7 @@ class CheckoutDataTotalsInformationInterface
      *
      * @return string
      */
-    public function getShippingMethodCode(): string
+    public function getShippingMethodCode() : string
     {
         return $this->shippingMethodCode;
     }
@@ -71,7 +71,7 @@ class CheckoutDataTotalsInformationInterface
      *
      * @return self
      */
-    public function setShippingMethodCode(string $shippingMethodCode): self
+    public function setShippingMethodCode(string $shippingMethodCode) : self
     {
         $this->shippingMethodCode = $shippingMethodCode;
         return $this;
@@ -81,7 +81,7 @@ class CheckoutDataTotalsInformationInterface
      *
      * @return string
      */
-    public function getShippingCarrierCode(): string
+    public function getShippingCarrierCode() : string
     {
         return $this->shippingCarrierCode;
     }
@@ -92,7 +92,7 @@ class CheckoutDataTotalsInformationInterface
      *
      * @return self
      */
-    public function setShippingCarrierCode(string $shippingCarrierCode): self
+    public function setShippingCarrierCode(string $shippingCarrierCode) : self
     {
         $this->shippingCarrierCode = $shippingCarrierCode;
         return $this;
@@ -113,7 +113,7 @@ class CheckoutDataTotalsInformationInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -123,7 +123,7 @@ class CheckoutDataTotalsInformationInterface
      *
      * @return FrameworkAttributeInterface[]
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes() : array
     {
         return $this->customAttributes;
     }
@@ -134,7 +134,7 @@ class CheckoutDataTotalsInformationInterface
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(array $customAttributes) : self
     {
         $this->customAttributes = $customAttributes;
         return $this;

@@ -39,7 +39,7 @@ class InventorySourceSelectionApiDataSourceSelectionItemInterface
      *
      * @return string
      */
-    public function getSourceCode(): string
+    public function getSourceCode() : string
     {
         return $this->sourceCode;
     }
@@ -50,7 +50,7 @@ class InventorySourceSelectionApiDataSourceSelectionItemInterface
      *
      * @return self
      */
-    public function setSourceCode(string $sourceCode): self
+    public function setSourceCode(string $sourceCode) : self
     {
         $this->sourceCode = $sourceCode;
         return $this;
@@ -60,7 +60,7 @@ class InventorySourceSelectionApiDataSourceSelectionItemInterface
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
@@ -71,7 +71,7 @@ class InventorySourceSelectionApiDataSourceSelectionItemInterface
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -81,7 +81,7 @@ class InventorySourceSelectionApiDataSourceSelectionItemInterface
      *
      * @return float
      */
-    public function getQtyToDeduct(): float
+    public function getQtyToDeduct() : float
     {
         return $this->qtyToDeduct;
     }
@@ -92,7 +92,7 @@ class InventorySourceSelectionApiDataSourceSelectionItemInterface
      *
      * @return self
      */
-    public function setQtyToDeduct(float $qtyToDeduct): self
+    public function setQtyToDeduct(float $qtyToDeduct) : self
     {
         $this->qtyToDeduct = $qtyToDeduct;
         return $this;
@@ -102,7 +102,7 @@ class InventorySourceSelectionApiDataSourceSelectionItemInterface
      *
      * @return float
      */
-    public function getQtyAvailable(): float
+    public function getQtyAvailable() : float
     {
         return $this->qtyAvailable;
     }
@@ -113,7 +113,7 @@ class InventorySourceSelectionApiDataSourceSelectionItemInterface
      *
      * @return self
      */
-    public function setQtyAvailable(float $qtyAvailable): self
+    public function setQtyAvailable(float $qtyAvailable) : self
     {
         $this->qtyAvailable = $qtyAvailable;
         return $this;
@@ -134,7 +134,7 @@ class InventorySourceSelectionApiDataSourceSelectionItemInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

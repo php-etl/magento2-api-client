@@ -11,7 +11,7 @@ class V1GuestCartsCartIdPutBody
      */
     protected $customerId;
     /**
-     *
+     * 
      *
      * @var int
      */
@@ -21,7 +21,7 @@ class V1GuestCartsCartIdPutBody
      *
      * @return int
      */
-    public function getCustomerId(): int
+    public function getCustomerId() : int
     {
         return $this->customerId;
     }
@@ -32,28 +32,28 @@ class V1GuestCartsCartIdPutBody
      *
      * @return self
      */
-    public function setCustomerId(int $customerId): self
+    public function setCustomerId(int $customerId) : self
     {
         $this->customerId = $customerId;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getStoreId(): int
+    public function getStoreId() : int
     {
         return $this->storeId;
     }
     /**
-     *
+     * 
      *
      * @param int $storeId
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(int $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;

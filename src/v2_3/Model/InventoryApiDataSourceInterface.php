@@ -107,7 +107,7 @@ class InventoryApiDataSourceInterface
      */
     protected $useDefaultCarrierConfig;
     /**
-     *
+     * 
      *
      * @var InventoryApiDataSourceCarrierLinkInterface[]
      */
@@ -123,7 +123,7 @@ class InventoryApiDataSourceInterface
      *
      * @return string
      */
-    public function getSourceCode(): string
+    public function getSourceCode() : string
     {
         return $this->sourceCode;
     }
@@ -134,7 +134,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setSourceCode(string $sourceCode): self
+    public function setSourceCode(string $sourceCode) : self
     {
         $this->sourceCode = $sourceCode;
         return $this;
@@ -144,7 +144,7 @@ class InventoryApiDataSourceInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -155,7 +155,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -165,7 +165,7 @@ class InventoryApiDataSourceInterface
      *
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail() : string
     {
         return $this->email;
     }
@@ -176,7 +176,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setEmail(string $email): self
+    public function setEmail(string $email) : self
     {
         $this->email = $email;
         return $this;
@@ -186,7 +186,7 @@ class InventoryApiDataSourceInterface
      *
      * @return string
      */
-    public function getContactName(): string
+    public function getContactName() : string
     {
         return $this->contactName;
     }
@@ -197,7 +197,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setContactName(string $contactName): self
+    public function setContactName(string $contactName) : self
     {
         $this->contactName = $contactName;
         return $this;
@@ -207,7 +207,7 @@ class InventoryApiDataSourceInterface
      *
      * @return bool
      */
-    public function getEnabled(): bool
+    public function getEnabled() : bool
     {
         return $this->enabled;
     }
@@ -218,7 +218,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setEnabled(bool $enabled): self
+    public function setEnabled(bool $enabled) : self
     {
         $this->enabled = $enabled;
         return $this;
@@ -228,7 +228,7 @@ class InventoryApiDataSourceInterface
      *
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription() : string
     {
         return $this->description;
     }
@@ -239,7 +239,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setDescription(string $description): self
+    public function setDescription(string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -249,7 +249,7 @@ class InventoryApiDataSourceInterface
      *
      * @return float
      */
-    public function getLatitude(): float
+    public function getLatitude() : float
     {
         return $this->latitude;
     }
@@ -260,7 +260,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setLatitude(float $latitude): self
+    public function setLatitude(float $latitude) : self
     {
         $this->latitude = $latitude;
         return $this;
@@ -270,7 +270,7 @@ class InventoryApiDataSourceInterface
      *
      * @return float
      */
-    public function getLongitude(): float
+    public function getLongitude() : float
     {
         return $this->longitude;
     }
@@ -281,7 +281,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setLongitude(float $longitude): self
+    public function setLongitude(float $longitude) : self
     {
         $this->longitude = $longitude;
         return $this;
@@ -291,7 +291,7 @@ class InventoryApiDataSourceInterface
      *
      * @return string
      */
-    public function getCountryId(): string
+    public function getCountryId() : string
     {
         return $this->countryId;
     }
@@ -302,7 +302,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setCountryId(string $countryId): self
+    public function setCountryId(string $countryId) : self
     {
         $this->countryId = $countryId;
         return $this;
@@ -312,7 +312,7 @@ class InventoryApiDataSourceInterface
      *
      * @return int
      */
-    public function getRegionId(): int
+    public function getRegionId() : int
     {
         return $this->regionId;
     }
@@ -323,7 +323,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setRegionId(int $regionId): self
+    public function setRegionId(int $regionId) : self
     {
         $this->regionId = $regionId;
         return $this;
@@ -333,7 +333,7 @@ class InventoryApiDataSourceInterface
      *
      * @return string
      */
-    public function getRegion(): string
+    public function getRegion() : string
     {
         return $this->region;
     }
@@ -344,7 +344,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setRegion(string $region): self
+    public function setRegion(string $region) : self
     {
         $this->region = $region;
         return $this;
@@ -354,7 +354,7 @@ class InventoryApiDataSourceInterface
      *
      * @return string
      */
-    public function getCity(): string
+    public function getCity() : string
     {
         return $this->city;
     }
@@ -365,7 +365,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setCity(string $city): self
+    public function setCity(string $city) : self
     {
         $this->city = $city;
         return $this;
@@ -375,7 +375,7 @@ class InventoryApiDataSourceInterface
      *
      * @return string
      */
-    public function getStreet(): string
+    public function getStreet() : string
     {
         return $this->street;
     }
@@ -386,7 +386,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setStreet(string $street): self
+    public function setStreet(string $street) : self
     {
         $this->street = $street;
         return $this;
@@ -396,7 +396,7 @@ class InventoryApiDataSourceInterface
      *
      * @return string
      */
-    public function getPostcode(): string
+    public function getPostcode() : string
     {
         return $this->postcode;
     }
@@ -407,7 +407,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setPostcode(string $postcode): self
+    public function setPostcode(string $postcode) : self
     {
         $this->postcode = $postcode;
         return $this;
@@ -417,7 +417,7 @@ class InventoryApiDataSourceInterface
      *
      * @return string
      */
-    public function getPhone(): string
+    public function getPhone() : string
     {
         return $this->phone;
     }
@@ -428,7 +428,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setPhone(string $phone): self
+    public function setPhone(string $phone) : self
     {
         $this->phone = $phone;
         return $this;
@@ -438,7 +438,7 @@ class InventoryApiDataSourceInterface
      *
      * @return string
      */
-    public function getFax(): string
+    public function getFax() : string
     {
         return $this->fax;
     }
@@ -449,7 +449,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setFax(string $fax): self
+    public function setFax(string $fax) : self
     {
         $this->fax = $fax;
         return $this;
@@ -459,7 +459,7 @@ class InventoryApiDataSourceInterface
      *
      * @return bool
      */
-    public function getUseDefaultCarrierConfig(): bool
+    public function getUseDefaultCarrierConfig() : bool
     {
         return $this->useDefaultCarrierConfig;
     }
@@ -470,28 +470,28 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setUseDefaultCarrierConfig(bool $useDefaultCarrierConfig): self
+    public function setUseDefaultCarrierConfig(bool $useDefaultCarrierConfig) : self
     {
         $this->useDefaultCarrierConfig = $useDefaultCarrierConfig;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return InventoryApiDataSourceCarrierLinkInterface[]
      */
-    public function getCarrierLinks(): array
+    public function getCarrierLinks() : array
     {
         return $this->carrierLinks;
     }
     /**
-     *
+     * 
      *
      * @param InventoryApiDataSourceCarrierLinkInterface[] $carrierLinks
      *
      * @return self
      */
-    public function setCarrierLinks(array $carrierLinks): self
+    public function setCarrierLinks(array $carrierLinks) : self
     {
         $this->carrierLinks = $carrierLinks;
         return $this;
@@ -512,7 +512,7 @@ class InventoryApiDataSourceInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

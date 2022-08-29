@@ -27,7 +27,7 @@ class AdobeStockAssetApiDataCategoryInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -38,7 +38,7 @@ class AdobeStockAssetApiDataCategoryInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -48,7 +48,7 @@ class AdobeStockAssetApiDataCategoryInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -59,7 +59,7 @@ class AdobeStockAssetApiDataCategoryInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -80,7 +80,7 @@ class AdobeStockAssetApiDataCategoryInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

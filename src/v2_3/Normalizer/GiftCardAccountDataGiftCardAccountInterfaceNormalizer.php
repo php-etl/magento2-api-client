@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class GiftCardAccountDataGiftCardAccountInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\GiftCardAccountDataGiftCardAccountInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\GiftCardAccountDataGiftCardAccountInterface';
     }
@@ -38,16 +37,16 @@ class GiftCardAccountDataGiftCardAccountInterfaceNormalizer implements Denormali
         }
         $object = new \Kiboko\Magento\v2_3\Model\GiftCardAccountDataGiftCardAccountInterface();
         if (\array_key_exists('gift_cards_amount', $data) && \is_int($data['gift_cards_amount'])) {
-            $data['gift_cards_amount'] = (float) $data['gift_cards_amount'];
+            $data['gift_cards_amount'] = (double) $data['gift_cards_amount'];
         }
         if (\array_key_exists('base_gift_cards_amount', $data) && \is_int($data['base_gift_cards_amount'])) {
-            $data['base_gift_cards_amount'] = (float) $data['base_gift_cards_amount'];
+            $data['base_gift_cards_amount'] = (double) $data['base_gift_cards_amount'];
         }
         if (\array_key_exists('gift_cards_amount_used', $data) && \is_int($data['gift_cards_amount_used'])) {
-            $data['gift_cards_amount_used'] = (float) $data['gift_cards_amount_used'];
+            $data['gift_cards_amount_used'] = (double) $data['gift_cards_amount_used'];
         }
         if (\array_key_exists('base_gift_cards_amount_used', $data) && \is_int($data['base_gift_cards_amount_used'])) {
-            $data['base_gift_cards_amount_used'] = (float) $data['base_gift_cards_amount_used'];
+            $data['base_gift_cards_amount_used'] = (double) $data['base_gift_cards_amount_used'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

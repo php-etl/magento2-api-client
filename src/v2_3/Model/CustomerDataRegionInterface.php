@@ -33,7 +33,7 @@ class CustomerDataRegionInterface
      *
      * @return string
      */
-    public function getRegionCode(): string
+    public function getRegionCode() : string
     {
         return $this->regionCode;
     }
@@ -44,7 +44,7 @@ class CustomerDataRegionInterface
      *
      * @return self
      */
-    public function setRegionCode(string $regionCode): self
+    public function setRegionCode(string $regionCode) : self
     {
         $this->regionCode = $regionCode;
         return $this;
@@ -54,7 +54,7 @@ class CustomerDataRegionInterface
      *
      * @return string
      */
-    public function getRegion(): string
+    public function getRegion() : string
     {
         return $this->region;
     }
@@ -65,7 +65,7 @@ class CustomerDataRegionInterface
      *
      * @return self
      */
-    public function setRegion(string $region): self
+    public function setRegion(string $region) : self
     {
         $this->region = $region;
         return $this;
@@ -75,7 +75,7 @@ class CustomerDataRegionInterface
      *
      * @return int
      */
-    public function getRegionId(): int
+    public function getRegionId() : int
     {
         return $this->regionId;
     }
@@ -86,7 +86,7 @@ class CustomerDataRegionInterface
      *
      * @return self
      */
-    public function setRegionId(int $regionId): self
+    public function setRegionId(int $regionId) : self
     {
         $this->regionId = $regionId;
         return $this;
@@ -107,7 +107,7 @@ class CustomerDataRegionInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

@@ -4,32 +4,32 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CatalogProductCustomOptionRepositoryV1SavePut extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $optionId;
     /**
      * Save Custom Option
      *
-     * @param string $optionId
-     * @param \Kiboko\Magento\v2_3\Model\V1ProductsOptionsOptionIdPutBody $catalogProductCustomOptionRepositoryV1SavePutBody
+     * @param string $optionId 
+     * @param \Kiboko\Magento\v2_3\Model\V1ProductsOptionsOptionIdPutBody $catalogProductCustomOptionRepositoryV1SavePutBody 
      */
     public function __construct(string $optionId, \Kiboko\Magento\v2_3\Model\V1ProductsOptionsOptionIdPutBody $catalogProductCustomOptionRepositoryV1SavePutBody)
     {
         $this->optionId = $optionId;
         $this->body = $catalogProductCustomOptionRepositoryV1SavePutBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'PUT';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{optionId}'), array($this->optionId), '/V1/products/options/{optionId}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -50,7 +50,7 @@ class CatalogProductCustomOptionRepositoryV1SavePut extends \Kiboko\Magento\v2_3
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

@@ -13,7 +13,7 @@ class CheckoutPaymentInformationManagementV1GetPaymentInformationGetUnauthorized
         parent::__construct('401 Unauthorized');
         $this->errorResponse = $errorResponse;
     }
-    public function getErrorResponse(): \Kiboko\Magento\v2_3\Model\ErrorResponse
+    public function getErrorResponse() : \Kiboko\Magento\v2_3\Model\ErrorResponse
     {
         return $this->errorResponse;
     }

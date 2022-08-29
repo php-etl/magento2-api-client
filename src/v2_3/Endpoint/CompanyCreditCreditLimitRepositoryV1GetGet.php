@@ -4,12 +4,11 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CompanyCreditCreditLimitRepositoryV1GetGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $creditId;
     /**
      * Returns data on the credit limit for a specified credit limit ID.
      *
-     * @param int $creditId
+     * @param int $creditId 
      * @param array $queryParameters {
      *     @var bool $reload [optional]
      * }
@@ -19,23 +18,24 @@ class CompanyCreditCreditLimitRepositoryV1GetGet extends \Kiboko\Magento\v2_3\Ru
         $this->creditId = $creditId;
         $this->queryParameters = $queryParameters;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'GET';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{creditId}'), array($this->creditId), '/V1/companyCredits/{creditId}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
-    protected function getQueryOptionsResolver(): \Symfony\Component\OptionsResolver\OptionsResolver
+    protected function getQueryOptionsResolver() : \Symfony\Component\OptionsResolver\OptionsResolver
     {
         $optionsResolver = parent::getQueryOptionsResolver();
         $optionsResolver->setDefined(array('reload'));
@@ -65,7 +65,7 @@ class CompanyCreditCreditLimitRepositoryV1GetGet extends \Kiboko\Magento\v2_3\Ru
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

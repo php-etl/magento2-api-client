@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataShipmentInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataShipmentInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataShipmentInterface';
     }
@@ -38,10 +37,10 @@ class SalesDataShipmentInterfaceNormalizer implements DenormalizerInterface, Nor
         }
         $object = new \Kiboko\Magento\v2_3\Model\SalesDataShipmentInterface();
         if (\array_key_exists('total_qty', $data) && \is_int($data['total_qty'])) {
-            $data['total_qty'] = (float) $data['total_qty'];
+            $data['total_qty'] = (double) $data['total_qty'];
         }
         if (\array_key_exists('total_weight', $data) && \is_int($data['total_weight'])) {
-            $data['total_weight'] = (float) $data['total_weight'];
+            $data['total_weight'] = (double) $data['total_weight'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

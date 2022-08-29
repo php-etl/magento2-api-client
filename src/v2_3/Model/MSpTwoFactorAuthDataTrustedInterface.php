@@ -51,7 +51,7 @@ class MSpTwoFactorAuthDataTrustedInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -62,7 +62,7 @@ class MSpTwoFactorAuthDataTrustedInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -72,7 +72,7 @@ class MSpTwoFactorAuthDataTrustedInterface
      *
      * @return string
      */
-    public function getDateTime(): string
+    public function getDateTime() : string
     {
         return $this->dateTime;
     }
@@ -83,7 +83,7 @@ class MSpTwoFactorAuthDataTrustedInterface
      *
      * @return self
      */
-    public function setDateTime(string $dateTime): self
+    public function setDateTime(string $dateTime) : self
     {
         $this->dateTime = $dateTime;
         return $this;
@@ -93,7 +93,7 @@ class MSpTwoFactorAuthDataTrustedInterface
      *
      * @return int
      */
-    public function getUserId(): int
+    public function getUserId() : int
     {
         return $this->userId;
     }
@@ -104,7 +104,7 @@ class MSpTwoFactorAuthDataTrustedInterface
      *
      * @return self
      */
-    public function setUserId(int $userId): self
+    public function setUserId(int $userId) : self
     {
         $this->userId = $userId;
         return $this;
@@ -114,7 +114,7 @@ class MSpTwoFactorAuthDataTrustedInterface
      *
      * @return string
      */
-    public function getDeviceName(): string
+    public function getDeviceName() : string
     {
         return $this->deviceName;
     }
@@ -125,7 +125,7 @@ class MSpTwoFactorAuthDataTrustedInterface
      *
      * @return self
      */
-    public function setDeviceName(string $deviceName): self
+    public function setDeviceName(string $deviceName) : self
     {
         $this->deviceName = $deviceName;
         return $this;
@@ -135,7 +135,7 @@ class MSpTwoFactorAuthDataTrustedInterface
      *
      * @return string
      */
-    public function getLastIp(): string
+    public function getLastIp() : string
     {
         return $this->lastIp;
     }
@@ -146,7 +146,7 @@ class MSpTwoFactorAuthDataTrustedInterface
      *
      * @return self
      */
-    public function setLastIp(string $lastIp): self
+    public function setLastIp(string $lastIp) : self
     {
         $this->lastIp = $lastIp;
         return $this;
@@ -156,7 +156,7 @@ class MSpTwoFactorAuthDataTrustedInterface
      *
      * @return string
      */
-    public function getUserAgent(): string
+    public function getUserAgent() : string
     {
         return $this->userAgent;
     }
@@ -167,7 +167,7 @@ class MSpTwoFactorAuthDataTrustedInterface
      *
      * @return self
      */
-    public function setUserAgent(string $userAgent): self
+    public function setUserAgent(string $userAgent) : self
     {
         $this->userAgent = $userAgent;
         return $this;
@@ -188,7 +188,7 @@ class MSpTwoFactorAuthDataTrustedInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

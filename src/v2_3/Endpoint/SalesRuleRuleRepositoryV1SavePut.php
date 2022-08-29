@@ -4,32 +4,32 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class SalesRuleRuleRepositoryV1SavePut extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $ruleId;
     /**
      * Save sales rule.
      *
-     * @param string $ruleId
-     * @param \Kiboko\Magento\v2_3\Model\V1SalesRulesRuleIdPutBody $salesRuleRuleRepositoryV1SavePutBody
+     * @param string $ruleId 
+     * @param \Kiboko\Magento\v2_3\Model\V1SalesRulesRuleIdPutBody $salesRuleRuleRepositoryV1SavePutBody 
      */
     public function __construct(string $ruleId, \Kiboko\Magento\v2_3\Model\V1SalesRulesRuleIdPutBody $salesRuleRuleRepositoryV1SavePutBody)
     {
         $this->ruleId = $ruleId;
         $this->body = $salesRuleRuleRepositoryV1SavePutBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'PUT';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{ruleId}'), array($this->ruleId), '/V1/salesRules/{ruleId}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -58,7 +58,7 @@ class SalesRuleRuleRepositoryV1SavePut extends \Kiboko\Magento\v2_3\Runtime\Clie
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

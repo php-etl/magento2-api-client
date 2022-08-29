@@ -11,7 +11,7 @@ class V1InventorySourceSelectionAlgorithmResultPostBody
      */
     protected $inventoryRequest;
     /**
-     *
+     * 
      *
      * @var string
      */
@@ -21,7 +21,7 @@ class V1InventorySourceSelectionAlgorithmResultPostBody
      *
      * @return InventorySourceSelectionApiDataInventoryRequestInterface
      */
-    public function getInventoryRequest(): InventorySourceSelectionApiDataInventoryRequestInterface
+    public function getInventoryRequest() : InventorySourceSelectionApiDataInventoryRequestInterface
     {
         return $this->inventoryRequest;
     }
@@ -32,28 +32,28 @@ class V1InventorySourceSelectionAlgorithmResultPostBody
      *
      * @return self
      */
-    public function setInventoryRequest(InventorySourceSelectionApiDataInventoryRequestInterface $inventoryRequest): self
+    public function setInventoryRequest(InventorySourceSelectionApiDataInventoryRequestInterface $inventoryRequest) : self
     {
         $this->inventoryRequest = $inventoryRequest;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getAlgorithmCode(): string
+    public function getAlgorithmCode() : string
     {
         return $this->algorithmCode;
     }
     /**
-     *
+     * 
      *
      * @param string $algorithmCode
      *
      * @return self
      */
-    public function setAlgorithmCode(string $algorithmCode): self
+    public function setAlgorithmCode(string $algorithmCode) : self
     {
         $this->algorithmCode = $algorithmCode;
         return $this;

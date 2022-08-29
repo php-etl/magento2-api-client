@@ -21,7 +21,7 @@ class QuoteDataTotalsAdditionalDataInterface
      *
      * @return QuoteDataTotalsAdditionalDataExtensionInterface
      */
-    public function getExtensionAttributes(): QuoteDataTotalsAdditionalDataExtensionInterface
+    public function getExtensionAttributes() : QuoteDataTotalsAdditionalDataExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -32,7 +32,7 @@ class QuoteDataTotalsAdditionalDataInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(QuoteDataTotalsAdditionalDataExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(QuoteDataTotalsAdditionalDataExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -42,7 +42,7 @@ class QuoteDataTotalsAdditionalDataInterface
      *
      * @return FrameworkAttributeInterface[]
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes() : array
     {
         return $this->customAttributes;
     }
@@ -53,7 +53,7 @@ class QuoteDataTotalsAdditionalDataInterface
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(array $customAttributes) : self
     {
         $this->customAttributes = $customAttributes;
         return $this;

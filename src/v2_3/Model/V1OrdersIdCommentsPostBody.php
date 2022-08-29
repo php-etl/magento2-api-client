@@ -15,7 +15,7 @@ class V1OrdersIdCommentsPostBody
      *
      * @return SalesDataOrderStatusHistoryInterface
      */
-    public function getStatusHistory(): SalesDataOrderStatusHistoryInterface
+    public function getStatusHistory() : SalesDataOrderStatusHistoryInterface
     {
         return $this->statusHistory;
     }
@@ -26,7 +26,7 @@ class V1OrdersIdCommentsPostBody
      *
      * @return self
      */
-    public function setStatusHistory(SalesDataOrderStatusHistoryInterface $statusHistory): self
+    public function setStatusHistory(SalesDataOrderStatusHistoryInterface $statusHistory) : self
     {
         $this->statusHistory = $statusHistory;
         return $this;

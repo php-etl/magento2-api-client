@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataCostInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataCostInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataCostInterface';
     }
@@ -38,7 +37,7 @@ class CatalogDataCostInterfaceNormalizer implements DenormalizerInterface, Norma
         }
         $object = new \Kiboko\Magento\v2_3\Model\CatalogDataCostInterface();
         if (\array_key_exists('cost', $data) && \is_int($data['cost'])) {
-            $data['cost'] = (float) $data['cost'];
+            $data['cost'] = (double) $data['cost'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

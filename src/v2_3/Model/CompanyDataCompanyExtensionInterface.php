@@ -5,19 +5,19 @@ namespace Kiboko\Magento\v2_3\Model;
 class CompanyDataCompanyExtensionInterface
 {
     /**
-     *
+     * 
      *
      * @var int
      */
     protected $applicablePaymentMethod;
     /**
-     *
+     * 
      *
      * @var string
      */
     protected $availablePaymentMethods;
     /**
-     *
+     * 
      *
      * @var int
      */
@@ -29,64 +29,64 @@ class CompanyDataCompanyExtensionInterface
      */
     protected $quoteConfig;
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getApplicablePaymentMethod(): int
+    public function getApplicablePaymentMethod() : int
     {
         return $this->applicablePaymentMethod;
     }
     /**
-     *
+     * 
      *
      * @param int $applicablePaymentMethod
      *
      * @return self
      */
-    public function setApplicablePaymentMethod(int $applicablePaymentMethod): self
+    public function setApplicablePaymentMethod(int $applicablePaymentMethod) : self
     {
         $this->applicablePaymentMethod = $applicablePaymentMethod;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getAvailablePaymentMethods(): string
+    public function getAvailablePaymentMethods() : string
     {
         return $this->availablePaymentMethods;
     }
     /**
-     *
+     * 
      *
      * @param string $availablePaymentMethods
      *
      * @return self
      */
-    public function setAvailablePaymentMethods(string $availablePaymentMethods): self
+    public function setAvailablePaymentMethods(string $availablePaymentMethods) : self
     {
         $this->availablePaymentMethods = $availablePaymentMethods;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getUseConfigSettings(): int
+    public function getUseConfigSettings() : int
     {
         return $this->useConfigSettings;
     }
     /**
-     *
+     * 
      *
      * @param int $useConfigSettings
      *
      * @return self
      */
-    public function setUseConfigSettings(int $useConfigSettings): self
+    public function setUseConfigSettings(int $useConfigSettings) : self
     {
         $this->useConfigSettings = $useConfigSettings;
         return $this;
@@ -96,7 +96,7 @@ class CompanyDataCompanyExtensionInterface
      *
      * @return NegotiableQuoteDataCompanyQuoteConfigInterface
      */
-    public function getQuoteConfig(): NegotiableQuoteDataCompanyQuoteConfigInterface
+    public function getQuoteConfig() : NegotiableQuoteDataCompanyQuoteConfigInterface
     {
         return $this->quoteConfig;
     }
@@ -107,7 +107,7 @@ class CompanyDataCompanyExtensionInterface
      *
      * @return self
      */
-    public function setQuoteConfig(NegotiableQuoteDataCompanyQuoteConfigInterface $quoteConfig): self
+    public function setQuoteConfig(NegotiableQuoteDataCompanyQuoteConfigInterface $quoteConfig) : self
     {
         $this->quoteConfig = $quoteConfig;
         return $this;

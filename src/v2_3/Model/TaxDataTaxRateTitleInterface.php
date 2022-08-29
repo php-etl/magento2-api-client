@@ -27,7 +27,7 @@ class TaxDataTaxRateTitleInterface
      *
      * @return string
      */
-    public function getStoreId(): string
+    public function getStoreId() : string
     {
         return $this->storeId;
     }
@@ -38,7 +38,7 @@ class TaxDataTaxRateTitleInterface
      *
      * @return self
      */
-    public function setStoreId(string $storeId): self
+    public function setStoreId(string $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;
@@ -48,7 +48,7 @@ class TaxDataTaxRateTitleInterface
      *
      * @return string
      */
-    public function getValue(): string
+    public function getValue() : string
     {
         return $this->value;
     }
@@ -59,7 +59,7 @@ class TaxDataTaxRateTitleInterface
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(string $value) : self
     {
         $this->value = $value;
         return $this;
@@ -80,7 +80,7 @@ class TaxDataTaxRateTitleInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

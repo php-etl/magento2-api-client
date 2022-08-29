@@ -4,33 +4,33 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class MSPTwoFactorAuthTfaV1ResetProviderConfigPost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $userId;
     protected $providerCode;
     /**
      * Reset default provider code
      *
-     * @param int $userId
-     * @param string $providerCode
+     * @param int $userId 
+     * @param string $providerCode 
      */
     public function __construct(int $userId, string $providerCode)
     {
         $this->userId = $userId;
         $this->providerCode = $providerCode;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'POST';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{userId}', '{providerCode}'), array($this->userId, $this->providerCode), '/V1/msp-2fa/reset-provider/{userId}/{providerCode}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -51,7 +51,7 @@ class MSPTwoFactorAuthTfaV1ResetProviderConfigPost extends \Kiboko\Magento\v2_3\
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

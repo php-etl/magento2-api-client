@@ -75,7 +75,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return string
      */
-    public function getCarrierCode(): string
+    public function getCarrierCode() : string
     {
         return $this->carrierCode;
     }
@@ -86,7 +86,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return self
      */
-    public function setCarrierCode(string $carrierCode): self
+    public function setCarrierCode(string $carrierCode) : self
     {
         $this->carrierCode = $carrierCode;
         return $this;
@@ -96,7 +96,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return string
      */
-    public function getMethodCode(): string
+    public function getMethodCode() : string
     {
         return $this->methodCode;
     }
@@ -107,7 +107,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return self
      */
-    public function setMethodCode(string $methodCode): self
+    public function setMethodCode(string $methodCode) : self
     {
         $this->methodCode = $methodCode;
         return $this;
@@ -117,7 +117,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return string
      */
-    public function getCarrierTitle(): string
+    public function getCarrierTitle() : string
     {
         return $this->carrierTitle;
     }
@@ -128,7 +128,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return self
      */
-    public function setCarrierTitle(string $carrierTitle): self
+    public function setCarrierTitle(string $carrierTitle) : self
     {
         $this->carrierTitle = $carrierTitle;
         return $this;
@@ -138,7 +138,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return string
      */
-    public function getMethodTitle(): string
+    public function getMethodTitle() : string
     {
         return $this->methodTitle;
     }
@@ -149,7 +149,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return self
      */
-    public function setMethodTitle(string $methodTitle): self
+    public function setMethodTitle(string $methodTitle) : self
     {
         $this->methodTitle = $methodTitle;
         return $this;
@@ -159,7 +159,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return float
      */
-    public function getAmount(): float
+    public function getAmount() : float
     {
         return $this->amount;
     }
@@ -170,7 +170,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return self
      */
-    public function setAmount(float $amount): self
+    public function setAmount(float $amount) : self
     {
         $this->amount = $amount;
         return $this;
@@ -180,7 +180,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return float
      */
-    public function getBaseAmount(): float
+    public function getBaseAmount() : float
     {
         return $this->baseAmount;
     }
@@ -191,7 +191,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return self
      */
-    public function setBaseAmount(float $baseAmount): self
+    public function setBaseAmount(float $baseAmount) : self
     {
         $this->baseAmount = $baseAmount;
         return $this;
@@ -201,7 +201,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return bool
      */
-    public function getAvailable(): bool
+    public function getAvailable() : bool
     {
         return $this->available;
     }
@@ -212,7 +212,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return self
      */
-    public function setAvailable(bool $available): self
+    public function setAvailable(bool $available) : self
     {
         $this->available = $available;
         return $this;
@@ -233,7 +233,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -243,7 +243,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return string
      */
-    public function getErrorMessage(): string
+    public function getErrorMessage() : string
     {
         return $this->errorMessage;
     }
@@ -254,7 +254,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return self
      */
-    public function setErrorMessage(string $errorMessage): self
+    public function setErrorMessage(string $errorMessage) : self
     {
         $this->errorMessage = $errorMessage;
         return $this;
@@ -264,7 +264,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return float
      */
-    public function getPriceExclTax(): float
+    public function getPriceExclTax() : float
     {
         return $this->priceExclTax;
     }
@@ -275,7 +275,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return self
      */
-    public function setPriceExclTax(float $priceExclTax): self
+    public function setPriceExclTax(float $priceExclTax) : self
     {
         $this->priceExclTax = $priceExclTax;
         return $this;
@@ -285,7 +285,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return float
      */
-    public function getPriceInclTax(): float
+    public function getPriceInclTax() : float
     {
         return $this->priceInclTax;
     }
@@ -296,7 +296,7 @@ class QuoteDataShippingMethodInterface
      *
      * @return self
      */
-    public function setPriceInclTax(float $priceInclTax): self
+    public function setPriceInclTax(float $priceInclTax) : self
     {
         $this->priceInclTax = $priceInclTax;
         return $this;

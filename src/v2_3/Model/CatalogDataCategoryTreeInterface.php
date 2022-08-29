@@ -5,7 +5,7 @@ namespace Kiboko\Magento\v2_3\Model;
 class CatalogDataCategoryTreeInterface
 {
     /**
-     *
+     * 
      *
      * @var int
      */
@@ -47,28 +47,28 @@ class CatalogDataCategoryTreeInterface
      */
     protected $productCount;
     /**
-     *
+     * 
      *
      * @var CatalogDataCategoryTreeInterface[]
      */
     protected $childrenData;
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
     /**
-     *
+     * 
      *
      * @param int $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -78,7 +78,7 @@ class CatalogDataCategoryTreeInterface
      *
      * @return int
      */
-    public function getParentId(): int
+    public function getParentId() : int
     {
         return $this->parentId;
     }
@@ -89,7 +89,7 @@ class CatalogDataCategoryTreeInterface
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(int $parentId) : self
     {
         $this->parentId = $parentId;
         return $this;
@@ -99,7 +99,7 @@ class CatalogDataCategoryTreeInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -110,7 +110,7 @@ class CatalogDataCategoryTreeInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -120,7 +120,7 @@ class CatalogDataCategoryTreeInterface
      *
      * @return bool
      */
-    public function getIsActive(): bool
+    public function getIsActive() : bool
     {
         return $this->isActive;
     }
@@ -131,7 +131,7 @@ class CatalogDataCategoryTreeInterface
      *
      * @return self
      */
-    public function setIsActive(bool $isActive): self
+    public function setIsActive(bool $isActive) : self
     {
         $this->isActive = $isActive;
         return $this;
@@ -141,7 +141,7 @@ class CatalogDataCategoryTreeInterface
      *
      * @return int
      */
-    public function getPosition(): int
+    public function getPosition() : int
     {
         return $this->position;
     }
@@ -152,7 +152,7 @@ class CatalogDataCategoryTreeInterface
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(int $position) : self
     {
         $this->position = $position;
         return $this;
@@ -162,7 +162,7 @@ class CatalogDataCategoryTreeInterface
      *
      * @return int
      */
-    public function getLevel(): int
+    public function getLevel() : int
     {
         return $this->level;
     }
@@ -173,7 +173,7 @@ class CatalogDataCategoryTreeInterface
      *
      * @return self
      */
-    public function setLevel(int $level): self
+    public function setLevel(int $level) : self
     {
         $this->level = $level;
         return $this;
@@ -183,7 +183,7 @@ class CatalogDataCategoryTreeInterface
      *
      * @return int
      */
-    public function getProductCount(): int
+    public function getProductCount() : int
     {
         return $this->productCount;
     }
@@ -194,28 +194,28 @@ class CatalogDataCategoryTreeInterface
      *
      * @return self
      */
-    public function setProductCount(int $productCount): self
+    public function setProductCount(int $productCount) : self
     {
         $this->productCount = $productCount;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return CatalogDataCategoryTreeInterface[]
      */
-    public function getChildrenData(): array
+    public function getChildrenData() : array
     {
         return $this->childrenData;
     }
     /**
-     *
+     * 
      *
      * @param CatalogDataCategoryTreeInterface[] $childrenData
      *
      * @return self
      */
-    public function setChildrenData(array $childrenData): self
+    public function setChildrenData(array $childrenData) : self
     {
         $this->childrenData = $childrenData;
         return $this;

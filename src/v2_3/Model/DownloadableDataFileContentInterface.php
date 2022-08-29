@@ -27,7 +27,7 @@ class DownloadableDataFileContentInterface
      *
      * @return string
      */
-    public function getFileData(): string
+    public function getFileData() : string
     {
         return $this->fileData;
     }
@@ -38,7 +38,7 @@ class DownloadableDataFileContentInterface
      *
      * @return self
      */
-    public function setFileData(string $fileData): self
+    public function setFileData(string $fileData) : self
     {
         $this->fileData = $fileData;
         return $this;
@@ -48,7 +48,7 @@ class DownloadableDataFileContentInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -59,7 +59,7 @@ class DownloadableDataFileContentInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -80,7 +80,7 @@ class DownloadableDataFileContentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

@@ -4,30 +4,30 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CompanyTeamRepositoryV1DeleteByIdDelete extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $teamId;
     /**
      * Delete a team from the company structure.
      *
-     * @param int $teamId
+     * @param int $teamId 
      */
     public function __construct(int $teamId)
     {
         $this->teamId = $teamId;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'DELETE';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{teamId}'), array($this->teamId), '/V1/team/{teamId}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -49,7 +49,7 @@ class CompanyTeamRepositoryV1DeleteByIdDelete extends \Kiboko\Magento\v2_3\Runti
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

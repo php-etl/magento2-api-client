@@ -11,7 +11,7 @@ class QuoteDataShippingAssignmentInterface
      */
     protected $shipping;
     /**
-     *
+     * 
      *
      * @var QuoteDataCartItemInterface[]
      */
@@ -27,7 +27,7 @@ class QuoteDataShippingAssignmentInterface
      *
      * @return QuoteDataShippingInterface
      */
-    public function getShipping(): QuoteDataShippingInterface
+    public function getShipping() : QuoteDataShippingInterface
     {
         return $this->shipping;
     }
@@ -38,28 +38,28 @@ class QuoteDataShippingAssignmentInterface
      *
      * @return self
      */
-    public function setShipping(QuoteDataShippingInterface $shipping): self
+    public function setShipping(QuoteDataShippingInterface $shipping) : self
     {
         $this->shipping = $shipping;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return QuoteDataCartItemInterface[]
      */
-    public function getItems(): array
+    public function getItems() : array
     {
         return $this->items;
     }
     /**
-     *
+     * 
      *
      * @param QuoteDataCartItemInterface[] $items
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(array $items) : self
     {
         $this->items = $items;
         return $this;
@@ -80,7 +80,7 @@ class QuoteDataShippingAssignmentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

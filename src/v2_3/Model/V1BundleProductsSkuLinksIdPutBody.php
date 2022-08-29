@@ -15,7 +15,7 @@ class V1BundleProductsSkuLinksIdPutBody
      *
      * @return BundleDataLinkInterface
      */
-    public function getLinkedProduct(): BundleDataLinkInterface
+    public function getLinkedProduct() : BundleDataLinkInterface
     {
         return $this->linkedProduct;
     }
@@ -26,7 +26,7 @@ class V1BundleProductsSkuLinksIdPutBody
      *
      * @return self
      */
-    public function setLinkedProduct(BundleDataLinkInterface $linkedProduct): self
+    public function setLinkedProduct(BundleDataLinkInterface $linkedProduct) : self
     {
         $this->linkedProduct = $linkedProduct;
         return $this;

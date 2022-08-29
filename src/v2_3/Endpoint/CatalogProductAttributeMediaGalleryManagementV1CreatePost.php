@@ -4,32 +4,32 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CatalogProductAttributeMediaGalleryManagementV1CreatePost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $sku;
     /**
      * Create new gallery entry
      *
-     * @param string $sku
-     * @param \Kiboko\Magento\v2_3\Model\V1ProductsSkuMediaPostBody $catalogProductAttributeMediaGalleryManagementV1CreatePostBody
+     * @param string $sku 
+     * @param \Kiboko\Magento\v2_3\Model\V1ProductsSkuMediaPostBody $catalogProductAttributeMediaGalleryManagementV1CreatePostBody 
      */
     public function __construct(string $sku, \Kiboko\Magento\v2_3\Model\V1ProductsSkuMediaPostBody $catalogProductAttributeMediaGalleryManagementV1CreatePostBody)
     {
         $this->sku = $sku;
         $this->body = $catalogProductAttributeMediaGalleryManagementV1CreatePostBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'POST';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{sku}'), array($this->sku), '/V1/products/{sku}/media');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -54,7 +54,7 @@ class CatalogProductAttributeMediaGalleryManagementV1CreatePost extends \Kiboko\
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

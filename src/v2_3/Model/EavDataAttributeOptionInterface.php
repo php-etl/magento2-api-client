@@ -39,7 +39,7 @@ class EavDataAttributeOptionInterface
      *
      * @return string
      */
-    public function getLabel(): string
+    public function getLabel() : string
     {
         return $this->label;
     }
@@ -50,7 +50,7 @@ class EavDataAttributeOptionInterface
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(string $label) : self
     {
         $this->label = $label;
         return $this;
@@ -60,7 +60,7 @@ class EavDataAttributeOptionInterface
      *
      * @return string
      */
-    public function getValue(): string
+    public function getValue() : string
     {
         return $this->value;
     }
@@ -71,7 +71,7 @@ class EavDataAttributeOptionInterface
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(string $value) : self
     {
         $this->value = $value;
         return $this;
@@ -81,7 +81,7 @@ class EavDataAttributeOptionInterface
      *
      * @return int
      */
-    public function getSortOrder(): int
+    public function getSortOrder() : int
     {
         return $this->sortOrder;
     }
@@ -92,7 +92,7 @@ class EavDataAttributeOptionInterface
      *
      * @return self
      */
-    public function setSortOrder(int $sortOrder): self
+    public function setSortOrder(int $sortOrder) : self
     {
         $this->sortOrder = $sortOrder;
         return $this;
@@ -102,7 +102,7 @@ class EavDataAttributeOptionInterface
      *
      * @return bool
      */
-    public function getIsDefault(): bool
+    public function getIsDefault() : bool
     {
         return $this->isDefault;
     }
@@ -113,7 +113,7 @@ class EavDataAttributeOptionInterface
      *
      * @return self
      */
-    public function setIsDefault(bool $isDefault): self
+    public function setIsDefault(bool $isDefault) : self
     {
         $this->isDefault = $isDefault;
         return $this;
@@ -123,7 +123,7 @@ class EavDataAttributeOptionInterface
      *
      * @return EavDataAttributeOptionLabelInterface[]
      */
-    public function getStoreLabels(): array
+    public function getStoreLabels() : array
     {
         return $this->storeLabels;
     }
@@ -134,7 +134,7 @@ class EavDataAttributeOptionInterface
      *
      * @return self
      */
-    public function setStoreLabels(array $storeLabels): self
+    public function setStoreLabels(array $storeLabels) : self
     {
         $this->storeLabels = $storeLabels;
         return $this;

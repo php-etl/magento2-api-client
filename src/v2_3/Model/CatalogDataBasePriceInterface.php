@@ -33,7 +33,7 @@ class CatalogDataBasePriceInterface
      *
      * @return float
      */
-    public function getPrice(): float
+    public function getPrice() : float
     {
         return $this->price;
     }
@@ -44,7 +44,7 @@ class CatalogDataBasePriceInterface
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(float $price) : self
     {
         $this->price = $price;
         return $this;
@@ -54,7 +54,7 @@ class CatalogDataBasePriceInterface
      *
      * @return int
      */
-    public function getStoreId(): int
+    public function getStoreId() : int
     {
         return $this->storeId;
     }
@@ -65,7 +65,7 @@ class CatalogDataBasePriceInterface
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(int $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;
@@ -75,7 +75,7 @@ class CatalogDataBasePriceInterface
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
@@ -86,7 +86,7 @@ class CatalogDataBasePriceInterface
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -107,7 +107,7 @@ class CatalogDataBasePriceInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

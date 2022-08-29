@@ -15,7 +15,7 @@ class V1NegotiableQuoteQuoteIdShippingMethodPutBody
      *
      * @return string
      */
-    public function getShippingMethod(): string
+    public function getShippingMethod() : string
     {
         return $this->shippingMethod;
     }
@@ -26,7 +26,7 @@ class V1NegotiableQuoteQuoteIdShippingMethodPutBody
      *
      * @return self
      */
-    public function setShippingMethod(string $shippingMethod): self
+    public function setShippingMethod(string $shippingMethod) : self
     {
         $this->shippingMethod = $shippingMethod;
         return $this;

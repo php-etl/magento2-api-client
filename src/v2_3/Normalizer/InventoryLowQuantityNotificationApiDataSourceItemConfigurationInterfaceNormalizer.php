@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class InventoryLowQuantityNotificationApiDataSourceItemConfigurationInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\InventoryLowQuantityNotificationApiDataSourceItemConfigurationInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\InventoryLowQuantityNotificationApiDataSourceItemConfigurationInterface';
     }
@@ -38,7 +37,7 @@ class InventoryLowQuantityNotificationApiDataSourceItemConfigurationInterfaceNor
         }
         $object = new \Kiboko\Magento\v2_3\Model\InventoryLowQuantityNotificationApiDataSourceItemConfigurationInterface();
         if (\array_key_exists('notify_stock_qty', $data) && \is_int($data['notify_stock_qty'])) {
-            $data['notify_stock_qty'] = (float) $data['notify_stock_qty'];
+            $data['notify_stock_qty'] = (double) $data['notify_stock_qty'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

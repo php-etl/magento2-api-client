@@ -27,7 +27,7 @@ class FrameworkFilter
      *
      * @return string
      */
-    public function getField(): string
+    public function getField() : string
     {
         return $this->field;
     }
@@ -38,7 +38,7 @@ class FrameworkFilter
      *
      * @return self
      */
-    public function setField(string $field): self
+    public function setField(string $field) : self
     {
         $this->field = $field;
         return $this;
@@ -48,7 +48,7 @@ class FrameworkFilter
      *
      * @return string
      */
-    public function getValue(): string
+    public function getValue() : string
     {
         return $this->value;
     }
@@ -59,7 +59,7 @@ class FrameworkFilter
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(string $value) : self
     {
         $this->value = $value;
         return $this;
@@ -69,7 +69,7 @@ class FrameworkFilter
      *
      * @return string
      */
-    public function getConditionType(): string
+    public function getConditionType() : string
     {
         return $this->conditionType;
     }
@@ -80,7 +80,7 @@ class FrameworkFilter
      *
      * @return self
      */
-    public function setConditionType(string $conditionType): self
+    public function setConditionType(string $conditionType) : self
     {
         $this->conditionType = $conditionType;
         return $this;

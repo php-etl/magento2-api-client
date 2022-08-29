@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataProductRenderImageInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataProductRenderImageInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataProductRenderImageInterface';
     }
@@ -38,16 +37,16 @@ class CatalogDataProductRenderImageInterfaceNormalizer implements DenormalizerIn
         }
         $object = new \Kiboko\Magento\v2_3\Model\CatalogDataProductRenderImageInterface();
         if (\array_key_exists('height', $data) && \is_int($data['height'])) {
-            $data['height'] = (float) $data['height'];
+            $data['height'] = (double) $data['height'];
         }
         if (\array_key_exists('width', $data) && \is_int($data['width'])) {
-            $data['width'] = (float) $data['width'];
+            $data['width'] = (double) $data['width'];
         }
         if (\array_key_exists('resized_width', $data) && \is_int($data['resized_width'])) {
-            $data['resized_width'] = (float) $data['resized_width'];
+            $data['resized_width'] = (double) $data['resized_width'];
         }
         if (\array_key_exists('resized_height', $data) && \is_int($data['resized_height'])) {
-            $data['resized_height'] = (float) $data['resized_height'];
+            $data['resized_height'] = (double) $data['resized_height'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

@@ -51,7 +51,7 @@ class DirectoryDataCountryInformationInterface
      *
      * @return string
      */
-    public function getId(): string
+    public function getId() : string
     {
         return $this->id;
     }
@@ -62,7 +62,7 @@ class DirectoryDataCountryInformationInterface
      *
      * @return self
      */
-    public function setId(string $id): self
+    public function setId(string $id) : self
     {
         $this->id = $id;
         return $this;
@@ -72,7 +72,7 @@ class DirectoryDataCountryInformationInterface
      *
      * @return string
      */
-    public function getTwoLetterAbbreviation(): string
+    public function getTwoLetterAbbreviation() : string
     {
         return $this->twoLetterAbbreviation;
     }
@@ -83,7 +83,7 @@ class DirectoryDataCountryInformationInterface
      *
      * @return self
      */
-    public function setTwoLetterAbbreviation(string $twoLetterAbbreviation): self
+    public function setTwoLetterAbbreviation(string $twoLetterAbbreviation) : self
     {
         $this->twoLetterAbbreviation = $twoLetterAbbreviation;
         return $this;
@@ -93,7 +93,7 @@ class DirectoryDataCountryInformationInterface
      *
      * @return string
      */
-    public function getThreeLetterAbbreviation(): string
+    public function getThreeLetterAbbreviation() : string
     {
         return $this->threeLetterAbbreviation;
     }
@@ -104,7 +104,7 @@ class DirectoryDataCountryInformationInterface
      *
      * @return self
      */
-    public function setThreeLetterAbbreviation(string $threeLetterAbbreviation): self
+    public function setThreeLetterAbbreviation(string $threeLetterAbbreviation) : self
     {
         $this->threeLetterAbbreviation = $threeLetterAbbreviation;
         return $this;
@@ -114,7 +114,7 @@ class DirectoryDataCountryInformationInterface
      *
      * @return string
      */
-    public function getFullNameLocale(): string
+    public function getFullNameLocale() : string
     {
         return $this->fullNameLocale;
     }
@@ -125,7 +125,7 @@ class DirectoryDataCountryInformationInterface
      *
      * @return self
      */
-    public function setFullNameLocale(string $fullNameLocale): self
+    public function setFullNameLocale(string $fullNameLocale) : self
     {
         $this->fullNameLocale = $fullNameLocale;
         return $this;
@@ -135,7 +135,7 @@ class DirectoryDataCountryInformationInterface
      *
      * @return string
      */
-    public function getFullNameEnglish(): string
+    public function getFullNameEnglish() : string
     {
         return $this->fullNameEnglish;
     }
@@ -146,7 +146,7 @@ class DirectoryDataCountryInformationInterface
      *
      * @return self
      */
-    public function setFullNameEnglish(string $fullNameEnglish): self
+    public function setFullNameEnglish(string $fullNameEnglish) : self
     {
         $this->fullNameEnglish = $fullNameEnglish;
         return $this;
@@ -156,7 +156,7 @@ class DirectoryDataCountryInformationInterface
      *
      * @return DirectoryDataRegionInformationInterface[]
      */
-    public function getAvailableRegions(): array
+    public function getAvailableRegions() : array
     {
         return $this->availableRegions;
     }
@@ -167,7 +167,7 @@ class DirectoryDataCountryInformationInterface
      *
      * @return self
      */
-    public function setAvailableRegions(array $availableRegions): self
+    public function setAvailableRegions(array $availableRegions) : self
     {
         $this->availableRegions = $availableRegions;
         return $this;
@@ -188,7 +188,7 @@ class DirectoryDataCountryInformationInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

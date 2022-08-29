@@ -153,7 +153,7 @@ class QuoteDataAddressInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -164,7 +164,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -174,7 +174,7 @@ class QuoteDataAddressInterface
      *
      * @return string
      */
-    public function getRegion(): string
+    public function getRegion() : string
     {
         return $this->region;
     }
@@ -185,7 +185,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setRegion(string $region): self
+    public function setRegion(string $region) : self
     {
         $this->region = $region;
         return $this;
@@ -195,7 +195,7 @@ class QuoteDataAddressInterface
      *
      * @return int
      */
-    public function getRegionId(): int
+    public function getRegionId() : int
     {
         return $this->regionId;
     }
@@ -206,7 +206,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setRegionId(int $regionId): self
+    public function setRegionId(int $regionId) : self
     {
         $this->regionId = $regionId;
         return $this;
@@ -216,7 +216,7 @@ class QuoteDataAddressInterface
      *
      * @return string
      */
-    public function getRegionCode(): string
+    public function getRegionCode() : string
     {
         return $this->regionCode;
     }
@@ -227,7 +227,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setRegionCode(string $regionCode): self
+    public function setRegionCode(string $regionCode) : self
     {
         $this->regionCode = $regionCode;
         return $this;
@@ -237,7 +237,7 @@ class QuoteDataAddressInterface
      *
      * @return string
      */
-    public function getCountryId(): string
+    public function getCountryId() : string
     {
         return $this->countryId;
     }
@@ -248,7 +248,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setCountryId(string $countryId): self
+    public function setCountryId(string $countryId) : self
     {
         $this->countryId = $countryId;
         return $this;
@@ -258,7 +258,7 @@ class QuoteDataAddressInterface
      *
      * @return string[]
      */
-    public function getStreet(): array
+    public function getStreet() : array
     {
         return $this->street;
     }
@@ -269,7 +269,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setStreet(array $street): self
+    public function setStreet(array $street) : self
     {
         $this->street = $street;
         return $this;
@@ -279,7 +279,7 @@ class QuoteDataAddressInterface
      *
      * @return string
      */
-    public function getCompany(): string
+    public function getCompany() : string
     {
         return $this->company;
     }
@@ -290,7 +290,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setCompany(string $company): self
+    public function setCompany(string $company) : self
     {
         $this->company = $company;
         return $this;
@@ -300,7 +300,7 @@ class QuoteDataAddressInterface
      *
      * @return string
      */
-    public function getTelephone(): string
+    public function getTelephone() : string
     {
         return $this->telephone;
     }
@@ -311,7 +311,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setTelephone(string $telephone): self
+    public function setTelephone(string $telephone) : self
     {
         $this->telephone = $telephone;
         return $this;
@@ -321,7 +321,7 @@ class QuoteDataAddressInterface
      *
      * @return string
      */
-    public function getFax(): string
+    public function getFax() : string
     {
         return $this->fax;
     }
@@ -332,7 +332,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setFax(string $fax): self
+    public function setFax(string $fax) : self
     {
         $this->fax = $fax;
         return $this;
@@ -342,7 +342,7 @@ class QuoteDataAddressInterface
      *
      * @return string
      */
-    public function getPostcode(): string
+    public function getPostcode() : string
     {
         return $this->postcode;
     }
@@ -353,7 +353,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setPostcode(string $postcode): self
+    public function setPostcode(string $postcode) : self
     {
         $this->postcode = $postcode;
         return $this;
@@ -363,7 +363,7 @@ class QuoteDataAddressInterface
      *
      * @return string
      */
-    public function getCity(): string
+    public function getCity() : string
     {
         return $this->city;
     }
@@ -374,7 +374,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setCity(string $city): self
+    public function setCity(string $city) : self
     {
         $this->city = $city;
         return $this;
@@ -384,7 +384,7 @@ class QuoteDataAddressInterface
      *
      * @return string
      */
-    public function getFirstname(): string
+    public function getFirstname() : string
     {
         return $this->firstname;
     }
@@ -395,7 +395,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setFirstname(string $firstname): self
+    public function setFirstname(string $firstname) : self
     {
         $this->firstname = $firstname;
         return $this;
@@ -405,7 +405,7 @@ class QuoteDataAddressInterface
      *
      * @return string
      */
-    public function getLastname(): string
+    public function getLastname() : string
     {
         return $this->lastname;
     }
@@ -416,7 +416,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setLastname(string $lastname): self
+    public function setLastname(string $lastname) : self
     {
         $this->lastname = $lastname;
         return $this;
@@ -426,7 +426,7 @@ class QuoteDataAddressInterface
      *
      * @return string
      */
-    public function getMiddlename(): string
+    public function getMiddlename() : string
     {
         return $this->middlename;
     }
@@ -437,7 +437,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setMiddlename(string $middlename): self
+    public function setMiddlename(string $middlename) : self
     {
         $this->middlename = $middlename;
         return $this;
@@ -447,7 +447,7 @@ class QuoteDataAddressInterface
      *
      * @return string
      */
-    public function getPrefix(): string
+    public function getPrefix() : string
     {
         return $this->prefix;
     }
@@ -458,7 +458,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setPrefix(string $prefix): self
+    public function setPrefix(string $prefix) : self
     {
         $this->prefix = $prefix;
         return $this;
@@ -468,7 +468,7 @@ class QuoteDataAddressInterface
      *
      * @return string
      */
-    public function getSuffix(): string
+    public function getSuffix() : string
     {
         return $this->suffix;
     }
@@ -479,7 +479,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setSuffix(string $suffix): self
+    public function setSuffix(string $suffix) : self
     {
         $this->suffix = $suffix;
         return $this;
@@ -489,7 +489,7 @@ class QuoteDataAddressInterface
      *
      * @return string
      */
-    public function getVatId(): string
+    public function getVatId() : string
     {
         return $this->vatId;
     }
@@ -500,7 +500,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setVatId(string $vatId): self
+    public function setVatId(string $vatId) : self
     {
         $this->vatId = $vatId;
         return $this;
@@ -510,7 +510,7 @@ class QuoteDataAddressInterface
      *
      * @return int
      */
-    public function getCustomerId(): int
+    public function getCustomerId() : int
     {
         return $this->customerId;
     }
@@ -521,7 +521,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setCustomerId(int $customerId): self
+    public function setCustomerId(int $customerId) : self
     {
         $this->customerId = $customerId;
         return $this;
@@ -531,7 +531,7 @@ class QuoteDataAddressInterface
      *
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail() : string
     {
         return $this->email;
     }
@@ -542,7 +542,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setEmail(string $email): self
+    public function setEmail(string $email) : self
     {
         $this->email = $email;
         return $this;
@@ -552,7 +552,7 @@ class QuoteDataAddressInterface
      *
      * @return int
      */
-    public function getSameAsBilling(): int
+    public function getSameAsBilling() : int
     {
         return $this->sameAsBilling;
     }
@@ -563,7 +563,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setSameAsBilling(int $sameAsBilling): self
+    public function setSameAsBilling(int $sameAsBilling) : self
     {
         $this->sameAsBilling = $sameAsBilling;
         return $this;
@@ -573,7 +573,7 @@ class QuoteDataAddressInterface
      *
      * @return int
      */
-    public function getCustomerAddressId(): int
+    public function getCustomerAddressId() : int
     {
         return $this->customerAddressId;
     }
@@ -584,7 +584,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setCustomerAddressId(int $customerAddressId): self
+    public function setCustomerAddressId(int $customerAddressId) : self
     {
         $this->customerAddressId = $customerAddressId;
         return $this;
@@ -594,7 +594,7 @@ class QuoteDataAddressInterface
      *
      * @return int
      */
-    public function getSaveInAddressBook(): int
+    public function getSaveInAddressBook() : int
     {
         return $this->saveInAddressBook;
     }
@@ -605,7 +605,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setSaveInAddressBook(int $saveInAddressBook): self
+    public function setSaveInAddressBook(int $saveInAddressBook) : self
     {
         $this->saveInAddressBook = $saveInAddressBook;
         return $this;
@@ -615,7 +615,7 @@ class QuoteDataAddressInterface
      *
      * @return QuoteDataAddressExtensionInterface
      */
-    public function getExtensionAttributes(): QuoteDataAddressExtensionInterface
+    public function getExtensionAttributes() : QuoteDataAddressExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -626,7 +626,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(QuoteDataAddressExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(QuoteDataAddressExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -636,7 +636,7 @@ class QuoteDataAddressInterface
      *
      * @return FrameworkAttributeInterface[]
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes() : array
     {
         return $this->customAttributes;
     }
@@ -647,7 +647,7 @@ class QuoteDataAddressInterface
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(array $customAttributes) : self
     {
         $this->customAttributes = $customAttributes;
         return $this;

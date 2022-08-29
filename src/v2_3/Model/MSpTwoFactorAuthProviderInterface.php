@@ -11,7 +11,7 @@ class MSpTwoFactorAuthProviderInterface
      */
     protected $enabled;
     /**
-     *
+     * 
      *
      * @var MSpTwoFactorAuthEngineInterface
      */
@@ -69,7 +69,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return bool
      */
-    public function getEnabled(): bool
+    public function getEnabled() : bool
     {
         return $this->enabled;
     }
@@ -80,28 +80,28 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return self
      */
-    public function setEnabled(bool $enabled): self
+    public function setEnabled(bool $enabled) : self
     {
         $this->enabled = $enabled;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return MSpTwoFactorAuthEngineInterface
      */
-    public function getEngine(): MSpTwoFactorAuthEngineInterface
+    public function getEngine() : MSpTwoFactorAuthEngineInterface
     {
         return $this->engine;
     }
     /**
-     *
+     * 
      *
      * @param MSpTwoFactorAuthEngineInterface $engine
      *
      * @return self
      */
-    public function setEngine(MSpTwoFactorAuthEngineInterface $engine): self
+    public function setEngine(MSpTwoFactorAuthEngineInterface $engine) : self
     {
         $this->engine = $engine;
         return $this;
@@ -111,7 +111,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -122,7 +122,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
@@ -132,7 +132,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -143,7 +143,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -153,7 +153,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return string
      */
-    public function getIcon(): string
+    public function getIcon() : string
     {
         return $this->icon;
     }
@@ -164,7 +164,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return self
      */
-    public function setIcon(string $icon): self
+    public function setIcon(string $icon) : self
     {
         $this->icon = $icon;
         return $this;
@@ -174,7 +174,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return bool
      */
-    public function getResetAllowed(): bool
+    public function getResetAllowed() : bool
     {
         return $this->resetAllowed;
     }
@@ -185,7 +185,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return self
      */
-    public function setResetAllowed(bool $resetAllowed): self
+    public function setResetAllowed(bool $resetAllowed) : self
     {
         $this->resetAllowed = $resetAllowed;
         return $this;
@@ -195,7 +195,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return bool
      */
-    public function getTrustedDevicesAllowed(): bool
+    public function getTrustedDevicesAllowed() : bool
     {
         return $this->trustedDevicesAllowed;
     }
@@ -206,7 +206,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return self
      */
-    public function setTrustedDevicesAllowed(bool $trustedDevicesAllowed): self
+    public function setTrustedDevicesAllowed(bool $trustedDevicesAllowed) : self
     {
         $this->trustedDevicesAllowed = $trustedDevicesAllowed;
         return $this;
@@ -216,7 +216,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return string
      */
-    public function getConfigureAction(): string
+    public function getConfigureAction() : string
     {
         return $this->configureAction;
     }
@@ -227,7 +227,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return self
      */
-    public function setConfigureAction(string $configureAction): self
+    public function setConfigureAction(string $configureAction) : self
     {
         $this->configureAction = $configureAction;
         return $this;
@@ -237,7 +237,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return string
      */
-    public function getAuthAction(): string
+    public function getAuthAction() : string
     {
         return $this->authAction;
     }
@@ -248,7 +248,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return self
      */
-    public function setAuthAction(string $authAction): self
+    public function setAuthAction(string $authAction) : self
     {
         $this->authAction = $authAction;
         return $this;
@@ -258,7 +258,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return string[]
      */
-    public function getExtraActions(): array
+    public function getExtraActions() : array
     {
         return $this->extraActions;
     }
@@ -269,7 +269,7 @@ class MSpTwoFactorAuthProviderInterface
      *
      * @return self
      */
-    public function setExtraActions(array $extraActions): self
+    public function setExtraActions(array $extraActions) : self
     {
         $this->extraActions = $extraActions;
         return $this;

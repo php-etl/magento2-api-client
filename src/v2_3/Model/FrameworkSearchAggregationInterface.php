@@ -21,7 +21,7 @@ class FrameworkSearchAggregationInterface
      *
      * @return FrameworkSearchBucketInterface[]
      */
-    public function getBuckets(): array
+    public function getBuckets() : array
     {
         return $this->buckets;
     }
@@ -32,7 +32,7 @@ class FrameworkSearchAggregationInterface
      *
      * @return self
      */
-    public function setBuckets(array $buckets): self
+    public function setBuckets(array $buckets) : self
     {
         $this->buckets = $buckets;
         return $this;
@@ -42,7 +42,7 @@ class FrameworkSearchAggregationInterface
      *
      * @return string[]
      */
-    public function getBucketNames(): array
+    public function getBucketNames() : array
     {
         return $this->bucketNames;
     }
@@ -53,7 +53,7 @@ class FrameworkSearchAggregationInterface
      *
      * @return self
      */
-    public function setBucketNames(array $bucketNames): self
+    public function setBucketNames(array $bucketNames) : self
     {
         $this->bucketNames = $bucketNames;
         return $this;

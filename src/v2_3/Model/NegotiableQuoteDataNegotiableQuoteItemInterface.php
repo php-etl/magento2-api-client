@@ -39,7 +39,7 @@ class NegotiableQuoteDataNegotiableQuoteItemInterface
      *
      * @return int
      */
-    public function getItemId(): int
+    public function getItemId() : int
     {
         return $this->itemId;
     }
@@ -50,7 +50,7 @@ class NegotiableQuoteDataNegotiableQuoteItemInterface
      *
      * @return self
      */
-    public function setItemId(int $itemId): self
+    public function setItemId(int $itemId) : self
     {
         $this->itemId = $itemId;
         return $this;
@@ -60,7 +60,7 @@ class NegotiableQuoteDataNegotiableQuoteItemInterface
      *
      * @return float
      */
-    public function getOriginalPrice(): float
+    public function getOriginalPrice() : float
     {
         return $this->originalPrice;
     }
@@ -71,7 +71,7 @@ class NegotiableQuoteDataNegotiableQuoteItemInterface
      *
      * @return self
      */
-    public function setOriginalPrice(float $originalPrice): self
+    public function setOriginalPrice(float $originalPrice) : self
     {
         $this->originalPrice = $originalPrice;
         return $this;
@@ -81,7 +81,7 @@ class NegotiableQuoteDataNegotiableQuoteItemInterface
      *
      * @return float
      */
-    public function getOriginalTaxAmount(): float
+    public function getOriginalTaxAmount() : float
     {
         return $this->originalTaxAmount;
     }
@@ -92,7 +92,7 @@ class NegotiableQuoteDataNegotiableQuoteItemInterface
      *
      * @return self
      */
-    public function setOriginalTaxAmount(float $originalTaxAmount): self
+    public function setOriginalTaxAmount(float $originalTaxAmount) : self
     {
         $this->originalTaxAmount = $originalTaxAmount;
         return $this;
@@ -102,7 +102,7 @@ class NegotiableQuoteDataNegotiableQuoteItemInterface
      *
      * @return float
      */
-    public function getOriginalDiscountAmount(): float
+    public function getOriginalDiscountAmount() : float
     {
         return $this->originalDiscountAmount;
     }
@@ -113,7 +113,7 @@ class NegotiableQuoteDataNegotiableQuoteItemInterface
      *
      * @return self
      */
-    public function setOriginalDiscountAmount(float $originalDiscountAmount): self
+    public function setOriginalDiscountAmount(float $originalDiscountAmount) : self
     {
         $this->originalDiscountAmount = $originalDiscountAmount;
         return $this;
@@ -134,7 +134,7 @@ class NegotiableQuoteDataNegotiableQuoteItemInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

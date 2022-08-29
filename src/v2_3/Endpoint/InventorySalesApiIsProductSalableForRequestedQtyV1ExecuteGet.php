@@ -4,16 +4,15 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class InventorySalesApiIsProductSalableForRequestedQtyV1ExecuteGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $sku;
     protected $stockId;
     protected $requestedQty;
     /**
      * Get is product salable for given SKU in a given Stock for a certain Qty
      *
-     * @param string $sku
-     * @param int $stockId
-     * @param float $requestedQty
+     * @param string $sku 
+     * @param int $stockId 
+     * @param float $requestedQty 
      */
     public function __construct(string $sku, int $stockId, float $requestedQty)
     {
@@ -21,19 +20,20 @@ class InventorySalesApiIsProductSalableForRequestedQtyV1ExecuteGet extends \Kibo
         $this->stockId = $stockId;
         $this->requestedQty = $requestedQty;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'GET';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{sku}', '{stockId}', '{requestedQty}'), array($this->sku, $this->stockId, $this->requestedQty), '/V1/inventory/is-product-salable-for-requested-qty/{sku}/{stockId}/{requestedQty}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -58,7 +58,7 @@ class InventorySalesApiIsProductSalableForRequestedQtyV1ExecuteGet extends \Kibo
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

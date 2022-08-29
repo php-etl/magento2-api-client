@@ -39,7 +39,7 @@ class ErrorResponse
      *
      * @return string
      */
-    public function getMessage(): string
+    public function getMessage() : string
     {
         return $this->message;
     }
@@ -50,7 +50,7 @@ class ErrorResponse
      *
      * @return self
      */
-    public function setMessage(string $message): self
+    public function setMessage(string $message) : self
     {
         $this->message = $message;
         return $this;
@@ -60,7 +60,7 @@ class ErrorResponse
      *
      * @return ErrorErrorsItem[]
      */
-    public function getErrors(): array
+    public function getErrors() : array
     {
         return $this->errors;
     }
@@ -71,7 +71,7 @@ class ErrorResponse
      *
      * @return self
      */
-    public function setErrors(array $errors): self
+    public function setErrors(array $errors) : self
     {
         $this->errors = $errors;
         return $this;
@@ -81,7 +81,7 @@ class ErrorResponse
      *
      * @return int
      */
-    public function getCode(): int
+    public function getCode() : int
     {
         return $this->code;
     }
@@ -92,7 +92,7 @@ class ErrorResponse
      *
      * @return self
      */
-    public function setCode(int $code): self
+    public function setCode(int $code) : self
     {
         $this->code = $code;
         return $this;
@@ -102,7 +102,7 @@ class ErrorResponse
      *
      * @return ErrorParametersItem[]
      */
-    public function getParameters(): array
+    public function getParameters() : array
     {
         return $this->parameters;
     }
@@ -113,7 +113,7 @@ class ErrorResponse
      *
      * @return self
      */
-    public function setParameters(array $parameters): self
+    public function setParameters(array $parameters) : self
     {
         $this->parameters = $parameters;
         return $this;
@@ -123,7 +123,7 @@ class ErrorResponse
      *
      * @return string
      */
-    public function getTrace(): string
+    public function getTrace() : string
     {
         return $this->trace;
     }
@@ -134,7 +134,7 @@ class ErrorResponse
      *
      * @return self
      */
-    public function setTrace(string $trace): self
+    public function setTrace(string $trace) : self
     {
         $this->trace = $trace;
         return $this;

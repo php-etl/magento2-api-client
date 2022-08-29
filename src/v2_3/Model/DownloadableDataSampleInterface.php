@@ -23,7 +23,7 @@ class DownloadableDataSampleInterface
      */
     protected $sortOrder;
     /**
-     *
+     * 
      *
      * @var string
      */
@@ -35,7 +35,7 @@ class DownloadableDataSampleInterface
      */
     protected $sampleFile;
     /**
-     *
+     * 
      *
      * @var DownloadableDataFileContentInterface
      */
@@ -57,7 +57,7 @@ class DownloadableDataSampleInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -68,7 +68,7 @@ class DownloadableDataSampleInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -78,7 +78,7 @@ class DownloadableDataSampleInterface
      *
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle() : string
     {
         return $this->title;
     }
@@ -89,7 +89,7 @@ class DownloadableDataSampleInterface
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(string $title) : self
     {
         $this->title = $title;
         return $this;
@@ -99,7 +99,7 @@ class DownloadableDataSampleInterface
      *
      * @return int
      */
-    public function getSortOrder(): int
+    public function getSortOrder() : int
     {
         return $this->sortOrder;
     }
@@ -110,28 +110,28 @@ class DownloadableDataSampleInterface
      *
      * @return self
      */
-    public function setSortOrder(int $sortOrder): self
+    public function setSortOrder(int $sortOrder) : self
     {
         $this->sortOrder = $sortOrder;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getSampleType(): string
+    public function getSampleType() : string
     {
         return $this->sampleType;
     }
     /**
-     *
+     * 
      *
      * @param string $sampleType
      *
      * @return self
      */
-    public function setSampleType(string $sampleType): self
+    public function setSampleType(string $sampleType) : self
     {
         $this->sampleType = $sampleType;
         return $this;
@@ -141,7 +141,7 @@ class DownloadableDataSampleInterface
      *
      * @return string
      */
-    public function getSampleFile(): string
+    public function getSampleFile() : string
     {
         return $this->sampleFile;
     }
@@ -152,28 +152,28 @@ class DownloadableDataSampleInterface
      *
      * @return self
      */
-    public function setSampleFile(string $sampleFile): self
+    public function setSampleFile(string $sampleFile) : self
     {
         $this->sampleFile = $sampleFile;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return DownloadableDataFileContentInterface
      */
-    public function getSampleFileContent(): DownloadableDataFileContentInterface
+    public function getSampleFileContent() : DownloadableDataFileContentInterface
     {
         return $this->sampleFileContent;
     }
     /**
-     *
+     * 
      *
      * @param DownloadableDataFileContentInterface $sampleFileContent
      *
      * @return self
      */
-    public function setSampleFileContent(DownloadableDataFileContentInterface $sampleFileContent): self
+    public function setSampleFileContent(DownloadableDataFileContentInterface $sampleFileContent) : self
     {
         $this->sampleFileContent = $sampleFileContent;
         return $this;
@@ -183,7 +183,7 @@ class DownloadableDataSampleInterface
      *
      * @return string
      */
-    public function getSampleUrl(): string
+    public function getSampleUrl() : string
     {
         return $this->sampleUrl;
     }
@@ -194,7 +194,7 @@ class DownloadableDataSampleInterface
      *
      * @return self
      */
-    public function setSampleUrl(string $sampleUrl): self
+    public function setSampleUrl(string $sampleUrl) : self
     {
         $this->sampleUrl = $sampleUrl;
         return $this;
@@ -215,7 +215,7 @@ class DownloadableDataSampleInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

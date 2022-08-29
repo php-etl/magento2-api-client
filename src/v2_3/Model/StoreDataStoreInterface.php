@@ -5,13 +5,13 @@ namespace Kiboko\Magento\v2_3\Model;
 class StoreDataStoreInterface
 {
     /**
-     *
+     * 
      *
      * @var int
      */
     protected $id;
     /**
-     *
+     * 
      *
      * @var string
      */
@@ -23,19 +23,19 @@ class StoreDataStoreInterface
      */
     protected $name;
     /**
-     *
+     * 
      *
      * @var int
      */
     protected $websiteId;
     /**
-     *
+     * 
      *
      * @var int
      */
     protected $storeGroupId;
     /**
-     *
+     * 
      *
      * @var int
      */
@@ -47,43 +47,43 @@ class StoreDataStoreInterface
      */
     protected $extensionAttributes;
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
     /**
-     *
+     * 
      *
      * @param int $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
     /**
-     *
+     * 
      *
      * @param string $code
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
@@ -93,7 +93,7 @@ class StoreDataStoreInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -104,70 +104,70 @@ class StoreDataStoreInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getWebsiteId(): int
+    public function getWebsiteId() : int
     {
         return $this->websiteId;
     }
     /**
-     *
+     * 
      *
      * @param int $websiteId
      *
      * @return self
      */
-    public function setWebsiteId(int $websiteId): self
+    public function setWebsiteId(int $websiteId) : self
     {
         $this->websiteId = $websiteId;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getStoreGroupId(): int
+    public function getStoreGroupId() : int
     {
         return $this->storeGroupId;
     }
     /**
-     *
+     * 
      *
      * @param int $storeGroupId
      *
      * @return self
      */
-    public function setStoreGroupId(int $storeGroupId): self
+    public function setStoreGroupId(int $storeGroupId) : self
     {
         $this->storeGroupId = $storeGroupId;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getIsActive(): int
+    public function getIsActive() : int
     {
         return $this->isActive;
     }
     /**
-     *
+     * 
      *
      * @param int $isActive
      *
      * @return self
      */
-    public function setIsActive(int $isActive): self
+    public function setIsActive(int $isActive) : self
     {
         $this->isActive = $isActive;
         return $this;
@@ -188,7 +188,7 @@ class StoreDataStoreInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

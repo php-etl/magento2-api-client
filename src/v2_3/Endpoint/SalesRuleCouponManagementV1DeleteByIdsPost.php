@@ -4,29 +4,29 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class SalesRuleCouponManagementV1DeleteByIdsPost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     /**
      * Delete coupon by coupon ids.
      *
-     * @param \Kiboko\Magento\v2_3\Model\V1CouponsDeleteByIdsPostBody $salesRuleCouponManagementV1DeleteByIdsPostBody
+     * @param \Kiboko\Magento\v2_3\Model\V1CouponsDeleteByIdsPostBody $salesRuleCouponManagementV1DeleteByIdsPostBody 
      */
     public function __construct(\Kiboko\Magento\v2_3\Model\V1CouponsDeleteByIdsPostBody $salesRuleCouponManagementV1DeleteByIdsPostBody)
     {
         $this->body = $salesRuleCouponManagementV1DeleteByIdsPostBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'POST';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return '/V1/coupons/deleteByIds';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -55,7 +55,7 @@ class SalesRuleCouponManagementV1DeleteByIdsPost extends \Kiboko\Magento\v2_3\Ru
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

@@ -27,7 +27,7 @@ class QuoteDataShippingInterface
      *
      * @return QuoteDataAddressInterface
      */
-    public function getAddress(): QuoteDataAddressInterface
+    public function getAddress() : QuoteDataAddressInterface
     {
         return $this->address;
     }
@@ -38,7 +38,7 @@ class QuoteDataShippingInterface
      *
      * @return self
      */
-    public function setAddress(QuoteDataAddressInterface $address): self
+    public function setAddress(QuoteDataAddressInterface $address) : self
     {
         $this->address = $address;
         return $this;
@@ -48,7 +48,7 @@ class QuoteDataShippingInterface
      *
      * @return string
      */
-    public function getMethod(): string
+    public function getMethod() : string
     {
         return $this->method;
     }
@@ -59,7 +59,7 @@ class QuoteDataShippingInterface
      *
      * @return self
      */
-    public function setMethod(string $method): self
+    public function setMethod(string $method) : self
     {
         $this->method = $method;
         return $this;
@@ -80,7 +80,7 @@ class QuoteDataShippingInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

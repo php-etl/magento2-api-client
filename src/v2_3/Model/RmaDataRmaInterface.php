@@ -93,7 +93,7 @@ class RmaDataRmaInterface
      *
      * @return string
      */
-    public function getIncrementId(): string
+    public function getIncrementId() : string
     {
         return $this->incrementId;
     }
@@ -104,7 +104,7 @@ class RmaDataRmaInterface
      *
      * @return self
      */
-    public function setIncrementId(string $incrementId): self
+    public function setIncrementId(string $incrementId) : self
     {
         $this->incrementId = $incrementId;
         return $this;
@@ -114,7 +114,7 @@ class RmaDataRmaInterface
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -125,7 +125,7 @@ class RmaDataRmaInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
         return $this;
@@ -135,7 +135,7 @@ class RmaDataRmaInterface
      *
      * @return int
      */
-    public function getOrderId(): int
+    public function getOrderId() : int
     {
         return $this->orderId;
     }
@@ -146,7 +146,7 @@ class RmaDataRmaInterface
      *
      * @return self
      */
-    public function setOrderId(int $orderId): self
+    public function setOrderId(int $orderId) : self
     {
         $this->orderId = $orderId;
         return $this;
@@ -156,7 +156,7 @@ class RmaDataRmaInterface
      *
      * @return string
      */
-    public function getOrderIncrementId(): string
+    public function getOrderIncrementId() : string
     {
         return $this->orderIncrementId;
     }
@@ -167,7 +167,7 @@ class RmaDataRmaInterface
      *
      * @return self
      */
-    public function setOrderIncrementId(string $orderIncrementId): self
+    public function setOrderIncrementId(string $orderIncrementId) : self
     {
         $this->orderIncrementId = $orderIncrementId;
         return $this;
@@ -177,7 +177,7 @@ class RmaDataRmaInterface
      *
      * @return int
      */
-    public function getStoreId(): int
+    public function getStoreId() : int
     {
         return $this->storeId;
     }
@@ -188,7 +188,7 @@ class RmaDataRmaInterface
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(int $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;
@@ -198,7 +198,7 @@ class RmaDataRmaInterface
      *
      * @return int
      */
-    public function getCustomerId(): int
+    public function getCustomerId() : int
     {
         return $this->customerId;
     }
@@ -209,7 +209,7 @@ class RmaDataRmaInterface
      *
      * @return self
      */
-    public function setCustomerId(int $customerId): self
+    public function setCustomerId(int $customerId) : self
     {
         $this->customerId = $customerId;
         return $this;
@@ -219,7 +219,7 @@ class RmaDataRmaInterface
      *
      * @return string
      */
-    public function getDateRequested(): string
+    public function getDateRequested() : string
     {
         return $this->dateRequested;
     }
@@ -230,7 +230,7 @@ class RmaDataRmaInterface
      *
      * @return self
      */
-    public function setDateRequested(string $dateRequested): self
+    public function setDateRequested(string $dateRequested) : self
     {
         $this->dateRequested = $dateRequested;
         return $this;
@@ -240,7 +240,7 @@ class RmaDataRmaInterface
      *
      * @return string
      */
-    public function getCustomerCustomEmail(): string
+    public function getCustomerCustomEmail() : string
     {
         return $this->customerCustomEmail;
     }
@@ -251,7 +251,7 @@ class RmaDataRmaInterface
      *
      * @return self
      */
-    public function setCustomerCustomEmail(string $customerCustomEmail): self
+    public function setCustomerCustomEmail(string $customerCustomEmail) : self
     {
         $this->customerCustomEmail = $customerCustomEmail;
         return $this;
@@ -261,7 +261,7 @@ class RmaDataRmaInterface
      *
      * @return RmaDataItemInterface[]
      */
-    public function getItems(): array
+    public function getItems() : array
     {
         return $this->items;
     }
@@ -272,7 +272,7 @@ class RmaDataRmaInterface
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(array $items) : self
     {
         $this->items = $items;
         return $this;
@@ -282,7 +282,7 @@ class RmaDataRmaInterface
      *
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus() : string
     {
         return $this->status;
     }
@@ -293,7 +293,7 @@ class RmaDataRmaInterface
      *
      * @return self
      */
-    public function setStatus(string $status): self
+    public function setStatus(string $status) : self
     {
         $this->status = $status;
         return $this;
@@ -303,7 +303,7 @@ class RmaDataRmaInterface
      *
      * @return RmaDataCommentInterface[]
      */
-    public function getComments(): array
+    public function getComments() : array
     {
         return $this->comments;
     }
@@ -314,7 +314,7 @@ class RmaDataRmaInterface
      *
      * @return self
      */
-    public function setComments(array $comments): self
+    public function setComments(array $comments) : self
     {
         $this->comments = $comments;
         return $this;
@@ -324,7 +324,7 @@ class RmaDataRmaInterface
      *
      * @return RmaDataTrackInterface[]
      */
-    public function getTracks(): array
+    public function getTracks() : array
     {
         return $this->tracks;
     }
@@ -335,7 +335,7 @@ class RmaDataRmaInterface
      *
      * @return self
      */
-    public function setTracks(array $tracks): self
+    public function setTracks(array $tracks) : self
     {
         $this->tracks = $tracks;
         return $this;
@@ -356,7 +356,7 @@ class RmaDataRmaInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -366,7 +366,7 @@ class RmaDataRmaInterface
      *
      * @return FrameworkAttributeInterface[]
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes() : array
     {
         return $this->customAttributes;
     }
@@ -377,7 +377,7 @@ class RmaDataRmaInterface
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(array $customAttributes) : self
     {
         $this->customAttributes = $customAttributes;
         return $this;

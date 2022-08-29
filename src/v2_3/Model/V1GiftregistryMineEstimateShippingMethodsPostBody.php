@@ -15,7 +15,7 @@ class V1GiftregistryMineEstimateShippingMethodsPostBody
      *
      * @return int
      */
-    public function getRegistryId(): int
+    public function getRegistryId() : int
     {
         return $this->registryId;
     }
@@ -26,7 +26,7 @@ class V1GiftregistryMineEstimateShippingMethodsPostBody
      *
      * @return self
      */
-    public function setRegistryId(int $registryId): self
+    public function setRegistryId(int $registryId) : self
     {
         $this->registryId = $registryId;
         return $this;

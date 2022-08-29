@@ -4,30 +4,30 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class SalesRuleRuleRepositoryV1GetByIdGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $ruleId;
     /**
      * Get rule by ID.
      *
-     * @param int $ruleId
+     * @param int $ruleId 
      */
     public function __construct(int $ruleId)
     {
         $this->ruleId = $ruleId;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'GET';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{ruleId}'), array($this->ruleId), '/V1/salesRules/{ruleId}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -56,7 +56,7 @@ class SalesRuleRuleRepositoryV1GetByIdGet extends \Kiboko\Magento\v2_3\Runtime\C
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

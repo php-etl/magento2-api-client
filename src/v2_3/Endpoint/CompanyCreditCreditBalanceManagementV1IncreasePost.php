@@ -4,32 +4,32 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CompanyCreditCreditBalanceManagementV1IncreasePost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $creditId;
     /**
      * Increases the company credit with an Allocate, Update, Refund, Revert, or Reimburse transaction. This transaction decreases company's outstanding balance and increases company's available credit.
      *
-     * @param int $creditId
-     * @param \Kiboko\Magento\v2_3\Model\V1CompanyCreditsCreditIdIncreaseBalancePostBody $companyCreditCreditBalanceManagementV1IncreasePostBody
+     * @param int $creditId 
+     * @param \Kiboko\Magento\v2_3\Model\V1CompanyCreditsCreditIdIncreaseBalancePostBody $companyCreditCreditBalanceManagementV1IncreasePostBody 
      */
     public function __construct(int $creditId, \Kiboko\Magento\v2_3\Model\V1CompanyCreditsCreditIdIncreaseBalancePostBody $companyCreditCreditBalanceManagementV1IncreasePostBody)
     {
         $this->creditId = $creditId;
         $this->body = $companyCreditCreditBalanceManagementV1IncreasePostBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'POST';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{creditId}'), array($this->creditId), '/V1/companyCredits/{creditId}/increaseBalance');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -50,7 +50,7 @@ class CompanyCreditCreditBalanceManagementV1IncreasePost extends \Kiboko\Magento
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

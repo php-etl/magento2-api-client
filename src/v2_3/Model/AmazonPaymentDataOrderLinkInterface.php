@@ -21,7 +21,7 @@ class AmazonPaymentDataOrderLinkInterface
      *
      * @return string
      */
-    public function getAmazonOrderReferenceId(): string
+    public function getAmazonOrderReferenceId() : string
     {
         return $this->amazonOrderReferenceId;
     }
@@ -32,7 +32,7 @@ class AmazonPaymentDataOrderLinkInterface
      *
      * @return self
      */
-    public function setAmazonOrderReferenceId(string $amazonOrderReferenceId): self
+    public function setAmazonOrderReferenceId(string $amazonOrderReferenceId) : self
     {
         $this->amazonOrderReferenceId = $amazonOrderReferenceId;
         return $this;
@@ -42,7 +42,7 @@ class AmazonPaymentDataOrderLinkInterface
      *
      * @return int
      */
-    public function getOrderId(): int
+    public function getOrderId() : int
     {
         return $this->orderId;
     }
@@ -53,7 +53,7 @@ class AmazonPaymentDataOrderLinkInterface
      *
      * @return self
      */
-    public function setOrderId(int $orderId): self
+    public function setOrderId(int $orderId) : self
     {
         $this->orderId = $orderId;
         return $this;

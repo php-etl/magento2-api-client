@@ -51,7 +51,7 @@ class CatalogDataTierPriceInterface
      *
      * @return float
      */
-    public function getPrice(): float
+    public function getPrice() : float
     {
         return $this->price;
     }
@@ -62,7 +62,7 @@ class CatalogDataTierPriceInterface
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(float $price) : self
     {
         $this->price = $price;
         return $this;
@@ -72,7 +72,7 @@ class CatalogDataTierPriceInterface
      *
      * @return string
      */
-    public function getPriceType(): string
+    public function getPriceType() : string
     {
         return $this->priceType;
     }
@@ -83,7 +83,7 @@ class CatalogDataTierPriceInterface
      *
      * @return self
      */
-    public function setPriceType(string $priceType): self
+    public function setPriceType(string $priceType) : self
     {
         $this->priceType = $priceType;
         return $this;
@@ -93,7 +93,7 @@ class CatalogDataTierPriceInterface
      *
      * @return int
      */
-    public function getWebsiteId(): int
+    public function getWebsiteId() : int
     {
         return $this->websiteId;
     }
@@ -104,7 +104,7 @@ class CatalogDataTierPriceInterface
      *
      * @return self
      */
-    public function setWebsiteId(int $websiteId): self
+    public function setWebsiteId(int $websiteId) : self
     {
         $this->websiteId = $websiteId;
         return $this;
@@ -114,7 +114,7 @@ class CatalogDataTierPriceInterface
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
@@ -125,7 +125,7 @@ class CatalogDataTierPriceInterface
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -135,7 +135,7 @@ class CatalogDataTierPriceInterface
      *
      * @return string
      */
-    public function getCustomerGroup(): string
+    public function getCustomerGroup() : string
     {
         return $this->customerGroup;
     }
@@ -146,7 +146,7 @@ class CatalogDataTierPriceInterface
      *
      * @return self
      */
-    public function setCustomerGroup(string $customerGroup): self
+    public function setCustomerGroup(string $customerGroup) : self
     {
         $this->customerGroup = $customerGroup;
         return $this;
@@ -156,7 +156,7 @@ class CatalogDataTierPriceInterface
      *
      * @return float
      */
-    public function getQuantity(): float
+    public function getQuantity() : float
     {
         return $this->quantity;
     }
@@ -167,7 +167,7 @@ class CatalogDataTierPriceInterface
      *
      * @return self
      */
-    public function setQuantity(float $quantity): self
+    public function setQuantity(float $quantity) : self
     {
         $this->quantity = $quantity;
         return $this;
@@ -188,7 +188,7 @@ class CatalogDataTierPriceInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

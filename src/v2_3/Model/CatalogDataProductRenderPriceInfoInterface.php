@@ -63,7 +63,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return float
      */
-    public function getFinalPrice(): float
+    public function getFinalPrice() : float
     {
         return $this->finalPrice;
     }
@@ -74,7 +74,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return self
      */
-    public function setFinalPrice(float $finalPrice): self
+    public function setFinalPrice(float $finalPrice) : self
     {
         $this->finalPrice = $finalPrice;
         return $this;
@@ -84,7 +84,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return float
      */
-    public function getMaxPrice(): float
+    public function getMaxPrice() : float
     {
         return $this->maxPrice;
     }
@@ -95,7 +95,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return self
      */
-    public function setMaxPrice(float $maxPrice): self
+    public function setMaxPrice(float $maxPrice) : self
     {
         $this->maxPrice = $maxPrice;
         return $this;
@@ -105,7 +105,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return float
      */
-    public function getMaxRegularPrice(): float
+    public function getMaxRegularPrice() : float
     {
         return $this->maxRegularPrice;
     }
@@ -116,7 +116,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return self
      */
-    public function setMaxRegularPrice(float $maxRegularPrice): self
+    public function setMaxRegularPrice(float $maxRegularPrice) : self
     {
         $this->maxRegularPrice = $maxRegularPrice;
         return $this;
@@ -126,7 +126,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return float
      */
-    public function getMinimalRegularPrice(): float
+    public function getMinimalRegularPrice() : float
     {
         return $this->minimalRegularPrice;
     }
@@ -137,7 +137,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return self
      */
-    public function setMinimalRegularPrice(float $minimalRegularPrice): self
+    public function setMinimalRegularPrice(float $minimalRegularPrice) : self
     {
         $this->minimalRegularPrice = $minimalRegularPrice;
         return $this;
@@ -147,7 +147,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return float
      */
-    public function getSpecialPrice(): float
+    public function getSpecialPrice() : float
     {
         return $this->specialPrice;
     }
@@ -158,7 +158,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return self
      */
-    public function setSpecialPrice(float $specialPrice): self
+    public function setSpecialPrice(float $specialPrice) : self
     {
         $this->specialPrice = $specialPrice;
         return $this;
@@ -168,7 +168,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return float
      */
-    public function getMinimalPrice(): float
+    public function getMinimalPrice() : float
     {
         return $this->minimalPrice;
     }
@@ -179,7 +179,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return self
      */
-    public function setMinimalPrice(float $minimalPrice): self
+    public function setMinimalPrice(float $minimalPrice) : self
     {
         $this->minimalPrice = $minimalPrice;
         return $this;
@@ -189,7 +189,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return float
      */
-    public function getRegularPrice(): float
+    public function getRegularPrice() : float
     {
         return $this->regularPrice;
     }
@@ -200,7 +200,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return self
      */
-    public function setRegularPrice(float $regularPrice): self
+    public function setRegularPrice(float $regularPrice) : self
     {
         $this->regularPrice = $regularPrice;
         return $this;
@@ -210,7 +210,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return CatalogDataProductRenderFormattedPriceInfoInterface
      */
-    public function getFormattedPrices(): CatalogDataProductRenderFormattedPriceInfoInterface
+    public function getFormattedPrices() : CatalogDataProductRenderFormattedPriceInfoInterface
     {
         return $this->formattedPrices;
     }
@@ -221,7 +221,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return self
      */
-    public function setFormattedPrices(CatalogDataProductRenderFormattedPriceInfoInterface $formattedPrices): self
+    public function setFormattedPrices(CatalogDataProductRenderFormattedPriceInfoInterface $formattedPrices) : self
     {
         $this->formattedPrices = $formattedPrices;
         return $this;
@@ -231,7 +231,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return CatalogDataProductRenderPriceInfoExtensionInterface
      */
-    public function getExtensionAttributes(): CatalogDataProductRenderPriceInfoExtensionInterface
+    public function getExtensionAttributes() : CatalogDataProductRenderPriceInfoExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -242,7 +242,7 @@ class CatalogDataProductRenderPriceInfoInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(CatalogDataProductRenderPriceInfoExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(CatalogDataProductRenderPriceInfoExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

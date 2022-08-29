@@ -87,7 +87,7 @@ class SalesDataShipmentItemInterface
      *
      * @return string
      */
-    public function getAdditionalData(): string
+    public function getAdditionalData() : string
     {
         return $this->additionalData;
     }
@@ -98,7 +98,7 @@ class SalesDataShipmentItemInterface
      *
      * @return self
      */
-    public function setAdditionalData(string $additionalData): self
+    public function setAdditionalData(string $additionalData) : self
     {
         $this->additionalData = $additionalData;
         return $this;
@@ -108,7 +108,7 @@ class SalesDataShipmentItemInterface
      *
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription() : string
     {
         return $this->description;
     }
@@ -119,7 +119,7 @@ class SalesDataShipmentItemInterface
      *
      * @return self
      */
-    public function setDescription(string $description): self
+    public function setDescription(string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -129,7 +129,7 @@ class SalesDataShipmentItemInterface
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -140,7 +140,7 @@ class SalesDataShipmentItemInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
         return $this;
@@ -150,7 +150,7 @@ class SalesDataShipmentItemInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -161,7 +161,7 @@ class SalesDataShipmentItemInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -171,7 +171,7 @@ class SalesDataShipmentItemInterface
      *
      * @return int
      */
-    public function getParentId(): int
+    public function getParentId() : int
     {
         return $this->parentId;
     }
@@ -182,7 +182,7 @@ class SalesDataShipmentItemInterface
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(int $parentId) : self
     {
         $this->parentId = $parentId;
         return $this;
@@ -192,7 +192,7 @@ class SalesDataShipmentItemInterface
      *
      * @return float
      */
-    public function getPrice(): float
+    public function getPrice() : float
     {
         return $this->price;
     }
@@ -203,7 +203,7 @@ class SalesDataShipmentItemInterface
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(float $price) : self
     {
         $this->price = $price;
         return $this;
@@ -213,7 +213,7 @@ class SalesDataShipmentItemInterface
      *
      * @return int
      */
-    public function getProductId(): int
+    public function getProductId() : int
     {
         return $this->productId;
     }
@@ -224,7 +224,7 @@ class SalesDataShipmentItemInterface
      *
      * @return self
      */
-    public function setProductId(int $productId): self
+    public function setProductId(int $productId) : self
     {
         $this->productId = $productId;
         return $this;
@@ -234,7 +234,7 @@ class SalesDataShipmentItemInterface
      *
      * @return float
      */
-    public function getRowTotal(): float
+    public function getRowTotal() : float
     {
         return $this->rowTotal;
     }
@@ -245,7 +245,7 @@ class SalesDataShipmentItemInterface
      *
      * @return self
      */
-    public function setRowTotal(float $rowTotal): self
+    public function setRowTotal(float $rowTotal) : self
     {
         $this->rowTotal = $rowTotal;
         return $this;
@@ -255,7 +255,7 @@ class SalesDataShipmentItemInterface
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
@@ -266,7 +266,7 @@ class SalesDataShipmentItemInterface
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -276,7 +276,7 @@ class SalesDataShipmentItemInterface
      *
      * @return float
      */
-    public function getWeight(): float
+    public function getWeight() : float
     {
         return $this->weight;
     }
@@ -287,7 +287,7 @@ class SalesDataShipmentItemInterface
      *
      * @return self
      */
-    public function setWeight(float $weight): self
+    public function setWeight(float $weight) : self
     {
         $this->weight = $weight;
         return $this;
@@ -308,7 +308,7 @@ class SalesDataShipmentItemInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -318,7 +318,7 @@ class SalesDataShipmentItemInterface
      *
      * @return int
      */
-    public function getOrderItemId(): int
+    public function getOrderItemId() : int
     {
         return $this->orderItemId;
     }
@@ -329,7 +329,7 @@ class SalesDataShipmentItemInterface
      *
      * @return self
      */
-    public function setOrderItemId(int $orderItemId): self
+    public function setOrderItemId(int $orderItemId) : self
     {
         $this->orderItemId = $orderItemId;
         return $this;
@@ -339,7 +339,7 @@ class SalesDataShipmentItemInterface
      *
      * @return float
      */
-    public function getQty(): float
+    public function getQty() : float
     {
         return $this->qty;
     }
@@ -350,7 +350,7 @@ class SalesDataShipmentItemInterface
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(float $qty) : self
     {
         $this->qty = $qty;
         return $this;

@@ -5,7 +5,7 @@ namespace Kiboko\Magento\v2_3\Model;
 class FrameworkSearchSearchCriteriaInterface
 {
     /**
-     *
+     * 
      *
      * @var string
      */
@@ -35,22 +35,22 @@ class FrameworkSearchSearchCriteriaInterface
      */
     protected $currentPage;
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getRequestName(): string
+    public function getRequestName() : string
     {
         return $this->requestName;
     }
     /**
-     *
+     * 
      *
      * @param string $requestName
      *
      * @return self
      */
-    public function setRequestName(string $requestName): self
+    public function setRequestName(string $requestName) : self
     {
         $this->requestName = $requestName;
         return $this;
@@ -60,7 +60,7 @@ class FrameworkSearchSearchCriteriaInterface
      *
      * @return FrameworkSearchFilterGroup[]
      */
-    public function getFilterGroups(): array
+    public function getFilterGroups() : array
     {
         return $this->filterGroups;
     }
@@ -71,7 +71,7 @@ class FrameworkSearchSearchCriteriaInterface
      *
      * @return self
      */
-    public function setFilterGroups(array $filterGroups): self
+    public function setFilterGroups(array $filterGroups) : self
     {
         $this->filterGroups = $filterGroups;
         return $this;
@@ -81,7 +81,7 @@ class FrameworkSearchSearchCriteriaInterface
      *
      * @return FrameworkSortOrder[]
      */
-    public function getSortOrders(): array
+    public function getSortOrders() : array
     {
         return $this->sortOrders;
     }
@@ -92,7 +92,7 @@ class FrameworkSearchSearchCriteriaInterface
      *
      * @return self
      */
-    public function setSortOrders(array $sortOrders): self
+    public function setSortOrders(array $sortOrders) : self
     {
         $this->sortOrders = $sortOrders;
         return $this;
@@ -102,7 +102,7 @@ class FrameworkSearchSearchCriteriaInterface
      *
      * @return int
      */
-    public function getPageSize(): int
+    public function getPageSize() : int
     {
         return $this->pageSize;
     }
@@ -113,7 +113,7 @@ class FrameworkSearchSearchCriteriaInterface
      *
      * @return self
      */
-    public function setPageSize(int $pageSize): self
+    public function setPageSize(int $pageSize) : self
     {
         $this->pageSize = $pageSize;
         return $this;
@@ -123,7 +123,7 @@ class FrameworkSearchSearchCriteriaInterface
      *
      * @return int
      */
-    public function getCurrentPage(): int
+    public function getCurrentPage() : int
     {
         return $this->currentPage;
     }
@@ -134,7 +134,7 @@ class FrameworkSearchSearchCriteriaInterface
      *
      * @return self
      */
-    public function setCurrentPage(int $currentPage): self
+    public function setCurrentPage(int $currentPage) : self
     {
         $this->currentPage = $currentPage;
         return $this;

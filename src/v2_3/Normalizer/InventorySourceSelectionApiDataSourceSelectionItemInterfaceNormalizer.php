@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class InventorySourceSelectionApiDataSourceSelectionItemInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\InventorySourceSelectionApiDataSourceSelectionItemInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\InventorySourceSelectionApiDataSourceSelectionItemInterface';
     }
@@ -38,10 +37,10 @@ class InventorySourceSelectionApiDataSourceSelectionItemInterfaceNormalizer impl
         }
         $object = new \Kiboko\Magento\v2_3\Model\InventorySourceSelectionApiDataSourceSelectionItemInterface();
         if (\array_key_exists('qty_to_deduct', $data) && \is_int($data['qty_to_deduct'])) {
-            $data['qty_to_deduct'] = (float) $data['qty_to_deduct'];
+            $data['qty_to_deduct'] = (double) $data['qty_to_deduct'];
         }
         if (\array_key_exists('qty_available', $data) && \is_int($data['qty_available'])) {
-            $data['qty_available'] = (float) $data['qty_available'];
+            $data['qty_available'] = (double) $data['qty_available'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

@@ -15,7 +15,7 @@ class DownloadableDataDownloadableOptionInterface
      *
      * @return int[]
      */
-    public function getDownloadableLinks(): array
+    public function getDownloadableLinks() : array
     {
         return $this->downloadableLinks;
     }
@@ -26,7 +26,7 @@ class DownloadableDataDownloadableOptionInterface
      *
      * @return self
      */
-    public function setDownloadableLinks(array $downloadableLinks): self
+    public function setDownloadableLinks(array $downloadableLinks) : self
     {
         $this->downloadableLinks = $downloadableLinks;
         return $this;

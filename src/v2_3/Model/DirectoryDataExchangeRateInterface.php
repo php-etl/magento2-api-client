@@ -27,7 +27,7 @@ class DirectoryDataExchangeRateInterface
      *
      * @return string
      */
-    public function getCurrencyTo(): string
+    public function getCurrencyTo() : string
     {
         return $this->currencyTo;
     }
@@ -38,7 +38,7 @@ class DirectoryDataExchangeRateInterface
      *
      * @return self
      */
-    public function setCurrencyTo(string $currencyTo): self
+    public function setCurrencyTo(string $currencyTo) : self
     {
         $this->currencyTo = $currencyTo;
         return $this;
@@ -48,7 +48,7 @@ class DirectoryDataExchangeRateInterface
      *
      * @return float
      */
-    public function getRate(): float
+    public function getRate() : float
     {
         return $this->rate;
     }
@@ -59,7 +59,7 @@ class DirectoryDataExchangeRateInterface
      *
      * @return self
      */
-    public function setRate(float $rate): self
+    public function setRate(float $rate) : self
     {
         $this->rate = $rate;
         return $this;
@@ -80,7 +80,7 @@ class DirectoryDataExchangeRateInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

@@ -27,7 +27,7 @@ class InventoryExportStockApiDataProductStockIndexDataInterface
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
@@ -38,7 +38,7 @@ class InventoryExportStockApiDataProductStockIndexDataInterface
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -48,7 +48,7 @@ class InventoryExportStockApiDataProductStockIndexDataInterface
      *
      * @return float
      */
-    public function getQty(): float
+    public function getQty() : float
     {
         return $this->qty;
     }
@@ -59,7 +59,7 @@ class InventoryExportStockApiDataProductStockIndexDataInterface
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(float $qty) : self
     {
         $this->qty = $qty;
         return $this;
@@ -69,7 +69,7 @@ class InventoryExportStockApiDataProductStockIndexDataInterface
      *
      * @return bool
      */
-    public function getIsSalable(): bool
+    public function getIsSalable() : bool
     {
         return $this->isSalable;
     }
@@ -80,7 +80,7 @@ class InventoryExportStockApiDataProductStockIndexDataInterface
      *
      * @return self
      */
-    public function setIsSalable(bool $isSalable): self
+    public function setIsSalable(bool $isSalable) : self
     {
         $this->isSalable = $isSalable;
         return $this;

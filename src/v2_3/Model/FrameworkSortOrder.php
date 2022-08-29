@@ -21,7 +21,7 @@ class FrameworkSortOrder
      *
      * @return string
      */
-    public function getField(): string
+    public function getField() : string
     {
         return $this->field;
     }
@@ -32,7 +32,7 @@ class FrameworkSortOrder
      *
      * @return self
      */
-    public function setField(string $field): self
+    public function setField(string $field) : self
     {
         $this->field = $field;
         return $this;
@@ -42,7 +42,7 @@ class FrameworkSortOrder
      *
      * @return string
      */
-    public function getDirection(): string
+    public function getDirection() : string
     {
         return $this->direction;
     }
@@ -53,7 +53,7 @@ class FrameworkSortOrder
      *
      * @return self
      */
-    public function setDirection(string $direction): self
+    public function setDirection(string $direction) : self
     {
         $this->direction = $direction;
         return $this;

@@ -15,7 +15,7 @@ class V1ShipmentPostBody
      *
      * @return SalesDataShipmentInterface
      */
-    public function getEntity(): SalesDataShipmentInterface
+    public function getEntity() : SalesDataShipmentInterface
     {
         return $this->entity;
     }
@@ -26,7 +26,7 @@ class V1ShipmentPostBody
      *
      * @return self
      */
-    public function setEntity(SalesDataShipmentInterface $entity): self
+    public function setEntity(SalesDataShipmentInterface $entity) : self
     {
         $this->entity = $entity;
         return $this;

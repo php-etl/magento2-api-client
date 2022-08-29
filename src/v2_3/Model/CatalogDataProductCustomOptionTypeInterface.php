@@ -33,7 +33,7 @@ class CatalogDataProductCustomOptionTypeInterface
      *
      * @return string
      */
-    public function getLabel(): string
+    public function getLabel() : string
     {
         return $this->label;
     }
@@ -44,7 +44,7 @@ class CatalogDataProductCustomOptionTypeInterface
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(string $label) : self
     {
         $this->label = $label;
         return $this;
@@ -54,7 +54,7 @@ class CatalogDataProductCustomOptionTypeInterface
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -65,7 +65,7 @@ class CatalogDataProductCustomOptionTypeInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
@@ -75,7 +75,7 @@ class CatalogDataProductCustomOptionTypeInterface
      *
      * @return string
      */
-    public function getGroup(): string
+    public function getGroup() : string
     {
         return $this->group;
     }
@@ -86,7 +86,7 @@ class CatalogDataProductCustomOptionTypeInterface
      *
      * @return self
      */
-    public function setGroup(string $group): self
+    public function setGroup(string $group) : self
     {
         $this->group = $group;
         return $this;
@@ -107,7 +107,7 @@ class CatalogDataProductCustomOptionTypeInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

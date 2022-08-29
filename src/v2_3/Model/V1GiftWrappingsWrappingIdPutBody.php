@@ -11,7 +11,7 @@ class V1GiftWrappingsWrappingIdPutBody
      */
     protected $data;
     /**
-     *
+     * 
      *
      * @var int
      */
@@ -21,7 +21,7 @@ class V1GiftWrappingsWrappingIdPutBody
      *
      * @return GiftWrappingDataWrappingInterface
      */
-    public function getData(): GiftWrappingDataWrappingInterface
+    public function getData() : GiftWrappingDataWrappingInterface
     {
         return $this->data;
     }
@@ -32,28 +32,28 @@ class V1GiftWrappingsWrappingIdPutBody
      *
      * @return self
      */
-    public function setData(GiftWrappingDataWrappingInterface $data): self
+    public function setData(GiftWrappingDataWrappingInterface $data) : self
     {
         $this->data = $data;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getStoreId(): int
+    public function getStoreId() : int
     {
         return $this->storeId;
     }
     /**
-     *
+     * 
      *
      * @param int $storeId
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(int $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;

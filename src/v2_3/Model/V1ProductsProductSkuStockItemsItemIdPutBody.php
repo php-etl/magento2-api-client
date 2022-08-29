@@ -15,7 +15,7 @@ class V1ProductsProductSkuStockItemsItemIdPutBody
      *
      * @return CatalogInventoryDataStockItemInterface
      */
-    public function getStockItem(): CatalogInventoryDataStockItemInterface
+    public function getStockItem() : CatalogInventoryDataStockItemInterface
     {
         return $this->stockItem;
     }
@@ -26,7 +26,7 @@ class V1ProductsProductSkuStockItemsItemIdPutBody
      *
      * @return self
      */
-    public function setStockItem(CatalogInventoryDataStockItemInterface $stockItem): self
+    public function setStockItem(CatalogInventoryDataStockItemInterface $stockItem) : self
     {
         $this->stockItem = $stockItem;
         return $this;

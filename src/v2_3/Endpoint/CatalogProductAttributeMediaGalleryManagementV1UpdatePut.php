@@ -4,15 +4,14 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CatalogProductAttributeMediaGalleryManagementV1UpdatePut extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $sku;
     protected $entryId;
     /**
      * Update gallery entry
      *
-     * @param string $sku
-     * @param string $entryId
-     * @param \Kiboko\Magento\v2_3\Model\V1ProductsSkuMediaEntryIdPutBody $catalogProductAttributeMediaGalleryManagementV1UpdatePutBody
+     * @param string $sku 
+     * @param string $entryId 
+     * @param \Kiboko\Magento\v2_3\Model\V1ProductsSkuMediaEntryIdPutBody $catalogProductAttributeMediaGalleryManagementV1UpdatePutBody 
      */
     public function __construct(string $sku, string $entryId, \Kiboko\Magento\v2_3\Model\V1ProductsSkuMediaEntryIdPutBody $catalogProductAttributeMediaGalleryManagementV1UpdatePutBody)
     {
@@ -20,19 +19,20 @@ class CatalogProductAttributeMediaGalleryManagementV1UpdatePut extends \Kiboko\M
         $this->entryId = $entryId;
         $this->body = $catalogProductAttributeMediaGalleryManagementV1UpdatePutBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'PUT';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{sku}', '{entryId}'), array($this->sku, $this->entryId), '/V1/products/{sku}/media/{entryId}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -57,7 +57,7 @@ class CatalogProductAttributeMediaGalleryManagementV1UpdatePut extends \Kiboko\M
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

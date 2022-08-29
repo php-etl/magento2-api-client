@@ -27,7 +27,7 @@ class InventorySourceSelectionApiDataInventoryRequestInterface
      *
      * @return int
      */
-    public function getStockId(): int
+    public function getStockId() : int
     {
         return $this->stockId;
     }
@@ -38,7 +38,7 @@ class InventorySourceSelectionApiDataInventoryRequestInterface
      *
      * @return self
      */
-    public function setStockId(int $stockId): self
+    public function setStockId(int $stockId) : self
     {
         $this->stockId = $stockId;
         return $this;
@@ -48,7 +48,7 @@ class InventorySourceSelectionApiDataInventoryRequestInterface
      *
      * @return InventorySourceSelectionApiDataItemRequestInterface[]
      */
-    public function getItems(): array
+    public function getItems() : array
     {
         return $this->items;
     }
@@ -59,7 +59,7 @@ class InventorySourceSelectionApiDataInventoryRequestInterface
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(array $items) : self
     {
         $this->items = $items;
         return $this;
@@ -69,7 +69,7 @@ class InventorySourceSelectionApiDataInventoryRequestInterface
      *
      * @return InventorySourceSelectionApiDataInventoryRequestExtensionInterface
      */
-    public function getExtensionAttributes(): InventorySourceSelectionApiDataInventoryRequestExtensionInterface
+    public function getExtensionAttributes() : InventorySourceSelectionApiDataInventoryRequestExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -80,7 +80,7 @@ class InventorySourceSelectionApiDataInventoryRequestInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(InventorySourceSelectionApiDataInventoryRequestExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(InventorySourceSelectionApiDataInventoryRequestExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

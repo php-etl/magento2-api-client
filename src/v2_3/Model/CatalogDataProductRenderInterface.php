@@ -81,7 +81,7 @@ class CatalogDataProductRenderInterface
      *
      * @return CatalogDataProductRenderButtonInterface
      */
-    public function getAddToCartButton(): CatalogDataProductRenderButtonInterface
+    public function getAddToCartButton() : CatalogDataProductRenderButtonInterface
     {
         return $this->addToCartButton;
     }
@@ -92,7 +92,7 @@ class CatalogDataProductRenderInterface
      *
      * @return self
      */
-    public function setAddToCartButton(CatalogDataProductRenderButtonInterface $addToCartButton): self
+    public function setAddToCartButton(CatalogDataProductRenderButtonInterface $addToCartButton) : self
     {
         $this->addToCartButton = $addToCartButton;
         return $this;
@@ -102,7 +102,7 @@ class CatalogDataProductRenderInterface
      *
      * @return CatalogDataProductRenderButtonInterface
      */
-    public function getAddToCompareButton(): CatalogDataProductRenderButtonInterface
+    public function getAddToCompareButton() : CatalogDataProductRenderButtonInterface
     {
         return $this->addToCompareButton;
     }
@@ -113,7 +113,7 @@ class CatalogDataProductRenderInterface
      *
      * @return self
      */
-    public function setAddToCompareButton(CatalogDataProductRenderButtonInterface $addToCompareButton): self
+    public function setAddToCompareButton(CatalogDataProductRenderButtonInterface $addToCompareButton) : self
     {
         $this->addToCompareButton = $addToCompareButton;
         return $this;
@@ -123,7 +123,7 @@ class CatalogDataProductRenderInterface
      *
      * @return CatalogDataProductRenderPriceInfoInterface
      */
-    public function getPriceInfo(): CatalogDataProductRenderPriceInfoInterface
+    public function getPriceInfo() : CatalogDataProductRenderPriceInfoInterface
     {
         return $this->priceInfo;
     }
@@ -134,7 +134,7 @@ class CatalogDataProductRenderInterface
      *
      * @return self
      */
-    public function setPriceInfo(CatalogDataProductRenderPriceInfoInterface $priceInfo): self
+    public function setPriceInfo(CatalogDataProductRenderPriceInfoInterface $priceInfo) : self
     {
         $this->priceInfo = $priceInfo;
         return $this;
@@ -144,7 +144,7 @@ class CatalogDataProductRenderInterface
      *
      * @return CatalogDataProductRenderImageInterface[]
      */
-    public function getImages(): array
+    public function getImages() : array
     {
         return $this->images;
     }
@@ -155,7 +155,7 @@ class CatalogDataProductRenderInterface
      *
      * @return self
      */
-    public function setImages(array $images): self
+    public function setImages(array $images) : self
     {
         $this->images = $images;
         return $this;
@@ -165,7 +165,7 @@ class CatalogDataProductRenderInterface
      *
      * @return string
      */
-    public function getUrl(): string
+    public function getUrl() : string
     {
         return $this->url;
     }
@@ -176,7 +176,7 @@ class CatalogDataProductRenderInterface
      *
      * @return self
      */
-    public function setUrl(string $url): self
+    public function setUrl(string $url) : self
     {
         $this->url = $url;
         return $this;
@@ -186,7 +186,7 @@ class CatalogDataProductRenderInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -197,7 +197,7 @@ class CatalogDataProductRenderInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -207,7 +207,7 @@ class CatalogDataProductRenderInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -218,7 +218,7 @@ class CatalogDataProductRenderInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -228,7 +228,7 @@ class CatalogDataProductRenderInterface
      *
      * @return string
      */
-    public function getType(): string
+    public function getType() : string
     {
         return $this->type;
     }
@@ -239,7 +239,7 @@ class CatalogDataProductRenderInterface
      *
      * @return self
      */
-    public function setType(string $type): self
+    public function setType(string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -249,7 +249,7 @@ class CatalogDataProductRenderInterface
      *
      * @return string
      */
-    public function getIsSalable(): string
+    public function getIsSalable() : string
     {
         return $this->isSalable;
     }
@@ -260,7 +260,7 @@ class CatalogDataProductRenderInterface
      *
      * @return self
      */
-    public function setIsSalable(string $isSalable): self
+    public function setIsSalable(string $isSalable) : self
     {
         $this->isSalable = $isSalable;
         return $this;
@@ -270,7 +270,7 @@ class CatalogDataProductRenderInterface
      *
      * @return int
      */
-    public function getStoreId(): int
+    public function getStoreId() : int
     {
         return $this->storeId;
     }
@@ -281,7 +281,7 @@ class CatalogDataProductRenderInterface
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(int $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;
@@ -291,7 +291,7 @@ class CatalogDataProductRenderInterface
      *
      * @return string
      */
-    public function getCurrencyCode(): string
+    public function getCurrencyCode() : string
     {
         return $this->currencyCode;
     }
@@ -302,7 +302,7 @@ class CatalogDataProductRenderInterface
      *
      * @return self
      */
-    public function setCurrencyCode(string $currencyCode): self
+    public function setCurrencyCode(string $currencyCode) : self
     {
         $this->currencyCode = $currencyCode;
         return $this;
@@ -312,7 +312,7 @@ class CatalogDataProductRenderInterface
      *
      * @return CatalogDataProductRenderExtensionInterface
      */
-    public function getExtensionAttributes(): CatalogDataProductRenderExtensionInterface
+    public function getExtensionAttributes() : CatalogDataProductRenderExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -323,7 +323,7 @@ class CatalogDataProductRenderInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(CatalogDataProductRenderExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(CatalogDataProductRenderExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

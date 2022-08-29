@@ -51,7 +51,7 @@ class RequisitionListDataRequisitionListInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -62,7 +62,7 @@ class RequisitionListDataRequisitionListInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -72,7 +72,7 @@ class RequisitionListDataRequisitionListInterface
      *
      * @return int
      */
-    public function getCustomerId(): int
+    public function getCustomerId() : int
     {
         return $this->customerId;
     }
@@ -83,7 +83,7 @@ class RequisitionListDataRequisitionListInterface
      *
      * @return self
      */
-    public function setCustomerId(int $customerId): self
+    public function setCustomerId(int $customerId) : self
     {
         $this->customerId = $customerId;
         return $this;
@@ -93,7 +93,7 @@ class RequisitionListDataRequisitionListInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -104,7 +104,7 @@ class RequisitionListDataRequisitionListInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -114,7 +114,7 @@ class RequisitionListDataRequisitionListInterface
      *
      * @return string
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt() : string
     {
         return $this->updatedAt;
     }
@@ -125,7 +125,7 @@ class RequisitionListDataRequisitionListInterface
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(string $updatedAt) : self
     {
         $this->updatedAt = $updatedAt;
         return $this;
@@ -135,7 +135,7 @@ class RequisitionListDataRequisitionListInterface
      *
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription() : string
     {
         return $this->description;
     }
@@ -146,7 +146,7 @@ class RequisitionListDataRequisitionListInterface
      *
      * @return self
      */
-    public function setDescription(string $description): self
+    public function setDescription(string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -156,7 +156,7 @@ class RequisitionListDataRequisitionListInterface
      *
      * @return RequisitionListDataRequisitionListItemInterface[]
      */
-    public function getItems(): array
+    public function getItems() : array
     {
         return $this->items;
     }
@@ -167,7 +167,7 @@ class RequisitionListDataRequisitionListInterface
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(array $items) : self
     {
         $this->items = $items;
         return $this;
@@ -188,7 +188,7 @@ class RequisitionListDataRequisitionListInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

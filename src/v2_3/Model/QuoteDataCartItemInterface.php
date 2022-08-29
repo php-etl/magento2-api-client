@@ -63,7 +63,7 @@ class QuoteDataCartItemInterface
      *
      * @return int
      */
-    public function getItemId(): int
+    public function getItemId() : int
     {
         return $this->itemId;
     }
@@ -74,7 +74,7 @@ class QuoteDataCartItemInterface
      *
      * @return self
      */
-    public function setItemId(int $itemId): self
+    public function setItemId(int $itemId) : self
     {
         $this->itemId = $itemId;
         return $this;
@@ -84,7 +84,7 @@ class QuoteDataCartItemInterface
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
@@ -95,7 +95,7 @@ class QuoteDataCartItemInterface
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -105,7 +105,7 @@ class QuoteDataCartItemInterface
      *
      * @return float
      */
-    public function getQty(): float
+    public function getQty() : float
     {
         return $this->qty;
     }
@@ -116,7 +116,7 @@ class QuoteDataCartItemInterface
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(float $qty) : self
     {
         $this->qty = $qty;
         return $this;
@@ -126,7 +126,7 @@ class QuoteDataCartItemInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -137,7 +137,7 @@ class QuoteDataCartItemInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -147,7 +147,7 @@ class QuoteDataCartItemInterface
      *
      * @return float
      */
-    public function getPrice(): float
+    public function getPrice() : float
     {
         return $this->price;
     }
@@ -158,7 +158,7 @@ class QuoteDataCartItemInterface
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(float $price) : self
     {
         $this->price = $price;
         return $this;
@@ -168,7 +168,7 @@ class QuoteDataCartItemInterface
      *
      * @return string
      */
-    public function getProductType(): string
+    public function getProductType() : string
     {
         return $this->productType;
     }
@@ -179,7 +179,7 @@ class QuoteDataCartItemInterface
      *
      * @return self
      */
-    public function setProductType(string $productType): self
+    public function setProductType(string $productType) : self
     {
         $this->productType = $productType;
         return $this;
@@ -189,7 +189,7 @@ class QuoteDataCartItemInterface
      *
      * @return string
      */
-    public function getQuoteId(): string
+    public function getQuoteId() : string
     {
         return $this->quoteId;
     }
@@ -200,7 +200,7 @@ class QuoteDataCartItemInterface
      *
      * @return self
      */
-    public function setQuoteId(string $quoteId): self
+    public function setQuoteId(string $quoteId) : self
     {
         $this->quoteId = $quoteId;
         return $this;
@@ -210,7 +210,7 @@ class QuoteDataCartItemInterface
      *
      * @return QuoteDataProductOptionInterface
      */
-    public function getProductOption(): QuoteDataProductOptionInterface
+    public function getProductOption() : QuoteDataProductOptionInterface
     {
         return $this->productOption;
     }
@@ -221,7 +221,7 @@ class QuoteDataCartItemInterface
      *
      * @return self
      */
-    public function setProductOption(QuoteDataProductOptionInterface $productOption): self
+    public function setProductOption(QuoteDataProductOptionInterface $productOption) : self
     {
         $this->productOption = $productOption;
         return $this;
@@ -231,7 +231,7 @@ class QuoteDataCartItemInterface
      *
      * @return QuoteDataCartItemExtensionInterface
      */
-    public function getExtensionAttributes(): QuoteDataCartItemExtensionInterface
+    public function getExtensionAttributes() : QuoteDataCartItemExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -242,7 +242,7 @@ class QuoteDataCartItemInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(QuoteDataCartItemExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(QuoteDataCartItemExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

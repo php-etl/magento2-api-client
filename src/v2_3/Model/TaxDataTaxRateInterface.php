@@ -81,7 +81,7 @@ class TaxDataTaxRateInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -92,7 +92,7 @@ class TaxDataTaxRateInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -102,7 +102,7 @@ class TaxDataTaxRateInterface
      *
      * @return string
      */
-    public function getTaxCountryId(): string
+    public function getTaxCountryId() : string
     {
         return $this->taxCountryId;
     }
@@ -113,7 +113,7 @@ class TaxDataTaxRateInterface
      *
      * @return self
      */
-    public function setTaxCountryId(string $taxCountryId): self
+    public function setTaxCountryId(string $taxCountryId) : self
     {
         $this->taxCountryId = $taxCountryId;
         return $this;
@@ -123,7 +123,7 @@ class TaxDataTaxRateInterface
      *
      * @return int
      */
-    public function getTaxRegionId(): int
+    public function getTaxRegionId() : int
     {
         return $this->taxRegionId;
     }
@@ -134,7 +134,7 @@ class TaxDataTaxRateInterface
      *
      * @return self
      */
-    public function setTaxRegionId(int $taxRegionId): self
+    public function setTaxRegionId(int $taxRegionId) : self
     {
         $this->taxRegionId = $taxRegionId;
         return $this;
@@ -144,7 +144,7 @@ class TaxDataTaxRateInterface
      *
      * @return string
      */
-    public function getRegionName(): string
+    public function getRegionName() : string
     {
         return $this->regionName;
     }
@@ -155,7 +155,7 @@ class TaxDataTaxRateInterface
      *
      * @return self
      */
-    public function setRegionName(string $regionName): self
+    public function setRegionName(string $regionName) : self
     {
         $this->regionName = $regionName;
         return $this;
@@ -165,7 +165,7 @@ class TaxDataTaxRateInterface
      *
      * @return string
      */
-    public function getTaxPostcode(): string
+    public function getTaxPostcode() : string
     {
         return $this->taxPostcode;
     }
@@ -176,7 +176,7 @@ class TaxDataTaxRateInterface
      *
      * @return self
      */
-    public function setTaxPostcode(string $taxPostcode): self
+    public function setTaxPostcode(string $taxPostcode) : self
     {
         $this->taxPostcode = $taxPostcode;
         return $this;
@@ -186,7 +186,7 @@ class TaxDataTaxRateInterface
      *
      * @return int
      */
-    public function getZipIsRange(): int
+    public function getZipIsRange() : int
     {
         return $this->zipIsRange;
     }
@@ -197,7 +197,7 @@ class TaxDataTaxRateInterface
      *
      * @return self
      */
-    public function setZipIsRange(int $zipIsRange): self
+    public function setZipIsRange(int $zipIsRange) : self
     {
         $this->zipIsRange = $zipIsRange;
         return $this;
@@ -207,7 +207,7 @@ class TaxDataTaxRateInterface
      *
      * @return int
      */
-    public function getZipFrom(): int
+    public function getZipFrom() : int
     {
         return $this->zipFrom;
     }
@@ -218,7 +218,7 @@ class TaxDataTaxRateInterface
      *
      * @return self
      */
-    public function setZipFrom(int $zipFrom): self
+    public function setZipFrom(int $zipFrom) : self
     {
         $this->zipFrom = $zipFrom;
         return $this;
@@ -228,7 +228,7 @@ class TaxDataTaxRateInterface
      *
      * @return int
      */
-    public function getZipTo(): int
+    public function getZipTo() : int
     {
         return $this->zipTo;
     }
@@ -239,7 +239,7 @@ class TaxDataTaxRateInterface
      *
      * @return self
      */
-    public function setZipTo(int $zipTo): self
+    public function setZipTo(int $zipTo) : self
     {
         $this->zipTo = $zipTo;
         return $this;
@@ -249,7 +249,7 @@ class TaxDataTaxRateInterface
      *
      * @return float
      */
-    public function getRate(): float
+    public function getRate() : float
     {
         return $this->rate;
     }
@@ -260,7 +260,7 @@ class TaxDataTaxRateInterface
      *
      * @return self
      */
-    public function setRate(float $rate): self
+    public function setRate(float $rate) : self
     {
         $this->rate = $rate;
         return $this;
@@ -270,7 +270,7 @@ class TaxDataTaxRateInterface
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -281,7 +281,7 @@ class TaxDataTaxRateInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
@@ -291,7 +291,7 @@ class TaxDataTaxRateInterface
      *
      * @return TaxDataTaxRateTitleInterface[]
      */
-    public function getTitles(): array
+    public function getTitles() : array
     {
         return $this->titles;
     }
@@ -302,7 +302,7 @@ class TaxDataTaxRateInterface
      *
      * @return self
      */
-    public function setTitles(array $titles): self
+    public function setTitles(array $titles) : self
     {
         $this->titles = $titles;
         return $this;
@@ -323,7 +323,7 @@ class TaxDataTaxRateInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

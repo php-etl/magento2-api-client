@@ -27,7 +27,7 @@ class CatalogDataProductAttributeTypeInterface
      *
      * @return string
      */
-    public function getValue(): string
+    public function getValue() : string
     {
         return $this->value;
     }
@@ -38,7 +38,7 @@ class CatalogDataProductAttributeTypeInterface
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(string $value) : self
     {
         $this->value = $value;
         return $this;
@@ -48,7 +48,7 @@ class CatalogDataProductAttributeTypeInterface
      *
      * @return string
      */
-    public function getLabel(): string
+    public function getLabel() : string
     {
         return $this->label;
     }
@@ -59,7 +59,7 @@ class CatalogDataProductAttributeTypeInterface
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(string $label) : self
     {
         $this->label = $label;
         return $this;
@@ -80,7 +80,7 @@ class CatalogDataProductAttributeTypeInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

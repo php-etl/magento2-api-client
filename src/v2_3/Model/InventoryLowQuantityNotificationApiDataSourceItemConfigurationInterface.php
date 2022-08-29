@@ -33,7 +33,7 @@ class InventoryLowQuantityNotificationApiDataSourceItemConfigurationInterface
      *
      * @return string
      */
-    public function getSourceCode(): string
+    public function getSourceCode() : string
     {
         return $this->sourceCode;
     }
@@ -44,7 +44,7 @@ class InventoryLowQuantityNotificationApiDataSourceItemConfigurationInterface
      *
      * @return self
      */
-    public function setSourceCode(string $sourceCode): self
+    public function setSourceCode(string $sourceCode) : self
     {
         $this->sourceCode = $sourceCode;
         return $this;
@@ -54,7 +54,7 @@ class InventoryLowQuantityNotificationApiDataSourceItemConfigurationInterface
      *
      * @return float
      */
-    public function getNotifyStockQty(): float
+    public function getNotifyStockQty() : float
     {
         return $this->notifyStockQty;
     }
@@ -65,7 +65,7 @@ class InventoryLowQuantityNotificationApiDataSourceItemConfigurationInterface
      *
      * @return self
      */
-    public function setNotifyStockQty(float $notifyStockQty): self
+    public function setNotifyStockQty(float $notifyStockQty) : self
     {
         $this->notifyStockQty = $notifyStockQty;
         return $this;
@@ -75,7 +75,7 @@ class InventoryLowQuantityNotificationApiDataSourceItemConfigurationInterface
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
@@ -86,7 +86,7 @@ class InventoryLowQuantityNotificationApiDataSourceItemConfigurationInterface
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -107,7 +107,7 @@ class InventoryLowQuantityNotificationApiDataSourceItemConfigurationInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

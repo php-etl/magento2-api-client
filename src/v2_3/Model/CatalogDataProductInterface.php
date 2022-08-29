@@ -111,7 +111,7 @@ class CatalogDataProductInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -122,7 +122,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -132,7 +132,7 @@ class CatalogDataProductInterface
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
@@ -143,7 +143,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -153,7 +153,7 @@ class CatalogDataProductInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -164,7 +164,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -174,7 +174,7 @@ class CatalogDataProductInterface
      *
      * @return int
      */
-    public function getAttributeSetId(): int
+    public function getAttributeSetId() : int
     {
         return $this->attributeSetId;
     }
@@ -185,7 +185,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setAttributeSetId(int $attributeSetId): self
+    public function setAttributeSetId(int $attributeSetId) : self
     {
         $this->attributeSetId = $attributeSetId;
         return $this;
@@ -195,7 +195,7 @@ class CatalogDataProductInterface
      *
      * @return float
      */
-    public function getPrice(): float
+    public function getPrice() : float
     {
         return $this->price;
     }
@@ -206,7 +206,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(float $price) : self
     {
         $this->price = $price;
         return $this;
@@ -216,7 +216,7 @@ class CatalogDataProductInterface
      *
      * @return int
      */
-    public function getStatus(): int
+    public function getStatus() : int
     {
         return $this->status;
     }
@@ -227,7 +227,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setStatus(int $status): self
+    public function setStatus(int $status) : self
     {
         $this->status = $status;
         return $this;
@@ -237,7 +237,7 @@ class CatalogDataProductInterface
      *
      * @return int
      */
-    public function getVisibility(): int
+    public function getVisibility() : int
     {
         return $this->visibility;
     }
@@ -248,7 +248,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setVisibility(int $visibility): self
+    public function setVisibility(int $visibility) : self
     {
         $this->visibility = $visibility;
         return $this;
@@ -258,7 +258,7 @@ class CatalogDataProductInterface
      *
      * @return string
      */
-    public function getTypeId(): string
+    public function getTypeId() : string
     {
         return $this->typeId;
     }
@@ -269,7 +269,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setTypeId(string $typeId): self
+    public function setTypeId(string $typeId) : self
     {
         $this->typeId = $typeId;
         return $this;
@@ -279,7 +279,7 @@ class CatalogDataProductInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -290,7 +290,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -300,7 +300,7 @@ class CatalogDataProductInterface
      *
      * @return string
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt() : string
     {
         return $this->updatedAt;
     }
@@ -311,7 +311,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(string $updatedAt) : self
     {
         $this->updatedAt = $updatedAt;
         return $this;
@@ -321,7 +321,7 @@ class CatalogDataProductInterface
      *
      * @return float
      */
-    public function getWeight(): float
+    public function getWeight() : float
     {
         return $this->weight;
     }
@@ -332,7 +332,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setWeight(float $weight): self
+    public function setWeight(float $weight) : self
     {
         $this->weight = $weight;
         return $this;
@@ -342,7 +342,7 @@ class CatalogDataProductInterface
      *
      * @return CatalogDataProductExtensionInterface
      */
-    public function getExtensionAttributes(): CatalogDataProductExtensionInterface
+    public function getExtensionAttributes() : CatalogDataProductExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -353,7 +353,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(CatalogDataProductExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(CatalogDataProductExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -363,7 +363,7 @@ class CatalogDataProductInterface
      *
      * @return CatalogDataProductLinkInterface[]
      */
-    public function getProductLinks(): array
+    public function getProductLinks() : array
     {
         return $this->productLinks;
     }
@@ -374,7 +374,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setProductLinks(array $productLinks): self
+    public function setProductLinks(array $productLinks) : self
     {
         $this->productLinks = $productLinks;
         return $this;
@@ -384,7 +384,7 @@ class CatalogDataProductInterface
      *
      * @return CatalogDataProductCustomOptionInterface[]
      */
-    public function getOptions(): array
+    public function getOptions() : array
     {
         return $this->options;
     }
@@ -395,7 +395,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setOptions(array $options): self
+    public function setOptions(array $options) : self
     {
         $this->options = $options;
         return $this;
@@ -405,7 +405,7 @@ class CatalogDataProductInterface
      *
      * @return CatalogDataProductAttributeMediaGalleryEntryInterface[]
      */
-    public function getMediaGalleryEntries(): array
+    public function getMediaGalleryEntries() : array
     {
         return $this->mediaGalleryEntries;
     }
@@ -416,7 +416,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setMediaGalleryEntries(array $mediaGalleryEntries): self
+    public function setMediaGalleryEntries(array $mediaGalleryEntries) : self
     {
         $this->mediaGalleryEntries = $mediaGalleryEntries;
         return $this;
@@ -426,7 +426,7 @@ class CatalogDataProductInterface
      *
      * @return CatalogDataProductTierPriceInterface[]
      */
-    public function getTierPrices(): array
+    public function getTierPrices() : array
     {
         return $this->tierPrices;
     }
@@ -437,7 +437,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setTierPrices(array $tierPrices): self
+    public function setTierPrices(array $tierPrices) : self
     {
         $this->tierPrices = $tierPrices;
         return $this;
@@ -447,7 +447,7 @@ class CatalogDataProductInterface
      *
      * @return FrameworkAttributeInterface[]
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes() : array
     {
         return $this->customAttributes;
     }
@@ -458,7 +458,7 @@ class CatalogDataProductInterface
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(array $customAttributes) : self
     {
         $this->customAttributes = $customAttributes;
         return $this;

@@ -27,7 +27,7 @@ class TaxDataGrandTotalDetailsInterface
      *
      * @return float
      */
-    public function getAmount(): float
+    public function getAmount() : float
     {
         return $this->amount;
     }
@@ -38,7 +38,7 @@ class TaxDataGrandTotalDetailsInterface
      *
      * @return self
      */
-    public function setAmount(float $amount): self
+    public function setAmount(float $amount) : self
     {
         $this->amount = $amount;
         return $this;
@@ -48,7 +48,7 @@ class TaxDataGrandTotalDetailsInterface
      *
      * @return TaxDataGrandTotalRatesInterface[]
      */
-    public function getRates(): array
+    public function getRates() : array
     {
         return $this->rates;
     }
@@ -59,7 +59,7 @@ class TaxDataGrandTotalDetailsInterface
      *
      * @return self
      */
-    public function setRates(array $rates): self
+    public function setRates(array $rates) : self
     {
         $this->rates = $rates;
         return $this;
@@ -69,7 +69,7 @@ class TaxDataGrandTotalDetailsInterface
      *
      * @return int
      */
-    public function getGroupId(): int
+    public function getGroupId() : int
     {
         return $this->groupId;
     }
@@ -80,7 +80,7 @@ class TaxDataGrandTotalDetailsInterface
      *
      * @return self
      */
-    public function setGroupId(int $groupId): self
+    public function setGroupId(int $groupId) : self
     {
         $this->groupId = $groupId;
         return $this;

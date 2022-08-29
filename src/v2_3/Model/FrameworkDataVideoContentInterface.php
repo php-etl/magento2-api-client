@@ -45,7 +45,7 @@ class FrameworkDataVideoContentInterface
      *
      * @return string
      */
-    public function getMediaType(): string
+    public function getMediaType() : string
     {
         return $this->mediaType;
     }
@@ -56,7 +56,7 @@ class FrameworkDataVideoContentInterface
      *
      * @return self
      */
-    public function setMediaType(string $mediaType): self
+    public function setMediaType(string $mediaType) : self
     {
         $this->mediaType = $mediaType;
         return $this;
@@ -66,7 +66,7 @@ class FrameworkDataVideoContentInterface
      *
      * @return string
      */
-    public function getVideoProvider(): string
+    public function getVideoProvider() : string
     {
         return $this->videoProvider;
     }
@@ -77,7 +77,7 @@ class FrameworkDataVideoContentInterface
      *
      * @return self
      */
-    public function setVideoProvider(string $videoProvider): self
+    public function setVideoProvider(string $videoProvider) : self
     {
         $this->videoProvider = $videoProvider;
         return $this;
@@ -87,7 +87,7 @@ class FrameworkDataVideoContentInterface
      *
      * @return string
      */
-    public function getVideoUrl(): string
+    public function getVideoUrl() : string
     {
         return $this->videoUrl;
     }
@@ -98,7 +98,7 @@ class FrameworkDataVideoContentInterface
      *
      * @return self
      */
-    public function setVideoUrl(string $videoUrl): self
+    public function setVideoUrl(string $videoUrl) : self
     {
         $this->videoUrl = $videoUrl;
         return $this;
@@ -108,7 +108,7 @@ class FrameworkDataVideoContentInterface
      *
      * @return string
      */
-    public function getVideoTitle(): string
+    public function getVideoTitle() : string
     {
         return $this->videoTitle;
     }
@@ -119,7 +119,7 @@ class FrameworkDataVideoContentInterface
      *
      * @return self
      */
-    public function setVideoTitle(string $videoTitle): self
+    public function setVideoTitle(string $videoTitle) : self
     {
         $this->videoTitle = $videoTitle;
         return $this;
@@ -129,7 +129,7 @@ class FrameworkDataVideoContentInterface
      *
      * @return string
      */
-    public function getVideoDescription(): string
+    public function getVideoDescription() : string
     {
         return $this->videoDescription;
     }
@@ -140,7 +140,7 @@ class FrameworkDataVideoContentInterface
      *
      * @return self
      */
-    public function setVideoDescription(string $videoDescription): self
+    public function setVideoDescription(string $videoDescription) : self
     {
         $this->videoDescription = $videoDescription;
         return $this;
@@ -150,7 +150,7 @@ class FrameworkDataVideoContentInterface
      *
      * @return string
      */
-    public function getVideoMetadata(): string
+    public function getVideoMetadata() : string
     {
         return $this->videoMetadata;
     }
@@ -161,7 +161,7 @@ class FrameworkDataVideoContentInterface
      *
      * @return self
      */
-    public function setVideoMetadata(string $videoMetadata): self
+    public function setVideoMetadata(string $videoMetadata) : self
     {
         $this->videoMetadata = $videoMetadata;
         return $this;

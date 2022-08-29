@@ -15,7 +15,7 @@ class V1ReturnsIdCommentsPostBody
      *
      * @return RmaDataCommentInterface
      */
-    public function getData(): RmaDataCommentInterface
+    public function getData() : RmaDataCommentInterface
     {
         return $this->data;
     }
@@ -26,7 +26,7 @@ class V1ReturnsIdCommentsPostBody
      *
      * @return self
      */
-    public function setData(RmaDataCommentInterface $data): self
+    public function setData(RmaDataCommentInterface $data) : self
     {
         $this->data = $data;
         return $this;

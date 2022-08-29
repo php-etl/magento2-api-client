@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataOrderExtensionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataOrderExtensionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataOrderExtensionInterface';
     }
@@ -38,52 +37,52 @@ class SalesDataOrderExtensionInterfaceNormalizer implements DenormalizerInterfac
         }
         $object = new \Kiboko\Magento\v2_3\Model\SalesDataOrderExtensionInterface();
         if (\array_key_exists('base_customer_balance_amount', $data) && \is_int($data['base_customer_balance_amount'])) {
-            $data['base_customer_balance_amount'] = (float) $data['base_customer_balance_amount'];
+            $data['base_customer_balance_amount'] = (double) $data['base_customer_balance_amount'];
         }
         if (\array_key_exists('customer_balance_amount', $data) && \is_int($data['customer_balance_amount'])) {
-            $data['customer_balance_amount'] = (float) $data['customer_balance_amount'];
+            $data['customer_balance_amount'] = (double) $data['customer_balance_amount'];
         }
         if (\array_key_exists('base_customer_balance_invoiced', $data) && \is_int($data['base_customer_balance_invoiced'])) {
-            $data['base_customer_balance_invoiced'] = (float) $data['base_customer_balance_invoiced'];
+            $data['base_customer_balance_invoiced'] = (double) $data['base_customer_balance_invoiced'];
         }
         if (\array_key_exists('customer_balance_invoiced', $data) && \is_int($data['customer_balance_invoiced'])) {
-            $data['customer_balance_invoiced'] = (float) $data['customer_balance_invoiced'];
+            $data['customer_balance_invoiced'] = (double) $data['customer_balance_invoiced'];
         }
         if (\array_key_exists('base_customer_balance_refunded', $data) && \is_int($data['base_customer_balance_refunded'])) {
-            $data['base_customer_balance_refunded'] = (float) $data['base_customer_balance_refunded'];
+            $data['base_customer_balance_refunded'] = (double) $data['base_customer_balance_refunded'];
         }
         if (\array_key_exists('customer_balance_refunded', $data) && \is_int($data['customer_balance_refunded'])) {
-            $data['customer_balance_refunded'] = (float) $data['customer_balance_refunded'];
+            $data['customer_balance_refunded'] = (double) $data['customer_balance_refunded'];
         }
         if (\array_key_exists('base_customer_balance_total_refunded', $data) && \is_int($data['base_customer_balance_total_refunded'])) {
-            $data['base_customer_balance_total_refunded'] = (float) $data['base_customer_balance_total_refunded'];
+            $data['base_customer_balance_total_refunded'] = (double) $data['base_customer_balance_total_refunded'];
         }
         if (\array_key_exists('customer_balance_total_refunded', $data) && \is_int($data['customer_balance_total_refunded'])) {
-            $data['customer_balance_total_refunded'] = (float) $data['customer_balance_total_refunded'];
+            $data['customer_balance_total_refunded'] = (double) $data['customer_balance_total_refunded'];
         }
         if (\array_key_exists('base_gift_cards_amount', $data) && \is_int($data['base_gift_cards_amount'])) {
-            $data['base_gift_cards_amount'] = (float) $data['base_gift_cards_amount'];
+            $data['base_gift_cards_amount'] = (double) $data['base_gift_cards_amount'];
         }
         if (\array_key_exists('gift_cards_amount', $data) && \is_int($data['gift_cards_amount'])) {
-            $data['gift_cards_amount'] = (float) $data['gift_cards_amount'];
+            $data['gift_cards_amount'] = (double) $data['gift_cards_amount'];
         }
         if (\array_key_exists('base_gift_cards_invoiced', $data) && \is_int($data['base_gift_cards_invoiced'])) {
-            $data['base_gift_cards_invoiced'] = (float) $data['base_gift_cards_invoiced'];
+            $data['base_gift_cards_invoiced'] = (double) $data['base_gift_cards_invoiced'];
         }
         if (\array_key_exists('gift_cards_invoiced', $data) && \is_int($data['gift_cards_invoiced'])) {
-            $data['gift_cards_invoiced'] = (float) $data['gift_cards_invoiced'];
+            $data['gift_cards_invoiced'] = (double) $data['gift_cards_invoiced'];
         }
         if (\array_key_exists('base_gift_cards_refunded', $data) && \is_int($data['base_gift_cards_refunded'])) {
-            $data['base_gift_cards_refunded'] = (float) $data['base_gift_cards_refunded'];
+            $data['base_gift_cards_refunded'] = (double) $data['base_gift_cards_refunded'];
         }
         if (\array_key_exists('gift_cards_refunded', $data) && \is_int($data['gift_cards_refunded'])) {
-            $data['gift_cards_refunded'] = (float) $data['gift_cards_refunded'];
+            $data['gift_cards_refunded'] = (double) $data['gift_cards_refunded'];
         }
         if (\array_key_exists('reward_currency_amount', $data) && \is_int($data['reward_currency_amount'])) {
-            $data['reward_currency_amount'] = (float) $data['reward_currency_amount'];
+            $data['reward_currency_amount'] = (double) $data['reward_currency_amount'];
         }
         if (\array_key_exists('base_reward_currency_amount', $data) && \is_int($data['base_reward_currency_amount'])) {
-            $data['base_reward_currency_amount'] = (float) $data['base_reward_currency_amount'];
+            $data['base_reward_currency_amount'] = (double) $data['base_reward_currency_amount'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

@@ -5,31 +5,31 @@ namespace Kiboko\Magento\v2_3\Model;
 class StoreDataGroupInterface
 {
     /**
-     *
+     * 
      *
      * @var int
      */
     protected $id;
     /**
-     *
+     * 
      *
      * @var int
      */
     protected $websiteId;
     /**
-     *
+     * 
      *
      * @var int
      */
     protected $rootCategoryId;
     /**
-     *
+     * 
      *
      * @var int
      */
     protected $defaultStoreId;
     /**
-     *
+     * 
      *
      * @var string
      */
@@ -47,106 +47,106 @@ class StoreDataGroupInterface
      */
     protected $extensionAttributes;
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
     /**
-     *
+     * 
      *
      * @param int $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getWebsiteId(): int
+    public function getWebsiteId() : int
     {
         return $this->websiteId;
     }
     /**
-     *
+     * 
      *
      * @param int $websiteId
      *
      * @return self
      */
-    public function setWebsiteId(int $websiteId): self
+    public function setWebsiteId(int $websiteId) : self
     {
         $this->websiteId = $websiteId;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getRootCategoryId(): int
+    public function getRootCategoryId() : int
     {
         return $this->rootCategoryId;
     }
     /**
-     *
+     * 
      *
      * @param int $rootCategoryId
      *
      * @return self
      */
-    public function setRootCategoryId(int $rootCategoryId): self
+    public function setRootCategoryId(int $rootCategoryId) : self
     {
         $this->rootCategoryId = $rootCategoryId;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getDefaultStoreId(): int
+    public function getDefaultStoreId() : int
     {
         return $this->defaultStoreId;
     }
     /**
-     *
+     * 
      *
      * @param int $defaultStoreId
      *
      * @return self
      */
-    public function setDefaultStoreId(int $defaultStoreId): self
+    public function setDefaultStoreId(int $defaultStoreId) : self
     {
         $this->defaultStoreId = $defaultStoreId;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
     /**
-     *
+     * 
      *
      * @param string $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -156,7 +156,7 @@ class StoreDataGroupInterface
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -167,7 +167,7 @@ class StoreDataGroupInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
@@ -188,7 +188,7 @@ class StoreDataGroupInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class NegotiableQuoteDataNegotiableQuoteItemInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\NegotiableQuoteDataNegotiableQuoteItemInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\NegotiableQuoteDataNegotiableQuoteItemInterface';
     }
@@ -38,13 +37,13 @@ class NegotiableQuoteDataNegotiableQuoteItemInterfaceNormalizer implements Denor
         }
         $object = new \Kiboko\Magento\v2_3\Model\NegotiableQuoteDataNegotiableQuoteItemInterface();
         if (\array_key_exists('original_price', $data) && \is_int($data['original_price'])) {
-            $data['original_price'] = (float) $data['original_price'];
+            $data['original_price'] = (double) $data['original_price'];
         }
         if (\array_key_exists('original_tax_amount', $data) && \is_int($data['original_tax_amount'])) {
-            $data['original_tax_amount'] = (float) $data['original_tax_amount'];
+            $data['original_tax_amount'] = (double) $data['original_tax_amount'];
         }
         if (\array_key_exists('original_discount_amount', $data) && \is_int($data['original_discount_amount'])) {
-            $data['original_discount_amount'] = (float) $data['original_discount_amount'];
+            $data['original_discount_amount'] = (double) $data['original_discount_amount'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

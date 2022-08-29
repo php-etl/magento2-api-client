@@ -4,32 +4,32 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class RmaCommentManagementV1AddCommentPost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $id;
     /**
      * Add comment
      *
-     * @param string $id
-     * @param \Kiboko\Magento\v2_3\Model\V1ReturnsIdCommentsPostBody $rmaCommentManagementV1AddCommentPostBody
+     * @param string $id 
+     * @param \Kiboko\Magento\v2_3\Model\V1ReturnsIdCommentsPostBody $rmaCommentManagementV1AddCommentPostBody 
      */
     public function __construct(string $id, \Kiboko\Magento\v2_3\Model\V1ReturnsIdCommentsPostBody $rmaCommentManagementV1AddCommentPostBody)
     {
         $this->id = $id;
         $this->body = $rmaCommentManagementV1AddCommentPostBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'POST';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{id}'), array($this->id), '/V1/returns/{id}/comments');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -54,7 +54,7 @@ class RmaCommentManagementV1AddCommentPost extends \Kiboko\Magento\v2_3\Runtime\
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

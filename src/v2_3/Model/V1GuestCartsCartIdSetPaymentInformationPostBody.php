@@ -5,7 +5,7 @@ namespace Kiboko\Magento\v2_3\Model;
 class V1GuestCartsCartIdSetPaymentInformationPostBody
 {
     /**
-     *
+     * 
      *
      * @var string
      */
@@ -23,22 +23,22 @@ class V1GuestCartsCartIdSetPaymentInformationPostBody
      */
     protected $billingAddress;
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail() : string
     {
         return $this->email;
     }
     /**
-     *
+     * 
      *
      * @param string $email
      *
      * @return self
      */
-    public function setEmail(string $email): self
+    public function setEmail(string $email) : self
     {
         $this->email = $email;
         return $this;
@@ -48,7 +48,7 @@ class V1GuestCartsCartIdSetPaymentInformationPostBody
      *
      * @return QuoteDataPaymentInterface
      */
-    public function getPaymentMethod(): QuoteDataPaymentInterface
+    public function getPaymentMethod() : QuoteDataPaymentInterface
     {
         return $this->paymentMethod;
     }
@@ -59,7 +59,7 @@ class V1GuestCartsCartIdSetPaymentInformationPostBody
      *
      * @return self
      */
-    public function setPaymentMethod(QuoteDataPaymentInterface $paymentMethod): self
+    public function setPaymentMethod(QuoteDataPaymentInterface $paymentMethod) : self
     {
         $this->paymentMethod = $paymentMethod;
         return $this;
@@ -69,7 +69,7 @@ class V1GuestCartsCartIdSetPaymentInformationPostBody
      *
      * @return QuoteDataAddressInterface
      */
-    public function getBillingAddress(): QuoteDataAddressInterface
+    public function getBillingAddress() : QuoteDataAddressInterface
     {
         return $this->billingAddress;
     }
@@ -80,7 +80,7 @@ class V1GuestCartsCartIdSetPaymentInformationPostBody
      *
      * @return self
      */
-    public function setBillingAddress(QuoteDataAddressInterface $billingAddress): self
+    public function setBillingAddress(QuoteDataAddressInterface $billingAddress) : self
     {
         $this->billingAddress = $billingAddress;
         return $this;

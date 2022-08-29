@@ -4,14 +4,13 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class BundleProductLinkManagementV1GetChildrenGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $productSku;
     /**
      * Get all children for Bundle product
      *
-     * @param string $productSku
+     * @param string $productSku 
      * @param array $queryParameters {
-     *     @var int $optionId
+     *     @var int $optionId 
      * }
      */
     public function __construct(string $productSku, array $queryParameters = array())
@@ -19,23 +18,24 @@ class BundleProductLinkManagementV1GetChildrenGet extends \Kiboko\Magento\v2_3\R
         $this->productSku = $productSku;
         $this->queryParameters = $queryParameters;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'GET';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{productSku}'), array($this->productSku), '/V1/bundle-products/{productSku}/children');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
-    protected function getQueryOptionsResolver(): \Symfony\Component\OptionsResolver\OptionsResolver
+    protected function getQueryOptionsResolver() : \Symfony\Component\OptionsResolver\OptionsResolver
     {
         $optionsResolver = parent::getQueryOptionsResolver();
         $optionsResolver->setDefined(array('optionId'));
@@ -65,7 +65,7 @@ class BundleProductLinkManagementV1GetChildrenGet extends \Kiboko\Magento\v2_3\R
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

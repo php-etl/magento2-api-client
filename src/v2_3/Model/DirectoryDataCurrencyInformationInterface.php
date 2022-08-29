@@ -51,7 +51,7 @@ class DirectoryDataCurrencyInformationInterface
      *
      * @return string
      */
-    public function getBaseCurrencyCode(): string
+    public function getBaseCurrencyCode() : string
     {
         return $this->baseCurrencyCode;
     }
@@ -62,7 +62,7 @@ class DirectoryDataCurrencyInformationInterface
      *
      * @return self
      */
-    public function setBaseCurrencyCode(string $baseCurrencyCode): self
+    public function setBaseCurrencyCode(string $baseCurrencyCode) : self
     {
         $this->baseCurrencyCode = $baseCurrencyCode;
         return $this;
@@ -72,7 +72,7 @@ class DirectoryDataCurrencyInformationInterface
      *
      * @return string
      */
-    public function getBaseCurrencySymbol(): string
+    public function getBaseCurrencySymbol() : string
     {
         return $this->baseCurrencySymbol;
     }
@@ -83,7 +83,7 @@ class DirectoryDataCurrencyInformationInterface
      *
      * @return self
      */
-    public function setBaseCurrencySymbol(string $baseCurrencySymbol): self
+    public function setBaseCurrencySymbol(string $baseCurrencySymbol) : self
     {
         $this->baseCurrencySymbol = $baseCurrencySymbol;
         return $this;
@@ -93,7 +93,7 @@ class DirectoryDataCurrencyInformationInterface
      *
      * @return string
      */
-    public function getDefaultDisplayCurrencyCode(): string
+    public function getDefaultDisplayCurrencyCode() : string
     {
         return $this->defaultDisplayCurrencyCode;
     }
@@ -104,7 +104,7 @@ class DirectoryDataCurrencyInformationInterface
      *
      * @return self
      */
-    public function setDefaultDisplayCurrencyCode(string $defaultDisplayCurrencyCode): self
+    public function setDefaultDisplayCurrencyCode(string $defaultDisplayCurrencyCode) : self
     {
         $this->defaultDisplayCurrencyCode = $defaultDisplayCurrencyCode;
         return $this;
@@ -114,7 +114,7 @@ class DirectoryDataCurrencyInformationInterface
      *
      * @return string
      */
-    public function getDefaultDisplayCurrencySymbol(): string
+    public function getDefaultDisplayCurrencySymbol() : string
     {
         return $this->defaultDisplayCurrencySymbol;
     }
@@ -125,7 +125,7 @@ class DirectoryDataCurrencyInformationInterface
      *
      * @return self
      */
-    public function setDefaultDisplayCurrencySymbol(string $defaultDisplayCurrencySymbol): self
+    public function setDefaultDisplayCurrencySymbol(string $defaultDisplayCurrencySymbol) : self
     {
         $this->defaultDisplayCurrencySymbol = $defaultDisplayCurrencySymbol;
         return $this;
@@ -135,7 +135,7 @@ class DirectoryDataCurrencyInformationInterface
      *
      * @return string[]
      */
-    public function getAvailableCurrencyCodes(): array
+    public function getAvailableCurrencyCodes() : array
     {
         return $this->availableCurrencyCodes;
     }
@@ -146,7 +146,7 @@ class DirectoryDataCurrencyInformationInterface
      *
      * @return self
      */
-    public function setAvailableCurrencyCodes(array $availableCurrencyCodes): self
+    public function setAvailableCurrencyCodes(array $availableCurrencyCodes) : self
     {
         $this->availableCurrencyCodes = $availableCurrencyCodes;
         return $this;
@@ -156,7 +156,7 @@ class DirectoryDataCurrencyInformationInterface
      *
      * @return DirectoryDataExchangeRateInterface[]
      */
-    public function getExchangeRates(): array
+    public function getExchangeRates() : array
     {
         return $this->exchangeRates;
     }
@@ -167,7 +167,7 @@ class DirectoryDataCurrencyInformationInterface
      *
      * @return self
      */
-    public function setExchangeRates(array $exchangeRates): self
+    public function setExchangeRates(array $exchangeRates) : self
     {
         $this->exchangeRates = $exchangeRates;
         return $this;
@@ -188,7 +188,7 @@ class DirectoryDataCurrencyInformationInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

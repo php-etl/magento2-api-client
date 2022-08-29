@@ -33,7 +33,7 @@ class AsynchronousOperationsDataSummaryOperationStatusInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -44,7 +44,7 @@ class AsynchronousOperationsDataSummaryOperationStatusInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -54,7 +54,7 @@ class AsynchronousOperationsDataSummaryOperationStatusInterface
      *
      * @return int
      */
-    public function getStatus(): int
+    public function getStatus() : int
     {
         return $this->status;
     }
@@ -65,7 +65,7 @@ class AsynchronousOperationsDataSummaryOperationStatusInterface
      *
      * @return self
      */
-    public function setStatus(int $status): self
+    public function setStatus(int $status) : self
     {
         $this->status = $status;
         return $this;
@@ -75,7 +75,7 @@ class AsynchronousOperationsDataSummaryOperationStatusInterface
      *
      * @return string
      */
-    public function getResultMessage(): string
+    public function getResultMessage() : string
     {
         return $this->resultMessage;
     }
@@ -86,7 +86,7 @@ class AsynchronousOperationsDataSummaryOperationStatusInterface
      *
      * @return self
      */
-    public function setResultMessage(string $resultMessage): self
+    public function setResultMessage(string $resultMessage) : self
     {
         $this->resultMessage = $resultMessage;
         return $this;
@@ -96,7 +96,7 @@ class AsynchronousOperationsDataSummaryOperationStatusInterface
      *
      * @return int
      */
-    public function getErrorCode(): int
+    public function getErrorCode() : int
     {
         return $this->errorCode;
     }
@@ -107,7 +107,7 @@ class AsynchronousOperationsDataSummaryOperationStatusInterface
      *
      * @return self
      */
-    public function setErrorCode(int $errorCode): self
+    public function setErrorCode(int $errorCode) : self
     {
         $this->errorCode = $errorCode;
         return $this;

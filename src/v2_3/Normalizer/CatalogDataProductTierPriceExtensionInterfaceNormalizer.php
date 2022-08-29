@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataProductTierPriceExtensionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataProductTierPriceExtensionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataProductTierPriceExtensionInterface';
     }
@@ -38,7 +37,7 @@ class CatalogDataProductTierPriceExtensionInterfaceNormalizer implements Denorma
         }
         $object = new \Kiboko\Magento\v2_3\Model\CatalogDataProductTierPriceExtensionInterface();
         if (\array_key_exists('percentage_value', $data) && \is_int($data['percentage_value'])) {
-            $data['percentage_value'] = (float) $data['percentage_value'];
+            $data['percentage_value'] = (double) $data['percentage_value'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

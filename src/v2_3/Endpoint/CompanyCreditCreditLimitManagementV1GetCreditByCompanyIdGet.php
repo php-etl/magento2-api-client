@@ -4,30 +4,30 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CompanyCreditCreditLimitManagementV1GetCreditByCompanyIdGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $companyId;
     /**
      * Returns data on the credit limit for a specified company.
      *
-     * @param int $companyId
+     * @param int $companyId 
      */
     public function __construct(int $companyId)
     {
         $this->companyId = $companyId;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'GET';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{companyId}'), array($this->companyId), '/V1/companyCredits/company/{companyId}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -48,7 +48,7 @@ class CompanyCreditCreditLimitManagementV1GetCreditByCompanyIdGet extends \Kibok
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

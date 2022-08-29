@@ -21,7 +21,7 @@ class V1CompanyCreditsHistoryHistoryIdPutBody
      *
      * @return string
      */
-    public function getPurchaseOrder(): string
+    public function getPurchaseOrder() : string
     {
         return $this->purchaseOrder;
     }
@@ -32,7 +32,7 @@ class V1CompanyCreditsHistoryHistoryIdPutBody
      *
      * @return self
      */
-    public function setPurchaseOrder(string $purchaseOrder): self
+    public function setPurchaseOrder(string $purchaseOrder) : self
     {
         $this->purchaseOrder = $purchaseOrder;
         return $this;
@@ -42,7 +42,7 @@ class V1CompanyCreditsHistoryHistoryIdPutBody
      *
      * @return string
      */
-    public function getComment(): string
+    public function getComment() : string
     {
         return $this->comment;
     }
@@ -53,7 +53,7 @@ class V1CompanyCreditsHistoryHistoryIdPutBody
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(string $comment) : self
     {
         $this->comment = $comment;
         return $this;

@@ -27,7 +27,7 @@ class SalesRuleDataRuleDiscountInterface
      *
      * @return SalesRuleDataDiscountDataInterface
      */
-    public function getDiscountData(): SalesRuleDataDiscountDataInterface
+    public function getDiscountData() : SalesRuleDataDiscountDataInterface
     {
         return $this->discountData;
     }
@@ -38,7 +38,7 @@ class SalesRuleDataRuleDiscountInterface
      *
      * @return self
      */
-    public function setDiscountData(SalesRuleDataDiscountDataInterface $discountData): self
+    public function setDiscountData(SalesRuleDataDiscountDataInterface $discountData) : self
     {
         $this->discountData = $discountData;
         return $this;
@@ -48,7 +48,7 @@ class SalesRuleDataRuleDiscountInterface
      *
      * @return string
      */
-    public function getRuleLabel(): string
+    public function getRuleLabel() : string
     {
         return $this->ruleLabel;
     }
@@ -59,7 +59,7 @@ class SalesRuleDataRuleDiscountInterface
      *
      * @return self
      */
-    public function setRuleLabel(string $ruleLabel): self
+    public function setRuleLabel(string $ruleLabel) : self
     {
         $this->ruleLabel = $ruleLabel;
         return $this;
@@ -69,7 +69,7 @@ class SalesRuleDataRuleDiscountInterface
      *
      * @return int
      */
-    public function getRuleId(): int
+    public function getRuleId() : int
     {
         return $this->ruleId;
     }
@@ -80,7 +80,7 @@ class SalesRuleDataRuleDiscountInterface
      *
      * @return self
      */
-    public function setRuleId(int $ruleId): self
+    public function setRuleId(int $ruleId) : self
     {
         $this->ruleId = $ruleId;
         return $this;

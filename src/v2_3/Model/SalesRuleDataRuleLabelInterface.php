@@ -27,7 +27,7 @@ class SalesRuleDataRuleLabelInterface
      *
      * @return int
      */
-    public function getStoreId(): int
+    public function getStoreId() : int
     {
         return $this->storeId;
     }
@@ -38,7 +38,7 @@ class SalesRuleDataRuleLabelInterface
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(int $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;
@@ -48,7 +48,7 @@ class SalesRuleDataRuleLabelInterface
      *
      * @return string
      */
-    public function getStoreLabel(): string
+    public function getStoreLabel() : string
     {
         return $this->storeLabel;
     }
@@ -59,7 +59,7 @@ class SalesRuleDataRuleLabelInterface
      *
      * @return self
      */
-    public function setStoreLabel(string $storeLabel): self
+    public function setStoreLabel(string $storeLabel) : self
     {
         $this->storeLabel = $storeLabel;
         return $this;
@@ -80,7 +80,7 @@ class SalesRuleDataRuleLabelInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

@@ -21,7 +21,7 @@ class EavDataAttributeOptionLabelInterface
      *
      * @return int
      */
-    public function getStoreId(): int
+    public function getStoreId() : int
     {
         return $this->storeId;
     }
@@ -32,7 +32,7 @@ class EavDataAttributeOptionLabelInterface
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(int $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;
@@ -42,7 +42,7 @@ class EavDataAttributeOptionLabelInterface
      *
      * @return string
      */
-    public function getLabel(): string
+    public function getLabel() : string
     {
         return $this->label;
     }
@@ -53,7 +53,7 @@ class EavDataAttributeOptionLabelInterface
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(string $label) : self
     {
         $this->label = $label;
         return $this;

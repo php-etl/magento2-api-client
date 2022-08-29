@@ -11,7 +11,7 @@ class V1CustomersMePutBody
      */
     protected $customer;
     /**
-     *
+     * 
      *
      * @var string
      */
@@ -21,7 +21,7 @@ class V1CustomersMePutBody
      *
      * @return CustomerDataCustomerInterface
      */
-    public function getCustomer(): CustomerDataCustomerInterface
+    public function getCustomer() : CustomerDataCustomerInterface
     {
         return $this->customer;
     }
@@ -32,28 +32,28 @@ class V1CustomersMePutBody
      *
      * @return self
      */
-    public function setCustomer(CustomerDataCustomerInterface $customer): self
+    public function setCustomer(CustomerDataCustomerInterface $customer) : self
     {
         $this->customer = $customer;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getPasswordHash(): string
+    public function getPasswordHash() : string
     {
         return $this->passwordHash;
     }
     /**
-     *
+     * 
      *
      * @param string $passwordHash
      *
      * @return self
      */
-    public function setPasswordHash(string $passwordHash): self
+    public function setPasswordHash(string $passwordHash) : self
     {
         $this->passwordHash = $passwordHash;
         return $this;

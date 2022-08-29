@@ -4,30 +4,30 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class SharedCatalogCompanyManagementV1GetCompaniesGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $sharedCatalogId;
     /**
      * Return the list of company IDs for the companies assigned to the selected catalog.
      *
-     * @param int $sharedCatalogId
+     * @param int $sharedCatalogId 
      */
     public function __construct(int $sharedCatalogId)
     {
         $this->sharedCatalogId = $sharedCatalogId;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'GET';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{sharedCatalogId}'), array($this->sharedCatalogId), '/V1/sharedCatalog/{sharedCatalogId}/companies');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -48,7 +48,7 @@ class SharedCatalogCompanyManagementV1GetCompaniesGet extends \Kiboko\Magento\v2
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

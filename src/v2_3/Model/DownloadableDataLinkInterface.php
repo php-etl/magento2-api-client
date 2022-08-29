@@ -11,13 +11,13 @@ class DownloadableDataLinkInterface
      */
     protected $id;
     /**
-     *
+     * 
      *
      * @var string
      */
     protected $title;
     /**
-     *
+     * 
      *
      * @var int
      */
@@ -41,7 +41,7 @@ class DownloadableDataLinkInterface
      */
     protected $numberOfDownloads;
     /**
-     *
+     * 
      *
      * @var string
      */
@@ -53,7 +53,7 @@ class DownloadableDataLinkInterface
      */
     protected $linkFile;
     /**
-     *
+     * 
      *
      * @var DownloadableDataFileContentInterface
      */
@@ -65,7 +65,7 @@ class DownloadableDataLinkInterface
      */
     protected $linkUrl;
     /**
-     *
+     * 
      *
      * @var string
      */
@@ -77,7 +77,7 @@ class DownloadableDataLinkInterface
      */
     protected $sampleFile;
     /**
-     *
+     * 
      *
      * @var DownloadableDataFileContentInterface
      */
@@ -99,7 +99,7 @@ class DownloadableDataLinkInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -110,49 +110,49 @@ class DownloadableDataLinkInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle() : string
     {
         return $this->title;
     }
     /**
-     *
+     * 
      *
      * @param string $title
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(string $title) : self
     {
         $this->title = $title;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getSortOrder(): int
+    public function getSortOrder() : int
     {
         return $this->sortOrder;
     }
     /**
-     *
+     * 
      *
      * @param int $sortOrder
      *
      * @return self
      */
-    public function setSortOrder(int $sortOrder): self
+    public function setSortOrder(int $sortOrder) : self
     {
         $this->sortOrder = $sortOrder;
         return $this;
@@ -162,7 +162,7 @@ class DownloadableDataLinkInterface
      *
      * @return int
      */
-    public function getIsShareable(): int
+    public function getIsShareable() : int
     {
         return $this->isShareable;
     }
@@ -173,7 +173,7 @@ class DownloadableDataLinkInterface
      *
      * @return self
      */
-    public function setIsShareable(int $isShareable): self
+    public function setIsShareable(int $isShareable) : self
     {
         $this->isShareable = $isShareable;
         return $this;
@@ -183,7 +183,7 @@ class DownloadableDataLinkInterface
      *
      * @return float
      */
-    public function getPrice(): float
+    public function getPrice() : float
     {
         return $this->price;
     }
@@ -194,7 +194,7 @@ class DownloadableDataLinkInterface
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(float $price) : self
     {
         $this->price = $price;
         return $this;
@@ -204,7 +204,7 @@ class DownloadableDataLinkInterface
      *
      * @return int
      */
-    public function getNumberOfDownloads(): int
+    public function getNumberOfDownloads() : int
     {
         return $this->numberOfDownloads;
     }
@@ -215,28 +215,28 @@ class DownloadableDataLinkInterface
      *
      * @return self
      */
-    public function setNumberOfDownloads(int $numberOfDownloads): self
+    public function setNumberOfDownloads(int $numberOfDownloads) : self
     {
         $this->numberOfDownloads = $numberOfDownloads;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getLinkType(): string
+    public function getLinkType() : string
     {
         return $this->linkType;
     }
     /**
-     *
+     * 
      *
      * @param string $linkType
      *
      * @return self
      */
-    public function setLinkType(string $linkType): self
+    public function setLinkType(string $linkType) : self
     {
         $this->linkType = $linkType;
         return $this;
@@ -246,7 +246,7 @@ class DownloadableDataLinkInterface
      *
      * @return string
      */
-    public function getLinkFile(): string
+    public function getLinkFile() : string
     {
         return $this->linkFile;
     }
@@ -257,28 +257,28 @@ class DownloadableDataLinkInterface
      *
      * @return self
      */
-    public function setLinkFile(string $linkFile): self
+    public function setLinkFile(string $linkFile) : self
     {
         $this->linkFile = $linkFile;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return DownloadableDataFileContentInterface
      */
-    public function getLinkFileContent(): DownloadableDataFileContentInterface
+    public function getLinkFileContent() : DownloadableDataFileContentInterface
     {
         return $this->linkFileContent;
     }
     /**
-     *
+     * 
      *
      * @param DownloadableDataFileContentInterface $linkFileContent
      *
      * @return self
      */
-    public function setLinkFileContent(DownloadableDataFileContentInterface $linkFileContent): self
+    public function setLinkFileContent(DownloadableDataFileContentInterface $linkFileContent) : self
     {
         $this->linkFileContent = $linkFileContent;
         return $this;
@@ -288,7 +288,7 @@ class DownloadableDataLinkInterface
      *
      * @return string
      */
-    public function getLinkUrl(): string
+    public function getLinkUrl() : string
     {
         return $this->linkUrl;
     }
@@ -299,28 +299,28 @@ class DownloadableDataLinkInterface
      *
      * @return self
      */
-    public function setLinkUrl(string $linkUrl): self
+    public function setLinkUrl(string $linkUrl) : self
     {
         $this->linkUrl = $linkUrl;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getSampleType(): string
+    public function getSampleType() : string
     {
         return $this->sampleType;
     }
     /**
-     *
+     * 
      *
      * @param string $sampleType
      *
      * @return self
      */
-    public function setSampleType(string $sampleType): self
+    public function setSampleType(string $sampleType) : self
     {
         $this->sampleType = $sampleType;
         return $this;
@@ -330,7 +330,7 @@ class DownloadableDataLinkInterface
      *
      * @return string
      */
-    public function getSampleFile(): string
+    public function getSampleFile() : string
     {
         return $this->sampleFile;
     }
@@ -341,28 +341,28 @@ class DownloadableDataLinkInterface
      *
      * @return self
      */
-    public function setSampleFile(string $sampleFile): self
+    public function setSampleFile(string $sampleFile) : self
     {
         $this->sampleFile = $sampleFile;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return DownloadableDataFileContentInterface
      */
-    public function getSampleFileContent(): DownloadableDataFileContentInterface
+    public function getSampleFileContent() : DownloadableDataFileContentInterface
     {
         return $this->sampleFileContent;
     }
     /**
-     *
+     * 
      *
      * @param DownloadableDataFileContentInterface $sampleFileContent
      *
      * @return self
      */
-    public function setSampleFileContent(DownloadableDataFileContentInterface $sampleFileContent): self
+    public function setSampleFileContent(DownloadableDataFileContentInterface $sampleFileContent) : self
     {
         $this->sampleFileContent = $sampleFileContent;
         return $this;
@@ -372,7 +372,7 @@ class DownloadableDataLinkInterface
      *
      * @return string
      */
-    public function getSampleUrl(): string
+    public function getSampleUrl() : string
     {
         return $this->sampleUrl;
     }
@@ -383,7 +383,7 @@ class DownloadableDataLinkInterface
      *
      * @return self
      */
-    public function setSampleUrl(string $sampleUrl): self
+    public function setSampleUrl(string $sampleUrl) : self
     {
         $this->sampleUrl = $sampleUrl;
         return $this;
@@ -404,7 +404,7 @@ class DownloadableDataLinkInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

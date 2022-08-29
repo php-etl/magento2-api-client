@@ -57,7 +57,7 @@ class BundleDataOptionInterface
      *
      * @return int
      */
-    public function getOptionId(): int
+    public function getOptionId() : int
     {
         return $this->optionId;
     }
@@ -68,7 +68,7 @@ class BundleDataOptionInterface
      *
      * @return self
      */
-    public function setOptionId(int $optionId): self
+    public function setOptionId(int $optionId) : self
     {
         $this->optionId = $optionId;
         return $this;
@@ -78,7 +78,7 @@ class BundleDataOptionInterface
      *
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle() : string
     {
         return $this->title;
     }
@@ -89,7 +89,7 @@ class BundleDataOptionInterface
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(string $title) : self
     {
         $this->title = $title;
         return $this;
@@ -99,7 +99,7 @@ class BundleDataOptionInterface
      *
      * @return bool
      */
-    public function getRequired(): bool
+    public function getRequired() : bool
     {
         return $this->required;
     }
@@ -110,7 +110,7 @@ class BundleDataOptionInterface
      *
      * @return self
      */
-    public function setRequired(bool $required): self
+    public function setRequired(bool $required) : self
     {
         $this->required = $required;
         return $this;
@@ -120,7 +120,7 @@ class BundleDataOptionInterface
      *
      * @return string
      */
-    public function getType(): string
+    public function getType() : string
     {
         return $this->type;
     }
@@ -131,7 +131,7 @@ class BundleDataOptionInterface
      *
      * @return self
      */
-    public function setType(string $type): self
+    public function setType(string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -141,7 +141,7 @@ class BundleDataOptionInterface
      *
      * @return int
      */
-    public function getPosition(): int
+    public function getPosition() : int
     {
         return $this->position;
     }
@@ -152,7 +152,7 @@ class BundleDataOptionInterface
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(int $position) : self
     {
         $this->position = $position;
         return $this;
@@ -162,7 +162,7 @@ class BundleDataOptionInterface
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
@@ -173,7 +173,7 @@ class BundleDataOptionInterface
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -183,7 +183,7 @@ class BundleDataOptionInterface
      *
      * @return BundleDataLinkInterface[]
      */
-    public function getProductLinks(): array
+    public function getProductLinks() : array
     {
         return $this->productLinks;
     }
@@ -194,7 +194,7 @@ class BundleDataOptionInterface
      *
      * @return self
      */
-    public function setProductLinks(array $productLinks): self
+    public function setProductLinks(array $productLinks) : self
     {
         $this->productLinks = $productLinks;
         return $this;
@@ -215,7 +215,7 @@ class BundleDataOptionInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

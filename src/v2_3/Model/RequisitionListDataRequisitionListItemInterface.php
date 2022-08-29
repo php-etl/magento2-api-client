@@ -57,7 +57,7 @@ class RequisitionListDataRequisitionListItemInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -68,7 +68,7 @@ class RequisitionListDataRequisitionListItemInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -78,7 +78,7 @@ class RequisitionListDataRequisitionListItemInterface
      *
      * @return int
      */
-    public function getSku(): int
+    public function getSku() : int
     {
         return $this->sku;
     }
@@ -89,7 +89,7 @@ class RequisitionListDataRequisitionListItemInterface
      *
      * @return self
      */
-    public function setSku(int $sku): self
+    public function setSku(int $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -99,7 +99,7 @@ class RequisitionListDataRequisitionListItemInterface
      *
      * @return int
      */
-    public function getRequisitionListId(): int
+    public function getRequisitionListId() : int
     {
         return $this->requisitionListId;
     }
@@ -110,7 +110,7 @@ class RequisitionListDataRequisitionListItemInterface
      *
      * @return self
      */
-    public function setRequisitionListId(int $requisitionListId): self
+    public function setRequisitionListId(int $requisitionListId) : self
     {
         $this->requisitionListId = $requisitionListId;
         return $this;
@@ -120,7 +120,7 @@ class RequisitionListDataRequisitionListItemInterface
      *
      * @return float
      */
-    public function getQty(): float
+    public function getQty() : float
     {
         return $this->qty;
     }
@@ -131,7 +131,7 @@ class RequisitionListDataRequisitionListItemInterface
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(float $qty) : self
     {
         $this->qty = $qty;
         return $this;
@@ -141,7 +141,7 @@ class RequisitionListDataRequisitionListItemInterface
      *
      * @return string[]
      */
-    public function getOptions(): array
+    public function getOptions() : array
     {
         return $this->options;
     }
@@ -152,7 +152,7 @@ class RequisitionListDataRequisitionListItemInterface
      *
      * @return self
      */
-    public function setOptions(array $options): self
+    public function setOptions(array $options) : self
     {
         $this->options = $options;
         return $this;
@@ -162,7 +162,7 @@ class RequisitionListDataRequisitionListItemInterface
      *
      * @return int
      */
-    public function getStoreId(): int
+    public function getStoreId() : int
     {
         return $this->storeId;
     }
@@ -173,7 +173,7 @@ class RequisitionListDataRequisitionListItemInterface
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(int $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;
@@ -183,7 +183,7 @@ class RequisitionListDataRequisitionListItemInterface
      *
      * @return string
      */
-    public function getAddedAt(): string
+    public function getAddedAt() : string
     {
         return $this->addedAt;
     }
@@ -194,7 +194,7 @@ class RequisitionListDataRequisitionListItemInterface
      *
      * @return self
      */
-    public function setAddedAt(string $addedAt): self
+    public function setAddedAt(string $addedAt) : self
     {
         $this->addedAt = $addedAt;
         return $this;
@@ -215,7 +215,7 @@ class RequisitionListDataRequisitionListItemInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

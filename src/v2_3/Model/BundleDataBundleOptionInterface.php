@@ -33,7 +33,7 @@ class BundleDataBundleOptionInterface
      *
      * @return int
      */
-    public function getOptionId(): int
+    public function getOptionId() : int
     {
         return $this->optionId;
     }
@@ -44,7 +44,7 @@ class BundleDataBundleOptionInterface
      *
      * @return self
      */
-    public function setOptionId(int $optionId): self
+    public function setOptionId(int $optionId) : self
     {
         $this->optionId = $optionId;
         return $this;
@@ -54,7 +54,7 @@ class BundleDataBundleOptionInterface
      *
      * @return int
      */
-    public function getOptionQty(): int
+    public function getOptionQty() : int
     {
         return $this->optionQty;
     }
@@ -65,7 +65,7 @@ class BundleDataBundleOptionInterface
      *
      * @return self
      */
-    public function setOptionQty(int $optionQty): self
+    public function setOptionQty(int $optionQty) : self
     {
         $this->optionQty = $optionQty;
         return $this;
@@ -75,7 +75,7 @@ class BundleDataBundleOptionInterface
      *
      * @return int[]
      */
-    public function getOptionSelections(): array
+    public function getOptionSelections() : array
     {
         return $this->optionSelections;
     }
@@ -86,7 +86,7 @@ class BundleDataBundleOptionInterface
      *
      * @return self
      */
-    public function setOptionSelections(array $optionSelections): self
+    public function setOptionSelections(array $optionSelections) : self
     {
         $this->optionSelections = $optionSelections;
         return $this;
@@ -107,7 +107,7 @@ class BundleDataBundleOptionInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

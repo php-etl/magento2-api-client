@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class QuoteDataCartInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataCartInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataCartInterface';
     }
@@ -38,7 +37,7 @@ class QuoteDataCartInterfaceNormalizer implements DenormalizerInterface, Normali
         }
         $object = new \Kiboko\Magento\v2_3\Model\QuoteDataCartInterface();
         if (\array_key_exists('items_qty', $data) && \is_int($data['items_qty'])) {
-            $data['items_qty'] = (float) $data['items_qty'];
+            $data['items_qty'] = (double) $data['items_qty'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

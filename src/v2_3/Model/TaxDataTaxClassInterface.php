@@ -33,7 +33,7 @@ class TaxDataTaxClassInterface
      *
      * @return int
      */
-    public function getClassId(): int
+    public function getClassId() : int
     {
         return $this->classId;
     }
@@ -44,7 +44,7 @@ class TaxDataTaxClassInterface
      *
      * @return self
      */
-    public function setClassId(int $classId): self
+    public function setClassId(int $classId) : self
     {
         $this->classId = $classId;
         return $this;
@@ -54,7 +54,7 @@ class TaxDataTaxClassInterface
      *
      * @return string
      */
-    public function getClassName(): string
+    public function getClassName() : string
     {
         return $this->className;
     }
@@ -65,7 +65,7 @@ class TaxDataTaxClassInterface
      *
      * @return self
      */
-    public function setClassName(string $className): self
+    public function setClassName(string $className) : self
     {
         $this->className = $className;
         return $this;
@@ -75,7 +75,7 @@ class TaxDataTaxClassInterface
      *
      * @return string
      */
-    public function getClassType(): string
+    public function getClassType() : string
     {
         return $this->classType;
     }
@@ -86,7 +86,7 @@ class TaxDataTaxClassInterface
      *
      * @return self
      */
-    public function setClassType(string $classType): self
+    public function setClassType(string $classType) : self
     {
         $this->classType = $classType;
         return $this;
@@ -107,7 +107,7 @@ class TaxDataTaxClassInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

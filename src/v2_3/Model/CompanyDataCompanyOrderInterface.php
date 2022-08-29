@@ -33,7 +33,7 @@ class CompanyDataCompanyOrderInterface
      *
      * @return int
      */
-    public function getOrderId(): int
+    public function getOrderId() : int
     {
         return $this->orderId;
     }
@@ -44,7 +44,7 @@ class CompanyDataCompanyOrderInterface
      *
      * @return self
      */
-    public function setOrderId(int $orderId): self
+    public function setOrderId(int $orderId) : self
     {
         $this->orderId = $orderId;
         return $this;
@@ -54,7 +54,7 @@ class CompanyDataCompanyOrderInterface
      *
      * @return int
      */
-    public function getCompanyId(): int
+    public function getCompanyId() : int
     {
         return $this->companyId;
     }
@@ -65,7 +65,7 @@ class CompanyDataCompanyOrderInterface
      *
      * @return self
      */
-    public function setCompanyId(int $companyId): self
+    public function setCompanyId(int $companyId) : self
     {
         $this->companyId = $companyId;
         return $this;
@@ -75,7 +75,7 @@ class CompanyDataCompanyOrderInterface
      *
      * @return string
      */
-    public function getCompanyName(): string
+    public function getCompanyName() : string
     {
         return $this->companyName;
     }
@@ -86,7 +86,7 @@ class CompanyDataCompanyOrderInterface
      *
      * @return self
      */
-    public function setCompanyName(string $companyName): self
+    public function setCompanyName(string $companyName) : self
     {
         $this->companyName = $companyName;
         return $this;
@@ -107,7 +107,7 @@ class CompanyDataCompanyOrderInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

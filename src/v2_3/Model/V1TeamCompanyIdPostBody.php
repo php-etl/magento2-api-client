@@ -15,7 +15,7 @@ class V1TeamCompanyIdPostBody
      *
      * @return CompanyDataTeamInterface
      */
-    public function getTeam(): CompanyDataTeamInterface
+    public function getTeam() : CompanyDataTeamInterface
     {
         return $this->team;
     }
@@ -26,7 +26,7 @@ class V1TeamCompanyIdPostBody
      *
      * @return self
      */
-    public function setTeam(CompanyDataTeamInterface $team): self
+    public function setTeam(CompanyDataTeamInterface $team) : self
     {
         $this->team = $team;
         return $this;

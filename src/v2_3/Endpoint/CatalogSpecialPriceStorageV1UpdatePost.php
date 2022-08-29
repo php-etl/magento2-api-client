@@ -4,29 +4,29 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CatalogSpecialPriceStorageV1UpdatePost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     /**
      * Add or update product's special price. If any items will have invalid price, store id, sku or dates, they will be marked as failed and excluded from update list and \Magento\Catalog\Api\Data\PriceUpdateResultInterface[] with problem description will be returned. If there were no failed items during update empty array will be returned. If error occurred during the update exception will be thrown.
      *
-     * @param \Kiboko\Magento\v2_3\Model\V1ProductsSpecialPricePostBody $catalogSpecialPriceStorageV1UpdatePostBody
+     * @param \Kiboko\Magento\v2_3\Model\V1ProductsSpecialPricePostBody $catalogSpecialPriceStorageV1UpdatePostBody 
      */
     public function __construct(\Kiboko\Magento\v2_3\Model\V1ProductsSpecialPricePostBody $catalogSpecialPriceStorageV1UpdatePostBody)
     {
         $this->body = $catalogSpecialPriceStorageV1UpdatePostBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'POST';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return '/V1/products/special-price';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -51,7 +51,7 @@ class CatalogSpecialPriceStorageV1UpdatePost extends \Kiboko\Magento\v2_3\Runtim
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

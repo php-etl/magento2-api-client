@@ -75,7 +75,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -86,7 +86,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
         return $this;
@@ -96,7 +96,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return int
      */
-    public function getCustomerId(): int
+    public function getCustomerId() : int
     {
         return $this->customerId;
     }
@@ -107,7 +107,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return self
      */
-    public function setCustomerId(int $customerId): self
+    public function setCustomerId(int $customerId) : self
     {
         $this->customerId = $customerId;
         return $this;
@@ -117,7 +117,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return string
      */
-    public function getPublicHash(): string
+    public function getPublicHash() : string
     {
         return $this->publicHash;
     }
@@ -128,7 +128,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return self
      */
-    public function setPublicHash(string $publicHash): self
+    public function setPublicHash(string $publicHash) : self
     {
         $this->publicHash = $publicHash;
         return $this;
@@ -138,7 +138,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return string
      */
-    public function getPaymentMethodCode(): string
+    public function getPaymentMethodCode() : string
     {
         return $this->paymentMethodCode;
     }
@@ -149,7 +149,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return self
      */
-    public function setPaymentMethodCode(string $paymentMethodCode): self
+    public function setPaymentMethodCode(string $paymentMethodCode) : self
     {
         $this->paymentMethodCode = $paymentMethodCode;
         return $this;
@@ -159,7 +159,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return string
      */
-    public function getType(): string
+    public function getType() : string
     {
         return $this->type;
     }
@@ -170,7 +170,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return self
      */
-    public function setType(string $type): self
+    public function setType(string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -180,7 +180,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -191,7 +191,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -201,7 +201,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return string
      */
-    public function getExpiresAt(): string
+    public function getExpiresAt() : string
     {
         return $this->expiresAt;
     }
@@ -212,7 +212,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return self
      */
-    public function setExpiresAt(string $expiresAt): self
+    public function setExpiresAt(string $expiresAt) : self
     {
         $this->expiresAt = $expiresAt;
         return $this;
@@ -222,7 +222,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return string
      */
-    public function getGatewayToken(): string
+    public function getGatewayToken() : string
     {
         return $this->gatewayToken;
     }
@@ -233,7 +233,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return self
      */
-    public function setGatewayToken(string $gatewayToken): self
+    public function setGatewayToken(string $gatewayToken) : self
     {
         $this->gatewayToken = $gatewayToken;
         return $this;
@@ -243,7 +243,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return string
      */
-    public function getTokenDetails(): string
+    public function getTokenDetails() : string
     {
         return $this->tokenDetails;
     }
@@ -254,7 +254,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return self
      */
-    public function setTokenDetails(string $tokenDetails): self
+    public function setTokenDetails(string $tokenDetails) : self
     {
         $this->tokenDetails = $tokenDetails;
         return $this;
@@ -264,7 +264,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return bool
      */
-    public function getIsActive(): bool
+    public function getIsActive() : bool
     {
         return $this->isActive;
     }
@@ -275,7 +275,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return self
      */
-    public function setIsActive(bool $isActive): self
+    public function setIsActive(bool $isActive) : self
     {
         $this->isActive = $isActive;
         return $this;
@@ -285,7 +285,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return bool
      */
-    public function getIsVisible(): bool
+    public function getIsVisible() : bool
     {
         return $this->isVisible;
     }
@@ -296,7 +296,7 @@ class VaultDataPaymentTokenInterface
      *
      * @return self
      */
-    public function setIsVisible(bool $isVisible): self
+    public function setIsVisible(bool $isVisible) : self
     {
         $this->isVisible = $isVisible;
         return $this;

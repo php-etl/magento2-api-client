@@ -63,7 +63,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return int
      */
-    public function getRuleId(): int
+    public function getRuleId() : int
     {
         return $this->ruleId;
     }
@@ -74,7 +74,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return self
      */
-    public function setRuleId(int $ruleId): self
+    public function setRuleId(int $ruleId) : self
     {
         $this->ruleId = $ruleId;
         return $this;
@@ -84,7 +84,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return string
      */
-    public function getFormat(): string
+    public function getFormat() : string
     {
         return $this->format;
     }
@@ -95,7 +95,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return self
      */
-    public function setFormat(string $format): self
+    public function setFormat(string $format) : self
     {
         $this->format = $format;
         return $this;
@@ -105,7 +105,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return int
      */
-    public function getQuantity(): int
+    public function getQuantity() : int
     {
         return $this->quantity;
     }
@@ -116,7 +116,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return self
      */
-    public function setQuantity(int $quantity): self
+    public function setQuantity(int $quantity) : self
     {
         $this->quantity = $quantity;
         return $this;
@@ -126,7 +126,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return int
      */
-    public function getLength(): int
+    public function getLength() : int
     {
         return $this->length;
     }
@@ -137,7 +137,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return self
      */
-    public function setLength(int $length): self
+    public function setLength(int $length) : self
     {
         $this->length = $length;
         return $this;
@@ -147,7 +147,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return string
      */
-    public function getPrefix(): string
+    public function getPrefix() : string
     {
         return $this->prefix;
     }
@@ -158,7 +158,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return self
      */
-    public function setPrefix(string $prefix): self
+    public function setPrefix(string $prefix) : self
     {
         $this->prefix = $prefix;
         return $this;
@@ -168,7 +168,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return string
      */
-    public function getSuffix(): string
+    public function getSuffix() : string
     {
         return $this->suffix;
     }
@@ -179,7 +179,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return self
      */
-    public function setSuffix(string $suffix): self
+    public function setSuffix(string $suffix) : self
     {
         $this->suffix = $suffix;
         return $this;
@@ -189,7 +189,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return int
      */
-    public function getDelimiterAtEvery(): int
+    public function getDelimiterAtEvery() : int
     {
         return $this->delimiterAtEvery;
     }
@@ -200,7 +200,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return self
      */
-    public function setDelimiterAtEvery(int $delimiterAtEvery): self
+    public function setDelimiterAtEvery(int $delimiterAtEvery) : self
     {
         $this->delimiterAtEvery = $delimiterAtEvery;
         return $this;
@@ -210,7 +210,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return string
      */
-    public function getDelimiter(): string
+    public function getDelimiter() : string
     {
         return $this->delimiter;
     }
@@ -221,7 +221,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return self
      */
-    public function setDelimiter(string $delimiter): self
+    public function setDelimiter(string $delimiter) : self
     {
         $this->delimiter = $delimiter;
         return $this;
@@ -242,7 +242,7 @@ class SalesRuleDataCouponGenerationSpecInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

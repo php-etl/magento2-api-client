@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class GiftWrappingDataWrappingInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\GiftWrappingDataWrappingInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\GiftWrappingDataWrappingInterface';
     }
@@ -38,7 +37,7 @@ class GiftWrappingDataWrappingInterfaceNormalizer implements DenormalizerInterfa
         }
         $object = new \Kiboko\Magento\v2_3\Model\GiftWrappingDataWrappingInterface();
         if (\array_key_exists('base_price', $data) && \is_int($data['base_price'])) {
-            $data['base_price'] = (float) $data['base_price'];
+            $data['base_price'] = (double) $data['base_price'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

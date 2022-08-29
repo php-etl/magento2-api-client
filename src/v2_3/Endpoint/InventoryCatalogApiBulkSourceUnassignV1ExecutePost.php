@@ -4,29 +4,29 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class InventoryCatalogApiBulkSourceUnassignV1ExecutePost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     /**
      * Run mass product to source un-assignment
      *
-     * @param \Kiboko\Magento\v2_3\Model\V1InventoryBulkProductSourceUnassignPostBody $inventoryCatalogApiBulkSourceUnassignV1ExecutePostBody
+     * @param \Kiboko\Magento\v2_3\Model\V1InventoryBulkProductSourceUnassignPostBody $inventoryCatalogApiBulkSourceUnassignV1ExecutePostBody 
      */
     public function __construct(\Kiboko\Magento\v2_3\Model\V1InventoryBulkProductSourceUnassignPostBody $inventoryCatalogApiBulkSourceUnassignV1ExecutePostBody)
     {
         $this->body = $inventoryCatalogApiBulkSourceUnassignV1ExecutePostBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'POST';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return '/V1/inventory/bulk-product-source-unassign';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -51,7 +51,7 @@ class InventoryCatalogApiBulkSourceUnassignV1ExecutePost extends \Kiboko\Magento
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

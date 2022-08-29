@@ -27,7 +27,7 @@ class InventorySourceSelectionApiDataItemRequestInterface
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
@@ -38,7 +38,7 @@ class InventorySourceSelectionApiDataItemRequestInterface
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -48,7 +48,7 @@ class InventorySourceSelectionApiDataItemRequestInterface
      *
      * @return float
      */
-    public function getQty(): float
+    public function getQty() : float
     {
         return $this->qty;
     }
@@ -59,7 +59,7 @@ class InventorySourceSelectionApiDataItemRequestInterface
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(float $qty) : self
     {
         $this->qty = $qty;
         return $this;
@@ -80,7 +80,7 @@ class InventorySourceSelectionApiDataItemRequestInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

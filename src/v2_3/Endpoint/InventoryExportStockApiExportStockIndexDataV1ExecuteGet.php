@@ -4,33 +4,33 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class InventoryExportStockApiExportStockIndexDataV1ExecuteGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $salesChannelType;
     protected $salesChannelCode;
     /**
      * Provides stock index export from inventory_stock_% table
      *
-     * @param string $salesChannelType
-     * @param string $salesChannelCode
+     * @param string $salesChannelType 
+     * @param string $salesChannelCode 
      */
     public function __construct(string $salesChannelType, string $salesChannelCode)
     {
         $this->salesChannelType = $salesChannelType;
         $this->salesChannelCode = $salesChannelCode;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'GET';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{salesChannelType}', '{salesChannelCode}'), array($this->salesChannelType, $this->salesChannelCode), '/V1/inventory/dump-stock-index-data/{salesChannelType}/{salesChannelCode}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -51,7 +51,7 @@ class InventoryExportStockApiExportStockIndexDataV1ExecuteGet extends \Kiboko\Ma
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

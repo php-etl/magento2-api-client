@@ -231,7 +231,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return bool
      */
-    public function getIsWysiwygEnabled(): bool
+    public function getIsWysiwygEnabled() : bool
     {
         return $this->isWysiwygEnabled;
     }
@@ -242,7 +242,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsWysiwygEnabled(bool $isWysiwygEnabled): self
+    public function setIsWysiwygEnabled(bool $isWysiwygEnabled) : self
     {
         $this->isWysiwygEnabled = $isWysiwygEnabled;
         return $this;
@@ -252,7 +252,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return bool
      */
-    public function getIsHtmlAllowedOnFront(): bool
+    public function getIsHtmlAllowedOnFront() : bool
     {
         return $this->isHtmlAllowedOnFront;
     }
@@ -263,7 +263,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsHtmlAllowedOnFront(bool $isHtmlAllowedOnFront): self
+    public function setIsHtmlAllowedOnFront(bool $isHtmlAllowedOnFront) : self
     {
         $this->isHtmlAllowedOnFront = $isHtmlAllowedOnFront;
         return $this;
@@ -273,7 +273,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return bool
      */
-    public function getUsedForSortBy(): bool
+    public function getUsedForSortBy() : bool
     {
         return $this->usedForSortBy;
     }
@@ -284,7 +284,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setUsedForSortBy(bool $usedForSortBy): self
+    public function setUsedForSortBy(bool $usedForSortBy) : self
     {
         $this->usedForSortBy = $usedForSortBy;
         return $this;
@@ -294,7 +294,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return bool
      */
-    public function getIsFilterable(): bool
+    public function getIsFilterable() : bool
     {
         return $this->isFilterable;
     }
@@ -305,7 +305,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsFilterable(bool $isFilterable): self
+    public function setIsFilterable(bool $isFilterable) : self
     {
         $this->isFilterable = $isFilterable;
         return $this;
@@ -315,7 +315,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return bool
      */
-    public function getIsFilterableInSearch(): bool
+    public function getIsFilterableInSearch() : bool
     {
         return $this->isFilterableInSearch;
     }
@@ -326,7 +326,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsFilterableInSearch(bool $isFilterableInSearch): self
+    public function setIsFilterableInSearch(bool $isFilterableInSearch) : self
     {
         $this->isFilterableInSearch = $isFilterableInSearch;
         return $this;
@@ -336,7 +336,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return bool
      */
-    public function getIsUsedInGrid(): bool
+    public function getIsUsedInGrid() : bool
     {
         return $this->isUsedInGrid;
     }
@@ -347,7 +347,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsUsedInGrid(bool $isUsedInGrid): self
+    public function setIsUsedInGrid(bool $isUsedInGrid) : self
     {
         $this->isUsedInGrid = $isUsedInGrid;
         return $this;
@@ -357,7 +357,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return bool
      */
-    public function getIsVisibleInGrid(): bool
+    public function getIsVisibleInGrid() : bool
     {
         return $this->isVisibleInGrid;
     }
@@ -368,7 +368,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsVisibleInGrid(bool $isVisibleInGrid): self
+    public function setIsVisibleInGrid(bool $isVisibleInGrid) : self
     {
         $this->isVisibleInGrid = $isVisibleInGrid;
         return $this;
@@ -378,7 +378,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return bool
      */
-    public function getIsFilterableInGrid(): bool
+    public function getIsFilterableInGrid() : bool
     {
         return $this->isFilterableInGrid;
     }
@@ -389,7 +389,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsFilterableInGrid(bool $isFilterableInGrid): self
+    public function setIsFilterableInGrid(bool $isFilterableInGrid) : self
     {
         $this->isFilterableInGrid = $isFilterableInGrid;
         return $this;
@@ -399,7 +399,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return int
      */
-    public function getPosition(): int
+    public function getPosition() : int
     {
         return $this->position;
     }
@@ -410,7 +410,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(int $position) : self
     {
         $this->position = $position;
         return $this;
@@ -420,7 +420,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string[]
      */
-    public function getApplyTo(): array
+    public function getApplyTo() : array
     {
         return $this->applyTo;
     }
@@ -431,7 +431,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setApplyTo(array $applyTo): self
+    public function setApplyTo(array $applyTo) : self
     {
         $this->applyTo = $applyTo;
         return $this;
@@ -441,7 +441,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getIsSearchable(): string
+    public function getIsSearchable() : string
     {
         return $this->isSearchable;
     }
@@ -452,7 +452,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsSearchable(string $isSearchable): self
+    public function setIsSearchable(string $isSearchable) : self
     {
         $this->isSearchable = $isSearchable;
         return $this;
@@ -462,7 +462,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getIsVisibleInAdvancedSearch(): string
+    public function getIsVisibleInAdvancedSearch() : string
     {
         return $this->isVisibleInAdvancedSearch;
     }
@@ -473,7 +473,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsVisibleInAdvancedSearch(string $isVisibleInAdvancedSearch): self
+    public function setIsVisibleInAdvancedSearch(string $isVisibleInAdvancedSearch) : self
     {
         $this->isVisibleInAdvancedSearch = $isVisibleInAdvancedSearch;
         return $this;
@@ -483,7 +483,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getIsComparable(): string
+    public function getIsComparable() : string
     {
         return $this->isComparable;
     }
@@ -494,7 +494,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsComparable(string $isComparable): self
+    public function setIsComparable(string $isComparable) : self
     {
         $this->isComparable = $isComparable;
         return $this;
@@ -504,7 +504,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getIsUsedForPromoRules(): string
+    public function getIsUsedForPromoRules() : string
     {
         return $this->isUsedForPromoRules;
     }
@@ -515,7 +515,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsUsedForPromoRules(string $isUsedForPromoRules): self
+    public function setIsUsedForPromoRules(string $isUsedForPromoRules) : self
     {
         $this->isUsedForPromoRules = $isUsedForPromoRules;
         return $this;
@@ -525,7 +525,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getIsVisibleOnFront(): string
+    public function getIsVisibleOnFront() : string
     {
         return $this->isVisibleOnFront;
     }
@@ -536,7 +536,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsVisibleOnFront(string $isVisibleOnFront): self
+    public function setIsVisibleOnFront(string $isVisibleOnFront) : self
     {
         $this->isVisibleOnFront = $isVisibleOnFront;
         return $this;
@@ -546,7 +546,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getUsedInProductListing(): string
+    public function getUsedInProductListing() : string
     {
         return $this->usedInProductListing;
     }
@@ -557,7 +557,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setUsedInProductListing(string $usedInProductListing): self
+    public function setUsedInProductListing(string $usedInProductListing) : self
     {
         $this->usedInProductListing = $usedInProductListing;
         return $this;
@@ -567,7 +567,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return bool
      */
-    public function getIsVisible(): bool
+    public function getIsVisible() : bool
     {
         return $this->isVisible;
     }
@@ -578,7 +578,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsVisible(bool $isVisible): self
+    public function setIsVisible(bool $isVisible) : self
     {
         $this->isVisible = $isVisible;
         return $this;
@@ -588,7 +588,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getScope(): string
+    public function getScope() : string
     {
         return $this->scope;
     }
@@ -599,7 +599,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setScope(string $scope): self
+    public function setScope(string $scope) : self
     {
         $this->scope = $scope;
         return $this;
@@ -620,7 +620,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -630,7 +630,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return int
      */
-    public function getAttributeId(): int
+    public function getAttributeId() : int
     {
         return $this->attributeId;
     }
@@ -641,7 +641,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setAttributeId(int $attributeId): self
+    public function setAttributeId(int $attributeId) : self
     {
         $this->attributeId = $attributeId;
         return $this;
@@ -651,7 +651,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getAttributeCode(): string
+    public function getAttributeCode() : string
     {
         return $this->attributeCode;
     }
@@ -662,7 +662,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setAttributeCode(string $attributeCode): self
+    public function setAttributeCode(string $attributeCode) : self
     {
         $this->attributeCode = $attributeCode;
         return $this;
@@ -672,7 +672,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getFrontendInput(): string
+    public function getFrontendInput() : string
     {
         return $this->frontendInput;
     }
@@ -683,7 +683,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setFrontendInput(string $frontendInput): self
+    public function setFrontendInput(string $frontendInput) : self
     {
         $this->frontendInput = $frontendInput;
         return $this;
@@ -693,7 +693,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getEntityTypeId(): string
+    public function getEntityTypeId() : string
     {
         return $this->entityTypeId;
     }
@@ -704,7 +704,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setEntityTypeId(string $entityTypeId): self
+    public function setEntityTypeId(string $entityTypeId) : self
     {
         $this->entityTypeId = $entityTypeId;
         return $this;
@@ -714,7 +714,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return bool
      */
-    public function getIsRequired(): bool
+    public function getIsRequired() : bool
     {
         return $this->isRequired;
     }
@@ -725,7 +725,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsRequired(bool $isRequired): self
+    public function setIsRequired(bool $isRequired) : self
     {
         $this->isRequired = $isRequired;
         return $this;
@@ -735,7 +735,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return EavDataAttributeOptionInterface[]
      */
-    public function getOptions(): array
+    public function getOptions() : array
     {
         return $this->options;
     }
@@ -746,7 +746,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setOptions(array $options): self
+    public function setOptions(array $options) : self
     {
         $this->options = $options;
         return $this;
@@ -756,7 +756,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return bool
      */
-    public function getIsUserDefined(): bool
+    public function getIsUserDefined() : bool
     {
         return $this->isUserDefined;
     }
@@ -767,7 +767,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsUserDefined(bool $isUserDefined): self
+    public function setIsUserDefined(bool $isUserDefined) : self
     {
         $this->isUserDefined = $isUserDefined;
         return $this;
@@ -777,7 +777,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getDefaultFrontendLabel(): string
+    public function getDefaultFrontendLabel() : string
     {
         return $this->defaultFrontendLabel;
     }
@@ -788,7 +788,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setDefaultFrontendLabel(string $defaultFrontendLabel): self
+    public function setDefaultFrontendLabel(string $defaultFrontendLabel) : self
     {
         $this->defaultFrontendLabel = $defaultFrontendLabel;
         return $this;
@@ -798,7 +798,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return EavDataAttributeFrontendLabelInterface[]
      */
-    public function getFrontendLabels(): array
+    public function getFrontendLabels() : array
     {
         return $this->frontendLabels;
     }
@@ -809,7 +809,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setFrontendLabels(array $frontendLabels): self
+    public function setFrontendLabels(array $frontendLabels) : self
     {
         $this->frontendLabels = $frontendLabels;
         return $this;
@@ -819,7 +819,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getNote(): string
+    public function getNote() : string
     {
         return $this->note;
     }
@@ -830,7 +830,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setNote(string $note): self
+    public function setNote(string $note) : self
     {
         $this->note = $note;
         return $this;
@@ -840,7 +840,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getBackendType(): string
+    public function getBackendType() : string
     {
         return $this->backendType;
     }
@@ -851,7 +851,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setBackendType(string $backendType): self
+    public function setBackendType(string $backendType) : self
     {
         $this->backendType = $backendType;
         return $this;
@@ -861,7 +861,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getBackendModel(): string
+    public function getBackendModel() : string
     {
         return $this->backendModel;
     }
@@ -872,7 +872,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setBackendModel(string $backendModel): self
+    public function setBackendModel(string $backendModel) : self
     {
         $this->backendModel = $backendModel;
         return $this;
@@ -882,7 +882,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getSourceModel(): string
+    public function getSourceModel() : string
     {
         return $this->sourceModel;
     }
@@ -893,7 +893,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setSourceModel(string $sourceModel): self
+    public function setSourceModel(string $sourceModel) : self
     {
         $this->sourceModel = $sourceModel;
         return $this;
@@ -903,7 +903,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getDefaultValue(): string
+    public function getDefaultValue() : string
     {
         return $this->defaultValue;
     }
@@ -914,7 +914,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setDefaultValue(string $defaultValue): self
+    public function setDefaultValue(string $defaultValue) : self
     {
         $this->defaultValue = $defaultValue;
         return $this;
@@ -924,7 +924,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getIsUnique(): string
+    public function getIsUnique() : string
     {
         return $this->isUnique;
     }
@@ -935,7 +935,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setIsUnique(string $isUnique): self
+    public function setIsUnique(string $isUnique) : self
     {
         $this->isUnique = $isUnique;
         return $this;
@@ -945,7 +945,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return string
      */
-    public function getFrontendClass(): string
+    public function getFrontendClass() : string
     {
         return $this->frontendClass;
     }
@@ -956,7 +956,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setFrontendClass(string $frontendClass): self
+    public function setFrontendClass(string $frontendClass) : self
     {
         $this->frontendClass = $frontendClass;
         return $this;
@@ -966,7 +966,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return EavDataAttributeValidationRuleInterface[]
      */
-    public function getValidationRules(): array
+    public function getValidationRules() : array
     {
         return $this->validationRules;
     }
@@ -977,7 +977,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setValidationRules(array $validationRules): self
+    public function setValidationRules(array $validationRules) : self
     {
         $this->validationRules = $validationRules;
         return $this;
@@ -987,7 +987,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return FrameworkAttributeInterface[]
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes() : array
     {
         return $this->customAttributes;
     }
@@ -998,7 +998,7 @@ class CatalogDataCategoryAttributeInterface
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(array $customAttributes) : self
     {
         $this->customAttributes = $customAttributes;
         return $this;

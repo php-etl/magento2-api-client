@@ -81,7 +81,7 @@ class RmaDataItemInterface
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -92,7 +92,7 @@ class RmaDataItemInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
         return $this;
@@ -102,7 +102,7 @@ class RmaDataItemInterface
      *
      * @return int
      */
-    public function getRmaEntityId(): int
+    public function getRmaEntityId() : int
     {
         return $this->rmaEntityId;
     }
@@ -113,7 +113,7 @@ class RmaDataItemInterface
      *
      * @return self
      */
-    public function setRmaEntityId(int $rmaEntityId): self
+    public function setRmaEntityId(int $rmaEntityId) : self
     {
         $this->rmaEntityId = $rmaEntityId;
         return $this;
@@ -123,7 +123,7 @@ class RmaDataItemInterface
      *
      * @return int
      */
-    public function getOrderItemId(): int
+    public function getOrderItemId() : int
     {
         return $this->orderItemId;
     }
@@ -134,7 +134,7 @@ class RmaDataItemInterface
      *
      * @return self
      */
-    public function setOrderItemId(int $orderItemId): self
+    public function setOrderItemId(int $orderItemId) : self
     {
         $this->orderItemId = $orderItemId;
         return $this;
@@ -144,7 +144,7 @@ class RmaDataItemInterface
      *
      * @return int
      */
-    public function getQtyRequested(): int
+    public function getQtyRequested() : int
     {
         return $this->qtyRequested;
     }
@@ -155,7 +155,7 @@ class RmaDataItemInterface
      *
      * @return self
      */
-    public function setQtyRequested(int $qtyRequested): self
+    public function setQtyRequested(int $qtyRequested) : self
     {
         $this->qtyRequested = $qtyRequested;
         return $this;
@@ -165,7 +165,7 @@ class RmaDataItemInterface
      *
      * @return int
      */
-    public function getQtyAuthorized(): int
+    public function getQtyAuthorized() : int
     {
         return $this->qtyAuthorized;
     }
@@ -176,7 +176,7 @@ class RmaDataItemInterface
      *
      * @return self
      */
-    public function setQtyAuthorized(int $qtyAuthorized): self
+    public function setQtyAuthorized(int $qtyAuthorized) : self
     {
         $this->qtyAuthorized = $qtyAuthorized;
         return $this;
@@ -186,7 +186,7 @@ class RmaDataItemInterface
      *
      * @return int
      */
-    public function getQtyApproved(): int
+    public function getQtyApproved() : int
     {
         return $this->qtyApproved;
     }
@@ -197,7 +197,7 @@ class RmaDataItemInterface
      *
      * @return self
      */
-    public function setQtyApproved(int $qtyApproved): self
+    public function setQtyApproved(int $qtyApproved) : self
     {
         $this->qtyApproved = $qtyApproved;
         return $this;
@@ -207,7 +207,7 @@ class RmaDataItemInterface
      *
      * @return int
      */
-    public function getQtyReturned(): int
+    public function getQtyReturned() : int
     {
         return $this->qtyReturned;
     }
@@ -218,7 +218,7 @@ class RmaDataItemInterface
      *
      * @return self
      */
-    public function setQtyReturned(int $qtyReturned): self
+    public function setQtyReturned(int $qtyReturned) : self
     {
         $this->qtyReturned = $qtyReturned;
         return $this;
@@ -228,7 +228,7 @@ class RmaDataItemInterface
      *
      * @return string
      */
-    public function getReason(): string
+    public function getReason() : string
     {
         return $this->reason;
     }
@@ -239,7 +239,7 @@ class RmaDataItemInterface
      *
      * @return self
      */
-    public function setReason(string $reason): self
+    public function setReason(string $reason) : self
     {
         $this->reason = $reason;
         return $this;
@@ -249,7 +249,7 @@ class RmaDataItemInterface
      *
      * @return string
      */
-    public function getCondition(): string
+    public function getCondition() : string
     {
         return $this->condition;
     }
@@ -260,7 +260,7 @@ class RmaDataItemInterface
      *
      * @return self
      */
-    public function setCondition(string $condition): self
+    public function setCondition(string $condition) : self
     {
         $this->condition = $condition;
         return $this;
@@ -270,7 +270,7 @@ class RmaDataItemInterface
      *
      * @return string
      */
-    public function getResolution(): string
+    public function getResolution() : string
     {
         return $this->resolution;
     }
@@ -281,7 +281,7 @@ class RmaDataItemInterface
      *
      * @return self
      */
-    public function setResolution(string $resolution): self
+    public function setResolution(string $resolution) : self
     {
         $this->resolution = $resolution;
         return $this;
@@ -291,7 +291,7 @@ class RmaDataItemInterface
      *
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus() : string
     {
         return $this->status;
     }
@@ -302,7 +302,7 @@ class RmaDataItemInterface
      *
      * @return self
      */
-    public function setStatus(string $status): self
+    public function setStatus(string $status) : self
     {
         $this->status = $status;
         return $this;
@@ -323,7 +323,7 @@ class RmaDataItemInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

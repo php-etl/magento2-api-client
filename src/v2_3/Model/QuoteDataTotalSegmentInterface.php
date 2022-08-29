@@ -39,7 +39,7 @@ class QuoteDataTotalSegmentInterface
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -50,7 +50,7 @@ class QuoteDataTotalSegmentInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
@@ -60,7 +60,7 @@ class QuoteDataTotalSegmentInterface
      *
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle() : string
     {
         return $this->title;
     }
@@ -71,7 +71,7 @@ class QuoteDataTotalSegmentInterface
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(string $title) : self
     {
         $this->title = $title;
         return $this;
@@ -81,7 +81,7 @@ class QuoteDataTotalSegmentInterface
      *
      * @return float
      */
-    public function getValue(): float
+    public function getValue() : float
     {
         return $this->value;
     }
@@ -92,7 +92,7 @@ class QuoteDataTotalSegmentInterface
      *
      * @return self
      */
-    public function setValue(float $value): self
+    public function setValue(float $value) : self
     {
         $this->value = $value;
         return $this;
@@ -102,7 +102,7 @@ class QuoteDataTotalSegmentInterface
      *
      * @return string
      */
-    public function getArea(): string
+    public function getArea() : string
     {
         return $this->area;
     }
@@ -113,7 +113,7 @@ class QuoteDataTotalSegmentInterface
      *
      * @return self
      */
-    public function setArea(string $area): self
+    public function setArea(string $area) : self
     {
         $this->area = $area;
         return $this;
@@ -123,7 +123,7 @@ class QuoteDataTotalSegmentInterface
      *
      * @return QuoteDataTotalSegmentExtensionInterface
      */
-    public function getExtensionAttributes(): QuoteDataTotalSegmentExtensionInterface
+    public function getExtensionAttributes() : QuoteDataTotalSegmentExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -134,7 +134,7 @@ class QuoteDataTotalSegmentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(QuoteDataTotalSegmentExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(QuoteDataTotalSegmentExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

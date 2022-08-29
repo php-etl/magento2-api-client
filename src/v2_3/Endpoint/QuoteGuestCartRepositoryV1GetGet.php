@@ -4,30 +4,30 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class QuoteGuestCartRepositoryV1GetGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $cartId;
     /**
      * Enable a guest user to return information for a specified cart.
      *
-     * @param string $cartId
+     * @param string $cartId 
      */
     public function __construct(string $cartId)
     {
         $this->cartId = $cartId;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'GET';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{cartId}'), array($this->cartId), '/V1/guest-carts/{cartId}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -48,7 +48,7 @@ class QuoteGuestCartRepositoryV1GetGet extends \Kiboko\Magento\v2_3\Runtime\Clie
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

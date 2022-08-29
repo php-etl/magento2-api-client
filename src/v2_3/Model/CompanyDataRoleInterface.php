@@ -39,7 +39,7 @@ class CompanyDataRoleInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -50,7 +50,7 @@ class CompanyDataRoleInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -60,7 +60,7 @@ class CompanyDataRoleInterface
      *
      * @return string
      */
-    public function getRoleName(): string
+    public function getRoleName() : string
     {
         return $this->roleName;
     }
@@ -71,7 +71,7 @@ class CompanyDataRoleInterface
      *
      * @return self
      */
-    public function setRoleName(string $roleName): self
+    public function setRoleName(string $roleName) : self
     {
         $this->roleName = $roleName;
         return $this;
@@ -81,7 +81,7 @@ class CompanyDataRoleInterface
      *
      * @return CompanyDataPermissionInterface[]
      */
-    public function getPermissions(): array
+    public function getPermissions() : array
     {
         return $this->permissions;
     }
@@ -92,7 +92,7 @@ class CompanyDataRoleInterface
      *
      * @return self
      */
-    public function setPermissions(array $permissions): self
+    public function setPermissions(array $permissions) : self
     {
         $this->permissions = $permissions;
         return $this;
@@ -102,7 +102,7 @@ class CompanyDataRoleInterface
      *
      * @return int
      */
-    public function getCompanyId(): int
+    public function getCompanyId() : int
     {
         return $this->companyId;
     }
@@ -113,7 +113,7 @@ class CompanyDataRoleInterface
      *
      * @return self
      */
-    public function setCompanyId(int $companyId): self
+    public function setCompanyId(int $companyId) : self
     {
         $this->companyId = $companyId;
         return $this;
@@ -134,7 +134,7 @@ class CompanyDataRoleInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

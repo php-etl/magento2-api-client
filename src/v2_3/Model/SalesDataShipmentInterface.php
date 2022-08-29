@@ -123,7 +123,7 @@ class SalesDataShipmentInterface
      *
      * @return int
      */
-    public function getBillingAddressId(): int
+    public function getBillingAddressId() : int
     {
         return $this->billingAddressId;
     }
@@ -134,7 +134,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setBillingAddressId(int $billingAddressId): self
+    public function setBillingAddressId(int $billingAddressId) : self
     {
         $this->billingAddressId = $billingAddressId;
         return $this;
@@ -144,7 +144,7 @@ class SalesDataShipmentInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -155,7 +155,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -165,7 +165,7 @@ class SalesDataShipmentInterface
      *
      * @return int
      */
-    public function getCustomerId(): int
+    public function getCustomerId() : int
     {
         return $this->customerId;
     }
@@ -176,7 +176,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setCustomerId(int $customerId): self
+    public function setCustomerId(int $customerId) : self
     {
         $this->customerId = $customerId;
         return $this;
@@ -186,7 +186,7 @@ class SalesDataShipmentInterface
      *
      * @return int
      */
-    public function getEmailSent(): int
+    public function getEmailSent() : int
     {
         return $this->emailSent;
     }
@@ -197,7 +197,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setEmailSent(int $emailSent): self
+    public function setEmailSent(int $emailSent) : self
     {
         $this->emailSent = $emailSent;
         return $this;
@@ -207,7 +207,7 @@ class SalesDataShipmentInterface
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -218,7 +218,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
         return $this;
@@ -228,7 +228,7 @@ class SalesDataShipmentInterface
      *
      * @return string
      */
-    public function getIncrementId(): string
+    public function getIncrementId() : string
     {
         return $this->incrementId;
     }
@@ -239,7 +239,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setIncrementId(string $incrementId): self
+    public function setIncrementId(string $incrementId) : self
     {
         $this->incrementId = $incrementId;
         return $this;
@@ -249,7 +249,7 @@ class SalesDataShipmentInterface
      *
      * @return int
      */
-    public function getOrderId(): int
+    public function getOrderId() : int
     {
         return $this->orderId;
     }
@@ -260,7 +260,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setOrderId(int $orderId): self
+    public function setOrderId(int $orderId) : self
     {
         $this->orderId = $orderId;
         return $this;
@@ -270,7 +270,7 @@ class SalesDataShipmentInterface
      *
      * @return SalesDataShipmentPackageInterface[]
      */
-    public function getPackages(): array
+    public function getPackages() : array
     {
         return $this->packages;
     }
@@ -281,7 +281,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setPackages(array $packages): self
+    public function setPackages(array $packages) : self
     {
         $this->packages = $packages;
         return $this;
@@ -291,7 +291,7 @@ class SalesDataShipmentInterface
      *
      * @return int
      */
-    public function getShipmentStatus(): int
+    public function getShipmentStatus() : int
     {
         return $this->shipmentStatus;
     }
@@ -302,7 +302,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setShipmentStatus(int $shipmentStatus): self
+    public function setShipmentStatus(int $shipmentStatus) : self
     {
         $this->shipmentStatus = $shipmentStatus;
         return $this;
@@ -312,7 +312,7 @@ class SalesDataShipmentInterface
      *
      * @return int
      */
-    public function getShippingAddressId(): int
+    public function getShippingAddressId() : int
     {
         return $this->shippingAddressId;
     }
@@ -323,7 +323,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setShippingAddressId(int $shippingAddressId): self
+    public function setShippingAddressId(int $shippingAddressId) : self
     {
         $this->shippingAddressId = $shippingAddressId;
         return $this;
@@ -333,7 +333,7 @@ class SalesDataShipmentInterface
      *
      * @return string
      */
-    public function getShippingLabel(): string
+    public function getShippingLabel() : string
     {
         return $this->shippingLabel;
     }
@@ -344,7 +344,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setShippingLabel(string $shippingLabel): self
+    public function setShippingLabel(string $shippingLabel) : self
     {
         $this->shippingLabel = $shippingLabel;
         return $this;
@@ -354,7 +354,7 @@ class SalesDataShipmentInterface
      *
      * @return int
      */
-    public function getStoreId(): int
+    public function getStoreId() : int
     {
         return $this->storeId;
     }
@@ -365,7 +365,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(int $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;
@@ -375,7 +375,7 @@ class SalesDataShipmentInterface
      *
      * @return float
      */
-    public function getTotalQty(): float
+    public function getTotalQty() : float
     {
         return $this->totalQty;
     }
@@ -386,7 +386,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setTotalQty(float $totalQty): self
+    public function setTotalQty(float $totalQty) : self
     {
         $this->totalQty = $totalQty;
         return $this;
@@ -396,7 +396,7 @@ class SalesDataShipmentInterface
      *
      * @return float
      */
-    public function getTotalWeight(): float
+    public function getTotalWeight() : float
     {
         return $this->totalWeight;
     }
@@ -407,7 +407,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setTotalWeight(float $totalWeight): self
+    public function setTotalWeight(float $totalWeight) : self
     {
         $this->totalWeight = $totalWeight;
         return $this;
@@ -417,7 +417,7 @@ class SalesDataShipmentInterface
      *
      * @return string
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt() : string
     {
         return $this->updatedAt;
     }
@@ -428,7 +428,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(string $updatedAt) : self
     {
         $this->updatedAt = $updatedAt;
         return $this;
@@ -438,7 +438,7 @@ class SalesDataShipmentInterface
      *
      * @return SalesDataShipmentItemInterface[]
      */
-    public function getItems(): array
+    public function getItems() : array
     {
         return $this->items;
     }
@@ -449,7 +449,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(array $items) : self
     {
         $this->items = $items;
         return $this;
@@ -459,7 +459,7 @@ class SalesDataShipmentInterface
      *
      * @return SalesDataShipmentTrackInterface[]
      */
-    public function getTracks(): array
+    public function getTracks() : array
     {
         return $this->tracks;
     }
@@ -470,7 +470,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setTracks(array $tracks): self
+    public function setTracks(array $tracks) : self
     {
         $this->tracks = $tracks;
         return $this;
@@ -480,7 +480,7 @@ class SalesDataShipmentInterface
      *
      * @return SalesDataShipmentCommentInterface[]
      */
-    public function getComments(): array
+    public function getComments() : array
     {
         return $this->comments;
     }
@@ -491,7 +491,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setComments(array $comments): self
+    public function setComments(array $comments) : self
     {
         $this->comments = $comments;
         return $this;
@@ -501,7 +501,7 @@ class SalesDataShipmentInterface
      *
      * @return SalesDataShipmentExtensionInterface
      */
-    public function getExtensionAttributes(): SalesDataShipmentExtensionInterface
+    public function getExtensionAttributes() : SalesDataShipmentExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -512,7 +512,7 @@ class SalesDataShipmentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(SalesDataShipmentExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(SalesDataShipmentExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

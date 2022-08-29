@@ -15,7 +15,7 @@ class V1CouponsGeneratePostBody
      *
      * @return SalesRuleDataCouponGenerationSpecInterface
      */
-    public function getCouponSpec(): SalesRuleDataCouponGenerationSpecInterface
+    public function getCouponSpec() : SalesRuleDataCouponGenerationSpecInterface
     {
         return $this->couponSpec;
     }
@@ -26,7 +26,7 @@ class V1CouponsGeneratePostBody
      *
      * @return self
      */
-    public function setCouponSpec(SalesRuleDataCouponGenerationSpecInterface $couponSpec): self
+    public function setCouponSpec(SalesRuleDataCouponGenerationSpecInterface $couponSpec) : self
     {
         $this->couponSpec = $couponSpec;
         return $this;

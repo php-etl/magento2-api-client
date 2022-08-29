@@ -69,7 +69,7 @@ class BundleDataLinkInterface
      *
      * @return string
      */
-    public function getId(): string
+    public function getId() : string
     {
         return $this->id;
     }
@@ -80,7 +80,7 @@ class BundleDataLinkInterface
      *
      * @return self
      */
-    public function setId(string $id): self
+    public function setId(string $id) : self
     {
         $this->id = $id;
         return $this;
@@ -90,7 +90,7 @@ class BundleDataLinkInterface
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
@@ -101,7 +101,7 @@ class BundleDataLinkInterface
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -111,7 +111,7 @@ class BundleDataLinkInterface
      *
      * @return int
      */
-    public function getOptionId(): int
+    public function getOptionId() : int
     {
         return $this->optionId;
     }
@@ -122,7 +122,7 @@ class BundleDataLinkInterface
      *
      * @return self
      */
-    public function setOptionId(int $optionId): self
+    public function setOptionId(int $optionId) : self
     {
         $this->optionId = $optionId;
         return $this;
@@ -132,7 +132,7 @@ class BundleDataLinkInterface
      *
      * @return float
      */
-    public function getQty(): float
+    public function getQty() : float
     {
         return $this->qty;
     }
@@ -143,7 +143,7 @@ class BundleDataLinkInterface
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(float $qty) : self
     {
         $this->qty = $qty;
         return $this;
@@ -153,7 +153,7 @@ class BundleDataLinkInterface
      *
      * @return int
      */
-    public function getPosition(): int
+    public function getPosition() : int
     {
         return $this->position;
     }
@@ -164,7 +164,7 @@ class BundleDataLinkInterface
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(int $position) : self
     {
         $this->position = $position;
         return $this;
@@ -174,7 +174,7 @@ class BundleDataLinkInterface
      *
      * @return bool
      */
-    public function getIsDefault(): bool
+    public function getIsDefault() : bool
     {
         return $this->isDefault;
     }
@@ -185,7 +185,7 @@ class BundleDataLinkInterface
      *
      * @return self
      */
-    public function setIsDefault(bool $isDefault): self
+    public function setIsDefault(bool $isDefault) : self
     {
         $this->isDefault = $isDefault;
         return $this;
@@ -195,7 +195,7 @@ class BundleDataLinkInterface
      *
      * @return float
      */
-    public function getPrice(): float
+    public function getPrice() : float
     {
         return $this->price;
     }
@@ -206,7 +206,7 @@ class BundleDataLinkInterface
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(float $price) : self
     {
         $this->price = $price;
         return $this;
@@ -216,7 +216,7 @@ class BundleDataLinkInterface
      *
      * @return int
      */
-    public function getPriceType(): int
+    public function getPriceType() : int
     {
         return $this->priceType;
     }
@@ -227,7 +227,7 @@ class BundleDataLinkInterface
      *
      * @return self
      */
-    public function setPriceType(int $priceType): self
+    public function setPriceType(int $priceType) : self
     {
         $this->priceType = $priceType;
         return $this;
@@ -237,7 +237,7 @@ class BundleDataLinkInterface
      *
      * @return int
      */
-    public function getCanChangeQuantity(): int
+    public function getCanChangeQuantity() : int
     {
         return $this->canChangeQuantity;
     }
@@ -248,7 +248,7 @@ class BundleDataLinkInterface
      *
      * @return self
      */
-    public function setCanChangeQuantity(int $canChangeQuantity): self
+    public function setCanChangeQuantity(int $canChangeQuantity) : self
     {
         $this->canChangeQuantity = $canChangeQuantity;
         return $this;
@@ -269,7 +269,7 @@ class BundleDataLinkInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

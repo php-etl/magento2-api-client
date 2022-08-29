@@ -15,7 +15,7 @@ class InventorySourceSelectionApiDataInventoryRequestExtensionInterface
      *
      * @return InventorySourceSelectionApiDataAddressInterface
      */
-    public function getDestinationAddress(): InventorySourceSelectionApiDataAddressInterface
+    public function getDestinationAddress() : InventorySourceSelectionApiDataAddressInterface
     {
         return $this->destinationAddress;
     }
@@ -26,7 +26,7 @@ class InventorySourceSelectionApiDataInventoryRequestExtensionInterface
      *
      * @return self
      */
-    public function setDestinationAddress(InventorySourceSelectionApiDataAddressInterface $destinationAddress): self
+    public function setDestinationAddress(InventorySourceSelectionApiDataAddressInterface $destinationAddress) : self
     {
         $this->destinationAddress = $destinationAddress;
         return $this;

@@ -45,7 +45,7 @@ class CatalogDataProductCustomOptionValuesInterface
      *
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle() : string
     {
         return $this->title;
     }
@@ -56,7 +56,7 @@ class CatalogDataProductCustomOptionValuesInterface
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(string $title) : self
     {
         $this->title = $title;
         return $this;
@@ -66,7 +66,7 @@ class CatalogDataProductCustomOptionValuesInterface
      *
      * @return int
      */
-    public function getSortOrder(): int
+    public function getSortOrder() : int
     {
         return $this->sortOrder;
     }
@@ -77,7 +77,7 @@ class CatalogDataProductCustomOptionValuesInterface
      *
      * @return self
      */
-    public function setSortOrder(int $sortOrder): self
+    public function setSortOrder(int $sortOrder) : self
     {
         $this->sortOrder = $sortOrder;
         return $this;
@@ -87,7 +87,7 @@ class CatalogDataProductCustomOptionValuesInterface
      *
      * @return float
      */
-    public function getPrice(): float
+    public function getPrice() : float
     {
         return $this->price;
     }
@@ -98,7 +98,7 @@ class CatalogDataProductCustomOptionValuesInterface
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(float $price) : self
     {
         $this->price = $price;
         return $this;
@@ -108,7 +108,7 @@ class CatalogDataProductCustomOptionValuesInterface
      *
      * @return string
      */
-    public function getPriceType(): string
+    public function getPriceType() : string
     {
         return $this->priceType;
     }
@@ -119,7 +119,7 @@ class CatalogDataProductCustomOptionValuesInterface
      *
      * @return self
      */
-    public function setPriceType(string $priceType): self
+    public function setPriceType(string $priceType) : self
     {
         $this->priceType = $priceType;
         return $this;
@@ -129,7 +129,7 @@ class CatalogDataProductCustomOptionValuesInterface
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
@@ -140,7 +140,7 @@ class CatalogDataProductCustomOptionValuesInterface
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -150,7 +150,7 @@ class CatalogDataProductCustomOptionValuesInterface
      *
      * @return int
      */
-    public function getOptionTypeId(): int
+    public function getOptionTypeId() : int
     {
         return $this->optionTypeId;
     }
@@ -161,7 +161,7 @@ class CatalogDataProductCustomOptionValuesInterface
      *
      * @return self
      */
-    public function setOptionTypeId(int $optionTypeId): self
+    public function setOptionTypeId(int $optionTypeId) : self
     {
         $this->optionTypeId = $optionTypeId;
         return $this;

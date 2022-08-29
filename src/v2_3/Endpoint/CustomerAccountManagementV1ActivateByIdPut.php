@@ -4,29 +4,29 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CustomerAccountManagementV1ActivateByIdPut extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     /**
      * Activate a customer account using a key that was sent in a confirmation email.
      *
-     * @param \Kiboko\Magento\v2_3\Model\V1CustomersMeActivatePutBody $customerAccountManagementV1ActivateByIdPutBody
+     * @param \Kiboko\Magento\v2_3\Model\V1CustomersMeActivatePutBody $customerAccountManagementV1ActivateByIdPutBody 
      */
     public function __construct(\Kiboko\Magento\v2_3\Model\V1CustomersMeActivatePutBody $customerAccountManagementV1ActivateByIdPutBody)
     {
         $this->body = $customerAccountManagementV1ActivateByIdPutBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'PUT';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return '/V1/customers/me/activate';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -51,7 +51,7 @@ class CustomerAccountManagementV1ActivateByIdPut extends \Kiboko\Magento\v2_3\Ru
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

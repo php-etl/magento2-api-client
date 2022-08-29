@@ -315,7 +315,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getAdjustment(): float
+    public function getAdjustment() : float
     {
         return $this->adjustment;
     }
@@ -326,7 +326,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setAdjustment(float $adjustment): self
+    public function setAdjustment(float $adjustment) : self
     {
         $this->adjustment = $adjustment;
         return $this;
@@ -336,7 +336,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getAdjustmentNegative(): float
+    public function getAdjustmentNegative() : float
     {
         return $this->adjustmentNegative;
     }
@@ -347,7 +347,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setAdjustmentNegative(float $adjustmentNegative): self
+    public function setAdjustmentNegative(float $adjustmentNegative) : self
     {
         $this->adjustmentNegative = $adjustmentNegative;
         return $this;
@@ -357,7 +357,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getAdjustmentPositive(): float
+    public function getAdjustmentPositive() : float
     {
         return $this->adjustmentPositive;
     }
@@ -368,7 +368,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setAdjustmentPositive(float $adjustmentPositive): self
+    public function setAdjustmentPositive(float $adjustmentPositive) : self
     {
         $this->adjustmentPositive = $adjustmentPositive;
         return $this;
@@ -378,7 +378,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getBaseAdjustment(): float
+    public function getBaseAdjustment() : float
     {
         return $this->baseAdjustment;
     }
@@ -389,7 +389,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseAdjustment(float $baseAdjustment): self
+    public function setBaseAdjustment(float $baseAdjustment) : self
     {
         $this->baseAdjustment = $baseAdjustment;
         return $this;
@@ -399,7 +399,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getBaseAdjustmentNegative(): float
+    public function getBaseAdjustmentNegative() : float
     {
         return $this->baseAdjustmentNegative;
     }
@@ -410,7 +410,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseAdjustmentNegative(float $baseAdjustmentNegative): self
+    public function setBaseAdjustmentNegative(float $baseAdjustmentNegative) : self
     {
         $this->baseAdjustmentNegative = $baseAdjustmentNegative;
         return $this;
@@ -420,7 +420,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getBaseAdjustmentPositive(): float
+    public function getBaseAdjustmentPositive() : float
     {
         return $this->baseAdjustmentPositive;
     }
@@ -431,7 +431,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseAdjustmentPositive(float $baseAdjustmentPositive): self
+    public function setBaseAdjustmentPositive(float $baseAdjustmentPositive) : self
     {
         $this->baseAdjustmentPositive = $baseAdjustmentPositive;
         return $this;
@@ -441,7 +441,7 @@ class SalesDataCreditmemoInterface
      *
      * @return string
      */
-    public function getBaseCurrencyCode(): string
+    public function getBaseCurrencyCode() : string
     {
         return $this->baseCurrencyCode;
     }
@@ -452,7 +452,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseCurrencyCode(string $baseCurrencyCode): self
+    public function setBaseCurrencyCode(string $baseCurrencyCode) : self
     {
         $this->baseCurrencyCode = $baseCurrencyCode;
         return $this;
@@ -462,7 +462,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getBaseDiscountAmount(): float
+    public function getBaseDiscountAmount() : float
     {
         return $this->baseDiscountAmount;
     }
@@ -473,7 +473,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseDiscountAmount(float $baseDiscountAmount): self
+    public function setBaseDiscountAmount(float $baseDiscountAmount) : self
     {
         $this->baseDiscountAmount = $baseDiscountAmount;
         return $this;
@@ -483,7 +483,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getBaseGrandTotal(): float
+    public function getBaseGrandTotal() : float
     {
         return $this->baseGrandTotal;
     }
@@ -494,7 +494,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseGrandTotal(float $baseGrandTotal): self
+    public function setBaseGrandTotal(float $baseGrandTotal) : self
     {
         $this->baseGrandTotal = $baseGrandTotal;
         return $this;
@@ -504,7 +504,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getBaseDiscountTaxCompensationAmount(): float
+    public function getBaseDiscountTaxCompensationAmount() : float
     {
         return $this->baseDiscountTaxCompensationAmount;
     }
@@ -515,7 +515,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseDiscountTaxCompensationAmount(float $baseDiscountTaxCompensationAmount): self
+    public function setBaseDiscountTaxCompensationAmount(float $baseDiscountTaxCompensationAmount) : self
     {
         $this->baseDiscountTaxCompensationAmount = $baseDiscountTaxCompensationAmount;
         return $this;
@@ -525,7 +525,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getBaseShippingAmount(): float
+    public function getBaseShippingAmount() : float
     {
         return $this->baseShippingAmount;
     }
@@ -536,7 +536,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseShippingAmount(float $baseShippingAmount): self
+    public function setBaseShippingAmount(float $baseShippingAmount) : self
     {
         $this->baseShippingAmount = $baseShippingAmount;
         return $this;
@@ -546,7 +546,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getBaseShippingDiscountTaxCompensationAmnt(): float
+    public function getBaseShippingDiscountTaxCompensationAmnt() : float
     {
         return $this->baseShippingDiscountTaxCompensationAmnt;
     }
@@ -557,7 +557,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseShippingDiscountTaxCompensationAmnt(float $baseShippingDiscountTaxCompensationAmnt): self
+    public function setBaseShippingDiscountTaxCompensationAmnt(float $baseShippingDiscountTaxCompensationAmnt) : self
     {
         $this->baseShippingDiscountTaxCompensationAmnt = $baseShippingDiscountTaxCompensationAmnt;
         return $this;
@@ -567,7 +567,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getBaseShippingInclTax(): float
+    public function getBaseShippingInclTax() : float
     {
         return $this->baseShippingInclTax;
     }
@@ -578,7 +578,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseShippingInclTax(float $baseShippingInclTax): self
+    public function setBaseShippingInclTax(float $baseShippingInclTax) : self
     {
         $this->baseShippingInclTax = $baseShippingInclTax;
         return $this;
@@ -588,7 +588,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getBaseShippingTaxAmount(): float
+    public function getBaseShippingTaxAmount() : float
     {
         return $this->baseShippingTaxAmount;
     }
@@ -599,7 +599,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseShippingTaxAmount(float $baseShippingTaxAmount): self
+    public function setBaseShippingTaxAmount(float $baseShippingTaxAmount) : self
     {
         $this->baseShippingTaxAmount = $baseShippingTaxAmount;
         return $this;
@@ -609,7 +609,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getBaseSubtotal(): float
+    public function getBaseSubtotal() : float
     {
         return $this->baseSubtotal;
     }
@@ -620,7 +620,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseSubtotal(float $baseSubtotal): self
+    public function setBaseSubtotal(float $baseSubtotal) : self
     {
         $this->baseSubtotal = $baseSubtotal;
         return $this;
@@ -630,7 +630,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getBaseSubtotalInclTax(): float
+    public function getBaseSubtotalInclTax() : float
     {
         return $this->baseSubtotalInclTax;
     }
@@ -641,7 +641,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseSubtotalInclTax(float $baseSubtotalInclTax): self
+    public function setBaseSubtotalInclTax(float $baseSubtotalInclTax) : self
     {
         $this->baseSubtotalInclTax = $baseSubtotalInclTax;
         return $this;
@@ -651,7 +651,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getBaseTaxAmount(): float
+    public function getBaseTaxAmount() : float
     {
         return $this->baseTaxAmount;
     }
@@ -662,7 +662,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseTaxAmount(float $baseTaxAmount): self
+    public function setBaseTaxAmount(float $baseTaxAmount) : self
     {
         $this->baseTaxAmount = $baseTaxAmount;
         return $this;
@@ -672,7 +672,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getBaseToGlobalRate(): float
+    public function getBaseToGlobalRate() : float
     {
         return $this->baseToGlobalRate;
     }
@@ -683,7 +683,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseToGlobalRate(float $baseToGlobalRate): self
+    public function setBaseToGlobalRate(float $baseToGlobalRate) : self
     {
         $this->baseToGlobalRate = $baseToGlobalRate;
         return $this;
@@ -693,7 +693,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getBaseToOrderRate(): float
+    public function getBaseToOrderRate() : float
     {
         return $this->baseToOrderRate;
     }
@@ -704,7 +704,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBaseToOrderRate(float $baseToOrderRate): self
+    public function setBaseToOrderRate(float $baseToOrderRate) : self
     {
         $this->baseToOrderRate = $baseToOrderRate;
         return $this;
@@ -714,7 +714,7 @@ class SalesDataCreditmemoInterface
      *
      * @return int
      */
-    public function getBillingAddressId(): int
+    public function getBillingAddressId() : int
     {
         return $this->billingAddressId;
     }
@@ -725,7 +725,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setBillingAddressId(int $billingAddressId): self
+    public function setBillingAddressId(int $billingAddressId) : self
     {
         $this->billingAddressId = $billingAddressId;
         return $this;
@@ -735,7 +735,7 @@ class SalesDataCreditmemoInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -746,7 +746,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -756,7 +756,7 @@ class SalesDataCreditmemoInterface
      *
      * @return int
      */
-    public function getCreditmemoStatus(): int
+    public function getCreditmemoStatus() : int
     {
         return $this->creditmemoStatus;
     }
@@ -767,7 +767,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setCreditmemoStatus(int $creditmemoStatus): self
+    public function setCreditmemoStatus(int $creditmemoStatus) : self
     {
         $this->creditmemoStatus = $creditmemoStatus;
         return $this;
@@ -777,7 +777,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getDiscountAmount(): float
+    public function getDiscountAmount() : float
     {
         return $this->discountAmount;
     }
@@ -788,7 +788,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setDiscountAmount(float $discountAmount): self
+    public function setDiscountAmount(float $discountAmount) : self
     {
         $this->discountAmount = $discountAmount;
         return $this;
@@ -798,7 +798,7 @@ class SalesDataCreditmemoInterface
      *
      * @return string
      */
-    public function getDiscountDescription(): string
+    public function getDiscountDescription() : string
     {
         return $this->discountDescription;
     }
@@ -809,7 +809,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setDiscountDescription(string $discountDescription): self
+    public function setDiscountDescription(string $discountDescription) : self
     {
         $this->discountDescription = $discountDescription;
         return $this;
@@ -819,7 +819,7 @@ class SalesDataCreditmemoInterface
      *
      * @return int
      */
-    public function getEmailSent(): int
+    public function getEmailSent() : int
     {
         return $this->emailSent;
     }
@@ -830,7 +830,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setEmailSent(int $emailSent): self
+    public function setEmailSent(int $emailSent) : self
     {
         $this->emailSent = $emailSent;
         return $this;
@@ -840,7 +840,7 @@ class SalesDataCreditmemoInterface
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -851,7 +851,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
         return $this;
@@ -861,7 +861,7 @@ class SalesDataCreditmemoInterface
      *
      * @return string
      */
-    public function getGlobalCurrencyCode(): string
+    public function getGlobalCurrencyCode() : string
     {
         return $this->globalCurrencyCode;
     }
@@ -872,7 +872,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setGlobalCurrencyCode(string $globalCurrencyCode): self
+    public function setGlobalCurrencyCode(string $globalCurrencyCode) : self
     {
         $this->globalCurrencyCode = $globalCurrencyCode;
         return $this;
@@ -882,7 +882,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getGrandTotal(): float
+    public function getGrandTotal() : float
     {
         return $this->grandTotal;
     }
@@ -893,7 +893,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setGrandTotal(float $grandTotal): self
+    public function setGrandTotal(float $grandTotal) : self
     {
         $this->grandTotal = $grandTotal;
         return $this;
@@ -903,7 +903,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getDiscountTaxCompensationAmount(): float
+    public function getDiscountTaxCompensationAmount() : float
     {
         return $this->discountTaxCompensationAmount;
     }
@@ -914,7 +914,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setDiscountTaxCompensationAmount(float $discountTaxCompensationAmount): self
+    public function setDiscountTaxCompensationAmount(float $discountTaxCompensationAmount) : self
     {
         $this->discountTaxCompensationAmount = $discountTaxCompensationAmount;
         return $this;
@@ -924,7 +924,7 @@ class SalesDataCreditmemoInterface
      *
      * @return string
      */
-    public function getIncrementId(): string
+    public function getIncrementId() : string
     {
         return $this->incrementId;
     }
@@ -935,7 +935,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setIncrementId(string $incrementId): self
+    public function setIncrementId(string $incrementId) : self
     {
         $this->incrementId = $incrementId;
         return $this;
@@ -945,7 +945,7 @@ class SalesDataCreditmemoInterface
      *
      * @return int
      */
-    public function getInvoiceId(): int
+    public function getInvoiceId() : int
     {
         return $this->invoiceId;
     }
@@ -956,7 +956,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setInvoiceId(int $invoiceId): self
+    public function setInvoiceId(int $invoiceId) : self
     {
         $this->invoiceId = $invoiceId;
         return $this;
@@ -966,7 +966,7 @@ class SalesDataCreditmemoInterface
      *
      * @return string
      */
-    public function getOrderCurrencyCode(): string
+    public function getOrderCurrencyCode() : string
     {
         return $this->orderCurrencyCode;
     }
@@ -977,7 +977,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setOrderCurrencyCode(string $orderCurrencyCode): self
+    public function setOrderCurrencyCode(string $orderCurrencyCode) : self
     {
         $this->orderCurrencyCode = $orderCurrencyCode;
         return $this;
@@ -987,7 +987,7 @@ class SalesDataCreditmemoInterface
      *
      * @return int
      */
-    public function getOrderId(): int
+    public function getOrderId() : int
     {
         return $this->orderId;
     }
@@ -998,7 +998,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setOrderId(int $orderId): self
+    public function setOrderId(int $orderId) : self
     {
         $this->orderId = $orderId;
         return $this;
@@ -1008,7 +1008,7 @@ class SalesDataCreditmemoInterface
      *
      * @return int
      */
-    public function getShippingAddressId(): int
+    public function getShippingAddressId() : int
     {
         return $this->shippingAddressId;
     }
@@ -1019,7 +1019,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setShippingAddressId(int $shippingAddressId): self
+    public function setShippingAddressId(int $shippingAddressId) : self
     {
         $this->shippingAddressId = $shippingAddressId;
         return $this;
@@ -1029,7 +1029,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getShippingAmount(): float
+    public function getShippingAmount() : float
     {
         return $this->shippingAmount;
     }
@@ -1040,7 +1040,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setShippingAmount(float $shippingAmount): self
+    public function setShippingAmount(float $shippingAmount) : self
     {
         $this->shippingAmount = $shippingAmount;
         return $this;
@@ -1050,7 +1050,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getShippingDiscountTaxCompensationAmount(): float
+    public function getShippingDiscountTaxCompensationAmount() : float
     {
         return $this->shippingDiscountTaxCompensationAmount;
     }
@@ -1061,7 +1061,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setShippingDiscountTaxCompensationAmount(float $shippingDiscountTaxCompensationAmount): self
+    public function setShippingDiscountTaxCompensationAmount(float $shippingDiscountTaxCompensationAmount) : self
     {
         $this->shippingDiscountTaxCompensationAmount = $shippingDiscountTaxCompensationAmount;
         return $this;
@@ -1071,7 +1071,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getShippingInclTax(): float
+    public function getShippingInclTax() : float
     {
         return $this->shippingInclTax;
     }
@@ -1082,7 +1082,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setShippingInclTax(float $shippingInclTax): self
+    public function setShippingInclTax(float $shippingInclTax) : self
     {
         $this->shippingInclTax = $shippingInclTax;
         return $this;
@@ -1092,7 +1092,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getShippingTaxAmount(): float
+    public function getShippingTaxAmount() : float
     {
         return $this->shippingTaxAmount;
     }
@@ -1103,7 +1103,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setShippingTaxAmount(float $shippingTaxAmount): self
+    public function setShippingTaxAmount(float $shippingTaxAmount) : self
     {
         $this->shippingTaxAmount = $shippingTaxAmount;
         return $this;
@@ -1113,7 +1113,7 @@ class SalesDataCreditmemoInterface
      *
      * @return int
      */
-    public function getState(): int
+    public function getState() : int
     {
         return $this->state;
     }
@@ -1124,7 +1124,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setState(int $state): self
+    public function setState(int $state) : self
     {
         $this->state = $state;
         return $this;
@@ -1134,7 +1134,7 @@ class SalesDataCreditmemoInterface
      *
      * @return string
      */
-    public function getStoreCurrencyCode(): string
+    public function getStoreCurrencyCode() : string
     {
         return $this->storeCurrencyCode;
     }
@@ -1145,7 +1145,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setStoreCurrencyCode(string $storeCurrencyCode): self
+    public function setStoreCurrencyCode(string $storeCurrencyCode) : self
     {
         $this->storeCurrencyCode = $storeCurrencyCode;
         return $this;
@@ -1155,7 +1155,7 @@ class SalesDataCreditmemoInterface
      *
      * @return int
      */
-    public function getStoreId(): int
+    public function getStoreId() : int
     {
         return $this->storeId;
     }
@@ -1166,7 +1166,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(int $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;
@@ -1176,7 +1176,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getStoreToBaseRate(): float
+    public function getStoreToBaseRate() : float
     {
         return $this->storeToBaseRate;
     }
@@ -1187,7 +1187,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setStoreToBaseRate(float $storeToBaseRate): self
+    public function setStoreToBaseRate(float $storeToBaseRate) : self
     {
         $this->storeToBaseRate = $storeToBaseRate;
         return $this;
@@ -1197,7 +1197,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getStoreToOrderRate(): float
+    public function getStoreToOrderRate() : float
     {
         return $this->storeToOrderRate;
     }
@@ -1208,7 +1208,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setStoreToOrderRate(float $storeToOrderRate): self
+    public function setStoreToOrderRate(float $storeToOrderRate) : self
     {
         $this->storeToOrderRate = $storeToOrderRate;
         return $this;
@@ -1218,7 +1218,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getSubtotal(): float
+    public function getSubtotal() : float
     {
         return $this->subtotal;
     }
@@ -1229,7 +1229,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setSubtotal(float $subtotal): self
+    public function setSubtotal(float $subtotal) : self
     {
         $this->subtotal = $subtotal;
         return $this;
@@ -1239,7 +1239,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getSubtotalInclTax(): float
+    public function getSubtotalInclTax() : float
     {
         return $this->subtotalInclTax;
     }
@@ -1250,7 +1250,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setSubtotalInclTax(float $subtotalInclTax): self
+    public function setSubtotalInclTax(float $subtotalInclTax) : self
     {
         $this->subtotalInclTax = $subtotalInclTax;
         return $this;
@@ -1260,7 +1260,7 @@ class SalesDataCreditmemoInterface
      *
      * @return float
      */
-    public function getTaxAmount(): float
+    public function getTaxAmount() : float
     {
         return $this->taxAmount;
     }
@@ -1271,7 +1271,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setTaxAmount(float $taxAmount): self
+    public function setTaxAmount(float $taxAmount) : self
     {
         $this->taxAmount = $taxAmount;
         return $this;
@@ -1281,7 +1281,7 @@ class SalesDataCreditmemoInterface
      *
      * @return string
      */
-    public function getTransactionId(): string
+    public function getTransactionId() : string
     {
         return $this->transactionId;
     }
@@ -1292,7 +1292,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setTransactionId(string $transactionId): self
+    public function setTransactionId(string $transactionId) : self
     {
         $this->transactionId = $transactionId;
         return $this;
@@ -1302,7 +1302,7 @@ class SalesDataCreditmemoInterface
      *
      * @return string
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt() : string
     {
         return $this->updatedAt;
     }
@@ -1313,7 +1313,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(string $updatedAt) : self
     {
         $this->updatedAt = $updatedAt;
         return $this;
@@ -1323,7 +1323,7 @@ class SalesDataCreditmemoInterface
      *
      * @return SalesDataCreditmemoItemInterface[]
      */
-    public function getItems(): array
+    public function getItems() : array
     {
         return $this->items;
     }
@@ -1334,7 +1334,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(array $items) : self
     {
         $this->items = $items;
         return $this;
@@ -1344,7 +1344,7 @@ class SalesDataCreditmemoInterface
      *
      * @return SalesDataCreditmemoCommentInterface[]
      */
-    public function getComments(): array
+    public function getComments() : array
     {
         return $this->comments;
     }
@@ -1355,7 +1355,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setComments(array $comments): self
+    public function setComments(array $comments) : self
     {
         $this->comments = $comments;
         return $this;
@@ -1365,7 +1365,7 @@ class SalesDataCreditmemoInterface
      *
      * @return SalesDataCreditmemoExtensionInterface
      */
-    public function getExtensionAttributes(): SalesDataCreditmemoExtensionInterface
+    public function getExtensionAttributes() : SalesDataCreditmemoExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -1376,7 +1376,7 @@ class SalesDataCreditmemoInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(SalesDataCreditmemoExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(SalesDataCreditmemoExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

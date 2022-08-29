@@ -81,7 +81,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return float
      */
-    public function getCost(): float
+    public function getCost() : float
     {
         return $this->cost;
     }
@@ -92,7 +92,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return self
      */
-    public function setCost(float $cost): self
+    public function setCost(float $cost) : self
     {
         $this->cost = $cost;
         return $this;
@@ -102,7 +102,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return float
      */
-    public function getCatalogPrice(): float
+    public function getCatalogPrice() : float
     {
         return $this->catalogPrice;
     }
@@ -113,7 +113,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return self
      */
-    public function setCatalogPrice(float $catalogPrice): self
+    public function setCatalogPrice(float $catalogPrice) : self
     {
         $this->catalogPrice = $catalogPrice;
         return $this;
@@ -123,7 +123,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return float
      */
-    public function getBaseCatalogPrice(): float
+    public function getBaseCatalogPrice() : float
     {
         return $this->baseCatalogPrice;
     }
@@ -134,7 +134,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return self
      */
-    public function setBaseCatalogPrice(float $baseCatalogPrice): self
+    public function setBaseCatalogPrice(float $baseCatalogPrice) : self
     {
         $this->baseCatalogPrice = $baseCatalogPrice;
         return $this;
@@ -144,7 +144,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return float
      */
-    public function getCatalogPriceInclTax(): float
+    public function getCatalogPriceInclTax() : float
     {
         return $this->catalogPriceInclTax;
     }
@@ -155,7 +155,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return self
      */
-    public function setCatalogPriceInclTax(float $catalogPriceInclTax): self
+    public function setCatalogPriceInclTax(float $catalogPriceInclTax) : self
     {
         $this->catalogPriceInclTax = $catalogPriceInclTax;
         return $this;
@@ -165,7 +165,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return float
      */
-    public function getBaseCatalogPriceInclTax(): float
+    public function getBaseCatalogPriceInclTax() : float
     {
         return $this->baseCatalogPriceInclTax;
     }
@@ -176,7 +176,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return self
      */
-    public function setBaseCatalogPriceInclTax(float $baseCatalogPriceInclTax): self
+    public function setBaseCatalogPriceInclTax(float $baseCatalogPriceInclTax) : self
     {
         $this->baseCatalogPriceInclTax = $baseCatalogPriceInclTax;
         return $this;
@@ -186,7 +186,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return float
      */
-    public function getCartPrice(): float
+    public function getCartPrice() : float
     {
         return $this->cartPrice;
     }
@@ -197,7 +197,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return self
      */
-    public function setCartPrice(float $cartPrice): self
+    public function setCartPrice(float $cartPrice) : self
     {
         $this->cartPrice = $cartPrice;
         return $this;
@@ -207,7 +207,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return float
      */
-    public function getBaseCartPrice(): float
+    public function getBaseCartPrice() : float
     {
         return $this->baseCartPrice;
     }
@@ -218,7 +218,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return self
      */
-    public function setBaseCartPrice(float $baseCartPrice): self
+    public function setBaseCartPrice(float $baseCartPrice) : self
     {
         $this->baseCartPrice = $baseCartPrice;
         return $this;
@@ -228,7 +228,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return float
      */
-    public function getCartTax(): float
+    public function getCartTax() : float
     {
         return $this->cartTax;
     }
@@ -239,7 +239,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return self
      */
-    public function setCartTax(float $cartTax): self
+    public function setCartTax(float $cartTax) : self
     {
         $this->cartTax = $cartTax;
         return $this;
@@ -249,7 +249,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return float
      */
-    public function getBaseCartTax(): float
+    public function getBaseCartTax() : float
     {
         return $this->baseCartTax;
     }
@@ -260,7 +260,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return self
      */
-    public function setBaseCartTax(float $baseCartTax): self
+    public function setBaseCartTax(float $baseCartTax) : self
     {
         $this->baseCartTax = $baseCartTax;
         return $this;
@@ -270,7 +270,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return float
      */
-    public function getCartPriceInclTax(): float
+    public function getCartPriceInclTax() : float
     {
         return $this->cartPriceInclTax;
     }
@@ -281,7 +281,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return self
      */
-    public function setCartPriceInclTax(float $cartPriceInclTax): self
+    public function setCartPriceInclTax(float $cartPriceInclTax) : self
     {
         $this->cartPriceInclTax = $cartPriceInclTax;
         return $this;
@@ -291,7 +291,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return float
      */
-    public function getBaseCartPriceInclTax(): float
+    public function getBaseCartPriceInclTax() : float
     {
         return $this->baseCartPriceInclTax;
     }
@@ -302,7 +302,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return self
      */
-    public function setBaseCartPriceInclTax(float $baseCartPriceInclTax): self
+    public function setBaseCartPriceInclTax(float $baseCartPriceInclTax) : self
     {
         $this->baseCartPriceInclTax = $baseCartPriceInclTax;
         return $this;
@@ -323,7 +323,7 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

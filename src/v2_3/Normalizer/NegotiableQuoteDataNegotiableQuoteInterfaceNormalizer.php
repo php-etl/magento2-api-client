@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class NegotiableQuoteDataNegotiableQuoteInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\NegotiableQuoteDataNegotiableQuoteInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\NegotiableQuoteDataNegotiableQuoteInterface';
     }
@@ -38,22 +37,22 @@ class NegotiableQuoteDataNegotiableQuoteInterfaceNormalizer implements Denormali
         }
         $object = new \Kiboko\Magento\v2_3\Model\NegotiableQuoteDataNegotiableQuoteInterface();
         if (\array_key_exists('negotiated_price_value', $data) && \is_int($data['negotiated_price_value'])) {
-            $data['negotiated_price_value'] = (float) $data['negotiated_price_value'];
+            $data['negotiated_price_value'] = (double) $data['negotiated_price_value'];
         }
         if (\array_key_exists('shipping_price', $data) && \is_int($data['shipping_price'])) {
-            $data['shipping_price'] = (float) $data['shipping_price'];
+            $data['shipping_price'] = (double) $data['shipping_price'];
         }
         if (\array_key_exists('original_total_price', $data) && \is_int($data['original_total_price'])) {
-            $data['original_total_price'] = (float) $data['original_total_price'];
+            $data['original_total_price'] = (double) $data['original_total_price'];
         }
         if (\array_key_exists('base_original_total_price', $data) && \is_int($data['base_original_total_price'])) {
-            $data['base_original_total_price'] = (float) $data['base_original_total_price'];
+            $data['base_original_total_price'] = (double) $data['base_original_total_price'];
         }
         if (\array_key_exists('negotiated_total_price', $data) && \is_int($data['negotiated_total_price'])) {
-            $data['negotiated_total_price'] = (float) $data['negotiated_total_price'];
+            $data['negotiated_total_price'] = (double) $data['negotiated_total_price'];
         }
         if (\array_key_exists('base_negotiated_total_price', $data) && \is_int($data['base_negotiated_total_price'])) {
-            $data['base_negotiated_total_price'] = (float) $data['base_negotiated_total_price'];
+            $data['base_negotiated_total_price'] = (double) $data['base_negotiated_total_price'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

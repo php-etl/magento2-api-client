@@ -45,7 +45,7 @@ class WeeeDataProductRenderWeeeAdjustmentAttributeInterface
      *
      * @return string
      */
-    public function getAmount(): string
+    public function getAmount() : string
     {
         return $this->amount;
     }
@@ -56,7 +56,7 @@ class WeeeDataProductRenderWeeeAdjustmentAttributeInterface
      *
      * @return self
      */
-    public function setAmount(string $amount): self
+    public function setAmount(string $amount) : self
     {
         $this->amount = $amount;
         return $this;
@@ -66,7 +66,7 @@ class WeeeDataProductRenderWeeeAdjustmentAttributeInterface
      *
      * @return string
      */
-    public function getTaxAmount(): string
+    public function getTaxAmount() : string
     {
         return $this->taxAmount;
     }
@@ -77,7 +77,7 @@ class WeeeDataProductRenderWeeeAdjustmentAttributeInterface
      *
      * @return self
      */
-    public function setTaxAmount(string $taxAmount): self
+    public function setTaxAmount(string $taxAmount) : self
     {
         $this->taxAmount = $taxAmount;
         return $this;
@@ -87,7 +87,7 @@ class WeeeDataProductRenderWeeeAdjustmentAttributeInterface
      *
      * @return string
      */
-    public function getTaxAmountInclTax(): string
+    public function getTaxAmountInclTax() : string
     {
         return $this->taxAmountInclTax;
     }
@@ -98,7 +98,7 @@ class WeeeDataProductRenderWeeeAdjustmentAttributeInterface
      *
      * @return self
      */
-    public function setTaxAmountInclTax(string $taxAmountInclTax): self
+    public function setTaxAmountInclTax(string $taxAmountInclTax) : self
     {
         $this->taxAmountInclTax = $taxAmountInclTax;
         return $this;
@@ -108,7 +108,7 @@ class WeeeDataProductRenderWeeeAdjustmentAttributeInterface
      *
      * @return string
      */
-    public function getAmountExclTax(): string
+    public function getAmountExclTax() : string
     {
         return $this->amountExclTax;
     }
@@ -119,7 +119,7 @@ class WeeeDataProductRenderWeeeAdjustmentAttributeInterface
      *
      * @return self
      */
-    public function setAmountExclTax(string $amountExclTax): self
+    public function setAmountExclTax(string $amountExclTax) : self
     {
         $this->amountExclTax = $amountExclTax;
         return $this;
@@ -129,7 +129,7 @@ class WeeeDataProductRenderWeeeAdjustmentAttributeInterface
      *
      * @return string
      */
-    public function getAttributeCode(): string
+    public function getAttributeCode() : string
     {
         return $this->attributeCode;
     }
@@ -140,7 +140,7 @@ class WeeeDataProductRenderWeeeAdjustmentAttributeInterface
      *
      * @return self
      */
-    public function setAttributeCode(string $attributeCode): self
+    public function setAttributeCode(string $attributeCode) : self
     {
         $this->attributeCode = $attributeCode;
         return $this;
@@ -161,7 +161,7 @@ class WeeeDataProductRenderWeeeAdjustmentAttributeInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

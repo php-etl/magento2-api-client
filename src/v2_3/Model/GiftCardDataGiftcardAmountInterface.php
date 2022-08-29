@@ -5,25 +5,25 @@ namespace Kiboko\Magento\v2_3\Model;
 class GiftCardDataGiftcardAmountInterface
 {
     /**
-     *
+     * 
      *
      * @var int
      */
     protected $attributeId;
     /**
-     *
+     * 
      *
      * @var int
      */
     protected $websiteId;
     /**
-     *
+     * 
      *
      * @var float
      */
     protected $value;
     /**
-     *
+     * 
      *
      * @var float
      */
@@ -35,85 +35,85 @@ class GiftCardDataGiftcardAmountInterface
      */
     protected $extensionAttributes;
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getAttributeId(): int
+    public function getAttributeId() : int
     {
         return $this->attributeId;
     }
     /**
-     *
+     * 
      *
      * @param int $attributeId
      *
      * @return self
      */
-    public function setAttributeId(int $attributeId): self
+    public function setAttributeId(int $attributeId) : self
     {
         $this->attributeId = $attributeId;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getWebsiteId(): int
+    public function getWebsiteId() : int
     {
         return $this->websiteId;
     }
     /**
-     *
+     * 
      *
      * @param int $websiteId
      *
      * @return self
      */
-    public function setWebsiteId(int $websiteId): self
+    public function setWebsiteId(int $websiteId) : self
     {
         $this->websiteId = $websiteId;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return float
      */
-    public function getValue(): float
+    public function getValue() : float
     {
         return $this->value;
     }
     /**
-     *
+     * 
      *
      * @param float $value
      *
      * @return self
      */
-    public function setValue(float $value): self
+    public function setValue(float $value) : self
     {
         $this->value = $value;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return float
      */
-    public function getWebsiteValue(): float
+    public function getWebsiteValue() : float
     {
         return $this->websiteValue;
     }
     /**
-     *
+     * 
      *
      * @param float $websiteValue
      *
      * @return self
      */
-    public function setWebsiteValue(float $websiteValue): self
+    public function setWebsiteValue(float $websiteValue) : self
     {
         $this->websiteValue = $websiteValue;
         return $this;
@@ -134,7 +134,7 @@ class GiftCardDataGiftcardAmountInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

@@ -57,7 +57,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return string
      */
-    public function getGiftcardAmount(): string
+    public function getGiftcardAmount() : string
     {
         return $this->giftcardAmount;
     }
@@ -68,7 +68,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return self
      */
-    public function setGiftcardAmount(string $giftcardAmount): self
+    public function setGiftcardAmount(string $giftcardAmount) : self
     {
         $this->giftcardAmount = $giftcardAmount;
         return $this;
@@ -78,7 +78,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return float
      */
-    public function getCustomGiftcardAmount(): float
+    public function getCustomGiftcardAmount() : float
     {
         return $this->customGiftcardAmount;
     }
@@ -89,7 +89,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return self
      */
-    public function setCustomGiftcardAmount(float $customGiftcardAmount): self
+    public function setCustomGiftcardAmount(float $customGiftcardAmount) : self
     {
         $this->customGiftcardAmount = $customGiftcardAmount;
         return $this;
@@ -99,7 +99,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return string
      */
-    public function getGiftcardSenderName(): string
+    public function getGiftcardSenderName() : string
     {
         return $this->giftcardSenderName;
     }
@@ -110,7 +110,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return self
      */
-    public function setGiftcardSenderName(string $giftcardSenderName): self
+    public function setGiftcardSenderName(string $giftcardSenderName) : self
     {
         $this->giftcardSenderName = $giftcardSenderName;
         return $this;
@@ -120,7 +120,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return string
      */
-    public function getGiftcardRecipientName(): string
+    public function getGiftcardRecipientName() : string
     {
         return $this->giftcardRecipientName;
     }
@@ -131,7 +131,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return self
      */
-    public function setGiftcardRecipientName(string $giftcardRecipientName): self
+    public function setGiftcardRecipientName(string $giftcardRecipientName) : self
     {
         $this->giftcardRecipientName = $giftcardRecipientName;
         return $this;
@@ -141,7 +141,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return string
      */
-    public function getGiftcardSenderEmail(): string
+    public function getGiftcardSenderEmail() : string
     {
         return $this->giftcardSenderEmail;
     }
@@ -152,7 +152,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return self
      */
-    public function setGiftcardSenderEmail(string $giftcardSenderEmail): self
+    public function setGiftcardSenderEmail(string $giftcardSenderEmail) : self
     {
         $this->giftcardSenderEmail = $giftcardSenderEmail;
         return $this;
@@ -162,7 +162,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return string
      */
-    public function getGiftcardRecipientEmail(): string
+    public function getGiftcardRecipientEmail() : string
     {
         return $this->giftcardRecipientEmail;
     }
@@ -173,7 +173,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return self
      */
-    public function setGiftcardRecipientEmail(string $giftcardRecipientEmail): self
+    public function setGiftcardRecipientEmail(string $giftcardRecipientEmail) : self
     {
         $this->giftcardRecipientEmail = $giftcardRecipientEmail;
         return $this;
@@ -183,7 +183,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return string
      */
-    public function getGiftcardMessage(): string
+    public function getGiftcardMessage() : string
     {
         return $this->giftcardMessage;
     }
@@ -194,7 +194,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return self
      */
-    public function setGiftcardMessage(string $giftcardMessage): self
+    public function setGiftcardMessage(string $giftcardMessage) : self
     {
         $this->giftcardMessage = $giftcardMessage;
         return $this;
@@ -204,7 +204,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return GiftCardDataGiftCardOptionExtensionInterface
      */
-    public function getExtensionAttributes(): GiftCardDataGiftCardOptionExtensionInterface
+    public function getExtensionAttributes() : GiftCardDataGiftCardOptionExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -215,7 +215,7 @@ class GiftCardDataGiftCardOptionInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(GiftCardDataGiftCardOptionExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(GiftCardDataGiftCardOptionExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

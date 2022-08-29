@@ -51,7 +51,7 @@ class SalesRuleDataConditionInterface
      *
      * @return string
      */
-    public function getConditionType(): string
+    public function getConditionType() : string
     {
         return $this->conditionType;
     }
@@ -62,7 +62,7 @@ class SalesRuleDataConditionInterface
      *
      * @return self
      */
-    public function setConditionType(string $conditionType): self
+    public function setConditionType(string $conditionType) : self
     {
         $this->conditionType = $conditionType;
         return $this;
@@ -72,7 +72,7 @@ class SalesRuleDataConditionInterface
      *
      * @return SalesRuleDataConditionInterface[]
      */
-    public function getConditions(): array
+    public function getConditions() : array
     {
         return $this->conditions;
     }
@@ -83,7 +83,7 @@ class SalesRuleDataConditionInterface
      *
      * @return self
      */
-    public function setConditions(array $conditions): self
+    public function setConditions(array $conditions) : self
     {
         $this->conditions = $conditions;
         return $this;
@@ -93,7 +93,7 @@ class SalesRuleDataConditionInterface
      *
      * @return string
      */
-    public function getAggregatorType(): string
+    public function getAggregatorType() : string
     {
         return $this->aggregatorType;
     }
@@ -104,7 +104,7 @@ class SalesRuleDataConditionInterface
      *
      * @return self
      */
-    public function setAggregatorType(string $aggregatorType): self
+    public function setAggregatorType(string $aggregatorType) : self
     {
         $this->aggregatorType = $aggregatorType;
         return $this;
@@ -114,7 +114,7 @@ class SalesRuleDataConditionInterface
      *
      * @return string
      */
-    public function getOperator(): string
+    public function getOperator() : string
     {
         return $this->operator;
     }
@@ -125,7 +125,7 @@ class SalesRuleDataConditionInterface
      *
      * @return self
      */
-    public function setOperator(string $operator): self
+    public function setOperator(string $operator) : self
     {
         $this->operator = $operator;
         return $this;
@@ -135,7 +135,7 @@ class SalesRuleDataConditionInterface
      *
      * @return string
      */
-    public function getAttributeName(): string
+    public function getAttributeName() : string
     {
         return $this->attributeName;
     }
@@ -146,7 +146,7 @@ class SalesRuleDataConditionInterface
      *
      * @return self
      */
-    public function setAttributeName(string $attributeName): self
+    public function setAttributeName(string $attributeName) : self
     {
         $this->attributeName = $attributeName;
         return $this;
@@ -156,7 +156,7 @@ class SalesRuleDataConditionInterface
      *
      * @return string
      */
-    public function getValue(): string
+    public function getValue() : string
     {
         return $this->value;
     }
@@ -167,7 +167,7 @@ class SalesRuleDataConditionInterface
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(string $value) : self
     {
         $this->value = $value;
         return $this;
@@ -188,7 +188,7 @@ class SalesRuleDataConditionInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

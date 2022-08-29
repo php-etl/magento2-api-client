@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class BundleDataLinkInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\BundleDataLinkInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\BundleDataLinkInterface';
     }
@@ -38,10 +37,10 @@ class BundleDataLinkInterfaceNormalizer implements DenormalizerInterface, Normal
         }
         $object = new \Kiboko\Magento\v2_3\Model\BundleDataLinkInterface();
         if (\array_key_exists('qty', $data) && \is_int($data['qty'])) {
-            $data['qty'] = (float) $data['qty'];
+            $data['qty'] = (double) $data['qty'];
         }
         if (\array_key_exists('price', $data) && \is_int($data['price'])) {
-            $data['price'] = (float) $data['price'];
+            $data['price'] = (double) $data['price'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

@@ -39,7 +39,7 @@ class CompanyDataHierarchyInterface
      *
      * @return int
      */
-    public function getStructureId(): int
+    public function getStructureId() : int
     {
         return $this->structureId;
     }
@@ -50,7 +50,7 @@ class CompanyDataHierarchyInterface
      *
      * @return self
      */
-    public function setStructureId(int $structureId): self
+    public function setStructureId(int $structureId) : self
     {
         $this->structureId = $structureId;
         return $this;
@@ -60,7 +60,7 @@ class CompanyDataHierarchyInterface
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -71,7 +71,7 @@ class CompanyDataHierarchyInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
         return $this;
@@ -81,7 +81,7 @@ class CompanyDataHierarchyInterface
      *
      * @return string
      */
-    public function getEntityType(): string
+    public function getEntityType() : string
     {
         return $this->entityType;
     }
@@ -92,7 +92,7 @@ class CompanyDataHierarchyInterface
      *
      * @return self
      */
-    public function setEntityType(string $entityType): self
+    public function setEntityType(string $entityType) : self
     {
         $this->entityType = $entityType;
         return $this;
@@ -102,7 +102,7 @@ class CompanyDataHierarchyInterface
      *
      * @return int
      */
-    public function getStructureParentId(): int
+    public function getStructureParentId() : int
     {
         return $this->structureParentId;
     }
@@ -113,7 +113,7 @@ class CompanyDataHierarchyInterface
      *
      * @return self
      */
-    public function setStructureParentId(int $structureParentId): self
+    public function setStructureParentId(int $structureParentId) : self
     {
         $this->structureParentId = $structureParentId;
         return $this;
@@ -134,7 +134,7 @@ class CompanyDataHierarchyInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

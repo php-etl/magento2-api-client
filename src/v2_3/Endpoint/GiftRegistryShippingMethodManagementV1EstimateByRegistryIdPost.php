@@ -4,29 +4,29 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class GiftRegistryShippingMethodManagementV1EstimateByRegistryIdPost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     /**
      * Estimate shipping
      *
-     * @param \Kiboko\Magento\v2_3\Model\V1GiftregistryMineEstimateShippingMethodsPostBody $giftRegistryShippingMethodManagementV1EstimateByRegistryIdPostBody
+     * @param \Kiboko\Magento\v2_3\Model\V1GiftregistryMineEstimateShippingMethodsPostBody $giftRegistryShippingMethodManagementV1EstimateByRegistryIdPostBody 
      */
     public function __construct(\Kiboko\Magento\v2_3\Model\V1GiftregistryMineEstimateShippingMethodsPostBody $giftRegistryShippingMethodManagementV1EstimateByRegistryIdPostBody)
     {
         $this->body = $giftRegistryShippingMethodManagementV1EstimateByRegistryIdPostBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'POST';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return '/V1/giftregistry/mine/estimate-shipping-methods';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -51,7 +51,7 @@ class GiftRegistryShippingMethodManagementV1EstimateByRegistryIdPost extends \Ki
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

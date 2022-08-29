@@ -4317,15 +4317,15 @@ class Client extends \Kiboko\Magento\v2_3\Runtime\Client\Client
      * Set default provider code
      *
      * @param int $userId 
-     * @param \Kiboko\Magento\v2_3\Model\V1Msp2faDefaultProviderCodeUserIdPutBody $\MSPTwoFactorAuthTfaV1SetDefaultProviderCodePutBody 
+     * @param \Kiboko\Magento\v2_3\Model\V1Msp2faDefaultProviderCodeUserIdPutBody $mSPTwoFactorAuthTfaV1SetDefaultProviderCodePutBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\v2_3\Exception\MSPTwoFactorAuthTfaV1SetDefaultProviderCodePutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\v2_3\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function mSPTwoFactorAuthTfaV1SetDefaultProviderCodePut(int $userId, \Kiboko\Magento\v2_3\Model\V1Msp2faDefaultProviderCodeUserIdPutBody $\MSPTwoFactorAuthTfaV1SetDefaultProviderCodePutBody, string $fetch = self::FETCH_OBJECT)
+    public function mSPTwoFactorAuthTfaV1SetDefaultProviderCodePut(int $userId, \Kiboko\Magento\v2_3\Model\V1Msp2faDefaultProviderCodeUserIdPutBody $mSPTwoFactorAuthTfaV1SetDefaultProviderCodePutBody, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\v2_3\Endpoint\MSPTwoFactorAuthTfaV1SetDefaultProviderCodePut($userId, $\MSPTwoFactorAuthTfaV1SetDefaultProviderCodePutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\v2_3\Endpoint\MSPTwoFactorAuthTfaV1SetDefaultProviderCodePut($userId, $mSPTwoFactorAuthTfaV1SetDefaultProviderCodePutBody), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -4418,15 +4418,15 @@ class Client extends \Kiboko\Magento\v2_3\Runtime\Client\Client
      * Set providers
      *
      * @param int $userId 
-     * @param \Kiboko\Magento\v2_3\Model\V1Msp2faUserProvidersUserIdPutBody $\MSPTwoFactorAuthTfaV1SetProvidersCodesPutBody 
+     * @param \Kiboko\Magento\v2_3\Model\V1Msp2faUserProvidersUserIdPutBody $mSPTwoFactorAuthTfaV1SetProvidersCodesPutBody 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\v2_3\Exception\MSPTwoFactorAuthTfaV1SetProvidersCodesPutUnauthorizedException
      *
      * @return null|\Kiboko\Magento\v2_3\Model\ErrorResponse|\Psr\Http\Message\ResponseInterface
      */
-    public function mSPTwoFactorAuthTfaV1SetProvidersCodesPut(int $userId, \Kiboko\Magento\v2_3\Model\V1Msp2faUserProvidersUserIdPutBody $\MSPTwoFactorAuthTfaV1SetProvidersCodesPutBody, string $fetch = self::FETCH_OBJECT)
+    public function mSPTwoFactorAuthTfaV1SetProvidersCodesPut(int $userId, \Kiboko\Magento\v2_3\Model\V1Msp2faUserProvidersUserIdPutBody $mSPTwoFactorAuthTfaV1SetProvidersCodesPutBody, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \Kiboko\Magento\v2_3\Endpoint\MSPTwoFactorAuthTfaV1SetProvidersCodesPut($userId, $\MSPTwoFactorAuthTfaV1SetProvidersCodesPutBody), $fetch);
+        return $this->executeEndpoint(new \Kiboko\Magento\v2_3\Endpoint\MSPTwoFactorAuthTfaV1SetProvidersCodesPut($userId, $mSPTwoFactorAuthTfaV1SetProvidersCodesPutBody), $fetch);
     }
     /**
      * Returns the billing address for a specified quote.

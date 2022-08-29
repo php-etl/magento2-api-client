@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogInventoryDataStockItemInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\CatalogInventoryDataStockItemInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\CatalogInventoryDataStockItemInterface';
     }
@@ -38,22 +37,22 @@ class CatalogInventoryDataStockItemInterfaceNormalizer implements DenormalizerIn
         }
         $object = new \Kiboko\Magento\v2_3\Model\CatalogInventoryDataStockItemInterface();
         if (\array_key_exists('qty', $data) && \is_int($data['qty'])) {
-            $data['qty'] = (float) $data['qty'];
+            $data['qty'] = (double) $data['qty'];
         }
         if (\array_key_exists('min_qty', $data) && \is_int($data['min_qty'])) {
-            $data['min_qty'] = (float) $data['min_qty'];
+            $data['min_qty'] = (double) $data['min_qty'];
         }
         if (\array_key_exists('min_sale_qty', $data) && \is_int($data['min_sale_qty'])) {
-            $data['min_sale_qty'] = (float) $data['min_sale_qty'];
+            $data['min_sale_qty'] = (double) $data['min_sale_qty'];
         }
         if (\array_key_exists('max_sale_qty', $data) && \is_int($data['max_sale_qty'])) {
-            $data['max_sale_qty'] = (float) $data['max_sale_qty'];
+            $data['max_sale_qty'] = (double) $data['max_sale_qty'];
         }
         if (\array_key_exists('notify_stock_qty', $data) && \is_int($data['notify_stock_qty'])) {
-            $data['notify_stock_qty'] = (float) $data['notify_stock_qty'];
+            $data['notify_stock_qty'] = (double) $data['notify_stock_qty'];
         }
         if (\array_key_exists('qty_increments', $data) && \is_int($data['qty_increments'])) {
-            $data['qty_increments'] = (float) $data['qty_increments'];
+            $data['qty_increments'] = (double) $data['qty_increments'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

@@ -63,7 +63,7 @@ class QuoteDataCurrencyInterface
      *
      * @return string
      */
-    public function getGlobalCurrencyCode(): string
+    public function getGlobalCurrencyCode() : string
     {
         return $this->globalCurrencyCode;
     }
@@ -74,7 +74,7 @@ class QuoteDataCurrencyInterface
      *
      * @return self
      */
-    public function setGlobalCurrencyCode(string $globalCurrencyCode): self
+    public function setGlobalCurrencyCode(string $globalCurrencyCode) : self
     {
         $this->globalCurrencyCode = $globalCurrencyCode;
         return $this;
@@ -84,7 +84,7 @@ class QuoteDataCurrencyInterface
      *
      * @return string
      */
-    public function getBaseCurrencyCode(): string
+    public function getBaseCurrencyCode() : string
     {
         return $this->baseCurrencyCode;
     }
@@ -95,7 +95,7 @@ class QuoteDataCurrencyInterface
      *
      * @return self
      */
-    public function setBaseCurrencyCode(string $baseCurrencyCode): self
+    public function setBaseCurrencyCode(string $baseCurrencyCode) : self
     {
         $this->baseCurrencyCode = $baseCurrencyCode;
         return $this;
@@ -105,7 +105,7 @@ class QuoteDataCurrencyInterface
      *
      * @return string
      */
-    public function getStoreCurrencyCode(): string
+    public function getStoreCurrencyCode() : string
     {
         return $this->storeCurrencyCode;
     }
@@ -116,7 +116,7 @@ class QuoteDataCurrencyInterface
      *
      * @return self
      */
-    public function setStoreCurrencyCode(string $storeCurrencyCode): self
+    public function setStoreCurrencyCode(string $storeCurrencyCode) : self
     {
         $this->storeCurrencyCode = $storeCurrencyCode;
         return $this;
@@ -126,7 +126,7 @@ class QuoteDataCurrencyInterface
      *
      * @return string
      */
-    public function getQuoteCurrencyCode(): string
+    public function getQuoteCurrencyCode() : string
     {
         return $this->quoteCurrencyCode;
     }
@@ -137,7 +137,7 @@ class QuoteDataCurrencyInterface
      *
      * @return self
      */
-    public function setQuoteCurrencyCode(string $quoteCurrencyCode): self
+    public function setQuoteCurrencyCode(string $quoteCurrencyCode) : self
     {
         $this->quoteCurrencyCode = $quoteCurrencyCode;
         return $this;
@@ -147,7 +147,7 @@ class QuoteDataCurrencyInterface
      *
      * @return float
      */
-    public function getStoreToBaseRate(): float
+    public function getStoreToBaseRate() : float
     {
         return $this->storeToBaseRate;
     }
@@ -158,7 +158,7 @@ class QuoteDataCurrencyInterface
      *
      * @return self
      */
-    public function setStoreToBaseRate(float $storeToBaseRate): self
+    public function setStoreToBaseRate(float $storeToBaseRate) : self
     {
         $this->storeToBaseRate = $storeToBaseRate;
         return $this;
@@ -168,7 +168,7 @@ class QuoteDataCurrencyInterface
      *
      * @return float
      */
-    public function getStoreToQuoteRate(): float
+    public function getStoreToQuoteRate() : float
     {
         return $this->storeToQuoteRate;
     }
@@ -179,7 +179,7 @@ class QuoteDataCurrencyInterface
      *
      * @return self
      */
-    public function setStoreToQuoteRate(float $storeToQuoteRate): self
+    public function setStoreToQuoteRate(float $storeToQuoteRate) : self
     {
         $this->storeToQuoteRate = $storeToQuoteRate;
         return $this;
@@ -189,7 +189,7 @@ class QuoteDataCurrencyInterface
      *
      * @return float
      */
-    public function getBaseToGlobalRate(): float
+    public function getBaseToGlobalRate() : float
     {
         return $this->baseToGlobalRate;
     }
@@ -200,7 +200,7 @@ class QuoteDataCurrencyInterface
      *
      * @return self
      */
-    public function setBaseToGlobalRate(float $baseToGlobalRate): self
+    public function setBaseToGlobalRate(float $baseToGlobalRate) : self
     {
         $this->baseToGlobalRate = $baseToGlobalRate;
         return $this;
@@ -210,7 +210,7 @@ class QuoteDataCurrencyInterface
      *
      * @return float
      */
-    public function getBaseToQuoteRate(): float
+    public function getBaseToQuoteRate() : float
     {
         return $this->baseToQuoteRate;
     }
@@ -221,7 +221,7 @@ class QuoteDataCurrencyInterface
      *
      * @return self
      */
-    public function setBaseToQuoteRate(float $baseToQuoteRate): self
+    public function setBaseToQuoteRate(float $baseToQuoteRate) : self
     {
         $this->baseToQuoteRate = $baseToQuoteRate;
         return $this;
@@ -242,7 +242,7 @@ class QuoteDataCurrencyInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

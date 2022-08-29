@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class QuoteDataTotalsExtensionInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataTotalsExtensionInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataTotalsExtensionInterface';
     }
@@ -38,19 +37,19 @@ class QuoteDataTotalsExtensionInterfaceNormalizer implements DenormalizerInterfa
         }
         $object = new \Kiboko\Magento\v2_3\Model\QuoteDataTotalsExtensionInterface();
         if (\array_key_exists('base_customer_balance_amount', $data) && \is_int($data['base_customer_balance_amount'])) {
-            $data['base_customer_balance_amount'] = (float) $data['base_customer_balance_amount'];
+            $data['base_customer_balance_amount'] = (double) $data['base_customer_balance_amount'];
         }
         if (\array_key_exists('customer_balance_amount', $data) && \is_int($data['customer_balance_amount'])) {
-            $data['customer_balance_amount'] = (float) $data['customer_balance_amount'];
+            $data['customer_balance_amount'] = (double) $data['customer_balance_amount'];
         }
         if (\array_key_exists('reward_points_balance', $data) && \is_int($data['reward_points_balance'])) {
-            $data['reward_points_balance'] = (float) $data['reward_points_balance'];
+            $data['reward_points_balance'] = (double) $data['reward_points_balance'];
         }
         if (\array_key_exists('reward_currency_amount', $data) && \is_int($data['reward_currency_amount'])) {
-            $data['reward_currency_amount'] = (float) $data['reward_currency_amount'];
+            $data['reward_currency_amount'] = (double) $data['reward_currency_amount'];
         }
         if (\array_key_exists('base_reward_currency_amount', $data) && \is_int($data['base_reward_currency_amount'])) {
-            $data['base_reward_currency_amount'] = (float) $data['base_reward_currency_amount'];
+            $data['base_reward_currency_amount'] = (double) $data['base_reward_currency_amount'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

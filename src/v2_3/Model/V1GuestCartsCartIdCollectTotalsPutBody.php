@@ -33,7 +33,7 @@ class V1GuestCartsCartIdCollectTotalsPutBody
      *
      * @return QuoteDataPaymentInterface
      */
-    public function getPaymentMethod(): QuoteDataPaymentInterface
+    public function getPaymentMethod() : QuoteDataPaymentInterface
     {
         return $this->paymentMethod;
     }
@@ -44,7 +44,7 @@ class V1GuestCartsCartIdCollectTotalsPutBody
      *
      * @return self
      */
-    public function setPaymentMethod(QuoteDataPaymentInterface $paymentMethod): self
+    public function setPaymentMethod(QuoteDataPaymentInterface $paymentMethod) : self
     {
         $this->paymentMethod = $paymentMethod;
         return $this;
@@ -54,7 +54,7 @@ class V1GuestCartsCartIdCollectTotalsPutBody
      *
      * @return string
      */
-    public function getShippingCarrierCode(): string
+    public function getShippingCarrierCode() : string
     {
         return $this->shippingCarrierCode;
     }
@@ -65,7 +65,7 @@ class V1GuestCartsCartIdCollectTotalsPutBody
      *
      * @return self
      */
-    public function setShippingCarrierCode(string $shippingCarrierCode): self
+    public function setShippingCarrierCode(string $shippingCarrierCode) : self
     {
         $this->shippingCarrierCode = $shippingCarrierCode;
         return $this;
@@ -75,7 +75,7 @@ class V1GuestCartsCartIdCollectTotalsPutBody
      *
      * @return string
      */
-    public function getShippingMethodCode(): string
+    public function getShippingMethodCode() : string
     {
         return $this->shippingMethodCode;
     }
@@ -86,7 +86,7 @@ class V1GuestCartsCartIdCollectTotalsPutBody
      *
      * @return self
      */
-    public function setShippingMethodCode(string $shippingMethodCode): self
+    public function setShippingMethodCode(string $shippingMethodCode) : self
     {
         $this->shippingMethodCode = $shippingMethodCode;
         return $this;
@@ -96,7 +96,7 @@ class V1GuestCartsCartIdCollectTotalsPutBody
      *
      * @return QuoteDataTotalsAdditionalDataInterface
      */
-    public function getAdditionalData(): QuoteDataTotalsAdditionalDataInterface
+    public function getAdditionalData() : QuoteDataTotalsAdditionalDataInterface
     {
         return $this->additionalData;
     }
@@ -107,7 +107,7 @@ class V1GuestCartsCartIdCollectTotalsPutBody
      *
      * @return self
      */
-    public function setAdditionalData(QuoteDataTotalsAdditionalDataInterface $additionalData): self
+    public function setAdditionalData(QuoteDataTotalsAdditionalDataInterface $additionalData) : self
     {
         $this->additionalData = $additionalData;
         return $this;

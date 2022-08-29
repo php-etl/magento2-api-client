@@ -21,7 +21,7 @@ class CustomerDataValidationResultsInterface
      *
      * @return bool
      */
-    public function getValid(): bool
+    public function getValid() : bool
     {
         return $this->valid;
     }
@@ -32,7 +32,7 @@ class CustomerDataValidationResultsInterface
      *
      * @return self
      */
-    public function setValid(bool $valid): self
+    public function setValid(bool $valid) : self
     {
         $this->valid = $valid;
         return $this;
@@ -42,7 +42,7 @@ class CustomerDataValidationResultsInterface
      *
      * @return string[]
      */
-    public function getMessages(): array
+    public function getMessages() : array
     {
         return $this->messages;
     }
@@ -53,7 +53,7 @@ class CustomerDataValidationResultsInterface
      *
      * @return self
      */
-    public function setMessages(array $messages): self
+    public function setMessages(array $messages) : self
     {
         $this->messages = $messages;
         return $this;

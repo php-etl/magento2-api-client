@@ -39,7 +39,7 @@ class InventorySourceSelectionApiDataAddressInterface
      *
      * @return string
      */
-    public function getCountry(): string
+    public function getCountry() : string
     {
         return $this->country;
     }
@@ -50,7 +50,7 @@ class InventorySourceSelectionApiDataAddressInterface
      *
      * @return self
      */
-    public function setCountry(string $country): self
+    public function setCountry(string $country) : self
     {
         $this->country = $country;
         return $this;
@@ -60,7 +60,7 @@ class InventorySourceSelectionApiDataAddressInterface
      *
      * @return string
      */
-    public function getPostcode(): string
+    public function getPostcode() : string
     {
         return $this->postcode;
     }
@@ -71,7 +71,7 @@ class InventorySourceSelectionApiDataAddressInterface
      *
      * @return self
      */
-    public function setPostcode(string $postcode): self
+    public function setPostcode(string $postcode) : self
     {
         $this->postcode = $postcode;
         return $this;
@@ -81,7 +81,7 @@ class InventorySourceSelectionApiDataAddressInterface
      *
      * @return string
      */
-    public function getStreet(): string
+    public function getStreet() : string
     {
         return $this->street;
     }
@@ -92,7 +92,7 @@ class InventorySourceSelectionApiDataAddressInterface
      *
      * @return self
      */
-    public function setStreet(string $street): self
+    public function setStreet(string $street) : self
     {
         $this->street = $street;
         return $this;
@@ -102,7 +102,7 @@ class InventorySourceSelectionApiDataAddressInterface
      *
      * @return string
      */
-    public function getRegion(): string
+    public function getRegion() : string
     {
         return $this->region;
     }
@@ -113,7 +113,7 @@ class InventorySourceSelectionApiDataAddressInterface
      *
      * @return self
      */
-    public function setRegion(string $region): self
+    public function setRegion(string $region) : self
     {
         $this->region = $region;
         return $this;
@@ -123,7 +123,7 @@ class InventorySourceSelectionApiDataAddressInterface
      *
      * @return string
      */
-    public function getCity(): string
+    public function getCity() : string
     {
         return $this->city;
     }
@@ -134,7 +134,7 @@ class InventorySourceSelectionApiDataAddressInterface
      *
      * @return self
      */
-    public function setCity(string $city): self
+    public function setCity(string $city) : self
     {
         $this->city = $city;
         return $this;

@@ -15,7 +15,7 @@ class V1ReturnsIdTrackingNumbersPostBody
      *
      * @return RmaDataTrackInterface
      */
-    public function getTrack(): RmaDataTrackInterface
+    public function getTrack() : RmaDataTrackInterface
     {
         return $this->track;
     }
@@ -26,7 +26,7 @@ class V1ReturnsIdTrackingNumbersPostBody
      *
      * @return self
      */
-    public function setTrack(RmaDataTrackInterface $track): self
+    public function setTrack(RmaDataTrackInterface $track) : self
     {
         $this->track = $track;
         return $this;

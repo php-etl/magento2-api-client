@@ -15,7 +15,7 @@ class V1ReturnsPostBody
      *
      * @return RmaDataRmaInterface
      */
-    public function getRmaDataObject(): RmaDataRmaInterface
+    public function getRmaDataObject() : RmaDataRmaInterface
     {
         return $this->rmaDataObject;
     }
@@ -26,7 +26,7 @@ class V1ReturnsPostBody
      *
      * @return self
      */
-    public function setRmaDataObject(RmaDataRmaInterface $rmaDataObject): self
+    public function setRmaDataObject(RmaDataRmaInterface $rmaDataObject) : self
     {
         $this->rmaDataObject = $rmaDataObject;
         return $this;

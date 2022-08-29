@@ -4,29 +4,29 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CustomerGroupRepositoryV1SavePost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     /**
      * Save customer group.
      *
-     * @param \Kiboko\Magento\v2_3\Model\V1CustomerGroupsPostBody $customerGroupRepositoryV1SavePostBody
+     * @param \Kiboko\Magento\v2_3\Model\V1CustomerGroupsPostBody $customerGroupRepositoryV1SavePostBody 
      */
     public function __construct(\Kiboko\Magento\v2_3\Model\V1CustomerGroupsPostBody $customerGroupRepositoryV1SavePostBody)
     {
         $this->body = $customerGroupRepositoryV1SavePostBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'POST';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return '/V1/customerGroups';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -55,7 +55,7 @@ class CustomerGroupRepositoryV1SavePost extends \Kiboko\Magento\v2_3\Runtime\Cli
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

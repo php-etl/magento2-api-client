@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class QuoteDataShippingMethodInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataShippingMethodInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataShippingMethodInterface';
     }
@@ -38,16 +37,16 @@ class QuoteDataShippingMethodInterfaceNormalizer implements DenormalizerInterfac
         }
         $object = new \Kiboko\Magento\v2_3\Model\QuoteDataShippingMethodInterface();
         if (\array_key_exists('amount', $data) && \is_int($data['amount'])) {
-            $data['amount'] = (float) $data['amount'];
+            $data['amount'] = (double) $data['amount'];
         }
         if (\array_key_exists('base_amount', $data) && \is_int($data['base_amount'])) {
-            $data['base_amount'] = (float) $data['base_amount'];
+            $data['base_amount'] = (double) $data['base_amount'];
         }
         if (\array_key_exists('price_excl_tax', $data) && \is_int($data['price_excl_tax'])) {
-            $data['price_excl_tax'] = (float) $data['price_excl_tax'];
+            $data['price_excl_tax'] = (double) $data['price_excl_tax'];
         }
         if (\array_key_exists('price_incl_tax', $data) && \is_int($data['price_incl_tax'])) {
-            $data['price_incl_tax'] = (float) $data['price_incl_tax'];
+            $data['price_incl_tax'] = (double) $data['price_incl_tax'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

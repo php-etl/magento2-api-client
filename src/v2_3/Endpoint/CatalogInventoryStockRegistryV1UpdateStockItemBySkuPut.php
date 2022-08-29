@@ -4,15 +4,14 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CatalogInventoryStockRegistryV1UpdateStockItemBySkuPut extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $productSku;
     protected $itemId;
     /**
+     * 
      *
-     *
-     * @param string $productSku
-     * @param string $itemId
-     * @param \Kiboko\Magento\v2_3\Model\V1ProductsProductSkuStockItemsItemIdPutBody $catalogInventoryStockRegistryV1UpdateStockItemBySkuPutBody
+     * @param string $productSku 
+     * @param string $itemId 
+     * @param \Kiboko\Magento\v2_3\Model\V1ProductsProductSkuStockItemsItemIdPutBody $catalogInventoryStockRegistryV1UpdateStockItemBySkuPutBody 
      */
     public function __construct(string $productSku, string $itemId, \Kiboko\Magento\v2_3\Model\V1ProductsProductSkuStockItemsItemIdPutBody $catalogInventoryStockRegistryV1UpdateStockItemBySkuPutBody)
     {
@@ -20,19 +19,20 @@ class CatalogInventoryStockRegistryV1UpdateStockItemBySkuPut extends \Kiboko\Mag
         $this->itemId = $itemId;
         $this->body = $catalogInventoryStockRegistryV1UpdateStockItemBySkuPutBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'PUT';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{productSku}', '{itemId}'), array($this->productSku, $this->itemId), '/V1/products/{productSku}/stockItems/{itemId}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -57,7 +57,7 @@ class CatalogInventoryStockRegistryV1UpdateStockItemBySkuPut extends \Kiboko\Mag
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

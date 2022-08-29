@@ -171,7 +171,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getAddressType(): string
+    public function getAddressType() : string
     {
         return $this->addressType;
     }
@@ -182,7 +182,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setAddressType(string $addressType): self
+    public function setAddressType(string $addressType) : self
     {
         $this->addressType = $addressType;
         return $this;
@@ -192,7 +192,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getCity(): string
+    public function getCity() : string
     {
         return $this->city;
     }
@@ -203,7 +203,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setCity(string $city): self
+    public function setCity(string $city) : self
     {
         $this->city = $city;
         return $this;
@@ -213,7 +213,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getCompany(): string
+    public function getCompany() : string
     {
         return $this->company;
     }
@@ -224,7 +224,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setCompany(string $company): self
+    public function setCompany(string $company) : self
     {
         $this->company = $company;
         return $this;
@@ -234,7 +234,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getCountryId(): string
+    public function getCountryId() : string
     {
         return $this->countryId;
     }
@@ -245,7 +245,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setCountryId(string $countryId): self
+    public function setCountryId(string $countryId) : self
     {
         $this->countryId = $countryId;
         return $this;
@@ -255,7 +255,7 @@ class SalesDataOrderAddressInterface
      *
      * @return int
      */
-    public function getCustomerAddressId(): int
+    public function getCustomerAddressId() : int
     {
         return $this->customerAddressId;
     }
@@ -266,7 +266,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setCustomerAddressId(int $customerAddressId): self
+    public function setCustomerAddressId(int $customerAddressId) : self
     {
         $this->customerAddressId = $customerAddressId;
         return $this;
@@ -276,7 +276,7 @@ class SalesDataOrderAddressInterface
      *
      * @return int
      */
-    public function getCustomerId(): int
+    public function getCustomerId() : int
     {
         return $this->customerId;
     }
@@ -287,7 +287,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setCustomerId(int $customerId): self
+    public function setCustomerId(int $customerId) : self
     {
         $this->customerId = $customerId;
         return $this;
@@ -297,7 +297,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail() : string
     {
         return $this->email;
     }
@@ -308,7 +308,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setEmail(string $email): self
+    public function setEmail(string $email) : self
     {
         $this->email = $email;
         return $this;
@@ -318,7 +318,7 @@ class SalesDataOrderAddressInterface
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -329,7 +329,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
         return $this;
@@ -339,7 +339,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getFax(): string
+    public function getFax() : string
     {
         return $this->fax;
     }
@@ -350,7 +350,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setFax(string $fax): self
+    public function setFax(string $fax) : self
     {
         $this->fax = $fax;
         return $this;
@@ -360,7 +360,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getFirstname(): string
+    public function getFirstname() : string
     {
         return $this->firstname;
     }
@@ -371,7 +371,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setFirstname(string $firstname): self
+    public function setFirstname(string $firstname) : self
     {
         $this->firstname = $firstname;
         return $this;
@@ -381,7 +381,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getLastname(): string
+    public function getLastname() : string
     {
         return $this->lastname;
     }
@@ -392,7 +392,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setLastname(string $lastname): self
+    public function setLastname(string $lastname) : self
     {
         $this->lastname = $lastname;
         return $this;
@@ -402,7 +402,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getMiddlename(): string
+    public function getMiddlename() : string
     {
         return $this->middlename;
     }
@@ -413,7 +413,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setMiddlename(string $middlename): self
+    public function setMiddlename(string $middlename) : self
     {
         $this->middlename = $middlename;
         return $this;
@@ -423,7 +423,7 @@ class SalesDataOrderAddressInterface
      *
      * @return int
      */
-    public function getParentId(): int
+    public function getParentId() : int
     {
         return $this->parentId;
     }
@@ -434,7 +434,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(int $parentId) : self
     {
         $this->parentId = $parentId;
         return $this;
@@ -444,7 +444,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getPostcode(): string
+    public function getPostcode() : string
     {
         return $this->postcode;
     }
@@ -455,7 +455,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setPostcode(string $postcode): self
+    public function setPostcode(string $postcode) : self
     {
         $this->postcode = $postcode;
         return $this;
@@ -465,7 +465,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getPrefix(): string
+    public function getPrefix() : string
     {
         return $this->prefix;
     }
@@ -476,7 +476,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setPrefix(string $prefix): self
+    public function setPrefix(string $prefix) : self
     {
         $this->prefix = $prefix;
         return $this;
@@ -486,7 +486,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getRegion(): string
+    public function getRegion() : string
     {
         return $this->region;
     }
@@ -497,7 +497,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setRegion(string $region): self
+    public function setRegion(string $region) : self
     {
         $this->region = $region;
         return $this;
@@ -507,7 +507,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getRegionCode(): string
+    public function getRegionCode() : string
     {
         return $this->regionCode;
     }
@@ -518,7 +518,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setRegionCode(string $regionCode): self
+    public function setRegionCode(string $regionCode) : self
     {
         $this->regionCode = $regionCode;
         return $this;
@@ -528,7 +528,7 @@ class SalesDataOrderAddressInterface
      *
      * @return int
      */
-    public function getRegionId(): int
+    public function getRegionId() : int
     {
         return $this->regionId;
     }
@@ -539,7 +539,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setRegionId(int $regionId): self
+    public function setRegionId(int $regionId) : self
     {
         $this->regionId = $regionId;
         return $this;
@@ -549,7 +549,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string[]
      */
-    public function getStreet(): array
+    public function getStreet() : array
     {
         return $this->street;
     }
@@ -560,7 +560,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setStreet(array $street): self
+    public function setStreet(array $street) : self
     {
         $this->street = $street;
         return $this;
@@ -570,7 +570,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getSuffix(): string
+    public function getSuffix() : string
     {
         return $this->suffix;
     }
@@ -581,7 +581,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setSuffix(string $suffix): self
+    public function setSuffix(string $suffix) : self
     {
         $this->suffix = $suffix;
         return $this;
@@ -591,7 +591,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getTelephone(): string
+    public function getTelephone() : string
     {
         return $this->telephone;
     }
@@ -602,7 +602,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setTelephone(string $telephone): self
+    public function setTelephone(string $telephone) : self
     {
         $this->telephone = $telephone;
         return $this;
@@ -612,7 +612,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getVatId(): string
+    public function getVatId() : string
     {
         return $this->vatId;
     }
@@ -623,7 +623,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setVatId(string $vatId): self
+    public function setVatId(string $vatId) : self
     {
         $this->vatId = $vatId;
         return $this;
@@ -633,7 +633,7 @@ class SalesDataOrderAddressInterface
      *
      * @return int
      */
-    public function getVatIsValid(): int
+    public function getVatIsValid() : int
     {
         return $this->vatIsValid;
     }
@@ -644,7 +644,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setVatIsValid(int $vatIsValid): self
+    public function setVatIsValid(int $vatIsValid) : self
     {
         $this->vatIsValid = $vatIsValid;
         return $this;
@@ -654,7 +654,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getVatRequestDate(): string
+    public function getVatRequestDate() : string
     {
         return $this->vatRequestDate;
     }
@@ -665,7 +665,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setVatRequestDate(string $vatRequestDate): self
+    public function setVatRequestDate(string $vatRequestDate) : self
     {
         $this->vatRequestDate = $vatRequestDate;
         return $this;
@@ -675,7 +675,7 @@ class SalesDataOrderAddressInterface
      *
      * @return string
      */
-    public function getVatRequestId(): string
+    public function getVatRequestId() : string
     {
         return $this->vatRequestId;
     }
@@ -686,7 +686,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setVatRequestId(string $vatRequestId): self
+    public function setVatRequestId(string $vatRequestId) : self
     {
         $this->vatRequestId = $vatRequestId;
         return $this;
@@ -696,7 +696,7 @@ class SalesDataOrderAddressInterface
      *
      * @return int
      */
-    public function getVatRequestSuccess(): int
+    public function getVatRequestSuccess() : int
     {
         return $this->vatRequestSuccess;
     }
@@ -707,7 +707,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setVatRequestSuccess(int $vatRequestSuccess): self
+    public function setVatRequestSuccess(int $vatRequestSuccess) : self
     {
         $this->vatRequestSuccess = $vatRequestSuccess;
         return $this;
@@ -728,7 +728,7 @@ class SalesDataOrderAddressInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

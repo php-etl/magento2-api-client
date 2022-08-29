@@ -45,7 +45,7 @@ class CatalogDataSpecialPriceInterface
      *
      * @return float
      */
-    public function getPrice(): float
+    public function getPrice() : float
     {
         return $this->price;
     }
@@ -56,7 +56,7 @@ class CatalogDataSpecialPriceInterface
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(float $price) : self
     {
         $this->price = $price;
         return $this;
@@ -66,7 +66,7 @@ class CatalogDataSpecialPriceInterface
      *
      * @return int
      */
-    public function getStoreId(): int
+    public function getStoreId() : int
     {
         return $this->storeId;
     }
@@ -77,7 +77,7 @@ class CatalogDataSpecialPriceInterface
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(int $storeId) : self
     {
         $this->storeId = $storeId;
         return $this;
@@ -87,7 +87,7 @@ class CatalogDataSpecialPriceInterface
      *
      * @return string
      */
-    public function getSku(): string
+    public function getSku() : string
     {
         return $this->sku;
     }
@@ -98,7 +98,7 @@ class CatalogDataSpecialPriceInterface
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(string $sku) : self
     {
         $this->sku = $sku;
         return $this;
@@ -108,7 +108,7 @@ class CatalogDataSpecialPriceInterface
      *
      * @return string
      */
-    public function getPriceFrom(): string
+    public function getPriceFrom() : string
     {
         return $this->priceFrom;
     }
@@ -119,7 +119,7 @@ class CatalogDataSpecialPriceInterface
      *
      * @return self
      */
-    public function setPriceFrom(string $priceFrom): self
+    public function setPriceFrom(string $priceFrom) : self
     {
         $this->priceFrom = $priceFrom;
         return $this;
@@ -129,7 +129,7 @@ class CatalogDataSpecialPriceInterface
      *
      * @return string
      */
-    public function getPriceTo(): string
+    public function getPriceTo() : string
     {
         return $this->priceTo;
     }
@@ -140,7 +140,7 @@ class CatalogDataSpecialPriceInterface
      *
      * @return self
      */
-    public function setPriceTo(string $priceTo): self
+    public function setPriceTo(string $priceTo) : self
     {
         $this->priceTo = $priceTo;
         return $this;
@@ -161,7 +161,7 @@ class CatalogDataSpecialPriceInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

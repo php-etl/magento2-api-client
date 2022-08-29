@@ -44,7 +44,7 @@ class SalesDataShipmentTrackCreationInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -54,7 +54,7 @@ class SalesDataShipmentTrackCreationInterface
      *
      * @return string
      */
-    public function getTrackNumber(): string
+    public function getTrackNumber() : string
     {
         return $this->trackNumber;
     }
@@ -65,7 +65,7 @@ class SalesDataShipmentTrackCreationInterface
      *
      * @return self
      */
-    public function setTrackNumber(string $trackNumber): self
+    public function setTrackNumber(string $trackNumber) : self
     {
         $this->trackNumber = $trackNumber;
         return $this;
@@ -75,7 +75,7 @@ class SalesDataShipmentTrackCreationInterface
      *
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle() : string
     {
         return $this->title;
     }
@@ -86,7 +86,7 @@ class SalesDataShipmentTrackCreationInterface
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(string $title) : self
     {
         $this->title = $title;
         return $this;
@@ -96,7 +96,7 @@ class SalesDataShipmentTrackCreationInterface
      *
      * @return string
      */
-    public function getCarrierCode(): string
+    public function getCarrierCode() : string
     {
         return $this->carrierCode;
     }
@@ -107,7 +107,7 @@ class SalesDataShipmentTrackCreationInterface
      *
      * @return self
      */
-    public function setCarrierCode(string $carrierCode): self
+    public function setCarrierCode(string $carrierCode) : self
     {
         $this->carrierCode = $carrierCode;
         return $this;

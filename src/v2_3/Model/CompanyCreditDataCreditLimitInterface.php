@@ -63,7 +63,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -74,7 +74,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -84,7 +84,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return int
      */
-    public function getCompanyId(): int
+    public function getCompanyId() : int
     {
         return $this->companyId;
     }
@@ -95,7 +95,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return self
      */
-    public function setCompanyId(int $companyId): self
+    public function setCompanyId(int $companyId) : self
     {
         $this->companyId = $companyId;
         return $this;
@@ -105,7 +105,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return float
      */
-    public function getCreditLimit(): float
+    public function getCreditLimit() : float
     {
         return $this->creditLimit;
     }
@@ -116,7 +116,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return self
      */
-    public function setCreditLimit(float $creditLimit): self
+    public function setCreditLimit(float $creditLimit) : self
     {
         $this->creditLimit = $creditLimit;
         return $this;
@@ -126,7 +126,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return float
      */
-    public function getBalance(): float
+    public function getBalance() : float
     {
         return $this->balance;
     }
@@ -137,7 +137,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return self
      */
-    public function setBalance(float $balance): self
+    public function setBalance(float $balance) : self
     {
         $this->balance = $balance;
         return $this;
@@ -147,7 +147,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return string
      */
-    public function getCurrencyCode(): string
+    public function getCurrencyCode() : string
     {
         return $this->currencyCode;
     }
@@ -158,7 +158,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return self
      */
-    public function setCurrencyCode(string $currencyCode): self
+    public function setCurrencyCode(string $currencyCode) : self
     {
         $this->currencyCode = $currencyCode;
         return $this;
@@ -168,7 +168,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return bool
      */
-    public function getExceedLimit(): bool
+    public function getExceedLimit() : bool
     {
         return $this->exceedLimit;
     }
@@ -179,7 +179,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return self
      */
-    public function setExceedLimit(bool $exceedLimit): self
+    public function setExceedLimit(bool $exceedLimit) : self
     {
         $this->exceedLimit = $exceedLimit;
         return $this;
@@ -189,7 +189,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return float
      */
-    public function getAvailableLimit(): float
+    public function getAvailableLimit() : float
     {
         return $this->availableLimit;
     }
@@ -200,7 +200,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return self
      */
-    public function setAvailableLimit(float $availableLimit): self
+    public function setAvailableLimit(float $availableLimit) : self
     {
         $this->availableLimit = $availableLimit;
         return $this;
@@ -210,7 +210,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return string
      */
-    public function getCreditComment(): string
+    public function getCreditComment() : string
     {
         return $this->creditComment;
     }
@@ -221,7 +221,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return self
      */
-    public function setCreditComment(string $creditComment): self
+    public function setCreditComment(string $creditComment) : self
     {
         $this->creditComment = $creditComment;
         return $this;
@@ -242,7 +242,7 @@ class CompanyCreditDataCreditLimitInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

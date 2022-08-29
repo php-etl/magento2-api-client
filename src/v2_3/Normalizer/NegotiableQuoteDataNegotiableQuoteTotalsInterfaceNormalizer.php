@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class NegotiableQuoteDataNegotiableQuoteTotalsInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\NegotiableQuoteDataNegotiableQuoteTotalsInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\NegotiableQuoteDataNegotiableQuoteTotalsInterface';
     }
@@ -38,34 +37,34 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterfaceNormalizer implements Den
         }
         $object = new \Kiboko\Magento\v2_3\Model\NegotiableQuoteDataNegotiableQuoteTotalsInterface();
         if (\array_key_exists('base_to_quote_rate', $data) && \is_int($data['base_to_quote_rate'])) {
-            $data['base_to_quote_rate'] = (float) $data['base_to_quote_rate'];
+            $data['base_to_quote_rate'] = (double) $data['base_to_quote_rate'];
         }
         if (\array_key_exists('cost_total', $data) && \is_int($data['cost_total'])) {
-            $data['cost_total'] = (float) $data['cost_total'];
+            $data['cost_total'] = (double) $data['cost_total'];
         }
         if (\array_key_exists('base_cost_total', $data) && \is_int($data['base_cost_total'])) {
-            $data['base_cost_total'] = (float) $data['base_cost_total'];
+            $data['base_cost_total'] = (double) $data['base_cost_total'];
         }
         if (\array_key_exists('original_total', $data) && \is_int($data['original_total'])) {
-            $data['original_total'] = (float) $data['original_total'];
+            $data['original_total'] = (double) $data['original_total'];
         }
         if (\array_key_exists('base_original_total', $data) && \is_int($data['base_original_total'])) {
-            $data['base_original_total'] = (float) $data['base_original_total'];
+            $data['base_original_total'] = (double) $data['base_original_total'];
         }
         if (\array_key_exists('original_tax', $data) && \is_int($data['original_tax'])) {
-            $data['original_tax'] = (float) $data['original_tax'];
+            $data['original_tax'] = (double) $data['original_tax'];
         }
         if (\array_key_exists('base_original_tax', $data) && \is_int($data['base_original_tax'])) {
-            $data['base_original_tax'] = (float) $data['base_original_tax'];
+            $data['base_original_tax'] = (double) $data['base_original_tax'];
         }
         if (\array_key_exists('original_price_incl_tax', $data) && \is_int($data['original_price_incl_tax'])) {
-            $data['original_price_incl_tax'] = (float) $data['original_price_incl_tax'];
+            $data['original_price_incl_tax'] = (double) $data['original_price_incl_tax'];
         }
         if (\array_key_exists('base_original_price_incl_tax', $data) && \is_int($data['base_original_price_incl_tax'])) {
-            $data['base_original_price_incl_tax'] = (float) $data['base_original_price_incl_tax'];
+            $data['base_original_price_incl_tax'] = (double) $data['base_original_price_incl_tax'];
         }
         if (\array_key_exists('negotiated_price_value', $data) && \is_int($data['negotiated_price_value'])) {
-            $data['negotiated_price_value'] = (float) $data['negotiated_price_value'];
+            $data['negotiated_price_value'] = (double) $data['negotiated_price_value'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

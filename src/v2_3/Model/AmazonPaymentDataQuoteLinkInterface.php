@@ -5,7 +5,7 @@ namespace Kiboko\Magento\v2_3\Model;
 class AmazonPaymentDataQuoteLinkInterface
 {
     /**
-     *
+     * 
      *
      * @var string
      */
@@ -35,22 +35,22 @@ class AmazonPaymentDataQuoteLinkInterface
      */
     protected $confirmed;
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getId(): string
+    public function getId() : string
     {
         return $this->id;
     }
     /**
-     *
+     * 
      *
      * @param string $id
      *
      * @return self
      */
-    public function setId(string $id): self
+    public function setId(string $id) : self
     {
         $this->id = $id;
         return $this;
@@ -60,7 +60,7 @@ class AmazonPaymentDataQuoteLinkInterface
      *
      * @return string
      */
-    public function getAmazonOrderReferenceId(): string
+    public function getAmazonOrderReferenceId() : string
     {
         return $this->amazonOrderReferenceId;
     }
@@ -71,7 +71,7 @@ class AmazonPaymentDataQuoteLinkInterface
      *
      * @return self
      */
-    public function setAmazonOrderReferenceId(string $amazonOrderReferenceId): self
+    public function setAmazonOrderReferenceId(string $amazonOrderReferenceId) : self
     {
         $this->amazonOrderReferenceId = $amazonOrderReferenceId;
         return $this;
@@ -81,7 +81,7 @@ class AmazonPaymentDataQuoteLinkInterface
      *
      * @return int
      */
-    public function getQuoteId(): int
+    public function getQuoteId() : int
     {
         return $this->quoteId;
     }
@@ -92,7 +92,7 @@ class AmazonPaymentDataQuoteLinkInterface
      *
      * @return self
      */
-    public function setQuoteId(int $quoteId): self
+    public function setQuoteId(int $quoteId) : self
     {
         $this->quoteId = $quoteId;
         return $this;
@@ -102,7 +102,7 @@ class AmazonPaymentDataQuoteLinkInterface
      *
      * @return string
      */
-    public function getSandboxSimulationReference(): string
+    public function getSandboxSimulationReference() : string
     {
         return $this->sandboxSimulationReference;
     }
@@ -113,7 +113,7 @@ class AmazonPaymentDataQuoteLinkInterface
      *
      * @return self
      */
-    public function setSandboxSimulationReference(string $sandboxSimulationReference): self
+    public function setSandboxSimulationReference(string $sandboxSimulationReference) : self
     {
         $this->sandboxSimulationReference = $sandboxSimulationReference;
         return $this;
@@ -123,7 +123,7 @@ class AmazonPaymentDataQuoteLinkInterface
      *
      * @return bool
      */
-    public function getConfirmed(): bool
+    public function getConfirmed() : bool
     {
         return $this->confirmed;
     }
@@ -134,7 +134,7 @@ class AmazonPaymentDataQuoteLinkInterface
      *
      * @return self
      */
-    public function setConfirmed(bool $confirmed): self
+    public function setConfirmed(bool $confirmed) : self
     {
         $this->confirmed = $confirmed;
         return $this;

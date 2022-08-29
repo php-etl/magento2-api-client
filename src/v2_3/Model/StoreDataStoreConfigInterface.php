@@ -111,7 +111,7 @@ class StoreDataStoreConfigInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -122,7 +122,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -132,7 +132,7 @@ class StoreDataStoreConfigInterface
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -143,7 +143,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
@@ -153,7 +153,7 @@ class StoreDataStoreConfigInterface
      *
      * @return int
      */
-    public function getWebsiteId(): int
+    public function getWebsiteId() : int
     {
         return $this->websiteId;
     }
@@ -164,7 +164,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setWebsiteId(int $websiteId): self
+    public function setWebsiteId(int $websiteId) : self
     {
         $this->websiteId = $websiteId;
         return $this;
@@ -174,7 +174,7 @@ class StoreDataStoreConfigInterface
      *
      * @return string
      */
-    public function getLocale(): string
+    public function getLocale() : string
     {
         return $this->locale;
     }
@@ -185,7 +185,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setLocale(string $locale): self
+    public function setLocale(string $locale) : self
     {
         $this->locale = $locale;
         return $this;
@@ -195,7 +195,7 @@ class StoreDataStoreConfigInterface
      *
      * @return string
      */
-    public function getBaseCurrencyCode(): string
+    public function getBaseCurrencyCode() : string
     {
         return $this->baseCurrencyCode;
     }
@@ -206,7 +206,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setBaseCurrencyCode(string $baseCurrencyCode): self
+    public function setBaseCurrencyCode(string $baseCurrencyCode) : self
     {
         $this->baseCurrencyCode = $baseCurrencyCode;
         return $this;
@@ -216,7 +216,7 @@ class StoreDataStoreConfigInterface
      *
      * @return string
      */
-    public function getDefaultDisplayCurrencyCode(): string
+    public function getDefaultDisplayCurrencyCode() : string
     {
         return $this->defaultDisplayCurrencyCode;
     }
@@ -227,7 +227,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setDefaultDisplayCurrencyCode(string $defaultDisplayCurrencyCode): self
+    public function setDefaultDisplayCurrencyCode(string $defaultDisplayCurrencyCode) : self
     {
         $this->defaultDisplayCurrencyCode = $defaultDisplayCurrencyCode;
         return $this;
@@ -237,7 +237,7 @@ class StoreDataStoreConfigInterface
      *
      * @return string
      */
-    public function getTimezone(): string
+    public function getTimezone() : string
     {
         return $this->timezone;
     }
@@ -248,7 +248,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setTimezone(string $timezone): self
+    public function setTimezone(string $timezone) : self
     {
         $this->timezone = $timezone;
         return $this;
@@ -258,7 +258,7 @@ class StoreDataStoreConfigInterface
      *
      * @return string
      */
-    public function getWeightUnit(): string
+    public function getWeightUnit() : string
     {
         return $this->weightUnit;
     }
@@ -269,7 +269,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setWeightUnit(string $weightUnit): self
+    public function setWeightUnit(string $weightUnit) : self
     {
         $this->weightUnit = $weightUnit;
         return $this;
@@ -279,7 +279,7 @@ class StoreDataStoreConfigInterface
      *
      * @return string
      */
-    public function getBaseUrl(): string
+    public function getBaseUrl() : string
     {
         return $this->baseUrl;
     }
@@ -290,7 +290,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setBaseUrl(string $baseUrl): self
+    public function setBaseUrl(string $baseUrl) : self
     {
         $this->baseUrl = $baseUrl;
         return $this;
@@ -300,7 +300,7 @@ class StoreDataStoreConfigInterface
      *
      * @return string
      */
-    public function getBaseLinkUrl(): string
+    public function getBaseLinkUrl() : string
     {
         return $this->baseLinkUrl;
     }
@@ -311,7 +311,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setBaseLinkUrl(string $baseLinkUrl): self
+    public function setBaseLinkUrl(string $baseLinkUrl) : self
     {
         $this->baseLinkUrl = $baseLinkUrl;
         return $this;
@@ -321,7 +321,7 @@ class StoreDataStoreConfigInterface
      *
      * @return string
      */
-    public function getBaseStaticUrl(): string
+    public function getBaseStaticUrl() : string
     {
         return $this->baseStaticUrl;
     }
@@ -332,7 +332,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setBaseStaticUrl(string $baseStaticUrl): self
+    public function setBaseStaticUrl(string $baseStaticUrl) : self
     {
         $this->baseStaticUrl = $baseStaticUrl;
         return $this;
@@ -342,7 +342,7 @@ class StoreDataStoreConfigInterface
      *
      * @return string
      */
-    public function getBaseMediaUrl(): string
+    public function getBaseMediaUrl() : string
     {
         return $this->baseMediaUrl;
     }
@@ -353,7 +353,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setBaseMediaUrl(string $baseMediaUrl): self
+    public function setBaseMediaUrl(string $baseMediaUrl) : self
     {
         $this->baseMediaUrl = $baseMediaUrl;
         return $this;
@@ -363,7 +363,7 @@ class StoreDataStoreConfigInterface
      *
      * @return string
      */
-    public function getSecureBaseUrl(): string
+    public function getSecureBaseUrl() : string
     {
         return $this->secureBaseUrl;
     }
@@ -374,7 +374,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setSecureBaseUrl(string $secureBaseUrl): self
+    public function setSecureBaseUrl(string $secureBaseUrl) : self
     {
         $this->secureBaseUrl = $secureBaseUrl;
         return $this;
@@ -384,7 +384,7 @@ class StoreDataStoreConfigInterface
      *
      * @return string
      */
-    public function getSecureBaseLinkUrl(): string
+    public function getSecureBaseLinkUrl() : string
     {
         return $this->secureBaseLinkUrl;
     }
@@ -395,7 +395,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setSecureBaseLinkUrl(string $secureBaseLinkUrl): self
+    public function setSecureBaseLinkUrl(string $secureBaseLinkUrl) : self
     {
         $this->secureBaseLinkUrl = $secureBaseLinkUrl;
         return $this;
@@ -405,7 +405,7 @@ class StoreDataStoreConfigInterface
      *
      * @return string
      */
-    public function getSecureBaseStaticUrl(): string
+    public function getSecureBaseStaticUrl() : string
     {
         return $this->secureBaseStaticUrl;
     }
@@ -416,7 +416,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setSecureBaseStaticUrl(string $secureBaseStaticUrl): self
+    public function setSecureBaseStaticUrl(string $secureBaseStaticUrl) : self
     {
         $this->secureBaseStaticUrl = $secureBaseStaticUrl;
         return $this;
@@ -426,7 +426,7 @@ class StoreDataStoreConfigInterface
      *
      * @return string
      */
-    public function getSecureBaseMediaUrl(): string
+    public function getSecureBaseMediaUrl() : string
     {
         return $this->secureBaseMediaUrl;
     }
@@ -437,7 +437,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setSecureBaseMediaUrl(string $secureBaseMediaUrl): self
+    public function setSecureBaseMediaUrl(string $secureBaseMediaUrl) : self
     {
         $this->secureBaseMediaUrl = $secureBaseMediaUrl;
         return $this;
@@ -458,7 +458,7 @@ class StoreDataStoreConfigInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

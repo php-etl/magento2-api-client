@@ -135,7 +135,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return string
      */
-    public function getFrontendInput(): string
+    public function getFrontendInput() : string
     {
         return $this->frontendInput;
     }
@@ -146,7 +146,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setFrontendInput(string $frontendInput): self
+    public function setFrontendInput(string $frontendInput) : self
     {
         $this->frontendInput = $frontendInput;
         return $this;
@@ -156,7 +156,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return string
      */
-    public function getInputFilter(): string
+    public function getInputFilter() : string
     {
         return $this->inputFilter;
     }
@@ -167,7 +167,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setInputFilter(string $inputFilter): self
+    public function setInputFilter(string $inputFilter) : self
     {
         $this->inputFilter = $inputFilter;
         return $this;
@@ -177,7 +177,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return string
      */
-    public function getStoreLabel(): string
+    public function getStoreLabel() : string
     {
         return $this->storeLabel;
     }
@@ -188,7 +188,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setStoreLabel(string $storeLabel): self
+    public function setStoreLabel(string $storeLabel) : self
     {
         $this->storeLabel = $storeLabel;
         return $this;
@@ -198,7 +198,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return CustomerDataValidationRuleInterface[]
      */
-    public function getValidationRules(): array
+    public function getValidationRules() : array
     {
         return $this->validationRules;
     }
@@ -209,7 +209,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setValidationRules(array $validationRules): self
+    public function setValidationRules(array $validationRules) : self
     {
         $this->validationRules = $validationRules;
         return $this;
@@ -219,7 +219,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return int
      */
-    public function getMultilineCount(): int
+    public function getMultilineCount() : int
     {
         return $this->multilineCount;
     }
@@ -230,7 +230,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setMultilineCount(int $multilineCount): self
+    public function setMultilineCount(int $multilineCount) : self
     {
         $this->multilineCount = $multilineCount;
         return $this;
@@ -240,7 +240,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return bool
      */
-    public function getVisible(): bool
+    public function getVisible() : bool
     {
         return $this->visible;
     }
@@ -251,7 +251,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setVisible(bool $visible): self
+    public function setVisible(bool $visible) : self
     {
         $this->visible = $visible;
         return $this;
@@ -261,7 +261,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return bool
      */
-    public function getRequired(): bool
+    public function getRequired() : bool
     {
         return $this->required;
     }
@@ -272,7 +272,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setRequired(bool $required): self
+    public function setRequired(bool $required) : self
     {
         $this->required = $required;
         return $this;
@@ -282,7 +282,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return string
      */
-    public function getDataModel(): string
+    public function getDataModel() : string
     {
         return $this->dataModel;
     }
@@ -293,7 +293,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setDataModel(string $dataModel): self
+    public function setDataModel(string $dataModel) : self
     {
         $this->dataModel = $dataModel;
         return $this;
@@ -303,7 +303,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return CustomerDataOptionInterface[]
      */
-    public function getOptions(): array
+    public function getOptions() : array
     {
         return $this->options;
     }
@@ -314,7 +314,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setOptions(array $options): self
+    public function setOptions(array $options) : self
     {
         $this->options = $options;
         return $this;
@@ -324,7 +324,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return string
      */
-    public function getFrontendClass(): string
+    public function getFrontendClass() : string
     {
         return $this->frontendClass;
     }
@@ -335,7 +335,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setFrontendClass(string $frontendClass): self
+    public function setFrontendClass(string $frontendClass) : self
     {
         $this->frontendClass = $frontendClass;
         return $this;
@@ -345,7 +345,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return bool
      */
-    public function getUserDefined(): bool
+    public function getUserDefined() : bool
     {
         return $this->userDefined;
     }
@@ -356,7 +356,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setUserDefined(bool $userDefined): self
+    public function setUserDefined(bool $userDefined) : self
     {
         $this->userDefined = $userDefined;
         return $this;
@@ -366,7 +366,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return int
      */
-    public function getSortOrder(): int
+    public function getSortOrder() : int
     {
         return $this->sortOrder;
     }
@@ -377,7 +377,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setSortOrder(int $sortOrder): self
+    public function setSortOrder(int $sortOrder) : self
     {
         $this->sortOrder = $sortOrder;
         return $this;
@@ -387,7 +387,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return string
      */
-    public function getFrontendLabel(): string
+    public function getFrontendLabel() : string
     {
         return $this->frontendLabel;
     }
@@ -398,7 +398,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setFrontendLabel(string $frontendLabel): self
+    public function setFrontendLabel(string $frontendLabel) : self
     {
         $this->frontendLabel = $frontendLabel;
         return $this;
@@ -408,7 +408,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return string
      */
-    public function getNote(): string
+    public function getNote() : string
     {
         return $this->note;
     }
@@ -419,7 +419,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setNote(string $note): self
+    public function setNote(string $note) : self
     {
         $this->note = $note;
         return $this;
@@ -429,7 +429,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return bool
      */
-    public function getSystem(): bool
+    public function getSystem() : bool
     {
         return $this->system;
     }
@@ -440,7 +440,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setSystem(bool $system): self
+    public function setSystem(bool $system) : self
     {
         $this->system = $system;
         return $this;
@@ -450,7 +450,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return string
      */
-    public function getBackendType(): string
+    public function getBackendType() : string
     {
         return $this->backendType;
     }
@@ -461,7 +461,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setBackendType(string $backendType): self
+    public function setBackendType(string $backendType) : self
     {
         $this->backendType = $backendType;
         return $this;
@@ -471,7 +471,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return bool
      */
-    public function getIsUsedInGrid(): bool
+    public function getIsUsedInGrid() : bool
     {
         return $this->isUsedInGrid;
     }
@@ -482,7 +482,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setIsUsedInGrid(bool $isUsedInGrid): self
+    public function setIsUsedInGrid(bool $isUsedInGrid) : self
     {
         $this->isUsedInGrid = $isUsedInGrid;
         return $this;
@@ -492,7 +492,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return bool
      */
-    public function getIsVisibleInGrid(): bool
+    public function getIsVisibleInGrid() : bool
     {
         return $this->isVisibleInGrid;
     }
@@ -503,7 +503,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setIsVisibleInGrid(bool $isVisibleInGrid): self
+    public function setIsVisibleInGrid(bool $isVisibleInGrid) : self
     {
         $this->isVisibleInGrid = $isVisibleInGrid;
         return $this;
@@ -513,7 +513,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return bool
      */
-    public function getIsFilterableInGrid(): bool
+    public function getIsFilterableInGrid() : bool
     {
         return $this->isFilterableInGrid;
     }
@@ -524,7 +524,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setIsFilterableInGrid(bool $isFilterableInGrid): self
+    public function setIsFilterableInGrid(bool $isFilterableInGrid) : self
     {
         $this->isFilterableInGrid = $isFilterableInGrid;
         return $this;
@@ -534,7 +534,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return bool
      */
-    public function getIsSearchableInGrid(): bool
+    public function getIsSearchableInGrid() : bool
     {
         return $this->isSearchableInGrid;
     }
@@ -545,7 +545,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setIsSearchableInGrid(bool $isSearchableInGrid): self
+    public function setIsSearchableInGrid(bool $isSearchableInGrid) : self
     {
         $this->isSearchableInGrid = $isSearchableInGrid;
         return $this;
@@ -555,7 +555,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return string
      */
-    public function getAttributeCode(): string
+    public function getAttributeCode() : string
     {
         return $this->attributeCode;
     }
@@ -566,7 +566,7 @@ class CustomerDataAttributeMetadataInterface
      *
      * @return self
      */
-    public function setAttributeCode(string $attributeCode): self
+    public function setAttributeCode(string $attributeCode) : self
     {
         $this->attributeCode = $attributeCode;
         return $this;

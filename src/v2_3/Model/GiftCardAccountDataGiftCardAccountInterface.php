@@ -45,7 +45,7 @@ class GiftCardAccountDataGiftCardAccountInterface
      *
      * @return string[]
      */
-    public function getGiftCards(): array
+    public function getGiftCards() : array
     {
         return $this->giftCards;
     }
@@ -56,7 +56,7 @@ class GiftCardAccountDataGiftCardAccountInterface
      *
      * @return self
      */
-    public function setGiftCards(array $giftCards): self
+    public function setGiftCards(array $giftCards) : self
     {
         $this->giftCards = $giftCards;
         return $this;
@@ -66,7 +66,7 @@ class GiftCardAccountDataGiftCardAccountInterface
      *
      * @return float
      */
-    public function getGiftCardsAmount(): float
+    public function getGiftCardsAmount() : float
     {
         return $this->giftCardsAmount;
     }
@@ -77,7 +77,7 @@ class GiftCardAccountDataGiftCardAccountInterface
      *
      * @return self
      */
-    public function setGiftCardsAmount(float $giftCardsAmount): self
+    public function setGiftCardsAmount(float $giftCardsAmount) : self
     {
         $this->giftCardsAmount = $giftCardsAmount;
         return $this;
@@ -87,7 +87,7 @@ class GiftCardAccountDataGiftCardAccountInterface
      *
      * @return float
      */
-    public function getBaseGiftCardsAmount(): float
+    public function getBaseGiftCardsAmount() : float
     {
         return $this->baseGiftCardsAmount;
     }
@@ -98,7 +98,7 @@ class GiftCardAccountDataGiftCardAccountInterface
      *
      * @return self
      */
-    public function setBaseGiftCardsAmount(float $baseGiftCardsAmount): self
+    public function setBaseGiftCardsAmount(float $baseGiftCardsAmount) : self
     {
         $this->baseGiftCardsAmount = $baseGiftCardsAmount;
         return $this;
@@ -108,7 +108,7 @@ class GiftCardAccountDataGiftCardAccountInterface
      *
      * @return float
      */
-    public function getGiftCardsAmountUsed(): float
+    public function getGiftCardsAmountUsed() : float
     {
         return $this->giftCardsAmountUsed;
     }
@@ -119,7 +119,7 @@ class GiftCardAccountDataGiftCardAccountInterface
      *
      * @return self
      */
-    public function setGiftCardsAmountUsed(float $giftCardsAmountUsed): self
+    public function setGiftCardsAmountUsed(float $giftCardsAmountUsed) : self
     {
         $this->giftCardsAmountUsed = $giftCardsAmountUsed;
         return $this;
@@ -129,7 +129,7 @@ class GiftCardAccountDataGiftCardAccountInterface
      *
      * @return float
      */
-    public function getBaseGiftCardsAmountUsed(): float
+    public function getBaseGiftCardsAmountUsed() : float
     {
         return $this->baseGiftCardsAmountUsed;
     }
@@ -140,7 +140,7 @@ class GiftCardAccountDataGiftCardAccountInterface
      *
      * @return self
      */
-    public function setBaseGiftCardsAmountUsed(float $baseGiftCardsAmountUsed): self
+    public function setBaseGiftCardsAmountUsed(float $baseGiftCardsAmountUsed) : self
     {
         $this->baseGiftCardsAmountUsed = $baseGiftCardsAmountUsed;
         return $this;
@@ -161,7 +161,7 @@ class GiftCardAccountDataGiftCardAccountInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

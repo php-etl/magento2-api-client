@@ -4,33 +4,33 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class ConfigurableProductOptionRepositoryV1DeleteByIdDelete extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $sku;
     protected $id;
     /**
      * Remove option from configurable product
      *
-     * @param string $sku
-     * @param int $id
+     * @param string $sku 
+     * @param int $id 
      */
     public function __construct(string $sku, int $id)
     {
         $this->sku = $sku;
         $this->id = $id;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'DELETE';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{sku}', '{id}'), array($this->sku, $this->id), '/V1/configurable-products/{sku}/options/{id}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -55,7 +55,7 @@ class ConfigurableProductOptionRepositoryV1DeleteByIdDelete extends \Kiboko\Mage
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

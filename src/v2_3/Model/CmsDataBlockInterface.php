@@ -51,7 +51,7 @@ class CmsDataBlockInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -62,7 +62,7 @@ class CmsDataBlockInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -72,7 +72,7 @@ class CmsDataBlockInterface
      *
      * @return string
      */
-    public function getIdentifier(): string
+    public function getIdentifier() : string
     {
         return $this->identifier;
     }
@@ -83,7 +83,7 @@ class CmsDataBlockInterface
      *
      * @return self
      */
-    public function setIdentifier(string $identifier): self
+    public function setIdentifier(string $identifier) : self
     {
         $this->identifier = $identifier;
         return $this;
@@ -93,7 +93,7 @@ class CmsDataBlockInterface
      *
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle() : string
     {
         return $this->title;
     }
@@ -104,7 +104,7 @@ class CmsDataBlockInterface
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(string $title) : self
     {
         $this->title = $title;
         return $this;
@@ -114,7 +114,7 @@ class CmsDataBlockInterface
      *
      * @return string
      */
-    public function getContent(): string
+    public function getContent() : string
     {
         return $this->content;
     }
@@ -125,7 +125,7 @@ class CmsDataBlockInterface
      *
      * @return self
      */
-    public function setContent(string $content): self
+    public function setContent(string $content) : self
     {
         $this->content = $content;
         return $this;
@@ -135,7 +135,7 @@ class CmsDataBlockInterface
      *
      * @return string
      */
-    public function getCreationTime(): string
+    public function getCreationTime() : string
     {
         return $this->creationTime;
     }
@@ -146,7 +146,7 @@ class CmsDataBlockInterface
      *
      * @return self
      */
-    public function setCreationTime(string $creationTime): self
+    public function setCreationTime(string $creationTime) : self
     {
         $this->creationTime = $creationTime;
         return $this;
@@ -156,7 +156,7 @@ class CmsDataBlockInterface
      *
      * @return string
      */
-    public function getUpdateTime(): string
+    public function getUpdateTime() : string
     {
         return $this->updateTime;
     }
@@ -167,7 +167,7 @@ class CmsDataBlockInterface
      *
      * @return self
      */
-    public function setUpdateTime(string $updateTime): self
+    public function setUpdateTime(string $updateTime) : self
     {
         $this->updateTime = $updateTime;
         return $this;
@@ -177,7 +177,7 @@ class CmsDataBlockInterface
      *
      * @return bool
      */
-    public function getActive(): bool
+    public function getActive() : bool
     {
         return $this->active;
     }
@@ -188,7 +188,7 @@ class CmsDataBlockInterface
      *
      * @return self
      */
-    public function setActive(bool $active): self
+    public function setActive(bool $active) : self
     {
         $this->active = $active;
         return $this;

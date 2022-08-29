@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CatalogDataProductRenderPriceInfoInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataProductRenderPriceInfoInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataProductRenderPriceInfoInterface';
     }
@@ -38,25 +37,25 @@ class CatalogDataProductRenderPriceInfoInterfaceNormalizer implements Denormaliz
         }
         $object = new \Kiboko\Magento\v2_3\Model\CatalogDataProductRenderPriceInfoInterface();
         if (\array_key_exists('final_price', $data) && \is_int($data['final_price'])) {
-            $data['final_price'] = (float) $data['final_price'];
+            $data['final_price'] = (double) $data['final_price'];
         }
         if (\array_key_exists('max_price', $data) && \is_int($data['max_price'])) {
-            $data['max_price'] = (float) $data['max_price'];
+            $data['max_price'] = (double) $data['max_price'];
         }
         if (\array_key_exists('max_regular_price', $data) && \is_int($data['max_regular_price'])) {
-            $data['max_regular_price'] = (float) $data['max_regular_price'];
+            $data['max_regular_price'] = (double) $data['max_regular_price'];
         }
         if (\array_key_exists('minimal_regular_price', $data) && \is_int($data['minimal_regular_price'])) {
-            $data['minimal_regular_price'] = (float) $data['minimal_regular_price'];
+            $data['minimal_regular_price'] = (double) $data['minimal_regular_price'];
         }
         if (\array_key_exists('special_price', $data) && \is_int($data['special_price'])) {
-            $data['special_price'] = (float) $data['special_price'];
+            $data['special_price'] = (double) $data['special_price'];
         }
         if (\array_key_exists('minimal_price', $data) && \is_int($data['minimal_price'])) {
-            $data['minimal_price'] = (float) $data['minimal_price'];
+            $data['minimal_price'] = (double) $data['minimal_price'];
         }
         if (\array_key_exists('regular_price', $data) && \is_int($data['regular_price'])) {
-            $data['regular_price'] = (float) $data['regular_price'];
+            $data['regular_price'] = (double) $data['regular_price'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

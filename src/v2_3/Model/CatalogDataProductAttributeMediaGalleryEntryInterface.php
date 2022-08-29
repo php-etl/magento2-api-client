@@ -63,7 +63,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -74,7 +74,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -84,7 +84,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return string
      */
-    public function getMediaType(): string
+    public function getMediaType() : string
     {
         return $this->mediaType;
     }
@@ -95,7 +95,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return self
      */
-    public function setMediaType(string $mediaType): self
+    public function setMediaType(string $mediaType) : self
     {
         $this->mediaType = $mediaType;
         return $this;
@@ -105,7 +105,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return string
      */
-    public function getLabel(): string
+    public function getLabel() : string
     {
         return $this->label;
     }
@@ -116,7 +116,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(string $label) : self
     {
         $this->label = $label;
         return $this;
@@ -126,7 +126,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return int
      */
-    public function getPosition(): int
+    public function getPosition() : int
     {
         return $this->position;
     }
@@ -137,7 +137,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(int $position) : self
     {
         $this->position = $position;
         return $this;
@@ -147,7 +147,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return bool
      */
-    public function getDisabled(): bool
+    public function getDisabled() : bool
     {
         return $this->disabled;
     }
@@ -158,7 +158,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return self
      */
-    public function setDisabled(bool $disabled): self
+    public function setDisabled(bool $disabled) : self
     {
         $this->disabled = $disabled;
         return $this;
@@ -168,7 +168,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return string[]
      */
-    public function getTypes(): array
+    public function getTypes() : array
     {
         return $this->types;
     }
@@ -179,7 +179,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return self
      */
-    public function setTypes(array $types): self
+    public function setTypes(array $types) : self
     {
         $this->types = $types;
         return $this;
@@ -189,7 +189,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return string
      */
-    public function getFile(): string
+    public function getFile() : string
     {
         return $this->file;
     }
@@ -200,7 +200,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return self
      */
-    public function setFile(string $file): self
+    public function setFile(string $file) : self
     {
         $this->file = $file;
         return $this;
@@ -210,7 +210,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return FrameworkDataImageContentInterface
      */
-    public function getContent(): FrameworkDataImageContentInterface
+    public function getContent() : FrameworkDataImageContentInterface
     {
         return $this->content;
     }
@@ -221,7 +221,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return self
      */
-    public function setContent(FrameworkDataImageContentInterface $content): self
+    public function setContent(FrameworkDataImageContentInterface $content) : self
     {
         $this->content = $content;
         return $this;
@@ -231,7 +231,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return CatalogDataProductAttributeMediaGalleryEntryExtensionInterface
      */
-    public function getExtensionAttributes(): CatalogDataProductAttributeMediaGalleryEntryExtensionInterface
+    public function getExtensionAttributes() : CatalogDataProductAttributeMediaGalleryEntryExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -242,7 +242,7 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(CatalogDataProductAttributeMediaGalleryEntryExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(CatalogDataProductAttributeMediaGalleryEntryExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

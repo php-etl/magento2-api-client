@@ -4,32 +4,32 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CustomerCustomerRepositoryV1SavePut extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $customerId;
     /**
      * Create or update a customer.
      *
-     * @param string $customerId
-     * @param \Kiboko\Magento\v2_3\Model\V1CustomersCustomerIdPutBody $customerCustomerRepositoryV1SavePutBody
+     * @param string $customerId 
+     * @param \Kiboko\Magento\v2_3\Model\V1CustomersCustomerIdPutBody $customerCustomerRepositoryV1SavePutBody 
      */
     public function __construct(string $customerId, \Kiboko\Magento\v2_3\Model\V1CustomersCustomerIdPutBody $customerCustomerRepositoryV1SavePutBody)
     {
         $this->customerId = $customerId;
         $this->body = $customerCustomerRepositoryV1SavePutBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'PUT';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{customerId}'), array($this->customerId), '/V1/customers/{customerId}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -58,7 +58,7 @@ class CustomerCustomerRepositoryV1SavePut extends \Kiboko\Magento\v2_3\Runtime\C
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

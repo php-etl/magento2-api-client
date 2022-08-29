@@ -33,7 +33,7 @@ class TaxDataAppliedTaxRateInterface
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -44,7 +44,7 @@ class TaxDataAppliedTaxRateInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
@@ -54,7 +54,7 @@ class TaxDataAppliedTaxRateInterface
      *
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle() : string
     {
         return $this->title;
     }
@@ -65,7 +65,7 @@ class TaxDataAppliedTaxRateInterface
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(string $title) : self
     {
         $this->title = $title;
         return $this;
@@ -75,7 +75,7 @@ class TaxDataAppliedTaxRateInterface
      *
      * @return float
      */
-    public function getPercent(): float
+    public function getPercent() : float
     {
         return $this->percent;
     }
@@ -86,7 +86,7 @@ class TaxDataAppliedTaxRateInterface
      *
      * @return self
      */
-    public function setPercent(float $percent): self
+    public function setPercent(float $percent) : self
     {
         $this->percent = $percent;
         return $this;
@@ -107,7 +107,7 @@ class TaxDataAppliedTaxRateInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

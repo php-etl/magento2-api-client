@@ -15,7 +15,7 @@ class V1CategoriesPostBody
      *
      * @return CatalogDataCategoryInterface
      */
-    public function getCategory(): CatalogDataCategoryInterface
+    public function getCategory() : CatalogDataCategoryInterface
     {
         return $this->category;
     }
@@ -26,7 +26,7 @@ class V1CategoriesPostBody
      *
      * @return self
      */
-    public function setCategory(CatalogDataCategoryInterface $category): self
+    public function setCategory(CatalogDataCategoryInterface $category) : self
     {
         $this->category = $category;
         return $this;

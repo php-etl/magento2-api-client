@@ -93,7 +93,7 @@ class CatalogDataCategoryInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -104,7 +104,7 @@ class CatalogDataCategoryInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -114,7 +114,7 @@ class CatalogDataCategoryInterface
      *
      * @return int
      */
-    public function getParentId(): int
+    public function getParentId() : int
     {
         return $this->parentId;
     }
@@ -125,7 +125,7 @@ class CatalogDataCategoryInterface
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(int $parentId) : self
     {
         $this->parentId = $parentId;
         return $this;
@@ -135,7 +135,7 @@ class CatalogDataCategoryInterface
      *
      * @return string
      */
-    public function getName(): string
+    public function getName() : string
     {
         return $this->name;
     }
@@ -146,7 +146,7 @@ class CatalogDataCategoryInterface
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -156,7 +156,7 @@ class CatalogDataCategoryInterface
      *
      * @return bool
      */
-    public function getIsActive(): bool
+    public function getIsActive() : bool
     {
         return $this->isActive;
     }
@@ -167,7 +167,7 @@ class CatalogDataCategoryInterface
      *
      * @return self
      */
-    public function setIsActive(bool $isActive): self
+    public function setIsActive(bool $isActive) : self
     {
         $this->isActive = $isActive;
         return $this;
@@ -177,7 +177,7 @@ class CatalogDataCategoryInterface
      *
      * @return int
      */
-    public function getPosition(): int
+    public function getPosition() : int
     {
         return $this->position;
     }
@@ -188,7 +188,7 @@ class CatalogDataCategoryInterface
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(int $position) : self
     {
         $this->position = $position;
         return $this;
@@ -198,7 +198,7 @@ class CatalogDataCategoryInterface
      *
      * @return int
      */
-    public function getLevel(): int
+    public function getLevel() : int
     {
         return $this->level;
     }
@@ -209,7 +209,7 @@ class CatalogDataCategoryInterface
      *
      * @return self
      */
-    public function setLevel(int $level): self
+    public function setLevel(int $level) : self
     {
         $this->level = $level;
         return $this;
@@ -219,7 +219,7 @@ class CatalogDataCategoryInterface
      *
      * @return string
      */
-    public function getChildren(): string
+    public function getChildren() : string
     {
         return $this->children;
     }
@@ -230,7 +230,7 @@ class CatalogDataCategoryInterface
      *
      * @return self
      */
-    public function setChildren(string $children): self
+    public function setChildren(string $children) : self
     {
         $this->children = $children;
         return $this;
@@ -240,7 +240,7 @@ class CatalogDataCategoryInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -251,7 +251,7 @@ class CatalogDataCategoryInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -261,7 +261,7 @@ class CatalogDataCategoryInterface
      *
      * @return string
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt() : string
     {
         return $this->updatedAt;
     }
@@ -272,7 +272,7 @@ class CatalogDataCategoryInterface
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(string $updatedAt) : self
     {
         $this->updatedAt = $updatedAt;
         return $this;
@@ -282,7 +282,7 @@ class CatalogDataCategoryInterface
      *
      * @return string
      */
-    public function getPath(): string
+    public function getPath() : string
     {
         return $this->path;
     }
@@ -293,7 +293,7 @@ class CatalogDataCategoryInterface
      *
      * @return self
      */
-    public function setPath(string $path): self
+    public function setPath(string $path) : self
     {
         $this->path = $path;
         return $this;
@@ -303,7 +303,7 @@ class CatalogDataCategoryInterface
      *
      * @return string[]
      */
-    public function getAvailableSortBy(): array
+    public function getAvailableSortBy() : array
     {
         return $this->availableSortBy;
     }
@@ -314,7 +314,7 @@ class CatalogDataCategoryInterface
      *
      * @return self
      */
-    public function setAvailableSortBy(array $availableSortBy): self
+    public function setAvailableSortBy(array $availableSortBy) : self
     {
         $this->availableSortBy = $availableSortBy;
         return $this;
@@ -324,7 +324,7 @@ class CatalogDataCategoryInterface
      *
      * @return bool
      */
-    public function getIncludeInMenu(): bool
+    public function getIncludeInMenu() : bool
     {
         return $this->includeInMenu;
     }
@@ -335,7 +335,7 @@ class CatalogDataCategoryInterface
      *
      * @return self
      */
-    public function setIncludeInMenu(bool $includeInMenu): self
+    public function setIncludeInMenu(bool $includeInMenu) : self
     {
         $this->includeInMenu = $includeInMenu;
         return $this;
@@ -356,7 +356,7 @@ class CatalogDataCategoryInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -366,7 +366,7 @@ class CatalogDataCategoryInterface
      *
      * @return FrameworkAttributeInterface[]
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes() : array
     {
         return $this->customAttributes;
     }
@@ -377,7 +377,7 @@ class CatalogDataCategoryInterface
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(array $customAttributes) : self
     {
         $this->customAttributes = $customAttributes;
         return $this;

@@ -33,7 +33,7 @@ class SalesDataShippingAssignmentInterface
      *
      * @return SalesDataShippingInterface
      */
-    public function getShipping(): SalesDataShippingInterface
+    public function getShipping() : SalesDataShippingInterface
     {
         return $this->shipping;
     }
@@ -44,7 +44,7 @@ class SalesDataShippingAssignmentInterface
      *
      * @return self
      */
-    public function setShipping(SalesDataShippingInterface $shipping): self
+    public function setShipping(SalesDataShippingInterface $shipping) : self
     {
         $this->shipping = $shipping;
         return $this;
@@ -54,7 +54,7 @@ class SalesDataShippingAssignmentInterface
      *
      * @return SalesDataOrderItemInterface[]
      */
-    public function getItems(): array
+    public function getItems() : array
     {
         return $this->items;
     }
@@ -65,7 +65,7 @@ class SalesDataShippingAssignmentInterface
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(array $items) : self
     {
         $this->items = $items;
         return $this;
@@ -75,7 +75,7 @@ class SalesDataShippingAssignmentInterface
      *
      * @return int
      */
-    public function getStockId(): int
+    public function getStockId() : int
     {
         return $this->stockId;
     }
@@ -86,7 +86,7 @@ class SalesDataShippingAssignmentInterface
      *
      * @return self
      */
-    public function setStockId(int $stockId): self
+    public function setStockId(int $stockId) : self
     {
         $this->stockId = $stockId;
         return $this;
@@ -107,7 +107,7 @@ class SalesDataShippingAssignmentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

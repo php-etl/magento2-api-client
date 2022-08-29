@@ -69,7 +69,7 @@ class RmaDataCommentInterface
      *
      * @return string
      */
-    public function getComment(): string
+    public function getComment() : string
     {
         return $this->comment;
     }
@@ -80,7 +80,7 @@ class RmaDataCommentInterface
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(string $comment) : self
     {
         $this->comment = $comment;
         return $this;
@@ -90,7 +90,7 @@ class RmaDataCommentInterface
      *
      * @return int
      */
-    public function getRmaEntityId(): int
+    public function getRmaEntityId() : int
     {
         return $this->rmaEntityId;
     }
@@ -101,7 +101,7 @@ class RmaDataCommentInterface
      *
      * @return self
      */
-    public function setRmaEntityId(int $rmaEntityId): self
+    public function setRmaEntityId(int $rmaEntityId) : self
     {
         $this->rmaEntityId = $rmaEntityId;
         return $this;
@@ -111,7 +111,7 @@ class RmaDataCommentInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -122,7 +122,7 @@ class RmaDataCommentInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -132,7 +132,7 @@ class RmaDataCommentInterface
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -143,7 +143,7 @@ class RmaDataCommentInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
         return $this;
@@ -153,7 +153,7 @@ class RmaDataCommentInterface
      *
      * @return bool
      */
-    public function getCustomerNotified(): bool
+    public function getCustomerNotified() : bool
     {
         return $this->customerNotified;
     }
@@ -164,7 +164,7 @@ class RmaDataCommentInterface
      *
      * @return self
      */
-    public function setCustomerNotified(bool $customerNotified): self
+    public function setCustomerNotified(bool $customerNotified) : self
     {
         $this->customerNotified = $customerNotified;
         return $this;
@@ -174,7 +174,7 @@ class RmaDataCommentInterface
      *
      * @return bool
      */
-    public function getVisibleOnFront(): bool
+    public function getVisibleOnFront() : bool
     {
         return $this->visibleOnFront;
     }
@@ -185,7 +185,7 @@ class RmaDataCommentInterface
      *
      * @return self
      */
-    public function setVisibleOnFront(bool $visibleOnFront): self
+    public function setVisibleOnFront(bool $visibleOnFront) : self
     {
         $this->visibleOnFront = $visibleOnFront;
         return $this;
@@ -195,7 +195,7 @@ class RmaDataCommentInterface
      *
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus() : string
     {
         return $this->status;
     }
@@ -206,7 +206,7 @@ class RmaDataCommentInterface
      *
      * @return self
      */
-    public function setStatus(string $status): self
+    public function setStatus(string $status) : self
     {
         $this->status = $status;
         return $this;
@@ -216,7 +216,7 @@ class RmaDataCommentInterface
      *
      * @return bool
      */
-    public function getAdmin(): bool
+    public function getAdmin() : bool
     {
         return $this->admin;
     }
@@ -227,7 +227,7 @@ class RmaDataCommentInterface
      *
      * @return self
      */
-    public function setAdmin(bool $admin): self
+    public function setAdmin(bool $admin) : self
     {
         $this->admin = $admin;
         return $this;
@@ -248,7 +248,7 @@ class RmaDataCommentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -258,7 +258,7 @@ class RmaDataCommentInterface
      *
      * @return FrameworkAttributeInterface[]
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes() : array
     {
         return $this->customAttributes;
     }
@@ -269,7 +269,7 @@ class RmaDataCommentInterface
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(array $customAttributes) : self
     {
         $this->customAttributes = $customAttributes;
         return $this;

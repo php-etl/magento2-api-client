@@ -45,7 +45,7 @@ class RmaDataTrackInterface
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -56,7 +56,7 @@ class RmaDataTrackInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
         return $this;
@@ -66,7 +66,7 @@ class RmaDataTrackInterface
      *
      * @return int
      */
-    public function getRmaEntityId(): int
+    public function getRmaEntityId() : int
     {
         return $this->rmaEntityId;
     }
@@ -77,7 +77,7 @@ class RmaDataTrackInterface
      *
      * @return self
      */
-    public function setRmaEntityId(int $rmaEntityId): self
+    public function setRmaEntityId(int $rmaEntityId) : self
     {
         $this->rmaEntityId = $rmaEntityId;
         return $this;
@@ -87,7 +87,7 @@ class RmaDataTrackInterface
      *
      * @return string
      */
-    public function getTrackNumber(): string
+    public function getTrackNumber() : string
     {
         return $this->trackNumber;
     }
@@ -98,7 +98,7 @@ class RmaDataTrackInterface
      *
      * @return self
      */
-    public function setTrackNumber(string $trackNumber): self
+    public function setTrackNumber(string $trackNumber) : self
     {
         $this->trackNumber = $trackNumber;
         return $this;
@@ -108,7 +108,7 @@ class RmaDataTrackInterface
      *
      * @return string
      */
-    public function getCarrierTitle(): string
+    public function getCarrierTitle() : string
     {
         return $this->carrierTitle;
     }
@@ -119,7 +119,7 @@ class RmaDataTrackInterface
      *
      * @return self
      */
-    public function setCarrierTitle(string $carrierTitle): self
+    public function setCarrierTitle(string $carrierTitle) : self
     {
         $this->carrierTitle = $carrierTitle;
         return $this;
@@ -129,7 +129,7 @@ class RmaDataTrackInterface
      *
      * @return string
      */
-    public function getCarrierCode(): string
+    public function getCarrierCode() : string
     {
         return $this->carrierCode;
     }
@@ -140,7 +140,7 @@ class RmaDataTrackInterface
      *
      * @return self
      */
-    public function setCarrierCode(string $carrierCode): self
+    public function setCarrierCode(string $carrierCode) : self
     {
         $this->carrierCode = $carrierCode;
         return $this;
@@ -161,7 +161,7 @@ class RmaDataTrackInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

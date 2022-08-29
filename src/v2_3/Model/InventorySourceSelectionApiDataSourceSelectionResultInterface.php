@@ -5,13 +5,13 @@ namespace Kiboko\Magento\v2_3\Model;
 class InventorySourceSelectionApiDataSourceSelectionResultInterface
 {
     /**
-     *
+     * 
      *
      * @var InventorySourceSelectionApiDataSourceSelectionItemInterface[]
      */
     protected $sourceSelectionItems;
     /**
-     *
+     * 
      *
      * @var bool
      */
@@ -23,43 +23,43 @@ class InventorySourceSelectionApiDataSourceSelectionResultInterface
      */
     protected $extensionAttributes;
     /**
-     *
+     * 
      *
      * @return InventorySourceSelectionApiDataSourceSelectionItemInterface[]
      */
-    public function getSourceSelectionItems(): array
+    public function getSourceSelectionItems() : array
     {
         return $this->sourceSelectionItems;
     }
     /**
-     *
+     * 
      *
      * @param InventorySourceSelectionApiDataSourceSelectionItemInterface[] $sourceSelectionItems
      *
      * @return self
      */
-    public function setSourceSelectionItems(array $sourceSelectionItems): self
+    public function setSourceSelectionItems(array $sourceSelectionItems) : self
     {
         $this->sourceSelectionItems = $sourceSelectionItems;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return bool
      */
-    public function getShippable(): bool
+    public function getShippable() : bool
     {
         return $this->shippable;
     }
     /**
-     *
+     * 
      *
      * @param bool $shippable
      *
      * @return self
      */
-    public function setShippable(bool $shippable): self
+    public function setShippable(bool $shippable) : self
     {
         $this->shippable = $shippable;
         return $this;
@@ -80,7 +80,7 @@ class InventorySourceSelectionApiDataSourceSelectionResultInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

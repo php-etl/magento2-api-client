@@ -15,7 +15,7 @@ class FrameworkSearchFilterGroup
      *
      * @return FrameworkFilter[]
      */
-    public function getFilters(): array
+    public function getFilters() : array
     {
         return $this->filters;
     }
@@ -26,7 +26,7 @@ class FrameworkSearchFilterGroup
      *
      * @return self
      */
-    public function setFilters(array $filters): self
+    public function setFilters(array $filters) : self
     {
         $this->filters = $filters;
         return $this;

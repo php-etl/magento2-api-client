@@ -39,7 +39,7 @@ class FrameworkCriteriaInterface
      *
      * @return string
      */
-    public function getMapperInterfaceName(): string
+    public function getMapperInterfaceName() : string
     {
         return $this->mapperInterfaceName;
     }
@@ -50,7 +50,7 @@ class FrameworkCriteriaInterface
      *
      * @return self
      */
-    public function setMapperInterfaceName(string $mapperInterfaceName): self
+    public function setMapperInterfaceName(string $mapperInterfaceName) : self
     {
         $this->mapperInterfaceName = $mapperInterfaceName;
         return $this;
@@ -60,7 +60,7 @@ class FrameworkCriteriaInterface
      *
      * @return FrameworkCriteriaInterface[]
      */
-    public function getCriteriaList(): array
+    public function getCriteriaList() : array
     {
         return $this->criteriaList;
     }
@@ -71,7 +71,7 @@ class FrameworkCriteriaInterface
      *
      * @return self
      */
-    public function setCriteriaList(array $criteriaList): self
+    public function setCriteriaList(array $criteriaList) : self
     {
         $this->criteriaList = $criteriaList;
         return $this;
@@ -81,7 +81,7 @@ class FrameworkCriteriaInterface
      *
      * @return string[]
      */
-    public function getFilters(): array
+    public function getFilters() : array
     {
         return $this->filters;
     }
@@ -92,7 +92,7 @@ class FrameworkCriteriaInterface
      *
      * @return self
      */
-    public function setFilters(array $filters): self
+    public function setFilters(array $filters) : self
     {
         $this->filters = $filters;
         return $this;
@@ -102,7 +102,7 @@ class FrameworkCriteriaInterface
      *
      * @return string[]
      */
-    public function getOrders(): array
+    public function getOrders() : array
     {
         return $this->orders;
     }
@@ -113,7 +113,7 @@ class FrameworkCriteriaInterface
      *
      * @return self
      */
-    public function setOrders(array $orders): self
+    public function setOrders(array $orders) : self
     {
         $this->orders = $orders;
         return $this;
@@ -123,7 +123,7 @@ class FrameworkCriteriaInterface
      *
      * @return string[]
      */
-    public function getLimit(): array
+    public function getLimit() : array
     {
         return $this->limit;
     }
@@ -134,7 +134,7 @@ class FrameworkCriteriaInterface
      *
      * @return self
      */
-    public function setLimit(array $limit): self
+    public function setLimit(array $limit) : self
     {
         $this->limit = $limit;
         return $this;

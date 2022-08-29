@@ -15,7 +15,7 @@ class CatalogDataProductRenderSearchResultsInterface
      *
      * @return CatalogDataProductRenderInterface[]
      */
-    public function getItems(): array
+    public function getItems() : array
     {
         return $this->items;
     }
@@ -26,7 +26,7 @@ class CatalogDataProductRenderSearchResultsInterface
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(array $items) : self
     {
         $this->items = $items;
         return $this;

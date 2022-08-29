@@ -5,7 +5,7 @@ namespace Kiboko\Magento\v2_3\Model;
 class QuoteDataCartItemExtensionInterface
 {
     /**
-     *
+     * 
      *
      * @var SalesRuleDataRuleDiscountInterface[]
      */
@@ -17,22 +17,22 @@ class QuoteDataCartItemExtensionInterface
      */
     protected $negotiableQuoteItem;
     /**
-     *
+     * 
      *
      * @return SalesRuleDataRuleDiscountInterface[]
      */
-    public function getDiscounts(): array
+    public function getDiscounts() : array
     {
         return $this->discounts;
     }
     /**
-     *
+     * 
      *
      * @param SalesRuleDataRuleDiscountInterface[] $discounts
      *
      * @return self
      */
-    public function setDiscounts(array $discounts): self
+    public function setDiscounts(array $discounts) : self
     {
         $this->discounts = $discounts;
         return $this;
@@ -42,7 +42,7 @@ class QuoteDataCartItemExtensionInterface
      *
      * @return NegotiableQuoteDataNegotiableQuoteItemInterface
      */
-    public function getNegotiableQuoteItem(): NegotiableQuoteDataNegotiableQuoteItemInterface
+    public function getNegotiableQuoteItem() : NegotiableQuoteDataNegotiableQuoteItemInterface
     {
         return $this->negotiableQuoteItem;
     }
@@ -53,7 +53,7 @@ class QuoteDataCartItemExtensionInterface
      *
      * @return self
      */
-    public function setNegotiableQuoteItem(NegotiableQuoteDataNegotiableQuoteItemInterface $negotiableQuoteItem): self
+    public function setNegotiableQuoteItem(NegotiableQuoteDataNegotiableQuoteItemInterface $negotiableQuoteItem) : self
     {
         $this->negotiableQuoteItem = $negotiableQuoteItem;
         return $this;

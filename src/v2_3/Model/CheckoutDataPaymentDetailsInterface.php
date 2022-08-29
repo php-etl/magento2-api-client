@@ -5,7 +5,7 @@ namespace Kiboko\Magento\v2_3\Model;
 class CheckoutDataPaymentDetailsInterface
 {
     /**
-     *
+     * 
      *
      * @var QuoteDataPaymentMethodInterface[]
      */
@@ -23,22 +23,22 @@ class CheckoutDataPaymentDetailsInterface
      */
     protected $extensionAttributes;
     /**
-     *
+     * 
      *
      * @return QuoteDataPaymentMethodInterface[]
      */
-    public function getPaymentMethods(): array
+    public function getPaymentMethods() : array
     {
         return $this->paymentMethods;
     }
     /**
-     *
+     * 
      *
      * @param QuoteDataPaymentMethodInterface[] $paymentMethods
      *
      * @return self
      */
-    public function setPaymentMethods(array $paymentMethods): self
+    public function setPaymentMethods(array $paymentMethods) : self
     {
         $this->paymentMethods = $paymentMethods;
         return $this;
@@ -48,7 +48,7 @@ class CheckoutDataPaymentDetailsInterface
      *
      * @return QuoteDataTotalsInterface
      */
-    public function getTotals(): QuoteDataTotalsInterface
+    public function getTotals() : QuoteDataTotalsInterface
     {
         return $this->totals;
     }
@@ -59,7 +59,7 @@ class CheckoutDataPaymentDetailsInterface
      *
      * @return self
      */
-    public function setTotals(QuoteDataTotalsInterface $totals): self
+    public function setTotals(QuoteDataTotalsInterface $totals) : self
     {
         $this->totals = $totals;
         return $this;
@@ -80,7 +80,7 @@ class CheckoutDataPaymentDetailsInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

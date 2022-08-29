@@ -15,7 +15,7 @@ class V1OrdersParentIdPutBody
      *
      * @return SalesDataOrderAddressInterface
      */
-    public function getEntity(): SalesDataOrderAddressInterface
+    public function getEntity() : SalesDataOrderAddressInterface
     {
         return $this->entity;
     }
@@ -26,7 +26,7 @@ class V1OrdersParentIdPutBody
      *
      * @return self
      */
-    public function setEntity(SalesDataOrderAddressInterface $entity): self
+    public function setEntity(SalesDataOrderAddressInterface $entity) : self
     {
         $this->entity = $entity;
         return $this;

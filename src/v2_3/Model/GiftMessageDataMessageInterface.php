@@ -45,7 +45,7 @@ class GiftMessageDataMessageInterface
      *
      * @return int
      */
-    public function getGiftMessageId(): int
+    public function getGiftMessageId() : int
     {
         return $this->giftMessageId;
     }
@@ -56,7 +56,7 @@ class GiftMessageDataMessageInterface
      *
      * @return self
      */
-    public function setGiftMessageId(int $giftMessageId): self
+    public function setGiftMessageId(int $giftMessageId) : self
     {
         $this->giftMessageId = $giftMessageId;
         return $this;
@@ -66,7 +66,7 @@ class GiftMessageDataMessageInterface
      *
      * @return int
      */
-    public function getCustomerId(): int
+    public function getCustomerId() : int
     {
         return $this->customerId;
     }
@@ -77,7 +77,7 @@ class GiftMessageDataMessageInterface
      *
      * @return self
      */
-    public function setCustomerId(int $customerId): self
+    public function setCustomerId(int $customerId) : self
     {
         $this->customerId = $customerId;
         return $this;
@@ -87,7 +87,7 @@ class GiftMessageDataMessageInterface
      *
      * @return string
      */
-    public function getSender(): string
+    public function getSender() : string
     {
         return $this->sender;
     }
@@ -98,7 +98,7 @@ class GiftMessageDataMessageInterface
      *
      * @return self
      */
-    public function setSender(string $sender): self
+    public function setSender(string $sender) : self
     {
         $this->sender = $sender;
         return $this;
@@ -108,7 +108,7 @@ class GiftMessageDataMessageInterface
      *
      * @return string
      */
-    public function getRecipient(): string
+    public function getRecipient() : string
     {
         return $this->recipient;
     }
@@ -119,7 +119,7 @@ class GiftMessageDataMessageInterface
      *
      * @return self
      */
-    public function setRecipient(string $recipient): self
+    public function setRecipient(string $recipient) : self
     {
         $this->recipient = $recipient;
         return $this;
@@ -129,7 +129,7 @@ class GiftMessageDataMessageInterface
      *
      * @return string
      */
-    public function getMessage(): string
+    public function getMessage() : string
     {
         return $this->message;
     }
@@ -140,7 +140,7 @@ class GiftMessageDataMessageInterface
      *
      * @return self
      */
-    public function setMessage(string $message): self
+    public function setMessage(string $message) : self
     {
         $this->message = $message;
         return $this;
@@ -150,7 +150,7 @@ class GiftMessageDataMessageInterface
      *
      * @return GiftMessageDataMessageExtensionInterface
      */
-    public function getExtensionAttributes(): GiftMessageDataMessageExtensionInterface
+    public function getExtensionAttributes() : GiftMessageDataMessageExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -161,7 +161,7 @@ class GiftMessageDataMessageInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(GiftMessageDataMessageExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(GiftMessageDataMessageExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

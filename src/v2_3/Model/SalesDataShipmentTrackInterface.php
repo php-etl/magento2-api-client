@@ -81,7 +81,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return int
      */
-    public function getOrderId(): int
+    public function getOrderId() : int
     {
         return $this->orderId;
     }
@@ -92,7 +92,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return self
      */
-    public function setOrderId(int $orderId): self
+    public function setOrderId(int $orderId) : self
     {
         $this->orderId = $orderId;
         return $this;
@@ -102,7 +102,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -113,7 +113,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -123,7 +123,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -134,7 +134,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
         return $this;
@@ -144,7 +144,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return int
      */
-    public function getParentId(): int
+    public function getParentId() : int
     {
         return $this->parentId;
     }
@@ -155,7 +155,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(int $parentId) : self
     {
         $this->parentId = $parentId;
         return $this;
@@ -165,7 +165,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return string
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt() : string
     {
         return $this->updatedAt;
     }
@@ -176,7 +176,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(string $updatedAt) : self
     {
         $this->updatedAt = $updatedAt;
         return $this;
@@ -186,7 +186,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return float
      */
-    public function getWeight(): float
+    public function getWeight() : float
     {
         return $this->weight;
     }
@@ -197,7 +197,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return self
      */
-    public function setWeight(float $weight): self
+    public function setWeight(float $weight) : self
     {
         $this->weight = $weight;
         return $this;
@@ -207,7 +207,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return float
      */
-    public function getQty(): float
+    public function getQty() : float
     {
         return $this->qty;
     }
@@ -218,7 +218,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(float $qty) : self
     {
         $this->qty = $qty;
         return $this;
@@ -228,7 +228,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return string
      */
-    public function getDescription(): string
+    public function getDescription() : string
     {
         return $this->description;
     }
@@ -239,7 +239,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return self
      */
-    public function setDescription(string $description): self
+    public function setDescription(string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -260,7 +260,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -270,7 +270,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return string
      */
-    public function getTrackNumber(): string
+    public function getTrackNumber() : string
     {
         return $this->trackNumber;
     }
@@ -281,7 +281,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return self
      */
-    public function setTrackNumber(string $trackNumber): self
+    public function setTrackNumber(string $trackNumber) : self
     {
         $this->trackNumber = $trackNumber;
         return $this;
@@ -291,7 +291,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle() : string
     {
         return $this->title;
     }
@@ -302,7 +302,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(string $title) : self
     {
         $this->title = $title;
         return $this;
@@ -312,7 +312,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return string
      */
-    public function getCarrierCode(): string
+    public function getCarrierCode() : string
     {
         return $this->carrierCode;
     }
@@ -323,7 +323,7 @@ class SalesDataShipmentTrackInterface
      *
      * @return self
      */
-    public function setCarrierCode(string $carrierCode): self
+    public function setCarrierCode(string $carrierCode) : self
     {
         $this->carrierCode = $carrierCode;
         return $this;

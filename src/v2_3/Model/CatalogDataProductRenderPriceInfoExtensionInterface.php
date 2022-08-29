@@ -17,13 +17,13 @@ class CatalogDataProductRenderPriceInfoExtensionInterface
      */
     protected $taxAdjustments;
     /**
-     *
+     * 
      *
      * @var WeeeDataProductRenderWeeeAdjustmentAttributeInterface[]
      */
     protected $weeeAttributes;
     /**
-     *
+     * 
      *
      * @var string
      */
@@ -33,7 +33,7 @@ class CatalogDataProductRenderPriceInfoExtensionInterface
      *
      * @return MsrpDataProductRenderMsrpPriceInfoInterface
      */
-    public function getMsrp(): MsrpDataProductRenderMsrpPriceInfoInterface
+    public function getMsrp() : MsrpDataProductRenderMsrpPriceInfoInterface
     {
         return $this->msrp;
     }
@@ -44,7 +44,7 @@ class CatalogDataProductRenderPriceInfoExtensionInterface
      *
      * @return self
      */
-    public function setMsrp(MsrpDataProductRenderMsrpPriceInfoInterface $msrp): self
+    public function setMsrp(MsrpDataProductRenderMsrpPriceInfoInterface $msrp) : self
     {
         $this->msrp = $msrp;
         return $this;
@@ -54,7 +54,7 @@ class CatalogDataProductRenderPriceInfoExtensionInterface
      *
      * @return CatalogDataProductRenderPriceInfoInterface
      */
-    public function getTaxAdjustments(): CatalogDataProductRenderPriceInfoInterface
+    public function getTaxAdjustments() : CatalogDataProductRenderPriceInfoInterface
     {
         return $this->taxAdjustments;
     }
@@ -65,49 +65,49 @@ class CatalogDataProductRenderPriceInfoExtensionInterface
      *
      * @return self
      */
-    public function setTaxAdjustments(CatalogDataProductRenderPriceInfoInterface $taxAdjustments): self
+    public function setTaxAdjustments(CatalogDataProductRenderPriceInfoInterface $taxAdjustments) : self
     {
         $this->taxAdjustments = $taxAdjustments;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return WeeeDataProductRenderWeeeAdjustmentAttributeInterface[]
      */
-    public function getWeeeAttributes(): array
+    public function getWeeeAttributes() : array
     {
         return $this->weeeAttributes;
     }
     /**
-     *
+     * 
      *
      * @param WeeeDataProductRenderWeeeAdjustmentAttributeInterface[] $weeeAttributes
      *
      * @return self
      */
-    public function setWeeeAttributes(array $weeeAttributes): self
+    public function setWeeeAttributes(array $weeeAttributes) : self
     {
         $this->weeeAttributes = $weeeAttributes;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getWeeeAdjustment(): string
+    public function getWeeeAdjustment() : string
     {
         return $this->weeeAdjustment;
     }
     /**
-     *
+     * 
      *
      * @param string $weeeAdjustment
      *
      * @return self
      */
-    public function setWeeeAdjustment(string $weeeAdjustment): self
+    public function setWeeeAdjustment(string $weeeAdjustment) : self
     {
         $this->weeeAdjustment = $weeeAdjustment;
         return $this;

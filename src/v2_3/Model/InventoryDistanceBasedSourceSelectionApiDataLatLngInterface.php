@@ -21,7 +21,7 @@ class InventoryDistanceBasedSourceSelectionApiDataLatLngInterface
      *
      * @return float
      */
-    public function getLat(): float
+    public function getLat() : float
     {
         return $this->lat;
     }
@@ -32,7 +32,7 @@ class InventoryDistanceBasedSourceSelectionApiDataLatLngInterface
      *
      * @return self
      */
-    public function setLat(float $lat): self
+    public function setLat(float $lat) : self
     {
         $this->lat = $lat;
         return $this;
@@ -42,7 +42,7 @@ class InventoryDistanceBasedSourceSelectionApiDataLatLngInterface
      *
      * @return float
      */
-    public function getLng(): float
+    public function getLng() : float
     {
         return $this->lng;
     }
@@ -53,7 +53,7 @@ class InventoryDistanceBasedSourceSelectionApiDataLatLngInterface
      *
      * @return self
      */
-    public function setLng(float $lng): self
+    public function setLng(float $lng) : self
     {
         $this->lng = $lng;
         return $this;

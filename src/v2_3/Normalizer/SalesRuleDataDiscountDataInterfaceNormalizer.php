@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesRuleDataDiscountDataInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\SalesRuleDataDiscountDataInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\SalesRuleDataDiscountDataInterface';
     }
@@ -38,16 +37,16 @@ class SalesRuleDataDiscountDataInterfaceNormalizer implements DenormalizerInterf
         }
         $object = new \Kiboko\Magento\v2_3\Model\SalesRuleDataDiscountDataInterface();
         if (\array_key_exists('amount', $data) && \is_int($data['amount'])) {
-            $data['amount'] = (float) $data['amount'];
+            $data['amount'] = (double) $data['amount'];
         }
         if (\array_key_exists('base_amount', $data) && \is_int($data['base_amount'])) {
-            $data['base_amount'] = (float) $data['base_amount'];
+            $data['base_amount'] = (double) $data['base_amount'];
         }
         if (\array_key_exists('original_amount', $data) && \is_int($data['original_amount'])) {
-            $data['original_amount'] = (float) $data['original_amount'];
+            $data['original_amount'] = (double) $data['original_amount'];
         }
         if (\array_key_exists('base_original_amount', $data) && \is_int($data['base_original_amount'])) {
-            $data['base_original_amount'] = (float) $data['base_original_amount'];
+            $data['base_original_amount'] = (double) $data['base_original_amount'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

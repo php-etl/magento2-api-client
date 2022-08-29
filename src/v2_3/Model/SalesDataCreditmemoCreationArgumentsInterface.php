@@ -33,7 +33,7 @@ class SalesDataCreditmemoCreationArgumentsInterface
      *
      * @return float
      */
-    public function getShippingAmount(): float
+    public function getShippingAmount() : float
     {
         return $this->shippingAmount;
     }
@@ -44,7 +44,7 @@ class SalesDataCreditmemoCreationArgumentsInterface
      *
      * @return self
      */
-    public function setShippingAmount(float $shippingAmount): self
+    public function setShippingAmount(float $shippingAmount) : self
     {
         $this->shippingAmount = $shippingAmount;
         return $this;
@@ -54,7 +54,7 @@ class SalesDataCreditmemoCreationArgumentsInterface
      *
      * @return float
      */
-    public function getAdjustmentPositive(): float
+    public function getAdjustmentPositive() : float
     {
         return $this->adjustmentPositive;
     }
@@ -65,7 +65,7 @@ class SalesDataCreditmemoCreationArgumentsInterface
      *
      * @return self
      */
-    public function setAdjustmentPositive(float $adjustmentPositive): self
+    public function setAdjustmentPositive(float $adjustmentPositive) : self
     {
         $this->adjustmentPositive = $adjustmentPositive;
         return $this;
@@ -75,7 +75,7 @@ class SalesDataCreditmemoCreationArgumentsInterface
      *
      * @return float
      */
-    public function getAdjustmentNegative(): float
+    public function getAdjustmentNegative() : float
     {
         return $this->adjustmentNegative;
     }
@@ -86,7 +86,7 @@ class SalesDataCreditmemoCreationArgumentsInterface
      *
      * @return self
      */
-    public function setAdjustmentNegative(float $adjustmentNegative): self
+    public function setAdjustmentNegative(float $adjustmentNegative) : self
     {
         $this->adjustmentNegative = $adjustmentNegative;
         return $this;
@@ -96,7 +96,7 @@ class SalesDataCreditmemoCreationArgumentsInterface
      *
      * @return SalesDataCreditmemoCreationArgumentsExtensionInterface
      */
-    public function getExtensionAttributes(): SalesDataCreditmemoCreationArgumentsExtensionInterface
+    public function getExtensionAttributes() : SalesDataCreditmemoCreationArgumentsExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -107,7 +107,7 @@ class SalesDataCreditmemoCreationArgumentsInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(SalesDataCreditmemoCreationArgumentsExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(SalesDataCreditmemoCreationArgumentsExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

@@ -4,29 +4,29 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class NegotiableQuoteNegotiableQuoteManagementV1DeclinePost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     /**
      * Decline the B2B quote. All custom pricing will be removed from this quote. The buyer will be able to place an order using their standard catalog prices and discounts.
      *
-     * @param \Kiboko\Magento\v2_3\Model\V1NegotiableQuoteDeclinePostBody $negotiableQuoteNegotiableQuoteManagementV1DeclinePostBody
+     * @param \Kiboko\Magento\v2_3\Model\V1NegotiableQuoteDeclinePostBody $negotiableQuoteNegotiableQuoteManagementV1DeclinePostBody 
      */
     public function __construct(\Kiboko\Magento\v2_3\Model\V1NegotiableQuoteDeclinePostBody $negotiableQuoteNegotiableQuoteManagementV1DeclinePostBody)
     {
         $this->body = $negotiableQuoteNegotiableQuoteManagementV1DeclinePostBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'POST';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return '/V1/negotiableQuote/decline';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -47,7 +47,7 @@ class NegotiableQuoteNegotiableQuoteManagementV1DeclinePost extends \Kiboko\Mage
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

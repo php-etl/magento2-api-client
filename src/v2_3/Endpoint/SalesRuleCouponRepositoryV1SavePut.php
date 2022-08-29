@@ -4,32 +4,32 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class SalesRuleCouponRepositoryV1SavePut extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $couponId;
     /**
      * Save a coupon.
      *
-     * @param string $couponId
-     * @param \Kiboko\Magento\v2_3\Model\V1CouponsCouponIdPutBody $salesRuleCouponRepositoryV1SavePutBody
+     * @param string $couponId 
+     * @param \Kiboko\Magento\v2_3\Model\V1CouponsCouponIdPutBody $salesRuleCouponRepositoryV1SavePutBody 
      */
     public function __construct(string $couponId, \Kiboko\Magento\v2_3\Model\V1CouponsCouponIdPutBody $salesRuleCouponRepositoryV1SavePutBody)
     {
         $this->couponId = $couponId;
         $this->body = $salesRuleCouponRepositoryV1SavePutBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'PUT';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{couponId}'), array($this->couponId), '/V1/coupons/{couponId}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -58,7 +58,7 @@ class SalesRuleCouponRepositoryV1SavePut extends \Kiboko\Magento\v2_3\Runtime\Cl
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

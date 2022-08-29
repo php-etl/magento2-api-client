@@ -5,7 +5,7 @@ namespace Kiboko\Magento\v2_3\Model;
 class FrameworkSearchDocumentInterface
 {
     /**
-     *
+     * 
      *
      * @var int
      */
@@ -17,22 +17,22 @@ class FrameworkSearchDocumentInterface
      */
     protected $customAttributes;
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
     /**
-     *
+     * 
      *
      * @param int $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -42,7 +42,7 @@ class FrameworkSearchDocumentInterface
      *
      * @return FrameworkAttributeInterface[]
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes() : array
     {
         return $this->customAttributes;
     }
@@ -53,7 +53,7 @@ class FrameworkSearchDocumentInterface
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(array $customAttributes) : self
     {
         $this->customAttributes = $customAttributes;
         return $this;

@@ -15,7 +15,7 @@ class V1BundleProductsOptionsOptionIdPutBody
      *
      * @return BundleDataOptionInterface
      */
-    public function getOption(): BundleDataOptionInterface
+    public function getOption() : BundleDataOptionInterface
     {
         return $this->option;
     }
@@ -26,7 +26,7 @@ class V1BundleProductsOptionsOptionIdPutBody
      *
      * @return self
      */
-    public function setOption(BundleDataOptionInterface $option): self
+    public function setOption(BundleDataOptionInterface $option) : self
     {
         $this->option = $option;
         return $this;

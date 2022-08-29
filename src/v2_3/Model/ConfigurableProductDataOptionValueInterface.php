@@ -5,7 +5,7 @@ namespace Kiboko\Magento\v2_3\Model;
 class ConfigurableProductDataOptionValueInterface
 {
     /**
-     *
+     * 
      *
      * @var int
      */
@@ -17,22 +17,22 @@ class ConfigurableProductDataOptionValueInterface
      */
     protected $extensionAttributes;
     /**
-     *
+     * 
      *
      * @return int
      */
-    public function getValueIndex(): int
+    public function getValueIndex() : int
     {
         return $this->valueIndex;
     }
     /**
-     *
+     * 
      *
      * @param int $valueIndex
      *
      * @return self
      */
-    public function setValueIndex(int $valueIndex): self
+    public function setValueIndex(int $valueIndex) : self
     {
         $this->valueIndex = $valueIndex;
         return $this;
@@ -53,7 +53,7 @@ class ConfigurableProductDataOptionValueInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

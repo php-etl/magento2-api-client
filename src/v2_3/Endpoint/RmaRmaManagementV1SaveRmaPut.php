@@ -4,32 +4,32 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class RmaRmaManagementV1SaveRmaPut extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $id;
     /**
      * Save RMA
      *
-     * @param string $id
-     * @param \Kiboko\Magento\v2_3\Model\V1ReturnsIdPutBody $rmaRmaManagementV1SaveRmaPutBody
+     * @param string $id 
+     * @param \Kiboko\Magento\v2_3\Model\V1ReturnsIdPutBody $rmaRmaManagementV1SaveRmaPutBody 
      */
     public function __construct(string $id, \Kiboko\Magento\v2_3\Model\V1ReturnsIdPutBody $rmaRmaManagementV1SaveRmaPutBody)
     {
         $this->id = $id;
         $this->body = $rmaRmaManagementV1SaveRmaPutBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'PUT';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{id}'), array($this->id), '/V1/returns/{id}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -50,7 +50,7 @@ class RmaRmaManagementV1SaveRmaPut extends \Kiboko\Magento\v2_3\Runtime\Client\B
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

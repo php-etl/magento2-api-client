@@ -5,7 +5,7 @@ namespace Kiboko\Magento\v2_3\Model;
 class InventoryExportStockApiDataExportStockSalableQtySearchResultInterface
 {
     /**
-     *
+     * 
      *
      * @var mixed[]
      */
@@ -23,22 +23,22 @@ class InventoryExportStockApiDataExportStockSalableQtySearchResultInterface
      */
     protected $totalCount;
     /**
-     *
+     * 
      *
      * @return mixed[]
      */
-    public function getItems(): array
+    public function getItems() : array
     {
         return $this->items;
     }
     /**
-     *
+     * 
      *
      * @param mixed[] $items
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(array $items) : self
     {
         $this->items = $items;
         return $this;
@@ -48,7 +48,7 @@ class InventoryExportStockApiDataExportStockSalableQtySearchResultInterface
      *
      * @return FrameworkSearchCriteriaInterface
      */
-    public function getSearchCriteria(): FrameworkSearchCriteriaInterface
+    public function getSearchCriteria() : FrameworkSearchCriteriaInterface
     {
         return $this->searchCriteria;
     }
@@ -59,7 +59,7 @@ class InventoryExportStockApiDataExportStockSalableQtySearchResultInterface
      *
      * @return self
      */
-    public function setSearchCriteria(FrameworkSearchCriteriaInterface $searchCriteria): self
+    public function setSearchCriteria(FrameworkSearchCriteriaInterface $searchCriteria) : self
     {
         $this->searchCriteria = $searchCriteria;
         return $this;
@@ -69,7 +69,7 @@ class InventoryExportStockApiDataExportStockSalableQtySearchResultInterface
      *
      * @return int
      */
-    public function getTotalCount(): int
+    public function getTotalCount() : int
     {
         return $this->totalCount;
     }
@@ -80,7 +80,7 @@ class InventoryExportStockApiDataExportStockSalableQtySearchResultInterface
      *
      * @return self
      */
-    public function setTotalCount(int $totalCount): self
+    public function setTotalCount(int $totalCount) : self
     {
         $this->totalCount = $totalCount;
         return $this;

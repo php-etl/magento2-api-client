@@ -15,7 +15,7 @@ class V1TaxRatesPutBody
      *
      * @return TaxDataTaxRateInterface
      */
-    public function getTaxRate(): TaxDataTaxRateInterface
+    public function getTaxRate() : TaxDataTaxRateInterface
     {
         return $this->taxRate;
     }
@@ -26,7 +26,7 @@ class V1TaxRatesPutBody
      *
      * @return self
      */
-    public function setTaxRate(TaxDataTaxRateInterface $taxRate): self
+    public function setTaxRate(TaxDataTaxRateInterface $taxRate) : self
     {
         $this->taxRate = $taxRate;
         return $this;

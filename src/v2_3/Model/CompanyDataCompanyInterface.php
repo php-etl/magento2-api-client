@@ -135,7 +135,7 @@ class CompanyDataCompanyInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -146,7 +146,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -156,7 +156,7 @@ class CompanyDataCompanyInterface
      *
      * @return int
      */
-    public function getStatus(): int
+    public function getStatus() : int
     {
         return $this->status;
     }
@@ -167,7 +167,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setStatus(int $status): self
+    public function setStatus(int $status) : self
     {
         $this->status = $status;
         return $this;
@@ -177,7 +177,7 @@ class CompanyDataCompanyInterface
      *
      * @return string
      */
-    public function getCompanyName(): string
+    public function getCompanyName() : string
     {
         return $this->companyName;
     }
@@ -188,7 +188,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setCompanyName(string $companyName): self
+    public function setCompanyName(string $companyName) : self
     {
         $this->companyName = $companyName;
         return $this;
@@ -198,7 +198,7 @@ class CompanyDataCompanyInterface
      *
      * @return string
      */
-    public function getLegalName(): string
+    public function getLegalName() : string
     {
         return $this->legalName;
     }
@@ -209,7 +209,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setLegalName(string $legalName): self
+    public function setLegalName(string $legalName) : self
     {
         $this->legalName = $legalName;
         return $this;
@@ -219,7 +219,7 @@ class CompanyDataCompanyInterface
      *
      * @return string
      */
-    public function getCompanyEmail(): string
+    public function getCompanyEmail() : string
     {
         return $this->companyEmail;
     }
@@ -230,7 +230,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setCompanyEmail(string $companyEmail): self
+    public function setCompanyEmail(string $companyEmail) : self
     {
         $this->companyEmail = $companyEmail;
         return $this;
@@ -240,7 +240,7 @@ class CompanyDataCompanyInterface
      *
      * @return string
      */
-    public function getVatTaxId(): string
+    public function getVatTaxId() : string
     {
         return $this->vatTaxId;
     }
@@ -251,7 +251,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setVatTaxId(string $vatTaxId): self
+    public function setVatTaxId(string $vatTaxId) : self
     {
         $this->vatTaxId = $vatTaxId;
         return $this;
@@ -261,7 +261,7 @@ class CompanyDataCompanyInterface
      *
      * @return string
      */
-    public function getResellerId(): string
+    public function getResellerId() : string
     {
         return $this->resellerId;
     }
@@ -272,7 +272,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setResellerId(string $resellerId): self
+    public function setResellerId(string $resellerId) : self
     {
         $this->resellerId = $resellerId;
         return $this;
@@ -282,7 +282,7 @@ class CompanyDataCompanyInterface
      *
      * @return string
      */
-    public function getComment(): string
+    public function getComment() : string
     {
         return $this->comment;
     }
@@ -293,7 +293,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(string $comment) : self
     {
         $this->comment = $comment;
         return $this;
@@ -303,7 +303,7 @@ class CompanyDataCompanyInterface
      *
      * @return string[]
      */
-    public function getStreet(): array
+    public function getStreet() : array
     {
         return $this->street;
     }
@@ -314,7 +314,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setStreet(array $street): self
+    public function setStreet(array $street) : self
     {
         $this->street = $street;
         return $this;
@@ -324,7 +324,7 @@ class CompanyDataCompanyInterface
      *
      * @return string
      */
-    public function getCity(): string
+    public function getCity() : string
     {
         return $this->city;
     }
@@ -335,7 +335,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setCity(string $city): self
+    public function setCity(string $city) : self
     {
         $this->city = $city;
         return $this;
@@ -345,7 +345,7 @@ class CompanyDataCompanyInterface
      *
      * @return string
      */
-    public function getCountryId(): string
+    public function getCountryId() : string
     {
         return $this->countryId;
     }
@@ -356,7 +356,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setCountryId(string $countryId): self
+    public function setCountryId(string $countryId) : self
     {
         $this->countryId = $countryId;
         return $this;
@@ -366,7 +366,7 @@ class CompanyDataCompanyInterface
      *
      * @return string
      */
-    public function getRegion(): string
+    public function getRegion() : string
     {
         return $this->region;
     }
@@ -377,7 +377,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setRegion(string $region): self
+    public function setRegion(string $region) : self
     {
         $this->region = $region;
         return $this;
@@ -387,7 +387,7 @@ class CompanyDataCompanyInterface
      *
      * @return string
      */
-    public function getRegionId(): string
+    public function getRegionId() : string
     {
         return $this->regionId;
     }
@@ -398,7 +398,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setRegionId(string $regionId): self
+    public function setRegionId(string $regionId) : self
     {
         $this->regionId = $regionId;
         return $this;
@@ -408,7 +408,7 @@ class CompanyDataCompanyInterface
      *
      * @return string
      */
-    public function getPostcode(): string
+    public function getPostcode() : string
     {
         return $this->postcode;
     }
@@ -419,7 +419,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setPostcode(string $postcode): self
+    public function setPostcode(string $postcode) : self
     {
         $this->postcode = $postcode;
         return $this;
@@ -429,7 +429,7 @@ class CompanyDataCompanyInterface
      *
      * @return string
      */
-    public function getTelephone(): string
+    public function getTelephone() : string
     {
         return $this->telephone;
     }
@@ -440,7 +440,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setTelephone(string $telephone): self
+    public function setTelephone(string $telephone) : self
     {
         $this->telephone = $telephone;
         return $this;
@@ -450,7 +450,7 @@ class CompanyDataCompanyInterface
      *
      * @return int
      */
-    public function getCustomerGroupId(): int
+    public function getCustomerGroupId() : int
     {
         return $this->customerGroupId;
     }
@@ -461,7 +461,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setCustomerGroupId(int $customerGroupId): self
+    public function setCustomerGroupId(int $customerGroupId) : self
     {
         $this->customerGroupId = $customerGroupId;
         return $this;
@@ -471,7 +471,7 @@ class CompanyDataCompanyInterface
      *
      * @return int
      */
-    public function getSalesRepresentativeId(): int
+    public function getSalesRepresentativeId() : int
     {
         return $this->salesRepresentativeId;
     }
@@ -482,7 +482,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setSalesRepresentativeId(int $salesRepresentativeId): self
+    public function setSalesRepresentativeId(int $salesRepresentativeId) : self
     {
         $this->salesRepresentativeId = $salesRepresentativeId;
         return $this;
@@ -492,7 +492,7 @@ class CompanyDataCompanyInterface
      *
      * @return string
      */
-    public function getRejectReason(): string
+    public function getRejectReason() : string
     {
         return $this->rejectReason;
     }
@@ -503,7 +503,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setRejectReason(string $rejectReason): self
+    public function setRejectReason(string $rejectReason) : self
     {
         $this->rejectReason = $rejectReason;
         return $this;
@@ -513,7 +513,7 @@ class CompanyDataCompanyInterface
      *
      * @return string
      */
-    public function getRejectedAt(): string
+    public function getRejectedAt() : string
     {
         return $this->rejectedAt;
     }
@@ -524,7 +524,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setRejectedAt(string $rejectedAt): self
+    public function setRejectedAt(string $rejectedAt) : self
     {
         $this->rejectedAt = $rejectedAt;
         return $this;
@@ -534,7 +534,7 @@ class CompanyDataCompanyInterface
      *
      * @return int
      */
-    public function getSuperUserId(): int
+    public function getSuperUserId() : int
     {
         return $this->superUserId;
     }
@@ -545,7 +545,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setSuperUserId(int $superUserId): self
+    public function setSuperUserId(int $superUserId) : self
     {
         $this->superUserId = $superUserId;
         return $this;
@@ -555,7 +555,7 @@ class CompanyDataCompanyInterface
      *
      * @return CompanyDataCompanyExtensionInterface
      */
-    public function getExtensionAttributes(): CompanyDataCompanyExtensionInterface
+    public function getExtensionAttributes() : CompanyDataCompanyExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -566,7 +566,7 @@ class CompanyDataCompanyInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(CompanyDataCompanyExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(CompanyDataCompanyExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

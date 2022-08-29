@@ -27,7 +27,7 @@ class ErrorParametersItem
      *
      * @return string
      */
-    public function getResources(): string
+    public function getResources() : string
     {
         return $this->resources;
     }
@@ -38,7 +38,7 @@ class ErrorParametersItem
      *
      * @return self
      */
-    public function setResources(string $resources): self
+    public function setResources(string $resources) : self
     {
         $this->resources = $resources;
         return $this;
@@ -48,7 +48,7 @@ class ErrorParametersItem
      *
      * @return string
      */
-    public function getFieldName(): string
+    public function getFieldName() : string
     {
         return $this->fieldName;
     }
@@ -59,7 +59,7 @@ class ErrorParametersItem
      *
      * @return self
      */
-    public function setFieldName(string $fieldName): self
+    public function setFieldName(string $fieldName) : self
     {
         $this->fieldName = $fieldName;
         return $this;
@@ -69,7 +69,7 @@ class ErrorParametersItem
      *
      * @return string
      */
-    public function getFieldValue(): string
+    public function getFieldValue() : string
     {
         return $this->fieldValue;
     }
@@ -80,7 +80,7 @@ class ErrorParametersItem
      *
      * @return self
      */
-    public function setFieldValue(string $fieldValue): self
+    public function setFieldValue(string $fieldValue) : self
     {
         $this->fieldValue = $fieldValue;
         return $this;

@@ -5,13 +5,13 @@ namespace Kiboko\Magento\v2_3\Model;
 class InventorySalesApiDataProductSalabilityErrorInterface
 {
     /**
-     *
+     * 
      *
      * @var string
      */
     protected $code;
     /**
-     *
+     * 
      *
      * @var string
      */
@@ -23,43 +23,43 @@ class InventorySalesApiDataProductSalabilityErrorInterface
      */
     protected $extensionAttributes;
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
     /**
-     *
+     * 
      *
      * @param string $code
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
     }
     /**
-     *
+     * 
      *
      * @return string
      */
-    public function getMessage(): string
+    public function getMessage() : string
     {
         return $this->message;
     }
     /**
-     *
+     * 
      *
      * @param string $message
      *
      * @return self
      */
-    public function setMessage(string $message): self
+    public function setMessage(string $message) : self
     {
         $this->message = $message;
         return $this;
@@ -80,7 +80,7 @@ class InventorySalesApiDataProductSalabilityErrorInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

@@ -21,7 +21,7 @@ class FrameworkSearchAggregationValueInterface
      *
      * @return string
      */
-    public function getValue(): string
+    public function getValue() : string
     {
         return $this->value;
     }
@@ -32,7 +32,7 @@ class FrameworkSearchAggregationValueInterface
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(string $value) : self
     {
         $this->value = $value;
         return $this;
@@ -42,7 +42,7 @@ class FrameworkSearchAggregationValueInterface
      *
      * @return string[]
      */
-    public function getMetrics(): array
+    public function getMetrics() : array
     {
         return $this->metrics;
     }
@@ -53,7 +53,7 @@ class FrameworkSearchAggregationValueInterface
      *
      * @return self
      */
-    public function setMetrics(array $metrics): self
+    public function setMetrics(array $metrics) : self
     {
         $this->metrics = $metrics;
         return $this;

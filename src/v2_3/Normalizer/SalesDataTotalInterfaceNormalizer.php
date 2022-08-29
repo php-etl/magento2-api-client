@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class SalesDataTotalInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataTotalInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataTotalInterface';
     }
@@ -38,58 +37,58 @@ class SalesDataTotalInterfaceNormalizer implements DenormalizerInterface, Normal
         }
         $object = new \Kiboko\Magento\v2_3\Model\SalesDataTotalInterface();
         if (\array_key_exists('base_shipping_amount', $data) && \is_int($data['base_shipping_amount'])) {
-            $data['base_shipping_amount'] = (float) $data['base_shipping_amount'];
+            $data['base_shipping_amount'] = (double) $data['base_shipping_amount'];
         }
         if (\array_key_exists('base_shipping_canceled', $data) && \is_int($data['base_shipping_canceled'])) {
-            $data['base_shipping_canceled'] = (float) $data['base_shipping_canceled'];
+            $data['base_shipping_canceled'] = (double) $data['base_shipping_canceled'];
         }
         if (\array_key_exists('base_shipping_discount_amount', $data) && \is_int($data['base_shipping_discount_amount'])) {
-            $data['base_shipping_discount_amount'] = (float) $data['base_shipping_discount_amount'];
+            $data['base_shipping_discount_amount'] = (double) $data['base_shipping_discount_amount'];
         }
         if (\array_key_exists('base_shipping_discount_tax_compensation_amnt', $data) && \is_int($data['base_shipping_discount_tax_compensation_amnt'])) {
-            $data['base_shipping_discount_tax_compensation_amnt'] = (float) $data['base_shipping_discount_tax_compensation_amnt'];
+            $data['base_shipping_discount_tax_compensation_amnt'] = (double) $data['base_shipping_discount_tax_compensation_amnt'];
         }
         if (\array_key_exists('base_shipping_incl_tax', $data) && \is_int($data['base_shipping_incl_tax'])) {
-            $data['base_shipping_incl_tax'] = (float) $data['base_shipping_incl_tax'];
+            $data['base_shipping_incl_tax'] = (double) $data['base_shipping_incl_tax'];
         }
         if (\array_key_exists('base_shipping_invoiced', $data) && \is_int($data['base_shipping_invoiced'])) {
-            $data['base_shipping_invoiced'] = (float) $data['base_shipping_invoiced'];
+            $data['base_shipping_invoiced'] = (double) $data['base_shipping_invoiced'];
         }
         if (\array_key_exists('base_shipping_refunded', $data) && \is_int($data['base_shipping_refunded'])) {
-            $data['base_shipping_refunded'] = (float) $data['base_shipping_refunded'];
+            $data['base_shipping_refunded'] = (double) $data['base_shipping_refunded'];
         }
         if (\array_key_exists('base_shipping_tax_amount', $data) && \is_int($data['base_shipping_tax_amount'])) {
-            $data['base_shipping_tax_amount'] = (float) $data['base_shipping_tax_amount'];
+            $data['base_shipping_tax_amount'] = (double) $data['base_shipping_tax_amount'];
         }
         if (\array_key_exists('base_shipping_tax_refunded', $data) && \is_int($data['base_shipping_tax_refunded'])) {
-            $data['base_shipping_tax_refunded'] = (float) $data['base_shipping_tax_refunded'];
+            $data['base_shipping_tax_refunded'] = (double) $data['base_shipping_tax_refunded'];
         }
         if (\array_key_exists('shipping_amount', $data) && \is_int($data['shipping_amount'])) {
-            $data['shipping_amount'] = (float) $data['shipping_amount'];
+            $data['shipping_amount'] = (double) $data['shipping_amount'];
         }
         if (\array_key_exists('shipping_canceled', $data) && \is_int($data['shipping_canceled'])) {
-            $data['shipping_canceled'] = (float) $data['shipping_canceled'];
+            $data['shipping_canceled'] = (double) $data['shipping_canceled'];
         }
         if (\array_key_exists('shipping_discount_amount', $data) && \is_int($data['shipping_discount_amount'])) {
-            $data['shipping_discount_amount'] = (float) $data['shipping_discount_amount'];
+            $data['shipping_discount_amount'] = (double) $data['shipping_discount_amount'];
         }
         if (\array_key_exists('shipping_discount_tax_compensation_amount', $data) && \is_int($data['shipping_discount_tax_compensation_amount'])) {
-            $data['shipping_discount_tax_compensation_amount'] = (float) $data['shipping_discount_tax_compensation_amount'];
+            $data['shipping_discount_tax_compensation_amount'] = (double) $data['shipping_discount_tax_compensation_amount'];
         }
         if (\array_key_exists('shipping_incl_tax', $data) && \is_int($data['shipping_incl_tax'])) {
-            $data['shipping_incl_tax'] = (float) $data['shipping_incl_tax'];
+            $data['shipping_incl_tax'] = (double) $data['shipping_incl_tax'];
         }
         if (\array_key_exists('shipping_invoiced', $data) && \is_int($data['shipping_invoiced'])) {
-            $data['shipping_invoiced'] = (float) $data['shipping_invoiced'];
+            $data['shipping_invoiced'] = (double) $data['shipping_invoiced'];
         }
         if (\array_key_exists('shipping_refunded', $data) && \is_int($data['shipping_refunded'])) {
-            $data['shipping_refunded'] = (float) $data['shipping_refunded'];
+            $data['shipping_refunded'] = (double) $data['shipping_refunded'];
         }
         if (\array_key_exists('shipping_tax_amount', $data) && \is_int($data['shipping_tax_amount'])) {
-            $data['shipping_tax_amount'] = (float) $data['shipping_tax_amount'];
+            $data['shipping_tax_amount'] = (double) $data['shipping_tax_amount'];
         }
         if (\array_key_exists('shipping_tax_refunded', $data) && \is_int($data['shipping_tax_refunded'])) {
-            $data['shipping_tax_refunded'] = (float) $data['shipping_tax_refunded'];
+            $data['shipping_tax_refunded'] = (double) $data['shipping_tax_refunded'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

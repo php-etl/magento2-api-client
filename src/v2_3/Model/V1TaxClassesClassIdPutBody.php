@@ -15,7 +15,7 @@ class V1TaxClassesClassIdPutBody
      *
      * @return TaxDataTaxClassInterface
      */
-    public function getTaxClass(): TaxDataTaxClassInterface
+    public function getTaxClass() : TaxDataTaxClassInterface
     {
         return $this->taxClass;
     }
@@ -26,7 +26,7 @@ class V1TaxClassesClassIdPutBody
      *
      * @return self
      */
-    public function setTaxClass(TaxDataTaxClassInterface $taxClass): self
+    public function setTaxClass(TaxDataTaxClassInterface $taxClass) : self
     {
         $this->taxClass = $taxClass;
         return $this;

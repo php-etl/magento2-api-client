@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class NegotiableQuoteDataNegotiableQuoteItemTotalsInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\NegotiableQuoteDataNegotiableQuoteItemTotalsInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\NegotiableQuoteDataNegotiableQuoteItemTotalsInterface';
     }
@@ -38,37 +37,37 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterfaceNormalizer implements
         }
         $object = new \Kiboko\Magento\v2_3\Model\NegotiableQuoteDataNegotiableQuoteItemTotalsInterface();
         if (\array_key_exists('cost', $data) && \is_int($data['cost'])) {
-            $data['cost'] = (float) $data['cost'];
+            $data['cost'] = (double) $data['cost'];
         }
         if (\array_key_exists('catalog_price', $data) && \is_int($data['catalog_price'])) {
-            $data['catalog_price'] = (float) $data['catalog_price'];
+            $data['catalog_price'] = (double) $data['catalog_price'];
         }
         if (\array_key_exists('base_catalog_price', $data) && \is_int($data['base_catalog_price'])) {
-            $data['base_catalog_price'] = (float) $data['base_catalog_price'];
+            $data['base_catalog_price'] = (double) $data['base_catalog_price'];
         }
         if (\array_key_exists('catalog_price_incl_tax', $data) && \is_int($data['catalog_price_incl_tax'])) {
-            $data['catalog_price_incl_tax'] = (float) $data['catalog_price_incl_tax'];
+            $data['catalog_price_incl_tax'] = (double) $data['catalog_price_incl_tax'];
         }
         if (\array_key_exists('base_catalog_price_incl_tax', $data) && \is_int($data['base_catalog_price_incl_tax'])) {
-            $data['base_catalog_price_incl_tax'] = (float) $data['base_catalog_price_incl_tax'];
+            $data['base_catalog_price_incl_tax'] = (double) $data['base_catalog_price_incl_tax'];
         }
         if (\array_key_exists('cart_price', $data) && \is_int($data['cart_price'])) {
-            $data['cart_price'] = (float) $data['cart_price'];
+            $data['cart_price'] = (double) $data['cart_price'];
         }
         if (\array_key_exists('base_cart_price', $data) && \is_int($data['base_cart_price'])) {
-            $data['base_cart_price'] = (float) $data['base_cart_price'];
+            $data['base_cart_price'] = (double) $data['base_cart_price'];
         }
         if (\array_key_exists('cart_tax', $data) && \is_int($data['cart_tax'])) {
-            $data['cart_tax'] = (float) $data['cart_tax'];
+            $data['cart_tax'] = (double) $data['cart_tax'];
         }
         if (\array_key_exists('base_cart_tax', $data) && \is_int($data['base_cart_tax'])) {
-            $data['base_cart_tax'] = (float) $data['base_cart_tax'];
+            $data['base_cart_tax'] = (double) $data['base_cart_tax'];
         }
         if (\array_key_exists('cart_price_incl_tax', $data) && \is_int($data['cart_price_incl_tax'])) {
-            $data['cart_price_incl_tax'] = (float) $data['cart_price_incl_tax'];
+            $data['cart_price_incl_tax'] = (double) $data['cart_price_incl_tax'];
         }
         if (\array_key_exists('base_cart_price_incl_tax', $data) && \is_int($data['base_cart_price_incl_tax'])) {
-            $data['base_cart_price_incl_tax'] = (float) $data['base_cart_price_incl_tax'];
+            $data['base_cart_price_incl_tax'] = (double) $data['base_cart_price_incl_tax'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

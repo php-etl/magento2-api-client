@@ -4,35 +4,35 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CustomerAddressMetadataV1GetCustomAttributesMetadataGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     /**
      * Get custom attributes metadata for the given data interface.
      *
      * @param array $queryParameters {
-     *     @var string $dataInterfaceName
+     *     @var string $dataInterfaceName 
      * }
      */
     public function __construct(array $queryParameters = array())
     {
         $this->queryParameters = $queryParameters;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'GET';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return '/V1/attributeMetadata/customerAddress/custom';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
-    protected function getQueryOptionsResolver(): \Symfony\Component\OptionsResolver\OptionsResolver
+    protected function getQueryOptionsResolver() : \Symfony\Component\OptionsResolver\OptionsResolver
     {
         $optionsResolver = parent::getQueryOptionsResolver();
         $optionsResolver->setDefined(array('dataInterfaceName'));
@@ -62,7 +62,7 @@ class CustomerAddressMetadataV1GetCustomAttributesMetadataGet extends \Kiboko\Ma
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

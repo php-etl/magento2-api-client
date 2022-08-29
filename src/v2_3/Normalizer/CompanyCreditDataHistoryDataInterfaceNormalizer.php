@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class CompanyCreditDataHistoryDataInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\CompanyCreditDataHistoryDataInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\CompanyCreditDataHistoryDataInterface';
     }
@@ -38,22 +37,22 @@ class CompanyCreditDataHistoryDataInterfaceNormalizer implements DenormalizerInt
         }
         $object = new \Kiboko\Magento\v2_3\Model\CompanyCreditDataHistoryDataInterface();
         if (\array_key_exists('rate', $data) && \is_int($data['rate'])) {
-            $data['rate'] = (float) $data['rate'];
+            $data['rate'] = (double) $data['rate'];
         }
         if (\array_key_exists('rate_credit', $data) && \is_int($data['rate_credit'])) {
-            $data['rate_credit'] = (float) $data['rate_credit'];
+            $data['rate_credit'] = (double) $data['rate_credit'];
         }
         if (\array_key_exists('amount', $data) && \is_int($data['amount'])) {
-            $data['amount'] = (float) $data['amount'];
+            $data['amount'] = (double) $data['amount'];
         }
         if (\array_key_exists('balance', $data) && \is_int($data['balance'])) {
-            $data['balance'] = (float) $data['balance'];
+            $data['balance'] = (double) $data['balance'];
         }
         if (\array_key_exists('credit_limit', $data) && \is_int($data['credit_limit'])) {
-            $data['credit_limit'] = (float) $data['credit_limit'];
+            $data['credit_limit'] = (double) $data['credit_limit'];
         }
         if (\array_key_exists('available_limit', $data) && \is_int($data['available_limit'])) {
-            $data['available_limit'] = (float) $data['available_limit'];
+            $data['available_limit'] = (double) $data['available_limit'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

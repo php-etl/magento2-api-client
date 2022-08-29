@@ -15,7 +15,7 @@ class CatalogDataCustomOptionExtensionInterface
      *
      * @return FrameworkDataImageContentInterface
      */
-    public function getFileInfo(): FrameworkDataImageContentInterface
+    public function getFileInfo() : FrameworkDataImageContentInterface
     {
         return $this->fileInfo;
     }
@@ -26,7 +26,7 @@ class CatalogDataCustomOptionExtensionInterface
      *
      * @return self
      */
-    public function setFileInfo(FrameworkDataImageContentInterface $fileInfo): self
+    public function setFileInfo(FrameworkDataImageContentInterface $fileInfo) : self
     {
         $this->fileInfo = $fileInfo;
         return $this;

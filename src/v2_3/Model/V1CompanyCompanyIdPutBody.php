@@ -15,7 +15,7 @@ class V1CompanyCompanyIdPutBody
      *
      * @return CompanyDataCompanyInterface
      */
-    public function getCompany(): CompanyDataCompanyInterface
+    public function getCompany() : CompanyDataCompanyInterface
     {
         return $this->company;
     }
@@ -26,7 +26,7 @@ class V1CompanyCompanyIdPutBody
      *
      * @return self
      */
-    public function setCompany(CompanyDataCompanyInterface $company): self
+    public function setCompany(CompanyDataCompanyInterface $company) : self
     {
         $this->company = $company;
         return $this;

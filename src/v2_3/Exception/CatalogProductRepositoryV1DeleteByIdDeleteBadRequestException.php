@@ -13,7 +13,7 @@ class CatalogProductRepositoryV1DeleteByIdDeleteBadRequestException extends BadR
         parent::__construct('400 Bad Request');
         $this->errorResponse = $errorResponse;
     }
-    public function getErrorResponse(): \Kiboko\Magento\v2_3\Model\ErrorResponse
+    public function getErrorResponse() : \Kiboko\Magento\v2_3\Model\ErrorResponse
     {
         return $this->errorResponse;
     }

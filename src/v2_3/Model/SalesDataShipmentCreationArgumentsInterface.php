@@ -15,7 +15,7 @@ class SalesDataShipmentCreationArgumentsInterface
      *
      * @return SalesDataShipmentCreationArgumentsExtensionInterface
      */
-    public function getExtensionAttributes(): SalesDataShipmentCreationArgumentsExtensionInterface
+    public function getExtensionAttributes() : SalesDataShipmentCreationArgumentsExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -26,7 +26,7 @@ class SalesDataShipmentCreationArgumentsInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(SalesDataShipmentCreationArgumentsExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(SalesDataShipmentCreationArgumentsExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

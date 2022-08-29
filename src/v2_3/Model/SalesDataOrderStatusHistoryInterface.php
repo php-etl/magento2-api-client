@@ -63,7 +63,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return string
      */
-    public function getComment(): string
+    public function getComment() : string
     {
         return $this->comment;
     }
@@ -74,7 +74,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(string $comment) : self
     {
         $this->comment = $comment;
         return $this;
@@ -84,7 +84,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -95,7 +95,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -105,7 +105,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -116,7 +116,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
         return $this;
@@ -126,7 +126,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return string
      */
-    public function getEntityName(): string
+    public function getEntityName() : string
     {
         return $this->entityName;
     }
@@ -137,7 +137,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return self
      */
-    public function setEntityName(string $entityName): self
+    public function setEntityName(string $entityName) : self
     {
         $this->entityName = $entityName;
         return $this;
@@ -147,7 +147,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return int
      */
-    public function getIsCustomerNotified(): int
+    public function getIsCustomerNotified() : int
     {
         return $this->isCustomerNotified;
     }
@@ -158,7 +158,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return self
      */
-    public function setIsCustomerNotified(int $isCustomerNotified): self
+    public function setIsCustomerNotified(int $isCustomerNotified) : self
     {
         $this->isCustomerNotified = $isCustomerNotified;
         return $this;
@@ -168,7 +168,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return int
      */
-    public function getIsVisibleOnFront(): int
+    public function getIsVisibleOnFront() : int
     {
         return $this->isVisibleOnFront;
     }
@@ -179,7 +179,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return self
      */
-    public function setIsVisibleOnFront(int $isVisibleOnFront): self
+    public function setIsVisibleOnFront(int $isVisibleOnFront) : self
     {
         $this->isVisibleOnFront = $isVisibleOnFront;
         return $this;
@@ -189,7 +189,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return int
      */
-    public function getParentId(): int
+    public function getParentId() : int
     {
         return $this->parentId;
     }
@@ -200,7 +200,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(int $parentId) : self
     {
         $this->parentId = $parentId;
         return $this;
@@ -210,7 +210,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return string
      */
-    public function getStatus(): string
+    public function getStatus() : string
     {
         return $this->status;
     }
@@ -221,7 +221,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return self
      */
-    public function setStatus(string $status): self
+    public function setStatus(string $status) : self
     {
         $this->status = $status;
         return $this;
@@ -242,7 +242,7 @@ class SalesDataOrderStatusHistoryInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

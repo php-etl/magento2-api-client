@@ -4,29 +4,29 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class SalesRuleCouponManagementV1GeneratePost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     /**
      * Generate coupon for a rule
      *
-     * @param \Kiboko\Magento\v2_3\Model\V1CouponsGeneratePostBody $salesRuleCouponManagementV1GeneratePostBody
+     * @param \Kiboko\Magento\v2_3\Model\V1CouponsGeneratePostBody $salesRuleCouponManagementV1GeneratePostBody 
      */
     public function __construct(\Kiboko\Magento\v2_3\Model\V1CouponsGeneratePostBody $salesRuleCouponManagementV1GeneratePostBody)
     {
         $this->body = $salesRuleCouponManagementV1GeneratePostBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'POST';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return '/V1/coupons/generate';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -51,7 +51,7 @@ class SalesRuleCouponManagementV1GeneratePost extends \Kiboko\Magento\v2_3\Runti
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

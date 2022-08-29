@@ -38,7 +38,7 @@ class SalesDataCreditmemoCommentCreationInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -48,7 +48,7 @@ class SalesDataCreditmemoCommentCreationInterface
      *
      * @return string
      */
-    public function getComment(): string
+    public function getComment() : string
     {
         return $this->comment;
     }
@@ -59,7 +59,7 @@ class SalesDataCreditmemoCommentCreationInterface
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(string $comment) : self
     {
         $this->comment = $comment;
         return $this;
@@ -69,7 +69,7 @@ class SalesDataCreditmemoCommentCreationInterface
      *
      * @return int
      */
-    public function getIsVisibleOnFront(): int
+    public function getIsVisibleOnFront() : int
     {
         return $this->isVisibleOnFront;
     }
@@ -80,7 +80,7 @@ class SalesDataCreditmemoCommentCreationInterface
      *
      * @return self
      */
-    public function setIsVisibleOnFront(int $isVisibleOnFront): self
+    public function setIsVisibleOnFront(int $isVisibleOnFront) : self
     {
         $this->isVisibleOnFront = $isVisibleOnFront;
         return $this;

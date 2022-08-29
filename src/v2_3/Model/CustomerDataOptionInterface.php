@@ -27,7 +27,7 @@ class CustomerDataOptionInterface
      *
      * @return string
      */
-    public function getLabel(): string
+    public function getLabel() : string
     {
         return $this->label;
     }
@@ -38,7 +38,7 @@ class CustomerDataOptionInterface
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(string $label) : self
     {
         $this->label = $label;
         return $this;
@@ -48,7 +48,7 @@ class CustomerDataOptionInterface
      *
      * @return string
      */
-    public function getValue(): string
+    public function getValue() : string
     {
         return $this->value;
     }
@@ -59,7 +59,7 @@ class CustomerDataOptionInterface
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(string $value) : self
     {
         $this->value = $value;
         return $this;
@@ -69,7 +69,7 @@ class CustomerDataOptionInterface
      *
      * @return CustomerDataOptionInterface[]
      */
-    public function getOptions(): array
+    public function getOptions() : array
     {
         return $this->options;
     }
@@ -80,7 +80,7 @@ class CustomerDataOptionInterface
      *
      * @return self
      */
-    public function setOptions(array $options): self
+    public function setOptions(array $options) : self
     {
         $this->options = $options;
         return $this;

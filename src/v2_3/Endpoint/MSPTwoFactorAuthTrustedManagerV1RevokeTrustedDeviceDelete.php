@@ -4,30 +4,30 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class MSPTwoFactorAuthTrustedManagerV1RevokeTrustedDeviceDelete extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $tokenId;
     /**
      * Revoke trusted device
      *
-     * @param int $tokenId
+     * @param int $tokenId 
      */
     public function __construct(int $tokenId)
     {
         $this->tokenId = $tokenId;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'DELETE';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{tokenId}'), array($this->tokenId), '/V1/msp-2fa/trusted-devices/{tokenId}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -52,7 +52,7 @@ class MSPTwoFactorAuthTrustedManagerV1RevokeTrustedDeviceDelete extends \Kiboko\
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

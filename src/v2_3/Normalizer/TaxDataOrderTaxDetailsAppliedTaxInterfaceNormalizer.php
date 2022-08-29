@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class TaxDataOrderTaxDetailsAppliedTaxInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\TaxDataOrderTaxDetailsAppliedTaxInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\TaxDataOrderTaxDetailsAppliedTaxInterface';
     }
@@ -38,13 +37,13 @@ class TaxDataOrderTaxDetailsAppliedTaxInterfaceNormalizer implements Denormalize
         }
         $object = new \Kiboko\Magento\v2_3\Model\TaxDataOrderTaxDetailsAppliedTaxInterface();
         if (\array_key_exists('percent', $data) && \is_int($data['percent'])) {
-            $data['percent'] = (float) $data['percent'];
+            $data['percent'] = (double) $data['percent'];
         }
         if (\array_key_exists('amount', $data) && \is_int($data['amount'])) {
-            $data['amount'] = (float) $data['amount'];
+            $data['amount'] = (double) $data['amount'];
         }
         if (\array_key_exists('base_amount', $data) && \is_int($data['base_amount'])) {
-            $data['base_amount'] = (float) $data['base_amount'];
+            $data['base_amount'] = (double) $data['base_amount'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

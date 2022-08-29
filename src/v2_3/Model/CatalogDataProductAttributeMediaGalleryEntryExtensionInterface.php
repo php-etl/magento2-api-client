@@ -15,7 +15,7 @@ class CatalogDataProductAttributeMediaGalleryEntryExtensionInterface
      *
      * @return FrameworkDataVideoContentInterface
      */
-    public function getVideoContent(): FrameworkDataVideoContentInterface
+    public function getVideoContent() : FrameworkDataVideoContentInterface
     {
         return $this->videoContent;
     }
@@ -26,7 +26,7 @@ class CatalogDataProductAttributeMediaGalleryEntryExtensionInterface
      *
      * @return self
      */
-    public function setVideoContent(FrameworkDataVideoContentInterface $videoContent): self
+    public function setVideoContent(FrameworkDataVideoContentInterface $videoContent) : self
     {
         $this->videoContent = $videoContent;
         return $this;

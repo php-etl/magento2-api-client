@@ -27,7 +27,7 @@ class InventoryApiDataSourceCarrierLinkInterface
      *
      * @return string
      */
-    public function getCarrierCode(): string
+    public function getCarrierCode() : string
     {
         return $this->carrierCode;
     }
@@ -38,7 +38,7 @@ class InventoryApiDataSourceCarrierLinkInterface
      *
      * @return self
      */
-    public function setCarrierCode(string $carrierCode): self
+    public function setCarrierCode(string $carrierCode) : self
     {
         $this->carrierCode = $carrierCode;
         return $this;
@@ -48,7 +48,7 @@ class InventoryApiDataSourceCarrierLinkInterface
      *
      * @return int
      */
-    public function getPosition(): int
+    public function getPosition() : int
     {
         return $this->position;
     }
@@ -59,7 +59,7 @@ class InventoryApiDataSourceCarrierLinkInterface
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(int $position) : self
     {
         $this->position = $position;
         return $this;
@@ -80,7 +80,7 @@ class InventoryApiDataSourceCarrierLinkInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

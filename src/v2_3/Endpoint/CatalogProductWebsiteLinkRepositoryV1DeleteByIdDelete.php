@@ -4,33 +4,33 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class CatalogProductWebsiteLinkRepositoryV1DeleteByIdDelete extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $sku;
     protected $websiteId;
     /**
      * Remove the website assignment from the product by product sku
      *
-     * @param string $sku
-     * @param int $websiteId
+     * @param string $sku 
+     * @param int $websiteId 
      */
     public function __construct(string $sku, int $websiteId)
     {
         $this->sku = $sku;
         $this->websiteId = $websiteId;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'DELETE';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{sku}', '{websiteId}'), array($this->sku, $this->websiteId), '/V1/products/{sku}/websites/{websiteId}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -55,7 +55,7 @@ class CatalogProductWebsiteLinkRepositoryV1DeleteByIdDelete extends \Kiboko\Mage
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

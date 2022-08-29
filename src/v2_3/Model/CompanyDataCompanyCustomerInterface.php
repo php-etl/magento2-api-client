@@ -45,7 +45,7 @@ class CompanyDataCompanyCustomerInterface
      *
      * @return int
      */
-    public function getCustomerId(): int
+    public function getCustomerId() : int
     {
         return $this->customerId;
     }
@@ -56,7 +56,7 @@ class CompanyDataCompanyCustomerInterface
      *
      * @return self
      */
-    public function setCustomerId(int $customerId): self
+    public function setCustomerId(int $customerId) : self
     {
         $this->customerId = $customerId;
         return $this;
@@ -66,7 +66,7 @@ class CompanyDataCompanyCustomerInterface
      *
      * @return int
      */
-    public function getCompanyId(): int
+    public function getCompanyId() : int
     {
         return $this->companyId;
     }
@@ -77,7 +77,7 @@ class CompanyDataCompanyCustomerInterface
      *
      * @return self
      */
-    public function setCompanyId(int $companyId): self
+    public function setCompanyId(int $companyId) : self
     {
         $this->companyId = $companyId;
         return $this;
@@ -87,7 +87,7 @@ class CompanyDataCompanyCustomerInterface
      *
      * @return string
      */
-    public function getJobTitle(): string
+    public function getJobTitle() : string
     {
         return $this->jobTitle;
     }
@@ -98,7 +98,7 @@ class CompanyDataCompanyCustomerInterface
      *
      * @return self
      */
-    public function setJobTitle(string $jobTitle): self
+    public function setJobTitle(string $jobTitle) : self
     {
         $this->jobTitle = $jobTitle;
         return $this;
@@ -108,7 +108,7 @@ class CompanyDataCompanyCustomerInterface
      *
      * @return int
      */
-    public function getStatus(): int
+    public function getStatus() : int
     {
         return $this->status;
     }
@@ -119,7 +119,7 @@ class CompanyDataCompanyCustomerInterface
      *
      * @return self
      */
-    public function setStatus(int $status): self
+    public function setStatus(int $status) : self
     {
         $this->status = $status;
         return $this;
@@ -129,7 +129,7 @@ class CompanyDataCompanyCustomerInterface
      *
      * @return string
      */
-    public function getTelephone(): string
+    public function getTelephone() : string
     {
         return $this->telephone;
     }
@@ -140,7 +140,7 @@ class CompanyDataCompanyCustomerInterface
      *
      * @return self
      */
-    public function setTelephone(string $telephone): self
+    public function setTelephone(string $telephone) : self
     {
         $this->telephone = $telephone;
         return $this;
@@ -161,7 +161,7 @@ class CompanyDataCompanyCustomerInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

@@ -45,7 +45,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return string
      */
-    public function getCode(): string
+    public function getCode() : string
     {
         return $this->code;
     }
@@ -56,7 +56,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(string $code) : self
     {
         $this->code = $code;
         return $this;
@@ -66,7 +66,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle() : string
     {
         return $this->title;
     }
@@ -77,7 +77,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(string $title) : self
     {
         $this->title = $title;
         return $this;
@@ -87,7 +87,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return float
      */
-    public function getPercent(): float
+    public function getPercent() : float
     {
         return $this->percent;
     }
@@ -98,7 +98,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return self
      */
-    public function setPercent(float $percent): self
+    public function setPercent(float $percent) : self
     {
         $this->percent = $percent;
         return $this;
@@ -108,7 +108,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return float
      */
-    public function getAmount(): float
+    public function getAmount() : float
     {
         return $this->amount;
     }
@@ -119,7 +119,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return self
      */
-    public function setAmount(float $amount): self
+    public function setAmount(float $amount) : self
     {
         $this->amount = $amount;
         return $this;
@@ -129,7 +129,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return float
      */
-    public function getBaseAmount(): float
+    public function getBaseAmount() : float
     {
         return $this->baseAmount;
     }
@@ -140,7 +140,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return self
      */
-    public function setBaseAmount(float $baseAmount): self
+    public function setBaseAmount(float $baseAmount) : self
     {
         $this->baseAmount = $baseAmount;
         return $this;
@@ -150,7 +150,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return TaxDataOrderTaxDetailsAppliedTaxExtensionInterface
      */
-    public function getExtensionAttributes(): TaxDataOrderTaxDetailsAppliedTaxExtensionInterface
+    public function getExtensionAttributes() : TaxDataOrderTaxDetailsAppliedTaxExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -161,7 +161,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(TaxDataOrderTaxDetailsAppliedTaxExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(TaxDataOrderTaxDetailsAppliedTaxExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

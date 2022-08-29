@@ -4,14 +4,13 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class GiftWrappingWrappingRepositoryV1GetGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $id;
     /**
      * Return data object for specified wrapping ID and store.
      *
-     * @param int $id
+     * @param int $id 
      * @param array $queryParameters {
-     *     @var int $storeId
+     *     @var int $storeId 
      * }
      */
     public function __construct(int $id, array $queryParameters = array())
@@ -19,23 +18,24 @@ class GiftWrappingWrappingRepositoryV1GetGet extends \Kiboko\Magento\v2_3\Runtim
         $this->id = $id;
         $this->queryParameters = $queryParameters;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'GET';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{id}'), array($this->id), '/V1/gift-wrappings/{id}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
-    protected function getQueryOptionsResolver(): \Symfony\Component\OptionsResolver\OptionsResolver
+    protected function getQueryOptionsResolver() : \Symfony\Component\OptionsResolver\OptionsResolver
     {
         $optionsResolver = parent::getQueryOptionsResolver();
         $optionsResolver->setDefined(array('storeId'));
@@ -61,7 +61,7 @@ class GiftWrappingWrappingRepositoryV1GetGet extends \Kiboko\Magento\v2_3\Runtim
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

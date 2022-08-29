@@ -4,32 +4,32 @@ namespace Kiboko\Magento\v2_3\Endpoint;
 
 class GiftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPut extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
     protected $cartId;
     /**
      * Add gift card to the cart.
      *
-     * @param int $cartId
-     * @param \Kiboko\Magento\v2_3\Model\V1CartsCartIdGiftCardsPutBody $giftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPutBody
+     * @param int $cartId 
+     * @param \Kiboko\Magento\v2_3\Model\V1CartsCartIdGiftCardsPutBody $giftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPutBody 
      */
     public function __construct(int $cartId, \Kiboko\Magento\v2_3\Model\V1CartsCartIdGiftCardsPutBody $giftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPutBody)
     {
         $this->cartId = $cartId;
         $this->body = $giftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPutBody;
     }
-    public function getMethod(): string
+    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    public function getMethod() : string
     {
         return 'PUT';
     }
-    public function getUri(): string
+    public function getUri() : string
     {
         return str_replace(array('{cartId}'), array($this->cartId), '/V1/carts/{cartId}/giftCards');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
-    public function getExtraHeaders(): array
+    public function getExtraHeaders() : array
     {
         return array('Accept' => array('application/json'));
     }
@@ -54,7 +54,7 @@ class GiftCardAccountGiftCardAccountManagementV1SaveByQuoteIdPut extends \Kiboko
         }
         return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
     }
-    public function getAuthenticationScopes(): array
+    public function getAuthenticationScopes() : array
     {
         return array();
     }

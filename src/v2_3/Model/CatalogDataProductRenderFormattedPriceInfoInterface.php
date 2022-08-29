@@ -57,7 +57,7 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
      *
      * @return string
      */
-    public function getFinalPrice(): string
+    public function getFinalPrice() : string
     {
         return $this->finalPrice;
     }
@@ -68,7 +68,7 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
      *
      * @return self
      */
-    public function setFinalPrice(string $finalPrice): self
+    public function setFinalPrice(string $finalPrice) : self
     {
         $this->finalPrice = $finalPrice;
         return $this;
@@ -78,7 +78,7 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
      *
      * @return string
      */
-    public function getMaxPrice(): string
+    public function getMaxPrice() : string
     {
         return $this->maxPrice;
     }
@@ -89,7 +89,7 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
      *
      * @return self
      */
-    public function setMaxPrice(string $maxPrice): self
+    public function setMaxPrice(string $maxPrice) : self
     {
         $this->maxPrice = $maxPrice;
         return $this;
@@ -99,7 +99,7 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
      *
      * @return string
      */
-    public function getMinimalPrice(): string
+    public function getMinimalPrice() : string
     {
         return $this->minimalPrice;
     }
@@ -110,7 +110,7 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
      *
      * @return self
      */
-    public function setMinimalPrice(string $minimalPrice): self
+    public function setMinimalPrice(string $minimalPrice) : self
     {
         $this->minimalPrice = $minimalPrice;
         return $this;
@@ -120,7 +120,7 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
      *
      * @return string
      */
-    public function getMaxRegularPrice(): string
+    public function getMaxRegularPrice() : string
     {
         return $this->maxRegularPrice;
     }
@@ -131,7 +131,7 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
      *
      * @return self
      */
-    public function setMaxRegularPrice(string $maxRegularPrice): self
+    public function setMaxRegularPrice(string $maxRegularPrice) : self
     {
         $this->maxRegularPrice = $maxRegularPrice;
         return $this;
@@ -141,7 +141,7 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
      *
      * @return string
      */
-    public function getMinimalRegularPrice(): string
+    public function getMinimalRegularPrice() : string
     {
         return $this->minimalRegularPrice;
     }
@@ -152,7 +152,7 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
      *
      * @return self
      */
-    public function setMinimalRegularPrice(string $minimalRegularPrice): self
+    public function setMinimalRegularPrice(string $minimalRegularPrice) : self
     {
         $this->minimalRegularPrice = $minimalRegularPrice;
         return $this;
@@ -162,7 +162,7 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
      *
      * @return string
      */
-    public function getSpecialPrice(): string
+    public function getSpecialPrice() : string
     {
         return $this->specialPrice;
     }
@@ -173,7 +173,7 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
      *
      * @return self
      */
-    public function setSpecialPrice(string $specialPrice): self
+    public function setSpecialPrice(string $specialPrice) : self
     {
         $this->specialPrice = $specialPrice;
         return $this;
@@ -183,7 +183,7 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
      *
      * @return string
      */
-    public function getRegularPrice(): string
+    public function getRegularPrice() : string
     {
         return $this->regularPrice;
     }
@@ -194,7 +194,7 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
      *
      * @return self
      */
-    public function setRegularPrice(string $regularPrice): self
+    public function setRegularPrice(string $regularPrice) : self
     {
         $this->regularPrice = $regularPrice;
         return $this;
@@ -215,7 +215,7 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

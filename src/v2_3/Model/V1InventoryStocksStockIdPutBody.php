@@ -15,7 +15,7 @@ class V1InventoryStocksStockIdPutBody
      *
      * @return InventoryApiDataStockInterface
      */
-    public function getStock(): InventoryApiDataStockInterface
+    public function getStock() : InventoryApiDataStockInterface
     {
         return $this->stock;
     }
@@ -26,7 +26,7 @@ class V1InventoryStocksStockIdPutBody
      *
      * @return self
      */
-    public function setStock(InventoryApiDataStockInterface $stock): self
+    public function setStock(InventoryApiDataStockInterface $stock) : self
     {
         $this->stock = $stock;
         return $this;

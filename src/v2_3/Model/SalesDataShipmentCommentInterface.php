@@ -51,7 +51,7 @@ class SalesDataShipmentCommentInterface
      *
      * @return int
      */
-    public function getIsCustomerNotified(): int
+    public function getIsCustomerNotified() : int
     {
         return $this->isCustomerNotified;
     }
@@ -62,7 +62,7 @@ class SalesDataShipmentCommentInterface
      *
      * @return self
      */
-    public function setIsCustomerNotified(int $isCustomerNotified): self
+    public function setIsCustomerNotified(int $isCustomerNotified) : self
     {
         $this->isCustomerNotified = $isCustomerNotified;
         return $this;
@@ -72,7 +72,7 @@ class SalesDataShipmentCommentInterface
      *
      * @return int
      */
-    public function getParentId(): int
+    public function getParentId() : int
     {
         return $this->parentId;
     }
@@ -83,7 +83,7 @@ class SalesDataShipmentCommentInterface
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(int $parentId) : self
     {
         $this->parentId = $parentId;
         return $this;
@@ -104,7 +104,7 @@ class SalesDataShipmentCommentInterface
      *
      * @return self
      */
-    public function setExtensionAttributes($extensionAttributes): self
+    public function setExtensionAttributes($extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -114,7 +114,7 @@ class SalesDataShipmentCommentInterface
      *
      * @return string
      */
-    public function getComment(): string
+    public function getComment() : string
     {
         return $this->comment;
     }
@@ -125,7 +125,7 @@ class SalesDataShipmentCommentInterface
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(string $comment) : self
     {
         $this->comment = $comment;
         return $this;
@@ -135,7 +135,7 @@ class SalesDataShipmentCommentInterface
      *
      * @return int
      */
-    public function getIsVisibleOnFront(): int
+    public function getIsVisibleOnFront() : int
     {
         return $this->isVisibleOnFront;
     }
@@ -146,7 +146,7 @@ class SalesDataShipmentCommentInterface
      *
      * @return self
      */
-    public function setIsVisibleOnFront(int $isVisibleOnFront): self
+    public function setIsVisibleOnFront(int $isVisibleOnFront) : self
     {
         $this->isVisibleOnFront = $isVisibleOnFront;
         return $this;
@@ -156,7 +156,7 @@ class SalesDataShipmentCommentInterface
      *
      * @return string
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt() : string
     {
         return $this->createdAt;
     }
@@ -167,7 +167,7 @@ class SalesDataShipmentCommentInterface
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(string $createdAt) : self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -177,7 +177,7 @@ class SalesDataShipmentCommentInterface
      *
      * @return int
      */
-    public function getEntityId(): int
+    public function getEntityId() : int
     {
         return $this->entityId;
     }
@@ -188,7 +188,7 @@ class SalesDataShipmentCommentInterface
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(int $entityId) : self
     {
         $this->entityId = $entityId;
         return $this;

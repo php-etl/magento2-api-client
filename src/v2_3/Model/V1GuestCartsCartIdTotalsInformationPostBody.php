@@ -15,7 +15,7 @@ class V1GuestCartsCartIdTotalsInformationPostBody
      *
      * @return CheckoutDataTotalsInformationInterface
      */
-    public function getAddressInformation(): CheckoutDataTotalsInformationInterface
+    public function getAddressInformation() : CheckoutDataTotalsInformationInterface
     {
         return $this->addressInformation;
     }
@@ -26,7 +26,7 @@ class V1GuestCartsCartIdTotalsInformationPostBody
      *
      * @return self
      */
-    public function setAddressInformation(CheckoutDataTotalsInformationInterface $addressInformation): self
+    public function setAddressInformation(CheckoutDataTotalsInformationInterface $addressInformation) : self
     {
         $this->addressInformation = $addressInformation;
         return $this;

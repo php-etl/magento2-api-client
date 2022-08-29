@@ -15,7 +15,7 @@ class SalesDataOrderPaymentExtensionInterface
      *
      * @return VaultDataPaymentTokenInterface
      */
-    public function getVaultPaymentToken(): VaultDataPaymentTokenInterface
+    public function getVaultPaymentToken() : VaultDataPaymentTokenInterface
     {
         return $this->vaultPaymentToken;
     }
@@ -26,7 +26,7 @@ class SalesDataOrderPaymentExtensionInterface
      *
      * @return self
      */
-    public function setVaultPaymentToken(VaultDataPaymentTokenInterface $vaultPaymentToken): self
+    public function setVaultPaymentToken(VaultDataPaymentTokenInterface $vaultPaymentToken) : self
     {
         $this->vaultPaymentToken = $vaultPaymentToken;
         return $this;

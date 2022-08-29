@@ -177,7 +177,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getGrandTotal(): float
+    public function getGrandTotal() : float
     {
         return $this->grandTotal;
     }
@@ -188,7 +188,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setGrandTotal(float $grandTotal): self
+    public function setGrandTotal(float $grandTotal) : self
     {
         $this->grandTotal = $grandTotal;
         return $this;
@@ -198,7 +198,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getBaseGrandTotal(): float
+    public function getBaseGrandTotal() : float
     {
         return $this->baseGrandTotal;
     }
@@ -209,7 +209,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setBaseGrandTotal(float $baseGrandTotal): self
+    public function setBaseGrandTotal(float $baseGrandTotal) : self
     {
         $this->baseGrandTotal = $baseGrandTotal;
         return $this;
@@ -219,7 +219,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getSubtotal(): float
+    public function getSubtotal() : float
     {
         return $this->subtotal;
     }
@@ -230,7 +230,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setSubtotal(float $subtotal): self
+    public function setSubtotal(float $subtotal) : self
     {
         $this->subtotal = $subtotal;
         return $this;
@@ -240,7 +240,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getBaseSubtotal(): float
+    public function getBaseSubtotal() : float
     {
         return $this->baseSubtotal;
     }
@@ -251,7 +251,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setBaseSubtotal(float $baseSubtotal): self
+    public function setBaseSubtotal(float $baseSubtotal) : self
     {
         $this->baseSubtotal = $baseSubtotal;
         return $this;
@@ -261,7 +261,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getDiscountAmount(): float
+    public function getDiscountAmount() : float
     {
         return $this->discountAmount;
     }
@@ -272,7 +272,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setDiscountAmount(float $discountAmount): self
+    public function setDiscountAmount(float $discountAmount) : self
     {
         $this->discountAmount = $discountAmount;
         return $this;
@@ -282,7 +282,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getBaseDiscountAmount(): float
+    public function getBaseDiscountAmount() : float
     {
         return $this->baseDiscountAmount;
     }
@@ -293,7 +293,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setBaseDiscountAmount(float $baseDiscountAmount): self
+    public function setBaseDiscountAmount(float $baseDiscountAmount) : self
     {
         $this->baseDiscountAmount = $baseDiscountAmount;
         return $this;
@@ -303,7 +303,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getSubtotalWithDiscount(): float
+    public function getSubtotalWithDiscount() : float
     {
         return $this->subtotalWithDiscount;
     }
@@ -314,7 +314,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setSubtotalWithDiscount(float $subtotalWithDiscount): self
+    public function setSubtotalWithDiscount(float $subtotalWithDiscount) : self
     {
         $this->subtotalWithDiscount = $subtotalWithDiscount;
         return $this;
@@ -324,7 +324,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getBaseSubtotalWithDiscount(): float
+    public function getBaseSubtotalWithDiscount() : float
     {
         return $this->baseSubtotalWithDiscount;
     }
@@ -335,7 +335,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setBaseSubtotalWithDiscount(float $baseSubtotalWithDiscount): self
+    public function setBaseSubtotalWithDiscount(float $baseSubtotalWithDiscount) : self
     {
         $this->baseSubtotalWithDiscount = $baseSubtotalWithDiscount;
         return $this;
@@ -345,7 +345,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getShippingAmount(): float
+    public function getShippingAmount() : float
     {
         return $this->shippingAmount;
     }
@@ -356,7 +356,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setShippingAmount(float $shippingAmount): self
+    public function setShippingAmount(float $shippingAmount) : self
     {
         $this->shippingAmount = $shippingAmount;
         return $this;
@@ -366,7 +366,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getBaseShippingAmount(): float
+    public function getBaseShippingAmount() : float
     {
         return $this->baseShippingAmount;
     }
@@ -377,7 +377,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setBaseShippingAmount(float $baseShippingAmount): self
+    public function setBaseShippingAmount(float $baseShippingAmount) : self
     {
         $this->baseShippingAmount = $baseShippingAmount;
         return $this;
@@ -387,7 +387,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getShippingDiscountAmount(): float
+    public function getShippingDiscountAmount() : float
     {
         return $this->shippingDiscountAmount;
     }
@@ -398,7 +398,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setShippingDiscountAmount(float $shippingDiscountAmount): self
+    public function setShippingDiscountAmount(float $shippingDiscountAmount) : self
     {
         $this->shippingDiscountAmount = $shippingDiscountAmount;
         return $this;
@@ -408,7 +408,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getBaseShippingDiscountAmount(): float
+    public function getBaseShippingDiscountAmount() : float
     {
         return $this->baseShippingDiscountAmount;
     }
@@ -419,7 +419,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setBaseShippingDiscountAmount(float $baseShippingDiscountAmount): self
+    public function setBaseShippingDiscountAmount(float $baseShippingDiscountAmount) : self
     {
         $this->baseShippingDiscountAmount = $baseShippingDiscountAmount;
         return $this;
@@ -429,7 +429,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getTaxAmount(): float
+    public function getTaxAmount() : float
     {
         return $this->taxAmount;
     }
@@ -440,7 +440,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setTaxAmount(float $taxAmount): self
+    public function setTaxAmount(float $taxAmount) : self
     {
         $this->taxAmount = $taxAmount;
         return $this;
@@ -450,7 +450,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getBaseTaxAmount(): float
+    public function getBaseTaxAmount() : float
     {
         return $this->baseTaxAmount;
     }
@@ -461,7 +461,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setBaseTaxAmount(float $baseTaxAmount): self
+    public function setBaseTaxAmount(float $baseTaxAmount) : self
     {
         $this->baseTaxAmount = $baseTaxAmount;
         return $this;
@@ -471,7 +471,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getWeeeTaxAppliedAmount(): float
+    public function getWeeeTaxAppliedAmount() : float
     {
         return $this->weeeTaxAppliedAmount;
     }
@@ -482,7 +482,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setWeeeTaxAppliedAmount(float $weeeTaxAppliedAmount): self
+    public function setWeeeTaxAppliedAmount(float $weeeTaxAppliedAmount) : self
     {
         $this->weeeTaxAppliedAmount = $weeeTaxAppliedAmount;
         return $this;
@@ -492,7 +492,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getShippingTaxAmount(): float
+    public function getShippingTaxAmount() : float
     {
         return $this->shippingTaxAmount;
     }
@@ -503,7 +503,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setShippingTaxAmount(float $shippingTaxAmount): self
+    public function setShippingTaxAmount(float $shippingTaxAmount) : self
     {
         $this->shippingTaxAmount = $shippingTaxAmount;
         return $this;
@@ -513,7 +513,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getBaseShippingTaxAmount(): float
+    public function getBaseShippingTaxAmount() : float
     {
         return $this->baseShippingTaxAmount;
     }
@@ -524,7 +524,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setBaseShippingTaxAmount(float $baseShippingTaxAmount): self
+    public function setBaseShippingTaxAmount(float $baseShippingTaxAmount) : self
     {
         $this->baseShippingTaxAmount = $baseShippingTaxAmount;
         return $this;
@@ -534,7 +534,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getSubtotalInclTax(): float
+    public function getSubtotalInclTax() : float
     {
         return $this->subtotalInclTax;
     }
@@ -545,7 +545,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setSubtotalInclTax(float $subtotalInclTax): self
+    public function setSubtotalInclTax(float $subtotalInclTax) : self
     {
         $this->subtotalInclTax = $subtotalInclTax;
         return $this;
@@ -555,7 +555,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getBaseSubtotalInclTax(): float
+    public function getBaseSubtotalInclTax() : float
     {
         return $this->baseSubtotalInclTax;
     }
@@ -566,7 +566,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setBaseSubtotalInclTax(float $baseSubtotalInclTax): self
+    public function setBaseSubtotalInclTax(float $baseSubtotalInclTax) : self
     {
         $this->baseSubtotalInclTax = $baseSubtotalInclTax;
         return $this;
@@ -576,7 +576,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getShippingInclTax(): float
+    public function getShippingInclTax() : float
     {
         return $this->shippingInclTax;
     }
@@ -587,7 +587,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setShippingInclTax(float $shippingInclTax): self
+    public function setShippingInclTax(float $shippingInclTax) : self
     {
         $this->shippingInclTax = $shippingInclTax;
         return $this;
@@ -597,7 +597,7 @@ class QuoteDataTotalsInterface
      *
      * @return float
      */
-    public function getBaseShippingInclTax(): float
+    public function getBaseShippingInclTax() : float
     {
         return $this->baseShippingInclTax;
     }
@@ -608,7 +608,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setBaseShippingInclTax(float $baseShippingInclTax): self
+    public function setBaseShippingInclTax(float $baseShippingInclTax) : self
     {
         $this->baseShippingInclTax = $baseShippingInclTax;
         return $this;
@@ -618,7 +618,7 @@ class QuoteDataTotalsInterface
      *
      * @return string
      */
-    public function getBaseCurrencyCode(): string
+    public function getBaseCurrencyCode() : string
     {
         return $this->baseCurrencyCode;
     }
@@ -629,7 +629,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setBaseCurrencyCode(string $baseCurrencyCode): self
+    public function setBaseCurrencyCode(string $baseCurrencyCode) : self
     {
         $this->baseCurrencyCode = $baseCurrencyCode;
         return $this;
@@ -639,7 +639,7 @@ class QuoteDataTotalsInterface
      *
      * @return string
      */
-    public function getQuoteCurrencyCode(): string
+    public function getQuoteCurrencyCode() : string
     {
         return $this->quoteCurrencyCode;
     }
@@ -650,7 +650,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setQuoteCurrencyCode(string $quoteCurrencyCode): self
+    public function setQuoteCurrencyCode(string $quoteCurrencyCode) : self
     {
         $this->quoteCurrencyCode = $quoteCurrencyCode;
         return $this;
@@ -660,7 +660,7 @@ class QuoteDataTotalsInterface
      *
      * @return string
      */
-    public function getCouponCode(): string
+    public function getCouponCode() : string
     {
         return $this->couponCode;
     }
@@ -671,7 +671,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setCouponCode(string $couponCode): self
+    public function setCouponCode(string $couponCode) : self
     {
         $this->couponCode = $couponCode;
         return $this;
@@ -681,7 +681,7 @@ class QuoteDataTotalsInterface
      *
      * @return int
      */
-    public function getItemsQty(): int
+    public function getItemsQty() : int
     {
         return $this->itemsQty;
     }
@@ -692,7 +692,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setItemsQty(int $itemsQty): self
+    public function setItemsQty(int $itemsQty) : self
     {
         $this->itemsQty = $itemsQty;
         return $this;
@@ -702,7 +702,7 @@ class QuoteDataTotalsInterface
      *
      * @return QuoteDataTotalsItemInterface[]
      */
-    public function getItems(): array
+    public function getItems() : array
     {
         return $this->items;
     }
@@ -713,7 +713,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(array $items) : self
     {
         $this->items = $items;
         return $this;
@@ -723,7 +723,7 @@ class QuoteDataTotalsInterface
      *
      * @return QuoteDataTotalSegmentInterface[]
      */
-    public function getTotalSegments(): array
+    public function getTotalSegments() : array
     {
         return $this->totalSegments;
     }
@@ -734,7 +734,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setTotalSegments(array $totalSegments): self
+    public function setTotalSegments(array $totalSegments) : self
     {
         $this->totalSegments = $totalSegments;
         return $this;
@@ -744,7 +744,7 @@ class QuoteDataTotalsInterface
      *
      * @return QuoteDataTotalsExtensionInterface
      */
-    public function getExtensionAttributes(): QuoteDataTotalsExtensionInterface
+    public function getExtensionAttributes() : QuoteDataTotalsExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -755,7 +755,7 @@ class QuoteDataTotalsInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(QuoteDataTotalsExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(QuoteDataTotalsExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

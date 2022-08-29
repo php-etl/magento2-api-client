@@ -11,17 +11,16 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-
 class InventoryDistanceBasedSourceSelectionApiDataLatLngInterfaceNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     use CheckArray;
-    public function supportsDenormalization($data, $type, $format = null): bool
+    public function supportsDenormalization($data, $type, $format = null) : bool
     {
         return $type === 'Kiboko\\Magento\\v2_3\\Model\\InventoryDistanceBasedSourceSelectionApiDataLatLngInterface';
     }
-    public function supportsNormalization($data, $format = null): bool
+    public function supportsNormalization($data, $format = null) : bool
     {
         return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\InventoryDistanceBasedSourceSelectionApiDataLatLngInterface';
     }
@@ -38,10 +37,10 @@ class InventoryDistanceBasedSourceSelectionApiDataLatLngInterfaceNormalizer impl
         }
         $object = new \Kiboko\Magento\v2_3\Model\InventoryDistanceBasedSourceSelectionApiDataLatLngInterface();
         if (\array_key_exists('lat', $data) && \is_int($data['lat'])) {
-            $data['lat'] = (float) $data['lat'];
+            $data['lat'] = (double) $data['lat'];
         }
         if (\array_key_exists('lng', $data) && \is_int($data['lng'])) {
-            $data['lng'] = (float) $data['lng'];
+            $data['lng'] = (double) $data['lng'];
         }
         if (null === $data || false === \is_array($data)) {
             return $object;

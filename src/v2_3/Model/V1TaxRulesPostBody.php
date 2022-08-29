@@ -15,7 +15,7 @@ class V1TaxRulesPostBody
      *
      * @return TaxDataTaxRuleInterface
      */
-    public function getRule(): TaxDataTaxRuleInterface
+    public function getRule() : TaxDataTaxRuleInterface
     {
         return $this->rule;
     }
@@ -26,7 +26,7 @@ class V1TaxRulesPostBody
      *
      * @return self
      */
-    public function setRule(TaxDataTaxRuleInterface $rule): self
+    public function setRule(TaxDataTaxRuleInterface $rule) : self
     {
         $this->rule = $rule;
         return $this;

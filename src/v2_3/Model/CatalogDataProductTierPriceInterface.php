@@ -33,7 +33,7 @@ class CatalogDataProductTierPriceInterface
      *
      * @return int
      */
-    public function getCustomerGroupId(): int
+    public function getCustomerGroupId() : int
     {
         return $this->customerGroupId;
     }
@@ -44,7 +44,7 @@ class CatalogDataProductTierPriceInterface
      *
      * @return self
      */
-    public function setCustomerGroupId(int $customerGroupId): self
+    public function setCustomerGroupId(int $customerGroupId) : self
     {
         $this->customerGroupId = $customerGroupId;
         return $this;
@@ -54,7 +54,7 @@ class CatalogDataProductTierPriceInterface
      *
      * @return float
      */
-    public function getQty(): float
+    public function getQty() : float
     {
         return $this->qty;
     }
@@ -65,7 +65,7 @@ class CatalogDataProductTierPriceInterface
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(float $qty) : self
     {
         $this->qty = $qty;
         return $this;
@@ -75,7 +75,7 @@ class CatalogDataProductTierPriceInterface
      *
      * @return float
      */
-    public function getValue(): float
+    public function getValue() : float
     {
         return $this->value;
     }
@@ -86,7 +86,7 @@ class CatalogDataProductTierPriceInterface
      *
      * @return self
      */
-    public function setValue(float $value): self
+    public function setValue(float $value) : self
     {
         $this->value = $value;
         return $this;
@@ -96,7 +96,7 @@ class CatalogDataProductTierPriceInterface
      *
      * @return CatalogDataProductTierPriceExtensionInterface
      */
-    public function getExtensionAttributes(): CatalogDataProductTierPriceExtensionInterface
+    public function getExtensionAttributes() : CatalogDataProductTierPriceExtensionInterface
     {
         return $this->extensionAttributes;
     }
@@ -107,7 +107,7 @@ class CatalogDataProductTierPriceInterface
      *
      * @return self
      */
-    public function setExtensionAttributes(CatalogDataProductTierPriceExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(CatalogDataProductTierPriceExtensionInterface $extensionAttributes) : self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

@@ -105,7 +105,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->id;
     }
@@ -116,7 +116,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(int $id) : self
     {
         $this->id = $id;
         return $this;
@@ -126,7 +126,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return int
      */
-    public function getCompanyCreditId(): int
+    public function getCompanyCreditId() : int
     {
         return $this->companyCreditId;
     }
@@ -137,7 +137,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setCompanyCreditId(int $companyCreditId): self
+    public function setCompanyCreditId(int $companyCreditId) : self
     {
         $this->companyCreditId = $companyCreditId;
         return $this;
@@ -147,7 +147,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return int
      */
-    public function getUserId(): int
+    public function getUserId() : int
     {
         return $this->userId;
     }
@@ -158,7 +158,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setUserId(int $userId): self
+    public function setUserId(int $userId) : self
     {
         $this->userId = $userId;
         return $this;
@@ -168,7 +168,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return int
      */
-    public function getUserType(): int
+    public function getUserType() : int
     {
         return $this->userType;
     }
@@ -179,7 +179,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setUserType(int $userType): self
+    public function setUserType(int $userType) : self
     {
         $this->userType = $userType;
         return $this;
@@ -189,7 +189,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return string
      */
-    public function getCurrencyCredit(): string
+    public function getCurrencyCredit() : string
     {
         return $this->currencyCredit;
     }
@@ -200,7 +200,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setCurrencyCredit(string $currencyCredit): self
+    public function setCurrencyCredit(string $currencyCredit) : self
     {
         $this->currencyCredit = $currencyCredit;
         return $this;
@@ -210,7 +210,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return string
      */
-    public function getCurrencyOperation(): string
+    public function getCurrencyOperation() : string
     {
         return $this->currencyOperation;
     }
@@ -221,7 +221,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setCurrencyOperation(string $currencyOperation): self
+    public function setCurrencyOperation(string $currencyOperation) : self
     {
         $this->currencyOperation = $currencyOperation;
         return $this;
@@ -231,7 +231,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return float
      */
-    public function getRate(): float
+    public function getRate() : float
     {
         return $this->rate;
     }
@@ -242,7 +242,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setRate(float $rate): self
+    public function setRate(float $rate) : self
     {
         $this->rate = $rate;
         return $this;
@@ -252,7 +252,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return float
      */
-    public function getRateCredit(): float
+    public function getRateCredit() : float
     {
         return $this->rateCredit;
     }
@@ -263,7 +263,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setRateCredit(float $rateCredit): self
+    public function setRateCredit(float $rateCredit) : self
     {
         $this->rateCredit = $rateCredit;
         return $this;
@@ -273,7 +273,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return float
      */
-    public function getAmount(): float
+    public function getAmount() : float
     {
         return $this->amount;
     }
@@ -284,7 +284,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setAmount(float $amount): self
+    public function setAmount(float $amount) : self
     {
         $this->amount = $amount;
         return $this;
@@ -294,7 +294,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return float
      */
-    public function getBalance(): float
+    public function getBalance() : float
     {
         return $this->balance;
     }
@@ -305,7 +305,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setBalance(float $balance): self
+    public function setBalance(float $balance) : self
     {
         $this->balance = $balance;
         return $this;
@@ -315,7 +315,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return float
      */
-    public function getCreditLimit(): float
+    public function getCreditLimit() : float
     {
         return $this->creditLimit;
     }
@@ -326,7 +326,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setCreditLimit(float $creditLimit): self
+    public function setCreditLimit(float $creditLimit) : self
     {
         $this->creditLimit = $creditLimit;
         return $this;
@@ -336,7 +336,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return float
      */
-    public function getAvailableLimit(): float
+    public function getAvailableLimit() : float
     {
         return $this->availableLimit;
     }
@@ -347,7 +347,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setAvailableLimit(float $availableLimit): self
+    public function setAvailableLimit(float $availableLimit) : self
     {
         $this->availableLimit = $availableLimit;
         return $this;
@@ -357,7 +357,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return int
      */
-    public function getType(): int
+    public function getType() : int
     {
         return $this->type;
     }
@@ -368,7 +368,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setType(int $type): self
+    public function setType(int $type) : self
     {
         $this->type = $type;
         return $this;
@@ -378,7 +378,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return string
      */
-    public function getDatetime(): string
+    public function getDatetime() : string
     {
         return $this->datetime;
     }
@@ -389,7 +389,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setDatetime(string $datetime): self
+    public function setDatetime(string $datetime) : self
     {
         $this->datetime = $datetime;
         return $this;
@@ -399,7 +399,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return string
      */
-    public function getPurchaseOrder(): string
+    public function getPurchaseOrder() : string
     {
         return $this->purchaseOrder;
     }
@@ -410,7 +410,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setPurchaseOrder(string $purchaseOrder): self
+    public function setPurchaseOrder(string $purchaseOrder) : self
     {
         $this->purchaseOrder = $purchaseOrder;
         return $this;
@@ -420,7 +420,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return string
      */
-    public function getComment(): string
+    public function getComment() : string
     {
         return $this->comment;
     }
@@ -431,7 +431,7 @@ class CompanyCreditDataHistoryDataInterface
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(string $comment) : self
     {
         $this->comment = $comment;
         return $this;

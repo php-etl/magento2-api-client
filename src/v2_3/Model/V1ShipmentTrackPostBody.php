@@ -15,7 +15,7 @@ class V1ShipmentTrackPostBody
      *
      * @return SalesDataShipmentTrackInterface
      */
-    public function getEntity(): SalesDataShipmentTrackInterface
+    public function getEntity() : SalesDataShipmentTrackInterface
     {
         return $this->entity;
     }
@@ -26,7 +26,7 @@ class V1ShipmentTrackPostBody
      *
      * @return self
      */
-    public function setEntity(SalesDataShipmentTrackInterface $entity): self
+    public function setEntity(SalesDataShipmentTrackInterface $entity) : self
     {
         $this->entity = $entity;
         return $this;
