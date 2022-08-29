@@ -5,7 +5,10 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Kiboko\\Magento\\V2\\": "src/"
+            "Kiboko\\Magento\\V2_1\\": "src/v2_1",
+            "Kiboko\\Magento\\V2_2\\": "src/v2_2",
+            "Kiboko\\Magento\\V2_3\\": "src/v2_3",
+            "Kiboko\\Magento\\V2_4\\": "src/v2_4"
         }
     },
     "authors": [
@@ -19,8 +22,8 @@
         "jane-php/open-api-runtime": "^7.3"
     },
     "require-dev": {
-        "jane-php/open-api-3": "^7.3",
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "jane-php/open-api-2": "^7.3"
     },
     "config": {
         "bin-dir": "bin"
