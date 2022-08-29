@@ -5,10 +5,10 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Kiboko\\Magento\\V2_1\\": "src/v2_1",
-            "Kiboko\\Magento\\V2_2\\": "src/v2_2",
-            "Kiboko\\Magento\\V2_3\\": "src/v2_3",
-            "Kiboko\\Magento\\V2_4\\": "src/v2_4"
+            "Kiboko\\Magento\\v2_1\\": "src/v2_1",
+            "Kiboko\\Magento\\v2_2\\": "src/v2_2",
+            "Kiboko\\Magento\\v2_3\\": "src/v2_3",
+            "Kiboko\\Magento\\v2_4\\": "src/v2_4"
         }
     },
     "authors": [

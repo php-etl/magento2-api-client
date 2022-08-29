@@ -1,7 +1,5 @@
 <?php
 
-use Kiboko\Magento\V2\Exception\SalesOrderRepositoryV1GetListGetUnauthorizedException;
-
 require __DIR__ . '/../vendor/autoload.php';
 
 $token = getenv('MAGENTO_TOKEN');
@@ -12,14 +10,14 @@ $test = new \Http\Client\Common\PluginClient($httpClient, [
     new \Http\Client\Common\Plugin\AuthenticationPlugin(new \Http\Message\Authentication\Bearer($token)),
 ]);
 
-$client = \Kiboko\Magento\V2\Client::create($test);
+$client = \Kiboko\Magento\v2_1\Client::create($test);
 
 try {
-    $response = $client->salesOrderRepositoryV1GetListGet(queryParameters: [
+    $response = $client->catalogProductRepositoryV1GetListGet(queryParameters: [
         'searchCriteria[currentPage]' => 1,
         'searchCriteria[pageSize]' => 10,
-    ], fetch: \Kiboko\Magento\V2\Client::FETCH_RESPONSE);
-} catch (SalesOrderRepositoryV1GetListGetUnauthorizedException) {
+    ], fetch: \Kiboko\Magento\v2_1\Client::FETCH_RESPONSE);
+} catch (\Kiboko\Magento\v2_1\Exception\CatalogProductRepositoryV1GetGetUnauthorizedException) {
 }
 
 if ($response instanceof \Psr\Http\Message\ResponseInterface) {
