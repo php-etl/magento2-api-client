@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1InvoiceInvoiceIdRefundPostBodyNormalizer implements DenormalizerInterfac
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\V1InvoiceInvoiceIdRefundPostBody';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\V1InvoiceInvoiceIdRefundPostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\V1InvoiceInvoiceIdRefundPostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\V1InvoiceInvoiceIdRefundPostBody';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class V1InvoiceInvoiceIdRefundPostBodyNormalizer implements DenormalizerInterfac
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\V1InvoiceInvoiceIdRefundPostBody();
+        $object = new \Kiboko\Magento\V2_4\Model\V1InvoiceInvoiceIdRefundPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -44,10 +44,10 @@ class V1InvoiceInvoiceIdRefundPostBodyNormalizer implements DenormalizerInterfac
             $object->setAppendComment($data['appendComment']);
         }
         if (\array_key_exists('arguments', $data)) {
-            $object->setArguments($this->denormalizer->denormalize($data['arguments'], 'Kiboko\\Magento\\v2_4\\Model\\SalesDataCreditmemoCreationArgumentsInterface', 'json', $context));
+            $object->setArguments($this->denormalizer->denormalize($data['arguments'], 'Kiboko\\Magento\\V2_4\\Model\\SalesDataCreditmemoCreationArgumentsInterface', 'json', $context));
         }
         if (\array_key_exists('comment', $data)) {
-            $object->setComment($this->denormalizer->denormalize($data['comment'], 'Kiboko\\Magento\\v2_4\\Model\\SalesDataCreditmemoCommentCreationInterface', 'json', $context));
+            $object->setComment($this->denormalizer->denormalize($data['comment'], 'Kiboko\\Magento\\V2_4\\Model\\SalesDataCreditmemoCommentCreationInterface', 'json', $context));
         }
         if (\array_key_exists('isOnline', $data)) {
             $object->setIsOnline($data['isOnline']);
@@ -55,7 +55,7 @@ class V1InvoiceInvoiceIdRefundPostBodyNormalizer implements DenormalizerInterfac
         if (\array_key_exists('items', $data)) {
             $values = array();
             foreach ($data['items'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_4\\Model\\SalesDataCreditmemoItemCreationInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\SalesDataCreditmemoItemCreationInterface', 'json', $context);
             }
             $object->setItems($values);
         }

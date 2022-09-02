@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class SalesRuleDataCouponMassDeleteResultInterfaceNormalizer implements Denormal
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\SalesRuleDataCouponMassDeleteResultInterface';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\SalesRuleDataCouponMassDeleteResultInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\SalesRuleDataCouponMassDeleteResultInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\SalesRuleDataCouponMassDeleteResultInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class SalesRuleDataCouponMassDeleteResultInterfaceNormalizer implements Denormal
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\SalesRuleDataCouponMassDeleteResultInterface();
+        $object = new \Kiboko\Magento\V2_4\Model\SalesRuleDataCouponMassDeleteResultInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }

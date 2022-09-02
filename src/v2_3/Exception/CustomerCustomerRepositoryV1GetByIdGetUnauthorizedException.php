@@ -1,19 +1,19 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Exception;
+namespace Kiboko\Magento\V2_3\Exception;
 
 class CustomerCustomerRepositoryV1GetByIdGetUnauthorizedException extends UnauthorizedException
 {
     /**
-     * @var \Kiboko\Magento\v2_3\Model\ErrorResponse
+     * @var \Kiboko\Magento\V2_3\Model\ErrorResponse
      */
     private $errorResponse;
-    public function __construct(\Kiboko\Magento\v2_3\Model\ErrorResponse $errorResponse)
+    public function __construct(\Kiboko\Magento\V2_3\Model\ErrorResponse $errorResponse)
     {
         parent::__construct('401 Unauthorized');
         $this->errorResponse = $errorResponse;
     }
-    public function getErrorResponse(): \Kiboko\Magento\v2_3\Model\ErrorResponse
+    public function getErrorResponse(): \Kiboko\Magento\V2_3\Model\ErrorResponse
     {
         return $this->errorResponse;
     }

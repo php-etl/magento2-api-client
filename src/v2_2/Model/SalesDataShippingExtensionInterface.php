@@ -1,6 +1,6 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Model;
+namespace Kiboko\Magento\V2_2\Model;
 
 class SalesDataShippingExtensionInterface
 {

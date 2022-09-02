@@ -1,6 +1,6 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Model;
+namespace Kiboko\Magento\V2_4\Model;
 
 class V1SharedCatalogIdUnassignCategoriesPostBody
 {

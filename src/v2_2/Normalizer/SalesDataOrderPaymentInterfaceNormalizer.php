@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class SalesDataOrderPaymentInterfaceNormalizer implements DenormalizerInterface,
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\SalesDataOrderPaymentInterface';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\SalesDataOrderPaymentInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\SalesDataOrderPaymentInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\SalesDataOrderPaymentInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class SalesDataOrderPaymentInterfaceNormalizer implements DenormalizerInterface,
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\SalesDataOrderPaymentInterface();
+        $object = new \Kiboko\Magento\V2_2\Model\SalesDataOrderPaymentInterface();
         if (\array_key_exists('amount_authorized', $data) && \is_int($data['amount_authorized'])) {
             $data['amount_authorized'] = (float) $data['amount_authorized'];
         }
@@ -234,7 +234,7 @@ class SalesDataOrderPaymentInterfaceNormalizer implements DenormalizerInterface,
             $object->setEntityId($data['entity_id']);
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_2\\Model\\SalesDataOrderPaymentExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_2\\Model\\SalesDataOrderPaymentExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('last_trans_id', $data)) {
             $object->setLastTransId($data['last_trans_id']);

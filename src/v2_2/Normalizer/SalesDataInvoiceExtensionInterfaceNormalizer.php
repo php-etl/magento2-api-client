@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class SalesDataInvoiceExtensionInterfaceNormalizer implements DenormalizerInterf
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\SalesDataInvoiceExtensionInterface';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\SalesDataInvoiceExtensionInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\SalesDataInvoiceExtensionInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\SalesDataInvoiceExtensionInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class SalesDataInvoiceExtensionInterfaceNormalizer implements DenormalizerInterf
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\SalesDataInvoiceExtensionInterface();
+        $object = new \Kiboko\Magento\V2_2\Model\SalesDataInvoiceExtensionInterface();
         if (\array_key_exists('base_customer_balance_amount', $data) && \is_int($data['base_customer_balance_amount'])) {
             $data['base_customer_balance_amount'] = (float) $data['base_customer_balance_amount'];
         }
@@ -101,13 +101,13 @@ class SalesDataInvoiceExtensionInterfaceNormalizer implements DenormalizerInterf
             $object->setGwTaxAmount($data['gw_tax_amount']);
         }
         if (\array_key_exists('vertex_tax_calculation_billing_address', $data)) {
-            $object->setVertexTaxCalculationBillingAddress($this->denormalizer->denormalize($data['vertex_tax_calculation_billing_address'], 'Kiboko\\Magento\\v2_2\\Model\\SalesDataOrderAddressInterface', 'json', $context));
+            $object->setVertexTaxCalculationBillingAddress($this->denormalizer->denormalize($data['vertex_tax_calculation_billing_address'], 'Kiboko\\Magento\\V2_2\\Model\\SalesDataOrderAddressInterface', 'json', $context));
         }
         if (\array_key_exists('vertex_tax_calculation_order', $data)) {
-            $object->setVertexTaxCalculationOrder($this->denormalizer->denormalize($data['vertex_tax_calculation_order'], 'Kiboko\\Magento\\v2_2\\Model\\SalesDataOrderInterface', 'json', $context));
+            $object->setVertexTaxCalculationOrder($this->denormalizer->denormalize($data['vertex_tax_calculation_order'], 'Kiboko\\Magento\\V2_2\\Model\\SalesDataOrderInterface', 'json', $context));
         }
         if (\array_key_exists('vertex_tax_calculation_shipping_address', $data)) {
-            $object->setVertexTaxCalculationShippingAddress($this->denormalizer->denormalize($data['vertex_tax_calculation_shipping_address'], 'Kiboko\\Magento\\v2_2\\Model\\SalesDataOrderAddressInterface', 'json', $context));
+            $object->setVertexTaxCalculationShippingAddress($this->denormalizer->denormalize($data['vertex_tax_calculation_shipping_address'], 'Kiboko\\Magento\\V2_2\\Model\\SalesDataOrderAddressInterface', 'json', $context));
         }
         return $object;
     }

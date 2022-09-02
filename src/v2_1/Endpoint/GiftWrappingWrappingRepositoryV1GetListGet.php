@@ -1,10 +1,10 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Endpoint;
+namespace Kiboko\Magento\V2_1\Endpoint;
 
-class GiftWrappingWrappingRepositoryV1GetListGet extends \Kiboko\Magento\v2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_1\Runtime\Client\Endpoint
+class GiftWrappingWrappingRepositoryV1GetListGet extends \Kiboko\Magento\V2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_1\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_1\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_1\Runtime\Client\EndpointTrait;
     /**
      * Return list of gift wrapping data objects based on search criteria
      *
@@ -56,20 +56,20 @@ class GiftWrappingWrappingRepositoryV1GetListGet extends \Kiboko\Magento\v2_1\Ru
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_1\Exception\GiftWrappingWrappingRepositoryV1GetListGetUnauthorizedException
+     * @throws \Kiboko\Magento\V2_1\Exception\GiftWrappingWrappingRepositoryV1GetListGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\GiftWrappingDataWrappingSearchResultsInterface|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_1\Model\GiftWrappingDataWrappingSearchResultsInterface|\Kiboko\Magento\V2_1\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\GiftWrappingDataWrappingSearchResultsInterface', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\GiftWrappingDataWrappingSearchResultsInterface', 'json');
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_1\Exception\GiftWrappingWrappingRepositoryV1GetListGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_1\Exception\GiftWrappingWrappingRepositoryV1GetListGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

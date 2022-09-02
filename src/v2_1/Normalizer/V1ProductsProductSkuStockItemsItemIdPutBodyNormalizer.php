@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1ProductsProductSkuStockItemsItemIdPutBodyNormalizer implements Denormali
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\V1ProductsProductSkuStockItemsItemIdPutBody';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\V1ProductsProductSkuStockItemsItemIdPutBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\V1ProductsProductSkuStockItemsItemIdPutBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\V1ProductsProductSkuStockItemsItemIdPutBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1ProductsProductSkuStockItemsItemIdPutBodyNormalizer implements Denormali
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\V1ProductsProductSkuStockItemsItemIdPutBody();
+        $object = new \Kiboko\Magento\V2_1\Model\V1ProductsProductSkuStockItemsItemIdPutBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('stockItem', $data)) {
-            $object->setStockItem($this->denormalizer->denormalize($data['stockItem'], 'Kiboko\\Magento\\v2_1\\Model\\CatalogInventoryDataStockItemInterface', 'json', $context));
+            $object->setStockItem($this->denormalizer->denormalize($data['stockItem'], 'Kiboko\\Magento\\V2_1\\Model\\CatalogInventoryDataStockItemInterface', 'json', $context));
         }
         return $object;
     }

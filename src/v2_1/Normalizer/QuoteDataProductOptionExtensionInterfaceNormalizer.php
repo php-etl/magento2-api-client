@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class QuoteDataProductOptionExtensionInterfaceNormalizer implements Denormalizer
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\QuoteDataProductOptionExtensionInterface';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\QuoteDataProductOptionExtensionInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\QuoteDataProductOptionExtensionInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\QuoteDataProductOptionExtensionInterface';
     }
     /**
      * @return mixed
@@ -36,36 +36,36 @@ class QuoteDataProductOptionExtensionInterfaceNormalizer implements Denormalizer
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\QuoteDataProductOptionExtensionInterface();
+        $object = new \Kiboko\Magento\V2_1\Model\QuoteDataProductOptionExtensionInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('bundle_options', $data)) {
             $values = array();
             foreach ($data['bundle_options'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_1\\Model\\BundleDataBundleOptionInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\BundleDataBundleOptionInterface', 'json', $context);
             }
             $object->setBundleOptions($values);
         }
         if (\array_key_exists('configurable_item_options', $data)) {
             $values_1 = array();
             foreach ($data['configurable_item_options'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\v2_1\\Model\\ConfigurableProductDataConfigurableItemOptionValueInterface', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_1\\Model\\ConfigurableProductDataConfigurableItemOptionValueInterface', 'json', $context);
             }
             $object->setConfigurableItemOptions($values_1);
         }
         if (\array_key_exists('custom_options', $data)) {
             $values_2 = array();
             foreach ($data['custom_options'] as $value_2) {
-                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\v2_1\\Model\\CatalogDataCustomOptionInterface', 'json', $context);
+                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataCustomOptionInterface', 'json', $context);
             }
             $object->setCustomOptions($values_2);
         }
         if (\array_key_exists('downloadable_option', $data)) {
-            $object->setDownloadableOption($this->denormalizer->denormalize($data['downloadable_option'], 'Kiboko\\Magento\\v2_1\\Model\\DownloadableDataDownloadableOptionInterface', 'json', $context));
+            $object->setDownloadableOption($this->denormalizer->denormalize($data['downloadable_option'], 'Kiboko\\Magento\\V2_1\\Model\\DownloadableDataDownloadableOptionInterface', 'json', $context));
         }
         if (\array_key_exists('giftcard_item_option', $data)) {
-            $object->setGiftcardItemOption($this->denormalizer->denormalize($data['giftcard_item_option'], 'Kiboko\\Magento\\v2_1\\Model\\GiftCardDataGiftCardOptionInterface', 'json', $context));
+            $object->setGiftcardItemOption($this->denormalizer->denormalize($data['giftcard_item_option'], 'Kiboko\\Magento\\V2_1\\Model\\GiftCardDataGiftCardOptionInterface', 'json', $context));
         }
         return $object;
     }

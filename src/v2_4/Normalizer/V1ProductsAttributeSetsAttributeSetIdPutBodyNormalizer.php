@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1ProductsAttributeSetsAttributeSetIdPutBodyNormalizer implements Denormal
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\V1ProductsAttributeSetsAttributeSetIdPutBody';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\V1ProductsAttributeSetsAttributeSetIdPutBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\V1ProductsAttributeSetsAttributeSetIdPutBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\V1ProductsAttributeSetsAttributeSetIdPutBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1ProductsAttributeSetsAttributeSetIdPutBodyNormalizer implements Denormal
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\V1ProductsAttributeSetsAttributeSetIdPutBody();
+        $object = new \Kiboko\Magento\V2_4\Model\V1ProductsAttributeSetsAttributeSetIdPutBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('attributeSet', $data)) {
-            $object->setAttributeSet($this->denormalizer->denormalize($data['attributeSet'], 'Kiboko\\Magento\\v2_4\\Model\\EavDataAttributeSetInterface', 'json', $context));
+            $object->setAttributeSet($this->denormalizer->denormalize($data['attributeSet'], 'Kiboko\\Magento\\V2_4\\Model\\EavDataAttributeSetInterface', 'json', $context));
         }
         return $object;
     }

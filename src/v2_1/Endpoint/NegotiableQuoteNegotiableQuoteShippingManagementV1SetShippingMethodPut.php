@@ -1,18 +1,18 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Endpoint;
+namespace Kiboko\Magento\V2_1\Endpoint;
 
-class NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPut extends \Kiboko\Magento\v2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_1\Runtime\Client\Endpoint
+class NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPut extends \Kiboko\Magento\V2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_1\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_1\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_1\Runtime\Client\EndpointTrait;
     protected $quoteId;
     /**
      * Updates the shipping method on a negotiable quote.
      *
      * @param int $quoteId Negotiable Quote id
-     * @param null|\Kiboko\Magento\v2_1\Model\V1NegotiableQuoteQuoteIdShippingMethodPutBody $requestBody
+     * @param null|\Kiboko\Magento\V2_1\Model\V1NegotiableQuoteQuoteIdShippingMethodPutBody $requestBody
      */
-    public function __construct(int $quoteId, ?\Kiboko\Magento\v2_1\Model\V1NegotiableQuoteQuoteIdShippingMethodPutBody $requestBody = null)
+    public function __construct(int $quoteId, ?\Kiboko\Magento\V2_1\Model\V1NegotiableQuoteQuoteIdShippingMethodPutBody $requestBody = null)
     {
         $this->quoteId = $quoteId;
         $this->body = $requestBody;
@@ -27,10 +27,10 @@ class NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPut ext
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \Kiboko\Magento\v2_1\Model\V1NegotiableQuoteQuoteIdShippingMethodPutBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_1\Model\V1NegotiableQuoteQuoteIdShippingMethodPutBody) {
             return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
         }
-        if ($this->body instanceof \Kiboko\Magento\v2_1\Model\V1NegotiableQuoteQuoteIdShippingMethodPutBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_1\Model\V1NegotiableQuoteQuoteIdShippingMethodPutBody) {
             return array(array('Content-Type' => array('application/xml')), $this->body);
         }
         return array(array(), null);
@@ -42,10 +42,10 @@ class NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPut ext
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_1\Exception\NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPutBadRequestException
-     * @throws \Kiboko\Magento\v2_1\Exception\NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPutUnauthorizedException
+     * @throws \Kiboko\Magento\V2_1\Exception\NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPutBadRequestException
+     * @throws \Kiboko\Magento\V2_1\Exception\NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPutUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_1\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -53,13 +53,13 @@ class NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPut ext
             return json_decode($body);
         }
         if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_1\Exception\NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPutBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_1\Exception\NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPutBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\ErrorResponse', 'json'));
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_1\Exception\NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPutUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_1\Exception\NegotiableQuoteNegotiableQuoteShippingManagementV1SetShippingMethodPutUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

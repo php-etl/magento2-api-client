@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class QuoteDataShippingAssignmentInterfaceNormalizer implements DenormalizerInte
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataShippingAssignmentInterface';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataShippingAssignmentInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataShippingAssignmentInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataShippingAssignmentInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class QuoteDataShippingAssignmentInterfaceNormalizer implements DenormalizerInte
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\QuoteDataShippingAssignmentInterface();
+        $object = new \Kiboko\Magento\V2_4\Model\QuoteDataShippingAssignmentInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -46,12 +46,12 @@ class QuoteDataShippingAssignmentInterfaceNormalizer implements DenormalizerInte
         if (\array_key_exists('items', $data)) {
             $values = array();
             foreach ($data['items'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataCartItemInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataCartItemInterface', 'json', $context);
             }
             $object->setItems($values);
         }
         if (\array_key_exists('shipping', $data)) {
-            $object->setShipping($this->denormalizer->denormalize($data['shipping'], 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataShippingInterface', 'json', $context));
+            $object->setShipping($this->denormalizer->denormalize($data['shipping'], 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataShippingInterface', 'json', $context));
         }
         return $object;
     }

@@ -1,18 +1,18 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Endpoint;
+namespace Kiboko\Magento\V2_4\Endpoint;
 
-class QuoteGuestCartManagementV1PlaceOrderPut extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
+class QuoteGuestCartManagementV1PlaceOrderPut extends \Kiboko\Magento\V2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_4\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_4\Runtime\Client\EndpointTrait;
     protected $cartId;
     /**
      * Place an order for a specified cart.
      *
      * @param string $cartId The cart ID.
-     * @param null|\Kiboko\Magento\v2_4\Model\V1GuestCartsCartIdOrderPutBody $requestBody
+     * @param null|\Kiboko\Magento\V2_4\Model\V1GuestCartsCartIdOrderPutBody $requestBody
      */
-    public function __construct(string $cartId, ?\Kiboko\Magento\v2_4\Model\V1GuestCartsCartIdOrderPutBody $requestBody = null)
+    public function __construct(string $cartId, ?\Kiboko\Magento\V2_4\Model\V1GuestCartsCartIdOrderPutBody $requestBody = null)
     {
         $this->cartId = $cartId;
         $this->body = $requestBody;
@@ -27,10 +27,10 @@ class QuoteGuestCartManagementV1PlaceOrderPut extends \Kiboko\Magento\v2_4\Runti
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1GuestCartsCartIdOrderPutBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_4\Model\V1GuestCartsCartIdOrderPutBody) {
             return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
         }
-        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1GuestCartsCartIdOrderPutBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_4\Model\V1GuestCartsCartIdOrderPutBody) {
             return array(array('Content-Type' => array('application/xml')), $this->body);
         }
         return array(array(), null);
@@ -42,9 +42,9 @@ class QuoteGuestCartManagementV1PlaceOrderPut extends \Kiboko\Magento\v2_4\Runti
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_4\Exception\QuoteGuestCartManagementV1PlaceOrderPutBadRequestException
+     * @throws \Kiboko\Magento\V2_4\Exception\QuoteGuestCartManagementV1PlaceOrderPutBadRequestException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_4\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -52,10 +52,10 @@ class QuoteGuestCartManagementV1PlaceOrderPut extends \Kiboko\Magento\v2_4\Runti
             return json_decode($body);
         }
         if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_4\Exception\QuoteGuestCartManagementV1PlaceOrderPutBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_4\Exception\QuoteGuestCartManagementV1PlaceOrderPutBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

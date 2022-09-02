@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CheckoutDataPaymentDetailsInterfaceNormalizer implements DenormalizerInter
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\CheckoutDataPaymentDetailsInterface';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\CheckoutDataPaymentDetailsInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\CheckoutDataPaymentDetailsInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\CheckoutDataPaymentDetailsInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class CheckoutDataPaymentDetailsInterfaceNormalizer implements DenormalizerInter
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\CheckoutDataPaymentDetailsInterface();
+        $object = new \Kiboko\Magento\V2_3\Model\CheckoutDataPaymentDetailsInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -46,12 +46,12 @@ class CheckoutDataPaymentDetailsInterfaceNormalizer implements DenormalizerInter
         if (\array_key_exists('payment_methods', $data)) {
             $values = array();
             foreach ($data['payment_methods'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataPaymentMethodInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\QuoteDataPaymentMethodInterface', 'json', $context);
             }
             $object->setPaymentMethods($values);
         }
         if (\array_key_exists('totals', $data)) {
-            $object->setTotals($this->denormalizer->denormalize($data['totals'], 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataTotalsInterface', 'json', $context));
+            $object->setTotals($this->denormalizer->denormalize($data['totals'], 'Kiboko\\Magento\\V2_3\\Model\\QuoteDataTotalsInterface', 'json', $context));
         }
         return $object;
     }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class SalesDataOrderItemExtensionInterfaceNormalizer implements DenormalizerInte
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\SalesDataOrderItemExtensionInterface';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\SalesDataOrderItemExtensionInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\SalesDataOrderItemExtensionInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\SalesDataOrderItemExtensionInterface';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class SalesDataOrderItemExtensionInterfaceNormalizer implements DenormalizerInte
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\SalesDataOrderItemExtensionInterface();
+        $object = new \Kiboko\Magento\V2_1\Model\SalesDataOrderItemExtensionInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('gift_message', $data)) {
-            $object->setGiftMessage($this->denormalizer->denormalize($data['gift_message'], 'Kiboko\\Magento\\v2_1\\Model\\GiftMessageDataMessageInterface', 'json', $context));
+            $object->setGiftMessage($this->denormalizer->denormalize($data['gift_message'], 'Kiboko\\Magento\\V2_1\\Model\\GiftMessageDataMessageInterface', 'json', $context));
         }
         if (\array_key_exists('gw_base_price', $data)) {
             $object->setGwBasePrice($data['gw_base_price']);

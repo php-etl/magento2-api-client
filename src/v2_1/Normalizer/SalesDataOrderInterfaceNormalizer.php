@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\SalesDataOrderInterface';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\SalesDataOrderInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\SalesDataOrderInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\SalesDataOrderInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\SalesDataOrderInterface();
+        $object = new \Kiboko\Magento\V2_1\Model\SalesDataOrderInterface();
         if (\array_key_exists('adjustment_negative', $data) && \is_int($data['adjustment_negative'])) {
             $data['adjustment_negative'] = (float) $data['adjustment_negative'];
         }
@@ -407,7 +407,7 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
             $object->setBaseTotalRefunded($data['base_total_refunded']);
         }
         if (\array_key_exists('billing_address', $data)) {
-            $object->setBillingAddress($this->denormalizer->denormalize($data['billing_address'], 'Kiboko\\Magento\\v2_1\\Model\\SalesDataOrderAddressInterface', 'json', $context));
+            $object->setBillingAddress($this->denormalizer->denormalize($data['billing_address'], 'Kiboko\\Magento\\V2_1\\Model\\SalesDataOrderAddressInterface', 'json', $context));
         }
         if (\array_key_exists('billing_address_id', $data)) {
             $object->setBillingAddressId($data['billing_address_id']);
@@ -506,7 +506,7 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
             $object->setExtOrderId($data['ext_order_id']);
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_1\\Model\\SalesDataOrderExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_1\\Model\\SalesDataOrderExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('forced_shipment_with_invoice', $data)) {
             $object->setForcedShipmentWithInvoice($data['forced_shipment_with_invoice']);
@@ -532,7 +532,7 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (\array_key_exists('items', $data)) {
             $values = array();
             foreach ($data['items'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_1\\Model\\SalesDataOrderItemInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\SalesDataOrderItemInterface', 'json', $context);
             }
             $object->setItems($values);
         }
@@ -543,7 +543,7 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
             $object->setOriginalIncrementId($data['original_increment_id']);
         }
         if (\array_key_exists('payment', $data)) {
-            $object->setPayment($this->denormalizer->denormalize($data['payment'], 'Kiboko\\Magento\\v2_1\\Model\\SalesDataOrderPaymentInterface', 'json', $context));
+            $object->setPayment($this->denormalizer->denormalize($data['payment'], 'Kiboko\\Magento\\V2_1\\Model\\SalesDataOrderPaymentInterface', 'json', $context));
         }
         if (\array_key_exists('payment_auth_expiration', $data)) {
             $object->setPaymentAuthExpiration($data['payment_auth_expiration']);
@@ -614,7 +614,7 @@ class SalesDataOrderInterfaceNormalizer implements DenormalizerInterface, Normal
         if (\array_key_exists('status_histories', $data)) {
             $values_1 = array();
             foreach ($data['status_histories'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\v2_1\\Model\\SalesDataOrderStatusHistoryInterface', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_1\\Model\\SalesDataOrderStatusHistoryInterface', 'json', $context);
             }
             $object->setStatusHistories($values_1);
         }

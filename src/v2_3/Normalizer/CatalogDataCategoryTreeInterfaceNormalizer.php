@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CatalogDataCategoryTreeInterfaceNormalizer implements DenormalizerInterfac
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataCategoryTreeInterface';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\CatalogDataCategoryTreeInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataCategoryTreeInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\CatalogDataCategoryTreeInterface';
     }
     /**
      * @return mixed
@@ -36,14 +36,14 @@ class CatalogDataCategoryTreeInterfaceNormalizer implements DenormalizerInterfac
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\CatalogDataCategoryTreeInterface();
+        $object = new \Kiboko\Magento\V2_3\Model\CatalogDataCategoryTreeInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('children_data', $data)) {
             $values = array();
             foreach ($data['children_data'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataCategoryTreeInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\CatalogDataCategoryTreeInterface', 'json', $context);
             }
             $object->setChildrenData($values);
         }

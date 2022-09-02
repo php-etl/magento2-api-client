@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1CartsCartIdGiftCardsPutBodyNormalizer implements DenormalizerInterface, 
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\V1CartsCartIdGiftCardsPutBody';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\V1CartsCartIdGiftCardsPutBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\V1CartsCartIdGiftCardsPutBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\V1CartsCartIdGiftCardsPutBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1CartsCartIdGiftCardsPutBodyNormalizer implements DenormalizerInterface, 
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\V1CartsCartIdGiftCardsPutBody();
+        $object = new \Kiboko\Magento\V2_1\Model\V1CartsCartIdGiftCardsPutBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('giftCardAccountData', $data)) {
-            $object->setGiftCardAccountData($this->denormalizer->denormalize($data['giftCardAccountData'], 'Kiboko\\Magento\\v2_1\\Model\\GiftCardAccountDataGiftCardAccountInterface', 'json', $context));
+            $object->setGiftCardAccountData($this->denormalizer->denormalize($data['giftCardAccountData'], 'Kiboko\\Magento\\V2_1\\Model\\GiftCardAccountDataGiftCardAccountInterface', 'json', $context));
         }
         return $object;
     }

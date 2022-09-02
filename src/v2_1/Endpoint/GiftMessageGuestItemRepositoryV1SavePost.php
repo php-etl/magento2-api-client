@@ -1,10 +1,10 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Endpoint;
+namespace Kiboko\Magento\V2_1\Endpoint;
 
-class GiftMessageGuestItemRepositoryV1SavePost extends \Kiboko\Magento\v2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_1\Runtime\Client\Endpoint
+class GiftMessageGuestItemRepositoryV1SavePost extends \Kiboko\Magento\V2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_1\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_1\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_1\Runtime\Client\EndpointTrait;
     protected $cartId;
     protected $itemId;
     /**
@@ -12,9 +12,9 @@ class GiftMessageGuestItemRepositoryV1SavePost extends \Kiboko\Magento\v2_1\Runt
      *
      * @param string $cartId The cart ID.
      * @param int $itemId The item ID.
-     * @param null|\Kiboko\Magento\v2_1\Model\V1GuestCartsCartIdGiftMessageItemIdPostBody $requestBody
+     * @param null|\Kiboko\Magento\V2_1\Model\V1GuestCartsCartIdGiftMessageItemIdPostBody $requestBody
      */
-    public function __construct(string $cartId, int $itemId, ?\Kiboko\Magento\v2_1\Model\V1GuestCartsCartIdGiftMessageItemIdPostBody $requestBody = null)
+    public function __construct(string $cartId, int $itemId, ?\Kiboko\Magento\V2_1\Model\V1GuestCartsCartIdGiftMessageItemIdPostBody $requestBody = null)
     {
         $this->cartId = $cartId;
         $this->itemId = $itemId;
@@ -30,10 +30,10 @@ class GiftMessageGuestItemRepositoryV1SavePost extends \Kiboko\Magento\v2_1\Runt
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \Kiboko\Magento\v2_1\Model\V1GuestCartsCartIdGiftMessageItemIdPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_1\Model\V1GuestCartsCartIdGiftMessageItemIdPostBody) {
             return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
         }
-        if ($this->body instanceof \Kiboko\Magento\v2_1\Model\V1GuestCartsCartIdGiftMessageItemIdPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_1\Model\V1GuestCartsCartIdGiftMessageItemIdPostBody) {
             return array(array('Content-Type' => array('application/xml')), $this->body);
         }
         return array(array(), null);
@@ -45,9 +45,9 @@ class GiftMessageGuestItemRepositoryV1SavePost extends \Kiboko\Magento\v2_1\Runt
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_1\Exception\GiftMessageGuestItemRepositoryV1SavePostBadRequestException
+     * @throws \Kiboko\Magento\V2_1\Exception\GiftMessageGuestItemRepositoryV1SavePostBadRequestException
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_1\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -55,10 +55,10 @@ class GiftMessageGuestItemRepositoryV1SavePost extends \Kiboko\Magento\v2_1\Runt
             return json_decode($body);
         }
         if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_1\Exception\GiftMessageGuestItemRepositoryV1SavePostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_1\Exception\GiftMessageGuestItemRepositoryV1SavePostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

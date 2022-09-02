@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CatalogInventoryDataStockStatusInterfaceNormalizer implements Denormalizer
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\CatalogInventoryDataStockStatusInterface';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\CatalogInventoryDataStockStatusInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\CatalogInventoryDataStockStatusInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\CatalogInventoryDataStockStatusInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class CatalogInventoryDataStockStatusInterfaceNormalizer implements Denormalizer
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\CatalogInventoryDataStockStatusInterface();
+        $object = new \Kiboko\Magento\V2_2\Model\CatalogInventoryDataStockStatusInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -53,7 +53,7 @@ class CatalogInventoryDataStockStatusInterfaceNormalizer implements Denormalizer
             $object->setStockId($data['stock_id']);
         }
         if (\array_key_exists('stock_item', $data)) {
-            $object->setStockItem($this->denormalizer->denormalize($data['stock_item'], 'Kiboko\\Magento\\v2_2\\Model\\CatalogInventoryDataStockItemInterface', 'json', $context));
+            $object->setStockItem($this->denormalizer->denormalize($data['stock_item'], 'Kiboko\\Magento\\V2_2\\Model\\CatalogInventoryDataStockItemInterface', 'json', $context));
         }
         if (\array_key_exists('stock_status', $data)) {
             $object->setStockStatus($data['stock_status']);

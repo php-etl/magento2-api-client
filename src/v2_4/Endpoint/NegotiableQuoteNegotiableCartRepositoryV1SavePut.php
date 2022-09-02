@@ -1,18 +1,18 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Endpoint;
+namespace Kiboko\Magento\V2_4\Endpoint;
 
-class NegotiableQuoteNegotiableCartRepositoryV1SavePut extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
+class NegotiableQuoteNegotiableCartRepositoryV1SavePut extends \Kiboko\Magento\V2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_4\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_4\Runtime\Client\EndpointTrait;
     protected $quoteId;
     /**
      * Save quote
      *
      * @param string $quoteId
-     * @param null|\Kiboko\Magento\v2_4\Model\V1NegotiableQuoteQuoteIdPutBody $requestBody
+     * @param null|\Kiboko\Magento\V2_4\Model\V1NegotiableQuoteQuoteIdPutBody $requestBody
      */
-    public function __construct(string $quoteId, ?\Kiboko\Magento\v2_4\Model\V1NegotiableQuoteQuoteIdPutBody $requestBody = null)
+    public function __construct(string $quoteId, ?\Kiboko\Magento\V2_4\Model\V1NegotiableQuoteQuoteIdPutBody $requestBody = null)
     {
         $this->quoteId = $quoteId;
         $this->body = $requestBody;
@@ -27,10 +27,10 @@ class NegotiableQuoteNegotiableCartRepositoryV1SavePut extends \Kiboko\Magento\v
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1NegotiableQuoteQuoteIdPutBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_4\Model\V1NegotiableQuoteQuoteIdPutBody) {
             return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
         }
-        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1NegotiableQuoteQuoteIdPutBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_4\Model\V1NegotiableQuoteQuoteIdPutBody) {
             return array(array('Content-Type' => array('application/xml')), $this->body);
         }
         return array(array(), null);
@@ -42,17 +42,17 @@ class NegotiableQuoteNegotiableCartRepositoryV1SavePut extends \Kiboko\Magento\v
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_4\Exception\NegotiableQuoteNegotiableCartRepositoryV1SavePutUnauthorizedException
+     * @throws \Kiboko\Magento\V2_4\Exception\NegotiableQuoteNegotiableCartRepositoryV1SavePutUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_4\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_4\Exception\NegotiableQuoteNegotiableCartRepositoryV1SavePutUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_4\Exception\NegotiableQuoteNegotiableCartRepositoryV1SavePutUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

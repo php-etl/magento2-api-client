@@ -1,10 +1,10 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Endpoint;
+namespace Kiboko\Magento\V2_4\Endpoint;
 
-class GiftCardAccountGiftCardAccountManagementV1GetListByQuoteIdGet extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
+class GiftCardAccountGiftCardAccountManagementV1GetListByQuoteIdGet extends \Kiboko\Magento\V2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_4\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_4\Runtime\Client\EndpointTrait;
     protected $quoteId;
     /**
      * Return GiftCard Account cards
@@ -34,20 +34,20 @@ class GiftCardAccountGiftCardAccountManagementV1GetListByQuoteIdGet extends \Kib
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_4\Exception\GiftCardAccountGiftCardAccountManagementV1GetListByQuoteIdGetUnauthorizedException
+     * @throws \Kiboko\Magento\V2_4\Exception\GiftCardAccountGiftCardAccountManagementV1GetListByQuoteIdGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\GiftCardAccountDataGiftCardAccountInterface|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_4\Model\GiftCardAccountDataGiftCardAccountInterface|\Kiboko\Magento\V2_4\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\GiftCardAccountDataGiftCardAccountInterface', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\GiftCardAccountDataGiftCardAccountInterface', 'json');
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_4\Exception\GiftCardAccountGiftCardAccountManagementV1GetListByQuoteIdGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_4\Exception\GiftCardAccountGiftCardAccountManagementV1GetListByQuoteIdGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

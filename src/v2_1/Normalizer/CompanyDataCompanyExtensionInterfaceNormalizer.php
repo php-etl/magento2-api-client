@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CompanyDataCompanyExtensionInterfaceNormalizer implements DenormalizerInte
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\CompanyDataCompanyExtensionInterface';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\CompanyDataCompanyExtensionInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\CompanyDataCompanyExtensionInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\CompanyDataCompanyExtensionInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class CompanyDataCompanyExtensionInterfaceNormalizer implements DenormalizerInte
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\CompanyDataCompanyExtensionInterface();
+        $object = new \Kiboko\Magento\V2_1\Model\CompanyDataCompanyExtensionInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -47,7 +47,7 @@ class CompanyDataCompanyExtensionInterfaceNormalizer implements DenormalizerInte
             $object->setAvailablePaymentMethods($data['available_payment_methods']);
         }
         if (\array_key_exists('quote_config', $data)) {
-            $object->setQuoteConfig($this->denormalizer->denormalize($data['quote_config'], 'Kiboko\\Magento\\v2_1\\Model\\NegotiableQuoteDataCompanyQuoteConfigInterface', 'json', $context));
+            $object->setQuoteConfig($this->denormalizer->denormalize($data['quote_config'], 'Kiboko\\Magento\\V2_1\\Model\\NegotiableQuoteDataCompanyQuoteConfigInterface', 'json', $context));
         }
         if (\array_key_exists('use_config_settings', $data)) {
             $object->setUseConfigSettings($data['use_config_settings']);

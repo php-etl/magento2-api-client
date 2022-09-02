@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class GiftCardDataGiftcardAmountInterfaceNormalizer implements DenormalizerInter
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\GiftCardDataGiftcardAmountInterface';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\GiftCardDataGiftcardAmountInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\GiftCardDataGiftcardAmountInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\GiftCardDataGiftcardAmountInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class GiftCardDataGiftcardAmountInterfaceNormalizer implements DenormalizerInter
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\GiftCardDataGiftcardAmountInterface();
+        $object = new \Kiboko\Magento\V2_2\Model\GiftCardDataGiftcardAmountInterface();
         if (\array_key_exists('value', $data) && \is_int($data['value'])) {
             $data['value'] = (float) $data['value'];
         }

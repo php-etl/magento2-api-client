@@ -1,10 +1,10 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Endpoint;
+namespace Kiboko\Magento\V2_4\Endpoint;
 
-class CatalogProductAttributeGroupRepositoryV1DeleteByIdDelete extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
+class CatalogProductAttributeGroupRepositoryV1DeleteByIdDelete extends \Kiboko\Magento\V2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_4\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_4\Runtime\Client\EndpointTrait;
     protected $groupId;
     /**
      * Remove attribute group by id
@@ -34,9 +34,9 @@ class CatalogProductAttributeGroupRepositoryV1DeleteByIdDelete extends \Kiboko\M
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_4\Exception\CatalogProductAttributeGroupRepositoryV1DeleteByIdDeleteUnauthorizedException
+     * @throws \Kiboko\Magento\V2_4\Exception\CatalogProductAttributeGroupRepositoryV1DeleteByIdDeleteUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_4\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -44,10 +44,10 @@ class CatalogProductAttributeGroupRepositoryV1DeleteByIdDelete extends \Kiboko\M
             return json_decode($body);
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_4\Exception\CatalogProductAttributeGroupRepositoryV1DeleteByIdDeleteUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_4\Exception\CatalogProductAttributeGroupRepositoryV1DeleteByIdDeleteUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

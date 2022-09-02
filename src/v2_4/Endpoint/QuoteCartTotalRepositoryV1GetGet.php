@@ -1,10 +1,10 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Endpoint;
+namespace Kiboko\Magento\V2_4\Endpoint;
 
-class QuoteCartTotalRepositoryV1GetGet extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
+class QuoteCartTotalRepositoryV1GetGet extends \Kiboko\Magento\V2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_4\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_4\Runtime\Client\EndpointTrait;
     public function getMethod(): string
     {
         return 'GET';
@@ -24,24 +24,24 @@ class QuoteCartTotalRepositoryV1GetGet extends \Kiboko\Magento\v2_4\Runtime\Clie
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_4\Exception\QuoteCartTotalRepositoryV1GetGetBadRequestException
-     * @throws \Kiboko\Magento\v2_4\Exception\QuoteCartTotalRepositoryV1GetGetUnauthorizedException
+     * @throws \Kiboko\Magento\V2_4\Exception\QuoteCartTotalRepositoryV1GetGetBadRequestException
+     * @throws \Kiboko\Magento\V2_4\Exception\QuoteCartTotalRepositoryV1GetGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\QuoteDataTotalsInterface|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_4\Model\QuoteDataTotalsInterface|\Kiboko\Magento\V2_4\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataTotalsInterface', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataTotalsInterface', 'json');
         }
         if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_4\Exception\QuoteCartTotalRepositoryV1GetGetBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_4\Exception\QuoteCartTotalRepositoryV1GetGetBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json'));
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_4\Exception\QuoteCartTotalRepositoryV1GetGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_4\Exception\QuoteCartTotalRepositoryV1GetGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class SalesDataOrderExtensionInterfaceNormalizer implements DenormalizerInterfac
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataOrderExtensionInterface';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\SalesDataOrderExtensionInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataOrderExtensionInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\SalesDataOrderExtensionInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class SalesDataOrderExtensionInterfaceNormalizer implements DenormalizerInterfac
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\SalesDataOrderExtensionInterface();
+        $object = new \Kiboko\Magento\V2_3\Model\SalesDataOrderExtensionInterface();
         if (\array_key_exists('base_customer_balance_amount', $data) && \is_int($data['base_customer_balance_amount'])) {
             $data['base_customer_balance_amount'] = (float) $data['base_customer_balance_amount'];
         }
@@ -94,7 +94,7 @@ class SalesDataOrderExtensionInterfaceNormalizer implements DenormalizerInterfac
         if (\array_key_exists('applied_taxes', $data)) {
             $values = array();
             foreach ($data['applied_taxes'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_3\\Model\\TaxDataOrderTaxDetailsAppliedTaxInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\TaxDataOrderTaxDetailsAppliedTaxInterface', 'json', $context);
             }
             $object->setAppliedTaxes($values);
         }
@@ -123,7 +123,7 @@ class SalesDataOrderExtensionInterfaceNormalizer implements DenormalizerInterfac
             $object->setBaseRewardCurrencyAmount($data['base_reward_currency_amount']);
         }
         if (\array_key_exists('company_order_attributes', $data)) {
-            $object->setCompanyOrderAttributes($this->denormalizer->denormalize($data['company_order_attributes'], 'Kiboko\\Magento\\v2_3\\Model\\CompanyDataCompanyOrderInterface', 'json', $context));
+            $object->setCompanyOrderAttributes($this->denormalizer->denormalize($data['company_order_attributes'], 'Kiboko\\Magento\\V2_3\\Model\\CompanyDataCompanyOrderInterface', 'json', $context));
         }
         if (\array_key_exists('converting_from_quote', $data)) {
             $object->setConvertingFromQuote($data['converting_from_quote']);
@@ -143,7 +143,7 @@ class SalesDataOrderExtensionInterfaceNormalizer implements DenormalizerInterfac
         if (\array_key_exists('gift_cards', $data)) {
             $values_1 = array();
             foreach ($data['gift_cards'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\v2_3\\Model\\GiftCardAccountDataGiftCardInterface', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_3\\Model\\GiftCardAccountDataGiftCardInterface', 'json', $context);
             }
             $object->setGiftCards($values_1);
         }
@@ -157,7 +157,7 @@ class SalesDataOrderExtensionInterfaceNormalizer implements DenormalizerInterfac
             $object->setGiftCardsRefunded($data['gift_cards_refunded']);
         }
         if (\array_key_exists('gift_message', $data)) {
-            $object->setGiftMessage($this->denormalizer->denormalize($data['gift_message'], 'Kiboko\\Magento\\v2_3\\Model\\GiftMessageDataMessageInterface', 'json', $context));
+            $object->setGiftMessage($this->denormalizer->denormalize($data['gift_message'], 'Kiboko\\Magento\\V2_3\\Model\\GiftMessageDataMessageInterface', 'json', $context));
         }
         if (\array_key_exists('gw_add_card', $data)) {
             $object->setGwAddCard($data['gw_add_card']);
@@ -297,14 +297,14 @@ class SalesDataOrderExtensionInterfaceNormalizer implements DenormalizerInterfac
         if (\array_key_exists('item_applied_taxes', $data)) {
             $values_2 = array();
             foreach ($data['item_applied_taxes'] as $value_2) {
-                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\v2_3\\Model\\TaxDataOrderTaxDetailsItemInterface', 'json', $context);
+                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\V2_3\\Model\\TaxDataOrderTaxDetailsItemInterface', 'json', $context);
             }
             $object->setItemAppliedTaxes($values_2);
         }
         if (\array_key_exists('payment_additional_info', $data)) {
             $values_3 = array();
             foreach ($data['payment_additional_info'] as $value_3) {
-                $values_3[] = $this->denormalizer->denormalize($value_3, 'Kiboko\\Magento\\v2_3\\Model\\PaymentDataPaymentAdditionalInfoInterface', 'json', $context);
+                $values_3[] = $this->denormalizer->denormalize($value_3, 'Kiboko\\Magento\\V2_3\\Model\\PaymentDataPaymentAdditionalInfoInterface', 'json', $context);
             }
             $object->setPaymentAdditionalInfo($values_3);
         }
@@ -317,7 +317,7 @@ class SalesDataOrderExtensionInterfaceNormalizer implements DenormalizerInterfac
         if (\array_key_exists('shipping_assignments', $data)) {
             $values_4 = array();
             foreach ($data['shipping_assignments'] as $value_4) {
-                $values_4[] = $this->denormalizer->denormalize($value_4, 'Kiboko\\Magento\\v2_3\\Model\\SalesDataShippingAssignmentInterface', 'json', $context);
+                $values_4[] = $this->denormalizer->denormalize($value_4, 'Kiboko\\Magento\\V2_3\\Model\\SalesDataShippingAssignmentInterface', 'json', $context);
             }
             $object->setShippingAssignments($values_4);
         }

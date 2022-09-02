@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class TaxDataOrderTaxDetailsAppliedTaxInterfaceNormalizer implements Denormalize
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\TaxDataOrderTaxDetailsAppliedTaxInterface';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\TaxDataOrderTaxDetailsAppliedTaxInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\TaxDataOrderTaxDetailsAppliedTaxInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\TaxDataOrderTaxDetailsAppliedTaxInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterfaceNormalizer implements Denormalize
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\TaxDataOrderTaxDetailsAppliedTaxInterface();
+        $object = new \Kiboko\Magento\V2_1\Model\TaxDataOrderTaxDetailsAppliedTaxInterface();
         if (\array_key_exists('amount', $data) && \is_int($data['amount'])) {
             $data['amount'] = (float) $data['amount'];
         }
@@ -59,7 +59,7 @@ class TaxDataOrderTaxDetailsAppliedTaxInterfaceNormalizer implements Denormalize
             $object->setCode($data['code']);
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_1\\Model\\TaxDataOrderTaxDetailsAppliedTaxExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_1\\Model\\TaxDataOrderTaxDetailsAppliedTaxExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('percent', $data)) {
             $object->setPercent($data['percent']);

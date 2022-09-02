@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CatalogDataProductTierPriceInterfaceNormalizer implements DenormalizerInte
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductTierPriceInterface';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductTierPriceInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductTierPriceInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductTierPriceInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class CatalogDataProductTierPriceInterfaceNormalizer implements DenormalizerInte
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\CatalogDataProductTierPriceInterface();
+        $object = new \Kiboko\Magento\V2_2\Model\CatalogDataProductTierPriceInterface();
         if (\array_key_exists('qty', $data) && \is_int($data['qty'])) {
             $data['qty'] = (float) $data['qty'];
         }
@@ -50,7 +50,7 @@ class CatalogDataProductTierPriceInterfaceNormalizer implements DenormalizerInte
             $object->setCustomerGroupId($data['customer_group_id']);
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductTierPriceExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductTierPriceExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('qty', $data)) {
             $object->setQty($data['qty']);

@@ -1,10 +1,10 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Endpoint;
+namespace Kiboko\Magento\V2_2\Endpoint;
 
-class TemandoShippingCollectionPointGuestCartCollectionPointManagementV1GetCollectionPointsGet extends \Kiboko\Magento\v2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_2\Runtime\Client\Endpoint
+class TemandoShippingCollectionPointGuestCartCollectionPointManagementV1GetCollectionPointsGet extends \Kiboko\Magento\V2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_2\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_2\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_2\Runtime\Client\EndpointTrait;
     protected $cartId;
     /**
      *
@@ -35,15 +35,15 @@ class TemandoShippingCollectionPointGuestCartCollectionPointManagementV1GetColle
      * {@inheritdoc}
      *
      *
-     * @return null|\Kiboko\Magento\v2_2\Model\TemandoShippingDataCollectionPointQuoteCollectionPointInterface[]|\Kiboko\Magento\v2_2\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_2\Model\TemandoShippingDataCollectionPointQuoteCollectionPointInterface[]|\Kiboko\Magento\V2_2\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\TemandoShippingDataCollectionPointQuoteCollectionPointInterface[]', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_2\\Model\\TemandoShippingDataCollectionPointQuoteCollectionPointInterface[]', 'json');
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_2\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

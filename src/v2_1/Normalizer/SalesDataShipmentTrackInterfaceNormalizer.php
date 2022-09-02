@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class SalesDataShipmentTrackInterfaceNormalizer implements DenormalizerInterface
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\SalesDataShipmentTrackInterface';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\SalesDataShipmentTrackInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\SalesDataShipmentTrackInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\SalesDataShipmentTrackInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class SalesDataShipmentTrackInterfaceNormalizer implements DenormalizerInterface
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\SalesDataShipmentTrackInterface();
+        $object = new \Kiboko\Magento\V2_1\Model\SalesDataShipmentTrackInterface();
         if (\array_key_exists('qty', $data) && \is_int($data['qty'])) {
             $data['qty'] = (float) $data['qty'];
         }

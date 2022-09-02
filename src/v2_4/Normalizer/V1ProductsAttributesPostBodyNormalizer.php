@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1ProductsAttributesPostBodyNormalizer implements DenormalizerInterface, N
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\V1ProductsAttributesPostBody';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\V1ProductsAttributesPostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\V1ProductsAttributesPostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\V1ProductsAttributesPostBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1ProductsAttributesPostBodyNormalizer implements DenormalizerInterface, N
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\V1ProductsAttributesPostBody();
+        $object = new \Kiboko\Magento\V2_4\Model\V1ProductsAttributesPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('attribute', $data)) {
-            $object->setAttribute($this->denormalizer->denormalize($data['attribute'], 'Kiboko\\Magento\\v2_4\\Model\\CatalogDataProductAttributeInterface', 'json', $context));
+            $object->setAttribute($this->denormalizer->denormalize($data['attribute'], 'Kiboko\\Magento\\V2_4\\Model\\CatalogDataProductAttributeInterface', 'json', $context));
         }
         return $object;
     }

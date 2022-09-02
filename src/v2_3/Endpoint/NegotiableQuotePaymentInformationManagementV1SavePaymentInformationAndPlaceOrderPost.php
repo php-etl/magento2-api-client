@@ -1,18 +1,18 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Endpoint;
+namespace Kiboko\Magento\V2_3\Endpoint;
 
-class NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
+class NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPost extends \Kiboko\Magento\V2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_3\Runtime\Client\EndpointTrait;
     protected $cartId;
     /**
      * Set payment information and place order for a specified cart.
      *
      * @param int $cartId
-     * @param null|\Kiboko\Magento\v2_3\Model\V1NegotiableCartsCartIdPaymentInformationPostBody $requestBody
+     * @param null|\Kiboko\Magento\V2_3\Model\V1NegotiableCartsCartIdPaymentInformationPostBody $requestBody
      */
-    public function __construct(int $cartId, ?\Kiboko\Magento\v2_3\Model\V1NegotiableCartsCartIdPaymentInformationPostBody $requestBody = null)
+    public function __construct(int $cartId, ?\Kiboko\Magento\V2_3\Model\V1NegotiableCartsCartIdPaymentInformationPostBody $requestBody = null)
     {
         $this->cartId = $cartId;
         $this->body = $requestBody;
@@ -27,10 +27,10 @@ class NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlac
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \Kiboko\Magento\v2_3\Model\V1NegotiableCartsCartIdPaymentInformationPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_3\Model\V1NegotiableCartsCartIdPaymentInformationPostBody) {
             return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
         }
-        if ($this->body instanceof \Kiboko\Magento\v2_3\Model\V1NegotiableCartsCartIdPaymentInformationPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_3\Model\V1NegotiableCartsCartIdPaymentInformationPostBody) {
             return array(array('Content-Type' => array('application/xml')), $this->body);
         }
         return array(array(), null);
@@ -42,10 +42,10 @@ class NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlac
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_3\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBadRequestException
-     * @throws \Kiboko\Magento\v2_3\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostUnauthorizedException
+     * @throws \Kiboko\Magento\V2_3\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBadRequestException
+     * @throws \Kiboko\Magento\V2_3\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_3\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_3\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -53,13 +53,13 @@ class NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlac
             return json_decode($body);
         }
         if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_3\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_3\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_3\\Model\\ErrorResponse', 'json'));
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_3\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_3\Exception\NegotiableQuotePaymentInformationManagementV1SavePaymentInformationAndPlaceOrderPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_3\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_3\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

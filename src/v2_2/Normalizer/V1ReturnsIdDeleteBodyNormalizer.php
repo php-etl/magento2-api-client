@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1ReturnsIdDeleteBodyNormalizer implements DenormalizerInterface, Normaliz
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\V1ReturnsIdDeleteBody';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\V1ReturnsIdDeleteBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\V1ReturnsIdDeleteBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\V1ReturnsIdDeleteBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1ReturnsIdDeleteBodyNormalizer implements DenormalizerInterface, Normaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\V1ReturnsIdDeleteBody();
+        $object = new \Kiboko\Magento\V2_2\Model\V1ReturnsIdDeleteBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('rmaDataObject', $data)) {
-            $object->setRmaDataObject($this->denormalizer->denormalize($data['rmaDataObject'], 'Kiboko\\Magento\\v2_2\\Model\\RmaDataRmaInterface', 'json', $context));
+            $object->setRmaDataObject($this->denormalizer->denormalize($data['rmaDataObject'], 'Kiboko\\Magento\\V2_2\\Model\\RmaDataRmaInterface', 'json', $context));
         }
         return $object;
     }

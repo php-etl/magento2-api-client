@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CustomerDataCustomerSearchResultsInterfaceNormalizer implements Denormaliz
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\CustomerDataCustomerSearchResultsInterface';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\CustomerDataCustomerSearchResultsInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\CustomerDataCustomerSearchResultsInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\CustomerDataCustomerSearchResultsInterface';
     }
     /**
      * @return mixed
@@ -36,19 +36,19 @@ class CustomerDataCustomerSearchResultsInterfaceNormalizer implements Denormaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\CustomerDataCustomerSearchResultsInterface();
+        $object = new \Kiboko\Magento\V2_3\Model\CustomerDataCustomerSearchResultsInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('items', $data)) {
             $values = array();
             foreach ($data['items'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_3\\Model\\CustomerDataCustomerInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\CustomerDataCustomerInterface', 'json', $context);
             }
             $object->setItems($values);
         }
         if (\array_key_exists('search_criteria', $data)) {
-            $object->setSearchCriteria($this->denormalizer->denormalize($data['search_criteria'], 'Kiboko\\Magento\\v2_3\\Model\\FrameworkSearchCriteriaInterface', 'json', $context));
+            $object->setSearchCriteria($this->denormalizer->denormalize($data['search_criteria'], 'Kiboko\\Magento\\V2_3\\Model\\FrameworkSearchCriteriaInterface', 'json', $context));
         }
         if (\array_key_exists('total_count', $data)) {
             $object->setTotalCount($data['total_count']);

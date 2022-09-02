@@ -1,10 +1,10 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Endpoint;
+namespace Kiboko\Magento\V2_3\Endpoint;
 
-class CompanyCreditCreditHistoryManagementV1GetListGet extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
+class CompanyCreditCreditHistoryManagementV1GetListGet extends \Kiboko\Magento\V2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_3\Runtime\Client\EndpointTrait;
     /**
      * Returns the credit history for one or more companies.
      *
@@ -56,24 +56,24 @@ class CompanyCreditCreditHistoryManagementV1GetListGet extends \Kiboko\Magento\v
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_3\Exception\CompanyCreditCreditHistoryManagementV1GetListGetUnauthorizedException
-     * @throws \Kiboko\Magento\v2_3\Exception\CompanyCreditCreditHistoryManagementV1GetListGetInternalServerErrorException
+     * @throws \Kiboko\Magento\V2_3\Exception\CompanyCreditCreditHistoryManagementV1GetListGetUnauthorizedException
+     * @throws \Kiboko\Magento\V2_3\Exception\CompanyCreditCreditHistoryManagementV1GetListGetInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_3\Model\CompanyCreditDataHistorySearchResultsInterface|\Kiboko\Magento\v2_3\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_3\Model\CompanyCreditDataHistorySearchResultsInterface|\Kiboko\Magento\V2_3\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\CompanyCreditDataHistorySearchResultsInterface', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_3\\Model\\CompanyCreditDataHistorySearchResultsInterface', 'json');
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_3\Exception\CompanyCreditCreditHistoryManagementV1GetListGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_3\Exception\CompanyCreditCreditHistoryManagementV1GetListGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_3\\Model\\ErrorResponse', 'json'));
         }
         if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_3\Exception\CompanyCreditCreditHistoryManagementV1GetListGetInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_3\Exception\CompanyCreditCreditHistoryManagementV1GetListGetInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_3\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_3\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

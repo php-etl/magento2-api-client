@@ -1,10 +1,10 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Endpoint;
+namespace Kiboko\Magento\V2_3\Endpoint;
 
-class AmazonPaymentOrderInformationManagementV1RemoveOrderReferenceDelete extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
+class AmazonPaymentOrderInformationManagementV1RemoveOrderReferenceDelete extends \Kiboko\Magento\V2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_3\Runtime\Client\EndpointTrait;
     public function getMethod(): string
     {
         return 'DELETE';
@@ -25,12 +25,12 @@ class AmazonPaymentOrderInformationManagementV1RemoveOrderReferenceDelete extend
      * {@inheritdoc}
      *
      *
-     * @return null|\Kiboko\Magento\v2_3\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_3\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_3\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

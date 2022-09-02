@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1GiftWrappingsWrappingIdPutBodyNormalizer implements DenormalizerInterfac
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\V1GiftWrappingsWrappingIdPutBody';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\V1GiftWrappingsWrappingIdPutBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\V1GiftWrappingsWrappingIdPutBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\V1GiftWrappingsWrappingIdPutBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1GiftWrappingsWrappingIdPutBodyNormalizer implements DenormalizerInterfac
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\V1GiftWrappingsWrappingIdPutBody();
+        $object = new \Kiboko\Magento\V2_3\Model\V1GiftWrappingsWrappingIdPutBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('data', $data)) {
-            $object->setData($this->denormalizer->denormalize($data['data'], 'Kiboko\\Magento\\v2_3\\Model\\GiftWrappingDataWrappingInterface', 'json', $context));
+            $object->setData($this->denormalizer->denormalize($data['data'], 'Kiboko\\Magento\\V2_3\\Model\\GiftWrappingDataWrappingInterface', 'json', $context));
         }
         if (\array_key_exists('storeId', $data)) {
             $object->setStoreId($data['storeId']);

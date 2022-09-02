@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1TeamCompanyIdPostBodyNormalizer implements DenormalizerInterface, Normal
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\V1TeamCompanyIdPostBody';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\V1TeamCompanyIdPostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\V1TeamCompanyIdPostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\V1TeamCompanyIdPostBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1TeamCompanyIdPostBodyNormalizer implements DenormalizerInterface, Normal
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\V1TeamCompanyIdPostBody();
+        $object = new \Kiboko\Magento\V2_4\Model\V1TeamCompanyIdPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('team', $data)) {
-            $object->setTeam($this->denormalizer->denormalize($data['team'], 'Kiboko\\Magento\\v2_4\\Model\\CompanyDataTeamInterface', 'json', $context));
+            $object->setTeam($this->denormalizer->denormalize($data['team'], 'Kiboko\\Magento\\V2_4\\Model\\CompanyDataTeamInterface', 'json', $context));
         }
         return $object;
     }

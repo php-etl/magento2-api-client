@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class ErrorErrorsItemNormalizer implements DenormalizerInterface, NormalizerInte
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\ErrorErrorsItem';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\ErrorErrorsItem';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\ErrorErrorsItem';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\ErrorErrorsItem';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class ErrorErrorsItemNormalizer implements DenormalizerInterface, NormalizerInte
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\ErrorErrorsItem();
+        $object = new \Kiboko\Magento\V2_3\Model\ErrorErrorsItem();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -46,7 +46,7 @@ class ErrorErrorsItemNormalizer implements DenormalizerInterface, NormalizerInte
         if (\array_key_exists('parameters', $data)) {
             $values = array();
             foreach ($data['parameters'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_3\\Model\\ErrorParametersItem', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\ErrorParametersItem', 'json', $context);
             }
             $object->setParameters($values);
         }

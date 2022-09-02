@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class QuoteDataCurrencyInterfaceNormalizer implements DenormalizerInterface, Nor
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataCurrencyInterface';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataCurrencyInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataCurrencyInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataCurrencyInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class QuoteDataCurrencyInterfaceNormalizer implements DenormalizerInterface, Nor
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\QuoteDataCurrencyInterface();
+        $object = new \Kiboko\Magento\V2_4\Model\QuoteDataCurrencyInterface();
         if (\array_key_exists('base_to_global_rate', $data) && \is_int($data['base_to_global_rate'])) {
             $data['base_to_global_rate'] = (float) $data['base_to_global_rate'];
         }

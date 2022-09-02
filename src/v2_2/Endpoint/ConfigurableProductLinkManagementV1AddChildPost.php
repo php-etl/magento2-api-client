@@ -1,18 +1,18 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Endpoint;
+namespace Kiboko\Magento\V2_2\Endpoint;
 
-class ConfigurableProductLinkManagementV1AddChildPost extends \Kiboko\Magento\v2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_2\Runtime\Client\Endpoint
+class ConfigurableProductLinkManagementV1AddChildPost extends \Kiboko\Magento\V2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_2\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_2\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_2\Runtime\Client\EndpointTrait;
     protected $sku;
     /**
      *
      *
      * @param string $sku
-     * @param null|\Kiboko\Magento\v2_2\Model\V1ConfigurableProductsSkuChildPostBody $requestBody
+     * @param null|\Kiboko\Magento\V2_2\Model\V1ConfigurableProductsSkuChildPostBody $requestBody
      */
-    public function __construct(string $sku, ?\Kiboko\Magento\v2_2\Model\V1ConfigurableProductsSkuChildPostBody $requestBody = null)
+    public function __construct(string $sku, ?\Kiboko\Magento\V2_2\Model\V1ConfigurableProductsSkuChildPostBody $requestBody = null)
     {
         $this->sku = $sku;
         $this->body = $requestBody;
@@ -27,10 +27,10 @@ class ConfigurableProductLinkManagementV1AddChildPost extends \Kiboko\Magento\v2
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \Kiboko\Magento\v2_2\Model\V1ConfigurableProductsSkuChildPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_2\Model\V1ConfigurableProductsSkuChildPostBody) {
             return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
         }
-        if ($this->body instanceof \Kiboko\Magento\v2_2\Model\V1ConfigurableProductsSkuChildPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_2\Model\V1ConfigurableProductsSkuChildPostBody) {
             return array(array('Content-Type' => array('application/xml')), $this->body);
         }
         return array(array(), null);
@@ -42,9 +42,9 @@ class ConfigurableProductLinkManagementV1AddChildPost extends \Kiboko\Magento\v2
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_2\Exception\ConfigurableProductLinkManagementV1AddChildPostUnauthorizedException
+     * @throws \Kiboko\Magento\V2_2\Exception\ConfigurableProductLinkManagementV1AddChildPostUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_2\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_2\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -52,10 +52,10 @@ class ConfigurableProductLinkManagementV1AddChildPost extends \Kiboko\Magento\v2
             return json_decode($body);
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_2\Exception\ConfigurableProductLinkManagementV1AddChildPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_2\Exception\ConfigurableProductLinkManagementV1AddChildPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_2\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_2\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

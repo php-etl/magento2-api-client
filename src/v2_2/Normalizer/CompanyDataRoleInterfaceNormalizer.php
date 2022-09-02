@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CompanyDataRoleInterfaceNormalizer implements DenormalizerInterface, Norma
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\CompanyDataRoleInterface';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\CompanyDataRoleInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\CompanyDataRoleInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\CompanyDataRoleInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class CompanyDataRoleInterfaceNormalizer implements DenormalizerInterface, Norma
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\CompanyDataRoleInterface();
+        $object = new \Kiboko\Magento\V2_2\Model\CompanyDataRoleInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -52,7 +52,7 @@ class CompanyDataRoleInterfaceNormalizer implements DenormalizerInterface, Norma
         if (\array_key_exists('permissions', $data)) {
             $values = array();
             foreach ($data['permissions'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_2\\Model\\CompanyDataPermissionInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\CompanyDataPermissionInterface', 'json', $context);
             }
             $object->setPermissions($values);
         }

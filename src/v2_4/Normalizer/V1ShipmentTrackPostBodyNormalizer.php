@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1ShipmentTrackPostBodyNormalizer implements DenormalizerInterface, Normal
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\V1ShipmentTrackPostBody';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\V1ShipmentTrackPostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\V1ShipmentTrackPostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\V1ShipmentTrackPostBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1ShipmentTrackPostBodyNormalizer implements DenormalizerInterface, Normal
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\V1ShipmentTrackPostBody();
+        $object = new \Kiboko\Magento\V2_4\Model\V1ShipmentTrackPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('entity', $data)) {
-            $object->setEntity($this->denormalizer->denormalize($data['entity'], 'Kiboko\\Magento\\v2_4\\Model\\SalesDataShipmentTrackInterface', 'json', $context));
+            $object->setEntity($this->denormalizer->denormalize($data['entity'], 'Kiboko\\Magento\\V2_4\\Model\\SalesDataShipmentTrackInterface', 'json', $context));
         }
         return $object;
     }

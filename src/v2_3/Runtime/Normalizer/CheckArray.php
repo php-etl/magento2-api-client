@@ -1,6 +1,6 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Runtime\Normalizer;
+namespace Kiboko\Magento\V2_3\Runtime\Normalizer;
 
 trait CheckArray
 {

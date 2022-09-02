@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class ErrorResponseNormalizer implements DenormalizerInterface, NormalizerInterf
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class ErrorResponseNormalizer implements DenormalizerInterface, NormalizerInterf
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\ErrorResponse();
+        $object = new \Kiboko\Magento\V2_4\Model\ErrorResponse();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -46,7 +46,7 @@ class ErrorResponseNormalizer implements DenormalizerInterface, NormalizerInterf
         if (\array_key_exists('errors', $data)) {
             $values = array();
             foreach ($data['errors'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_4\\Model\\ErrorErrorsItem', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\ErrorErrorsItem', 'json', $context);
             }
             $object->setErrors($values);
         }
@@ -56,7 +56,7 @@ class ErrorResponseNormalizer implements DenormalizerInterface, NormalizerInterf
         if (\array_key_exists('parameters', $data)) {
             $values_1 = array();
             foreach ($data['parameters'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\v2_4\\Model\\ErrorParametersItem', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_4\\Model\\ErrorParametersItem', 'json', $context);
             }
             $object->setParameters($values_1);
         }

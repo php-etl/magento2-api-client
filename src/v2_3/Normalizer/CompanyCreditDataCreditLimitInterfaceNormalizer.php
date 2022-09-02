@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CompanyCreditDataCreditLimitInterfaceNormalizer implements DenormalizerInt
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\CompanyCreditDataCreditLimitInterface';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\CompanyCreditDataCreditLimitInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\CompanyCreditDataCreditLimitInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\CompanyCreditDataCreditLimitInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class CompanyCreditDataCreditLimitInterfaceNormalizer implements DenormalizerInt
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\CompanyCreditDataCreditLimitInterface();
+        $object = new \Kiboko\Magento\V2_3\Model\CompanyCreditDataCreditLimitInterface();
         if (\array_key_exists('available_limit', $data) && \is_int($data['available_limit'])) {
             $data['available_limit'] = (float) $data['available_limit'];
         }

@@ -1,18 +1,18 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Endpoint;
+namespace Kiboko\Magento\V2_4\Endpoint;
 
-class CatalogProductLinkManagementV1SetProductLinksPost extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
+class CatalogProductLinkManagementV1SetProductLinksPost extends \Kiboko\Magento\V2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_4\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_4\Runtime\Client\EndpointTrait;
     protected $sku;
     /**
      * Assign a product link to another product
      *
      * @param string $sku
-     * @param null|\Kiboko\Magento\v2_4\Model\V1ProductsSkuLinksPostBody $requestBody
+     * @param null|\Kiboko\Magento\V2_4\Model\V1ProductsSkuLinksPostBody $requestBody
      */
-    public function __construct(string $sku, ?\Kiboko\Magento\v2_4\Model\V1ProductsSkuLinksPostBody $requestBody = null)
+    public function __construct(string $sku, ?\Kiboko\Magento\V2_4\Model\V1ProductsSkuLinksPostBody $requestBody = null)
     {
         $this->sku = $sku;
         $this->body = $requestBody;
@@ -27,10 +27,10 @@ class CatalogProductLinkManagementV1SetProductLinksPost extends \Kiboko\Magento\
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1ProductsSkuLinksPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_4\Model\V1ProductsSkuLinksPostBody) {
             return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
         }
-        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1ProductsSkuLinksPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_4\Model\V1ProductsSkuLinksPostBody) {
             return array(array('Content-Type' => array('application/xml')), $this->body);
         }
         return array(array(), null);
@@ -42,10 +42,10 @@ class CatalogProductLinkManagementV1SetProductLinksPost extends \Kiboko\Magento\
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_4\Exception\CatalogProductLinkManagementV1SetProductLinksPostBadRequestException
-     * @throws \Kiboko\Magento\v2_4\Exception\CatalogProductLinkManagementV1SetProductLinksPostUnauthorizedException
+     * @throws \Kiboko\Magento\V2_4\Exception\CatalogProductLinkManagementV1SetProductLinksPostBadRequestException
+     * @throws \Kiboko\Magento\V2_4\Exception\CatalogProductLinkManagementV1SetProductLinksPostUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_4\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -53,13 +53,13 @@ class CatalogProductLinkManagementV1SetProductLinksPost extends \Kiboko\Magento\
             return json_decode($body);
         }
         if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_4\Exception\CatalogProductLinkManagementV1SetProductLinksPostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_4\Exception\CatalogProductLinkManagementV1SetProductLinksPostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json'));
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_4\Exception\CatalogProductLinkManagementV1SetProductLinksPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_4\Exception\CatalogProductLinkManagementV1SetProductLinksPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

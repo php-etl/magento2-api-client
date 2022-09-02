@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CatalogDataProductRenderInterfaceNormalizer implements DenormalizerInterfa
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductRenderInterface';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductRenderInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductRenderInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductRenderInterface';
     }
     /**
      * @return mixed
@@ -36,21 +36,21 @@ class CatalogDataProductRenderInterfaceNormalizer implements DenormalizerInterfa
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\CatalogDataProductRenderInterface();
+        $object = new \Kiboko\Magento\V2_2\Model\CatalogDataProductRenderInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('add_to_cart_button', $data)) {
-            $object->setAddToCartButton($this->denormalizer->denormalize($data['add_to_cart_button'], 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductRenderButtonInterface', 'json', $context));
+            $object->setAddToCartButton($this->denormalizer->denormalize($data['add_to_cart_button'], 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductRenderButtonInterface', 'json', $context));
         }
         if (\array_key_exists('add_to_compare_button', $data)) {
-            $object->setAddToCompareButton($this->denormalizer->denormalize($data['add_to_compare_button'], 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductRenderButtonInterface', 'json', $context));
+            $object->setAddToCompareButton($this->denormalizer->denormalize($data['add_to_compare_button'], 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductRenderButtonInterface', 'json', $context));
         }
         if (\array_key_exists('currency_code', $data)) {
             $object->setCurrencyCode($data['currency_code']);
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductRenderExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductRenderExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('id', $data)) {
             $object->setId($data['id']);
@@ -58,7 +58,7 @@ class CatalogDataProductRenderInterfaceNormalizer implements DenormalizerInterfa
         if (\array_key_exists('images', $data)) {
             $values = array();
             foreach ($data['images'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductRenderImageInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductRenderImageInterface', 'json', $context);
             }
             $object->setImages($values);
         }
@@ -69,7 +69,7 @@ class CatalogDataProductRenderInterfaceNormalizer implements DenormalizerInterfa
             $object->setName($data['name']);
         }
         if (\array_key_exists('price_info', $data)) {
-            $object->setPriceInfo($this->denormalizer->denormalize($data['price_info'], 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductRenderPriceInfoInterface', 'json', $context));
+            $object->setPriceInfo($this->denormalizer->denormalize($data['price_info'], 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductRenderPriceInfoInterface', 'json', $context));
         }
         if (\array_key_exists('store_id', $data)) {
             $object->setStoreId($data['store_id']);

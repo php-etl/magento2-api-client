@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class QuoteDataCartInterfaceNormalizer implements DenormalizerInterface, Normali
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\QuoteDataCartInterface';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataCartInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\QuoteDataCartInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataCartInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class QuoteDataCartInterfaceNormalizer implements DenormalizerInterface, Normali
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\QuoteDataCartInterface();
+        $object = new \Kiboko\Magento\V2_2\Model\QuoteDataCartInterface();
         if (\array_key_exists('items_qty', $data) && \is_int($data['items_qty'])) {
             $data['items_qty'] = (float) $data['items_qty'];
         }
@@ -44,7 +44,7 @@ class QuoteDataCartInterfaceNormalizer implements DenormalizerInterface, Normali
             return $object;
         }
         if (\array_key_exists('billing_address', $data)) {
-            $object->setBillingAddress($this->denormalizer->denormalize($data['billing_address'], 'Kiboko\\Magento\\v2_2\\Model\\QuoteDataAddressInterface', 'json', $context));
+            $object->setBillingAddress($this->denormalizer->denormalize($data['billing_address'], 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataAddressInterface', 'json', $context));
         }
         if (\array_key_exists('converted_at', $data)) {
             $object->setConvertedAt($data['converted_at']);
@@ -53,10 +53,10 @@ class QuoteDataCartInterfaceNormalizer implements DenormalizerInterface, Normali
             $object->setCreatedAt($data['created_at']);
         }
         if (\array_key_exists('currency', $data)) {
-            $object->setCurrency($this->denormalizer->denormalize($data['currency'], 'Kiboko\\Magento\\v2_2\\Model\\QuoteDataCurrencyInterface', 'json', $context));
+            $object->setCurrency($this->denormalizer->denormalize($data['currency'], 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataCurrencyInterface', 'json', $context));
         }
         if (\array_key_exists('customer', $data)) {
-            $object->setCustomer($this->denormalizer->denormalize($data['customer'], 'Kiboko\\Magento\\v2_2\\Model\\CustomerDataCustomerInterface', 'json', $context));
+            $object->setCustomer($this->denormalizer->denormalize($data['customer'], 'Kiboko\\Magento\\V2_2\\Model\\CustomerDataCustomerInterface', 'json', $context));
         }
         if (\array_key_exists('customer_is_guest', $data)) {
             $object->setCustomerIsGuest($data['customer_is_guest']);
@@ -71,7 +71,7 @@ class QuoteDataCartInterfaceNormalizer implements DenormalizerInterface, Normali
             $object->setCustomerTaxClassId($data['customer_tax_class_id']);
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_2\\Model\\QuoteDataCartExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataCartExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('id', $data)) {
             $object->setId($data['id']);
@@ -85,7 +85,7 @@ class QuoteDataCartInterfaceNormalizer implements DenormalizerInterface, Normali
         if (\array_key_exists('items', $data)) {
             $values = array();
             foreach ($data['items'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_2\\Model\\QuoteDataCartItemInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataCartItemInterface', 'json', $context);
             }
             $object->setItems($values);
         }

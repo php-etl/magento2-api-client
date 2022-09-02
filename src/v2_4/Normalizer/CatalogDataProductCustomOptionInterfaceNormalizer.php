@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CatalogDataProductCustomOptionInterfaceNormalizer implements DenormalizerI
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\CatalogDataProductCustomOptionInterface';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\CatalogDataProductCustomOptionInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\CatalogDataProductCustomOptionInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\CatalogDataProductCustomOptionInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class CatalogDataProductCustomOptionInterfaceNormalizer implements DenormalizerI
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\CatalogDataProductCustomOptionInterface();
+        $object = new \Kiboko\Magento\V2_4\Model\CatalogDataProductCustomOptionInterface();
         if (\array_key_exists('price', $data) && \is_int($data['price'])) {
             $data['price'] = (float) $data['price'];
         }
@@ -44,7 +44,7 @@ class CatalogDataProductCustomOptionInterfaceNormalizer implements DenormalizerI
             return $object;
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_4\\Model\\CatalogDataProductCustomOptionExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_4\\Model\\CatalogDataProductCustomOptionExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('file_extension', $data)) {
             $object->setFileExtension($data['file_extension']);
@@ -88,7 +88,7 @@ class CatalogDataProductCustomOptionInterfaceNormalizer implements DenormalizerI
         if (\array_key_exists('values', $data)) {
             $values = array();
             foreach ($data['values'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_4\\Model\\CatalogDataProductCustomOptionValuesInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\CatalogDataProductCustomOptionValuesInterface', 'json', $context);
             }
             $object->setValues($values);
         }

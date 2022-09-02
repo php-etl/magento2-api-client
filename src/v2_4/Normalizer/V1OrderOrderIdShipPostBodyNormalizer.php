@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1OrderOrderIdShipPostBodyNormalizer implements DenormalizerInterface, Nor
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\V1OrderOrderIdShipPostBody';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\V1OrderOrderIdShipPostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\V1OrderOrderIdShipPostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\V1OrderOrderIdShipPostBody';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class V1OrderOrderIdShipPostBodyNormalizer implements DenormalizerInterface, Nor
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\V1OrderOrderIdShipPostBody();
+        $object = new \Kiboko\Magento\V2_4\Model\V1OrderOrderIdShipPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -44,15 +44,15 @@ class V1OrderOrderIdShipPostBodyNormalizer implements DenormalizerInterface, Nor
             $object->setAppendComment($data['appendComment']);
         }
         if (\array_key_exists('arguments', $data)) {
-            $object->setArguments($this->denormalizer->denormalize($data['arguments'], 'Kiboko\\Magento\\v2_4\\Model\\SalesDataShipmentCreationArgumentsInterface', 'json', $context));
+            $object->setArguments($this->denormalizer->denormalize($data['arguments'], 'Kiboko\\Magento\\V2_4\\Model\\SalesDataShipmentCreationArgumentsInterface', 'json', $context));
         }
         if (\array_key_exists('comment', $data)) {
-            $object->setComment($this->denormalizer->denormalize($data['comment'], 'Kiboko\\Magento\\v2_4\\Model\\SalesDataShipmentCommentCreationInterface', 'json', $context));
+            $object->setComment($this->denormalizer->denormalize($data['comment'], 'Kiboko\\Magento\\V2_4\\Model\\SalesDataShipmentCommentCreationInterface', 'json', $context));
         }
         if (\array_key_exists('items', $data)) {
             $values = array();
             foreach ($data['items'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_4\\Model\\SalesDataShipmentItemCreationInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\SalesDataShipmentItemCreationInterface', 'json', $context);
             }
             $object->setItems($values);
         }
@@ -62,14 +62,14 @@ class V1OrderOrderIdShipPostBodyNormalizer implements DenormalizerInterface, Nor
         if (\array_key_exists('packages', $data)) {
             $values_1 = array();
             foreach ($data['packages'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\v2_4\\Model\\SalesDataShipmentPackageCreationInterface', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_4\\Model\\SalesDataShipmentPackageCreationInterface', 'json', $context);
             }
             $object->setPackages($values_1);
         }
         if (\array_key_exists('tracks', $data)) {
             $values_2 = array();
             foreach ($data['tracks'] as $value_2) {
-                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\v2_4\\Model\\SalesDataShipmentTrackCreationInterface', 'json', $context);
+                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\V2_4\\Model\\SalesDataShipmentTrackCreationInterface', 'json', $context);
             }
             $object->setTracks($values_2);
         }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CheckoutDataShippingInformationInterfaceNormalizer implements Denormalizer
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\CheckoutDataShippingInformationInterface';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\CheckoutDataShippingInformationInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\CheckoutDataShippingInformationInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\CheckoutDataShippingInformationInterface';
     }
     /**
      * @return mixed
@@ -36,17 +36,17 @@ class CheckoutDataShippingInformationInterfaceNormalizer implements Denormalizer
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\CheckoutDataShippingInformationInterface();
+        $object = new \Kiboko\Magento\V2_4\Model\CheckoutDataShippingInformationInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('billing_address', $data)) {
-            $object->setBillingAddress($this->denormalizer->denormalize($data['billing_address'], 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataAddressInterface', 'json', $context));
+            $object->setBillingAddress($this->denormalizer->denormalize($data['billing_address'], 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataAddressInterface', 'json', $context));
         }
         if (\array_key_exists('custom_attributes', $data)) {
             $values = array();
             foreach ($data['custom_attributes'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_4\\Model\\FrameworkAttributeInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setCustomAttributes($values);
         }
@@ -54,7 +54,7 @@ class CheckoutDataShippingInformationInterfaceNormalizer implements Denormalizer
             $object->setExtensionAttributes($data['extension_attributes']);
         }
         if (\array_key_exists('shipping_address', $data)) {
-            $object->setShippingAddress($this->denormalizer->denormalize($data['shipping_address'], 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataAddressInterface', 'json', $context));
+            $object->setShippingAddress($this->denormalizer->denormalize($data['shipping_address'], 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataAddressInterface', 'json', $context));
         }
         if (\array_key_exists('shipping_carrier_code', $data)) {
             $object->setShippingCarrierCode($data['shipping_carrier_code']);

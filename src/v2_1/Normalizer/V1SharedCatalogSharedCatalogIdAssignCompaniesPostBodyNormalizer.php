@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1SharedCatalogSharedCatalogIdAssignCompaniesPostBodyNormalizer implements
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\V1SharedCatalogSharedCatalogIdAssignCompaniesPostBody';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\V1SharedCatalogSharedCatalogIdAssignCompaniesPostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\V1SharedCatalogSharedCatalogIdAssignCompaniesPostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\V1SharedCatalogSharedCatalogIdAssignCompaniesPostBody';
     }
     /**
      * @return mixed
@@ -36,14 +36,14 @@ class V1SharedCatalogSharedCatalogIdAssignCompaniesPostBodyNormalizer implements
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\V1SharedCatalogSharedCatalogIdAssignCompaniesPostBody();
+        $object = new \Kiboko\Magento\V2_1\Model\V1SharedCatalogSharedCatalogIdAssignCompaniesPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('companies', $data)) {
             $values = array();
             foreach ($data['companies'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_1\\Model\\CompanyDataCompanyInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\CompanyDataCompanyInterface', 'json', $context);
             }
             $object->setCompanies($values);
         }

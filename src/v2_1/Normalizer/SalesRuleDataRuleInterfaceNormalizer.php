@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class SalesRuleDataRuleInterfaceNormalizer implements DenormalizerInterface, Nor
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\SalesRuleDataRuleInterface';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\SalesRuleDataRuleInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\SalesRuleDataRuleInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\SalesRuleDataRuleInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class SalesRuleDataRuleInterfaceNormalizer implements DenormalizerInterface, Nor
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\SalesRuleDataRuleInterface();
+        $object = new \Kiboko\Magento\V2_1\Model\SalesRuleDataRuleInterface();
         if (\array_key_exists('discount_amount', $data) && \is_int($data['discount_amount'])) {
             $data['discount_amount'] = (float) $data['discount_amount'];
         }
@@ -47,13 +47,13 @@ class SalesRuleDataRuleInterfaceNormalizer implements DenormalizerInterface, Nor
             return $object;
         }
         if (\array_key_exists('action_condition', $data)) {
-            $object->setActionCondition($this->denormalizer->denormalize($data['action_condition'], 'Kiboko\\Magento\\v2_1\\Model\\SalesRuleDataConditionInterface', 'json', $context));
+            $object->setActionCondition($this->denormalizer->denormalize($data['action_condition'], 'Kiboko\\Magento\\V2_1\\Model\\SalesRuleDataConditionInterface', 'json', $context));
         }
         if (\array_key_exists('apply_to_shipping', $data)) {
             $object->setApplyToShipping($data['apply_to_shipping']);
         }
         if (\array_key_exists('condition', $data)) {
-            $object->setCondition($this->denormalizer->denormalize($data['condition'], 'Kiboko\\Magento\\v2_1\\Model\\SalesRuleDataConditionInterface', 'json', $context));
+            $object->setCondition($this->denormalizer->denormalize($data['condition'], 'Kiboko\\Magento\\V2_1\\Model\\SalesRuleDataConditionInterface', 'json', $context));
         }
         if (\array_key_exists('coupon_type', $data)) {
             $object->setCouponType($data['coupon_type']);
@@ -78,7 +78,7 @@ class SalesRuleDataRuleInterfaceNormalizer implements DenormalizerInterface, Nor
             $object->setDiscountStep($data['discount_step']);
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_1\\Model\\SalesRuleDataRuleExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_1\\Model\\SalesRuleDataRuleExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('from_date', $data)) {
             $object->setFromDate($data['from_date']);
@@ -120,7 +120,7 @@ class SalesRuleDataRuleInterfaceNormalizer implements DenormalizerInterface, Nor
         if (\array_key_exists('store_labels', $data)) {
             $values_2 = array();
             foreach ($data['store_labels'] as $value_2) {
-                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\v2_1\\Model\\SalesRuleDataRuleLabelInterface', 'json', $context);
+                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\V2_1\\Model\\SalesRuleDataRuleLabelInterface', 'json', $context);
             }
             $object->setStoreLabels($values_2);
         }

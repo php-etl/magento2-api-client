@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class QuoteDataTotalsItemInterfaceNormalizer implements DenormalizerInterface, N
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\QuoteDataTotalsItemInterface';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataTotalsItemInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\QuoteDataTotalsItemInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataTotalsItemInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class QuoteDataTotalsItemInterfaceNormalizer implements DenormalizerInterface, N
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\QuoteDataTotalsItemInterface();
+        $object = new \Kiboko\Magento\V2_2\Model\QuoteDataTotalsItemInterface();
         if (\array_key_exists('base_discount_amount', $data) && \is_int($data['base_discount_amount'])) {
             $data['base_discount_amount'] = (float) $data['base_discount_amount'];
         }
@@ -116,7 +116,7 @@ class QuoteDataTotalsItemInterfaceNormalizer implements DenormalizerInterface, N
             $object->setDiscountPercent($data['discount_percent']);
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_2\\Model\\QuoteDataTotalsItemExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataTotalsItemExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('item_id', $data)) {
             $object->setItemId($data['item_id']);

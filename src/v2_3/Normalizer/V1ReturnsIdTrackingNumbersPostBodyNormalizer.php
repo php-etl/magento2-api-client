@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1ReturnsIdTrackingNumbersPostBodyNormalizer implements DenormalizerInterf
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\V1ReturnsIdTrackingNumbersPostBody';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\V1ReturnsIdTrackingNumbersPostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\V1ReturnsIdTrackingNumbersPostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\V1ReturnsIdTrackingNumbersPostBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1ReturnsIdTrackingNumbersPostBodyNormalizer implements DenormalizerInterf
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\V1ReturnsIdTrackingNumbersPostBody();
+        $object = new \Kiboko\Magento\V2_3\Model\V1ReturnsIdTrackingNumbersPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('track', $data)) {
-            $object->setTrack($this->denormalizer->denormalize($data['track'], 'Kiboko\\Magento\\v2_3\\Model\\RmaDataTrackInterface', 'json', $context));
+            $object->setTrack($this->denormalizer->denormalize($data['track'], 'Kiboko\\Magento\\V2_3\\Model\\RmaDataTrackInterface', 'json', $context));
         }
         return $object;
     }

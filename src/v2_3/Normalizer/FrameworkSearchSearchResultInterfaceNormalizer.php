@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class FrameworkSearchSearchResultInterfaceNormalizer implements DenormalizerInte
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\FrameworkSearchSearchResultInterface';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\FrameworkSearchSearchResultInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\FrameworkSearchSearchResultInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\FrameworkSearchSearchResultInterface';
     }
     /**
      * @return mixed
@@ -36,22 +36,22 @@ class FrameworkSearchSearchResultInterfaceNormalizer implements DenormalizerInte
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\FrameworkSearchSearchResultInterface();
+        $object = new \Kiboko\Magento\V2_3\Model\FrameworkSearchSearchResultInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('aggregations', $data)) {
-            $object->setAggregations($this->denormalizer->denormalize($data['aggregations'], 'Kiboko\\Magento\\v2_3\\Model\\FrameworkSearchAggregationInterface', 'json', $context));
+            $object->setAggregations($this->denormalizer->denormalize($data['aggregations'], 'Kiboko\\Magento\\V2_3\\Model\\FrameworkSearchAggregationInterface', 'json', $context));
         }
         if (\array_key_exists('items', $data)) {
             $values = array();
             foreach ($data['items'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_3\\Model\\FrameworkSearchDocumentInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\FrameworkSearchDocumentInterface', 'json', $context);
             }
             $object->setItems($values);
         }
         if (\array_key_exists('search_criteria', $data)) {
-            $object->setSearchCriteria($this->denormalizer->denormalize($data['search_criteria'], 'Kiboko\\Magento\\v2_3\\Model\\FrameworkSearchSearchCriteriaInterface', 'json', $context));
+            $object->setSearchCriteria($this->denormalizer->denormalize($data['search_criteria'], 'Kiboko\\Magento\\V2_3\\Model\\FrameworkSearchSearchCriteriaInterface', 'json', $context));
         }
         if (\array_key_exists('total_count', $data)) {
             $object->setTotalCount($data['total_count']);

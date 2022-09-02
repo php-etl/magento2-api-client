@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1ProductsAttributesAttributeCodeOptionsPostBodyNormalizer implements Deno
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\V1ProductsAttributesAttributeCodeOptionsPostBody';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\V1ProductsAttributesAttributeCodeOptionsPostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\V1ProductsAttributesAttributeCodeOptionsPostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\V1ProductsAttributesAttributeCodeOptionsPostBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1ProductsAttributesAttributeCodeOptionsPostBodyNormalizer implements Deno
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\V1ProductsAttributesAttributeCodeOptionsPostBody();
+        $object = new \Kiboko\Magento\V2_1\Model\V1ProductsAttributesAttributeCodeOptionsPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('option', $data)) {
-            $object->setOption($this->denormalizer->denormalize($data['option'], 'Kiboko\\Magento\\v2_1\\Model\\EavDataAttributeOptionInterface', 'json', $context));
+            $object->setOption($this->denormalizer->denormalize($data['option'], 'Kiboko\\Magento\\V2_1\\Model\\EavDataAttributeOptionInterface', 'json', $context));
         }
         return $object;
     }

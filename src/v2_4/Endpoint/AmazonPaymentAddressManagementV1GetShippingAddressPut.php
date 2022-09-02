@@ -1,18 +1,18 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Endpoint;
+namespace Kiboko\Magento\V2_4\Endpoint;
 
-class AmazonPaymentAddressManagementV1GetShippingAddressPut extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
+class AmazonPaymentAddressManagementV1GetShippingAddressPut extends \Kiboko\Magento\V2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_4\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_4\Runtime\Client\EndpointTrait;
     protected $amazonOrderReferenceId;
     /**
      *
      *
      * @param string $amazonOrderReferenceId
-     * @param null|\Kiboko\Magento\v2_4\Model\V1AmazonShippingAddressAmazonOrderReferenceIdPutBody $requestBody
+     * @param null|\Kiboko\Magento\V2_4\Model\V1AmazonShippingAddressAmazonOrderReferenceIdPutBody $requestBody
      */
-    public function __construct(string $amazonOrderReferenceId, ?\Kiboko\Magento\v2_4\Model\V1AmazonShippingAddressAmazonOrderReferenceIdPutBody $requestBody = null)
+    public function __construct(string $amazonOrderReferenceId, ?\Kiboko\Magento\V2_4\Model\V1AmazonShippingAddressAmazonOrderReferenceIdPutBody $requestBody = null)
     {
         $this->amazonOrderReferenceId = $amazonOrderReferenceId;
         $this->body = $requestBody;
@@ -27,10 +27,10 @@ class AmazonPaymentAddressManagementV1GetShippingAddressPut extends \Kiboko\Mage
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1AmazonShippingAddressAmazonOrderReferenceIdPutBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_4\Model\V1AmazonShippingAddressAmazonOrderReferenceIdPutBody) {
             return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
         }
-        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1AmazonShippingAddressAmazonOrderReferenceIdPutBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_4\Model\V1AmazonShippingAddressAmazonOrderReferenceIdPutBody) {
             return array(array('Content-Type' => array('application/xml')), $this->body);
         }
         return array(array(), null);
@@ -43,7 +43,7 @@ class AmazonPaymentAddressManagementV1GetShippingAddressPut extends \Kiboko\Mage
      * {@inheritdoc}
      *
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_4\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -51,7 +51,7 @@ class AmazonPaymentAddressManagementV1GetShippingAddressPut extends \Kiboko\Mage
             return json_decode($body);
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

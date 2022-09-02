@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1CartsMineCollectTotalsPutBodyNormalizer implements DenormalizerInterface
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\V1CartsMineCollectTotalsPutBody';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\V1CartsMineCollectTotalsPutBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\V1CartsMineCollectTotalsPutBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\V1CartsMineCollectTotalsPutBody';
     }
     /**
      * @return mixed
@@ -36,15 +36,15 @@ class V1CartsMineCollectTotalsPutBodyNormalizer implements DenormalizerInterface
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\V1CartsMineCollectTotalsPutBody();
+        $object = new \Kiboko\Magento\V2_4\Model\V1CartsMineCollectTotalsPutBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('additionalData', $data)) {
-            $object->setAdditionalData($this->denormalizer->denormalize($data['additionalData'], 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataTotalsAdditionalDataInterface', 'json', $context));
+            $object->setAdditionalData($this->denormalizer->denormalize($data['additionalData'], 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataTotalsAdditionalDataInterface', 'json', $context));
         }
         if (\array_key_exists('paymentMethod', $data)) {
-            $object->setPaymentMethod($this->denormalizer->denormalize($data['paymentMethod'], 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataPaymentInterface', 'json', $context));
+            $object->setPaymentMethod($this->denormalizer->denormalize($data['paymentMethod'], 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataPaymentInterface', 'json', $context));
         }
         if (\array_key_exists('shippingCarrierCode', $data)) {
             $object->setShippingCarrierCode($data['shippingCarrierCode']);

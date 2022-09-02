@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1ProductsAttributeSetsAttributeSetIdGroupsPutBodyNormalizer implements De
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\V1ProductsAttributeSetsAttributeSetIdGroupsPutBody';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\V1ProductsAttributeSetsAttributeSetIdGroupsPutBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\V1ProductsAttributeSetsAttributeSetIdGroupsPutBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\V1ProductsAttributeSetsAttributeSetIdGroupsPutBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1ProductsAttributeSetsAttributeSetIdGroupsPutBodyNormalizer implements De
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\V1ProductsAttributeSetsAttributeSetIdGroupsPutBody();
+        $object = new \Kiboko\Magento\V2_2\Model\V1ProductsAttributeSetsAttributeSetIdGroupsPutBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('group', $data)) {
-            $object->setGroup($this->denormalizer->denormalize($data['group'], 'Kiboko\\Magento\\v2_2\\Model\\EavDataAttributeGroupInterface', 'json', $context));
+            $object->setGroup($this->denormalizer->denormalize($data['group'], 'Kiboko\\Magento\\V2_2\\Model\\EavDataAttributeGroupInterface', 'json', $context));
         }
         return $object;
     }

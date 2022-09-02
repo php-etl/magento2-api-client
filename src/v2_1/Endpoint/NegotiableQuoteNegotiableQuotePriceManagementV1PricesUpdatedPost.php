@@ -1,16 +1,16 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Endpoint;
+namespace Kiboko\Magento\V2_1\Endpoint;
 
-class NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPost extends \Kiboko\Magento\v2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_1\Runtime\Client\Endpoint
+class NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPost extends \Kiboko\Magento\V2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_1\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_1\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_1\Runtime\Client\EndpointTrait;
     /**
      * Refreshes item prices, taxes, discounts, cart rules in the negotiable quote as per the latest changes in the catalog / shared catalog and in the price rules. Depending on the negotiable quote state and totals, all or just some of quote numbers will be recalculated. 'Update Prices' parameter forces refresh on any quote that is not locked for admin user, including the quotes with a negotiated price. The request can be applied to one or more quotes at the same time.
      *
-     * @param null|\Kiboko\Magento\v2_1\Model\V1NegotiableQuotePricesUpdatedPostBody $requestBody
+     * @param null|\Kiboko\Magento\V2_1\Model\V1NegotiableQuotePricesUpdatedPostBody $requestBody
      */
-    public function __construct(?\Kiboko\Magento\v2_1\Model\V1NegotiableQuotePricesUpdatedPostBody $requestBody = null)
+    public function __construct(?\Kiboko\Magento\V2_1\Model\V1NegotiableQuotePricesUpdatedPostBody $requestBody = null)
     {
         $this->body = $requestBody;
     }
@@ -24,10 +24,10 @@ class NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPost extends \
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \Kiboko\Magento\v2_1\Model\V1NegotiableQuotePricesUpdatedPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_1\Model\V1NegotiableQuotePricesUpdatedPostBody) {
             return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
         }
-        if ($this->body instanceof \Kiboko\Magento\v2_1\Model\V1NegotiableQuotePricesUpdatedPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_1\Model\V1NegotiableQuotePricesUpdatedPostBody) {
             return array(array('Content-Type' => array('application/xml')), $this->body);
         }
         return array(array(), null);
@@ -39,10 +39,10 @@ class NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPost extends \
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_1\Exception\NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPostBadRequestException
-     * @throws \Kiboko\Magento\v2_1\Exception\NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPostUnauthorizedException
+     * @throws \Kiboko\Magento\V2_1\Exception\NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPostBadRequestException
+     * @throws \Kiboko\Magento\V2_1\Exception\NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPostUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_1\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -50,13 +50,13 @@ class NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPost extends \
             return json_decode($body);
         }
         if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_1\Exception\NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_1\Exception\NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\ErrorResponse', 'json'));
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_1\Exception\NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_1\Exception\NegotiableQuoteNegotiableQuotePriceManagementV1PricesUpdatedPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

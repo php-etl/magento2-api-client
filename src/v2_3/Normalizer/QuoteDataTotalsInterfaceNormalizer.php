@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class QuoteDataTotalsInterfaceNormalizer implements DenormalizerInterface, Norma
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataTotalsInterface';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\QuoteDataTotalsInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataTotalsInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\QuoteDataTotalsInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class QuoteDataTotalsInterfaceNormalizer implements DenormalizerInterface, Norma
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\QuoteDataTotalsInterface();
+        $object = new \Kiboko\Magento\V2_3\Model\QuoteDataTotalsInterface();
         if (\array_key_exists('base_discount_amount', $data) && \is_int($data['base_discount_amount'])) {
             $data['base_discount_amount'] = (float) $data['base_discount_amount'];
         }
@@ -143,7 +143,7 @@ class QuoteDataTotalsInterfaceNormalizer implements DenormalizerInterface, Norma
             $object->setDiscountAmount($data['discount_amount']);
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataTotalsExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_3\\Model\\QuoteDataTotalsExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('grand_total', $data)) {
             $object->setGrandTotal($data['grand_total']);
@@ -151,7 +151,7 @@ class QuoteDataTotalsInterfaceNormalizer implements DenormalizerInterface, Norma
         if (\array_key_exists('items', $data)) {
             $values = array();
             foreach ($data['items'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataTotalsItemInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\QuoteDataTotalsItemInterface', 'json', $context);
             }
             $object->setItems($values);
         }
@@ -188,7 +188,7 @@ class QuoteDataTotalsInterfaceNormalizer implements DenormalizerInterface, Norma
         if (\array_key_exists('total_segments', $data)) {
             $values_1 = array();
             foreach ($data['total_segments'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataTotalSegmentInterface', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_3\\Model\\QuoteDataTotalSegmentInterface', 'json', $context);
             }
             $object->setTotalSegments($values_1);
         }

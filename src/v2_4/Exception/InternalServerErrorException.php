@@ -1,6 +1,6 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Exception;
+namespace Kiboko\Magento\V2_4\Exception;
 
 class InternalServerErrorException extends \RuntimeException implements ServerException
 {

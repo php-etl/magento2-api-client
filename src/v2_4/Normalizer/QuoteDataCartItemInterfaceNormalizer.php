@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class QuoteDataCartItemInterfaceNormalizer implements DenormalizerInterface, Nor
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataCartItemInterface';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataCartItemInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataCartItemInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataCartItemInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class QuoteDataCartItemInterfaceNormalizer implements DenormalizerInterface, Nor
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\QuoteDataCartItemInterface();
+        $object = new \Kiboko\Magento\V2_4\Model\QuoteDataCartItemInterface();
         if (\array_key_exists('price', $data) && \is_int($data['price'])) {
             $data['price'] = (float) $data['price'];
         }
@@ -47,7 +47,7 @@ class QuoteDataCartItemInterfaceNormalizer implements DenormalizerInterface, Nor
             return $object;
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataCartItemExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataCartItemExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('item_id', $data)) {
             $object->setItemId($data['item_id']);
@@ -59,7 +59,7 @@ class QuoteDataCartItemInterfaceNormalizer implements DenormalizerInterface, Nor
             $object->setPrice($data['price']);
         }
         if (\array_key_exists('product_option', $data)) {
-            $object->setProductOption($this->denormalizer->denormalize($data['product_option'], 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataProductOptionInterface', 'json', $context));
+            $object->setProductOption($this->denormalizer->denormalize($data['product_option'], 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataProductOptionInterface', 'json', $context));
         }
         if (\array_key_exists('product_type', $data)) {
             $object->setProductType($data['product_type']);

@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1RequisitionListsPostBodyNormalizer implements DenormalizerInterface, Nor
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\V1RequisitionListsPostBody';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\V1RequisitionListsPostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\V1RequisitionListsPostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\V1RequisitionListsPostBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1RequisitionListsPostBodyNormalizer implements DenormalizerInterface, Nor
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\V1RequisitionListsPostBody();
+        $object = new \Kiboko\Magento\V2_2\Model\V1RequisitionListsPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('requisitionList', $data)) {
-            $object->setRequisitionList($this->denormalizer->denormalize($data['requisitionList'], 'Kiboko\\Magento\\v2_2\\Model\\RequisitionListDataRequisitionListInterface', 'json', $context));
+            $object->setRequisitionList($this->denormalizer->denormalize($data['requisitionList'], 'Kiboko\\Magento\\V2_2\\Model\\RequisitionListDataRequisitionListInterface', 'json', $context));
         }
         return $object;
     }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1BundleProductsOptionsOptionIdPutBodyNormalizer implements DenormalizerIn
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\V1BundleProductsOptionsOptionIdPutBody';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\V1BundleProductsOptionsOptionIdPutBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\V1BundleProductsOptionsOptionIdPutBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\V1BundleProductsOptionsOptionIdPutBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1BundleProductsOptionsOptionIdPutBodyNormalizer implements DenormalizerIn
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\V1BundleProductsOptionsOptionIdPutBody();
+        $object = new \Kiboko\Magento\V2_3\Model\V1BundleProductsOptionsOptionIdPutBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('option', $data)) {
-            $object->setOption($this->denormalizer->denormalize($data['option'], 'Kiboko\\Magento\\v2_3\\Model\\BundleDataOptionInterface', 'json', $context));
+            $object->setOption($this->denormalizer->denormalize($data['option'], 'Kiboko\\Magento\\V2_3\\Model\\BundleDataOptionInterface', 'json', $context));
         }
         return $object;
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Runtime\Client;
+namespace Kiboko\Magento\V2_1\Runtime\Client;
 
 use Symfony\Component\OptionsResolver\Options;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class RmaDataRmaInterfaceNormalizer implements DenormalizerInterface, Normalizer
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\RmaDataRmaInterface';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\RmaDataRmaInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\RmaDataRmaInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\RmaDataRmaInterface';
     }
     /**
      * @return mixed
@@ -36,21 +36,21 @@ class RmaDataRmaInterfaceNormalizer implements DenormalizerInterface, Normalizer
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\RmaDataRmaInterface();
+        $object = new \Kiboko\Magento\V2_4\Model\RmaDataRmaInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('comments', $data)) {
             $values = array();
             foreach ($data['comments'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_4\\Model\\RmaDataCommentInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\RmaDataCommentInterface', 'json', $context);
             }
             $object->setComments($values);
         }
         if (\array_key_exists('custom_attributes', $data)) {
             $values_1 = array();
             foreach ($data['custom_attributes'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\v2_4\\Model\\FrameworkAttributeInterface', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_4\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setCustomAttributes($values_1);
         }
@@ -75,7 +75,7 @@ class RmaDataRmaInterfaceNormalizer implements DenormalizerInterface, Normalizer
         if (\array_key_exists('items', $data)) {
             $values_2 = array();
             foreach ($data['items'] as $value_2) {
-                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\v2_4\\Model\\RmaDataItemInterface', 'json', $context);
+                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\V2_4\\Model\\RmaDataItemInterface', 'json', $context);
             }
             $object->setItems($values_2);
         }
@@ -94,7 +94,7 @@ class RmaDataRmaInterfaceNormalizer implements DenormalizerInterface, Normalizer
         if (\array_key_exists('tracks', $data)) {
             $values_3 = array();
             foreach ($data['tracks'] as $value_3) {
-                $values_3[] = $this->denormalizer->denormalize($value_3, 'Kiboko\\Magento\\v2_4\\Model\\RmaDataTrackInterface', 'json', $context);
+                $values_3[] = $this->denormalizer->denormalize($value_3, 'Kiboko\\Magento\\V2_4\\Model\\RmaDataTrackInterface', 'json', $context);
             }
             $object->setTracks($values_3);
         }

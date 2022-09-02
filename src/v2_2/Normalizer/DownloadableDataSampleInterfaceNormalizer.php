@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class DownloadableDataSampleInterfaceNormalizer implements DenormalizerInterface
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\DownloadableDataSampleInterface';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\DownloadableDataSampleInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\DownloadableDataSampleInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\DownloadableDataSampleInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class DownloadableDataSampleInterfaceNormalizer implements DenormalizerInterface
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\DownloadableDataSampleInterface();
+        $object = new \Kiboko\Magento\V2_2\Model\DownloadableDataSampleInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -50,7 +50,7 @@ class DownloadableDataSampleInterfaceNormalizer implements DenormalizerInterface
             $object->setSampleFile($data['sample_file']);
         }
         if (\array_key_exists('sample_file_content', $data)) {
-            $object->setSampleFileContent($this->denormalizer->denormalize($data['sample_file_content'], 'Kiboko\\Magento\\v2_2\\Model\\DownloadableDataFileContentInterface', 'json', $context));
+            $object->setSampleFileContent($this->denormalizer->denormalize($data['sample_file_content'], 'Kiboko\\Magento\\V2_2\\Model\\DownloadableDataFileContentInterface', 'json', $context));
         }
         if (\array_key_exists('sample_type', $data)) {
             $object->setSampleType($data['sample_type']);

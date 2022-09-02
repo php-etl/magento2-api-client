@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1ProductsSkuPutBodyNormalizer implements DenormalizerInterface, Normalize
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\V1ProductsSkuPutBody';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\V1ProductsSkuPutBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\V1ProductsSkuPutBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\V1ProductsSkuPutBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1ProductsSkuPutBodyNormalizer implements DenormalizerInterface, Normalize
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\V1ProductsSkuPutBody();
+        $object = new \Kiboko\Magento\V2_4\Model\V1ProductsSkuPutBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('product', $data)) {
-            $object->setProduct($this->denormalizer->denormalize($data['product'], 'Kiboko\\Magento\\v2_4\\Model\\CatalogDataProductInterface', 'json', $context));
+            $object->setProduct($this->denormalizer->denormalize($data['product'], 'Kiboko\\Magento\\V2_4\\Model\\CatalogDataProductInterface', 'json', $context));
         }
         if (\array_key_exists('saveOptions', $data)) {
             $object->setSaveOptions($data['saveOptions']);

@@ -1,18 +1,18 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Endpoint;
+namespace Kiboko\Magento\V2_4\Endpoint;
 
-class NegotiableQuoteBillingAddressManagementV1AssignPost extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
+class NegotiableQuoteBillingAddressManagementV1AssignPost extends \Kiboko\Magento\V2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_4\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_4\Runtime\Client\EndpointTrait;
     protected $cartId;
     /**
      * Assigns a specified billing address to a specified cart.
      *
      * @param int $cartId The cart ID.
-     * @param null|\Kiboko\Magento\v2_4\Model\V1NegotiableCartsCartIdBillingAddressPostBody $requestBody
+     * @param null|\Kiboko\Magento\V2_4\Model\V1NegotiableCartsCartIdBillingAddressPostBody $requestBody
      */
-    public function __construct(int $cartId, ?\Kiboko\Magento\v2_4\Model\V1NegotiableCartsCartIdBillingAddressPostBody $requestBody = null)
+    public function __construct(int $cartId, ?\Kiboko\Magento\V2_4\Model\V1NegotiableCartsCartIdBillingAddressPostBody $requestBody = null)
     {
         $this->cartId = $cartId;
         $this->body = $requestBody;
@@ -27,10 +27,10 @@ class NegotiableQuoteBillingAddressManagementV1AssignPost extends \Kiboko\Magent
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1NegotiableCartsCartIdBillingAddressPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_4\Model\V1NegotiableCartsCartIdBillingAddressPostBody) {
             return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
         }
-        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1NegotiableCartsCartIdBillingAddressPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_4\Model\V1NegotiableCartsCartIdBillingAddressPostBody) {
             return array(array('Content-Type' => array('application/xml')), $this->body);
         }
         return array(array(), null);
@@ -42,10 +42,10 @@ class NegotiableQuoteBillingAddressManagementV1AssignPost extends \Kiboko\Magent
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_4\Exception\NegotiableQuoteBillingAddressManagementV1AssignPostBadRequestException
-     * @throws \Kiboko\Magento\v2_4\Exception\NegotiableQuoteBillingAddressManagementV1AssignPostUnauthorizedException
+     * @throws \Kiboko\Magento\V2_4\Exception\NegotiableQuoteBillingAddressManagementV1AssignPostBadRequestException
+     * @throws \Kiboko\Magento\V2_4\Exception\NegotiableQuoteBillingAddressManagementV1AssignPostUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_4\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -53,13 +53,13 @@ class NegotiableQuoteBillingAddressManagementV1AssignPost extends \Kiboko\Magent
             return json_decode($body);
         }
         if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_4\Exception\NegotiableQuoteBillingAddressManagementV1AssignPostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_4\Exception\NegotiableQuoteBillingAddressManagementV1AssignPostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json'));
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_4\Exception\NegotiableQuoteBillingAddressManagementV1AssignPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_4\Exception\NegotiableQuoteBillingAddressManagementV1AssignPostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

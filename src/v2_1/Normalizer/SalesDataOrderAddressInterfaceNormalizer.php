@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class SalesDataOrderAddressInterfaceNormalizer implements DenormalizerInterface,
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\SalesDataOrderAddressInterface';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\SalesDataOrderAddressInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\SalesDataOrderAddressInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\SalesDataOrderAddressInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class SalesDataOrderAddressInterfaceNormalizer implements DenormalizerInterface,
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\SalesDataOrderAddressInterface();
+        $object = new \Kiboko\Magento\V2_1\Model\SalesDataOrderAddressInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -65,7 +65,7 @@ class SalesDataOrderAddressInterfaceNormalizer implements DenormalizerInterface,
             $object->setEntityId($data['entity_id']);
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_1\\Model\\SalesDataOrderAddressExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_1\\Model\\SalesDataOrderAddressExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('fax', $data)) {
             $object->setFax($data['fax']);

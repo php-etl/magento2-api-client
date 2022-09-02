@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class TaxDataTaxRateInterfaceNormalizer implements DenormalizerInterface, Normal
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\TaxDataTaxRateInterface';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\TaxDataTaxRateInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\TaxDataTaxRateInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\TaxDataTaxRateInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class TaxDataTaxRateInterfaceNormalizer implements DenormalizerInterface, Normal
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\TaxDataTaxRateInterface();
+        $object = new \Kiboko\Magento\V2_2\Model\TaxDataTaxRateInterface();
         if (\array_key_exists('rate', $data) && \is_int($data['rate'])) {
             $data['rate'] = (float) $data['rate'];
         }
@@ -70,7 +70,7 @@ class TaxDataTaxRateInterfaceNormalizer implements DenormalizerInterface, Normal
         if (\array_key_exists('titles', $data)) {
             $values = array();
             foreach ($data['titles'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_2\\Model\\TaxDataTaxRateTitleInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\TaxDataTaxRateTitleInterface', 'json', $context);
             }
             $object->setTitles($values);
         }

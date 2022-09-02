@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class QuoteDataTotalSegmentExtensionInterfaceNormalizer implements DenormalizerI
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataTotalSegmentExtensionInterface';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\QuoteDataTotalSegmentExtensionInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\QuoteDataTotalSegmentExtensionInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\QuoteDataTotalSegmentExtensionInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class QuoteDataTotalSegmentExtensionInterfaceNormalizer implements DenormalizerI
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\QuoteDataTotalSegmentExtensionInterface();
+        $object = new \Kiboko\Magento\V2_3\Model\QuoteDataTotalSegmentExtensionInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -116,7 +116,7 @@ class QuoteDataTotalSegmentExtensionInterfaceNormalizer implements DenormalizerI
         if (\array_key_exists('tax_grandtotal_details', $data)) {
             $values_1 = array();
             foreach ($data['tax_grandtotal_details'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\v2_3\\Model\\TaxDataGrandTotalDetailsInterface', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_3\\Model\\TaxDataGrandTotalDetailsInterface', 'json', $context);
             }
             $object->setTaxGrandtotalDetails($values_1);
         }

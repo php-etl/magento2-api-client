@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CatalogDataProductInterfaceNormalizer implements DenormalizerInterface, No
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductInterface';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class CatalogDataProductInterfaceNormalizer implements DenormalizerInterface, No
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\CatalogDataProductInterface();
+        $object = new \Kiboko\Magento\V2_2\Model\CatalogDataProductInterface();
         if (\array_key_exists('price', $data) && \is_int($data['price'])) {
             $data['price'] = (float) $data['price'];
         }
@@ -55,12 +55,12 @@ class CatalogDataProductInterfaceNormalizer implements DenormalizerInterface, No
         if (\array_key_exists('custom_attributes', $data)) {
             $values = array();
             foreach ($data['custom_attributes'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_2\\Model\\FrameworkAttributeInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setCustomAttributes($values);
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('id', $data)) {
             $object->setId($data['id']);
@@ -68,7 +68,7 @@ class CatalogDataProductInterfaceNormalizer implements DenormalizerInterface, No
         if (\array_key_exists('media_gallery_entries', $data)) {
             $values_1 = array();
             foreach ($data['media_gallery_entries'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductAttributeMediaGalleryEntryInterface', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductAttributeMediaGalleryEntryInterface', 'json', $context);
             }
             $object->setMediaGalleryEntries($values_1);
         }
@@ -78,7 +78,7 @@ class CatalogDataProductInterfaceNormalizer implements DenormalizerInterface, No
         if (\array_key_exists('options', $data)) {
             $values_2 = array();
             foreach ($data['options'] as $value_2) {
-                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductCustomOptionInterface', 'json', $context);
+                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductCustomOptionInterface', 'json', $context);
             }
             $object->setOptions($values_2);
         }
@@ -88,7 +88,7 @@ class CatalogDataProductInterfaceNormalizer implements DenormalizerInterface, No
         if (\array_key_exists('product_links', $data)) {
             $values_3 = array();
             foreach ($data['product_links'] as $value_3) {
-                $values_3[] = $this->denormalizer->denormalize($value_3, 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductLinkInterface', 'json', $context);
+                $values_3[] = $this->denormalizer->denormalize($value_3, 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductLinkInterface', 'json', $context);
             }
             $object->setProductLinks($values_3);
         }
@@ -101,7 +101,7 @@ class CatalogDataProductInterfaceNormalizer implements DenormalizerInterface, No
         if (\array_key_exists('tier_prices', $data)) {
             $values_4 = array();
             foreach ($data['tier_prices'] as $value_4) {
-                $values_4[] = $this->denormalizer->denormalize($value_4, 'Kiboko\\Magento\\v2_2\\Model\\CatalogDataProductTierPriceInterface', 'json', $context);
+                $values_4[] = $this->denormalizer->denormalize($value_4, 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductTierPriceInterface', 'json', $context);
             }
             $object->setTierPrices($values_4);
         }

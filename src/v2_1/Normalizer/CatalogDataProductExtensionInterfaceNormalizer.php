@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CatalogDataProductExtensionInterfaceNormalizer implements DenormalizerInte
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\CatalogDataProductExtensionInterface';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataProductExtensionInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\CatalogDataProductExtensionInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataProductExtensionInterface';
     }
     /**
      * @return mixed
@@ -36,21 +36,21 @@ class CatalogDataProductExtensionInterfaceNormalizer implements DenormalizerInte
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\CatalogDataProductExtensionInterface();
+        $object = new \Kiboko\Magento\V2_1\Model\CatalogDataProductExtensionInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('bundle_product_options', $data)) {
             $values = array();
             foreach ($data['bundle_product_options'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_1\\Model\\BundleDataOptionInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\BundleDataOptionInterface', 'json', $context);
             }
             $object->setBundleProductOptions($values);
         }
         if (\array_key_exists('category_links', $data)) {
             $values_1 = array();
             foreach ($data['category_links'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\v2_1\\Model\\CatalogDataCategoryLinkInterface', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataCategoryLinkInterface', 'json', $context);
             }
             $object->setCategoryLinks($values_1);
         }
@@ -64,33 +64,33 @@ class CatalogDataProductExtensionInterfaceNormalizer implements DenormalizerInte
         if (\array_key_exists('configurable_product_options', $data)) {
             $values_3 = array();
             foreach ($data['configurable_product_options'] as $value_3) {
-                $values_3[] = $this->denormalizer->denormalize($value_3, 'Kiboko\\Magento\\v2_1\\Model\\ConfigurableProductDataOptionInterface', 'json', $context);
+                $values_3[] = $this->denormalizer->denormalize($value_3, 'Kiboko\\Magento\\V2_1\\Model\\ConfigurableProductDataOptionInterface', 'json', $context);
             }
             $object->setConfigurableProductOptions($values_3);
         }
         if (\array_key_exists('downloadable_product_links', $data)) {
             $values_4 = array();
             foreach ($data['downloadable_product_links'] as $value_4) {
-                $values_4[] = $this->denormalizer->denormalize($value_4, 'Kiboko\\Magento\\v2_1\\Model\\DownloadableDataLinkInterface', 'json', $context);
+                $values_4[] = $this->denormalizer->denormalize($value_4, 'Kiboko\\Magento\\V2_1\\Model\\DownloadableDataLinkInterface', 'json', $context);
             }
             $object->setDownloadableProductLinks($values_4);
         }
         if (\array_key_exists('downloadable_product_samples', $data)) {
             $values_5 = array();
             foreach ($data['downloadable_product_samples'] as $value_5) {
-                $values_5[] = $this->denormalizer->denormalize($value_5, 'Kiboko\\Magento\\v2_1\\Model\\DownloadableDataSampleInterface', 'json', $context);
+                $values_5[] = $this->denormalizer->denormalize($value_5, 'Kiboko\\Magento\\V2_1\\Model\\DownloadableDataSampleInterface', 'json', $context);
             }
             $object->setDownloadableProductSamples($values_5);
         }
         if (\array_key_exists('giftcard_amounts', $data)) {
             $values_6 = array();
             foreach ($data['giftcard_amounts'] as $value_6) {
-                $values_6[] = $this->denormalizer->denormalize($value_6, 'Kiboko\\Magento\\v2_1\\Model\\GiftCardDataGiftcardAmountInterface', 'json', $context);
+                $values_6[] = $this->denormalizer->denormalize($value_6, 'Kiboko\\Magento\\V2_1\\Model\\GiftCardDataGiftcardAmountInterface', 'json', $context);
             }
             $object->setGiftcardAmounts($values_6);
         }
         if (\array_key_exists('stock_item', $data)) {
-            $object->setStockItem($this->denormalizer->denormalize($data['stock_item'], 'Kiboko\\Magento\\v2_1\\Model\\CatalogInventoryDataStockItemInterface', 'json', $context));
+            $object->setStockItem($this->denormalizer->denormalize($data['stock_item'], 'Kiboko\\Magento\\V2_1\\Model\\CatalogInventoryDataStockItemInterface', 'json', $context));
         }
         if (\array_key_exists('website_ids', $data)) {
             $values_7 = array();

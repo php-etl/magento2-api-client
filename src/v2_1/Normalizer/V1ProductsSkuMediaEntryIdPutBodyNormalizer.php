@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1ProductsSkuMediaEntryIdPutBodyNormalizer implements DenormalizerInterfac
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\V1ProductsSkuMediaEntryIdPutBody';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\V1ProductsSkuMediaEntryIdPutBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\V1ProductsSkuMediaEntryIdPutBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\V1ProductsSkuMediaEntryIdPutBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1ProductsSkuMediaEntryIdPutBodyNormalizer implements DenormalizerInterfac
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\V1ProductsSkuMediaEntryIdPutBody();
+        $object = new \Kiboko\Magento\V2_1\Model\V1ProductsSkuMediaEntryIdPutBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('entry', $data)) {
-            $object->setEntry($this->denormalizer->denormalize($data['entry'], 'Kiboko\\Magento\\v2_1\\Model\\CatalogDataProductAttributeMediaGalleryEntryInterface', 'json', $context));
+            $object->setEntry($this->denormalizer->denormalize($data['entry'], 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataProductAttributeMediaGalleryEntryInterface', 'json', $context));
         }
         return $object;
     }

@@ -1,10 +1,10 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Endpoint;
+namespace Kiboko\Magento\V2_2\Endpoint;
 
-class CustomerGroupRepositoryV1GetListGet extends \Kiboko\Magento\v2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_2\Runtime\Client\Endpoint
+class CustomerGroupRepositoryV1GetListGet extends \Kiboko\Magento\V2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_2\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_2\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_2\Runtime\Client\EndpointTrait;
     /**
      * Retrieve customer groups. The list of groups can be filtered to exclude the NOT_LOGGED_IN group using the first parameter and/or it can be filtered by tax class. This call returns an array of objects, but detailed information about each object’s attributes might not be included. See http://devdocs.magento.com/codelinks/attributes.html#GroupRepositoryInterface to determine which call to use to get detailed information about all attributes for an object.
      *
@@ -56,24 +56,24 @@ class CustomerGroupRepositoryV1GetListGet extends \Kiboko\Magento\v2_2\Runtime\C
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_2\Exception\CustomerGroupRepositoryV1GetListGetUnauthorizedException
-     * @throws \Kiboko\Magento\v2_2\Exception\CustomerGroupRepositoryV1GetListGetInternalServerErrorException
+     * @throws \Kiboko\Magento\V2_2\Exception\CustomerGroupRepositoryV1GetListGetUnauthorizedException
+     * @throws \Kiboko\Magento\V2_2\Exception\CustomerGroupRepositoryV1GetListGetInternalServerErrorException
      *
-     * @return null|\Kiboko\Magento\v2_2\Model\CustomerDataGroupSearchResultsInterface|\Kiboko\Magento\v2_2\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_2\Model\CustomerDataGroupSearchResultsInterface|\Kiboko\Magento\V2_2\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\CustomerDataGroupSearchResultsInterface', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_2\\Model\\CustomerDataGroupSearchResultsInterface', 'json');
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_2\Exception\CustomerGroupRepositoryV1GetListGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_2\Exception\CustomerGroupRepositoryV1GetListGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_2\\Model\\ErrorResponse', 'json'));
         }
         if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_2\Exception\CustomerGroupRepositoryV1GetListGetInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_2\Exception\CustomerGroupRepositoryV1GetListGetInternalServerErrorException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_2\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_2\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

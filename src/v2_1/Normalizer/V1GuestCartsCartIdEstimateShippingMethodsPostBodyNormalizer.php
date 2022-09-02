@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1GuestCartsCartIdEstimateShippingMethodsPostBodyNormalizer implements Den
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\V1GuestCartsCartIdEstimateShippingMethodsPostBody';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\V1GuestCartsCartIdEstimateShippingMethodsPostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\V1GuestCartsCartIdEstimateShippingMethodsPostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\V1GuestCartsCartIdEstimateShippingMethodsPostBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1GuestCartsCartIdEstimateShippingMethodsPostBodyNormalizer implements Den
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\V1GuestCartsCartIdEstimateShippingMethodsPostBody();
+        $object = new \Kiboko\Magento\V2_1\Model\V1GuestCartsCartIdEstimateShippingMethodsPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('address', $data)) {
-            $object->setAddress($this->denormalizer->denormalize($data['address'], 'Kiboko\\Magento\\v2_1\\Model\\QuoteDataAddressInterface', 'json', $context));
+            $object->setAddress($this->denormalizer->denormalize($data['address'], 'Kiboko\\Magento\\V2_1\\Model\\QuoteDataAddressInterface', 'json', $context));
         }
         return $object;
     }

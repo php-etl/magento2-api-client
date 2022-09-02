@@ -1,6 +1,6 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Runtime\Client;
+namespace Kiboko\Magento\V2_2\Runtime\Client;
 
 use Http\Message\MultipartStream\MultipartStreamBuilder;
 use Symfony\Component\OptionsResolver\OptionsResolver;

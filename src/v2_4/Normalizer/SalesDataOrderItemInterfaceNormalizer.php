@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\SalesDataOrderItemInterface';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\SalesDataOrderItemInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\SalesDataOrderItemInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\SalesDataOrderItemInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\SalesDataOrderItemInterface();
+        $object = new \Kiboko\Magento\V2_4\Model\SalesDataOrderItemInterface();
         if (\array_key_exists('amount_refunded', $data) && \is_int($data['amount_refunded'])) {
             $data['amount_refunded'] = (float) $data['amount_refunded'];
         }
@@ -356,7 +356,7 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
             $object->setExtOrderItemId($data['ext_order_item_id']);
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_4\\Model\\SalesDataOrderItemExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_4\\Model\\SalesDataOrderItemExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('free_shipping', $data)) {
             $object->setFreeShipping($data['free_shipping']);
@@ -428,7 +428,7 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
             $object->setOriginalPrice($data['original_price']);
         }
         if (\array_key_exists('parent_item', $data)) {
-            $object->setParentItem($this->denormalizer->denormalize($data['parent_item'], 'Kiboko\\Magento\\v2_4\\Model\\SalesDataOrderItemInterface', 'json', $context));
+            $object->setParentItem($this->denormalizer->denormalize($data['parent_item'], 'Kiboko\\Magento\\V2_4\\Model\\SalesDataOrderItemInterface', 'json', $context));
         }
         if (\array_key_exists('parent_item_id', $data)) {
             $object->setParentItemId($data['parent_item_id']);
@@ -443,7 +443,7 @@ class SalesDataOrderItemInterfaceNormalizer implements DenormalizerInterface, No
             $object->setProductId($data['product_id']);
         }
         if (\array_key_exists('product_option', $data)) {
-            $object->setProductOption($this->denormalizer->denormalize($data['product_option'], 'Kiboko\\Magento\\v2_4\\Model\\CatalogDataProductOptionInterface', 'json', $context));
+            $object->setProductOption($this->denormalizer->denormalize($data['product_option'], 'Kiboko\\Magento\\V2_4\\Model\\CatalogDataProductOptionInterface', 'json', $context));
         }
         if (\array_key_exists('product_type', $data)) {
             $object->setProductType($data['product_type']);

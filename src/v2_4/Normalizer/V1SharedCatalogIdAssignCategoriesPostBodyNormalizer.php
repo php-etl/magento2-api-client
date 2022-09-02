@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1SharedCatalogIdAssignCategoriesPostBodyNormalizer implements Denormalize
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\V1SharedCatalogIdAssignCategoriesPostBody';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\V1SharedCatalogIdAssignCategoriesPostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\V1SharedCatalogIdAssignCategoriesPostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\V1SharedCatalogIdAssignCategoriesPostBody';
     }
     /**
      * @return mixed
@@ -36,14 +36,14 @@ class V1SharedCatalogIdAssignCategoriesPostBodyNormalizer implements Denormalize
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\V1SharedCatalogIdAssignCategoriesPostBody();
+        $object = new \Kiboko\Magento\V2_4\Model\V1SharedCatalogIdAssignCategoriesPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('categories', $data)) {
             $values = array();
             foreach ($data['categories'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_4\\Model\\CatalogDataCategoryInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\CatalogDataCategoryInterface', 'json', $context);
             }
             $object->setCategories($values);
         }

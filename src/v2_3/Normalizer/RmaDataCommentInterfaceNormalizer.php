@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class RmaDataCommentInterfaceNormalizer implements DenormalizerInterface, Normal
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\RmaDataCommentInterface';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\RmaDataCommentInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\RmaDataCommentInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\RmaDataCommentInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class RmaDataCommentInterfaceNormalizer implements DenormalizerInterface, Normal
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\RmaDataCommentInterface();
+        $object = new \Kiboko\Magento\V2_3\Model\RmaDataCommentInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -52,7 +52,7 @@ class RmaDataCommentInterfaceNormalizer implements DenormalizerInterface, Normal
         if (\array_key_exists('custom_attributes', $data)) {
             $values = array();
             foreach ($data['custom_attributes'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_3\\Model\\FrameworkAttributeInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setCustomAttributes($values);
         }

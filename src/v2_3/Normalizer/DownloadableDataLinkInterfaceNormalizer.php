@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class DownloadableDataLinkInterfaceNormalizer implements DenormalizerInterface, 
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\DownloadableDataLinkInterface';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\DownloadableDataLinkInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\DownloadableDataLinkInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\DownloadableDataLinkInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class DownloadableDataLinkInterfaceNormalizer implements DenormalizerInterface, 
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\DownloadableDataLinkInterface();
+        $object = new \Kiboko\Magento\V2_3\Model\DownloadableDataLinkInterface();
         if (\array_key_exists('price', $data) && \is_int($data['price'])) {
             $data['price'] = (float) $data['price'];
         }
@@ -56,7 +56,7 @@ class DownloadableDataLinkInterfaceNormalizer implements DenormalizerInterface, 
             $object->setLinkFile($data['link_file']);
         }
         if (\array_key_exists('link_file_content', $data)) {
-            $object->setLinkFileContent($this->denormalizer->denormalize($data['link_file_content'], 'Kiboko\\Magento\\v2_3\\Model\\DownloadableDataFileContentInterface', 'json', $context));
+            $object->setLinkFileContent($this->denormalizer->denormalize($data['link_file_content'], 'Kiboko\\Magento\\V2_3\\Model\\DownloadableDataFileContentInterface', 'json', $context));
         }
         if (\array_key_exists('link_type', $data)) {
             $object->setLinkType($data['link_type']);
@@ -74,7 +74,7 @@ class DownloadableDataLinkInterfaceNormalizer implements DenormalizerInterface, 
             $object->setSampleFile($data['sample_file']);
         }
         if (\array_key_exists('sample_file_content', $data)) {
-            $object->setSampleFileContent($this->denormalizer->denormalize($data['sample_file_content'], 'Kiboko\\Magento\\v2_3\\Model\\DownloadableDataFileContentInterface', 'json', $context));
+            $object->setSampleFileContent($this->denormalizer->denormalize($data['sample_file_content'], 'Kiboko\\Magento\\V2_3\\Model\\DownloadableDataFileContentInterface', 'json', $context));
         }
         if (\array_key_exists('sample_type', $data)) {
             $object->setSampleType($data['sample_type']);

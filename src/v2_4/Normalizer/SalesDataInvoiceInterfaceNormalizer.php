@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class SalesDataInvoiceInterfaceNormalizer implements DenormalizerInterface, Norm
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\SalesDataInvoiceInterface';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\SalesDataInvoiceInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\SalesDataInvoiceInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\SalesDataInvoiceInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class SalesDataInvoiceInterfaceNormalizer implements DenormalizerInterface, Norm
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\SalesDataInvoiceInterface();
+        $object = new \Kiboko\Magento\V2_4\Model\SalesDataInvoiceInterface();
         if (\array_key_exists('base_discount_amount', $data) && \is_int($data['base_discount_amount'])) {
             $data['base_discount_amount'] = (float) $data['base_discount_amount'];
         }
@@ -169,7 +169,7 @@ class SalesDataInvoiceInterfaceNormalizer implements DenormalizerInterface, Norm
         if (\array_key_exists('comments', $data)) {
             $values = array();
             foreach ($data['comments'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_4\\Model\\SalesDataInvoiceCommentInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\SalesDataInvoiceCommentInterface', 'json', $context);
             }
             $object->setComments($values);
         }
@@ -192,7 +192,7 @@ class SalesDataInvoiceInterfaceNormalizer implements DenormalizerInterface, Norm
             $object->setEntityId($data['entity_id']);
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_4\\Model\\SalesDataInvoiceExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_4\\Model\\SalesDataInvoiceExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('global_currency_code', $data)) {
             $object->setGlobalCurrencyCode($data['global_currency_code']);
@@ -209,7 +209,7 @@ class SalesDataInvoiceInterfaceNormalizer implements DenormalizerInterface, Norm
         if (\array_key_exists('items', $data)) {
             $values_1 = array();
             foreach ($data['items'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\v2_4\\Model\\SalesDataInvoiceItemInterface', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_4\\Model\\SalesDataInvoiceItemInterface', 'json', $context);
             }
             $object->setItems($values_1);
         }

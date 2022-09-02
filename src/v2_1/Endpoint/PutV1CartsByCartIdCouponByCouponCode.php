@@ -1,10 +1,10 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Endpoint;
+namespace Kiboko\Magento\V2_1\Endpoint;
 
-class PutV1CartsByCartIdCouponByCouponCode extends \Kiboko\Magento\v2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_1\Runtime\Client\Endpoint
+class PutV1CartsByCartIdCouponByCouponCode extends \Kiboko\Magento\V2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_1\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_1\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_1\Runtime\Client\EndpointTrait;
     protected $cartId;
     protected $couponCode;
     /**
@@ -37,10 +37,10 @@ class PutV1CartsByCartIdCouponByCouponCode extends \Kiboko\Magento\v2_1\Runtime\
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_1\Exception\PutV1CartsByCartIdCouponByCouponCodeBadRequestException
-     * @throws \Kiboko\Magento\v2_1\Exception\PutV1CartsByCartIdCouponByCouponCodeUnauthorizedException
+     * @throws \Kiboko\Magento\V2_1\Exception\PutV1CartsByCartIdCouponByCouponCodeBadRequestException
+     * @throws \Kiboko\Magento\V2_1\Exception\PutV1CartsByCartIdCouponByCouponCodeUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_1\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -48,13 +48,13 @@ class PutV1CartsByCartIdCouponByCouponCode extends \Kiboko\Magento\v2_1\Runtime\
             return json_decode($body);
         }
         if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_1\Exception\PutV1CartsByCartIdCouponByCouponCodeBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_1\Exception\PutV1CartsByCartIdCouponByCouponCodeBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\ErrorResponse', 'json'));
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_1\Exception\PutV1CartsByCartIdCouponByCouponCodeUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_1\Exception\PutV1CartsByCartIdCouponByCouponCodeUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class QuoteDataTotalsItemExtensionInterfaceNormalizer implements DenormalizerInt
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\QuoteDataTotalsItemExtensionInterface';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataTotalsItemExtensionInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\QuoteDataTotalsItemExtensionInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataTotalsItemExtensionInterface';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class QuoteDataTotalsItemExtensionInterfaceNormalizer implements DenormalizerInt
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\QuoteDataTotalsItemExtensionInterface();
+        $object = new \Kiboko\Magento\V2_2\Model\QuoteDataTotalsItemExtensionInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('negotiable_quote_item_totals', $data)) {
-            $object->setNegotiableQuoteItemTotals($this->denormalizer->denormalize($data['negotiable_quote_item_totals'], 'Kiboko\\Magento\\v2_2\\Model\\NegotiableQuoteDataNegotiableQuoteItemTotalsInterface', 'json', $context));
+            $object->setNegotiableQuoteItemTotals($this->denormalizer->denormalize($data['negotiable_quote_item_totals'], 'Kiboko\\Magento\\V2_2\\Model\\NegotiableQuoteDataNegotiableQuoteItemTotalsInterface', 'json', $context));
         }
         return $object;
     }

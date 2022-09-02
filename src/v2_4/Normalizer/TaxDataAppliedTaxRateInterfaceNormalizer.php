@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class TaxDataAppliedTaxRateInterfaceNormalizer implements DenormalizerInterface,
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\TaxDataAppliedTaxRateInterface';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\TaxDataAppliedTaxRateInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\TaxDataAppliedTaxRateInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\TaxDataAppliedTaxRateInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class TaxDataAppliedTaxRateInterfaceNormalizer implements DenormalizerInterface,
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\TaxDataAppliedTaxRateInterface();
+        $object = new \Kiboko\Magento\V2_4\Model\TaxDataAppliedTaxRateInterface();
         if (\array_key_exists('percent', $data) && \is_int($data['percent'])) {
             $data['percent'] = (float) $data['percent'];
         }

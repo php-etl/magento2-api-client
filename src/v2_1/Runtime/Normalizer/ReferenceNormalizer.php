@@ -1,6 +1,6 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Runtime\Normalizer;
+namespace Kiboko\Magento\V2_1\Runtime\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;

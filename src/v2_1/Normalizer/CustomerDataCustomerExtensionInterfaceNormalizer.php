@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CustomerDataCustomerExtensionInterfaceNormalizer implements DenormalizerIn
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\CustomerDataCustomerExtensionInterface';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\CustomerDataCustomerExtensionInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\CustomerDataCustomerExtensionInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\CustomerDataCustomerExtensionInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class CustomerDataCustomerExtensionInterfaceNormalizer implements DenormalizerIn
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\CustomerDataCustomerExtensionInterface();
+        $object = new \Kiboko\Magento\V2_1\Model\CustomerDataCustomerExtensionInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -44,7 +44,7 @@ class CustomerDataCustomerExtensionInterfaceNormalizer implements DenormalizerIn
             $object->setAmazonId($data['amazon_id']);
         }
         if (\array_key_exists('company_attributes', $data)) {
-            $object->setCompanyAttributes($this->denormalizer->denormalize($data['company_attributes'], 'Kiboko\\Magento\\v2_1\\Model\\CompanyDataCompanyCustomerInterface', 'json', $context));
+            $object->setCompanyAttributes($this->denormalizer->denormalize($data['company_attributes'], 'Kiboko\\Magento\\V2_1\\Model\\CompanyDataCompanyCustomerInterface', 'json', $context));
         }
         if (\array_key_exists('is_subscribed', $data)) {
             $object->setIsSubscribed($data['is_subscribed']);

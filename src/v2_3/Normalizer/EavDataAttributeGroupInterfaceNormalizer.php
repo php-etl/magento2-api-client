@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class EavDataAttributeGroupInterfaceNormalizer implements DenormalizerInterface,
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\EavDataAttributeGroupInterface';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\EavDataAttributeGroupInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\EavDataAttributeGroupInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\EavDataAttributeGroupInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class EavDataAttributeGroupInterfaceNormalizer implements DenormalizerInterface,
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\EavDataAttributeGroupInterface();
+        $object = new \Kiboko\Magento\V2_3\Model\EavDataAttributeGroupInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -50,7 +50,7 @@ class EavDataAttributeGroupInterfaceNormalizer implements DenormalizerInterface,
             $object->setAttributeSetId($data['attribute_set_id']);
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_3\\Model\\EavDataAttributeGroupExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_3\\Model\\EavDataAttributeGroupExtensionInterface', 'json', $context));
         }
         return $object;
     }

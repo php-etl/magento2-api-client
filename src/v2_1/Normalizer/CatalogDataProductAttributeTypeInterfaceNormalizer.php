@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CatalogDataProductAttributeTypeInterfaceNormalizer implements Denormalizer
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\CatalogDataProductAttributeTypeInterface';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataProductAttributeTypeInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\CatalogDataProductAttributeTypeInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataProductAttributeTypeInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class CatalogDataProductAttributeTypeInterfaceNormalizer implements Denormalizer
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\CatalogDataProductAttributeTypeInterface();
+        $object = new \Kiboko\Magento\V2_1\Model\CatalogDataProductAttributeTypeInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }

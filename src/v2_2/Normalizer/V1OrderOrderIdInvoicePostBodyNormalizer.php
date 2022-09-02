@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1OrderOrderIdInvoicePostBodyNormalizer implements DenormalizerInterface, 
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\V1OrderOrderIdInvoicePostBody';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\V1OrderOrderIdInvoicePostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\V1OrderOrderIdInvoicePostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\V1OrderOrderIdInvoicePostBody';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class V1OrderOrderIdInvoicePostBodyNormalizer implements DenormalizerInterface, 
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\V1OrderOrderIdInvoicePostBody();
+        $object = new \Kiboko\Magento\V2_2\Model\V1OrderOrderIdInvoicePostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -44,18 +44,18 @@ class V1OrderOrderIdInvoicePostBodyNormalizer implements DenormalizerInterface, 
             $object->setAppendComment($data['appendComment']);
         }
         if (\array_key_exists('arguments', $data)) {
-            $object->setArguments($this->denormalizer->denormalize($data['arguments'], 'Kiboko\\Magento\\v2_2\\Model\\SalesDataInvoiceCreationArgumentsInterface', 'json', $context));
+            $object->setArguments($this->denormalizer->denormalize($data['arguments'], 'Kiboko\\Magento\\V2_2\\Model\\SalesDataInvoiceCreationArgumentsInterface', 'json', $context));
         }
         if (\array_key_exists('capture', $data)) {
             $object->setCapture($data['capture']);
         }
         if (\array_key_exists('comment', $data)) {
-            $object->setComment($this->denormalizer->denormalize($data['comment'], 'Kiboko\\Magento\\v2_2\\Model\\SalesDataInvoiceCommentCreationInterface', 'json', $context));
+            $object->setComment($this->denormalizer->denormalize($data['comment'], 'Kiboko\\Magento\\V2_2\\Model\\SalesDataInvoiceCommentCreationInterface', 'json', $context));
         }
         if (\array_key_exists('items', $data)) {
             $values = array();
             foreach ($data['items'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_2\\Model\\SalesDataInvoiceItemCreationInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\SalesDataInvoiceItemCreationInterface', 'json', $context);
             }
             $object->setItems($values);
         }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CatalogDataProductRenderPriceInfoExtensionInterfaceNormalizer implements D
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataProductRenderPriceInfoExtensionInterface';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\CatalogDataProductRenderPriceInfoExtensionInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataProductRenderPriceInfoExtensionInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\CatalogDataProductRenderPriceInfoExtensionInterface';
     }
     /**
      * @return mixed
@@ -36,15 +36,15 @@ class CatalogDataProductRenderPriceInfoExtensionInterfaceNormalizer implements D
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\CatalogDataProductRenderPriceInfoExtensionInterface();
+        $object = new \Kiboko\Magento\V2_3\Model\CatalogDataProductRenderPriceInfoExtensionInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('msrp', $data)) {
-            $object->setMsrp($this->denormalizer->denormalize($data['msrp'], 'Kiboko\\Magento\\v2_3\\Model\\MsrpDataProductRenderMsrpPriceInfoInterface', 'json', $context));
+            $object->setMsrp($this->denormalizer->denormalize($data['msrp'], 'Kiboko\\Magento\\V2_3\\Model\\MsrpDataProductRenderMsrpPriceInfoInterface', 'json', $context));
         }
         if (\array_key_exists('tax_adjustments', $data)) {
-            $object->setTaxAdjustments($this->denormalizer->denormalize($data['tax_adjustments'], 'Kiboko\\Magento\\v2_3\\Model\\CatalogDataProductRenderPriceInfoInterface', 'json', $context));
+            $object->setTaxAdjustments($this->denormalizer->denormalize($data['tax_adjustments'], 'Kiboko\\Magento\\V2_3\\Model\\CatalogDataProductRenderPriceInfoInterface', 'json', $context));
         }
         if (\array_key_exists('weee_adjustment', $data)) {
             $object->setWeeeAdjustment($data['weee_adjustment']);
@@ -52,7 +52,7 @@ class CatalogDataProductRenderPriceInfoExtensionInterfaceNormalizer implements D
         if (\array_key_exists('weee_attributes', $data)) {
             $values = array();
             foreach ($data['weee_attributes'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_3\\Model\\WeeeDataProductRenderWeeeAdjustmentAttributeInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\WeeeDataProductRenderWeeeAdjustmentAttributeInterface', 'json', $context);
             }
             $object->setWeeeAttributes($values);
         }

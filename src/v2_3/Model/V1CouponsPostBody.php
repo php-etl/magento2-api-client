@@ -1,6 +1,6 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Model;
+namespace Kiboko\Magento\V2_3\Model;
 
 class V1CouponsPostBody
 {

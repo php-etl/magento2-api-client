@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CatalogDataProductRenderPriceInfoInterfaceNormalizer implements Denormaliz
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\CatalogDataProductRenderPriceInfoInterface';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataProductRenderPriceInfoInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\CatalogDataProductRenderPriceInfoInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataProductRenderPriceInfoInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class CatalogDataProductRenderPriceInfoInterfaceNormalizer implements Denormaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\CatalogDataProductRenderPriceInfoInterface();
+        $object = new \Kiboko\Magento\V2_1\Model\CatalogDataProductRenderPriceInfoInterface();
         if (\array_key_exists('final_price', $data) && \is_int($data['final_price'])) {
             $data['final_price'] = (float) $data['final_price'];
         }
@@ -62,13 +62,13 @@ class CatalogDataProductRenderPriceInfoInterfaceNormalizer implements Denormaliz
             return $object;
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_1\\Model\\CatalogDataProductRenderPriceInfoExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataProductRenderPriceInfoExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('final_price', $data)) {
             $object->setFinalPrice($data['final_price']);
         }
         if (\array_key_exists('formatted_prices', $data)) {
-            $object->setFormattedPrices($this->denormalizer->denormalize($data['formatted_prices'], 'Kiboko\\Magento\\v2_1\\Model\\CatalogDataProductRenderFormattedPriceInfoInterface', 'json', $context));
+            $object->setFormattedPrices($this->denormalizer->denormalize($data['formatted_prices'], 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataProductRenderFormattedPriceInfoInterface', 'json', $context));
         }
         if (\array_key_exists('max_price', $data)) {
             $object->setMaxPrice($data['max_price']);

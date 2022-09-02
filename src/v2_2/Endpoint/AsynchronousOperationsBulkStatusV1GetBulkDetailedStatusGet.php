@@ -1,10 +1,10 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Endpoint;
+namespace Kiboko\Magento\V2_2\Endpoint;
 
-class AsynchronousOperationsBulkStatusV1GetBulkDetailedStatusGet extends \Kiboko\Magento\v2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_2\Runtime\Client\Endpoint
+class AsynchronousOperationsBulkStatusV1GetBulkDetailedStatusGet extends \Kiboko\Magento\V2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_2\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_2\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_2\Runtime\Client\EndpointTrait;
     protected $bulkUuid;
     /**
      * Get Bulk summary data with list of operations items full data.
@@ -34,24 +34,24 @@ class AsynchronousOperationsBulkStatusV1GetBulkDetailedStatusGet extends \Kiboko
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_2\Exception\AsynchronousOperationsBulkStatusV1GetBulkDetailedStatusGetBadRequestException
-     * @throws \Kiboko\Magento\v2_2\Exception\AsynchronousOperationsBulkStatusV1GetBulkDetailedStatusGetUnauthorizedException
+     * @throws \Kiboko\Magento\V2_2\Exception\AsynchronousOperationsBulkStatusV1GetBulkDetailedStatusGetBadRequestException
+     * @throws \Kiboko\Magento\V2_2\Exception\AsynchronousOperationsBulkStatusV1GetBulkDetailedStatusGetUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_2\Model\AsynchronousOperationsDataDetailedBulkOperationsStatusInterface|\Kiboko\Magento\v2_2\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_2\Model\AsynchronousOperationsDataDetailedBulkOperationsStatusInterface|\Kiboko\Magento\V2_2\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\AsynchronousOperationsDataDetailedBulkOperationsStatusInterface', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_2\\Model\\AsynchronousOperationsDataDetailedBulkOperationsStatusInterface', 'json');
         }
         if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_2\Exception\AsynchronousOperationsBulkStatusV1GetBulkDetailedStatusGetBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_2\Exception\AsynchronousOperationsBulkStatusV1GetBulkDetailedStatusGetBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_2\\Model\\ErrorResponse', 'json'));
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_2\Exception\AsynchronousOperationsBulkStatusV1GetBulkDetailedStatusGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_2\Exception\AsynchronousOperationsBulkStatusV1GetBulkDetailedStatusGetUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_2\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_2\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class DirectoryDataCountryInformationInterfaceNormalizer implements Denormalizer
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\DirectoryDataCountryInformationInterface';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\DirectoryDataCountryInformationInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\DirectoryDataCountryInformationInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\DirectoryDataCountryInformationInterface';
     }
     /**
      * @return mixed
@@ -36,14 +36,14 @@ class DirectoryDataCountryInformationInterfaceNormalizer implements Denormalizer
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\DirectoryDataCountryInformationInterface();
+        $object = new \Kiboko\Magento\V2_3\Model\DirectoryDataCountryInformationInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('available_regions', $data)) {
             $values = array();
             foreach ($data['available_regions'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_3\\Model\\DirectoryDataRegionInformationInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\DirectoryDataRegionInformationInterface', 'json', $context);
             }
             $object->setAvailableRegions($values);
         }

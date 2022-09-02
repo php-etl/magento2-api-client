@@ -1,18 +1,18 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Endpoint;
+namespace Kiboko\Magento\V2_4\Endpoint;
 
-class QuoteGuestPaymentMethodManagementV1SetPut extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
+class QuoteGuestPaymentMethodManagementV1SetPut extends \Kiboko\Magento\V2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_4\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_4\Runtime\Client\EndpointTrait;
     protected $cartId;
     /**
      * Add a specified payment method to a specified shopping cart.
      *
      * @param string $cartId The cart ID.
-     * @param null|\Kiboko\Magento\v2_4\Model\V1GuestCartsCartIdSelectedPaymentMethodPutBody $requestBody
+     * @param null|\Kiboko\Magento\V2_4\Model\V1GuestCartsCartIdSelectedPaymentMethodPutBody $requestBody
      */
-    public function __construct(string $cartId, ?\Kiboko\Magento\v2_4\Model\V1GuestCartsCartIdSelectedPaymentMethodPutBody $requestBody = null)
+    public function __construct(string $cartId, ?\Kiboko\Magento\V2_4\Model\V1GuestCartsCartIdSelectedPaymentMethodPutBody $requestBody = null)
     {
         $this->cartId = $cartId;
         $this->body = $requestBody;
@@ -27,10 +27,10 @@ class QuoteGuestPaymentMethodManagementV1SetPut extends \Kiboko\Magento\v2_4\Run
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1GuestCartsCartIdSelectedPaymentMethodPutBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_4\Model\V1GuestCartsCartIdSelectedPaymentMethodPutBody) {
             return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
         }
-        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1GuestCartsCartIdSelectedPaymentMethodPutBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_4\Model\V1GuestCartsCartIdSelectedPaymentMethodPutBody) {
             return array(array('Content-Type' => array('application/xml')), $this->body);
         }
         return array(array(), null);
@@ -42,9 +42,9 @@ class QuoteGuestPaymentMethodManagementV1SetPut extends \Kiboko\Magento\v2_4\Run
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_4\Exception\QuoteGuestPaymentMethodManagementV1SetPutBadRequestException
+     * @throws \Kiboko\Magento\V2_4\Exception\QuoteGuestPaymentMethodManagementV1SetPutBadRequestException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_4\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -52,10 +52,10 @@ class QuoteGuestPaymentMethodManagementV1SetPut extends \Kiboko\Magento\v2_4\Run
             return json_decode($body);
         }
         if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_4\Exception\QuoteGuestPaymentMethodManagementV1SetPutBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_4\Exception\QuoteGuestPaymentMethodManagementV1SetPutBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

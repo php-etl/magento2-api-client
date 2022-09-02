@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1CompanyRolePostBodyNormalizer implements DenormalizerInterface, Normaliz
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\V1CompanyRolePostBody';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\V1CompanyRolePostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\V1CompanyRolePostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\V1CompanyRolePostBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1CompanyRolePostBodyNormalizer implements DenormalizerInterface, Normaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\V1CompanyRolePostBody();
+        $object = new \Kiboko\Magento\V2_3\Model\V1CompanyRolePostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('role', $data)) {
-            $object->setRole($this->denormalizer->denormalize($data['role'], 'Kiboko\\Magento\\v2_3\\Model\\CompanyDataRoleInterface', 'json', $context));
+            $object->setRole($this->denormalizer->denormalize($data['role'], 'Kiboko\\Magento\\V2_3\\Model\\CompanyDataRoleInterface', 'json', $context));
         }
         return $object;
     }

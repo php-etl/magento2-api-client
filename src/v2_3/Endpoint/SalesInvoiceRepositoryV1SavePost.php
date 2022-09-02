@@ -1,16 +1,16 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Endpoint;
+namespace Kiboko\Magento\V2_3\Endpoint;
 
-class SalesInvoiceRepositoryV1SavePost extends \Kiboko\Magento\v2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_3\Runtime\Client\Endpoint
+class SalesInvoiceRepositoryV1SavePost extends \Kiboko\Magento\V2_3\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_3\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_3\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_3\Runtime\Client\EndpointTrait;
     /**
      * Performs persist operations for a specified invoice.
      *
-     * @param null|\Kiboko\Magento\v2_3\Model\V1InvoicesPostBody $requestBody
+     * @param null|\Kiboko\Magento\V2_3\Model\V1InvoicesPostBody $requestBody
      */
-    public function __construct(?\Kiboko\Magento\v2_3\Model\V1InvoicesPostBody $requestBody = null)
+    public function __construct(?\Kiboko\Magento\V2_3\Model\V1InvoicesPostBody $requestBody = null)
     {
         $this->body = $requestBody;
     }
@@ -24,10 +24,10 @@ class SalesInvoiceRepositoryV1SavePost extends \Kiboko\Magento\v2_3\Runtime\Clie
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \Kiboko\Magento\v2_3\Model\V1InvoicesPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_3\Model\V1InvoicesPostBody) {
             return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
         }
-        if ($this->body instanceof \Kiboko\Magento\v2_3\Model\V1InvoicesPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_3\Model\V1InvoicesPostBody) {
             return array(array('Content-Type' => array('application/xml')), $this->body);
         }
         return array(array(), null);
@@ -39,20 +39,20 @@ class SalesInvoiceRepositoryV1SavePost extends \Kiboko\Magento\v2_3\Runtime\Clie
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_3\Exception\SalesInvoiceRepositoryV1SavePostUnauthorizedException
+     * @throws \Kiboko\Magento\V2_3\Exception\SalesInvoiceRepositoryV1SavePostUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_3\Model\SalesDataInvoiceInterface|\Kiboko\Magento\v2_3\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_3\Model\SalesDataInvoiceInterface|\Kiboko\Magento\V2_3\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\SalesDataInvoiceInterface', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_3\\Model\\SalesDataInvoiceInterface', 'json');
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_3\Exception\SalesInvoiceRepositoryV1SavePostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_3\Exception\SalesInvoiceRepositoryV1SavePostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_3\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_3\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_3\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

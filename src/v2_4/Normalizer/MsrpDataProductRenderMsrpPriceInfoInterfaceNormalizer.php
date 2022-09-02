@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class MsrpDataProductRenderMsrpPriceInfoInterfaceNormalizer implements Denormali
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\MsrpDataProductRenderMsrpPriceInfoInterface';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\MsrpDataProductRenderMsrpPriceInfoInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\MsrpDataProductRenderMsrpPriceInfoInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\MsrpDataProductRenderMsrpPriceInfoInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class MsrpDataProductRenderMsrpPriceInfoInterfaceNormalizer implements Denormali
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\MsrpDataProductRenderMsrpPriceInfoInterface();
+        $object = new \Kiboko\Magento\V2_4\Model\MsrpDataProductRenderMsrpPriceInfoInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }

@@ -1,18 +1,18 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Endpoint;
+namespace Kiboko\Magento\V2_4\Endpoint;
 
-class GiftMessageItemRepositoryV1SavePost extends \Kiboko\Magento\v2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_4\Runtime\Client\Endpoint
+class GiftMessageItemRepositoryV1SavePost extends \Kiboko\Magento\V2_4\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_4\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_4\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_4\Runtime\Client\EndpointTrait;
     protected $itemId;
     /**
      * Set the gift message for a specified item in a specified shopping cart.
      *
      * @param int $itemId The item ID.
-     * @param null|\Kiboko\Magento\v2_4\Model\V1CartsMineGiftMessageItemIdPostBody $requestBody
+     * @param null|\Kiboko\Magento\V2_4\Model\V1CartsMineGiftMessageItemIdPostBody $requestBody
      */
-    public function __construct(int $itemId, ?\Kiboko\Magento\v2_4\Model\V1CartsMineGiftMessageItemIdPostBody $requestBody = null)
+    public function __construct(int $itemId, ?\Kiboko\Magento\V2_4\Model\V1CartsMineGiftMessageItemIdPostBody $requestBody = null)
     {
         $this->itemId = $itemId;
         $this->body = $requestBody;
@@ -27,10 +27,10 @@ class GiftMessageItemRepositoryV1SavePost extends \Kiboko\Magento\v2_4\Runtime\C
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1CartsMineGiftMessageItemIdPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_4\Model\V1CartsMineGiftMessageItemIdPostBody) {
             return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
         }
-        if ($this->body instanceof \Kiboko\Magento\v2_4\Model\V1CartsMineGiftMessageItemIdPostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_4\Model\V1CartsMineGiftMessageItemIdPostBody) {
             return array(array('Content-Type' => array('application/xml')), $this->body);
         }
         return array(array(), null);
@@ -42,10 +42,10 @@ class GiftMessageItemRepositoryV1SavePost extends \Kiboko\Magento\v2_4\Runtime\C
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_4\Exception\GiftMessageItemRepositoryV1SavePostBadRequestException
-     * @throws \Kiboko\Magento\v2_4\Exception\GiftMessageItemRepositoryV1SavePostUnauthorizedException
+     * @throws \Kiboko\Magento\V2_4\Exception\GiftMessageItemRepositoryV1SavePostBadRequestException
+     * @throws \Kiboko\Magento\V2_4\Exception\GiftMessageItemRepositoryV1SavePostUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_4\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_4\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -53,13 +53,13 @@ class GiftMessageItemRepositoryV1SavePost extends \Kiboko\Magento\v2_4\Runtime\C
             return json_decode($body);
         }
         if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_4\Exception\GiftMessageItemRepositoryV1SavePostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_4\Exception\GiftMessageItemRepositoryV1SavePostBadRequestException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json'));
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_4\Exception\GiftMessageItemRepositoryV1SavePostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_4\Exception\GiftMessageItemRepositoryV1SavePostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_4\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_4\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

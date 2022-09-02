@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CatalogDataCategoryAttributeInterfaceNormalizer implements DenormalizerInt
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\CatalogDataCategoryAttributeInterface';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataCategoryAttributeInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\CatalogDataCategoryAttributeInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataCategoryAttributeInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class CatalogDataCategoryAttributeInterfaceNormalizer implements DenormalizerInt
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\CatalogDataCategoryAttributeInterface();
+        $object = new \Kiboko\Magento\V2_1\Model\CatalogDataCategoryAttributeInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -62,7 +62,7 @@ class CatalogDataCategoryAttributeInterfaceNormalizer implements DenormalizerInt
         if (\array_key_exists('custom_attributes', $data)) {
             $values_1 = array();
             foreach ($data['custom_attributes'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\v2_1\\Model\\FrameworkAttributeInterface', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_1\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setCustomAttributes($values_1);
         }
@@ -87,7 +87,7 @@ class CatalogDataCategoryAttributeInterfaceNormalizer implements DenormalizerInt
         if (\array_key_exists('frontend_labels', $data)) {
             $values_2 = array();
             foreach ($data['frontend_labels'] as $value_2) {
-                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\v2_1\\Model\\EavDataAttributeFrontendLabelInterface', 'json', $context);
+                $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\V2_1\\Model\\EavDataAttributeFrontendLabelInterface', 'json', $context);
             }
             $object->setFrontendLabels($values_2);
         }
@@ -145,7 +145,7 @@ class CatalogDataCategoryAttributeInterfaceNormalizer implements DenormalizerInt
         if (\array_key_exists('options', $data)) {
             $values_3 = array();
             foreach ($data['options'] as $value_3) {
-                $values_3[] = $this->denormalizer->denormalize($value_3, 'Kiboko\\Magento\\v2_1\\Model\\EavDataAttributeOptionInterface', 'json', $context);
+                $values_3[] = $this->denormalizer->denormalize($value_3, 'Kiboko\\Magento\\V2_1\\Model\\EavDataAttributeOptionInterface', 'json', $context);
             }
             $object->setOptions($values_3);
         }
@@ -167,7 +167,7 @@ class CatalogDataCategoryAttributeInterfaceNormalizer implements DenormalizerInt
         if (\array_key_exists('validation_rules', $data)) {
             $values_4 = array();
             foreach ($data['validation_rules'] as $value_4) {
-                $values_4[] = $this->denormalizer->denormalize($value_4, 'Kiboko\\Magento\\v2_1\\Model\\EavDataAttributeValidationRuleInterface', 'json', $context);
+                $values_4[] = $this->denormalizer->denormalize($value_4, 'Kiboko\\Magento\\V2_1\\Model\\EavDataAttributeValidationRuleInterface', 'json', $context);
             }
             $object->setValidationRules($values_4);
         }

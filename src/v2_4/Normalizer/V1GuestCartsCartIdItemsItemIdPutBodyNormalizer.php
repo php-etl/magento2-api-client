@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1GuestCartsCartIdItemsItemIdPutBodyNormalizer implements DenormalizerInte
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\V1GuestCartsCartIdItemsItemIdPutBody';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\V1GuestCartsCartIdItemsItemIdPutBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\V1GuestCartsCartIdItemsItemIdPutBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\V1GuestCartsCartIdItemsItemIdPutBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1GuestCartsCartIdItemsItemIdPutBodyNormalizer implements DenormalizerInte
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\V1GuestCartsCartIdItemsItemIdPutBody();
+        $object = new \Kiboko\Magento\V2_4\Model\V1GuestCartsCartIdItemsItemIdPutBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('cartItem', $data)) {
-            $object->setCartItem($this->denormalizer->denormalize($data['cartItem'], 'Kiboko\\Magento\\v2_4\\Model\\QuoteDataCartItemInterface', 'json', $context));
+            $object->setCartItem($this->denormalizer->denormalize($data['cartItem'], 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataCartItemInterface', 'json', $context));
         }
         return $object;
     }

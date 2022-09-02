@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1CartsMineSetPaymentInformationPostBodyNormalizer implements Denormalizer
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\V1CartsMineSetPaymentInformationPostBody';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\V1CartsMineSetPaymentInformationPostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\V1CartsMineSetPaymentInformationPostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\V1CartsMineSetPaymentInformationPostBody';
     }
     /**
      * @return mixed
@@ -36,15 +36,15 @@ class V1CartsMineSetPaymentInformationPostBodyNormalizer implements Denormalizer
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\V1CartsMineSetPaymentInformationPostBody();
+        $object = new \Kiboko\Magento\V2_2\Model\V1CartsMineSetPaymentInformationPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('billingAddress', $data)) {
-            $object->setBillingAddress($this->denormalizer->denormalize($data['billingAddress'], 'Kiboko\\Magento\\v2_2\\Model\\QuoteDataAddressInterface', 'json', $context));
+            $object->setBillingAddress($this->denormalizer->denormalize($data['billingAddress'], 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataAddressInterface', 'json', $context));
         }
         if (\array_key_exists('paymentMethod', $data)) {
-            $object->setPaymentMethod($this->denormalizer->denormalize($data['paymentMethod'], 'Kiboko\\Magento\\v2_2\\Model\\QuoteDataPaymentInterface', 'json', $context));
+            $object->setPaymentMethod($this->denormalizer->denormalize($data['paymentMethod'], 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataPaymentInterface', 'json', $context));
         }
         return $object;
     }

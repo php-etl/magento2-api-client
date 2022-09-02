@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CustomerDataRegionInterfaceNormalizer implements DenormalizerInterface, No
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\CustomerDataRegionInterface';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\CustomerDataRegionInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\CustomerDataRegionInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\CustomerDataRegionInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class CustomerDataRegionInterfaceNormalizer implements DenormalizerInterface, No
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\CustomerDataRegionInterface();
+        $object = new \Kiboko\Magento\V2_1\Model\CustomerDataRegionInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -44,10 +44,10 @@ class CustomerDataRegionInterfaceNormalizer implements DenormalizerInterface, No
             $object->setExtensionAttributes($data['extension_attributes']);
         }
         if (\array_key_exists('region', $data)) {
-            $object->setRegion($data['region']);
+            $object->setRegion($data['region'] ?? '');
         }
         if (\array_key_exists('region_code', $data)) {
-            $object->setRegionCode($data['region_code']);
+            $object->setRegionCode($data['region_code'] ?? '');
         }
         if (\array_key_exists('region_id', $data)) {
             $object->setRegionId($data['region_id']);

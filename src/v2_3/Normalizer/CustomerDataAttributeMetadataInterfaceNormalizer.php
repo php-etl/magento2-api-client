@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CustomerDataAttributeMetadataInterfaceNormalizer implements DenormalizerIn
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\CustomerDataAttributeMetadataInterface';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\CustomerDataAttributeMetadataInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\CustomerDataAttributeMetadataInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\CustomerDataAttributeMetadataInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class CustomerDataAttributeMetadataInterfaceNormalizer implements DenormalizerIn
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\CustomerDataAttributeMetadataInterface();
+        $object = new \Kiboko\Magento\V2_3\Model\CustomerDataAttributeMetadataInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -82,7 +82,7 @@ class CustomerDataAttributeMetadataInterfaceNormalizer implements DenormalizerIn
         if (\array_key_exists('options', $data)) {
             $values = array();
             foreach ($data['options'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_3\\Model\\CustomerDataOptionInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\CustomerDataOptionInterface', 'json', $context);
             }
             $object->setOptions($values);
         }
@@ -104,7 +104,7 @@ class CustomerDataAttributeMetadataInterfaceNormalizer implements DenormalizerIn
         if (\array_key_exists('validation_rules', $data)) {
             $values_1 = array();
             foreach ($data['validation_rules'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\v2_3\\Model\\CustomerDataValidationRuleInterface', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_3\\Model\\CustomerDataValidationRuleInterface', 'json', $context);
             }
             $object->setValidationRules($values_1);
         }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1TaxRatesPostBodyNormalizer implements DenormalizerInterface, NormalizerI
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\V1TaxRatesPostBody';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\V1TaxRatesPostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\V1TaxRatesPostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\V1TaxRatesPostBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1TaxRatesPostBodyNormalizer implements DenormalizerInterface, NormalizerI
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\V1TaxRatesPostBody();
+        $object = new \Kiboko\Magento\V2_4\Model\V1TaxRatesPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('taxRate', $data)) {
-            $object->setTaxRate($this->denormalizer->denormalize($data['taxRate'], 'Kiboko\\Magento\\v2_4\\Model\\TaxDataTaxRateInterface', 'json', $context));
+            $object->setTaxRate($this->denormalizer->denormalize($data['taxRate'], 'Kiboko\\Magento\\V2_4\\Model\\TaxDataTaxRateInterface', 'json', $context));
         }
         return $object;
     }

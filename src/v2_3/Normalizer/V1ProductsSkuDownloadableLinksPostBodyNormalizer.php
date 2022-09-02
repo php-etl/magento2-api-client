@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1ProductsSkuDownloadableLinksPostBodyNormalizer implements DenormalizerIn
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\V1ProductsSkuDownloadableLinksPostBody';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\V1ProductsSkuDownloadableLinksPostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\V1ProductsSkuDownloadableLinksPostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\V1ProductsSkuDownloadableLinksPostBody';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class V1ProductsSkuDownloadableLinksPostBodyNormalizer implements DenormalizerIn
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\V1ProductsSkuDownloadableLinksPostBody();
+        $object = new \Kiboko\Magento\V2_3\Model\V1ProductsSkuDownloadableLinksPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -44,7 +44,7 @@ class V1ProductsSkuDownloadableLinksPostBodyNormalizer implements DenormalizerIn
             $object->setIsGlobalScopeContent($data['isGlobalScopeContent']);
         }
         if (\array_key_exists('link', $data)) {
-            $object->setLink($this->denormalizer->denormalize($data['link'], 'Kiboko\\Magento\\v2_3\\Model\\DownloadableDataLinkInterface', 'json', $context));
+            $object->setLink($this->denormalizer->denormalize($data['link'], 'Kiboko\\Magento\\V2_3\\Model\\DownloadableDataLinkInterface', 'json', $context));
         }
         return $object;
     }

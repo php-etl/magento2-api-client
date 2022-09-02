@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CatalogDataProductRenderExtensionInterfaceNormalizer implements Denormaliz
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\CatalogDataProductRenderExtensionInterface';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\CatalogDataProductRenderExtensionInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\CatalogDataProductRenderExtensionInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\CatalogDataProductRenderExtensionInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class CatalogDataProductRenderExtensionInterfaceNormalizer implements Denormaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\CatalogDataProductRenderExtensionInterface();
+        $object = new \Kiboko\Magento\V2_4\Model\CatalogDataProductRenderExtensionInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -44,7 +44,7 @@ class CatalogDataProductRenderExtensionInterfaceNormalizer implements Denormaliz
             $object->setReviewHtml($data['review_html']);
         }
         if (\array_key_exists('wishlist_button', $data)) {
-            $object->setWishlistButton($this->denormalizer->denormalize($data['wishlist_button'], 'Kiboko\\Magento\\v2_4\\Model\\CatalogDataProductRenderButtonInterface', 'json', $context));
+            $object->setWishlistButton($this->denormalizer->denormalize($data['wishlist_button'], 'Kiboko\\Magento\\V2_4\\Model\\CatalogDataProductRenderButtonInterface', 'json', $context));
         }
         return $object;
     }

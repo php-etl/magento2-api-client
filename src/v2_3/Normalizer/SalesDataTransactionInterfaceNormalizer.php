@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_3\Normalizer;
+namespace Kiboko\Magento\V2_3\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_3\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_3\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class SalesDataTransactionInterfaceNormalizer implements DenormalizerInterface, 
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataTransactionInterface';
+        return $type === 'Kiboko\\Magento\\V2_3\\Model\\SalesDataTransactionInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_3\\Model\\SalesDataTransactionInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_3\\Model\\SalesDataTransactionInterface';
     }
     /**
      * @return mixed
@@ -36,7 +36,7 @@ class SalesDataTransactionInterfaceNormalizer implements DenormalizerInterface, 
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_3\Model\SalesDataTransactionInterface();
+        $object = new \Kiboko\Magento\V2_3\Model\SalesDataTransactionInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -50,7 +50,7 @@ class SalesDataTransactionInterfaceNormalizer implements DenormalizerInterface, 
         if (\array_key_exists('child_transactions', $data)) {
             $values_1 = array();
             foreach ($data['child_transactions'] as $value_1) {
-                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\v2_3\\Model\\SalesDataTransactionInterface', 'json', $context);
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_3\\Model\\SalesDataTransactionInterface', 'json', $context);
             }
             $object->setChildTransactions($values_1);
         }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_4\Normalizer;
+namespace Kiboko\Magento\V2_4\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_4\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_4\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class CompanyDataTeamSearchResultsInterfaceNormalizer implements DenormalizerInt
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_4\\Model\\CompanyDataTeamSearchResultsInterface';
+        return $type === 'Kiboko\\Magento\\V2_4\\Model\\CompanyDataTeamSearchResultsInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_4\\Model\\CompanyDataTeamSearchResultsInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_4\\Model\\CompanyDataTeamSearchResultsInterface';
     }
     /**
      * @return mixed
@@ -36,19 +36,19 @@ class CompanyDataTeamSearchResultsInterfaceNormalizer implements DenormalizerInt
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_4\Model\CompanyDataTeamSearchResultsInterface();
+        $object = new \Kiboko\Magento\V2_4\Model\CompanyDataTeamSearchResultsInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('items', $data)) {
             $values = array();
             foreach ($data['items'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\v2_4\\Model\\CompanyDataTeamInterface', 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\CompanyDataTeamInterface', 'json', $context);
             }
             $object->setItems($values);
         }
         if (\array_key_exists('search_criteria', $data)) {
-            $object->setSearchCriteria($this->denormalizer->denormalize($data['search_criteria'], 'Kiboko\\Magento\\v2_4\\Model\\FrameworkSearchCriteriaInterface', 'json', $context));
+            $object->setSearchCriteria($this->denormalizer->denormalize($data['search_criteria'], 'Kiboko\\Magento\\V2_4\\Model\\FrameworkSearchCriteriaInterface', 'json', $context));
         }
         if (\array_key_exists('total_count', $data)) {
             $object->setTotalCount($data['total_count']);

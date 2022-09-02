@@ -1,16 +1,16 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Endpoint;
+namespace Kiboko\Magento\V2_1\Endpoint;
 
-class CatalogTierPriceStorageV1ReplacePut extends \Kiboko\Magento\v2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_1\Runtime\Client\Endpoint
+class CatalogTierPriceStorageV1ReplacePut extends \Kiboko\Magento\V2_1\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_1\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_1\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_1\Runtime\Client\EndpointTrait;
     /**
      * Remove existing tier prices and replace them with the new ones. If any items will have invalid price, price type, website id, sku, customer group or quantity, they will be marked as failed and excluded from replace list and \Magento\Catalog\Api\Data\PriceUpdateResultInterface[] with problem description will be returned. If there were no failed items during update empty array will be returned. If error occurred during the update exception will be thrown.
      *
-     * @param null|\Kiboko\Magento\v2_1\Model\V1ProductsTierPricesPutBody $requestBody
+     * @param null|\Kiboko\Magento\V2_1\Model\V1ProductsTierPricesPutBody $requestBody
      */
-    public function __construct(?\Kiboko\Magento\v2_1\Model\V1ProductsTierPricesPutBody $requestBody = null)
+    public function __construct(?\Kiboko\Magento\V2_1\Model\V1ProductsTierPricesPutBody $requestBody = null)
     {
         $this->body = $requestBody;
     }
@@ -24,10 +24,10 @@ class CatalogTierPriceStorageV1ReplacePut extends \Kiboko\Magento\v2_1\Runtime\C
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \Kiboko\Magento\v2_1\Model\V1ProductsTierPricesPutBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_1\Model\V1ProductsTierPricesPutBody) {
             return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
         }
-        if ($this->body instanceof \Kiboko\Magento\v2_1\Model\V1ProductsTierPricesPutBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_1\Model\V1ProductsTierPricesPutBody) {
             return array(array('Content-Type' => array('application/xml')), $this->body);
         }
         return array(array(), null);
@@ -39,20 +39,20 @@ class CatalogTierPriceStorageV1ReplacePut extends \Kiboko\Magento\v2_1\Runtime\C
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_1\Exception\CatalogTierPriceStorageV1ReplacePutUnauthorizedException
+     * @throws \Kiboko\Magento\V2_1\Exception\CatalogTierPriceStorageV1ReplacePutUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_1\Model\CatalogDataPriceUpdateResultInterface[]|\Kiboko\Magento\v2_1\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_1\Model\CatalogDataPriceUpdateResultInterface[]|\Kiboko\Magento\V2_1\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\CatalogDataPriceUpdateResultInterface[]', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataPriceUpdateResultInterface[]', 'json');
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_1\Exception\CatalogTierPriceStorageV1ReplacePutUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_1\Exception\CatalogTierPriceStorageV1ReplacePutUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_1\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_1\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

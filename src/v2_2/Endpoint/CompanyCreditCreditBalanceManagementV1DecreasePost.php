@@ -1,18 +1,18 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Endpoint;
+namespace Kiboko\Magento\V2_2\Endpoint;
 
-class CompanyCreditCreditBalanceManagementV1DecreasePost extends \Kiboko\Magento\v2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\v2_2\Runtime\Client\Endpoint
+class CompanyCreditCreditBalanceManagementV1DecreasePost extends \Kiboko\Magento\V2_2\Runtime\Client\BaseEndpoint implements \Kiboko\Magento\V2_2\Runtime\Client\Endpoint
 {
-    use \Kiboko\Magento\v2_2\Runtime\Client\EndpointTrait;
+    use \Kiboko\Magento\V2_2\Runtime\Client\EndpointTrait;
     protected $creditId;
     /**
      * Decreases the company credit with an Update, Reimburse, or Purchase transaction. This transaction increases company's outstanding balance and decreases company's available credit.
      *
      * @param int $creditId
-     * @param null|\Kiboko\Magento\v2_2\Model\V1CompanyCreditsCreditIdDecreaseBalancePostBody $requestBody
+     * @param null|\Kiboko\Magento\V2_2\Model\V1CompanyCreditsCreditIdDecreaseBalancePostBody $requestBody
      */
-    public function __construct(int $creditId, ?\Kiboko\Magento\v2_2\Model\V1CompanyCreditsCreditIdDecreaseBalancePostBody $requestBody = null)
+    public function __construct(int $creditId, ?\Kiboko\Magento\V2_2\Model\V1CompanyCreditsCreditIdDecreaseBalancePostBody $requestBody = null)
     {
         $this->creditId = $creditId;
         $this->body = $requestBody;
@@ -27,10 +27,10 @@ class CompanyCreditCreditBalanceManagementV1DecreasePost extends \Kiboko\Magento
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \Kiboko\Magento\v2_2\Model\V1CompanyCreditsCreditIdDecreaseBalancePostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_2\Model\V1CompanyCreditsCreditIdDecreaseBalancePostBody) {
             return array(array('Content-Type' => array('application/json')), $serializer->serialize($this->body, 'json'));
         }
-        if ($this->body instanceof \Kiboko\Magento\v2_2\Model\V1CompanyCreditsCreditIdDecreaseBalancePostBody) {
+        if ($this->body instanceof \Kiboko\Magento\V2_2\Model\V1CompanyCreditsCreditIdDecreaseBalancePostBody) {
             return array(array('Content-Type' => array('application/xml')), $this->body);
         }
         return array(array(), null);
@@ -42,9 +42,9 @@ class CompanyCreditCreditBalanceManagementV1DecreasePost extends \Kiboko\Magento
     /**
      * {@inheritdoc}
      *
-     * @throws \Kiboko\Magento\v2_2\Exception\CompanyCreditCreditBalanceManagementV1DecreasePostUnauthorizedException
+     * @throws \Kiboko\Magento\V2_2\Exception\CompanyCreditCreditBalanceManagementV1DecreasePostUnauthorizedException
      *
-     * @return null|\Kiboko\Magento\v2_2\Model\ErrorResponse
+     * @return null|\Kiboko\Magento\V2_2\Model\ErrorResponse
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
@@ -52,10 +52,10 @@ class CompanyCreditCreditBalanceManagementV1DecreasePost extends \Kiboko\Magento
             return json_decode($body);
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \Kiboko\Magento\v2_2\Exception\CompanyCreditCreditBalanceManagementV1DecreasePostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json'));
+            throw new \Kiboko\Magento\V2_2\Exception\CompanyCreditCreditBalanceManagementV1DecreasePostUnauthorizedException($serializer->deserialize($body, 'Kiboko\\Magento\\V2_2\\Model\\ErrorResponse', 'json'));
         }
         if (mb_strpos($contentType, 'application/json') !== false) {
-            return $serializer->deserialize($body, 'Kiboko\\Magento\\v2_2\\Model\\ErrorResponse', 'json');
+            return $serializer->deserialize($body, 'Kiboko\\Magento\\V2_2\\Model\\ErrorResponse', 'json');
         }
     }
     public function getAuthenticationScopes(): array

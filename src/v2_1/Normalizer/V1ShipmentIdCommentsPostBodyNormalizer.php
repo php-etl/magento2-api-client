@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_1\Normalizer;
+namespace Kiboko\Magento\V2_1\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_1\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_1\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class V1ShipmentIdCommentsPostBodyNormalizer implements DenormalizerInterface, N
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_1\\Model\\V1ShipmentIdCommentsPostBody';
+        return $type === 'Kiboko\\Magento\\V2_1\\Model\\V1ShipmentIdCommentsPostBody';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_1\\Model\\V1ShipmentIdCommentsPostBody';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_1\\Model\\V1ShipmentIdCommentsPostBody';
     }
     /**
      * @return mixed
@@ -36,12 +36,12 @@ class V1ShipmentIdCommentsPostBodyNormalizer implements DenormalizerInterface, N
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_1\Model\V1ShipmentIdCommentsPostBody();
+        $object = new \Kiboko\Magento\V2_1\Model\V1ShipmentIdCommentsPostBody();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('entity', $data)) {
-            $object->setEntity($this->denormalizer->denormalize($data['entity'], 'Kiboko\\Magento\\v2_1\\Model\\SalesDataShipmentCommentInterface', 'json', $context));
+            $object->setEntity($this->denormalizer->denormalize($data['entity'], 'Kiboko\\Magento\\V2_1\\Model\\SalesDataShipmentCommentInterface', 'json', $context));
         }
         return $object;
     }

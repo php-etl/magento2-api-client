@@ -1,9 +1,9 @@
 <?php
 
-namespace Kiboko\Magento\v2_2\Normalizer;
+namespace Kiboko\Magento\V2_2\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use Kiboko\Magento\v2_2\Runtime\Normalizer\CheckArray;
+use Kiboko\Magento\V2_2\Runtime\Normalizer\CheckArray;
 use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
@@ -19,11 +19,11 @@ class SalesDataShippingInterfaceNormalizer implements DenormalizerInterface, Nor
     use CheckArray;
     public function supportsDenormalization($data, $type, $format = null): bool
     {
-        return $type === 'Kiboko\\Magento\\v2_2\\Model\\SalesDataShippingInterface';
+        return $type === 'Kiboko\\Magento\\V2_2\\Model\\SalesDataShippingInterface';
     }
     public function supportsNormalization($data, $format = null): bool
     {
-        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\v2_2\\Model\\SalesDataShippingInterface';
+        return is_object($data) && get_class($data) === 'Kiboko\\Magento\\V2_2\\Model\\SalesDataShippingInterface';
     }
     /**
      * @return mixed
@@ -36,21 +36,21 @@ class SalesDataShippingInterfaceNormalizer implements DenormalizerInterface, Nor
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \Kiboko\Magento\v2_2\Model\SalesDataShippingInterface();
+        $object = new \Kiboko\Magento\V2_2\Model\SalesDataShippingInterface();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('address', $data)) {
-            $object->setAddress($this->denormalizer->denormalize($data['address'], 'Kiboko\\Magento\\v2_2\\Model\\SalesDataOrderAddressInterface', 'json', $context));
+            $object->setAddress($this->denormalizer->denormalize($data['address'], 'Kiboko\\Magento\\V2_2\\Model\\SalesDataOrderAddressInterface', 'json', $context));
         }
         if (\array_key_exists('extension_attributes', $data)) {
-            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\v2_2\\Model\\SalesDataShippingExtensionInterface', 'json', $context));
+            $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_2\\Model\\SalesDataShippingExtensionInterface', 'json', $context));
         }
         if (\array_key_exists('method', $data)) {
             $object->setMethod($data['method']);
         }
         if (\array_key_exists('total', $data)) {
-            $object->setTotal($this->denormalizer->denormalize($data['total'], 'Kiboko\\Magento\\v2_2\\Model\\SalesDataTotalInterface', 'json', $context));
+            $object->setTotal($this->denormalizer->denormalize($data['total'], 'Kiboko\\Magento\\V2_2\\Model\\SalesDataTotalInterface', 'json', $context));
         }
         return $object;
     }
