@@ -49,11 +49,11 @@ class FrameworkAttributeInterface
     /**
      * Attribute value
      *
-     * @param string $value
+     * @param string|array $value
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(string|array $value): self
     {
         $this->value = $value;
         return $this;
