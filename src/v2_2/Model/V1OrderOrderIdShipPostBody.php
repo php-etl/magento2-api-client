@@ -7,62 +7,62 @@ class V1OrderOrderIdShipPostBody
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $appendComment;
     /**
      * Interface for creation arguments for Shipment.
      *
-     * @var SalesDataShipmentCreationArgumentsInterface
+     * @var SalesDataShipmentCreationArgumentsInterface|null
      */
     protected $arguments;
     /**
      * Interface ShipmentCommentCreationInterface
      *
-     * @var SalesDataShipmentCommentCreationInterface
+     * @var SalesDataShipmentCommentCreationInterface|null
      */
     protected $comment;
     /**
      *
      *
-     * @var SalesDataShipmentItemCreationInterface[]
+     * @var SalesDataShipmentItemCreationInterface[]|null
      */
     protected $items;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $notify;
     /**
      *
      *
-     * @var SalesDataShipmentPackageCreationInterface[]
+     * @var SalesDataShipmentPackageCreationInterface[]|null
      */
     protected $packages;
     /**
      *
      *
-     * @var SalesDataShipmentTrackCreationInterface[]
+     * @var SalesDataShipmentTrackCreationInterface[]|null
      */
     protected $tracks;
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getAppendComment(): bool
+    public function getAppendComment(): ?bool
     {
         return $this->appendComment;
     }
     /**
      *
      *
-     * @param bool $appendComment
+     * @param bool|null $appendComment
      *
      * @return self
      */
-    public function setAppendComment(bool $appendComment): self
+    public function setAppendComment(?bool $appendComment): self
     {
         $this->appendComment = $appendComment;
         return $this;
@@ -70,20 +70,20 @@ class V1OrderOrderIdShipPostBody
     /**
      * Interface for creation arguments for Shipment.
      *
-     * @return SalesDataShipmentCreationArgumentsInterface
+     * @return SalesDataShipmentCreationArgumentsInterface|null
      */
-    public function getArguments(): SalesDataShipmentCreationArgumentsInterface
+    public function getArguments(): ?SalesDataShipmentCreationArgumentsInterface
     {
         return $this->arguments;
     }
     /**
      * Interface for creation arguments for Shipment.
      *
-     * @param SalesDataShipmentCreationArgumentsInterface $arguments
+     * @param SalesDataShipmentCreationArgumentsInterface|null $arguments
      *
      * @return self
      */
-    public function setArguments(SalesDataShipmentCreationArgumentsInterface $arguments): self
+    public function setArguments(?SalesDataShipmentCreationArgumentsInterface $arguments): self
     {
         $this->arguments = $arguments;
         return $this;
@@ -91,20 +91,20 @@ class V1OrderOrderIdShipPostBody
     /**
      * Interface ShipmentCommentCreationInterface
      *
-     * @return SalesDataShipmentCommentCreationInterface
+     * @return SalesDataShipmentCommentCreationInterface|null
      */
-    public function getComment(): SalesDataShipmentCommentCreationInterface
+    public function getComment(): ?SalesDataShipmentCommentCreationInterface
     {
         return $this->comment;
     }
     /**
      * Interface ShipmentCommentCreationInterface
      *
-     * @param SalesDataShipmentCommentCreationInterface $comment
+     * @param SalesDataShipmentCommentCreationInterface|null $comment
      *
      * @return self
      */
-    public function setComment(SalesDataShipmentCommentCreationInterface $comment): self
+    public function setComment(?SalesDataShipmentCommentCreationInterface $comment): self
     {
         $this->comment = $comment;
         return $this;
@@ -112,20 +112,20 @@ class V1OrderOrderIdShipPostBody
     /**
      *
      *
-     * @return SalesDataShipmentItemCreationInterface[]
+     * @return SalesDataShipmentItemCreationInterface[]|null
      */
-    public function getItems(): array
+    public function getItems(): ?array
     {
         return $this->items;
     }
     /**
      *
      *
-     * @param SalesDataShipmentItemCreationInterface[] $items
+     * @param SalesDataShipmentItemCreationInterface[]|null $items
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(?array $items): self
     {
         $this->items = $items;
         return $this;
@@ -133,20 +133,20 @@ class V1OrderOrderIdShipPostBody
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getNotify(): bool
+    public function getNotify(): ?bool
     {
         return $this->notify;
     }
     /**
      *
      *
-     * @param bool $notify
+     * @param bool|null $notify
      *
      * @return self
      */
-    public function setNotify(bool $notify): self
+    public function setNotify(?bool $notify): self
     {
         $this->notify = $notify;
         return $this;
@@ -154,20 +154,20 @@ class V1OrderOrderIdShipPostBody
     /**
      *
      *
-     * @return SalesDataShipmentPackageCreationInterface[]
+     * @return SalesDataShipmentPackageCreationInterface[]|null
      */
-    public function getPackages(): array
+    public function getPackages(): ?array
     {
         return $this->packages;
     }
     /**
      *
      *
-     * @param SalesDataShipmentPackageCreationInterface[] $packages
+     * @param SalesDataShipmentPackageCreationInterface[]|null $packages
      *
      * @return self
      */
-    public function setPackages(array $packages): self
+    public function setPackages(?array $packages): self
     {
         $this->packages = $packages;
         return $this;
@@ -175,20 +175,20 @@ class V1OrderOrderIdShipPostBody
     /**
      *
      *
-     * @return SalesDataShipmentTrackCreationInterface[]
+     * @return SalesDataShipmentTrackCreationInterface[]|null
      */
-    public function getTracks(): array
+    public function getTracks(): ?array
     {
         return $this->tracks;
     }
     /**
      *
      *
-     * @param SalesDataShipmentTrackCreationInterface[] $tracks
+     * @param SalesDataShipmentTrackCreationInterface[]|null $tracks
      *
      * @return self
      */
-    public function setTracks(array $tracks): self
+    public function setTracks(?array $tracks): self
     {
         $this->tracks = $tracks;
         return $this;

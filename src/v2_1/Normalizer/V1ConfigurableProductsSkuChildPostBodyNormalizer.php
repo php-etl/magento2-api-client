@@ -40,8 +40,10 @@ class V1ConfigurableProductsSkuChildPostBodyNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('childSku', $data)) {
+        if (\array_key_exists('childSku', $data) && $data['childSku'] !== null) {
             $object->setChildSku($data['childSku']);
+        } elseif (\array_key_exists('childSku', $data) && $data['childSku'] === null) {
+            $object->setChildSku(null);
         }
         return $object;
     }

@@ -7,38 +7,38 @@ class CatalogDataCategoryLinkInterface
     /**
      * Category id
      *
-     * @var string
+     * @var string|null
      */
     protected $categoryId;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\CategoryLinkInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $position;
     /**
      * Category id
      *
-     * @return string
+     * @return string|null
      */
-    public function getCategoryId(): string
+    public function getCategoryId(): ?string
     {
         return $this->categoryId;
     }
     /**
      * Category id
      *
-     * @param string $categoryId
+     * @param string|null $categoryId
      *
      * @return self
      */
-    public function setCategoryId(string $categoryId): self
+    public function setCategoryId(?string $categoryId): self
     {
         $this->categoryId = $categoryId;
         return $this;
@@ -67,20 +67,20 @@ class CatalogDataCategoryLinkInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getPosition(): int
+    public function getPosition(): ?int
     {
         return $this->position;
     }
     /**
      *
      *
-     * @param int $position
+     * @param int|null $position
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(?int $position): self
     {
         $this->position = $position;
         return $this;

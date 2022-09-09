@@ -7,26 +7,26 @@ class V1EavAttributeSetsAttributeSetIdPutBody
     /**
      * Interface AttributeSetInterface
      *
-     * @var EavDataAttributeSetInterface
+     * @var EavDataAttributeSetInterface|null
      */
     protected $attributeSet;
     /**
      * Interface AttributeSetInterface
      *
-     * @return EavDataAttributeSetInterface
+     * @return EavDataAttributeSetInterface|null
      */
-    public function getAttributeSet(): EavDataAttributeSetInterface
+    public function getAttributeSet(): ?EavDataAttributeSetInterface
     {
         return $this->attributeSet;
     }
     /**
      * Interface AttributeSetInterface
      *
-     * @param EavDataAttributeSetInterface $attributeSet
+     * @param EavDataAttributeSetInterface|null $attributeSet
      *
      * @return self
      */
-    public function setAttributeSet(EavDataAttributeSetInterface $attributeSet): self
+    public function setAttributeSet(?EavDataAttributeSetInterface $attributeSet): self
     {
         $this->attributeSet = $attributeSet;
         return $this;

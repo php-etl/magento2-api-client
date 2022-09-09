@@ -7,50 +7,50 @@ class CompanyDataTeamInterface
     /**
      * Custom attributes values.
      *
-     * @var FrameworkAttributeInterface[]
+     * @var FrameworkAttributeInterface[]|null
      */
     protected $customAttributes;
     /**
      * Description
      *
-     * @var string
+     * @var string|null
      */
     protected $description;
     /**
      * ExtensionInterface class for @see \Magento\Company\Api\Data\TeamInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * ID
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Name
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * Custom attributes values.
      *
-     * @return FrameworkAttributeInterface[]
+     * @return FrameworkAttributeInterface[]|null
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes(): ?array
     {
         return $this->customAttributes;
     }
     /**
      * Custom attributes values.
      *
-     * @param FrameworkAttributeInterface[] $customAttributes
+     * @param FrameworkAttributeInterface[]|null $customAttributes
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(?array $customAttributes): self
     {
         $this->customAttributes = $customAttributes;
         return $this;
@@ -58,20 +58,20 @@ class CompanyDataTeamInterface
     /**
      * Description
      *
-     * @return string
+     * @return string|null
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
     /**
      * Description
      *
-     * @param string $description
+     * @param string|null $description
      *
      * @return self
      */
-    public function setDescription(string $description): self
+    public function setDescription(?string $description): self
     {
         $this->description = $description;
         return $this;
@@ -100,20 +100,20 @@ class CompanyDataTeamInterface
     /**
      * ID
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * ID
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -121,20 +121,20 @@ class CompanyDataTeamInterface
     /**
      * Name
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      * Name
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;

@@ -7,32 +7,32 @@ class V1CartsMineCollectionPointSearchRequestPutBody
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $countryId;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $postcode;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getCountryId(): string
+    public function getCountryId(): ?string
     {
         return $this->countryId;
     }
     /**
      *
      *
-     * @param string $countryId
+     * @param string|null $countryId
      *
      * @return self
      */
-    public function setCountryId(string $countryId): self
+    public function setCountryId(?string $countryId): self
     {
         $this->countryId = $countryId;
         return $this;
@@ -40,20 +40,20 @@ class V1CartsMineCollectionPointSearchRequestPutBody
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getPostcode(): string
+    public function getPostcode(): ?string
     {
         return $this->postcode;
     }
     /**
      *
      *
-     * @param string $postcode
+     * @param string|null $postcode
      *
      * @return self
      */
-    public function setPostcode(string $postcode): self
+    public function setPostcode(?string $postcode): self
     {
         $this->postcode = $postcode;
         return $this;

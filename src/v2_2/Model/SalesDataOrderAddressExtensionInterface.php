@@ -7,26 +7,26 @@ class SalesDataOrderAddressExtensionInterface
     /**
      *
      *
-     * @var FrameworkAttributeInterface[]
+     * @var FrameworkAttributeInterface[]|null
      */
     protected $checkoutFields;
     /**
      *
      *
-     * @return FrameworkAttributeInterface[]
+     * @return FrameworkAttributeInterface[]|null
      */
-    public function getCheckoutFields(): array
+    public function getCheckoutFields(): ?array
     {
         return $this->checkoutFields;
     }
     /**
      *
      *
-     * @param FrameworkAttributeInterface[] $checkoutFields
+     * @param FrameworkAttributeInterface[]|null $checkoutFields
      *
      * @return self
      */
-    public function setCheckoutFields(array $checkoutFields): self
+    public function setCheckoutFields(?array $checkoutFields): self
     {
         $this->checkoutFields = $checkoutFields;
         return $this;

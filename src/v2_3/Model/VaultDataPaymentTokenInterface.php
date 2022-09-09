@@ -7,86 +7,86 @@ class VaultDataPaymentTokenInterface
     /**
      * Token creation timestamp
      *
-     * @var string
+     * @var string|null
      */
     protected $createdAt;
     /**
      * Customer ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $customerId;
     /**
      * Entity ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $entityId;
     /**
      * Token expiration timestamp
      *
-     * @var string
+     * @var string|null
      */
     protected $expiresAt;
     /**
      * Gateway token ID
      *
-     * @var string
+     * @var string|null
      */
     protected $gatewayToken;
     /**
      * Is active.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isActive;
     /**
      * Is visible.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isVisible;
     /**
      * Payment method code
      *
-     * @var string
+     * @var string|null
      */
     protected $paymentMethodCode;
     /**
      * Public hash
      *
-     * @var string
+     * @var string|null
      */
     protected $publicHash;
     /**
      * Token details
      *
-     * @var string
+     * @var string|null
      */
     protected $tokenDetails;
     /**
      * Type
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
      * Token creation timestamp
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt(): ?string
     {
         return $this->createdAt;
     }
     /**
      * Token creation timestamp
      *
-     * @param string $createdAt
+     * @param string|null $createdAt
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(?string $createdAt): self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -94,20 +94,20 @@ class VaultDataPaymentTokenInterface
     /**
      * Customer ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getCustomerId(): int
+    public function getCustomerId(): ?int
     {
         return $this->customerId;
     }
     /**
      * Customer ID.
      *
-     * @param int $customerId
+     * @param int|null $customerId
      *
      * @return self
      */
-    public function setCustomerId(int $customerId): self
+    public function setCustomerId(?int $customerId): self
     {
         $this->customerId = $customerId;
         return $this;
@@ -115,20 +115,20 @@ class VaultDataPaymentTokenInterface
     /**
      * Entity ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getEntityId(): int
+    public function getEntityId(): ?int
     {
         return $this->entityId;
     }
     /**
      * Entity ID.
      *
-     * @param int $entityId
+     * @param int|null $entityId
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(?int $entityId): self
     {
         $this->entityId = $entityId;
         return $this;
@@ -136,20 +136,20 @@ class VaultDataPaymentTokenInterface
     /**
      * Token expiration timestamp
      *
-     * @return string
+     * @return string|null
      */
-    public function getExpiresAt(): string
+    public function getExpiresAt(): ?string
     {
         return $this->expiresAt;
     }
     /**
      * Token expiration timestamp
      *
-     * @param string $expiresAt
+     * @param string|null $expiresAt
      *
      * @return self
      */
-    public function setExpiresAt(string $expiresAt): self
+    public function setExpiresAt(?string $expiresAt): self
     {
         $this->expiresAt = $expiresAt;
         return $this;
@@ -157,20 +157,20 @@ class VaultDataPaymentTokenInterface
     /**
      * Gateway token ID
      *
-     * @return string
+     * @return string|null
      */
-    public function getGatewayToken(): string
+    public function getGatewayToken(): ?string
     {
         return $this->gatewayToken;
     }
     /**
      * Gateway token ID
      *
-     * @param string $gatewayToken
+     * @param string|null $gatewayToken
      *
      * @return self
      */
-    public function setGatewayToken(string $gatewayToken): self
+    public function setGatewayToken(?string $gatewayToken): self
     {
         $this->gatewayToken = $gatewayToken;
         return $this;
@@ -178,20 +178,20 @@ class VaultDataPaymentTokenInterface
     /**
      * Is active.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsActive(): bool
+    public function getIsActive(): ?bool
     {
         return $this->isActive;
     }
     /**
      * Is active.
      *
-     * @param bool $isActive
+     * @param bool|null $isActive
      *
      * @return self
      */
-    public function setIsActive(bool $isActive): self
+    public function setIsActive(?bool $isActive): self
     {
         $this->isActive = $isActive;
         return $this;
@@ -199,20 +199,20 @@ class VaultDataPaymentTokenInterface
     /**
      * Is visible.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsVisible(): bool
+    public function getIsVisible(): ?bool
     {
         return $this->isVisible;
     }
     /**
      * Is visible.
      *
-     * @param bool $isVisible
+     * @param bool|null $isVisible
      *
      * @return self
      */
-    public function setIsVisible(bool $isVisible): self
+    public function setIsVisible(?bool $isVisible): self
     {
         $this->isVisible = $isVisible;
         return $this;
@@ -220,20 +220,20 @@ class VaultDataPaymentTokenInterface
     /**
      * Payment method code
      *
-     * @return string
+     * @return string|null
      */
-    public function getPaymentMethodCode(): string
+    public function getPaymentMethodCode(): ?string
     {
         return $this->paymentMethodCode;
     }
     /**
      * Payment method code
      *
-     * @param string $paymentMethodCode
+     * @param string|null $paymentMethodCode
      *
      * @return self
      */
-    public function setPaymentMethodCode(string $paymentMethodCode): self
+    public function setPaymentMethodCode(?string $paymentMethodCode): self
     {
         $this->paymentMethodCode = $paymentMethodCode;
         return $this;
@@ -241,20 +241,20 @@ class VaultDataPaymentTokenInterface
     /**
      * Public hash
      *
-     * @return string
+     * @return string|null
      */
-    public function getPublicHash(): string
+    public function getPublicHash(): ?string
     {
         return $this->publicHash;
     }
     /**
      * Public hash
      *
-     * @param string $publicHash
+     * @param string|null $publicHash
      *
      * @return self
      */
-    public function setPublicHash(string $publicHash): self
+    public function setPublicHash(?string $publicHash): self
     {
         $this->publicHash = $publicHash;
         return $this;
@@ -262,20 +262,20 @@ class VaultDataPaymentTokenInterface
     /**
      * Token details
      *
-     * @return string
+     * @return string|null
      */
-    public function getTokenDetails(): string
+    public function getTokenDetails(): ?string
     {
         return $this->tokenDetails;
     }
     /**
      * Token details
      *
-     * @param string $tokenDetails
+     * @param string|null $tokenDetails
      *
      * @return self
      */
-    public function setTokenDetails(string $tokenDetails): self
+    public function setTokenDetails(?string $tokenDetails): self
     {
         $this->tokenDetails = $tokenDetails;
         return $this;
@@ -283,20 +283,20 @@ class VaultDataPaymentTokenInterface
     /**
      * Type
      *
-     * @return string
+     * @return string|null
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
     /**
      * Type
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type): self
+    public function setType(?string $type): self
     {
         $this->type = $type;
         return $this;

@@ -49,17 +49,25 @@ class SalesDataCreditmemoCreationArgumentsInterfaceNormalizer implements Denorma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('adjustment_negative', $data)) {
+        if (\array_key_exists('adjustment_negative', $data) && $data['adjustment_negative'] !== null) {
             $object->setAdjustmentNegative($data['adjustment_negative']);
+        } elseif (\array_key_exists('adjustment_negative', $data) && $data['adjustment_negative'] === null) {
+            $object->setAdjustmentNegative(null);
         }
-        if (\array_key_exists('adjustment_positive', $data)) {
+        if (\array_key_exists('adjustment_positive', $data) && $data['adjustment_positive'] !== null) {
             $object->setAdjustmentPositive($data['adjustment_positive']);
+        } elseif (\array_key_exists('adjustment_positive', $data) && $data['adjustment_positive'] === null) {
+            $object->setAdjustmentPositive(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_3\\Model\\SalesDataCreditmemoCreationArgumentsExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('shipping_amount', $data)) {
+        if (\array_key_exists('shipping_amount', $data) && $data['shipping_amount'] !== null) {
             $object->setShippingAmount($data['shipping_amount']);
+        } elseif (\array_key_exists('shipping_amount', $data) && $data['shipping_amount'] === null) {
+            $object->setShippingAmount(null);
         }
         return $object;
     }

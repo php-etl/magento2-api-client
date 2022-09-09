@@ -7,32 +7,32 @@ class CustomerDataValidationRuleInterface
     /**
      * Validation rule name
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * Validation rule value
      *
-     * @var string
+     * @var string|null
      */
     protected $value;
     /**
      * Validation rule name
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      * Validation rule name
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;
@@ -40,20 +40,20 @@ class CustomerDataValidationRuleInterface
     /**
      * Validation rule value
      *
-     * @return string
+     * @return string|null
      */
-    public function getValue(): string
+    public function getValue(): ?string
     {
         return $this->value;
     }
     /**
      * Validation rule value
      *
-     * @param string $value
+     * @param string|null $value
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(?string $value): self
     {
         $this->value = $value;
         return $this;

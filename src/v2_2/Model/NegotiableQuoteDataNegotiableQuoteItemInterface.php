@@ -7,31 +7,31 @@ class NegotiableQuoteDataNegotiableQuoteItemInterface
     /**
      * ExtensionInterface class for @see \Magento\NegotiableQuote\Api\Data\NegotiableQuoteItemInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Quote item id
      *
-     * @var int
+     * @var int|null
      */
     protected $itemId;
     /**
      * Quote item original discount amount
      *
-     * @var float
+     * @var float|null
      */
     protected $originalDiscountAmount;
     /**
      * Quote item original price
      *
-     * @var float
+     * @var float|null
      */
     protected $originalPrice;
     /**
      * Quote item original tax amount
      *
-     * @var float
+     * @var float|null
      */
     protected $originalTaxAmount;
     /**
@@ -58,20 +58,20 @@ class NegotiableQuoteDataNegotiableQuoteItemInterface
     /**
      * Quote item id
      *
-     * @return int
+     * @return int|null
      */
-    public function getItemId(): int
+    public function getItemId(): ?int
     {
         return $this->itemId;
     }
     /**
      * Quote item id
      *
-     * @param int $itemId
+     * @param int|null $itemId
      *
      * @return self
      */
-    public function setItemId(int $itemId): self
+    public function setItemId(?int $itemId): self
     {
         $this->itemId = $itemId;
         return $this;
@@ -79,20 +79,20 @@ class NegotiableQuoteDataNegotiableQuoteItemInterface
     /**
      * Quote item original discount amount
      *
-     * @return float
+     * @return float|null
      */
-    public function getOriginalDiscountAmount(): float
+    public function getOriginalDiscountAmount(): ?float
     {
         return $this->originalDiscountAmount;
     }
     /**
      * Quote item original discount amount
      *
-     * @param float $originalDiscountAmount
+     * @param float|null $originalDiscountAmount
      *
      * @return self
      */
-    public function setOriginalDiscountAmount(float $originalDiscountAmount): self
+    public function setOriginalDiscountAmount(?float $originalDiscountAmount): self
     {
         $this->originalDiscountAmount = $originalDiscountAmount;
         return $this;
@@ -100,20 +100,20 @@ class NegotiableQuoteDataNegotiableQuoteItemInterface
     /**
      * Quote item original price
      *
-     * @return float
+     * @return float|null
      */
-    public function getOriginalPrice(): float
+    public function getOriginalPrice(): ?float
     {
         return $this->originalPrice;
     }
     /**
      * Quote item original price
      *
-     * @param float $originalPrice
+     * @param float|null $originalPrice
      *
      * @return self
      */
-    public function setOriginalPrice(float $originalPrice): self
+    public function setOriginalPrice(?float $originalPrice): self
     {
         $this->originalPrice = $originalPrice;
         return $this;
@@ -121,20 +121,20 @@ class NegotiableQuoteDataNegotiableQuoteItemInterface
     /**
      * Quote item original tax amount
      *
-     * @return float
+     * @return float|null
      */
-    public function getOriginalTaxAmount(): float
+    public function getOriginalTaxAmount(): ?float
     {
         return $this->originalTaxAmount;
     }
     /**
      * Quote item original tax amount
      *
-     * @param float $originalTaxAmount
+     * @param float|null $originalTaxAmount
      *
      * @return self
      */
-    public function setOriginalTaxAmount(float $originalTaxAmount): self
+    public function setOriginalTaxAmount(?float $originalTaxAmount): self
     {
         $this->originalTaxAmount = $originalTaxAmount;
         return $this;

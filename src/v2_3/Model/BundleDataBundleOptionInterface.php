@@ -7,25 +7,25 @@ class BundleDataBundleOptionInterface
     /**
      * ExtensionInterface class for @see \Magento\Bundle\Api\Data\BundleOptionInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Bundle option id.
      *
-     * @var int
+     * @var int|null
      */
     protected $optionId;
     /**
      * Bundle option quantity.
      *
-     * @var int
+     * @var int|null
      */
     protected $optionQty;
     /**
      * Bundle option selection ids.
      *
-     * @var int[]
+     * @var int[]|null
      */
     protected $optionSelections;
     /**
@@ -52,20 +52,20 @@ class BundleDataBundleOptionInterface
     /**
      * Bundle option id.
      *
-     * @return int
+     * @return int|null
      */
-    public function getOptionId(): int
+    public function getOptionId(): ?int
     {
         return $this->optionId;
     }
     /**
      * Bundle option id.
      *
-     * @param int $optionId
+     * @param int|null $optionId
      *
      * @return self
      */
-    public function setOptionId(int $optionId): self
+    public function setOptionId(?int $optionId): self
     {
         $this->optionId = $optionId;
         return $this;
@@ -73,20 +73,20 @@ class BundleDataBundleOptionInterface
     /**
      * Bundle option quantity.
      *
-     * @return int
+     * @return int|null
      */
-    public function getOptionQty(): int
+    public function getOptionQty(): ?int
     {
         return $this->optionQty;
     }
     /**
      * Bundle option quantity.
      *
-     * @param int $optionQty
+     * @param int|null $optionQty
      *
      * @return self
      */
-    public function setOptionQty(int $optionQty): self
+    public function setOptionQty(?int $optionQty): self
     {
         $this->optionQty = $optionQty;
         return $this;
@@ -94,20 +94,20 @@ class BundleDataBundleOptionInterface
     /**
      * Bundle option selection ids.
      *
-     * @return int[]
+     * @return int[]|null
      */
-    public function getOptionSelections(): array
+    public function getOptionSelections(): ?array
     {
         return $this->optionSelections;
     }
     /**
      * Bundle option selection ids.
      *
-     * @param int[] $optionSelections
+     * @param int[]|null $optionSelections
      *
      * @return self
      */
-    public function setOptionSelections(array $optionSelections): self
+    public function setOptionSelections(?array $optionSelections): self
     {
         $this->optionSelections = $optionSelections;
         return $this;

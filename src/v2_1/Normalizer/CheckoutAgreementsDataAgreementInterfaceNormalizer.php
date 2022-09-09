@@ -40,32 +40,50 @@ class CheckoutAgreementsDataAgreementInterfaceNormalizer implements Denormalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('agreement_id', $data)) {
+        if (\array_key_exists('agreement_id', $data) && $data['agreement_id'] !== null) {
             $object->setAgreementId($data['agreement_id']);
+        } elseif (\array_key_exists('agreement_id', $data) && $data['agreement_id'] === null) {
+            $object->setAgreementId(null);
         }
-        if (\array_key_exists('checkbox_text', $data)) {
+        if (\array_key_exists('checkbox_text', $data) && $data['checkbox_text'] !== null) {
             $object->setCheckboxText($data['checkbox_text']);
+        } elseif (\array_key_exists('checkbox_text', $data) && $data['checkbox_text'] === null) {
+            $object->setCheckboxText(null);
         }
-        if (\array_key_exists('content', $data)) {
+        if (\array_key_exists('content', $data) && $data['content'] !== null) {
             $object->setContent($data['content']);
+        } elseif (\array_key_exists('content', $data) && $data['content'] === null) {
+            $object->setContent(null);
         }
-        if (\array_key_exists('content_height', $data)) {
+        if (\array_key_exists('content_height', $data) && $data['content_height'] !== null) {
             $object->setContentHeight($data['content_height']);
+        } elseif (\array_key_exists('content_height', $data) && $data['content_height'] === null) {
+            $object->setContentHeight(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('is_active', $data)) {
+        if (\array_key_exists('is_active', $data) && $data['is_active'] !== null) {
             $object->setIsActive($data['is_active']);
+        } elseif (\array_key_exists('is_active', $data) && $data['is_active'] === null) {
+            $object->setIsActive(null);
         }
-        if (\array_key_exists('is_html', $data)) {
+        if (\array_key_exists('is_html', $data) && $data['is_html'] !== null) {
             $object->setIsHtml($data['is_html']);
+        } elseif (\array_key_exists('is_html', $data) && $data['is_html'] === null) {
+            $object->setIsHtml(null);
         }
-        if (\array_key_exists('mode', $data)) {
+        if (\array_key_exists('mode', $data) && $data['mode'] !== null) {
             $object->setMode($data['mode']);
+        } elseif (\array_key_exists('mode', $data) && $data['mode'] === null) {
+            $object->setMode(null);
         }
-        if (\array_key_exists('name', $data)) {
+        if (\array_key_exists('name', $data) && $data['name'] !== null) {
             $object->setName($data['name']);
+        } elseif (\array_key_exists('name', $data) && $data['name'] === null) {
+            $object->setName(null);
         }
         return $object;
     }

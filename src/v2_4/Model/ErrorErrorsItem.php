@@ -7,32 +7,32 @@ class ErrorErrorsItem
     /**
      * Error message
      *
-     * @var string
+     * @var string|null
      */
     protected $message;
     /**
      * Error parameters list
      *
-     * @var ErrorParametersItem[]
+     * @var ErrorParametersItem[]|null
      */
     protected $parameters;
     /**
      * Error message
      *
-     * @return string
+     * @return string|null
      */
-    public function getMessage(): string
+    public function getMessage(): ?string
     {
         return $this->message;
     }
     /**
      * Error message
      *
-     * @param string $message
+     * @param string|null $message
      *
      * @return self
      */
-    public function setMessage(string $message): self
+    public function setMessage(?string $message): self
     {
         $this->message = $message;
         return $this;
@@ -40,20 +40,20 @@ class ErrorErrorsItem
     /**
      * Error parameters list
      *
-     * @return ErrorParametersItem[]
+     * @return ErrorParametersItem[]|null
      */
-    public function getParameters(): array
+    public function getParameters(): ?array
     {
         return $this->parameters;
     }
     /**
      * Error parameters list
      *
-     * @param ErrorParametersItem[] $parameters
+     * @param ErrorParametersItem[]|null $parameters
      *
      * @return self
      */
-    public function setParameters(array $parameters): self
+    public function setParameters(?array $parameters): self
     {
         $this->parameters = $parameters;
         return $this;

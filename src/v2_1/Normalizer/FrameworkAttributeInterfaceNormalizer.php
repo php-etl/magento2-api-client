@@ -40,11 +40,15 @@ class FrameworkAttributeInterfaceNormalizer implements DenormalizerInterface, No
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('attribute_code', $data)) {
+        if (\array_key_exists('attribute_code', $data) && $data['attribute_code'] !== null) {
             $object->setAttributeCode($data['attribute_code']);
+        } elseif (\array_key_exists('attribute_code', $data) && $data['attribute_code'] === null) {
+            $object->setAttributeCode(null);
         }
-        if (\array_key_exists('value', $data)) {
+        if (\array_key_exists('value', $data) && $data['value'] !== null) {
             $object->setValue($data['value']);
+        } elseif (\array_key_exists('value', $data) && $data['value'] === null) {
+            $object->setValue(null);
         }
         return $object;
     }

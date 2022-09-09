@@ -40,18 +40,24 @@ class CustomerDataOptionInterfaceNormalizer implements DenormalizerInterface, No
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('label', $data)) {
+        if (\array_key_exists('label', $data) && $data['label'] !== null) {
             $object->setLabel($data['label']);
+        } elseif (\array_key_exists('label', $data) && $data['label'] === null) {
+            $object->setLabel(null);
         }
-        if (\array_key_exists('options', $data)) {
+        if (\array_key_exists('options', $data) && $data['options'] !== null) {
             $values = array();
             foreach ($data['options'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\CustomerDataOptionInterface', 'json', $context);
             }
             $object->setOptions($values);
+        } elseif (\array_key_exists('options', $data) && $data['options'] === null) {
+            $object->setOptions(null);
         }
-        if (\array_key_exists('value', $data)) {
+        if (\array_key_exists('value', $data) && $data['value'] !== null) {
             $object->setValue($data['value']);
+        } elseif (\array_key_exists('value', $data) && $data['value'] === null) {
+            $object->setValue(null);
         }
         return $object;
     }

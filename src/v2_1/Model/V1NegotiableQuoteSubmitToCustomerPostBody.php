@@ -7,38 +7,38 @@ class V1NegotiableQuoteSubmitToCustomerPostBody
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $comment;
     /**
      *
      *
-     * @var NegotiableQuoteDataAttachmentContentInterface[]
+     * @var NegotiableQuoteDataAttachmentContentInterface[]|null
      */
     protected $files;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $quoteId;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getComment(): string
+    public function getComment(): ?string
     {
         return $this->comment;
     }
     /**
      *
      *
-     * @param string $comment
+     * @param string|null $comment
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(?string $comment): self
     {
         $this->comment = $comment;
         return $this;
@@ -46,20 +46,20 @@ class V1NegotiableQuoteSubmitToCustomerPostBody
     /**
      *
      *
-     * @return NegotiableQuoteDataAttachmentContentInterface[]
+     * @return NegotiableQuoteDataAttachmentContentInterface[]|null
      */
-    public function getFiles(): array
+    public function getFiles(): ?array
     {
         return $this->files;
     }
     /**
      *
      *
-     * @param NegotiableQuoteDataAttachmentContentInterface[] $files
+     * @param NegotiableQuoteDataAttachmentContentInterface[]|null $files
      *
      * @return self
      */
-    public function setFiles(array $files): self
+    public function setFiles(?array $files): self
     {
         $this->files = $files;
         return $this;
@@ -67,20 +67,20 @@ class V1NegotiableQuoteSubmitToCustomerPostBody
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getQuoteId(): int
+    public function getQuoteId(): ?int
     {
         return $this->quoteId;
     }
     /**
      *
      *
-     * @param int $quoteId
+     * @param int|null $quoteId
      *
      * @return self
      */
-    public function setQuoteId(int $quoteId): self
+    public function setQuoteId(?int $quoteId): self
     {
         $this->quoteId = $quoteId;
         return $this;

@@ -40,26 +40,40 @@ class CmsDataBlockInterfaceNormalizer implements DenormalizerInterface, Normaliz
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('active', $data)) {
+        if (\array_key_exists('active', $data) && $data['active'] !== null) {
             $object->setActive($data['active']);
+        } elseif (\array_key_exists('active', $data) && $data['active'] === null) {
+            $object->setActive(null);
         }
-        if (\array_key_exists('content', $data)) {
+        if (\array_key_exists('content', $data) && $data['content'] !== null) {
             $object->setContent($data['content']);
+        } elseif (\array_key_exists('content', $data) && $data['content'] === null) {
+            $object->setContent(null);
         }
-        if (\array_key_exists('creation_time', $data)) {
+        if (\array_key_exists('creation_time', $data) && $data['creation_time'] !== null) {
             $object->setCreationTime($data['creation_time']);
+        } elseif (\array_key_exists('creation_time', $data) && $data['creation_time'] === null) {
+            $object->setCreationTime(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('identifier', $data)) {
+        if (\array_key_exists('identifier', $data) && $data['identifier'] !== null) {
             $object->setIdentifier($data['identifier']);
+        } elseif (\array_key_exists('identifier', $data) && $data['identifier'] === null) {
+            $object->setIdentifier(null);
         }
-        if (\array_key_exists('title', $data)) {
+        if (\array_key_exists('title', $data) && $data['title'] !== null) {
             $object->setTitle($data['title']);
+        } elseif (\array_key_exists('title', $data) && $data['title'] === null) {
+            $object->setTitle(null);
         }
-        if (\array_key_exists('update_time', $data)) {
+        if (\array_key_exists('update_time', $data) && $data['update_time'] !== null) {
             $object->setUpdateTime($data['update_time']);
+        } elseif (\array_key_exists('update_time', $data) && $data['update_time'] === null) {
+            $object->setUpdateTime(null);
         }
         return $object;
     }

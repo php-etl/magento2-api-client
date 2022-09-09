@@ -46,20 +46,30 @@ class GiftCardDataGiftcardAmountInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('attribute_id', $data)) {
+        if (\array_key_exists('attribute_id', $data) && $data['attribute_id'] !== null) {
             $object->setAttributeId($data['attribute_id']);
+        } elseif (\array_key_exists('attribute_id', $data) && $data['attribute_id'] === null) {
+            $object->setAttributeId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('value', $data)) {
+        if (\array_key_exists('value', $data) && $data['value'] !== null) {
             $object->setValue($data['value']);
+        } elseif (\array_key_exists('value', $data) && $data['value'] === null) {
+            $object->setValue(null);
         }
-        if (\array_key_exists('website_id', $data)) {
+        if (\array_key_exists('website_id', $data) && $data['website_id'] !== null) {
             $object->setWebsiteId($data['website_id']);
+        } elseif (\array_key_exists('website_id', $data) && $data['website_id'] === null) {
+            $object->setWebsiteId(null);
         }
-        if (\array_key_exists('website_value', $data)) {
+        if (\array_key_exists('website_value', $data) && $data['website_value'] !== null) {
             $object->setWebsiteValue($data['website_value']);
+        } elseif (\array_key_exists('website_value', $data) && $data['website_value'] === null) {
+            $object->setWebsiteValue(null);
         }
         return $object;
     }

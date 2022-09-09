@@ -43,20 +43,30 @@ class QuoteDataTotalSegmentInterfaceNormalizer implements DenormalizerInterface,
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('area', $data)) {
+        if (\array_key_exists('area', $data) && $data['area'] !== null) {
             $object->setArea($data['area']);
+        } elseif (\array_key_exists('area', $data) && $data['area'] === null) {
+            $object->setArea(null);
         }
-        if (\array_key_exists('code', $data)) {
+        if (\array_key_exists('code', $data) && $data['code'] !== null) {
             $object->setCode($data['code']);
+        } elseif (\array_key_exists('code', $data) && $data['code'] === null) {
+            $object->setCode(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataTotalSegmentExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('title', $data)) {
+        if (\array_key_exists('title', $data) && $data['title'] !== null) {
             $object->setTitle($data['title']);
+        } elseif (\array_key_exists('title', $data) && $data['title'] === null) {
+            $object->setTitle(null);
         }
-        if (\array_key_exists('value', $data)) {
+        if (\array_key_exists('value', $data) && $data['value'] !== null) {
             $object->setValue($data['value']);
+        } elseif (\array_key_exists('value', $data) && $data['value'] === null) {
+            $object->setValue(null);
         }
         return $object;
     }

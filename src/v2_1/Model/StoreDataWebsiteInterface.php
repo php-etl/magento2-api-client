@@ -7,50 +7,50 @@ class StoreDataWebsiteInterface
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $code;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $defaultGroupId;
     /**
      * ExtensionInterface class for @see \Magento\Store\Api\Data\WebsiteInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Website name
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
     /**
      *
      *
-     * @param string $code
+     * @param string|null $code
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
         return $this;
@@ -58,20 +58,20 @@ class StoreDataWebsiteInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getDefaultGroupId(): int
+    public function getDefaultGroupId(): ?int
     {
         return $this->defaultGroupId;
     }
     /**
      *
      *
-     * @param int $defaultGroupId
+     * @param int|null $defaultGroupId
      *
      * @return self
      */
-    public function setDefaultGroupId(int $defaultGroupId): self
+    public function setDefaultGroupId(?int $defaultGroupId): self
     {
         $this->defaultGroupId = $defaultGroupId;
         return $this;
@@ -100,20 +100,20 @@ class StoreDataWebsiteInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      *
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -121,20 +121,20 @@ class StoreDataWebsiteInterface
     /**
      * Website name
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      * Website name
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;

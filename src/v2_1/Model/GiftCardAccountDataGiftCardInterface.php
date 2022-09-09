@@ -7,44 +7,44 @@ class GiftCardAccountDataGiftCardInterface
     /**
      * Amount
      *
-     * @var float
+     * @var float|null
      */
     protected $amount;
     /**
      * Base Amount
      *
-     * @var float
+     * @var float|null
      */
     protected $baseAmount;
     /**
      * Code
      *
-     * @var string
+     * @var string|null
      */
     protected $code;
     /**
      * Id
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Amount
      *
-     * @return float
+     * @return float|null
      */
-    public function getAmount(): float
+    public function getAmount(): ?float
     {
         return $this->amount;
     }
     /**
      * Amount
      *
-     * @param float $amount
+     * @param float|null $amount
      *
      * @return self
      */
-    public function setAmount(float $amount): self
+    public function setAmount(?float $amount): self
     {
         $this->amount = $amount;
         return $this;
@@ -52,20 +52,20 @@ class GiftCardAccountDataGiftCardInterface
     /**
      * Base Amount
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseAmount(): float
+    public function getBaseAmount(): ?float
     {
         return $this->baseAmount;
     }
     /**
      * Base Amount
      *
-     * @param float $baseAmount
+     * @param float|null $baseAmount
      *
      * @return self
      */
-    public function setBaseAmount(float $baseAmount): self
+    public function setBaseAmount(?float $baseAmount): self
     {
         $this->baseAmount = $baseAmount;
         return $this;
@@ -73,20 +73,20 @@ class GiftCardAccountDataGiftCardInterface
     /**
      * Code
      *
-     * @return string
+     * @return string|null
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
     /**
      * Code
      *
-     * @param string $code
+     * @param string|null $code
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
         return $this;
@@ -94,20 +94,20 @@ class GiftCardAccountDataGiftCardInterface
     /**
      * Id
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * Id
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;

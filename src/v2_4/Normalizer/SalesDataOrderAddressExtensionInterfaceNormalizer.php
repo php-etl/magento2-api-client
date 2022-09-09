@@ -40,12 +40,14 @@ class SalesDataOrderAddressExtensionInterfaceNormalizer implements DenormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('checkout_fields', $data)) {
+        if (\array_key_exists('checkout_fields', $data) && $data['checkout_fields'] !== null) {
             $values = array();
             foreach ($data['checkout_fields'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setCheckoutFields($values);
+        } elseif (\array_key_exists('checkout_fields', $data) && $data['checkout_fields'] === null) {
+            $object->setCheckoutFields(null);
         }
         return $object;
     }

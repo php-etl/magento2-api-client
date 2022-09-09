@@ -40,24 +40,34 @@ class CompanyDataTeamInterfaceNormalizer implements DenormalizerInterface, Norma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('custom_attributes', $data)) {
+        if (\array_key_exists('custom_attributes', $data) && $data['custom_attributes'] !== null) {
             $values = array();
             foreach ($data['custom_attributes'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setCustomAttributes($values);
+        } elseif (\array_key_exists('custom_attributes', $data) && $data['custom_attributes'] === null) {
+            $object->setCustomAttributes(null);
         }
-        if (\array_key_exists('description', $data)) {
+        if (\array_key_exists('description', $data) && $data['description'] !== null) {
             $object->setDescription($data['description']);
+        } elseif (\array_key_exists('description', $data) && $data['description'] === null) {
+            $object->setDescription(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('name', $data)) {
+        if (\array_key_exists('name', $data) && $data['name'] !== null) {
             $object->setName($data['name']);
+        } elseif (\array_key_exists('name', $data) && $data['name'] === null) {
+            $object->setName(null);
         }
         return $object;
     }

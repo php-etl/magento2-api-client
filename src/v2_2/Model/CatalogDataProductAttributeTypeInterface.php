@@ -7,19 +7,19 @@ class CatalogDataProductAttributeTypeInterface
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductAttributeTypeInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Type label
      *
-     * @var string
+     * @var string|null
      */
     protected $label;
     /**
      * Value
      *
-     * @var string
+     * @var string|null
      */
     protected $value;
     /**
@@ -46,20 +46,20 @@ class CatalogDataProductAttributeTypeInterface
     /**
      * Type label
      *
-     * @return string
+     * @return string|null
      */
-    public function getLabel(): string
+    public function getLabel(): ?string
     {
         return $this->label;
     }
     /**
      * Type label
      *
-     * @param string $label
+     * @param string|null $label
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(?string $label): self
     {
         $this->label = $label;
         return $this;
@@ -67,20 +67,20 @@ class CatalogDataProductAttributeTypeInterface
     /**
      * Value
      *
-     * @return string
+     * @return string|null
      */
-    public function getValue(): string
+    public function getValue(): ?string
     {
         return $this->value;
     }
     /**
      * Value
      *
-     * @param string $value
+     * @param string|null $value
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(?string $value): self
     {
         $this->value = $value;
         return $this;

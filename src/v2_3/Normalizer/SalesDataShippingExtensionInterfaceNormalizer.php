@@ -40,14 +40,20 @@ class SalesDataShippingExtensionInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('collection_point', $data)) {
+        if (\array_key_exists('collection_point', $data) && $data['collection_point'] !== null) {
             $object->setCollectionPoint($this->denormalizer->denormalize($data['collection_point'], 'Kiboko\\Magento\\V2_3\\Model\\TemandoShippingDataCollectionPointOrderCollectionPointInterface', 'json', $context));
+        } elseif (\array_key_exists('collection_point', $data) && $data['collection_point'] === null) {
+            $object->setCollectionPoint(null);
         }
-        if (\array_key_exists('ext_order_id', $data)) {
+        if (\array_key_exists('ext_order_id', $data) && $data['ext_order_id'] !== null) {
             $object->setExtOrderId($data['ext_order_id']);
+        } elseif (\array_key_exists('ext_order_id', $data) && $data['ext_order_id'] === null) {
+            $object->setExtOrderId(null);
         }
-        if (\array_key_exists('shipping_experience', $data)) {
+        if (\array_key_exists('shipping_experience', $data) && $data['shipping_experience'] !== null) {
             $object->setShippingExperience($this->denormalizer->denormalize($data['shipping_experience'], 'Kiboko\\Magento\\V2_3\\Model\\TemandoShippingDataOrderShippingExperienceInterface', 'json', $context));
+        } elseif (\array_key_exists('shipping_experience', $data) && $data['shipping_experience'] === null) {
+            $object->setShippingExperience(null);
         }
         return $object;
     }

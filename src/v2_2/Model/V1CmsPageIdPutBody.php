@@ -7,26 +7,26 @@ class V1CmsPageIdPutBody
     /**
      * CMS page interface.
      *
-     * @var CmsDataPageInterface
+     * @var CmsDataPageInterface|null
      */
     protected $page;
     /**
      * CMS page interface.
      *
-     * @return CmsDataPageInterface
+     * @return CmsDataPageInterface|null
      */
-    public function getPage(): CmsDataPageInterface
+    public function getPage(): ?CmsDataPageInterface
     {
         return $this->page;
     }
     /**
      * CMS page interface.
      *
-     * @param CmsDataPageInterface $page
+     * @param CmsDataPageInterface|null $page
      *
      * @return self
      */
-    public function setPage(CmsDataPageInterface $page): self
+    public function setPage(?CmsDataPageInterface $page): self
     {
         $this->page = $page;
         return $this;

@@ -7,7 +7,7 @@ class SalesDataShipmentPackageInterface
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\ShipmentPackageInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**

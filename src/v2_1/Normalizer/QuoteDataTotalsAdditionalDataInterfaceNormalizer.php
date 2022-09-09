@@ -40,15 +40,19 @@ class QuoteDataTotalsAdditionalDataInterfaceNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('custom_attributes', $data)) {
+        if (\array_key_exists('custom_attributes', $data) && $data['custom_attributes'] !== null) {
             $values = array();
             foreach ($data['custom_attributes'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setCustomAttributes($values);
+        } elseif (\array_key_exists('custom_attributes', $data) && $data['custom_attributes'] === null) {
+            $object->setCustomAttributes(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_1\\Model\\QuoteDataTotalsAdditionalDataExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
         return $object;
     }

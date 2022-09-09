@@ -40,20 +40,30 @@ class CompanyDataHierarchyInterfaceNormalizer implements DenormalizerInterface, 
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('entity_id', $data)) {
+        if (\array_key_exists('entity_id', $data) && $data['entity_id'] !== null) {
             $object->setEntityId($data['entity_id']);
+        } elseif (\array_key_exists('entity_id', $data) && $data['entity_id'] === null) {
+            $object->setEntityId(null);
         }
-        if (\array_key_exists('entity_type', $data)) {
+        if (\array_key_exists('entity_type', $data) && $data['entity_type'] !== null) {
             $object->setEntityType($data['entity_type']);
+        } elseif (\array_key_exists('entity_type', $data) && $data['entity_type'] === null) {
+            $object->setEntityType(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('structure_id', $data)) {
+        if (\array_key_exists('structure_id', $data) && $data['structure_id'] !== null) {
             $object->setStructureId($data['structure_id']);
+        } elseif (\array_key_exists('structure_id', $data) && $data['structure_id'] === null) {
+            $object->setStructureId(null);
         }
-        if (\array_key_exists('structure_parent_id', $data)) {
+        if (\array_key_exists('structure_parent_id', $data) && $data['structure_parent_id'] !== null) {
             $object->setStructureParentId($data['structure_parent_id']);
+        } elseif (\array_key_exists('structure_parent_id', $data) && $data['structure_parent_id'] === null) {
+            $object->setStructureParentId(null);
         }
         return $object;
     }

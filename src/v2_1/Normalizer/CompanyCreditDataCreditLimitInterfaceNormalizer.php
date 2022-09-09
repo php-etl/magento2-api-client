@@ -49,32 +49,50 @@ class CompanyCreditDataCreditLimitInterfaceNormalizer implements DenormalizerInt
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('available_limit', $data)) {
+        if (\array_key_exists('available_limit', $data) && $data['available_limit'] !== null) {
             $object->setAvailableLimit($data['available_limit']);
+        } elseif (\array_key_exists('available_limit', $data) && $data['available_limit'] === null) {
+            $object->setAvailableLimit(null);
         }
-        if (\array_key_exists('balance', $data)) {
+        if (\array_key_exists('balance', $data) && $data['balance'] !== null) {
             $object->setBalance($data['balance']);
+        } elseif (\array_key_exists('balance', $data) && $data['balance'] === null) {
+            $object->setBalance(null);
         }
-        if (\array_key_exists('company_id', $data)) {
+        if (\array_key_exists('company_id', $data) && $data['company_id'] !== null) {
             $object->setCompanyId($data['company_id']);
+        } elseif (\array_key_exists('company_id', $data) && $data['company_id'] === null) {
+            $object->setCompanyId(null);
         }
-        if (\array_key_exists('credit_comment', $data)) {
+        if (\array_key_exists('credit_comment', $data) && $data['credit_comment'] !== null) {
             $object->setCreditComment($data['credit_comment']);
+        } elseif (\array_key_exists('credit_comment', $data) && $data['credit_comment'] === null) {
+            $object->setCreditComment(null);
         }
-        if (\array_key_exists('credit_limit', $data)) {
+        if (\array_key_exists('credit_limit', $data) && $data['credit_limit'] !== null) {
             $object->setCreditLimit($data['credit_limit']);
+        } elseif (\array_key_exists('credit_limit', $data) && $data['credit_limit'] === null) {
+            $object->setCreditLimit(null);
         }
-        if (\array_key_exists('currency_code', $data)) {
+        if (\array_key_exists('currency_code', $data) && $data['currency_code'] !== null) {
             $object->setCurrencyCode($data['currency_code']);
+        } elseif (\array_key_exists('currency_code', $data) && $data['currency_code'] === null) {
+            $object->setCurrencyCode(null);
         }
-        if (\array_key_exists('exceed_limit', $data)) {
+        if (\array_key_exists('exceed_limit', $data) && $data['exceed_limit'] !== null) {
             $object->setExceedLimit($data['exceed_limit']);
+        } elseif (\array_key_exists('exceed_limit', $data) && $data['exceed_limit'] === null) {
+            $object->setExceedLimit(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
         return $object;
     }

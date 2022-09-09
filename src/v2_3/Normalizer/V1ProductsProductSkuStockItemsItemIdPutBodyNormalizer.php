@@ -40,8 +40,10 @@ class V1ProductsProductSkuStockItemsItemIdPutBodyNormalizer implements Denormali
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('stockItem', $data)) {
+        if (\array_key_exists('stockItem', $data) && $data['stockItem'] !== null) {
             $object->setStockItem($this->denormalizer->denormalize($data['stockItem'], 'Kiboko\\Magento\\V2_3\\Model\\CatalogInventoryDataStockItemInterface', 'json', $context));
+        } elseif (\array_key_exists('stockItem', $data) && $data['stockItem'] === null) {
+            $object->setStockItem(null);
         }
         return $object;
     }

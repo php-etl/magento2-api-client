@@ -7,44 +7,44 @@ class CatalogDataProductCustomOptionTypeInterface
     /**
      * Option type code
      *
-     * @var string
+     * @var string|null
      */
     protected $code;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductCustomOptionTypeInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Option type group
      *
-     * @var string
+     * @var string|null
      */
     protected $group;
     /**
      * Option type label
      *
-     * @var string
+     * @var string|null
      */
     protected $label;
     /**
      * Option type code
      *
-     * @return string
+     * @return string|null
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
     /**
      * Option type code
      *
-     * @param string $code
+     * @param string|null $code
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
         return $this;
@@ -73,20 +73,20 @@ class CatalogDataProductCustomOptionTypeInterface
     /**
      * Option type group
      *
-     * @return string
+     * @return string|null
      */
-    public function getGroup(): string
+    public function getGroup(): ?string
     {
         return $this->group;
     }
     /**
      * Option type group
      *
-     * @param string $group
+     * @param string|null $group
      *
      * @return self
      */
-    public function setGroup(string $group): self
+    public function setGroup(?string $group): self
     {
         $this->group = $group;
         return $this;
@@ -94,20 +94,20 @@ class CatalogDataProductCustomOptionTypeInterface
     /**
      * Option type label
      *
-     * @return string
+     * @return string|null
      */
-    public function getLabel(): string
+    public function getLabel(): ?string
     {
         return $this->label;
     }
     /**
      * Option type label
      *
-     * @param string $label
+     * @param string|null $label
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(?string $label): self
     {
         $this->label = $label;
         return $this;

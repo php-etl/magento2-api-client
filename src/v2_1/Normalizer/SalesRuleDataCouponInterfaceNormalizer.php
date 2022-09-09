@@ -40,38 +40,60 @@ class SalesRuleDataCouponInterfaceNormalizer implements DenormalizerInterface, N
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('code', $data)) {
+        if (\array_key_exists('code', $data) && $data['code'] !== null) {
             $object->setCode($data['code']);
+        } elseif (\array_key_exists('code', $data) && $data['code'] === null) {
+            $object->setCode(null);
         }
-        if (\array_key_exists('coupon_id', $data)) {
+        if (\array_key_exists('coupon_id', $data) && $data['coupon_id'] !== null) {
             $object->setCouponId($data['coupon_id']);
+        } elseif (\array_key_exists('coupon_id', $data) && $data['coupon_id'] === null) {
+            $object->setCouponId(null);
         }
-        if (\array_key_exists('created_at', $data)) {
+        if (\array_key_exists('created_at', $data) && $data['created_at'] !== null) {
             $object->setCreatedAt($data['created_at']);
+        } elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+            $object->setCreatedAt(null);
         }
-        if (\array_key_exists('expiration_date', $data)) {
+        if (\array_key_exists('expiration_date', $data) && $data['expiration_date'] !== null) {
             $object->setExpirationDate($data['expiration_date']);
+        } elseif (\array_key_exists('expiration_date', $data) && $data['expiration_date'] === null) {
+            $object->setExpirationDate(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('is_primary', $data)) {
+        if (\array_key_exists('is_primary', $data) && $data['is_primary'] !== null) {
             $object->setIsPrimary($data['is_primary']);
+        } elseif (\array_key_exists('is_primary', $data) && $data['is_primary'] === null) {
+            $object->setIsPrimary(null);
         }
-        if (\array_key_exists('rule_id', $data)) {
+        if (\array_key_exists('rule_id', $data) && $data['rule_id'] !== null) {
             $object->setRuleId($data['rule_id']);
+        } elseif (\array_key_exists('rule_id', $data) && $data['rule_id'] === null) {
+            $object->setRuleId(null);
         }
-        if (\array_key_exists('times_used', $data)) {
+        if (\array_key_exists('times_used', $data) && $data['times_used'] !== null) {
             $object->setTimesUsed($data['times_used']);
+        } elseif (\array_key_exists('times_used', $data) && $data['times_used'] === null) {
+            $object->setTimesUsed(null);
         }
-        if (\array_key_exists('type', $data)) {
+        if (\array_key_exists('type', $data) && $data['type'] !== null) {
             $object->setType($data['type']);
+        } elseif (\array_key_exists('type', $data) && $data['type'] === null) {
+            $object->setType(null);
         }
-        if (\array_key_exists('usage_limit', $data)) {
+        if (\array_key_exists('usage_limit', $data) && $data['usage_limit'] !== null) {
             $object->setUsageLimit($data['usage_limit']);
+        } elseif (\array_key_exists('usage_limit', $data) && $data['usage_limit'] === null) {
+            $object->setUsageLimit(null);
         }
-        if (\array_key_exists('usage_per_customer', $data)) {
+        if (\array_key_exists('usage_per_customer', $data) && $data['usage_per_customer'] !== null) {
             $object->setUsagePerCustomer($data['usage_per_customer']);
+        } elseif (\array_key_exists('usage_per_customer', $data) && $data['usage_per_customer'] === null) {
+            $object->setUsagePerCustomer(null);
         }
         return $object;
     }

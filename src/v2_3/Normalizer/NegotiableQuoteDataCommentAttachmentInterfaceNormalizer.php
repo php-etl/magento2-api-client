@@ -40,23 +40,35 @@ class NegotiableQuoteDataCommentAttachmentInterfaceNormalizer implements Denorma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('attachment_id', $data)) {
+        if (\array_key_exists('attachment_id', $data) && $data['attachment_id'] !== null) {
             $object->setAttachmentId($data['attachment_id']);
+        } elseif (\array_key_exists('attachment_id', $data) && $data['attachment_id'] === null) {
+            $object->setAttachmentId(null);
         }
-        if (\array_key_exists('comment_id', $data)) {
+        if (\array_key_exists('comment_id', $data) && $data['comment_id'] !== null) {
             $object->setCommentId($data['comment_id']);
+        } elseif (\array_key_exists('comment_id', $data) && $data['comment_id'] === null) {
+            $object->setCommentId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('file_name', $data)) {
+        if (\array_key_exists('file_name', $data) && $data['file_name'] !== null) {
             $object->setFileName($data['file_name']);
+        } elseif (\array_key_exists('file_name', $data) && $data['file_name'] === null) {
+            $object->setFileName(null);
         }
-        if (\array_key_exists('file_path', $data)) {
+        if (\array_key_exists('file_path', $data) && $data['file_path'] !== null) {
             $object->setFilePath($data['file_path']);
+        } elseif (\array_key_exists('file_path', $data) && $data['file_path'] === null) {
+            $object->setFilePath(null);
         }
-        if (\array_key_exists('file_type', $data)) {
+        if (\array_key_exists('file_type', $data) && $data['file_type'] !== null) {
             $object->setFileType($data['file_type']);
+        } elseif (\array_key_exists('file_type', $data) && $data['file_type'] === null) {
+            $object->setFileType(null);
         }
         return $object;
     }

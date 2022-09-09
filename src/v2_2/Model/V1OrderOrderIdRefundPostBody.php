@@ -7,50 +7,50 @@ class V1OrderOrderIdRefundPostBody
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $appendComment;
     /**
      * Interface CreditmemoCreationArgumentsInterface
      *
-     * @var SalesDataCreditmemoCreationArgumentsInterface
+     * @var SalesDataCreditmemoCreationArgumentsInterface|null
      */
     protected $arguments;
     /**
      * Interface CreditmemoCommentCreationInterface
      *
-     * @var SalesDataCreditmemoCommentCreationInterface
+     * @var SalesDataCreditmemoCommentCreationInterface|null
      */
     protected $comment;
     /**
      *
      *
-     * @var SalesDataCreditmemoItemCreationInterface[]
+     * @var SalesDataCreditmemoItemCreationInterface[]|null
      */
     protected $items;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $notify;
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getAppendComment(): bool
+    public function getAppendComment(): ?bool
     {
         return $this->appendComment;
     }
     /**
      *
      *
-     * @param bool $appendComment
+     * @param bool|null $appendComment
      *
      * @return self
      */
-    public function setAppendComment(bool $appendComment): self
+    public function setAppendComment(?bool $appendComment): self
     {
         $this->appendComment = $appendComment;
         return $this;
@@ -58,20 +58,20 @@ class V1OrderOrderIdRefundPostBody
     /**
      * Interface CreditmemoCreationArgumentsInterface
      *
-     * @return SalesDataCreditmemoCreationArgumentsInterface
+     * @return SalesDataCreditmemoCreationArgumentsInterface|null
      */
-    public function getArguments(): SalesDataCreditmemoCreationArgumentsInterface
+    public function getArguments(): ?SalesDataCreditmemoCreationArgumentsInterface
     {
         return $this->arguments;
     }
     /**
      * Interface CreditmemoCreationArgumentsInterface
      *
-     * @param SalesDataCreditmemoCreationArgumentsInterface $arguments
+     * @param SalesDataCreditmemoCreationArgumentsInterface|null $arguments
      *
      * @return self
      */
-    public function setArguments(SalesDataCreditmemoCreationArgumentsInterface $arguments): self
+    public function setArguments(?SalesDataCreditmemoCreationArgumentsInterface $arguments): self
     {
         $this->arguments = $arguments;
         return $this;
@@ -79,20 +79,20 @@ class V1OrderOrderIdRefundPostBody
     /**
      * Interface CreditmemoCommentCreationInterface
      *
-     * @return SalesDataCreditmemoCommentCreationInterface
+     * @return SalesDataCreditmemoCommentCreationInterface|null
      */
-    public function getComment(): SalesDataCreditmemoCommentCreationInterface
+    public function getComment(): ?SalesDataCreditmemoCommentCreationInterface
     {
         return $this->comment;
     }
     /**
      * Interface CreditmemoCommentCreationInterface
      *
-     * @param SalesDataCreditmemoCommentCreationInterface $comment
+     * @param SalesDataCreditmemoCommentCreationInterface|null $comment
      *
      * @return self
      */
-    public function setComment(SalesDataCreditmemoCommentCreationInterface $comment): self
+    public function setComment(?SalesDataCreditmemoCommentCreationInterface $comment): self
     {
         $this->comment = $comment;
         return $this;
@@ -100,20 +100,20 @@ class V1OrderOrderIdRefundPostBody
     /**
      *
      *
-     * @return SalesDataCreditmemoItemCreationInterface[]
+     * @return SalesDataCreditmemoItemCreationInterface[]|null
      */
-    public function getItems(): array
+    public function getItems(): ?array
     {
         return $this->items;
     }
     /**
      *
      *
-     * @param SalesDataCreditmemoItemCreationInterface[] $items
+     * @param SalesDataCreditmemoItemCreationInterface[]|null $items
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(?array $items): self
     {
         $this->items = $items;
         return $this;
@@ -121,20 +121,20 @@ class V1OrderOrderIdRefundPostBody
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getNotify(): bool
+    public function getNotify(): ?bool
     {
         return $this->notify;
     }
     /**
      *
      *
-     * @param bool $notify
+     * @param bool|null $notify
      *
      * @return self
      */
-    public function setNotify(bool $notify): self
+    public function setNotify(?bool $notify): self
     {
         $this->notify = $notify;
         return $this;

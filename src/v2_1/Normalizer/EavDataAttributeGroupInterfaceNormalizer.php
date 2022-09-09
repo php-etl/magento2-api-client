@@ -40,17 +40,25 @@ class EavDataAttributeGroupInterfaceNormalizer implements DenormalizerInterface,
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('attribute_group_id', $data)) {
+        if (\array_key_exists('attribute_group_id', $data) && $data['attribute_group_id'] !== null) {
             $object->setAttributeGroupId($data['attribute_group_id']);
+        } elseif (\array_key_exists('attribute_group_id', $data) && $data['attribute_group_id'] === null) {
+            $object->setAttributeGroupId(null);
         }
-        if (\array_key_exists('attribute_group_name', $data)) {
+        if (\array_key_exists('attribute_group_name', $data) && $data['attribute_group_name'] !== null) {
             $object->setAttributeGroupName($data['attribute_group_name']);
+        } elseif (\array_key_exists('attribute_group_name', $data) && $data['attribute_group_name'] === null) {
+            $object->setAttributeGroupName(null);
         }
-        if (\array_key_exists('attribute_set_id', $data)) {
+        if (\array_key_exists('attribute_set_id', $data) && $data['attribute_set_id'] !== null) {
             $object->setAttributeSetId($data['attribute_set_id']);
+        } elseif (\array_key_exists('attribute_set_id', $data) && $data['attribute_set_id'] === null) {
+            $object->setAttributeSetId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_1\\Model\\EavDataAttributeGroupExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
         return $object;
     }

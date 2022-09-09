@@ -40,8 +40,10 @@ class V1CartsCartIdGiftCardsPutBodyNormalizer implements DenormalizerInterface, 
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('giftCardAccountData', $data)) {
+        if (\array_key_exists('giftCardAccountData', $data) && $data['giftCardAccountData'] !== null) {
             $object->setGiftCardAccountData($this->denormalizer->denormalize($data['giftCardAccountData'], 'Kiboko\\Magento\\V2_2\\Model\\GiftCardAccountDataGiftCardAccountInterface', 'json', $context));
+        } elseif (\array_key_exists('giftCardAccountData', $data) && $data['giftCardAccountData'] === null) {
+            $object->setGiftCardAccountData(null);
         }
         return $object;
     }

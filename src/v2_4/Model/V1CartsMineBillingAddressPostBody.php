@@ -7,32 +7,32 @@ class V1CartsMineBillingAddressPostBody
     /**
      * Interface AddressInterface
      *
-     * @var QuoteDataAddressInterface
+     * @var QuoteDataAddressInterface|null
      */
     protected $address;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $useForShipping;
     /**
      * Interface AddressInterface
      *
-     * @return QuoteDataAddressInterface
+     * @return QuoteDataAddressInterface|null
      */
-    public function getAddress(): QuoteDataAddressInterface
+    public function getAddress(): ?QuoteDataAddressInterface
     {
         return $this->address;
     }
     /**
      * Interface AddressInterface
      *
-     * @param QuoteDataAddressInterface $address
+     * @param QuoteDataAddressInterface|null $address
      *
      * @return self
      */
-    public function setAddress(QuoteDataAddressInterface $address): self
+    public function setAddress(?QuoteDataAddressInterface $address): self
     {
         $this->address = $address;
         return $this;
@@ -40,20 +40,20 @@ class V1CartsMineBillingAddressPostBody
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getUseForShipping(): bool
+    public function getUseForShipping(): ?bool
     {
         return $this->useForShipping;
     }
     /**
      *
      *
-     * @param bool $useForShipping
+     * @param bool|null $useForShipping
      *
      * @return self
      */
-    public function setUseForShipping(bool $useForShipping): self
+    public function setUseForShipping(?bool $useForShipping): self
     {
         $this->useForShipping = $useForShipping;
         return $this;

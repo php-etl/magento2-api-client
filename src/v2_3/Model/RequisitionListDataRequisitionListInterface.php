@@ -7,62 +7,62 @@ class RequisitionListDataRequisitionListInterface
     /**
      * Customer ID
      *
-     * @var int
+     * @var int|null
      */
     protected $customerId;
     /**
      * Requisition List Description
      *
-     * @var string
+     * @var string|null
      */
     protected $description;
     /**
      * ExtensionInterface class for @see \Magento\RequisitionList\Api\Data\RequisitionListInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Requisition List ID
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Requisition List Items
      *
-     * @var RequisitionListDataRequisitionListItemInterface[]
+     * @var RequisitionListDataRequisitionListItemInterface[]|null
      */
     protected $items;
     /**
      * Requisition List Name
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * Requisition List Update Time
      *
-     * @var string
+     * @var string|null
      */
     protected $updatedAt;
     /**
      * Customer ID
      *
-     * @return int
+     * @return int|null
      */
-    public function getCustomerId(): int
+    public function getCustomerId(): ?int
     {
         return $this->customerId;
     }
     /**
      * Customer ID
      *
-     * @param int $customerId
+     * @param int|null $customerId
      *
      * @return self
      */
-    public function setCustomerId(int $customerId): self
+    public function setCustomerId(?int $customerId): self
     {
         $this->customerId = $customerId;
         return $this;
@@ -70,20 +70,20 @@ class RequisitionListDataRequisitionListInterface
     /**
      * Requisition List Description
      *
-     * @return string
+     * @return string|null
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
     /**
      * Requisition List Description
      *
-     * @param string $description
+     * @param string|null $description
      *
      * @return self
      */
-    public function setDescription(string $description): self
+    public function setDescription(?string $description): self
     {
         $this->description = $description;
         return $this;
@@ -112,20 +112,20 @@ class RequisitionListDataRequisitionListInterface
     /**
      * Requisition List ID
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * Requisition List ID
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -133,20 +133,20 @@ class RequisitionListDataRequisitionListInterface
     /**
      * Requisition List Items
      *
-     * @return RequisitionListDataRequisitionListItemInterface[]
+     * @return RequisitionListDataRequisitionListItemInterface[]|null
      */
-    public function getItems(): array
+    public function getItems(): ?array
     {
         return $this->items;
     }
     /**
      * Requisition List Items
      *
-     * @param RequisitionListDataRequisitionListItemInterface[] $items
+     * @param RequisitionListDataRequisitionListItemInterface[]|null $items
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(?array $items): self
     {
         $this->items = $items;
         return $this;
@@ -154,20 +154,20 @@ class RequisitionListDataRequisitionListInterface
     /**
      * Requisition List Name
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      * Requisition List Name
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;
@@ -175,20 +175,20 @@ class RequisitionListDataRequisitionListInterface
     /**
      * Requisition List Update Time
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt(): ?string
     {
         return $this->updatedAt;
     }
     /**
      * Requisition List Update Time
      *
-     * @param string $updatedAt
+     * @param string|null $updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(?string $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
         return $this;

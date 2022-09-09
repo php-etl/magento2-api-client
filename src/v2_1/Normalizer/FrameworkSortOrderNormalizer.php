@@ -40,11 +40,15 @@ class FrameworkSortOrderNormalizer implements DenormalizerInterface, NormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('direction', $data)) {
+        if (\array_key_exists('direction', $data) && $data['direction'] !== null) {
             $object->setDirection($data['direction']);
+        } elseif (\array_key_exists('direction', $data) && $data['direction'] === null) {
+            $object->setDirection(null);
         }
-        if (\array_key_exists('field', $data)) {
+        if (\array_key_exists('field', $data) && $data['field'] !== null) {
             $object->setField($data['field']);
+        } elseif (\array_key_exists('field', $data) && $data['field'] === null) {
+            $object->setField(null);
         }
         return $object;
     }

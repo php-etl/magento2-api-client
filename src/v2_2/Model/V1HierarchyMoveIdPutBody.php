@@ -7,26 +7,26 @@ class V1HierarchyMoveIdPutBody
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $newParentId;
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getNewParentId(): int
+    public function getNewParentId(): ?int
     {
         return $this->newParentId;
     }
     /**
      *
      *
-     * @param int $newParentId
+     * @param int|null $newParentId
      *
      * @return self
      */
-    public function setNewParentId(int $newParentId): self
+    public function setNewParentId(?int $newParentId): self
     {
         $this->newParentId = $newParentId;
         return $this;

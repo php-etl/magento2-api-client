@@ -40,14 +40,20 @@ class V1EavAttributeSetsPostBodyNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('attributeSet', $data)) {
+        if (\array_key_exists('attributeSet', $data) && $data['attributeSet'] !== null) {
             $object->setAttributeSet($this->denormalizer->denormalize($data['attributeSet'], 'Kiboko\\Magento\\V2_2\\Model\\EavDataAttributeSetInterface', 'json', $context));
+        } elseif (\array_key_exists('attributeSet', $data) && $data['attributeSet'] === null) {
+            $object->setAttributeSet(null);
         }
-        if (\array_key_exists('entityTypeCode', $data)) {
+        if (\array_key_exists('entityTypeCode', $data) && $data['entityTypeCode'] !== null) {
             $object->setEntityTypeCode($data['entityTypeCode']);
+        } elseif (\array_key_exists('entityTypeCode', $data) && $data['entityTypeCode'] === null) {
+            $object->setEntityTypeCode(null);
         }
-        if (\array_key_exists('skeletonId', $data)) {
+        if (\array_key_exists('skeletonId', $data) && $data['skeletonId'] !== null) {
             $object->setSkeletonId($data['skeletonId']);
+        } elseif (\array_key_exists('skeletonId', $data) && $data['skeletonId'] === null) {
+            $object->setSkeletonId(null);
         }
         return $object;
     }

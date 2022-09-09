@@ -7,80 +7,80 @@ class BundleDataLinkInterface
     /**
      * Whether quantity could be changed
      *
-     * @var int
+     * @var int|null
      */
     protected $canChangeQuantity;
     /**
      * ExtensionInterface class for @see \Magento\Bundle\Api\Data\LinkInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * The identifier
      *
-     * @var string
+     * @var string|null
      */
     protected $id;
     /**
      * Is default
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isDefault;
     /**
      * Option id
      *
-     * @var int
+     * @var int|null
      */
     protected $optionId;
     /**
      * Position
      *
-     * @var int
+     * @var int|null
      */
     protected $position;
     /**
      * Price
      *
-     * @var float
+     * @var float|null
      */
     protected $price;
     /**
      * Price type
      *
-     * @var int
+     * @var int|null
      */
     protected $priceType;
     /**
      * Qty
      *
-     * @var float
+     * @var float|null
      */
     protected $qty;
     /**
      * Linked product sku
      *
-     * @var string
+     * @var string|null
      */
     protected $sku;
     /**
      * Whether quantity could be changed
      *
-     * @return int
+     * @return int|null
      */
-    public function getCanChangeQuantity(): int
+    public function getCanChangeQuantity(): ?int
     {
         return $this->canChangeQuantity;
     }
     /**
      * Whether quantity could be changed
      *
-     * @param int $canChangeQuantity
+     * @param int|null $canChangeQuantity
      *
      * @return self
      */
-    public function setCanChangeQuantity(int $canChangeQuantity): self
+    public function setCanChangeQuantity(?int $canChangeQuantity): self
     {
         $this->canChangeQuantity = $canChangeQuantity;
         return $this;
@@ -109,20 +109,20 @@ class BundleDataLinkInterface
     /**
      * The identifier
      *
-     * @return string
+     * @return string|null
      */
-    public function getId(): string
+    public function getId(): ?string
     {
         return $this->id;
     }
     /**
      * The identifier
      *
-     * @param string $id
+     * @param string|null $id
      *
      * @return self
      */
-    public function setId(string $id): self
+    public function setId(?string $id): self
     {
         $this->id = $id;
         return $this;
@@ -130,20 +130,20 @@ class BundleDataLinkInterface
     /**
      * Is default
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsDefault(): bool
+    public function getIsDefault(): ?bool
     {
         return $this->isDefault;
     }
     /**
      * Is default
      *
-     * @param bool $isDefault
+     * @param bool|null $isDefault
      *
      * @return self
      */
-    public function setIsDefault(bool $isDefault): self
+    public function setIsDefault(?bool $isDefault): self
     {
         $this->isDefault = $isDefault;
         return $this;
@@ -151,20 +151,20 @@ class BundleDataLinkInterface
     /**
      * Option id
      *
-     * @return int
+     * @return int|null
      */
-    public function getOptionId(): int
+    public function getOptionId(): ?int
     {
         return $this->optionId;
     }
     /**
      * Option id
      *
-     * @param int $optionId
+     * @param int|null $optionId
      *
      * @return self
      */
-    public function setOptionId(int $optionId): self
+    public function setOptionId(?int $optionId): self
     {
         $this->optionId = $optionId;
         return $this;
@@ -172,20 +172,20 @@ class BundleDataLinkInterface
     /**
      * Position
      *
-     * @return int
+     * @return int|null
      */
-    public function getPosition(): int
+    public function getPosition(): ?int
     {
         return $this->position;
     }
     /**
      * Position
      *
-     * @param int $position
+     * @param int|null $position
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(?int $position): self
     {
         $this->position = $position;
         return $this;
@@ -193,20 +193,20 @@ class BundleDataLinkInterface
     /**
      * Price
      *
-     * @return float
+     * @return float|null
      */
-    public function getPrice(): float
+    public function getPrice(): ?float
     {
         return $this->price;
     }
     /**
      * Price
      *
-     * @param float $price
+     * @param float|null $price
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(?float $price): self
     {
         $this->price = $price;
         return $this;
@@ -214,20 +214,20 @@ class BundleDataLinkInterface
     /**
      * Price type
      *
-     * @return int
+     * @return int|null
      */
-    public function getPriceType(): int
+    public function getPriceType(): ?int
     {
         return $this->priceType;
     }
     /**
      * Price type
      *
-     * @param int $priceType
+     * @param int|null $priceType
      *
      * @return self
      */
-    public function setPriceType(int $priceType): self
+    public function setPriceType(?int $priceType): self
     {
         $this->priceType = $priceType;
         return $this;
@@ -235,20 +235,20 @@ class BundleDataLinkInterface
     /**
      * Qty
      *
-     * @return float
+     * @return float|null
      */
-    public function getQty(): float
+    public function getQty(): ?float
     {
         return $this->qty;
     }
     /**
      * Qty
      *
-     * @param float $qty
+     * @param float|null $qty
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(?float $qty): self
     {
         $this->qty = $qty;
         return $this;
@@ -256,20 +256,20 @@ class BundleDataLinkInterface
     /**
      * Linked product sku
      *
-     * @return string
+     * @return string|null
      */
-    public function getSku(): string
+    public function getSku(): ?string
     {
         return $this->sku;
     }
     /**
      * Linked product sku
      *
-     * @param string $sku
+     * @param string|null $sku
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(?string $sku): self
     {
         $this->sku = $sku;
         return $this;

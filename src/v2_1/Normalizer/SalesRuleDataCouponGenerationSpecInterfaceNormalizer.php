@@ -40,32 +40,50 @@ class SalesRuleDataCouponGenerationSpecInterfaceNormalizer implements Denormaliz
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('delimiter', $data)) {
+        if (\array_key_exists('delimiter', $data) && $data['delimiter'] !== null) {
             $object->setDelimiter($data['delimiter']);
+        } elseif (\array_key_exists('delimiter', $data) && $data['delimiter'] === null) {
+            $object->setDelimiter(null);
         }
-        if (\array_key_exists('delimiter_at_every', $data)) {
+        if (\array_key_exists('delimiter_at_every', $data) && $data['delimiter_at_every'] !== null) {
             $object->setDelimiterAtEvery($data['delimiter_at_every']);
+        } elseif (\array_key_exists('delimiter_at_every', $data) && $data['delimiter_at_every'] === null) {
+            $object->setDelimiterAtEvery(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('format', $data)) {
+        if (\array_key_exists('format', $data) && $data['format'] !== null) {
             $object->setFormat($data['format']);
+        } elseif (\array_key_exists('format', $data) && $data['format'] === null) {
+            $object->setFormat(null);
         }
-        if (\array_key_exists('length', $data)) {
+        if (\array_key_exists('length', $data) && $data['length'] !== null) {
             $object->setLength($data['length']);
+        } elseif (\array_key_exists('length', $data) && $data['length'] === null) {
+            $object->setLength(null);
         }
-        if (\array_key_exists('prefix', $data)) {
+        if (\array_key_exists('prefix', $data) && $data['prefix'] !== null) {
             $object->setPrefix($data['prefix']);
+        } elseif (\array_key_exists('prefix', $data) && $data['prefix'] === null) {
+            $object->setPrefix(null);
         }
-        if (\array_key_exists('quantity', $data)) {
+        if (\array_key_exists('quantity', $data) && $data['quantity'] !== null) {
             $object->setQuantity($data['quantity']);
+        } elseif (\array_key_exists('quantity', $data) && $data['quantity'] === null) {
+            $object->setQuantity(null);
         }
-        if (\array_key_exists('rule_id', $data)) {
+        if (\array_key_exists('rule_id', $data) && $data['rule_id'] !== null) {
             $object->setRuleId($data['rule_id']);
+        } elseif (\array_key_exists('rule_id', $data) && $data['rule_id'] === null) {
+            $object->setRuleId(null);
         }
-        if (\array_key_exists('suffix', $data)) {
+        if (\array_key_exists('suffix', $data) && $data['suffix'] !== null) {
             $object->setSuffix($data['suffix']);
+        } elseif (\array_key_exists('suffix', $data) && $data['suffix'] === null) {
+            $object->setSuffix(null);
         }
         return $object;
     }

@@ -7,62 +7,62 @@ class CompanyCreditDataCreditDataInterface
     /**
      * Available Limit.
      *
-     * @var float
+     * @var float|null
      */
     protected $availableLimit;
     /**
      * Balance.
      *
-     * @var float
+     * @var float|null
      */
     protected $balance;
     /**
      * Company id.
      *
-     * @var int
+     * @var int|null
      */
     protected $companyId;
     /**
      * Credit Limit.
      *
-     * @var float
+     * @var float|null
      */
     protected $creditLimit;
     /**
      * Currency Code.
      *
-     * @var string
+     * @var string|null
      */
     protected $currencyCode;
     /**
      * Exceed Limit.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $exceedLimit;
     /**
      * ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Available Limit.
      *
-     * @return float
+     * @return float|null
      */
-    public function getAvailableLimit(): float
+    public function getAvailableLimit(): ?float
     {
         return $this->availableLimit;
     }
     /**
      * Available Limit.
      *
-     * @param float $availableLimit
+     * @param float|null $availableLimit
      *
      * @return self
      */
-    public function setAvailableLimit(float $availableLimit): self
+    public function setAvailableLimit(?float $availableLimit): self
     {
         $this->availableLimit = $availableLimit;
         return $this;
@@ -70,20 +70,20 @@ class CompanyCreditDataCreditDataInterface
     /**
      * Balance.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBalance(): float
+    public function getBalance(): ?float
     {
         return $this->balance;
     }
     /**
      * Balance.
      *
-     * @param float $balance
+     * @param float|null $balance
      *
      * @return self
      */
-    public function setBalance(float $balance): self
+    public function setBalance(?float $balance): self
     {
         $this->balance = $balance;
         return $this;
@@ -91,20 +91,20 @@ class CompanyCreditDataCreditDataInterface
     /**
      * Company id.
      *
-     * @return int
+     * @return int|null
      */
-    public function getCompanyId(): int
+    public function getCompanyId(): ?int
     {
         return $this->companyId;
     }
     /**
      * Company id.
      *
-     * @param int $companyId
+     * @param int|null $companyId
      *
      * @return self
      */
-    public function setCompanyId(int $companyId): self
+    public function setCompanyId(?int $companyId): self
     {
         $this->companyId = $companyId;
         return $this;
@@ -112,20 +112,20 @@ class CompanyCreditDataCreditDataInterface
     /**
      * Credit Limit.
      *
-     * @return float
+     * @return float|null
      */
-    public function getCreditLimit(): float
+    public function getCreditLimit(): ?float
     {
         return $this->creditLimit;
     }
     /**
      * Credit Limit.
      *
-     * @param float $creditLimit
+     * @param float|null $creditLimit
      *
      * @return self
      */
-    public function setCreditLimit(float $creditLimit): self
+    public function setCreditLimit(?float $creditLimit): self
     {
         $this->creditLimit = $creditLimit;
         return $this;
@@ -133,20 +133,20 @@ class CompanyCreditDataCreditDataInterface
     /**
      * Currency Code.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCurrencyCode(): string
+    public function getCurrencyCode(): ?string
     {
         return $this->currencyCode;
     }
     /**
      * Currency Code.
      *
-     * @param string $currencyCode
+     * @param string|null $currencyCode
      *
      * @return self
      */
-    public function setCurrencyCode(string $currencyCode): self
+    public function setCurrencyCode(?string $currencyCode): self
     {
         $this->currencyCode = $currencyCode;
         return $this;
@@ -154,20 +154,20 @@ class CompanyCreditDataCreditDataInterface
     /**
      * Exceed Limit.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getExceedLimit(): bool
+    public function getExceedLimit(): ?bool
     {
         return $this->exceedLimit;
     }
     /**
      * Exceed Limit.
      *
-     * @param bool $exceedLimit
+     * @param bool|null $exceedLimit
      *
      * @return self
      */
-    public function setExceedLimit(bool $exceedLimit): self
+    public function setExceedLimit(?bool $exceedLimit): self
     {
         $this->exceedLimit = $exceedLimit;
         return $this;
@@ -175,20 +175,20 @@ class CompanyCreditDataCreditDataInterface
     /**
      * ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * ID.
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;

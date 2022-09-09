@@ -40,8 +40,10 @@ class V1CartsMineCollectionPointSelectPostBodyNormalizer implements Denormalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('entityId', $data)) {
+        if (\array_key_exists('entityId', $data) && $data['entityId'] !== null) {
             $object->setEntityId($data['entityId']);
+        } elseif (\array_key_exists('entityId', $data) && $data['entityId'] === null) {
+            $object->setEntityId(null);
         }
         return $object;
     }

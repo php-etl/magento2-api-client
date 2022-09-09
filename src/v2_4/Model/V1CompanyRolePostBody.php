@@ -7,26 +7,26 @@ class V1CompanyRolePostBody
     /**
      * Role data transfer object interface.
      *
-     * @var CompanyDataRoleInterface
+     * @var CompanyDataRoleInterface|null
      */
     protected $role;
     /**
      * Role data transfer object interface.
      *
-     * @return CompanyDataRoleInterface
+     * @return CompanyDataRoleInterface|null
      */
-    public function getRole(): CompanyDataRoleInterface
+    public function getRole(): ?CompanyDataRoleInterface
     {
         return $this->role;
     }
     /**
      * Role data transfer object interface.
      *
-     * @param CompanyDataRoleInterface $role
+     * @param CompanyDataRoleInterface|null $role
      *
      * @return self
      */
-    public function setRole(CompanyDataRoleInterface $role): self
+    public function setRole(?CompanyDataRoleInterface $role): self
     {
         $this->role = $role;
         return $this;

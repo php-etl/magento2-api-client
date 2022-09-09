@@ -40,8 +40,10 @@ class V1CategoriesIdPutBodyNormalizer implements DenormalizerInterface, Normaliz
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('category', $data)) {
+        if (\array_key_exists('category', $data) && $data['category'] !== null) {
             $object->setCategory($this->denormalizer->denormalize($data['category'], 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataCategoryInterface', 'json', $context));
+        } elseif (\array_key_exists('category', $data) && $data['category'] === null) {
+            $object->setCategory(null);
         }
         return $object;
     }

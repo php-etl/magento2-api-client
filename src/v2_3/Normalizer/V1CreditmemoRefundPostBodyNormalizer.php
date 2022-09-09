@@ -40,11 +40,15 @@ class V1CreditmemoRefundPostBodyNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('creditmemo', $data)) {
+        if (\array_key_exists('creditmemo', $data) && $data['creditmemo'] !== null) {
             $object->setCreditmemo($this->denormalizer->denormalize($data['creditmemo'], 'Kiboko\\Magento\\V2_3\\Model\\SalesDataCreditmemoInterface', 'json', $context));
+        } elseif (\array_key_exists('creditmemo', $data) && $data['creditmemo'] === null) {
+            $object->setCreditmemo(null);
         }
-        if (\array_key_exists('offlineRequested', $data)) {
+        if (\array_key_exists('offlineRequested', $data) && $data['offlineRequested'] !== null) {
             $object->setOfflineRequested($data['offlineRequested']);
+        } elseif (\array_key_exists('offlineRequested', $data) && $data['offlineRequested'] === null) {
+            $object->setOfflineRequested(null);
         }
         return $object;
     }

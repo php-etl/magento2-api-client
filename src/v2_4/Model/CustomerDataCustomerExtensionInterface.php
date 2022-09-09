@@ -7,44 +7,44 @@ class CustomerDataCustomerExtensionInterface
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $amazonId;
     /**
      * Extended customer custom attributes interface.
      *
-     * @var CompanyDataCompanyCustomerInterface
+     * @var CompanyDataCompanyCustomerInterface|null
      */
     protected $companyAttributes;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isSubscribed;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $vertexCustomerCode;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getAmazonId(): string
+    public function getAmazonId(): ?string
     {
         return $this->amazonId;
     }
     /**
      *
      *
-     * @param string $amazonId
+     * @param string|null $amazonId
      *
      * @return self
      */
-    public function setAmazonId(string $amazonId): self
+    public function setAmazonId(?string $amazonId): self
     {
         $this->amazonId = $amazonId;
         return $this;
@@ -52,20 +52,20 @@ class CustomerDataCustomerExtensionInterface
     /**
      * Extended customer custom attributes interface.
      *
-     * @return CompanyDataCompanyCustomerInterface
+     * @return CompanyDataCompanyCustomerInterface|null
      */
-    public function getCompanyAttributes(): CompanyDataCompanyCustomerInterface
+    public function getCompanyAttributes(): ?CompanyDataCompanyCustomerInterface
     {
         return $this->companyAttributes;
     }
     /**
      * Extended customer custom attributes interface.
      *
-     * @param CompanyDataCompanyCustomerInterface $companyAttributes
+     * @param CompanyDataCompanyCustomerInterface|null $companyAttributes
      *
      * @return self
      */
-    public function setCompanyAttributes(CompanyDataCompanyCustomerInterface $companyAttributes): self
+    public function setCompanyAttributes(?CompanyDataCompanyCustomerInterface $companyAttributes): self
     {
         $this->companyAttributes = $companyAttributes;
         return $this;
@@ -73,20 +73,20 @@ class CustomerDataCustomerExtensionInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsSubscribed(): bool
+    public function getIsSubscribed(): ?bool
     {
         return $this->isSubscribed;
     }
     /**
      *
      *
-     * @param bool $isSubscribed
+     * @param bool|null $isSubscribed
      *
      * @return self
      */
-    public function setIsSubscribed(bool $isSubscribed): self
+    public function setIsSubscribed(?bool $isSubscribed): self
     {
         $this->isSubscribed = $isSubscribed;
         return $this;
@@ -94,20 +94,20 @@ class CustomerDataCustomerExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getVertexCustomerCode(): string
+    public function getVertexCustomerCode(): ?string
     {
         return $this->vertexCustomerCode;
     }
     /**
      *
      *
-     * @param string $vertexCustomerCode
+     * @param string|null $vertexCustomerCode
      *
      * @return self
      */
-    public function setVertexCustomerCode(string $vertexCustomerCode): self
+    public function setVertexCustomerCode(?string $vertexCustomerCode): self
     {
         $this->vertexCustomerCode = $vertexCustomerCode;
         return $this;

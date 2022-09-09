@@ -40,8 +40,10 @@ class V1HierarchyMoveIdPutBodyNormalizer implements DenormalizerInterface, Norma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('newParentId', $data)) {
+        if (\array_key_exists('newParentId', $data) && $data['newParentId'] !== null) {
             $object->setNewParentId($data['newParentId']);
+        } elseif (\array_key_exists('newParentId', $data) && $data['newParentId'] === null) {
+            $object->setNewParentId(null);
         }
         return $object;
     }

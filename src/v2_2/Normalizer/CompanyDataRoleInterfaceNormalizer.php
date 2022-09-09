@@ -40,24 +40,34 @@ class CompanyDataRoleInterfaceNormalizer implements DenormalizerInterface, Norma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('company_id', $data)) {
+        if (\array_key_exists('company_id', $data) && $data['company_id'] !== null) {
             $object->setCompanyId($data['company_id']);
+        } elseif (\array_key_exists('company_id', $data) && $data['company_id'] === null) {
+            $object->setCompanyId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('permissions', $data)) {
+        if (\array_key_exists('permissions', $data) && $data['permissions'] !== null) {
             $values = array();
             foreach ($data['permissions'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\CompanyDataPermissionInterface', 'json', $context);
             }
             $object->setPermissions($values);
+        } elseif (\array_key_exists('permissions', $data) && $data['permissions'] === null) {
+            $object->setPermissions(null);
         }
-        if (\array_key_exists('role_name', $data)) {
+        if (\array_key_exists('role_name', $data) && $data['role_name'] !== null) {
             $object->setRoleName($data['role_name']);
+        } elseif (\array_key_exists('role_name', $data) && $data['role_name'] === null) {
+            $object->setRoleName(null);
         }
         return $object;
     }

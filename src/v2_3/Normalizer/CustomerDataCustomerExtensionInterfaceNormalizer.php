@@ -40,17 +40,25 @@ class CustomerDataCustomerExtensionInterfaceNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('amazon_id', $data)) {
+        if (\array_key_exists('amazon_id', $data) && $data['amazon_id'] !== null) {
             $object->setAmazonId($data['amazon_id']);
+        } elseif (\array_key_exists('amazon_id', $data) && $data['amazon_id'] === null) {
+            $object->setAmazonId(null);
         }
-        if (\array_key_exists('company_attributes', $data)) {
+        if (\array_key_exists('company_attributes', $data) && $data['company_attributes'] !== null) {
             $object->setCompanyAttributes($this->denormalizer->denormalize($data['company_attributes'], 'Kiboko\\Magento\\V2_3\\Model\\CompanyDataCompanyCustomerInterface', 'json', $context));
+        } elseif (\array_key_exists('company_attributes', $data) && $data['company_attributes'] === null) {
+            $object->setCompanyAttributes(null);
         }
-        if (\array_key_exists('is_subscribed', $data)) {
+        if (\array_key_exists('is_subscribed', $data) && $data['is_subscribed'] !== null) {
             $object->setIsSubscribed($data['is_subscribed']);
+        } elseif (\array_key_exists('is_subscribed', $data) && $data['is_subscribed'] === null) {
+            $object->setIsSubscribed(null);
         }
-        if (\array_key_exists('vertex_customer_code', $data)) {
+        if (\array_key_exists('vertex_customer_code', $data) && $data['vertex_customer_code'] !== null) {
             $object->setVertexCustomerCode($data['vertex_customer_code']);
+        } elseif (\array_key_exists('vertex_customer_code', $data) && $data['vertex_customer_code'] === null) {
+            $object->setVertexCustomerCode(null);
         }
         return $object;
     }

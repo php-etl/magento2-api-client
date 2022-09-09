@@ -7,98 +7,98 @@ class SalesDataShipmentItemInterface
     /**
      * Additional data.
      *
-     * @var string
+     * @var string|null
      */
     protected $additionalData;
     /**
      * Description.
      *
-     * @var string
+     * @var string|null
      */
     protected $description;
     /**
      * Shipment item ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $entityId;
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\ShipmentItemInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Name.
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * Order item ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $orderItemId;
     /**
      * Parent ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $parentId;
     /**
      * Price.
      *
-     * @var float
+     * @var float|null
      */
     protected $price;
     /**
      * Product ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $productId;
     /**
      * Quantity.
      *
-     * @var float
+     * @var float|null
      */
     protected $qty;
     /**
      * Row total.
      *
-     * @var float
+     * @var float|null
      */
     protected $rowTotal;
     /**
      * SKU.
      *
-     * @var string
+     * @var string|null
      */
     protected $sku;
     /**
      * Weight.
      *
-     * @var float
+     * @var float|null
      */
     protected $weight;
     /**
      * Additional data.
      *
-     * @return string
+     * @return string|null
      */
-    public function getAdditionalData(): string
+    public function getAdditionalData(): ?string
     {
         return $this->additionalData;
     }
     /**
      * Additional data.
      *
-     * @param string $additionalData
+     * @param string|null $additionalData
      *
      * @return self
      */
-    public function setAdditionalData(string $additionalData): self
+    public function setAdditionalData(?string $additionalData): self
     {
         $this->additionalData = $additionalData;
         return $this;
@@ -106,20 +106,20 @@ class SalesDataShipmentItemInterface
     /**
      * Description.
      *
-     * @return string
+     * @return string|null
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
     /**
      * Description.
      *
-     * @param string $description
+     * @param string|null $description
      *
      * @return self
      */
-    public function setDescription(string $description): self
+    public function setDescription(?string $description): self
     {
         $this->description = $description;
         return $this;
@@ -127,20 +127,20 @@ class SalesDataShipmentItemInterface
     /**
      * Shipment item ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getEntityId(): int
+    public function getEntityId(): ?int
     {
         return $this->entityId;
     }
     /**
      * Shipment item ID.
      *
-     * @param int $entityId
+     * @param int|null $entityId
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(?int $entityId): self
     {
         $this->entityId = $entityId;
         return $this;
@@ -169,20 +169,20 @@ class SalesDataShipmentItemInterface
     /**
      * Name.
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      * Name.
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;
@@ -190,20 +190,20 @@ class SalesDataShipmentItemInterface
     /**
      * Order item ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getOrderItemId(): int
+    public function getOrderItemId(): ?int
     {
         return $this->orderItemId;
     }
     /**
      * Order item ID.
      *
-     * @param int $orderItemId
+     * @param int|null $orderItemId
      *
      * @return self
      */
-    public function setOrderItemId(int $orderItemId): self
+    public function setOrderItemId(?int $orderItemId): self
     {
         $this->orderItemId = $orderItemId;
         return $this;
@@ -211,20 +211,20 @@ class SalesDataShipmentItemInterface
     /**
      * Parent ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getParentId(): int
+    public function getParentId(): ?int
     {
         return $this->parentId;
     }
     /**
      * Parent ID.
      *
-     * @param int $parentId
+     * @param int|null $parentId
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(?int $parentId): self
     {
         $this->parentId = $parentId;
         return $this;
@@ -232,20 +232,20 @@ class SalesDataShipmentItemInterface
     /**
      * Price.
      *
-     * @return float
+     * @return float|null
      */
-    public function getPrice(): float
+    public function getPrice(): ?float
     {
         return $this->price;
     }
     /**
      * Price.
      *
-     * @param float $price
+     * @param float|null $price
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(?float $price): self
     {
         $this->price = $price;
         return $this;
@@ -253,20 +253,20 @@ class SalesDataShipmentItemInterface
     /**
      * Product ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getProductId(): int
+    public function getProductId(): ?int
     {
         return $this->productId;
     }
     /**
      * Product ID.
      *
-     * @param int $productId
+     * @param int|null $productId
      *
      * @return self
      */
-    public function setProductId(int $productId): self
+    public function setProductId(?int $productId): self
     {
         $this->productId = $productId;
         return $this;
@@ -274,20 +274,20 @@ class SalesDataShipmentItemInterface
     /**
      * Quantity.
      *
-     * @return float
+     * @return float|null
      */
-    public function getQty(): float
+    public function getQty(): ?float
     {
         return $this->qty;
     }
     /**
      * Quantity.
      *
-     * @param float $qty
+     * @param float|null $qty
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(?float $qty): self
     {
         $this->qty = $qty;
         return $this;
@@ -295,20 +295,20 @@ class SalesDataShipmentItemInterface
     /**
      * Row total.
      *
-     * @return float
+     * @return float|null
      */
-    public function getRowTotal(): float
+    public function getRowTotal(): ?float
     {
         return $this->rowTotal;
     }
     /**
      * Row total.
      *
-     * @param float $rowTotal
+     * @param float|null $rowTotal
      *
      * @return self
      */
-    public function setRowTotal(float $rowTotal): self
+    public function setRowTotal(?float $rowTotal): self
     {
         $this->rowTotal = $rowTotal;
         return $this;
@@ -316,20 +316,20 @@ class SalesDataShipmentItemInterface
     /**
      * SKU.
      *
-     * @return string
+     * @return string|null
      */
-    public function getSku(): string
+    public function getSku(): ?string
     {
         return $this->sku;
     }
     /**
      * SKU.
      *
-     * @param string $sku
+     * @param string|null $sku
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(?string $sku): self
     {
         $this->sku = $sku;
         return $this;
@@ -337,20 +337,20 @@ class SalesDataShipmentItemInterface
     /**
      * Weight.
      *
-     * @return float
+     * @return float|null
      */
-    public function getWeight(): float
+    public function getWeight(): ?float
     {
         return $this->weight;
     }
     /**
      * Weight.
      *
-     * @param float $weight
+     * @param float|null $weight
      *
      * @return self
      */
-    public function setWeight(float $weight): self
+    public function setWeight(?float $weight): self
     {
         $this->weight = $weight;
         return $this;

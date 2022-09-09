@@ -7,26 +7,26 @@ class V1ProductsCostPostBody
     /**
      *
      *
-     * @var CatalogDataCostInterface[]
+     * @var CatalogDataCostInterface[]|null
      */
     protected $prices;
     /**
      *
      *
-     * @return CatalogDataCostInterface[]
+     * @return CatalogDataCostInterface[]|null
      */
-    public function getPrices(): array
+    public function getPrices(): ?array
     {
         return $this->prices;
     }
     /**
      *
      *
-     * @param CatalogDataCostInterface[] $prices
+     * @param CatalogDataCostInterface[]|null $prices
      *
      * @return self
      */
-    public function setPrices(array $prices): self
+    public function setPrices(?array $prices): self
     {
         $this->prices = $prices;
         return $this;

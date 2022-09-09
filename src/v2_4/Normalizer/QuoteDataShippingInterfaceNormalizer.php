@@ -40,14 +40,20 @@ class QuoteDataShippingInterfaceNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('address', $data)) {
+        if (\array_key_exists('address', $data) && $data['address'] !== null) {
             $object->setAddress($this->denormalizer->denormalize($data['address'], 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataAddressInterface', 'json', $context));
+        } elseif (\array_key_exists('address', $data) && $data['address'] === null) {
+            $object->setAddress(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('method', $data)) {
+        if (\array_key_exists('method', $data) && $data['method'] !== null) {
             $object->setMethod($data['method']);
+        } elseif (\array_key_exists('method', $data) && $data['method'] === null) {
+            $object->setMethod(null);
         }
         return $object;
     }

@@ -7,68 +7,68 @@ class ConfigurableProductDataOptionInterface
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $attributeId;
     /**
      * ExtensionInterface class for @see \Magento\ConfigurableProduct\Api\Data\OptionInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isUseDefault;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $label;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $position;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $productId;
     /**
      *
      *
-     * @var ConfigurableProductDataOptionValueInterface[]
+     * @var ConfigurableProductDataOptionValueInterface[]|null
      */
     protected $values;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getAttributeId(): string
+    public function getAttributeId(): ?string
     {
         return $this->attributeId;
     }
     /**
      *
      *
-     * @param string $attributeId
+     * @param string|null $attributeId
      *
      * @return self
      */
-    public function setAttributeId(string $attributeId): self
+    public function setAttributeId(?string $attributeId): self
     {
         $this->attributeId = $attributeId;
         return $this;
@@ -97,20 +97,20 @@ class ConfigurableProductDataOptionInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      *
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -118,20 +118,20 @@ class ConfigurableProductDataOptionInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsUseDefault(): bool
+    public function getIsUseDefault(): ?bool
     {
         return $this->isUseDefault;
     }
     /**
      *
      *
-     * @param bool $isUseDefault
+     * @param bool|null $isUseDefault
      *
      * @return self
      */
-    public function setIsUseDefault(bool $isUseDefault): self
+    public function setIsUseDefault(?bool $isUseDefault): self
     {
         $this->isUseDefault = $isUseDefault;
         return $this;
@@ -139,20 +139,20 @@ class ConfigurableProductDataOptionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getLabel(): string
+    public function getLabel(): ?string
     {
         return $this->label;
     }
     /**
      *
      *
-     * @param string $label
+     * @param string|null $label
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(?string $label): self
     {
         $this->label = $label;
         return $this;
@@ -160,20 +160,20 @@ class ConfigurableProductDataOptionInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getPosition(): int
+    public function getPosition(): ?int
     {
         return $this->position;
     }
     /**
      *
      *
-     * @param int $position
+     * @param int|null $position
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(?int $position): self
     {
         $this->position = $position;
         return $this;
@@ -181,20 +181,20 @@ class ConfigurableProductDataOptionInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getProductId(): int
+    public function getProductId(): ?int
     {
         return $this->productId;
     }
     /**
      *
      *
-     * @param int $productId
+     * @param int|null $productId
      *
      * @return self
      */
-    public function setProductId(int $productId): self
+    public function setProductId(?int $productId): self
     {
         $this->productId = $productId;
         return $this;
@@ -202,20 +202,20 @@ class ConfigurableProductDataOptionInterface
     /**
      *
      *
-     * @return ConfigurableProductDataOptionValueInterface[]
+     * @return ConfigurableProductDataOptionValueInterface[]|null
      */
-    public function getValues(): array
+    public function getValues(): ?array
     {
         return $this->values;
     }
     /**
      *
      *
-     * @param ConfigurableProductDataOptionValueInterface[] $values
+     * @param ConfigurableProductDataOptionValueInterface[]|null $values
      *
      * @return self
      */
-    public function setValues(array $values): self
+    public function setValues(?array $values): self
     {
         $this->values = $values;
         return $this;

@@ -40,8 +40,10 @@ class V1CouponsCouponIdPutBodyNormalizer implements DenormalizerInterface, Norma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('coupon', $data)) {
+        if (\array_key_exists('coupon', $data) && $data['coupon'] !== null) {
             $object->setCoupon($this->denormalizer->denormalize($data['coupon'], 'Kiboko\\Magento\\V2_1\\Model\\SalesRuleDataCouponInterface', 'json', $context));
+        } elseif (\array_key_exists('coupon', $data) && $data['coupon'] === null) {
+            $object->setCoupon(null);
         }
         return $object;
     }

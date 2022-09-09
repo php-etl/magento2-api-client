@@ -43,14 +43,20 @@ class SalesDataCreditmemoItemCreationInterfaceNormalizer implements Denormalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('order_item_id', $data)) {
+        if (\array_key_exists('order_item_id', $data) && $data['order_item_id'] !== null) {
             $object->setOrderItemId($data['order_item_id']);
+        } elseif (\array_key_exists('order_item_id', $data) && $data['order_item_id'] === null) {
+            $object->setOrderItemId(null);
         }
-        if (\array_key_exists('qty', $data)) {
+        if (\array_key_exists('qty', $data) && $data['qty'] !== null) {
             $object->setQty($data['qty']);
+        } elseif (\array_key_exists('qty', $data) && $data['qty'] === null) {
+            $object->setQty(null);
         }
         return $object;
     }

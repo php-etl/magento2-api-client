@@ -7,44 +7,44 @@ class AsynchronousOperationsDataSummaryOperationStatusInterface
     /**
      * Error code
      *
-     * @var int
+     * @var int|null
      */
     protected $errorCode;
     /**
      * Id
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Result message
      *
-     * @var string
+     * @var string|null
      */
     protected $resultMessage;
     /**
      * Operation status
      *
-     * @var int
+     * @var int|null
      */
     protected $status;
     /**
      * Error code
      *
-     * @return int
+     * @return int|null
      */
-    public function getErrorCode(): int
+    public function getErrorCode(): ?int
     {
         return $this->errorCode;
     }
     /**
      * Error code
      *
-     * @param int $errorCode
+     * @param int|null $errorCode
      *
      * @return self
      */
-    public function setErrorCode(int $errorCode): self
+    public function setErrorCode(?int $errorCode): self
     {
         $this->errorCode = $errorCode;
         return $this;
@@ -52,20 +52,20 @@ class AsynchronousOperationsDataSummaryOperationStatusInterface
     /**
      * Id
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * Id
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -73,20 +73,20 @@ class AsynchronousOperationsDataSummaryOperationStatusInterface
     /**
      * Result message
      *
-     * @return string
+     * @return string|null
      */
-    public function getResultMessage(): string
+    public function getResultMessage(): ?string
     {
         return $this->resultMessage;
     }
     /**
      * Result message
      *
-     * @param string $resultMessage
+     * @param string|null $resultMessage
      *
      * @return self
      */
-    public function setResultMessage(string $resultMessage): self
+    public function setResultMessage(?string $resultMessage): self
     {
         $this->resultMessage = $resultMessage;
         return $this;
@@ -94,20 +94,20 @@ class AsynchronousOperationsDataSummaryOperationStatusInterface
     /**
      * Operation status
      *
-     * @return int
+     * @return int|null
      */
-    public function getStatus(): int
+    public function getStatus(): ?int
     {
         return $this->status;
     }
     /**
      * Operation status
      *
-     * @param int $status
+     * @param int|null $status
      *
      * @return self
      */
-    public function setStatus(int $status): self
+    public function setStatus(?int $status): self
     {
         $this->status = $status;
         return $this;

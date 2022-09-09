@@ -7,44 +7,44 @@ class V1GuestCartsCartIdCollectTotalsPutBody
     /**
      * Additional data for totals collection.
      *
-     * @var QuoteDataTotalsAdditionalDataInterface
+     * @var QuoteDataTotalsAdditionalDataInterface|null
      */
     protected $additionalData;
     /**
      * Interface PaymentInterface
      *
-     * @var QuoteDataPaymentInterface
+     * @var QuoteDataPaymentInterface|null
      */
     protected $paymentMethod;
     /**
      * The carrier code.
      *
-     * @var string
+     * @var string|null
      */
     protected $shippingCarrierCode;
     /**
      * The shipping method code.
      *
-     * @var string
+     * @var string|null
      */
     protected $shippingMethodCode;
     /**
      * Additional data for totals collection.
      *
-     * @return QuoteDataTotalsAdditionalDataInterface
+     * @return QuoteDataTotalsAdditionalDataInterface|null
      */
-    public function getAdditionalData(): QuoteDataTotalsAdditionalDataInterface
+    public function getAdditionalData(): ?QuoteDataTotalsAdditionalDataInterface
     {
         return $this->additionalData;
     }
     /**
      * Additional data for totals collection.
      *
-     * @param QuoteDataTotalsAdditionalDataInterface $additionalData
+     * @param QuoteDataTotalsAdditionalDataInterface|null $additionalData
      *
      * @return self
      */
-    public function setAdditionalData(QuoteDataTotalsAdditionalDataInterface $additionalData): self
+    public function setAdditionalData(?QuoteDataTotalsAdditionalDataInterface $additionalData): self
     {
         $this->additionalData = $additionalData;
         return $this;
@@ -52,20 +52,20 @@ class V1GuestCartsCartIdCollectTotalsPutBody
     /**
      * Interface PaymentInterface
      *
-     * @return QuoteDataPaymentInterface
+     * @return QuoteDataPaymentInterface|null
      */
-    public function getPaymentMethod(): QuoteDataPaymentInterface
+    public function getPaymentMethod(): ?QuoteDataPaymentInterface
     {
         return $this->paymentMethod;
     }
     /**
      * Interface PaymentInterface
      *
-     * @param QuoteDataPaymentInterface $paymentMethod
+     * @param QuoteDataPaymentInterface|null $paymentMethod
      *
      * @return self
      */
-    public function setPaymentMethod(QuoteDataPaymentInterface $paymentMethod): self
+    public function setPaymentMethod(?QuoteDataPaymentInterface $paymentMethod): self
     {
         $this->paymentMethod = $paymentMethod;
         return $this;
@@ -73,20 +73,20 @@ class V1GuestCartsCartIdCollectTotalsPutBody
     /**
      * The carrier code.
      *
-     * @return string
+     * @return string|null
      */
-    public function getShippingCarrierCode(): string
+    public function getShippingCarrierCode(): ?string
     {
         return $this->shippingCarrierCode;
     }
     /**
      * The carrier code.
      *
-     * @param string $shippingCarrierCode
+     * @param string|null $shippingCarrierCode
      *
      * @return self
      */
-    public function setShippingCarrierCode(string $shippingCarrierCode): self
+    public function setShippingCarrierCode(?string $shippingCarrierCode): self
     {
         $this->shippingCarrierCode = $shippingCarrierCode;
         return $this;
@@ -94,20 +94,20 @@ class V1GuestCartsCartIdCollectTotalsPutBody
     /**
      * The shipping method code.
      *
-     * @return string
+     * @return string|null
      */
-    public function getShippingMethodCode(): string
+    public function getShippingMethodCode(): ?string
     {
         return $this->shippingMethodCode;
     }
     /**
      * The shipping method code.
      *
-     * @param string $shippingMethodCode
+     * @param string|null $shippingMethodCode
      *
      * @return self
      */
-    public function setShippingMethodCode(string $shippingMethodCode): self
+    public function setShippingMethodCode(?string $shippingMethodCode): self
     {
         $this->shippingMethodCode = $shippingMethodCode;
         return $this;

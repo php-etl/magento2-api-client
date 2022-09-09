@@ -7,32 +7,32 @@ class V1CompanyAssignRolesPutBody
     /**
      *
      *
-     * @var CompanyDataRoleInterface[]
+     * @var CompanyDataRoleInterface[]|null
      */
     protected $roles;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $userId;
     /**
      *
      *
-     * @return CompanyDataRoleInterface[]
+     * @return CompanyDataRoleInterface[]|null
      */
-    public function getRoles(): array
+    public function getRoles(): ?array
     {
         return $this->roles;
     }
     /**
      *
      *
-     * @param CompanyDataRoleInterface[] $roles
+     * @param CompanyDataRoleInterface[]|null $roles
      *
      * @return self
      */
-    public function setRoles(array $roles): self
+    public function setRoles(?array $roles): self
     {
         $this->roles = $roles;
         return $this;
@@ -40,20 +40,20 @@ class V1CompanyAssignRolesPutBody
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getUserId(): int
+    public function getUserId(): ?int
     {
         return $this->userId;
     }
     /**
      *
      *
-     * @param int $userId
+     * @param int|null $userId
      *
      * @return self
      */
-    public function setUserId(int $userId): self
+    public function setUserId(?int $userId): self
     {
         $this->userId = $userId;
         return $this;

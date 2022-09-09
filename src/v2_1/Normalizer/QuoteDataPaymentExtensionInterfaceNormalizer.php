@@ -40,12 +40,14 @@ class QuoteDataPaymentExtensionInterfaceNormalizer implements DenormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('agreement_ids', $data)) {
+        if (\array_key_exists('agreement_ids', $data) && $data['agreement_ids'] !== null) {
             $values = array();
             foreach ($data['agreement_ids'] as $value) {
                 $values[] = $value;
             }
             $object->setAgreementIds($values);
+        } elseif (\array_key_exists('agreement_ids', $data) && $data['agreement_ids'] === null) {
+            $object->setAgreementIds(null);
         }
         return $object;
     }

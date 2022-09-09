@@ -7,80 +7,80 @@ class GiftWrappingDataWrappingInterface
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $baseCurrencyCode;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $basePrice;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $design;
     /**
      * ExtensionInterface class for @see \Magento\GiftWrapping\Api\Data\WrappingInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $imageBase64Content;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $imageName;
     /**
      * Wrapping image URL.
      *
-     * @var string
+     * @var string|null
      */
     protected $imageUrl;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $status;
     /**
      *
      *
-     * @var int[]
+     * @var int[]|null
      */
     protected $websiteIds;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $wrappingId;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getBaseCurrencyCode(): string
+    public function getBaseCurrencyCode(): ?string
     {
         return $this->baseCurrencyCode;
     }
     /**
      *
      *
-     * @param string $baseCurrencyCode
+     * @param string|null $baseCurrencyCode
      *
      * @return self
      */
-    public function setBaseCurrencyCode(string $baseCurrencyCode): self
+    public function setBaseCurrencyCode(?string $baseCurrencyCode): self
     {
         $this->baseCurrencyCode = $baseCurrencyCode;
         return $this;
@@ -88,20 +88,20 @@ class GiftWrappingDataWrappingInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getBasePrice(): float
+    public function getBasePrice(): ?float
     {
         return $this->basePrice;
     }
     /**
      *
      *
-     * @param float $basePrice
+     * @param float|null $basePrice
      *
      * @return self
      */
-    public function setBasePrice(float $basePrice): self
+    public function setBasePrice(?float $basePrice): self
     {
         $this->basePrice = $basePrice;
         return $this;
@@ -109,20 +109,20 @@ class GiftWrappingDataWrappingInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getDesign(): string
+    public function getDesign(): ?string
     {
         return $this->design;
     }
     /**
      *
      *
-     * @param string $design
+     * @param string|null $design
      *
      * @return self
      */
-    public function setDesign(string $design): self
+    public function setDesign(?string $design): self
     {
         $this->design = $design;
         return $this;
@@ -151,20 +151,20 @@ class GiftWrappingDataWrappingInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getImageBase64Content(): string
+    public function getImageBase64Content(): ?string
     {
         return $this->imageBase64Content;
     }
     /**
      *
      *
-     * @param string $imageBase64Content
+     * @param string|null $imageBase64Content
      *
      * @return self
      */
-    public function setImageBase64Content(string $imageBase64Content): self
+    public function setImageBase64Content(?string $imageBase64Content): self
     {
         $this->imageBase64Content = $imageBase64Content;
         return $this;
@@ -172,20 +172,20 @@ class GiftWrappingDataWrappingInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getImageName(): string
+    public function getImageName(): ?string
     {
         return $this->imageName;
     }
     /**
      *
      *
-     * @param string $imageName
+     * @param string|null $imageName
      *
      * @return self
      */
-    public function setImageName(string $imageName): self
+    public function setImageName(?string $imageName): self
     {
         $this->imageName = $imageName;
         return $this;
@@ -193,20 +193,20 @@ class GiftWrappingDataWrappingInterface
     /**
      * Wrapping image URL.
      *
-     * @return string
+     * @return string|null
      */
-    public function getImageUrl(): string
+    public function getImageUrl(): ?string
     {
         return $this->imageUrl;
     }
     /**
      * Wrapping image URL.
      *
-     * @param string $imageUrl
+     * @param string|null $imageUrl
      *
      * @return self
      */
-    public function setImageUrl(string $imageUrl): self
+    public function setImageUrl(?string $imageUrl): self
     {
         $this->imageUrl = $imageUrl;
         return $this;
@@ -214,20 +214,20 @@ class GiftWrappingDataWrappingInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getStatus(): int
+    public function getStatus(): ?int
     {
         return $this->status;
     }
     /**
      *
      *
-     * @param int $status
+     * @param int|null $status
      *
      * @return self
      */
-    public function setStatus(int $status): self
+    public function setStatus(?int $status): self
     {
         $this->status = $status;
         return $this;
@@ -235,20 +235,20 @@ class GiftWrappingDataWrappingInterface
     /**
      *
      *
-     * @return int[]
+     * @return int[]|null
      */
-    public function getWebsiteIds(): array
+    public function getWebsiteIds(): ?array
     {
         return $this->websiteIds;
     }
     /**
      *
      *
-     * @param int[] $websiteIds
+     * @param int[]|null $websiteIds
      *
      * @return self
      */
-    public function setWebsiteIds(array $websiteIds): self
+    public function setWebsiteIds(?array $websiteIds): self
     {
         $this->websiteIds = $websiteIds;
         return $this;
@@ -256,20 +256,20 @@ class GiftWrappingDataWrappingInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getWrappingId(): int
+    public function getWrappingId(): ?int
     {
         return $this->wrappingId;
     }
     /**
      *
      *
-     * @param int $wrappingId
+     * @param int|null $wrappingId
      *
      * @return self
      */
-    public function setWrappingId(int $wrappingId): self
+    public function setWrappingId(?int $wrappingId): self
     {
         $this->wrappingId = $wrappingId;
         return $this;

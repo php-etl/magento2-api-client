@@ -7,182 +7,182 @@ class CatalogInventoryDataStockItemInterface
     /**
      * Backorders status
      *
-     * @var int
+     * @var int|null
      */
     protected $backorders;
     /**
      * Whether Quantity Increments is enabled
      *
-     * @var bool
+     * @var bool|null
      */
     protected $enableQtyIncrements;
     /**
      * ExtensionInterface class for @see \Magento\CatalogInventory\Api\Data\StockItemInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isDecimalDivided;
     /**
      * Stock Availability
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isInStock;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isQtyDecimal;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $itemId;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $lowStockDate;
     /**
      * Can Manage Stock
      *
-     * @var bool
+     * @var bool|null
      */
     protected $manageStock;
     /**
      * Maximum Qty Allowed in Shopping Cart data wrapper
      *
-     * @var float
+     * @var float|null
      */
     protected $maxSaleQty;
     /**
      * Minimal quantity available for item status in stock
      *
-     * @var float
+     * @var float|null
      */
     protected $minQty;
     /**
      * Minimum Qty Allowed in Shopping Cart or NULL when there is no limitation
      *
-     * @var float
+     * @var float|null
      */
     protected $minSaleQty;
     /**
      * Notify for Quantity Below data wrapper
      *
-     * @var float
+     * @var float|null
      */
     protected $notifyStockQty;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $productId;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $qty;
     /**
      * Quantity Increments data wrapper
      *
-     * @var float
+     * @var float|null
      */
     protected $qtyIncrements;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $showDefaultNotificationMessage;
     /**
      * Stock identifier
      *
-     * @var int
+     * @var int|null
      */
     protected $stockId;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $stockStatusChangedAuto;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $useConfigBackorders;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $useConfigEnableQtyInc;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $useConfigManageStock;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $useConfigMaxSaleQty;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $useConfigMinQty;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $useConfigMinSaleQty;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $useConfigNotifyStockQty;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $useConfigQtyIncrements;
     /**
      * Backorders status
      *
-     * @return int
+     * @return int|null
      */
-    public function getBackorders(): int
+    public function getBackorders(): ?int
     {
         return $this->backorders;
     }
     /**
      * Backorders status
      *
-     * @param int $backorders
+     * @param int|null $backorders
      *
      * @return self
      */
-    public function setBackorders(int $backorders): self
+    public function setBackorders(?int $backorders): self
     {
         $this->backorders = $backorders;
         return $this;
@@ -190,20 +190,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      * Whether Quantity Increments is enabled
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getEnableQtyIncrements(): bool
+    public function getEnableQtyIncrements(): ?bool
     {
         return $this->enableQtyIncrements;
     }
     /**
      * Whether Quantity Increments is enabled
      *
-     * @param bool $enableQtyIncrements
+     * @param bool|null $enableQtyIncrements
      *
      * @return self
      */
-    public function setEnableQtyIncrements(bool $enableQtyIncrements): self
+    public function setEnableQtyIncrements(?bool $enableQtyIncrements): self
     {
         $this->enableQtyIncrements = $enableQtyIncrements;
         return $this;
@@ -232,20 +232,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsDecimalDivided(): bool
+    public function getIsDecimalDivided(): ?bool
     {
         return $this->isDecimalDivided;
     }
     /**
      *
      *
-     * @param bool $isDecimalDivided
+     * @param bool|null $isDecimalDivided
      *
      * @return self
      */
-    public function setIsDecimalDivided(bool $isDecimalDivided): self
+    public function setIsDecimalDivided(?bool $isDecimalDivided): self
     {
         $this->isDecimalDivided = $isDecimalDivided;
         return $this;
@@ -253,20 +253,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      * Stock Availability
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsInStock(): bool
+    public function getIsInStock(): ?bool
     {
         return $this->isInStock;
     }
     /**
      * Stock Availability
      *
-     * @param bool $isInStock
+     * @param bool|null $isInStock
      *
      * @return self
      */
-    public function setIsInStock(bool $isInStock): self
+    public function setIsInStock(?bool $isInStock): self
     {
         $this->isInStock = $isInStock;
         return $this;
@@ -274,20 +274,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsQtyDecimal(): bool
+    public function getIsQtyDecimal(): ?bool
     {
         return $this->isQtyDecimal;
     }
     /**
      *
      *
-     * @param bool $isQtyDecimal
+     * @param bool|null $isQtyDecimal
      *
      * @return self
      */
-    public function setIsQtyDecimal(bool $isQtyDecimal): self
+    public function setIsQtyDecimal(?bool $isQtyDecimal): self
     {
         $this->isQtyDecimal = $isQtyDecimal;
         return $this;
@@ -295,20 +295,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getItemId(): int
+    public function getItemId(): ?int
     {
         return $this->itemId;
     }
     /**
      *
      *
-     * @param int $itemId
+     * @param int|null $itemId
      *
      * @return self
      */
-    public function setItemId(int $itemId): self
+    public function setItemId(?int $itemId): self
     {
         $this->itemId = $itemId;
         return $this;
@@ -316,20 +316,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getLowStockDate(): string
+    public function getLowStockDate(): ?string
     {
         return $this->lowStockDate;
     }
     /**
      *
      *
-     * @param string $lowStockDate
+     * @param string|null $lowStockDate
      *
      * @return self
      */
-    public function setLowStockDate(string $lowStockDate): self
+    public function setLowStockDate(?string $lowStockDate): self
     {
         $this->lowStockDate = $lowStockDate;
         return $this;
@@ -337,20 +337,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      * Can Manage Stock
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getManageStock(): bool
+    public function getManageStock(): ?bool
     {
         return $this->manageStock;
     }
     /**
      * Can Manage Stock
      *
-     * @param bool $manageStock
+     * @param bool|null $manageStock
      *
      * @return self
      */
-    public function setManageStock(bool $manageStock): self
+    public function setManageStock(?bool $manageStock): self
     {
         $this->manageStock = $manageStock;
         return $this;
@@ -358,20 +358,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      * Maximum Qty Allowed in Shopping Cart data wrapper
      *
-     * @return float
+     * @return float|null
      */
-    public function getMaxSaleQty(): float
+    public function getMaxSaleQty(): ?float
     {
         return $this->maxSaleQty;
     }
     /**
      * Maximum Qty Allowed in Shopping Cart data wrapper
      *
-     * @param float $maxSaleQty
+     * @param float|null $maxSaleQty
      *
      * @return self
      */
-    public function setMaxSaleQty(float $maxSaleQty): self
+    public function setMaxSaleQty(?float $maxSaleQty): self
     {
         $this->maxSaleQty = $maxSaleQty;
         return $this;
@@ -379,20 +379,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      * Minimal quantity available for item status in stock
      *
-     * @return float
+     * @return float|null
      */
-    public function getMinQty(): float
+    public function getMinQty(): ?float
     {
         return $this->minQty;
     }
     /**
      * Minimal quantity available for item status in stock
      *
-     * @param float $minQty
+     * @param float|null $minQty
      *
      * @return self
      */
-    public function setMinQty(float $minQty): self
+    public function setMinQty(?float $minQty): self
     {
         $this->minQty = $minQty;
         return $this;
@@ -400,20 +400,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      * Minimum Qty Allowed in Shopping Cart or NULL when there is no limitation
      *
-     * @return float
+     * @return float|null
      */
-    public function getMinSaleQty(): float
+    public function getMinSaleQty(): ?float
     {
         return $this->minSaleQty;
     }
     /**
      * Minimum Qty Allowed in Shopping Cart or NULL when there is no limitation
      *
-     * @param float $minSaleQty
+     * @param float|null $minSaleQty
      *
      * @return self
      */
-    public function setMinSaleQty(float $minSaleQty): self
+    public function setMinSaleQty(?float $minSaleQty): self
     {
         $this->minSaleQty = $minSaleQty;
         return $this;
@@ -421,20 +421,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      * Notify for Quantity Below data wrapper
      *
-     * @return float
+     * @return float|null
      */
-    public function getNotifyStockQty(): float
+    public function getNotifyStockQty(): ?float
     {
         return $this->notifyStockQty;
     }
     /**
      * Notify for Quantity Below data wrapper
      *
-     * @param float $notifyStockQty
+     * @param float|null $notifyStockQty
      *
      * @return self
      */
-    public function setNotifyStockQty(float $notifyStockQty): self
+    public function setNotifyStockQty(?float $notifyStockQty): self
     {
         $this->notifyStockQty = $notifyStockQty;
         return $this;
@@ -442,20 +442,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getProductId(): int
+    public function getProductId(): ?int
     {
         return $this->productId;
     }
     /**
      *
      *
-     * @param int $productId
+     * @param int|null $productId
      *
      * @return self
      */
-    public function setProductId(int $productId): self
+    public function setProductId(?int $productId): self
     {
         $this->productId = $productId;
         return $this;
@@ -463,20 +463,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getQty(): float
+    public function getQty(): ?float
     {
         return $this->qty;
     }
     /**
      *
      *
-     * @param float $qty
+     * @param float|null $qty
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(?float $qty): self
     {
         $this->qty = $qty;
         return $this;
@@ -484,20 +484,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      * Quantity Increments data wrapper
      *
-     * @return float
+     * @return float|null
      */
-    public function getQtyIncrements(): float
+    public function getQtyIncrements(): ?float
     {
         return $this->qtyIncrements;
     }
     /**
      * Quantity Increments data wrapper
      *
-     * @param float $qtyIncrements
+     * @param float|null $qtyIncrements
      *
      * @return self
      */
-    public function setQtyIncrements(float $qtyIncrements): self
+    public function setQtyIncrements(?float $qtyIncrements): self
     {
         $this->qtyIncrements = $qtyIncrements;
         return $this;
@@ -505,20 +505,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getShowDefaultNotificationMessage(): bool
+    public function getShowDefaultNotificationMessage(): ?bool
     {
         return $this->showDefaultNotificationMessage;
     }
     /**
      *
      *
-     * @param bool $showDefaultNotificationMessage
+     * @param bool|null $showDefaultNotificationMessage
      *
      * @return self
      */
-    public function setShowDefaultNotificationMessage(bool $showDefaultNotificationMessage): self
+    public function setShowDefaultNotificationMessage(?bool $showDefaultNotificationMessage): self
     {
         $this->showDefaultNotificationMessage = $showDefaultNotificationMessage;
         return $this;
@@ -526,20 +526,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      * Stock identifier
      *
-     * @return int
+     * @return int|null
      */
-    public function getStockId(): int
+    public function getStockId(): ?int
     {
         return $this->stockId;
     }
     /**
      * Stock identifier
      *
-     * @param int $stockId
+     * @param int|null $stockId
      *
      * @return self
      */
-    public function setStockId(int $stockId): self
+    public function setStockId(?int $stockId): self
     {
         $this->stockId = $stockId;
         return $this;
@@ -547,20 +547,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getStockStatusChangedAuto(): int
+    public function getStockStatusChangedAuto(): ?int
     {
         return $this->stockStatusChangedAuto;
     }
     /**
      *
      *
-     * @param int $stockStatusChangedAuto
+     * @param int|null $stockStatusChangedAuto
      *
      * @return self
      */
-    public function setStockStatusChangedAuto(int $stockStatusChangedAuto): self
+    public function setStockStatusChangedAuto(?int $stockStatusChangedAuto): self
     {
         $this->stockStatusChangedAuto = $stockStatusChangedAuto;
         return $this;
@@ -568,20 +568,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getUseConfigBackorders(): bool
+    public function getUseConfigBackorders(): ?bool
     {
         return $this->useConfigBackorders;
     }
     /**
      *
      *
-     * @param bool $useConfigBackorders
+     * @param bool|null $useConfigBackorders
      *
      * @return self
      */
-    public function setUseConfigBackorders(bool $useConfigBackorders): self
+    public function setUseConfigBackorders(?bool $useConfigBackorders): self
     {
         $this->useConfigBackorders = $useConfigBackorders;
         return $this;
@@ -589,20 +589,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getUseConfigEnableQtyInc(): bool
+    public function getUseConfigEnableQtyInc(): ?bool
     {
         return $this->useConfigEnableQtyInc;
     }
     /**
      *
      *
-     * @param bool $useConfigEnableQtyInc
+     * @param bool|null $useConfigEnableQtyInc
      *
      * @return self
      */
-    public function setUseConfigEnableQtyInc(bool $useConfigEnableQtyInc): self
+    public function setUseConfigEnableQtyInc(?bool $useConfigEnableQtyInc): self
     {
         $this->useConfigEnableQtyInc = $useConfigEnableQtyInc;
         return $this;
@@ -610,20 +610,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getUseConfigManageStock(): bool
+    public function getUseConfigManageStock(): ?bool
     {
         return $this->useConfigManageStock;
     }
     /**
      *
      *
-     * @param bool $useConfigManageStock
+     * @param bool|null $useConfigManageStock
      *
      * @return self
      */
-    public function setUseConfigManageStock(bool $useConfigManageStock): self
+    public function setUseConfigManageStock(?bool $useConfigManageStock): self
     {
         $this->useConfigManageStock = $useConfigManageStock;
         return $this;
@@ -631,20 +631,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getUseConfigMaxSaleQty(): bool
+    public function getUseConfigMaxSaleQty(): ?bool
     {
         return $this->useConfigMaxSaleQty;
     }
     /**
      *
      *
-     * @param bool $useConfigMaxSaleQty
+     * @param bool|null $useConfigMaxSaleQty
      *
      * @return self
      */
-    public function setUseConfigMaxSaleQty(bool $useConfigMaxSaleQty): self
+    public function setUseConfigMaxSaleQty(?bool $useConfigMaxSaleQty): self
     {
         $this->useConfigMaxSaleQty = $useConfigMaxSaleQty;
         return $this;
@@ -652,20 +652,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getUseConfigMinQty(): bool
+    public function getUseConfigMinQty(): ?bool
     {
         return $this->useConfigMinQty;
     }
     /**
      *
      *
-     * @param bool $useConfigMinQty
+     * @param bool|null $useConfigMinQty
      *
      * @return self
      */
-    public function setUseConfigMinQty(bool $useConfigMinQty): self
+    public function setUseConfigMinQty(?bool $useConfigMinQty): self
     {
         $this->useConfigMinQty = $useConfigMinQty;
         return $this;
@@ -673,20 +673,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getUseConfigMinSaleQty(): int
+    public function getUseConfigMinSaleQty(): ?int
     {
         return $this->useConfigMinSaleQty;
     }
     /**
      *
      *
-     * @param int $useConfigMinSaleQty
+     * @param int|null $useConfigMinSaleQty
      *
      * @return self
      */
-    public function setUseConfigMinSaleQty(int $useConfigMinSaleQty): self
+    public function setUseConfigMinSaleQty(?int $useConfigMinSaleQty): self
     {
         $this->useConfigMinSaleQty = $useConfigMinSaleQty;
         return $this;
@@ -694,20 +694,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getUseConfigNotifyStockQty(): bool
+    public function getUseConfigNotifyStockQty(): ?bool
     {
         return $this->useConfigNotifyStockQty;
     }
     /**
      *
      *
-     * @param bool $useConfigNotifyStockQty
+     * @param bool|null $useConfigNotifyStockQty
      *
      * @return self
      */
-    public function setUseConfigNotifyStockQty(bool $useConfigNotifyStockQty): self
+    public function setUseConfigNotifyStockQty(?bool $useConfigNotifyStockQty): self
     {
         $this->useConfigNotifyStockQty = $useConfigNotifyStockQty;
         return $this;
@@ -715,20 +715,20 @@ class CatalogInventoryDataStockItemInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getUseConfigQtyIncrements(): bool
+    public function getUseConfigQtyIncrements(): ?bool
     {
         return $this->useConfigQtyIncrements;
     }
     /**
      *
      *
-     * @param bool $useConfigQtyIncrements
+     * @param bool|null $useConfigQtyIncrements
      *
      * @return self
      */
-    public function setUseConfigQtyIncrements(bool $useConfigQtyIncrements): self
+    public function setUseConfigQtyIncrements(?bool $useConfigQtyIncrements): self
     {
         $this->useConfigQtyIncrements = $useConfigQtyIncrements;
         return $this;

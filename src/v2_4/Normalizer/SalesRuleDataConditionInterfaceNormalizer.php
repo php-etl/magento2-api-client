@@ -40,30 +40,44 @@ class SalesRuleDataConditionInterfaceNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('aggregator_type', $data)) {
+        if (\array_key_exists('aggregator_type', $data) && $data['aggregator_type'] !== null) {
             $object->setAggregatorType($data['aggregator_type']);
+        } elseif (\array_key_exists('aggregator_type', $data) && $data['aggregator_type'] === null) {
+            $object->setAggregatorType(null);
         }
-        if (\array_key_exists('attribute_name', $data)) {
+        if (\array_key_exists('attribute_name', $data) && $data['attribute_name'] !== null) {
             $object->setAttributeName($data['attribute_name']);
+        } elseif (\array_key_exists('attribute_name', $data) && $data['attribute_name'] === null) {
+            $object->setAttributeName(null);
         }
-        if (\array_key_exists('condition_type', $data)) {
+        if (\array_key_exists('condition_type', $data) && $data['condition_type'] !== null) {
             $object->setConditionType($data['condition_type']);
+        } elseif (\array_key_exists('condition_type', $data) && $data['condition_type'] === null) {
+            $object->setConditionType(null);
         }
-        if (\array_key_exists('conditions', $data)) {
+        if (\array_key_exists('conditions', $data) && $data['conditions'] !== null) {
             $values = array();
             foreach ($data['conditions'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\SalesRuleDataConditionInterface', 'json', $context);
             }
             $object->setConditions($values);
+        } elseif (\array_key_exists('conditions', $data) && $data['conditions'] === null) {
+            $object->setConditions(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('operator', $data)) {
+        if (\array_key_exists('operator', $data) && $data['operator'] !== null) {
             $object->setOperator($data['operator']);
+        } elseif (\array_key_exists('operator', $data) && $data['operator'] === null) {
+            $object->setOperator(null);
         }
-        if (\array_key_exists('value', $data)) {
+        if (\array_key_exists('value', $data) && $data['value'] !== null) {
             $object->setValue($data['value']);
+        } elseif (\array_key_exists('value', $data) && $data['value'] === null) {
+            $object->setValue(null);
         }
         return $object;
     }

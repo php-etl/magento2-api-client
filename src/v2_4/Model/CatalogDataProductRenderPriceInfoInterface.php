@@ -7,74 +7,74 @@ class CatalogDataProductRenderPriceInfoInterface
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductRender\PriceInfoInterface
      *
-     * @var CatalogDataProductRenderPriceInfoExtensionInterface
+     * @var CatalogDataProductRenderPriceInfoExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * Final price
      *
-     * @var float
+     * @var float|null
      */
     protected $finalPrice;
     /**
      * Formatted Price interface. Aggregate formatted html with price representations. E.g.: <span class="price">$9.00</span> Consider currency, rounding and html
      *
-     * @var CatalogDataProductRenderFormattedPriceInfoInterface
+     * @var CatalogDataProductRenderFormattedPriceInfoInterface|null
      */
     protected $formattedPrices;
     /**
      * Max price of a product
      *
-     * @var float
+     * @var float|null
      */
     protected $maxPrice;
     /**
      * Max regular price
      *
-     * @var float
+     * @var float|null
      */
     protected $maxRegularPrice;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $minimalPrice;
     /**
      * Minimal regular price
      *
-     * @var float
+     * @var float|null
      */
     protected $minimalRegularPrice;
     /**
      * Regular price
      *
-     * @var float
+     * @var float|null
      */
     protected $regularPrice;
     /**
      * Special price
      *
-     * @var float
+     * @var float|null
      */
     protected $specialPrice;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductRender\PriceInfoInterface
      *
-     * @return CatalogDataProductRenderPriceInfoExtensionInterface
+     * @return CatalogDataProductRenderPriceInfoExtensionInterface|null
      */
-    public function getExtensionAttributes(): CatalogDataProductRenderPriceInfoExtensionInterface
+    public function getExtensionAttributes(): ?CatalogDataProductRenderPriceInfoExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductRender\PriceInfoInterface
      *
-     * @param CatalogDataProductRenderPriceInfoExtensionInterface $extensionAttributes
+     * @param CatalogDataProductRenderPriceInfoExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(CatalogDataProductRenderPriceInfoExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?CatalogDataProductRenderPriceInfoExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -82,20 +82,20 @@ class CatalogDataProductRenderPriceInfoInterface
     /**
      * Final price
      *
-     * @return float
+     * @return float|null
      */
-    public function getFinalPrice(): float
+    public function getFinalPrice(): ?float
     {
         return $this->finalPrice;
     }
     /**
      * Final price
      *
-     * @param float $finalPrice
+     * @param float|null $finalPrice
      *
      * @return self
      */
-    public function setFinalPrice(float $finalPrice): self
+    public function setFinalPrice(?float $finalPrice): self
     {
         $this->finalPrice = $finalPrice;
         return $this;
@@ -103,20 +103,20 @@ class CatalogDataProductRenderPriceInfoInterface
     /**
      * Formatted Price interface. Aggregate formatted html with price representations. E.g.: <span class="price">$9.00</span> Consider currency, rounding and html
      *
-     * @return CatalogDataProductRenderFormattedPriceInfoInterface
+     * @return CatalogDataProductRenderFormattedPriceInfoInterface|null
      */
-    public function getFormattedPrices(): CatalogDataProductRenderFormattedPriceInfoInterface
+    public function getFormattedPrices(): ?CatalogDataProductRenderFormattedPriceInfoInterface
     {
         return $this->formattedPrices;
     }
     /**
      * Formatted Price interface. Aggregate formatted html with price representations. E.g.: <span class="price">$9.00</span> Consider currency, rounding and html
      *
-     * @param CatalogDataProductRenderFormattedPriceInfoInterface $formattedPrices
+     * @param CatalogDataProductRenderFormattedPriceInfoInterface|null $formattedPrices
      *
      * @return self
      */
-    public function setFormattedPrices(CatalogDataProductRenderFormattedPriceInfoInterface $formattedPrices): self
+    public function setFormattedPrices(?CatalogDataProductRenderFormattedPriceInfoInterface $formattedPrices): self
     {
         $this->formattedPrices = $formattedPrices;
         return $this;
@@ -124,20 +124,20 @@ class CatalogDataProductRenderPriceInfoInterface
     /**
      * Max price of a product
      *
-     * @return float
+     * @return float|null
      */
-    public function getMaxPrice(): float
+    public function getMaxPrice(): ?float
     {
         return $this->maxPrice;
     }
     /**
      * Max price of a product
      *
-     * @param float $maxPrice
+     * @param float|null $maxPrice
      *
      * @return self
      */
-    public function setMaxPrice(float $maxPrice): self
+    public function setMaxPrice(?float $maxPrice): self
     {
         $this->maxPrice = $maxPrice;
         return $this;
@@ -145,20 +145,20 @@ class CatalogDataProductRenderPriceInfoInterface
     /**
      * Max regular price
      *
-     * @return float
+     * @return float|null
      */
-    public function getMaxRegularPrice(): float
+    public function getMaxRegularPrice(): ?float
     {
         return $this->maxRegularPrice;
     }
     /**
      * Max regular price
      *
-     * @param float $maxRegularPrice
+     * @param float|null $maxRegularPrice
      *
      * @return self
      */
-    public function setMaxRegularPrice(float $maxRegularPrice): self
+    public function setMaxRegularPrice(?float $maxRegularPrice): self
     {
         $this->maxRegularPrice = $maxRegularPrice;
         return $this;
@@ -166,20 +166,20 @@ class CatalogDataProductRenderPriceInfoInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getMinimalPrice(): float
+    public function getMinimalPrice(): ?float
     {
         return $this->minimalPrice;
     }
     /**
      *
      *
-     * @param float $minimalPrice
+     * @param float|null $minimalPrice
      *
      * @return self
      */
-    public function setMinimalPrice(float $minimalPrice): self
+    public function setMinimalPrice(?float $minimalPrice): self
     {
         $this->minimalPrice = $minimalPrice;
         return $this;
@@ -187,20 +187,20 @@ class CatalogDataProductRenderPriceInfoInterface
     /**
      * Minimal regular price
      *
-     * @return float
+     * @return float|null
      */
-    public function getMinimalRegularPrice(): float
+    public function getMinimalRegularPrice(): ?float
     {
         return $this->minimalRegularPrice;
     }
     /**
      * Minimal regular price
      *
-     * @param float $minimalRegularPrice
+     * @param float|null $minimalRegularPrice
      *
      * @return self
      */
-    public function setMinimalRegularPrice(float $minimalRegularPrice): self
+    public function setMinimalRegularPrice(?float $minimalRegularPrice): self
     {
         $this->minimalRegularPrice = $minimalRegularPrice;
         return $this;
@@ -208,20 +208,20 @@ class CatalogDataProductRenderPriceInfoInterface
     /**
      * Regular price
      *
-     * @return float
+     * @return float|null
      */
-    public function getRegularPrice(): float
+    public function getRegularPrice(): ?float
     {
         return $this->regularPrice;
     }
     /**
      * Regular price
      *
-     * @param float $regularPrice
+     * @param float|null $regularPrice
      *
      * @return self
      */
-    public function setRegularPrice(float $regularPrice): self
+    public function setRegularPrice(?float $regularPrice): self
     {
         $this->regularPrice = $regularPrice;
         return $this;
@@ -229,20 +229,20 @@ class CatalogDataProductRenderPriceInfoInterface
     /**
      * Special price
      *
-     * @return float
+     * @return float|null
      */
-    public function getSpecialPrice(): float
+    public function getSpecialPrice(): ?float
     {
         return $this->specialPrice;
     }
     /**
      * Special price
      *
-     * @param float $specialPrice
+     * @param float|null $specialPrice
      *
      * @return self
      */
-    public function setSpecialPrice(float $specialPrice): self
+    public function setSpecialPrice(?float $specialPrice): self
     {
         $this->specialPrice = $specialPrice;
         return $this;

@@ -49,23 +49,35 @@ class TaxDataOrderTaxDetailsAppliedTaxInterfaceNormalizer implements Denormalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('amount', $data)) {
+        if (\array_key_exists('amount', $data) && $data['amount'] !== null) {
             $object->setAmount($data['amount']);
+        } elseif (\array_key_exists('amount', $data) && $data['amount'] === null) {
+            $object->setAmount(null);
         }
-        if (\array_key_exists('base_amount', $data)) {
+        if (\array_key_exists('base_amount', $data) && $data['base_amount'] !== null) {
             $object->setBaseAmount($data['base_amount']);
+        } elseif (\array_key_exists('base_amount', $data) && $data['base_amount'] === null) {
+            $object->setBaseAmount(null);
         }
-        if (\array_key_exists('code', $data)) {
+        if (\array_key_exists('code', $data) && $data['code'] !== null) {
             $object->setCode($data['code']);
+        } elseif (\array_key_exists('code', $data) && $data['code'] === null) {
+            $object->setCode(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_3\\Model\\TaxDataOrderTaxDetailsAppliedTaxExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('percent', $data)) {
+        if (\array_key_exists('percent', $data) && $data['percent'] !== null) {
             $object->setPercent($data['percent']);
+        } elseif (\array_key_exists('percent', $data) && $data['percent'] === null) {
+            $object->setPercent(null);
         }
-        if (\array_key_exists('title', $data)) {
+        if (\array_key_exists('title', $data) && $data['title'] !== null) {
             $object->setTitle($data['title']);
+        } elseif (\array_key_exists('title', $data) && $data['title'] === null) {
+            $object->setTitle(null);
         }
         return $object;
     }

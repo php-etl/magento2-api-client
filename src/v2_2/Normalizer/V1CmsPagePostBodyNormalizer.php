@@ -40,8 +40,10 @@ class V1CmsPagePostBodyNormalizer implements DenormalizerInterface, NormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('page', $data)) {
+        if (\array_key_exists('page', $data) && $data['page'] !== null) {
             $object->setPage($this->denormalizer->denormalize($data['page'], 'Kiboko\\Magento\\V2_2\\Model\\CmsDataPageInterface', 'json', $context));
+        } elseif (\array_key_exists('page', $data) && $data['page'] === null) {
+            $object->setPage(null);
         }
         return $object;
     }

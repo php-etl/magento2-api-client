@@ -7,26 +7,26 @@ class V1GuestCartsCartIdTotalsInformationPostBody
     /**
      * Interface TotalsInformationInterface
      *
-     * @var CheckoutDataTotalsInformationInterface
+     * @var CheckoutDataTotalsInformationInterface|null
      */
     protected $addressInformation;
     /**
      * Interface TotalsInformationInterface
      *
-     * @return CheckoutDataTotalsInformationInterface
+     * @return CheckoutDataTotalsInformationInterface|null
      */
-    public function getAddressInformation(): CheckoutDataTotalsInformationInterface
+    public function getAddressInformation(): ?CheckoutDataTotalsInformationInterface
     {
         return $this->addressInformation;
     }
     /**
      * Interface TotalsInformationInterface
      *
-     * @param CheckoutDataTotalsInformationInterface $addressInformation
+     * @param CheckoutDataTotalsInformationInterface|null $addressInformation
      *
      * @return self
      */
-    public function setAddressInformation(CheckoutDataTotalsInformationInterface $addressInformation): self
+    public function setAddressInformation(?CheckoutDataTotalsInformationInterface $addressInformation): self
     {
         $this->addressInformation = $addressInformation;
         return $this;

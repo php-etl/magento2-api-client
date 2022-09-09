@@ -7,446 +7,446 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $amazonOrderReferenceId;
     /**
      *
      *
-     * @var TaxDataOrderTaxDetailsAppliedTaxInterface[]
+     * @var TaxDataOrderTaxDetailsAppliedTaxInterface[]|null
      */
     protected $appliedTaxes;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $baseCustomerBalanceAmount;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $baseCustomerBalanceInvoiced;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $baseCustomerBalanceRefunded;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $baseCustomerBalanceTotalRefunded;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $baseGiftCardsAmount;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $baseGiftCardsInvoiced;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $baseGiftCardsRefunded;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $baseRewardCurrencyAmount;
     /**
      * Order company extension attributes interface. Adds new company attributes to orders.
      *
-     * @var CompanyDataCompanyOrderInterface
+     * @var CompanyDataCompanyOrderInterface|null
      */
     protected $companyOrderAttributes;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $convertingFromQuote;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $customerBalanceAmount;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $customerBalanceInvoiced;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $customerBalanceRefunded;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $customerBalanceTotalRefunded;
     /**
      *
      *
-     * @var GiftCardAccountDataGiftCardInterface[]
+     * @var GiftCardAccountDataGiftCardInterface[]|null
      */
     protected $giftCards;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $giftCardsAmount;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $giftCardsInvoiced;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $giftCardsRefunded;
     /**
      * Interface MessageInterface
      *
-     * @var GiftMessageDataMessageInterface
+     * @var GiftMessageDataMessageInterface|null
      */
     protected $giftMessage;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwAddCard;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwAllowGiftReceipt;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwBasePrice;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwBasePriceInclTax;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwBasePriceInvoiced;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwBasePriceRefunded;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwBaseTaxAmount;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwBaseTaxAmountInvoiced;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwBaseTaxAmountRefunded;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwCardBasePrice;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwCardBasePriceInclTax;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwCardBasePriceInvoiced;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwCardBasePriceRefunded;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwCardBaseTaxAmount;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwCardBaseTaxInvoiced;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwCardBaseTaxRefunded;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwCardPrice;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwCardPriceInclTax;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwCardPriceInvoiced;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwCardPriceRefunded;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwCardTaxAmount;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwCardTaxInvoiced;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwCardTaxRefunded;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwId;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwItemsBasePrice;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwItemsBasePriceInclTax;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwItemsBasePriceInvoiced;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwItemsBasePriceRefunded;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwItemsBaseTaxAmount;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwItemsBaseTaxInvoiced;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwItemsBaseTaxRefunded;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwItemsPrice;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwItemsPriceInclTax;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwItemsPriceInvoiced;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwItemsPriceRefunded;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwItemsTaxAmount;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwItemsTaxInvoiced;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwItemsTaxRefunded;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwPrice;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwPriceInclTax;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwPriceInvoiced;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwPriceRefunded;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwTaxAmount;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwTaxAmountInvoiced;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $gwTaxAmountRefunded;
     /**
      *
      *
-     * @var TaxDataOrderTaxDetailsItemInterface[]
+     * @var TaxDataOrderTaxDetailsItemInterface[]|null
      */
     protected $itemAppliedTaxes;
     /**
      *
      *
-     * @var PaymentDataPaymentAdditionalInfoInterface[]
+     * @var PaymentDataPaymentAdditionalInfoInterface[]|null
      */
     protected $paymentAdditionalInfo;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $rewardCurrencyAmount;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $rewardPointsBalance;
     /**
      *
      *
-     * @var SalesDataShippingAssignmentInterface[]
+     * @var SalesDataShippingAssignmentInterface[]|null
      */
     protected $shippingAssignments;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getAmazonOrderReferenceId(): string
+    public function getAmazonOrderReferenceId(): ?string
     {
         return $this->amazonOrderReferenceId;
     }
     /**
      *
      *
-     * @param string $amazonOrderReferenceId
+     * @param string|null $amazonOrderReferenceId
      *
      * @return self
      */
-    public function setAmazonOrderReferenceId(string $amazonOrderReferenceId): self
+    public function setAmazonOrderReferenceId(?string $amazonOrderReferenceId): self
     {
         $this->amazonOrderReferenceId = $amazonOrderReferenceId;
         return $this;
@@ -454,20 +454,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return TaxDataOrderTaxDetailsAppliedTaxInterface[]
+     * @return TaxDataOrderTaxDetailsAppliedTaxInterface[]|null
      */
-    public function getAppliedTaxes(): array
+    public function getAppliedTaxes(): ?array
     {
         return $this->appliedTaxes;
     }
     /**
      *
      *
-     * @param TaxDataOrderTaxDetailsAppliedTaxInterface[] $appliedTaxes
+     * @param TaxDataOrderTaxDetailsAppliedTaxInterface[]|null $appliedTaxes
      *
      * @return self
      */
-    public function setAppliedTaxes(array $appliedTaxes): self
+    public function setAppliedTaxes(?array $appliedTaxes): self
     {
         $this->appliedTaxes = $appliedTaxes;
         return $this;
@@ -475,20 +475,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseCustomerBalanceAmount(): float
+    public function getBaseCustomerBalanceAmount(): ?float
     {
         return $this->baseCustomerBalanceAmount;
     }
     /**
      *
      *
-     * @param float $baseCustomerBalanceAmount
+     * @param float|null $baseCustomerBalanceAmount
      *
      * @return self
      */
-    public function setBaseCustomerBalanceAmount(float $baseCustomerBalanceAmount): self
+    public function setBaseCustomerBalanceAmount(?float $baseCustomerBalanceAmount): self
     {
         $this->baseCustomerBalanceAmount = $baseCustomerBalanceAmount;
         return $this;
@@ -496,20 +496,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseCustomerBalanceInvoiced(): float
+    public function getBaseCustomerBalanceInvoiced(): ?float
     {
         return $this->baseCustomerBalanceInvoiced;
     }
     /**
      *
      *
-     * @param float $baseCustomerBalanceInvoiced
+     * @param float|null $baseCustomerBalanceInvoiced
      *
      * @return self
      */
-    public function setBaseCustomerBalanceInvoiced(float $baseCustomerBalanceInvoiced): self
+    public function setBaseCustomerBalanceInvoiced(?float $baseCustomerBalanceInvoiced): self
     {
         $this->baseCustomerBalanceInvoiced = $baseCustomerBalanceInvoiced;
         return $this;
@@ -517,20 +517,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseCustomerBalanceRefunded(): float
+    public function getBaseCustomerBalanceRefunded(): ?float
     {
         return $this->baseCustomerBalanceRefunded;
     }
     /**
      *
      *
-     * @param float $baseCustomerBalanceRefunded
+     * @param float|null $baseCustomerBalanceRefunded
      *
      * @return self
      */
-    public function setBaseCustomerBalanceRefunded(float $baseCustomerBalanceRefunded): self
+    public function setBaseCustomerBalanceRefunded(?float $baseCustomerBalanceRefunded): self
     {
         $this->baseCustomerBalanceRefunded = $baseCustomerBalanceRefunded;
         return $this;
@@ -538,20 +538,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseCustomerBalanceTotalRefunded(): float
+    public function getBaseCustomerBalanceTotalRefunded(): ?float
     {
         return $this->baseCustomerBalanceTotalRefunded;
     }
     /**
      *
      *
-     * @param float $baseCustomerBalanceTotalRefunded
+     * @param float|null $baseCustomerBalanceTotalRefunded
      *
      * @return self
      */
-    public function setBaseCustomerBalanceTotalRefunded(float $baseCustomerBalanceTotalRefunded): self
+    public function setBaseCustomerBalanceTotalRefunded(?float $baseCustomerBalanceTotalRefunded): self
     {
         $this->baseCustomerBalanceTotalRefunded = $baseCustomerBalanceTotalRefunded;
         return $this;
@@ -559,20 +559,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseGiftCardsAmount(): float
+    public function getBaseGiftCardsAmount(): ?float
     {
         return $this->baseGiftCardsAmount;
     }
     /**
      *
      *
-     * @param float $baseGiftCardsAmount
+     * @param float|null $baseGiftCardsAmount
      *
      * @return self
      */
-    public function setBaseGiftCardsAmount(float $baseGiftCardsAmount): self
+    public function setBaseGiftCardsAmount(?float $baseGiftCardsAmount): self
     {
         $this->baseGiftCardsAmount = $baseGiftCardsAmount;
         return $this;
@@ -580,20 +580,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseGiftCardsInvoiced(): float
+    public function getBaseGiftCardsInvoiced(): ?float
     {
         return $this->baseGiftCardsInvoiced;
     }
     /**
      *
      *
-     * @param float $baseGiftCardsInvoiced
+     * @param float|null $baseGiftCardsInvoiced
      *
      * @return self
      */
-    public function setBaseGiftCardsInvoiced(float $baseGiftCardsInvoiced): self
+    public function setBaseGiftCardsInvoiced(?float $baseGiftCardsInvoiced): self
     {
         $this->baseGiftCardsInvoiced = $baseGiftCardsInvoiced;
         return $this;
@@ -601,20 +601,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseGiftCardsRefunded(): float
+    public function getBaseGiftCardsRefunded(): ?float
     {
         return $this->baseGiftCardsRefunded;
     }
     /**
      *
      *
-     * @param float $baseGiftCardsRefunded
+     * @param float|null $baseGiftCardsRefunded
      *
      * @return self
      */
-    public function setBaseGiftCardsRefunded(float $baseGiftCardsRefunded): self
+    public function setBaseGiftCardsRefunded(?float $baseGiftCardsRefunded): self
     {
         $this->baseGiftCardsRefunded = $baseGiftCardsRefunded;
         return $this;
@@ -622,20 +622,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseRewardCurrencyAmount(): float
+    public function getBaseRewardCurrencyAmount(): ?float
     {
         return $this->baseRewardCurrencyAmount;
     }
     /**
      *
      *
-     * @param float $baseRewardCurrencyAmount
+     * @param float|null $baseRewardCurrencyAmount
      *
      * @return self
      */
-    public function setBaseRewardCurrencyAmount(float $baseRewardCurrencyAmount): self
+    public function setBaseRewardCurrencyAmount(?float $baseRewardCurrencyAmount): self
     {
         $this->baseRewardCurrencyAmount = $baseRewardCurrencyAmount;
         return $this;
@@ -643,20 +643,20 @@ class SalesDataOrderExtensionInterface
     /**
      * Order company extension attributes interface. Adds new company attributes to orders.
      *
-     * @return CompanyDataCompanyOrderInterface
+     * @return CompanyDataCompanyOrderInterface|null
      */
-    public function getCompanyOrderAttributes(): CompanyDataCompanyOrderInterface
+    public function getCompanyOrderAttributes(): ?CompanyDataCompanyOrderInterface
     {
         return $this->companyOrderAttributes;
     }
     /**
      * Order company extension attributes interface. Adds new company attributes to orders.
      *
-     * @param CompanyDataCompanyOrderInterface $companyOrderAttributes
+     * @param CompanyDataCompanyOrderInterface|null $companyOrderAttributes
      *
      * @return self
      */
-    public function setCompanyOrderAttributes(CompanyDataCompanyOrderInterface $companyOrderAttributes): self
+    public function setCompanyOrderAttributes(?CompanyDataCompanyOrderInterface $companyOrderAttributes): self
     {
         $this->companyOrderAttributes = $companyOrderAttributes;
         return $this;
@@ -664,20 +664,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getConvertingFromQuote(): bool
+    public function getConvertingFromQuote(): ?bool
     {
         return $this->convertingFromQuote;
     }
     /**
      *
      *
-     * @param bool $convertingFromQuote
+     * @param bool|null $convertingFromQuote
      *
      * @return self
      */
-    public function setConvertingFromQuote(bool $convertingFromQuote): self
+    public function setConvertingFromQuote(?bool $convertingFromQuote): self
     {
         $this->convertingFromQuote = $convertingFromQuote;
         return $this;
@@ -685,20 +685,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getCustomerBalanceAmount(): float
+    public function getCustomerBalanceAmount(): ?float
     {
         return $this->customerBalanceAmount;
     }
     /**
      *
      *
-     * @param float $customerBalanceAmount
+     * @param float|null $customerBalanceAmount
      *
      * @return self
      */
-    public function setCustomerBalanceAmount(float $customerBalanceAmount): self
+    public function setCustomerBalanceAmount(?float $customerBalanceAmount): self
     {
         $this->customerBalanceAmount = $customerBalanceAmount;
         return $this;
@@ -706,20 +706,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getCustomerBalanceInvoiced(): float
+    public function getCustomerBalanceInvoiced(): ?float
     {
         return $this->customerBalanceInvoiced;
     }
     /**
      *
      *
-     * @param float $customerBalanceInvoiced
+     * @param float|null $customerBalanceInvoiced
      *
      * @return self
      */
-    public function setCustomerBalanceInvoiced(float $customerBalanceInvoiced): self
+    public function setCustomerBalanceInvoiced(?float $customerBalanceInvoiced): self
     {
         $this->customerBalanceInvoiced = $customerBalanceInvoiced;
         return $this;
@@ -727,20 +727,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getCustomerBalanceRefunded(): float
+    public function getCustomerBalanceRefunded(): ?float
     {
         return $this->customerBalanceRefunded;
     }
     /**
      *
      *
-     * @param float $customerBalanceRefunded
+     * @param float|null $customerBalanceRefunded
      *
      * @return self
      */
-    public function setCustomerBalanceRefunded(float $customerBalanceRefunded): self
+    public function setCustomerBalanceRefunded(?float $customerBalanceRefunded): self
     {
         $this->customerBalanceRefunded = $customerBalanceRefunded;
         return $this;
@@ -748,20 +748,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getCustomerBalanceTotalRefunded(): float
+    public function getCustomerBalanceTotalRefunded(): ?float
     {
         return $this->customerBalanceTotalRefunded;
     }
     /**
      *
      *
-     * @param float $customerBalanceTotalRefunded
+     * @param float|null $customerBalanceTotalRefunded
      *
      * @return self
      */
-    public function setCustomerBalanceTotalRefunded(float $customerBalanceTotalRefunded): self
+    public function setCustomerBalanceTotalRefunded(?float $customerBalanceTotalRefunded): self
     {
         $this->customerBalanceTotalRefunded = $customerBalanceTotalRefunded;
         return $this;
@@ -769,20 +769,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return GiftCardAccountDataGiftCardInterface[]
+     * @return GiftCardAccountDataGiftCardInterface[]|null
      */
-    public function getGiftCards(): array
+    public function getGiftCards(): ?array
     {
         return $this->giftCards;
     }
     /**
      *
      *
-     * @param GiftCardAccountDataGiftCardInterface[] $giftCards
+     * @param GiftCardAccountDataGiftCardInterface[]|null $giftCards
      *
      * @return self
      */
-    public function setGiftCards(array $giftCards): self
+    public function setGiftCards(?array $giftCards): self
     {
         $this->giftCards = $giftCards;
         return $this;
@@ -790,20 +790,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getGiftCardsAmount(): float
+    public function getGiftCardsAmount(): ?float
     {
         return $this->giftCardsAmount;
     }
     /**
      *
      *
-     * @param float $giftCardsAmount
+     * @param float|null $giftCardsAmount
      *
      * @return self
      */
-    public function setGiftCardsAmount(float $giftCardsAmount): self
+    public function setGiftCardsAmount(?float $giftCardsAmount): self
     {
         $this->giftCardsAmount = $giftCardsAmount;
         return $this;
@@ -811,20 +811,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getGiftCardsInvoiced(): float
+    public function getGiftCardsInvoiced(): ?float
     {
         return $this->giftCardsInvoiced;
     }
     /**
      *
      *
-     * @param float $giftCardsInvoiced
+     * @param float|null $giftCardsInvoiced
      *
      * @return self
      */
-    public function setGiftCardsInvoiced(float $giftCardsInvoiced): self
+    public function setGiftCardsInvoiced(?float $giftCardsInvoiced): self
     {
         $this->giftCardsInvoiced = $giftCardsInvoiced;
         return $this;
@@ -832,20 +832,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getGiftCardsRefunded(): float
+    public function getGiftCardsRefunded(): ?float
     {
         return $this->giftCardsRefunded;
     }
     /**
      *
      *
-     * @param float $giftCardsRefunded
+     * @param float|null $giftCardsRefunded
      *
      * @return self
      */
-    public function setGiftCardsRefunded(float $giftCardsRefunded): self
+    public function setGiftCardsRefunded(?float $giftCardsRefunded): self
     {
         $this->giftCardsRefunded = $giftCardsRefunded;
         return $this;
@@ -853,20 +853,20 @@ class SalesDataOrderExtensionInterface
     /**
      * Interface MessageInterface
      *
-     * @return GiftMessageDataMessageInterface
+     * @return GiftMessageDataMessageInterface|null
      */
-    public function getGiftMessage(): GiftMessageDataMessageInterface
+    public function getGiftMessage(): ?GiftMessageDataMessageInterface
     {
         return $this->giftMessage;
     }
     /**
      * Interface MessageInterface
      *
-     * @param GiftMessageDataMessageInterface $giftMessage
+     * @param GiftMessageDataMessageInterface|null $giftMessage
      *
      * @return self
      */
-    public function setGiftMessage(GiftMessageDataMessageInterface $giftMessage): self
+    public function setGiftMessage(?GiftMessageDataMessageInterface $giftMessage): self
     {
         $this->giftMessage = $giftMessage;
         return $this;
@@ -874,20 +874,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwAddCard(): string
+    public function getGwAddCard(): ?string
     {
         return $this->gwAddCard;
     }
     /**
      *
      *
-     * @param string $gwAddCard
+     * @param string|null $gwAddCard
      *
      * @return self
      */
-    public function setGwAddCard(string $gwAddCard): self
+    public function setGwAddCard(?string $gwAddCard): self
     {
         $this->gwAddCard = $gwAddCard;
         return $this;
@@ -895,20 +895,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwAllowGiftReceipt(): string
+    public function getGwAllowGiftReceipt(): ?string
     {
         return $this->gwAllowGiftReceipt;
     }
     /**
      *
      *
-     * @param string $gwAllowGiftReceipt
+     * @param string|null $gwAllowGiftReceipt
      *
      * @return self
      */
-    public function setGwAllowGiftReceipt(string $gwAllowGiftReceipt): self
+    public function setGwAllowGiftReceipt(?string $gwAllowGiftReceipt): self
     {
         $this->gwAllowGiftReceipt = $gwAllowGiftReceipt;
         return $this;
@@ -916,20 +916,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwBasePrice(): string
+    public function getGwBasePrice(): ?string
     {
         return $this->gwBasePrice;
     }
     /**
      *
      *
-     * @param string $gwBasePrice
+     * @param string|null $gwBasePrice
      *
      * @return self
      */
-    public function setGwBasePrice(string $gwBasePrice): self
+    public function setGwBasePrice(?string $gwBasePrice): self
     {
         $this->gwBasePrice = $gwBasePrice;
         return $this;
@@ -937,20 +937,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwBasePriceInclTax(): string
+    public function getGwBasePriceInclTax(): ?string
     {
         return $this->gwBasePriceInclTax;
     }
     /**
      *
      *
-     * @param string $gwBasePriceInclTax
+     * @param string|null $gwBasePriceInclTax
      *
      * @return self
      */
-    public function setGwBasePriceInclTax(string $gwBasePriceInclTax): self
+    public function setGwBasePriceInclTax(?string $gwBasePriceInclTax): self
     {
         $this->gwBasePriceInclTax = $gwBasePriceInclTax;
         return $this;
@@ -958,20 +958,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwBasePriceInvoiced(): string
+    public function getGwBasePriceInvoiced(): ?string
     {
         return $this->gwBasePriceInvoiced;
     }
     /**
      *
      *
-     * @param string $gwBasePriceInvoiced
+     * @param string|null $gwBasePriceInvoiced
      *
      * @return self
      */
-    public function setGwBasePriceInvoiced(string $gwBasePriceInvoiced): self
+    public function setGwBasePriceInvoiced(?string $gwBasePriceInvoiced): self
     {
         $this->gwBasePriceInvoiced = $gwBasePriceInvoiced;
         return $this;
@@ -979,20 +979,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwBasePriceRefunded(): string
+    public function getGwBasePriceRefunded(): ?string
     {
         return $this->gwBasePriceRefunded;
     }
     /**
      *
      *
-     * @param string $gwBasePriceRefunded
+     * @param string|null $gwBasePriceRefunded
      *
      * @return self
      */
-    public function setGwBasePriceRefunded(string $gwBasePriceRefunded): self
+    public function setGwBasePriceRefunded(?string $gwBasePriceRefunded): self
     {
         $this->gwBasePriceRefunded = $gwBasePriceRefunded;
         return $this;
@@ -1000,20 +1000,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwBaseTaxAmount(): string
+    public function getGwBaseTaxAmount(): ?string
     {
         return $this->gwBaseTaxAmount;
     }
     /**
      *
      *
-     * @param string $gwBaseTaxAmount
+     * @param string|null $gwBaseTaxAmount
      *
      * @return self
      */
-    public function setGwBaseTaxAmount(string $gwBaseTaxAmount): self
+    public function setGwBaseTaxAmount(?string $gwBaseTaxAmount): self
     {
         $this->gwBaseTaxAmount = $gwBaseTaxAmount;
         return $this;
@@ -1021,20 +1021,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwBaseTaxAmountInvoiced(): string
+    public function getGwBaseTaxAmountInvoiced(): ?string
     {
         return $this->gwBaseTaxAmountInvoiced;
     }
     /**
      *
      *
-     * @param string $gwBaseTaxAmountInvoiced
+     * @param string|null $gwBaseTaxAmountInvoiced
      *
      * @return self
      */
-    public function setGwBaseTaxAmountInvoiced(string $gwBaseTaxAmountInvoiced): self
+    public function setGwBaseTaxAmountInvoiced(?string $gwBaseTaxAmountInvoiced): self
     {
         $this->gwBaseTaxAmountInvoiced = $gwBaseTaxAmountInvoiced;
         return $this;
@@ -1042,20 +1042,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwBaseTaxAmountRefunded(): string
+    public function getGwBaseTaxAmountRefunded(): ?string
     {
         return $this->gwBaseTaxAmountRefunded;
     }
     /**
      *
      *
-     * @param string $gwBaseTaxAmountRefunded
+     * @param string|null $gwBaseTaxAmountRefunded
      *
      * @return self
      */
-    public function setGwBaseTaxAmountRefunded(string $gwBaseTaxAmountRefunded): self
+    public function setGwBaseTaxAmountRefunded(?string $gwBaseTaxAmountRefunded): self
     {
         $this->gwBaseTaxAmountRefunded = $gwBaseTaxAmountRefunded;
         return $this;
@@ -1063,20 +1063,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwCardBasePrice(): string
+    public function getGwCardBasePrice(): ?string
     {
         return $this->gwCardBasePrice;
     }
     /**
      *
      *
-     * @param string $gwCardBasePrice
+     * @param string|null $gwCardBasePrice
      *
      * @return self
      */
-    public function setGwCardBasePrice(string $gwCardBasePrice): self
+    public function setGwCardBasePrice(?string $gwCardBasePrice): self
     {
         $this->gwCardBasePrice = $gwCardBasePrice;
         return $this;
@@ -1084,20 +1084,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwCardBasePriceInclTax(): string
+    public function getGwCardBasePriceInclTax(): ?string
     {
         return $this->gwCardBasePriceInclTax;
     }
     /**
      *
      *
-     * @param string $gwCardBasePriceInclTax
+     * @param string|null $gwCardBasePriceInclTax
      *
      * @return self
      */
-    public function setGwCardBasePriceInclTax(string $gwCardBasePriceInclTax): self
+    public function setGwCardBasePriceInclTax(?string $gwCardBasePriceInclTax): self
     {
         $this->gwCardBasePriceInclTax = $gwCardBasePriceInclTax;
         return $this;
@@ -1105,20 +1105,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwCardBasePriceInvoiced(): string
+    public function getGwCardBasePriceInvoiced(): ?string
     {
         return $this->gwCardBasePriceInvoiced;
     }
     /**
      *
      *
-     * @param string $gwCardBasePriceInvoiced
+     * @param string|null $gwCardBasePriceInvoiced
      *
      * @return self
      */
-    public function setGwCardBasePriceInvoiced(string $gwCardBasePriceInvoiced): self
+    public function setGwCardBasePriceInvoiced(?string $gwCardBasePriceInvoiced): self
     {
         $this->gwCardBasePriceInvoiced = $gwCardBasePriceInvoiced;
         return $this;
@@ -1126,20 +1126,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwCardBasePriceRefunded(): string
+    public function getGwCardBasePriceRefunded(): ?string
     {
         return $this->gwCardBasePriceRefunded;
     }
     /**
      *
      *
-     * @param string $gwCardBasePriceRefunded
+     * @param string|null $gwCardBasePriceRefunded
      *
      * @return self
      */
-    public function setGwCardBasePriceRefunded(string $gwCardBasePriceRefunded): self
+    public function setGwCardBasePriceRefunded(?string $gwCardBasePriceRefunded): self
     {
         $this->gwCardBasePriceRefunded = $gwCardBasePriceRefunded;
         return $this;
@@ -1147,20 +1147,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwCardBaseTaxAmount(): string
+    public function getGwCardBaseTaxAmount(): ?string
     {
         return $this->gwCardBaseTaxAmount;
     }
     /**
      *
      *
-     * @param string $gwCardBaseTaxAmount
+     * @param string|null $gwCardBaseTaxAmount
      *
      * @return self
      */
-    public function setGwCardBaseTaxAmount(string $gwCardBaseTaxAmount): self
+    public function setGwCardBaseTaxAmount(?string $gwCardBaseTaxAmount): self
     {
         $this->gwCardBaseTaxAmount = $gwCardBaseTaxAmount;
         return $this;
@@ -1168,20 +1168,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwCardBaseTaxInvoiced(): string
+    public function getGwCardBaseTaxInvoiced(): ?string
     {
         return $this->gwCardBaseTaxInvoiced;
     }
     /**
      *
      *
-     * @param string $gwCardBaseTaxInvoiced
+     * @param string|null $gwCardBaseTaxInvoiced
      *
      * @return self
      */
-    public function setGwCardBaseTaxInvoiced(string $gwCardBaseTaxInvoiced): self
+    public function setGwCardBaseTaxInvoiced(?string $gwCardBaseTaxInvoiced): self
     {
         $this->gwCardBaseTaxInvoiced = $gwCardBaseTaxInvoiced;
         return $this;
@@ -1189,20 +1189,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwCardBaseTaxRefunded(): string
+    public function getGwCardBaseTaxRefunded(): ?string
     {
         return $this->gwCardBaseTaxRefunded;
     }
     /**
      *
      *
-     * @param string $gwCardBaseTaxRefunded
+     * @param string|null $gwCardBaseTaxRefunded
      *
      * @return self
      */
-    public function setGwCardBaseTaxRefunded(string $gwCardBaseTaxRefunded): self
+    public function setGwCardBaseTaxRefunded(?string $gwCardBaseTaxRefunded): self
     {
         $this->gwCardBaseTaxRefunded = $gwCardBaseTaxRefunded;
         return $this;
@@ -1210,20 +1210,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwCardPrice(): string
+    public function getGwCardPrice(): ?string
     {
         return $this->gwCardPrice;
     }
     /**
      *
      *
-     * @param string $gwCardPrice
+     * @param string|null $gwCardPrice
      *
      * @return self
      */
-    public function setGwCardPrice(string $gwCardPrice): self
+    public function setGwCardPrice(?string $gwCardPrice): self
     {
         $this->gwCardPrice = $gwCardPrice;
         return $this;
@@ -1231,20 +1231,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwCardPriceInclTax(): string
+    public function getGwCardPriceInclTax(): ?string
     {
         return $this->gwCardPriceInclTax;
     }
     /**
      *
      *
-     * @param string $gwCardPriceInclTax
+     * @param string|null $gwCardPriceInclTax
      *
      * @return self
      */
-    public function setGwCardPriceInclTax(string $gwCardPriceInclTax): self
+    public function setGwCardPriceInclTax(?string $gwCardPriceInclTax): self
     {
         $this->gwCardPriceInclTax = $gwCardPriceInclTax;
         return $this;
@@ -1252,20 +1252,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwCardPriceInvoiced(): string
+    public function getGwCardPriceInvoiced(): ?string
     {
         return $this->gwCardPriceInvoiced;
     }
     /**
      *
      *
-     * @param string $gwCardPriceInvoiced
+     * @param string|null $gwCardPriceInvoiced
      *
      * @return self
      */
-    public function setGwCardPriceInvoiced(string $gwCardPriceInvoiced): self
+    public function setGwCardPriceInvoiced(?string $gwCardPriceInvoiced): self
     {
         $this->gwCardPriceInvoiced = $gwCardPriceInvoiced;
         return $this;
@@ -1273,20 +1273,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwCardPriceRefunded(): string
+    public function getGwCardPriceRefunded(): ?string
     {
         return $this->gwCardPriceRefunded;
     }
     /**
      *
      *
-     * @param string $gwCardPriceRefunded
+     * @param string|null $gwCardPriceRefunded
      *
      * @return self
      */
-    public function setGwCardPriceRefunded(string $gwCardPriceRefunded): self
+    public function setGwCardPriceRefunded(?string $gwCardPriceRefunded): self
     {
         $this->gwCardPriceRefunded = $gwCardPriceRefunded;
         return $this;
@@ -1294,20 +1294,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwCardTaxAmount(): string
+    public function getGwCardTaxAmount(): ?string
     {
         return $this->gwCardTaxAmount;
     }
     /**
      *
      *
-     * @param string $gwCardTaxAmount
+     * @param string|null $gwCardTaxAmount
      *
      * @return self
      */
-    public function setGwCardTaxAmount(string $gwCardTaxAmount): self
+    public function setGwCardTaxAmount(?string $gwCardTaxAmount): self
     {
         $this->gwCardTaxAmount = $gwCardTaxAmount;
         return $this;
@@ -1315,20 +1315,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwCardTaxInvoiced(): string
+    public function getGwCardTaxInvoiced(): ?string
     {
         return $this->gwCardTaxInvoiced;
     }
     /**
      *
      *
-     * @param string $gwCardTaxInvoiced
+     * @param string|null $gwCardTaxInvoiced
      *
      * @return self
      */
-    public function setGwCardTaxInvoiced(string $gwCardTaxInvoiced): self
+    public function setGwCardTaxInvoiced(?string $gwCardTaxInvoiced): self
     {
         $this->gwCardTaxInvoiced = $gwCardTaxInvoiced;
         return $this;
@@ -1336,20 +1336,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwCardTaxRefunded(): string
+    public function getGwCardTaxRefunded(): ?string
     {
         return $this->gwCardTaxRefunded;
     }
     /**
      *
      *
-     * @param string $gwCardTaxRefunded
+     * @param string|null $gwCardTaxRefunded
      *
      * @return self
      */
-    public function setGwCardTaxRefunded(string $gwCardTaxRefunded): self
+    public function setGwCardTaxRefunded(?string $gwCardTaxRefunded): self
     {
         $this->gwCardTaxRefunded = $gwCardTaxRefunded;
         return $this;
@@ -1357,20 +1357,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwId(): string
+    public function getGwId(): ?string
     {
         return $this->gwId;
     }
     /**
      *
      *
-     * @param string $gwId
+     * @param string|null $gwId
      *
      * @return self
      */
-    public function setGwId(string $gwId): self
+    public function setGwId(?string $gwId): self
     {
         $this->gwId = $gwId;
         return $this;
@@ -1378,20 +1378,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwItemsBasePrice(): string
+    public function getGwItemsBasePrice(): ?string
     {
         return $this->gwItemsBasePrice;
     }
     /**
      *
      *
-     * @param string $gwItemsBasePrice
+     * @param string|null $gwItemsBasePrice
      *
      * @return self
      */
-    public function setGwItemsBasePrice(string $gwItemsBasePrice): self
+    public function setGwItemsBasePrice(?string $gwItemsBasePrice): self
     {
         $this->gwItemsBasePrice = $gwItemsBasePrice;
         return $this;
@@ -1399,20 +1399,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwItemsBasePriceInclTax(): string
+    public function getGwItemsBasePriceInclTax(): ?string
     {
         return $this->gwItemsBasePriceInclTax;
     }
     /**
      *
      *
-     * @param string $gwItemsBasePriceInclTax
+     * @param string|null $gwItemsBasePriceInclTax
      *
      * @return self
      */
-    public function setGwItemsBasePriceInclTax(string $gwItemsBasePriceInclTax): self
+    public function setGwItemsBasePriceInclTax(?string $gwItemsBasePriceInclTax): self
     {
         $this->gwItemsBasePriceInclTax = $gwItemsBasePriceInclTax;
         return $this;
@@ -1420,20 +1420,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwItemsBasePriceInvoiced(): string
+    public function getGwItemsBasePriceInvoiced(): ?string
     {
         return $this->gwItemsBasePriceInvoiced;
     }
     /**
      *
      *
-     * @param string $gwItemsBasePriceInvoiced
+     * @param string|null $gwItemsBasePriceInvoiced
      *
      * @return self
      */
-    public function setGwItemsBasePriceInvoiced(string $gwItemsBasePriceInvoiced): self
+    public function setGwItemsBasePriceInvoiced(?string $gwItemsBasePriceInvoiced): self
     {
         $this->gwItemsBasePriceInvoiced = $gwItemsBasePriceInvoiced;
         return $this;
@@ -1441,20 +1441,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwItemsBasePriceRefunded(): string
+    public function getGwItemsBasePriceRefunded(): ?string
     {
         return $this->gwItemsBasePriceRefunded;
     }
     /**
      *
      *
-     * @param string $gwItemsBasePriceRefunded
+     * @param string|null $gwItemsBasePriceRefunded
      *
      * @return self
      */
-    public function setGwItemsBasePriceRefunded(string $gwItemsBasePriceRefunded): self
+    public function setGwItemsBasePriceRefunded(?string $gwItemsBasePriceRefunded): self
     {
         $this->gwItemsBasePriceRefunded = $gwItemsBasePriceRefunded;
         return $this;
@@ -1462,20 +1462,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwItemsBaseTaxAmount(): string
+    public function getGwItemsBaseTaxAmount(): ?string
     {
         return $this->gwItemsBaseTaxAmount;
     }
     /**
      *
      *
-     * @param string $gwItemsBaseTaxAmount
+     * @param string|null $gwItemsBaseTaxAmount
      *
      * @return self
      */
-    public function setGwItemsBaseTaxAmount(string $gwItemsBaseTaxAmount): self
+    public function setGwItemsBaseTaxAmount(?string $gwItemsBaseTaxAmount): self
     {
         $this->gwItemsBaseTaxAmount = $gwItemsBaseTaxAmount;
         return $this;
@@ -1483,20 +1483,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwItemsBaseTaxInvoiced(): string
+    public function getGwItemsBaseTaxInvoiced(): ?string
     {
         return $this->gwItemsBaseTaxInvoiced;
     }
     /**
      *
      *
-     * @param string $gwItemsBaseTaxInvoiced
+     * @param string|null $gwItemsBaseTaxInvoiced
      *
      * @return self
      */
-    public function setGwItemsBaseTaxInvoiced(string $gwItemsBaseTaxInvoiced): self
+    public function setGwItemsBaseTaxInvoiced(?string $gwItemsBaseTaxInvoiced): self
     {
         $this->gwItemsBaseTaxInvoiced = $gwItemsBaseTaxInvoiced;
         return $this;
@@ -1504,20 +1504,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwItemsBaseTaxRefunded(): string
+    public function getGwItemsBaseTaxRefunded(): ?string
     {
         return $this->gwItemsBaseTaxRefunded;
     }
     /**
      *
      *
-     * @param string $gwItemsBaseTaxRefunded
+     * @param string|null $gwItemsBaseTaxRefunded
      *
      * @return self
      */
-    public function setGwItemsBaseTaxRefunded(string $gwItemsBaseTaxRefunded): self
+    public function setGwItemsBaseTaxRefunded(?string $gwItemsBaseTaxRefunded): self
     {
         $this->gwItemsBaseTaxRefunded = $gwItemsBaseTaxRefunded;
         return $this;
@@ -1525,20 +1525,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwItemsPrice(): string
+    public function getGwItemsPrice(): ?string
     {
         return $this->gwItemsPrice;
     }
     /**
      *
      *
-     * @param string $gwItemsPrice
+     * @param string|null $gwItemsPrice
      *
      * @return self
      */
-    public function setGwItemsPrice(string $gwItemsPrice): self
+    public function setGwItemsPrice(?string $gwItemsPrice): self
     {
         $this->gwItemsPrice = $gwItemsPrice;
         return $this;
@@ -1546,20 +1546,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwItemsPriceInclTax(): string
+    public function getGwItemsPriceInclTax(): ?string
     {
         return $this->gwItemsPriceInclTax;
     }
     /**
      *
      *
-     * @param string $gwItemsPriceInclTax
+     * @param string|null $gwItemsPriceInclTax
      *
      * @return self
      */
-    public function setGwItemsPriceInclTax(string $gwItemsPriceInclTax): self
+    public function setGwItemsPriceInclTax(?string $gwItemsPriceInclTax): self
     {
         $this->gwItemsPriceInclTax = $gwItemsPriceInclTax;
         return $this;
@@ -1567,20 +1567,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwItemsPriceInvoiced(): string
+    public function getGwItemsPriceInvoiced(): ?string
     {
         return $this->gwItemsPriceInvoiced;
     }
     /**
      *
      *
-     * @param string $gwItemsPriceInvoiced
+     * @param string|null $gwItemsPriceInvoiced
      *
      * @return self
      */
-    public function setGwItemsPriceInvoiced(string $gwItemsPriceInvoiced): self
+    public function setGwItemsPriceInvoiced(?string $gwItemsPriceInvoiced): self
     {
         $this->gwItemsPriceInvoiced = $gwItemsPriceInvoiced;
         return $this;
@@ -1588,20 +1588,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwItemsPriceRefunded(): string
+    public function getGwItemsPriceRefunded(): ?string
     {
         return $this->gwItemsPriceRefunded;
     }
     /**
      *
      *
-     * @param string $gwItemsPriceRefunded
+     * @param string|null $gwItemsPriceRefunded
      *
      * @return self
      */
-    public function setGwItemsPriceRefunded(string $gwItemsPriceRefunded): self
+    public function setGwItemsPriceRefunded(?string $gwItemsPriceRefunded): self
     {
         $this->gwItemsPriceRefunded = $gwItemsPriceRefunded;
         return $this;
@@ -1609,20 +1609,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwItemsTaxAmount(): string
+    public function getGwItemsTaxAmount(): ?string
     {
         return $this->gwItemsTaxAmount;
     }
     /**
      *
      *
-     * @param string $gwItemsTaxAmount
+     * @param string|null $gwItemsTaxAmount
      *
      * @return self
      */
-    public function setGwItemsTaxAmount(string $gwItemsTaxAmount): self
+    public function setGwItemsTaxAmount(?string $gwItemsTaxAmount): self
     {
         $this->gwItemsTaxAmount = $gwItemsTaxAmount;
         return $this;
@@ -1630,20 +1630,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwItemsTaxInvoiced(): string
+    public function getGwItemsTaxInvoiced(): ?string
     {
         return $this->gwItemsTaxInvoiced;
     }
     /**
      *
      *
-     * @param string $gwItemsTaxInvoiced
+     * @param string|null $gwItemsTaxInvoiced
      *
      * @return self
      */
-    public function setGwItemsTaxInvoiced(string $gwItemsTaxInvoiced): self
+    public function setGwItemsTaxInvoiced(?string $gwItemsTaxInvoiced): self
     {
         $this->gwItemsTaxInvoiced = $gwItemsTaxInvoiced;
         return $this;
@@ -1651,20 +1651,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwItemsTaxRefunded(): string
+    public function getGwItemsTaxRefunded(): ?string
     {
         return $this->gwItemsTaxRefunded;
     }
     /**
      *
      *
-     * @param string $gwItemsTaxRefunded
+     * @param string|null $gwItemsTaxRefunded
      *
      * @return self
      */
-    public function setGwItemsTaxRefunded(string $gwItemsTaxRefunded): self
+    public function setGwItemsTaxRefunded(?string $gwItemsTaxRefunded): self
     {
         $this->gwItemsTaxRefunded = $gwItemsTaxRefunded;
         return $this;
@@ -1672,20 +1672,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwPrice(): string
+    public function getGwPrice(): ?string
     {
         return $this->gwPrice;
     }
     /**
      *
      *
-     * @param string $gwPrice
+     * @param string|null $gwPrice
      *
      * @return self
      */
-    public function setGwPrice(string $gwPrice): self
+    public function setGwPrice(?string $gwPrice): self
     {
         $this->gwPrice = $gwPrice;
         return $this;
@@ -1693,20 +1693,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwPriceInclTax(): string
+    public function getGwPriceInclTax(): ?string
     {
         return $this->gwPriceInclTax;
     }
     /**
      *
      *
-     * @param string $gwPriceInclTax
+     * @param string|null $gwPriceInclTax
      *
      * @return self
      */
-    public function setGwPriceInclTax(string $gwPriceInclTax): self
+    public function setGwPriceInclTax(?string $gwPriceInclTax): self
     {
         $this->gwPriceInclTax = $gwPriceInclTax;
         return $this;
@@ -1714,20 +1714,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwPriceInvoiced(): string
+    public function getGwPriceInvoiced(): ?string
     {
         return $this->gwPriceInvoiced;
     }
     /**
      *
      *
-     * @param string $gwPriceInvoiced
+     * @param string|null $gwPriceInvoiced
      *
      * @return self
      */
-    public function setGwPriceInvoiced(string $gwPriceInvoiced): self
+    public function setGwPriceInvoiced(?string $gwPriceInvoiced): self
     {
         $this->gwPriceInvoiced = $gwPriceInvoiced;
         return $this;
@@ -1735,20 +1735,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwPriceRefunded(): string
+    public function getGwPriceRefunded(): ?string
     {
         return $this->gwPriceRefunded;
     }
     /**
      *
      *
-     * @param string $gwPriceRefunded
+     * @param string|null $gwPriceRefunded
      *
      * @return self
      */
-    public function setGwPriceRefunded(string $gwPriceRefunded): self
+    public function setGwPriceRefunded(?string $gwPriceRefunded): self
     {
         $this->gwPriceRefunded = $gwPriceRefunded;
         return $this;
@@ -1756,20 +1756,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwTaxAmount(): string
+    public function getGwTaxAmount(): ?string
     {
         return $this->gwTaxAmount;
     }
     /**
      *
      *
-     * @param string $gwTaxAmount
+     * @param string|null $gwTaxAmount
      *
      * @return self
      */
-    public function setGwTaxAmount(string $gwTaxAmount): self
+    public function setGwTaxAmount(?string $gwTaxAmount): self
     {
         $this->gwTaxAmount = $gwTaxAmount;
         return $this;
@@ -1777,20 +1777,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwTaxAmountInvoiced(): string
+    public function getGwTaxAmountInvoiced(): ?string
     {
         return $this->gwTaxAmountInvoiced;
     }
     /**
      *
      *
-     * @param string $gwTaxAmountInvoiced
+     * @param string|null $gwTaxAmountInvoiced
      *
      * @return self
      */
-    public function setGwTaxAmountInvoiced(string $gwTaxAmountInvoiced): self
+    public function setGwTaxAmountInvoiced(?string $gwTaxAmountInvoiced): self
     {
         $this->gwTaxAmountInvoiced = $gwTaxAmountInvoiced;
         return $this;
@@ -1798,20 +1798,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getGwTaxAmountRefunded(): string
+    public function getGwTaxAmountRefunded(): ?string
     {
         return $this->gwTaxAmountRefunded;
     }
     /**
      *
      *
-     * @param string $gwTaxAmountRefunded
+     * @param string|null $gwTaxAmountRefunded
      *
      * @return self
      */
-    public function setGwTaxAmountRefunded(string $gwTaxAmountRefunded): self
+    public function setGwTaxAmountRefunded(?string $gwTaxAmountRefunded): self
     {
         $this->gwTaxAmountRefunded = $gwTaxAmountRefunded;
         return $this;
@@ -1819,20 +1819,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return TaxDataOrderTaxDetailsItemInterface[]
+     * @return TaxDataOrderTaxDetailsItemInterface[]|null
      */
-    public function getItemAppliedTaxes(): array
+    public function getItemAppliedTaxes(): ?array
     {
         return $this->itemAppliedTaxes;
     }
     /**
      *
      *
-     * @param TaxDataOrderTaxDetailsItemInterface[] $itemAppliedTaxes
+     * @param TaxDataOrderTaxDetailsItemInterface[]|null $itemAppliedTaxes
      *
      * @return self
      */
-    public function setItemAppliedTaxes(array $itemAppliedTaxes): self
+    public function setItemAppliedTaxes(?array $itemAppliedTaxes): self
     {
         $this->itemAppliedTaxes = $itemAppliedTaxes;
         return $this;
@@ -1840,20 +1840,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return PaymentDataPaymentAdditionalInfoInterface[]
+     * @return PaymentDataPaymentAdditionalInfoInterface[]|null
      */
-    public function getPaymentAdditionalInfo(): array
+    public function getPaymentAdditionalInfo(): ?array
     {
         return $this->paymentAdditionalInfo;
     }
     /**
      *
      *
-     * @param PaymentDataPaymentAdditionalInfoInterface[] $paymentAdditionalInfo
+     * @param PaymentDataPaymentAdditionalInfoInterface[]|null $paymentAdditionalInfo
      *
      * @return self
      */
-    public function setPaymentAdditionalInfo(array $paymentAdditionalInfo): self
+    public function setPaymentAdditionalInfo(?array $paymentAdditionalInfo): self
     {
         $this->paymentAdditionalInfo = $paymentAdditionalInfo;
         return $this;
@@ -1861,20 +1861,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getRewardCurrencyAmount(): float
+    public function getRewardCurrencyAmount(): ?float
     {
         return $this->rewardCurrencyAmount;
     }
     /**
      *
      *
-     * @param float $rewardCurrencyAmount
+     * @param float|null $rewardCurrencyAmount
      *
      * @return self
      */
-    public function setRewardCurrencyAmount(float $rewardCurrencyAmount): self
+    public function setRewardCurrencyAmount(?float $rewardCurrencyAmount): self
     {
         $this->rewardCurrencyAmount = $rewardCurrencyAmount;
         return $this;
@@ -1882,20 +1882,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getRewardPointsBalance(): int
+    public function getRewardPointsBalance(): ?int
     {
         return $this->rewardPointsBalance;
     }
     /**
      *
      *
-     * @param int $rewardPointsBalance
+     * @param int|null $rewardPointsBalance
      *
      * @return self
      */
-    public function setRewardPointsBalance(int $rewardPointsBalance): self
+    public function setRewardPointsBalance(?int $rewardPointsBalance): self
     {
         $this->rewardPointsBalance = $rewardPointsBalance;
         return $this;
@@ -1903,20 +1903,20 @@ class SalesDataOrderExtensionInterface
     /**
      *
      *
-     * @return SalesDataShippingAssignmentInterface[]
+     * @return SalesDataShippingAssignmentInterface[]|null
      */
-    public function getShippingAssignments(): array
+    public function getShippingAssignments(): ?array
     {
         return $this->shippingAssignments;
     }
     /**
      *
      *
-     * @param SalesDataShippingAssignmentInterface[] $shippingAssignments
+     * @param SalesDataShippingAssignmentInterface[]|null $shippingAssignments
      *
      * @return self
      */
-    public function setShippingAssignments(array $shippingAssignments): self
+    public function setShippingAssignments(?array $shippingAssignments): self
     {
         $this->shippingAssignments = $shippingAssignments;
         return $this;

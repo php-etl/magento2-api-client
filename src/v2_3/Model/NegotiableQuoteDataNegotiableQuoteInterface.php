@@ -7,158 +7,158 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Quote rules.
      *
-     * @var string
+     * @var string|null
      */
     protected $appliedRuleIds;
     /**
      * Quote negotiated total price in base currency.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseNegotiatedTotalPrice;
     /**
      * Quote original total price in base currency.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseOriginalTotalPrice;
     /**
      * Quote creator id.
      *
-     * @var int
+     * @var int|null
      */
     protected $creatorId;
     /**
      * Quote creator type.
      *
-     * @var int
+     * @var int|null
      */
     protected $creatorType;
     /**
      * Deleted products sku.
      *
-     * @var string
+     * @var string|null
      */
     protected $deletedSku;
     /**
      * Email notification status.
      *
-     * @var int
+     * @var int|null
      */
     protected $emailNotificationStatus;
     /**
      * Expiration period.
      *
-     * @var string
+     * @var string|null
      */
     protected $expirationPeriod;
     /**
      * ExtensionInterface class for @see \Magento\NegotiableQuote\Api\Data\NegotiableQuoteInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Has unconfirmed changes.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $hasUnconfirmedChanges;
     /**
      * Is address draft.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isAddressDraft;
     /**
      * Customer price changes.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isCustomerPriceChanged;
     /**
      * Is regular quote.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isRegularQuote;
     /**
      * Shipping tax changes.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isShippingTaxChanged;
     /**
      * Negotiated price type.
      *
-     * @var int
+     * @var int|null
      */
     protected $negotiatedPriceType;
     /**
      * Negotiated price value.
      *
-     * @var float
+     * @var float|null
      */
     protected $negotiatedPriceValue;
     /**
      * Quote negotiated total price.
      *
-     * @var float
+     * @var float|null
      */
     protected $negotiatedTotalPrice;
     /**
      * Quote notifications.
      *
-     * @var int
+     * @var int|null
      */
     protected $notifications;
     /**
      * Quote original total price.
      *
-     * @var float
+     * @var float|null
      */
     protected $originalTotalPrice;
     /**
      * Negotiable quote ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $quoteId;
     /**
      * Negotiable quote name.
      *
-     * @var string
+     * @var string|null
      */
     protected $quoteName;
     /**
      * Proposed shipping price.
      *
-     * @var float
+     * @var float|null
      */
     protected $shippingPrice;
     /**
      * Negotiable quote status.
      *
-     * @var string
+     * @var string|null
      */
     protected $status;
     /**
      * Quote rules.
      *
-     * @return string
+     * @return string|null
      */
-    public function getAppliedRuleIds(): string
+    public function getAppliedRuleIds(): ?string
     {
         return $this->appliedRuleIds;
     }
     /**
      * Quote rules.
      *
-     * @param string $appliedRuleIds
+     * @param string|null $appliedRuleIds
      *
      * @return self
      */
-    public function setAppliedRuleIds(string $appliedRuleIds): self
+    public function setAppliedRuleIds(?string $appliedRuleIds): self
     {
         $this->appliedRuleIds = $appliedRuleIds;
         return $this;
@@ -166,20 +166,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Quote negotiated total price in base currency.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseNegotiatedTotalPrice(): float
+    public function getBaseNegotiatedTotalPrice(): ?float
     {
         return $this->baseNegotiatedTotalPrice;
     }
     /**
      * Quote negotiated total price in base currency.
      *
-     * @param float $baseNegotiatedTotalPrice
+     * @param float|null $baseNegotiatedTotalPrice
      *
      * @return self
      */
-    public function setBaseNegotiatedTotalPrice(float $baseNegotiatedTotalPrice): self
+    public function setBaseNegotiatedTotalPrice(?float $baseNegotiatedTotalPrice): self
     {
         $this->baseNegotiatedTotalPrice = $baseNegotiatedTotalPrice;
         return $this;
@@ -187,20 +187,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Quote original total price in base currency.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseOriginalTotalPrice(): float
+    public function getBaseOriginalTotalPrice(): ?float
     {
         return $this->baseOriginalTotalPrice;
     }
     /**
      * Quote original total price in base currency.
      *
-     * @param float $baseOriginalTotalPrice
+     * @param float|null $baseOriginalTotalPrice
      *
      * @return self
      */
-    public function setBaseOriginalTotalPrice(float $baseOriginalTotalPrice): self
+    public function setBaseOriginalTotalPrice(?float $baseOriginalTotalPrice): self
     {
         $this->baseOriginalTotalPrice = $baseOriginalTotalPrice;
         return $this;
@@ -208,20 +208,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Quote creator id.
      *
-     * @return int
+     * @return int|null
      */
-    public function getCreatorId(): int
+    public function getCreatorId(): ?int
     {
         return $this->creatorId;
     }
     /**
      * Quote creator id.
      *
-     * @param int $creatorId
+     * @param int|null $creatorId
      *
      * @return self
      */
-    public function setCreatorId(int $creatorId): self
+    public function setCreatorId(?int $creatorId): self
     {
         $this->creatorId = $creatorId;
         return $this;
@@ -229,20 +229,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Quote creator type.
      *
-     * @return int
+     * @return int|null
      */
-    public function getCreatorType(): int
+    public function getCreatorType(): ?int
     {
         return $this->creatorType;
     }
     /**
      * Quote creator type.
      *
-     * @param int $creatorType
+     * @param int|null $creatorType
      *
      * @return self
      */
-    public function setCreatorType(int $creatorType): self
+    public function setCreatorType(?int $creatorType): self
     {
         $this->creatorType = $creatorType;
         return $this;
@@ -250,20 +250,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Deleted products sku.
      *
-     * @return string
+     * @return string|null
      */
-    public function getDeletedSku(): string
+    public function getDeletedSku(): ?string
     {
         return $this->deletedSku;
     }
     /**
      * Deleted products sku.
      *
-     * @param string $deletedSku
+     * @param string|null $deletedSku
      *
      * @return self
      */
-    public function setDeletedSku(string $deletedSku): self
+    public function setDeletedSku(?string $deletedSku): self
     {
         $this->deletedSku = $deletedSku;
         return $this;
@@ -271,20 +271,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Email notification status.
      *
-     * @return int
+     * @return int|null
      */
-    public function getEmailNotificationStatus(): int
+    public function getEmailNotificationStatus(): ?int
     {
         return $this->emailNotificationStatus;
     }
     /**
      * Email notification status.
      *
-     * @param int $emailNotificationStatus
+     * @param int|null $emailNotificationStatus
      *
      * @return self
      */
-    public function setEmailNotificationStatus(int $emailNotificationStatus): self
+    public function setEmailNotificationStatus(?int $emailNotificationStatus): self
     {
         $this->emailNotificationStatus = $emailNotificationStatus;
         return $this;
@@ -292,20 +292,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Expiration period.
      *
-     * @return string
+     * @return string|null
      */
-    public function getExpirationPeriod(): string
+    public function getExpirationPeriod(): ?string
     {
         return $this->expirationPeriod;
     }
     /**
      * Expiration period.
      *
-     * @param string $expirationPeriod
+     * @param string|null $expirationPeriod
      *
      * @return self
      */
-    public function setExpirationPeriod(string $expirationPeriod): self
+    public function setExpirationPeriod(?string $expirationPeriod): self
     {
         $this->expirationPeriod = $expirationPeriod;
         return $this;
@@ -334,20 +334,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Has unconfirmed changes.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getHasUnconfirmedChanges(): bool
+    public function getHasUnconfirmedChanges(): ?bool
     {
         return $this->hasUnconfirmedChanges;
     }
     /**
      * Has unconfirmed changes.
      *
-     * @param bool $hasUnconfirmedChanges
+     * @param bool|null $hasUnconfirmedChanges
      *
      * @return self
      */
-    public function setHasUnconfirmedChanges(bool $hasUnconfirmedChanges): self
+    public function setHasUnconfirmedChanges(?bool $hasUnconfirmedChanges): self
     {
         $this->hasUnconfirmedChanges = $hasUnconfirmedChanges;
         return $this;
@@ -355,20 +355,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Is address draft.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsAddressDraft(): bool
+    public function getIsAddressDraft(): ?bool
     {
         return $this->isAddressDraft;
     }
     /**
      * Is address draft.
      *
-     * @param bool $isAddressDraft
+     * @param bool|null $isAddressDraft
      *
      * @return self
      */
-    public function setIsAddressDraft(bool $isAddressDraft): self
+    public function setIsAddressDraft(?bool $isAddressDraft): self
     {
         $this->isAddressDraft = $isAddressDraft;
         return $this;
@@ -376,20 +376,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Customer price changes.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsCustomerPriceChanged(): bool
+    public function getIsCustomerPriceChanged(): ?bool
     {
         return $this->isCustomerPriceChanged;
     }
     /**
      * Customer price changes.
      *
-     * @param bool $isCustomerPriceChanged
+     * @param bool|null $isCustomerPriceChanged
      *
      * @return self
      */
-    public function setIsCustomerPriceChanged(bool $isCustomerPriceChanged): self
+    public function setIsCustomerPriceChanged(?bool $isCustomerPriceChanged): self
     {
         $this->isCustomerPriceChanged = $isCustomerPriceChanged;
         return $this;
@@ -397,20 +397,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Is regular quote.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsRegularQuote(): bool
+    public function getIsRegularQuote(): ?bool
     {
         return $this->isRegularQuote;
     }
     /**
      * Is regular quote.
      *
-     * @param bool $isRegularQuote
+     * @param bool|null $isRegularQuote
      *
      * @return self
      */
-    public function setIsRegularQuote(bool $isRegularQuote): self
+    public function setIsRegularQuote(?bool $isRegularQuote): self
     {
         $this->isRegularQuote = $isRegularQuote;
         return $this;
@@ -418,20 +418,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Shipping tax changes.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsShippingTaxChanged(): bool
+    public function getIsShippingTaxChanged(): ?bool
     {
         return $this->isShippingTaxChanged;
     }
     /**
      * Shipping tax changes.
      *
-     * @param bool $isShippingTaxChanged
+     * @param bool|null $isShippingTaxChanged
      *
      * @return self
      */
-    public function setIsShippingTaxChanged(bool $isShippingTaxChanged): self
+    public function setIsShippingTaxChanged(?bool $isShippingTaxChanged): self
     {
         $this->isShippingTaxChanged = $isShippingTaxChanged;
         return $this;
@@ -439,20 +439,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Negotiated price type.
      *
-     * @return int
+     * @return int|null
      */
-    public function getNegotiatedPriceType(): int
+    public function getNegotiatedPriceType(): ?int
     {
         return $this->negotiatedPriceType;
     }
     /**
      * Negotiated price type.
      *
-     * @param int $negotiatedPriceType
+     * @param int|null $negotiatedPriceType
      *
      * @return self
      */
-    public function setNegotiatedPriceType(int $negotiatedPriceType): self
+    public function setNegotiatedPriceType(?int $negotiatedPriceType): self
     {
         $this->negotiatedPriceType = $negotiatedPriceType;
         return $this;
@@ -460,20 +460,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Negotiated price value.
      *
-     * @return float
+     * @return float|null
      */
-    public function getNegotiatedPriceValue(): float
+    public function getNegotiatedPriceValue(): ?float
     {
         return $this->negotiatedPriceValue;
     }
     /**
      * Negotiated price value.
      *
-     * @param float $negotiatedPriceValue
+     * @param float|null $negotiatedPriceValue
      *
      * @return self
      */
-    public function setNegotiatedPriceValue(float $negotiatedPriceValue): self
+    public function setNegotiatedPriceValue(?float $negotiatedPriceValue): self
     {
         $this->negotiatedPriceValue = $negotiatedPriceValue;
         return $this;
@@ -481,20 +481,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Quote negotiated total price.
      *
-     * @return float
+     * @return float|null
      */
-    public function getNegotiatedTotalPrice(): float
+    public function getNegotiatedTotalPrice(): ?float
     {
         return $this->negotiatedTotalPrice;
     }
     /**
      * Quote negotiated total price.
      *
-     * @param float $negotiatedTotalPrice
+     * @param float|null $negotiatedTotalPrice
      *
      * @return self
      */
-    public function setNegotiatedTotalPrice(float $negotiatedTotalPrice): self
+    public function setNegotiatedTotalPrice(?float $negotiatedTotalPrice): self
     {
         $this->negotiatedTotalPrice = $negotiatedTotalPrice;
         return $this;
@@ -502,20 +502,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Quote notifications.
      *
-     * @return int
+     * @return int|null
      */
-    public function getNotifications(): int
+    public function getNotifications(): ?int
     {
         return $this->notifications;
     }
     /**
      * Quote notifications.
      *
-     * @param int $notifications
+     * @param int|null $notifications
      *
      * @return self
      */
-    public function setNotifications(int $notifications): self
+    public function setNotifications(?int $notifications): self
     {
         $this->notifications = $notifications;
         return $this;
@@ -523,20 +523,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Quote original total price.
      *
-     * @return float
+     * @return float|null
      */
-    public function getOriginalTotalPrice(): float
+    public function getOriginalTotalPrice(): ?float
     {
         return $this->originalTotalPrice;
     }
     /**
      * Quote original total price.
      *
-     * @param float $originalTotalPrice
+     * @param float|null $originalTotalPrice
      *
      * @return self
      */
-    public function setOriginalTotalPrice(float $originalTotalPrice): self
+    public function setOriginalTotalPrice(?float $originalTotalPrice): self
     {
         $this->originalTotalPrice = $originalTotalPrice;
         return $this;
@@ -544,20 +544,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Negotiable quote ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getQuoteId(): int
+    public function getQuoteId(): ?int
     {
         return $this->quoteId;
     }
     /**
      * Negotiable quote ID.
      *
-     * @param int $quoteId
+     * @param int|null $quoteId
      *
      * @return self
      */
-    public function setQuoteId(int $quoteId): self
+    public function setQuoteId(?int $quoteId): self
     {
         $this->quoteId = $quoteId;
         return $this;
@@ -565,20 +565,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Negotiable quote name.
      *
-     * @return string
+     * @return string|null
      */
-    public function getQuoteName(): string
+    public function getQuoteName(): ?string
     {
         return $this->quoteName;
     }
     /**
      * Negotiable quote name.
      *
-     * @param string $quoteName
+     * @param string|null $quoteName
      *
      * @return self
      */
-    public function setQuoteName(string $quoteName): self
+    public function setQuoteName(?string $quoteName): self
     {
         $this->quoteName = $quoteName;
         return $this;
@@ -586,20 +586,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Proposed shipping price.
      *
-     * @return float
+     * @return float|null
      */
-    public function getShippingPrice(): float
+    public function getShippingPrice(): ?float
     {
         return $this->shippingPrice;
     }
     /**
      * Proposed shipping price.
      *
-     * @param float $shippingPrice
+     * @param float|null $shippingPrice
      *
      * @return self
      */
-    public function setShippingPrice(float $shippingPrice): self
+    public function setShippingPrice(?float $shippingPrice): self
     {
         $this->shippingPrice = $shippingPrice;
         return $this;
@@ -607,20 +607,20 @@ class NegotiableQuoteDataNegotiableQuoteInterface
     /**
      * Negotiable quote status.
      *
-     * @return string
+     * @return string|null
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
     /**
      * Negotiable quote status.
      *
-     * @param string $status
+     * @param string|null $status
      *
      * @return self
      */
-    public function setStatus(string $status): self
+    public function setStatus(?string $status): self
     {
         $this->status = $status;
         return $this;

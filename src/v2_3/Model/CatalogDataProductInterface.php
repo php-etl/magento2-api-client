@@ -7,122 +7,122 @@ class CatalogDataProductInterface
     /**
      * Attribute set id
      *
-     * @var int
+     * @var int|null
      */
     protected $attributeSetId;
     /**
      * Created date
      *
-     * @var string
+     * @var string|null
      */
     protected $createdAt;
     /**
      * Custom attributes values.
      *
-     * @var FrameworkAttributeInterface[]
+     * @var FrameworkAttributeInterface[]|null
      */
     protected $customAttributes;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductInterface
      *
-     * @var CatalogDataProductExtensionInterface
+     * @var CatalogDataProductExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * Id
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Media gallery entries
      *
-     * @var CatalogDataProductAttributeMediaGalleryEntryInterface[]
+     * @var CatalogDataProductAttributeMediaGalleryEntryInterface[]|null
      */
     protected $mediaGalleryEntries;
     /**
      * Name
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * List of product options
      *
-     * @var CatalogDataProductCustomOptionInterface[]
+     * @var CatalogDataProductCustomOptionInterface[]|null
      */
     protected $options;
     /**
      * Price
      *
-     * @var float
+     * @var float|null
      */
     protected $price;
     /**
      * Product links info
      *
-     * @var CatalogDataProductLinkInterface[]
+     * @var CatalogDataProductLinkInterface[]|null
      */
     protected $productLinks;
     /**
      * Sku
      *
-     * @var string
+     * @var string|null
      */
     protected $sku;
     /**
      * Status
      *
-     * @var int
+     * @var int|null
      */
     protected $status;
     /**
      * List of product tier prices
      *
-     * @var CatalogDataProductTierPriceInterface[]
+     * @var CatalogDataProductTierPriceInterface[]|null
      */
     protected $tierPrices;
     /**
      * Type id
      *
-     * @var string
+     * @var string|null
      */
     protected $typeId;
     /**
      * Updated date
      *
-     * @var string
+     * @var string|null
      */
     protected $updatedAt;
     /**
      * Visibility
      *
-     * @var int
+     * @var int|null
      */
     protected $visibility;
     /**
      * Weight
      *
-     * @var float
+     * @var float|null
      */
     protected $weight;
     /**
      * Attribute set id
      *
-     * @return int
+     * @return int|null
      */
-    public function getAttributeSetId(): int
+    public function getAttributeSetId(): ?int
     {
         return $this->attributeSetId;
     }
     /**
      * Attribute set id
      *
-     * @param int $attributeSetId
+     * @param int|null $attributeSetId
      *
      * @return self
      */
-    public function setAttributeSetId(int $attributeSetId): self
+    public function setAttributeSetId(?int $attributeSetId): self
     {
         $this->attributeSetId = $attributeSetId;
         return $this;
@@ -130,20 +130,20 @@ class CatalogDataProductInterface
     /**
      * Created date
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt(): ?string
     {
         return $this->createdAt;
     }
     /**
      * Created date
      *
-     * @param string $createdAt
+     * @param string|null $createdAt
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(?string $createdAt): self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -151,20 +151,20 @@ class CatalogDataProductInterface
     /**
      * Custom attributes values.
      *
-     * @return FrameworkAttributeInterface[]
+     * @return FrameworkAttributeInterface[]|null
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes(): ?array
     {
         return $this->customAttributes;
     }
     /**
      * Custom attributes values.
      *
-     * @param FrameworkAttributeInterface[] $customAttributes
+     * @param FrameworkAttributeInterface[]|null $customAttributes
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(?array $customAttributes): self
     {
         $this->customAttributes = $customAttributes;
         return $this;
@@ -172,20 +172,20 @@ class CatalogDataProductInterface
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductInterface
      *
-     * @return CatalogDataProductExtensionInterface
+     * @return CatalogDataProductExtensionInterface|null
      */
-    public function getExtensionAttributes(): CatalogDataProductExtensionInterface
+    public function getExtensionAttributes(): ?CatalogDataProductExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductInterface
      *
-     * @param CatalogDataProductExtensionInterface $extensionAttributes
+     * @param CatalogDataProductExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(CatalogDataProductExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?CatalogDataProductExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -193,20 +193,20 @@ class CatalogDataProductInterface
     /**
      * Id
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * Id
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -214,20 +214,20 @@ class CatalogDataProductInterface
     /**
      * Media gallery entries
      *
-     * @return CatalogDataProductAttributeMediaGalleryEntryInterface[]
+     * @return CatalogDataProductAttributeMediaGalleryEntryInterface[]|null
      */
-    public function getMediaGalleryEntries(): array
+    public function getMediaGalleryEntries(): ?array
     {
         return $this->mediaGalleryEntries;
     }
     /**
      * Media gallery entries
      *
-     * @param CatalogDataProductAttributeMediaGalleryEntryInterface[] $mediaGalleryEntries
+     * @param CatalogDataProductAttributeMediaGalleryEntryInterface[]|null $mediaGalleryEntries
      *
      * @return self
      */
-    public function setMediaGalleryEntries(array $mediaGalleryEntries): self
+    public function setMediaGalleryEntries(?array $mediaGalleryEntries): self
     {
         $this->mediaGalleryEntries = $mediaGalleryEntries;
         return $this;
@@ -235,20 +235,20 @@ class CatalogDataProductInterface
     /**
      * Name
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      * Name
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;
@@ -256,20 +256,20 @@ class CatalogDataProductInterface
     /**
      * List of product options
      *
-     * @return CatalogDataProductCustomOptionInterface[]
+     * @return CatalogDataProductCustomOptionInterface[]|null
      */
-    public function getOptions(): array
+    public function getOptions(): ?array
     {
         return $this->options;
     }
     /**
      * List of product options
      *
-     * @param CatalogDataProductCustomOptionInterface[] $options
+     * @param CatalogDataProductCustomOptionInterface[]|null $options
      *
      * @return self
      */
-    public function setOptions(array $options): self
+    public function setOptions(?array $options): self
     {
         $this->options = $options;
         return $this;
@@ -277,20 +277,20 @@ class CatalogDataProductInterface
     /**
      * Price
      *
-     * @return float
+     * @return float|null
      */
-    public function getPrice(): float
+    public function getPrice(): ?float
     {
         return $this->price;
     }
     /**
      * Price
      *
-     * @param float $price
+     * @param float|null $price
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(?float $price): self
     {
         $this->price = $price;
         return $this;
@@ -298,20 +298,20 @@ class CatalogDataProductInterface
     /**
      * Product links info
      *
-     * @return CatalogDataProductLinkInterface[]
+     * @return CatalogDataProductLinkInterface[]|null
      */
-    public function getProductLinks(): array
+    public function getProductLinks(): ?array
     {
         return $this->productLinks;
     }
     /**
      * Product links info
      *
-     * @param CatalogDataProductLinkInterface[] $productLinks
+     * @param CatalogDataProductLinkInterface[]|null $productLinks
      *
      * @return self
      */
-    public function setProductLinks(array $productLinks): self
+    public function setProductLinks(?array $productLinks): self
     {
         $this->productLinks = $productLinks;
         return $this;
@@ -319,20 +319,20 @@ class CatalogDataProductInterface
     /**
      * Sku
      *
-     * @return string
+     * @return string|null
      */
-    public function getSku(): string
+    public function getSku(): ?string
     {
         return $this->sku;
     }
     /**
      * Sku
      *
-     * @param string $sku
+     * @param string|null $sku
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(?string $sku): self
     {
         $this->sku = $sku;
         return $this;
@@ -340,20 +340,20 @@ class CatalogDataProductInterface
     /**
      * Status
      *
-     * @return int
+     * @return int|null
      */
-    public function getStatus(): int
+    public function getStatus(): ?int
     {
         return $this->status;
     }
     /**
      * Status
      *
-     * @param int $status
+     * @param int|null $status
      *
      * @return self
      */
-    public function setStatus(int $status): self
+    public function setStatus(?int $status): self
     {
         $this->status = $status;
         return $this;
@@ -361,20 +361,20 @@ class CatalogDataProductInterface
     /**
      * List of product tier prices
      *
-     * @return CatalogDataProductTierPriceInterface[]
+     * @return CatalogDataProductTierPriceInterface[]|null
      */
-    public function getTierPrices(): array
+    public function getTierPrices(): ?array
     {
         return $this->tierPrices;
     }
     /**
      * List of product tier prices
      *
-     * @param CatalogDataProductTierPriceInterface[] $tierPrices
+     * @param CatalogDataProductTierPriceInterface[]|null $tierPrices
      *
      * @return self
      */
-    public function setTierPrices(array $tierPrices): self
+    public function setTierPrices(?array $tierPrices): self
     {
         $this->tierPrices = $tierPrices;
         return $this;
@@ -382,20 +382,20 @@ class CatalogDataProductInterface
     /**
      * Type id
      *
-     * @return string
+     * @return string|null
      */
-    public function getTypeId(): string
+    public function getTypeId(): ?string
     {
         return $this->typeId;
     }
     /**
      * Type id
      *
-     * @param string $typeId
+     * @param string|null $typeId
      *
      * @return self
      */
-    public function setTypeId(string $typeId): self
+    public function setTypeId(?string $typeId): self
     {
         $this->typeId = $typeId;
         return $this;
@@ -403,20 +403,20 @@ class CatalogDataProductInterface
     /**
      * Updated date
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt(): ?string
     {
         return $this->updatedAt;
     }
     /**
      * Updated date
      *
-     * @param string $updatedAt
+     * @param string|null $updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(?string $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
         return $this;
@@ -424,20 +424,20 @@ class CatalogDataProductInterface
     /**
      * Visibility
      *
-     * @return int
+     * @return int|null
      */
-    public function getVisibility(): int
+    public function getVisibility(): ?int
     {
         return $this->visibility;
     }
     /**
      * Visibility
      *
-     * @param int $visibility
+     * @param int|null $visibility
      *
      * @return self
      */
-    public function setVisibility(int $visibility): self
+    public function setVisibility(?int $visibility): self
     {
         $this->visibility = $visibility;
         return $this;
@@ -445,20 +445,20 @@ class CatalogDataProductInterface
     /**
      * Weight
      *
-     * @return float
+     * @return float|null
      */
-    public function getWeight(): float
+    public function getWeight(): ?float
     {
         return $this->weight;
     }
     /**
      * Weight
      *
-     * @param float $weight
+     * @param float|null $weight
      *
      * @return self
      */
-    public function setWeight(float $weight): self
+    public function setWeight(?float $weight): self
     {
         $this->weight = $weight;
         return $this;

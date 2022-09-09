@@ -7,26 +7,26 @@ class V1CouponsGeneratePostBody
     /**
      * CouponGenerationSpecInterface
      *
-     * @var SalesRuleDataCouponGenerationSpecInterface
+     * @var SalesRuleDataCouponGenerationSpecInterface|null
      */
     protected $couponSpec;
     /**
      * CouponGenerationSpecInterface
      *
-     * @return SalesRuleDataCouponGenerationSpecInterface
+     * @return SalesRuleDataCouponGenerationSpecInterface|null
      */
-    public function getCouponSpec(): SalesRuleDataCouponGenerationSpecInterface
+    public function getCouponSpec(): ?SalesRuleDataCouponGenerationSpecInterface
     {
         return $this->couponSpec;
     }
     /**
      * CouponGenerationSpecInterface
      *
-     * @param SalesRuleDataCouponGenerationSpecInterface $couponSpec
+     * @param SalesRuleDataCouponGenerationSpecInterface|null $couponSpec
      *
      * @return self
      */
-    public function setCouponSpec(SalesRuleDataCouponGenerationSpecInterface $couponSpec): self
+    public function setCouponSpec(?SalesRuleDataCouponGenerationSpecInterface $couponSpec): self
     {
         $this->couponSpec = $couponSpec;
         return $this;

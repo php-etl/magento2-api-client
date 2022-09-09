@@ -40,11 +40,15 @@ class V1CompanyCreditsHistoryHistoryIdPutBodyNormalizer implements DenormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('comment', $data)) {
+        if (\array_key_exists('comment', $data) && $data['comment'] !== null) {
             $object->setComment($data['comment']);
+        } elseif (\array_key_exists('comment', $data) && $data['comment'] === null) {
+            $object->setComment(null);
         }
-        if (\array_key_exists('purchaseOrder', $data)) {
+        if (\array_key_exists('purchaseOrder', $data) && $data['purchaseOrder'] !== null) {
             $object->setPurchaseOrder($data['purchaseOrder']);
+        } elseif (\array_key_exists('purchaseOrder', $data) && $data['purchaseOrder'] === null) {
+            $object->setPurchaseOrder(null);
         }
         return $object;
     }

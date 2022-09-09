@@ -7,26 +7,26 @@ class QuoteDataPaymentExtensionInterface
     /**
      *
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $agreementIds;
     /**
      *
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getAgreementIds(): array
+    public function getAgreementIds(): ?array
     {
         return $this->agreementIds;
     }
     /**
      *
      *
-     * @param string[] $agreementIds
+     * @param string[]|null $agreementIds
      *
      * @return self
      */
-    public function setAgreementIds(array $agreementIds): self
+    public function setAgreementIds(?array $agreementIds): self
     {
         $this->agreementIds = $agreementIds;
         return $this;

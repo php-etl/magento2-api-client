@@ -73,41 +73,65 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterfaceNormalizer implements
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('base_cart_price', $data)) {
+        if (\array_key_exists('base_cart_price', $data) && $data['base_cart_price'] !== null) {
             $object->setBaseCartPrice($data['base_cart_price']);
+        } elseif (\array_key_exists('base_cart_price', $data) && $data['base_cart_price'] === null) {
+            $object->setBaseCartPrice(null);
         }
-        if (\array_key_exists('base_cart_price_incl_tax', $data)) {
+        if (\array_key_exists('base_cart_price_incl_tax', $data) && $data['base_cart_price_incl_tax'] !== null) {
             $object->setBaseCartPriceInclTax($data['base_cart_price_incl_tax']);
+        } elseif (\array_key_exists('base_cart_price_incl_tax', $data) && $data['base_cart_price_incl_tax'] === null) {
+            $object->setBaseCartPriceInclTax(null);
         }
-        if (\array_key_exists('base_cart_tax', $data)) {
+        if (\array_key_exists('base_cart_tax', $data) && $data['base_cart_tax'] !== null) {
             $object->setBaseCartTax($data['base_cart_tax']);
+        } elseif (\array_key_exists('base_cart_tax', $data) && $data['base_cart_tax'] === null) {
+            $object->setBaseCartTax(null);
         }
-        if (\array_key_exists('base_catalog_price', $data)) {
+        if (\array_key_exists('base_catalog_price', $data) && $data['base_catalog_price'] !== null) {
             $object->setBaseCatalogPrice($data['base_catalog_price']);
+        } elseif (\array_key_exists('base_catalog_price', $data) && $data['base_catalog_price'] === null) {
+            $object->setBaseCatalogPrice(null);
         }
-        if (\array_key_exists('base_catalog_price_incl_tax', $data)) {
+        if (\array_key_exists('base_catalog_price_incl_tax', $data) && $data['base_catalog_price_incl_tax'] !== null) {
             $object->setBaseCatalogPriceInclTax($data['base_catalog_price_incl_tax']);
+        } elseif (\array_key_exists('base_catalog_price_incl_tax', $data) && $data['base_catalog_price_incl_tax'] === null) {
+            $object->setBaseCatalogPriceInclTax(null);
         }
-        if (\array_key_exists('cart_price', $data)) {
+        if (\array_key_exists('cart_price', $data) && $data['cart_price'] !== null) {
             $object->setCartPrice($data['cart_price']);
+        } elseif (\array_key_exists('cart_price', $data) && $data['cart_price'] === null) {
+            $object->setCartPrice(null);
         }
-        if (\array_key_exists('cart_price_incl_tax', $data)) {
+        if (\array_key_exists('cart_price_incl_tax', $data) && $data['cart_price_incl_tax'] !== null) {
             $object->setCartPriceInclTax($data['cart_price_incl_tax']);
+        } elseif (\array_key_exists('cart_price_incl_tax', $data) && $data['cart_price_incl_tax'] === null) {
+            $object->setCartPriceInclTax(null);
         }
-        if (\array_key_exists('cart_tax', $data)) {
+        if (\array_key_exists('cart_tax', $data) && $data['cart_tax'] !== null) {
             $object->setCartTax($data['cart_tax']);
+        } elseif (\array_key_exists('cart_tax', $data) && $data['cart_tax'] === null) {
+            $object->setCartTax(null);
         }
-        if (\array_key_exists('catalog_price', $data)) {
+        if (\array_key_exists('catalog_price', $data) && $data['catalog_price'] !== null) {
             $object->setCatalogPrice($data['catalog_price']);
+        } elseif (\array_key_exists('catalog_price', $data) && $data['catalog_price'] === null) {
+            $object->setCatalogPrice(null);
         }
-        if (\array_key_exists('catalog_price_incl_tax', $data)) {
+        if (\array_key_exists('catalog_price_incl_tax', $data) && $data['catalog_price_incl_tax'] !== null) {
             $object->setCatalogPriceInclTax($data['catalog_price_incl_tax']);
+        } elseif (\array_key_exists('catalog_price_incl_tax', $data) && $data['catalog_price_incl_tax'] === null) {
+            $object->setCatalogPriceInclTax(null);
         }
-        if (\array_key_exists('cost', $data)) {
+        if (\array_key_exists('cost', $data) && $data['cost'] !== null) {
             $object->setCost($data['cost']);
+        } elseif (\array_key_exists('cost', $data) && $data['cost'] === null) {
+            $object->setCost(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
         return $object;
     }

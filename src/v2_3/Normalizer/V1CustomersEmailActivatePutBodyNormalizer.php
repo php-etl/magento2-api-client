@@ -40,8 +40,10 @@ class V1CustomersEmailActivatePutBodyNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('confirmationKey', $data)) {
+        if (\array_key_exists('confirmationKey', $data) && $data['confirmationKey'] !== null) {
             $object->setConfirmationKey($data['confirmationKey']);
+        } elseif (\array_key_exists('confirmationKey', $data) && $data['confirmationKey'] === null) {
+            $object->setConfirmationKey(null);
         }
         return $object;
     }

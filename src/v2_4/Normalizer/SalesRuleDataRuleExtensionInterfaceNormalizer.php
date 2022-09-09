@@ -40,8 +40,10 @@ class SalesRuleDataRuleExtensionInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('reward_points_delta', $data)) {
+        if (\array_key_exists('reward_points_delta', $data) && $data['reward_points_delta'] !== null) {
             $object->setRewardPointsDelta($data['reward_points_delta']);
+        } elseif (\array_key_exists('reward_points_delta', $data) && $data['reward_points_delta'] === null) {
+            $object->setRewardPointsDelta(null);
         }
         return $object;
     }

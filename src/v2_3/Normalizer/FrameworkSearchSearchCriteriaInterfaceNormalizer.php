@@ -40,28 +40,38 @@ class FrameworkSearchSearchCriteriaInterfaceNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('current_page', $data)) {
+        if (\array_key_exists('current_page', $data) && $data['current_page'] !== null) {
             $object->setCurrentPage($data['current_page']);
+        } elseif (\array_key_exists('current_page', $data) && $data['current_page'] === null) {
+            $object->setCurrentPage(null);
         }
-        if (\array_key_exists('filter_groups', $data)) {
+        if (\array_key_exists('filter_groups', $data) && $data['filter_groups'] !== null) {
             $values = array();
             foreach ($data['filter_groups'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\FrameworkSearchFilterGroup', 'json', $context);
             }
             $object->setFilterGroups($values);
+        } elseif (\array_key_exists('filter_groups', $data) && $data['filter_groups'] === null) {
+            $object->setFilterGroups(null);
         }
-        if (\array_key_exists('page_size', $data)) {
+        if (\array_key_exists('page_size', $data) && $data['page_size'] !== null) {
             $object->setPageSize($data['page_size']);
+        } elseif (\array_key_exists('page_size', $data) && $data['page_size'] === null) {
+            $object->setPageSize(null);
         }
-        if (\array_key_exists('request_name', $data)) {
+        if (\array_key_exists('request_name', $data) && $data['request_name'] !== null) {
             $object->setRequestName($data['request_name']);
+        } elseif (\array_key_exists('request_name', $data) && $data['request_name'] === null) {
+            $object->setRequestName(null);
         }
-        if (\array_key_exists('sort_orders', $data)) {
+        if (\array_key_exists('sort_orders', $data) && $data['sort_orders'] !== null) {
             $values_1 = array();
             foreach ($data['sort_orders'] as $value_1) {
                 $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_3\\Model\\FrameworkSortOrder', 'json', $context);
             }
             $object->setSortOrders($values_1);
+        } elseif (\array_key_exists('sort_orders', $data) && $data['sort_orders'] === null) {
+            $object->setSortOrders(null);
         }
         return $object;
     }

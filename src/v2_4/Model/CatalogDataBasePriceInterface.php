@@ -7,25 +7,25 @@ class CatalogDataBasePriceInterface
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\BasePriceInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Price.
      *
-     * @var float
+     * @var float|null
      */
     protected $price;
     /**
      * SKU.
      *
-     * @var string
+     * @var string|null
      */
     protected $sku;
     /**
      * Store id.
      *
-     * @var int
+     * @var int|null
      */
     protected $storeId;
     /**
@@ -52,20 +52,20 @@ class CatalogDataBasePriceInterface
     /**
      * Price.
      *
-     * @return float
+     * @return float|null
      */
-    public function getPrice(): float
+    public function getPrice(): ?float
     {
         return $this->price;
     }
     /**
      * Price.
      *
-     * @param float $price
+     * @param float|null $price
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(?float $price): self
     {
         $this->price = $price;
         return $this;
@@ -73,20 +73,20 @@ class CatalogDataBasePriceInterface
     /**
      * SKU.
      *
-     * @return string
+     * @return string|null
      */
-    public function getSku(): string
+    public function getSku(): ?string
     {
         return $this->sku;
     }
     /**
      * SKU.
      *
-     * @param string $sku
+     * @param string|null $sku
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(?string $sku): self
     {
         $this->sku = $sku;
         return $this;
@@ -94,20 +94,20 @@ class CatalogDataBasePriceInterface
     /**
      * Store id.
      *
-     * @return int
+     * @return int|null
      */
-    public function getStoreId(): int
+    public function getStoreId(): ?int
     {
         return $this->storeId;
     }
     /**
      * Store id.
      *
-     * @param int $storeId
+     * @param int|null $storeId
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(?int $storeId): self
     {
         $this->storeId = $storeId;
         return $this;

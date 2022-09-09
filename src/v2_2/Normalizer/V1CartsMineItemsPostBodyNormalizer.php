@@ -40,8 +40,10 @@ class V1CartsMineItemsPostBodyNormalizer implements DenormalizerInterface, Norma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('cartItem', $data)) {
+        if (\array_key_exists('cartItem', $data) && $data['cartItem'] !== null) {
             $object->setCartItem($this->denormalizer->denormalize($data['cartItem'], 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataCartItemInterface', 'json', $context));
+        } elseif (\array_key_exists('cartItem', $data) && $data['cartItem'] === null) {
+            $object->setCartItem(null);
         }
         return $object;
     }

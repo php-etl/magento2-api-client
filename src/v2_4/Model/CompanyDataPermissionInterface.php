@@ -7,44 +7,44 @@ class CompanyDataPermissionInterface
     /**
      * Id.
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Permission.
      *
-     * @var string
+     * @var string|null
      */
     protected $permission;
     /**
      * Resource id.
      *
-     * @var string
+     * @var string|null
      */
     protected $resourceId;
     /**
      * Role id.
      *
-     * @var int
+     * @var int|null
      */
     protected $roleId;
     /**
      * Id.
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * Id.
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -52,20 +52,20 @@ class CompanyDataPermissionInterface
     /**
      * Permission.
      *
-     * @return string
+     * @return string|null
      */
-    public function getPermission(): string
+    public function getPermission(): ?string
     {
         return $this->permission;
     }
     /**
      * Permission.
      *
-     * @param string $permission
+     * @param string|null $permission
      *
      * @return self
      */
-    public function setPermission(string $permission): self
+    public function setPermission(?string $permission): self
     {
         $this->permission = $permission;
         return $this;
@@ -73,20 +73,20 @@ class CompanyDataPermissionInterface
     /**
      * Resource id.
      *
-     * @return string
+     * @return string|null
      */
-    public function getResourceId(): string
+    public function getResourceId(): ?string
     {
         return $this->resourceId;
     }
     /**
      * Resource id.
      *
-     * @param string $resourceId
+     * @param string|null $resourceId
      *
      * @return self
      */
-    public function setResourceId(string $resourceId): self
+    public function setResourceId(?string $resourceId): self
     {
         $this->resourceId = $resourceId;
         return $this;
@@ -94,20 +94,20 @@ class CompanyDataPermissionInterface
     /**
      * Role id.
      *
-     * @return int
+     * @return int|null
      */
-    public function getRoleId(): int
+    public function getRoleId(): ?int
     {
         return $this->roleId;
     }
     /**
      * Role id.
      *
-     * @param int $roleId
+     * @param int|null $roleId
      *
      * @return self
      */
-    public function setRoleId(int $roleId): self
+    public function setRoleId(?int $roleId): self
     {
         $this->roleId = $roleId;
         return $this;

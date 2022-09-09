@@ -7,44 +7,44 @@ class CatalogDataProductTierPriceInterface
     /**
      * Customer group id
      *
-     * @var int
+     * @var int|null
      */
     protected $customerGroupId;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductTierPriceInterface
      *
-     * @var CatalogDataProductTierPriceExtensionInterface
+     * @var CatalogDataProductTierPriceExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * Tier qty
      *
-     * @var float
+     * @var float|null
      */
     protected $qty;
     /**
      * Price value
      *
-     * @var float
+     * @var float|null
      */
     protected $value;
     /**
      * Customer group id
      *
-     * @return int
+     * @return int|null
      */
-    public function getCustomerGroupId(): int
+    public function getCustomerGroupId(): ?int
     {
         return $this->customerGroupId;
     }
     /**
      * Customer group id
      *
-     * @param int $customerGroupId
+     * @param int|null $customerGroupId
      *
      * @return self
      */
-    public function setCustomerGroupId(int $customerGroupId): self
+    public function setCustomerGroupId(?int $customerGroupId): self
     {
         $this->customerGroupId = $customerGroupId;
         return $this;
@@ -52,20 +52,20 @@ class CatalogDataProductTierPriceInterface
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductTierPriceInterface
      *
-     * @return CatalogDataProductTierPriceExtensionInterface
+     * @return CatalogDataProductTierPriceExtensionInterface|null
      */
-    public function getExtensionAttributes(): CatalogDataProductTierPriceExtensionInterface
+    public function getExtensionAttributes(): ?CatalogDataProductTierPriceExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductTierPriceInterface
      *
-     * @param CatalogDataProductTierPriceExtensionInterface $extensionAttributes
+     * @param CatalogDataProductTierPriceExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(CatalogDataProductTierPriceExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?CatalogDataProductTierPriceExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -73,20 +73,20 @@ class CatalogDataProductTierPriceInterface
     /**
      * Tier qty
      *
-     * @return float
+     * @return float|null
      */
-    public function getQty(): float
+    public function getQty(): ?float
     {
         return $this->qty;
     }
     /**
      * Tier qty
      *
-     * @param float $qty
+     * @param float|null $qty
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(?float $qty): self
     {
         $this->qty = $qty;
         return $this;
@@ -94,20 +94,20 @@ class CatalogDataProductTierPriceInterface
     /**
      * Price value
      *
-     * @return float
+     * @return float|null
      */
-    public function getValue(): float
+    public function getValue(): ?float
     {
         return $this->value;
     }
     /**
      * Price value
      *
-     * @param float $value
+     * @param float|null $value
      *
      * @return self
      */
-    public function setValue(float $value): self
+    public function setValue(?float $value): self
     {
         $this->value = $value;
         return $this;

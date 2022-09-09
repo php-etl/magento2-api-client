@@ -70,53 +70,85 @@ class NegotiableQuoteDataNegotiableQuoteTotalsInterfaceNormalizer implements Den
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('base_cost_total', $data)) {
+        if (\array_key_exists('base_cost_total', $data) && $data['base_cost_total'] !== null) {
             $object->setBaseCostTotal($data['base_cost_total']);
+        } elseif (\array_key_exists('base_cost_total', $data) && $data['base_cost_total'] === null) {
+            $object->setBaseCostTotal(null);
         }
-        if (\array_key_exists('base_original_price_incl_tax', $data)) {
+        if (\array_key_exists('base_original_price_incl_tax', $data) && $data['base_original_price_incl_tax'] !== null) {
             $object->setBaseOriginalPriceInclTax($data['base_original_price_incl_tax']);
+        } elseif (\array_key_exists('base_original_price_incl_tax', $data) && $data['base_original_price_incl_tax'] === null) {
+            $object->setBaseOriginalPriceInclTax(null);
         }
-        if (\array_key_exists('base_original_tax', $data)) {
+        if (\array_key_exists('base_original_tax', $data) && $data['base_original_tax'] !== null) {
             $object->setBaseOriginalTax($data['base_original_tax']);
+        } elseif (\array_key_exists('base_original_tax', $data) && $data['base_original_tax'] === null) {
+            $object->setBaseOriginalTax(null);
         }
-        if (\array_key_exists('base_original_total', $data)) {
+        if (\array_key_exists('base_original_total', $data) && $data['base_original_total'] !== null) {
             $object->setBaseOriginalTotal($data['base_original_total']);
+        } elseif (\array_key_exists('base_original_total', $data) && $data['base_original_total'] === null) {
+            $object->setBaseOriginalTotal(null);
         }
-        if (\array_key_exists('base_to_quote_rate', $data)) {
+        if (\array_key_exists('base_to_quote_rate', $data) && $data['base_to_quote_rate'] !== null) {
             $object->setBaseToQuoteRate($data['base_to_quote_rate']);
+        } elseif (\array_key_exists('base_to_quote_rate', $data) && $data['base_to_quote_rate'] === null) {
+            $object->setBaseToQuoteRate(null);
         }
-        if (\array_key_exists('cost_total', $data)) {
+        if (\array_key_exists('cost_total', $data) && $data['cost_total'] !== null) {
             $object->setCostTotal($data['cost_total']);
+        } elseif (\array_key_exists('cost_total', $data) && $data['cost_total'] === null) {
+            $object->setCostTotal(null);
         }
-        if (\array_key_exists('created_at', $data)) {
+        if (\array_key_exists('created_at', $data) && $data['created_at'] !== null) {
             $object->setCreatedAt($data['created_at']);
+        } elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+            $object->setCreatedAt(null);
         }
-        if (\array_key_exists('customer_group', $data)) {
+        if (\array_key_exists('customer_group', $data) && $data['customer_group'] !== null) {
             $object->setCustomerGroup($data['customer_group']);
+        } elseif (\array_key_exists('customer_group', $data) && $data['customer_group'] === null) {
+            $object->setCustomerGroup(null);
         }
-        if (\array_key_exists('items_count', $data)) {
+        if (\array_key_exists('items_count', $data) && $data['items_count'] !== null) {
             $object->setItemsCount($data['items_count']);
+        } elseif (\array_key_exists('items_count', $data) && $data['items_count'] === null) {
+            $object->setItemsCount(null);
         }
-        if (\array_key_exists('negotiated_price_type', $data)) {
+        if (\array_key_exists('negotiated_price_type', $data) && $data['negotiated_price_type'] !== null) {
             $object->setNegotiatedPriceType($data['negotiated_price_type']);
+        } elseif (\array_key_exists('negotiated_price_type', $data) && $data['negotiated_price_type'] === null) {
+            $object->setNegotiatedPriceType(null);
         }
-        if (\array_key_exists('negotiated_price_value', $data)) {
+        if (\array_key_exists('negotiated_price_value', $data) && $data['negotiated_price_value'] !== null) {
             $object->setNegotiatedPriceValue($data['negotiated_price_value']);
+        } elseif (\array_key_exists('negotiated_price_value', $data) && $data['negotiated_price_value'] === null) {
+            $object->setNegotiatedPriceValue(null);
         }
-        if (\array_key_exists('original_price_incl_tax', $data)) {
+        if (\array_key_exists('original_price_incl_tax', $data) && $data['original_price_incl_tax'] !== null) {
             $object->setOriginalPriceInclTax($data['original_price_incl_tax']);
+        } elseif (\array_key_exists('original_price_incl_tax', $data) && $data['original_price_incl_tax'] === null) {
+            $object->setOriginalPriceInclTax(null);
         }
-        if (\array_key_exists('original_tax', $data)) {
+        if (\array_key_exists('original_tax', $data) && $data['original_tax'] !== null) {
             $object->setOriginalTax($data['original_tax']);
+        } elseif (\array_key_exists('original_tax', $data) && $data['original_tax'] === null) {
+            $object->setOriginalTax(null);
         }
-        if (\array_key_exists('original_total', $data)) {
+        if (\array_key_exists('original_total', $data) && $data['original_total'] !== null) {
             $object->setOriginalTotal($data['original_total']);
+        } elseif (\array_key_exists('original_total', $data) && $data['original_total'] === null) {
+            $object->setOriginalTotal(null);
         }
-        if (\array_key_exists('quote_status', $data)) {
+        if (\array_key_exists('quote_status', $data) && $data['quote_status'] !== null) {
             $object->setQuoteStatus($data['quote_status']);
+        } elseif (\array_key_exists('quote_status', $data) && $data['quote_status'] === null) {
+            $object->setQuoteStatus(null);
         }
-        if (\array_key_exists('updated_at', $data)) {
+        if (\array_key_exists('updated_at', $data) && $data['updated_at'] !== null) {
             $object->setUpdatedAt($data['updated_at']);
+        } elseif (\array_key_exists('updated_at', $data) && $data['updated_at'] === null) {
+            $object->setUpdatedAt(null);
         }
         return $object;
     }

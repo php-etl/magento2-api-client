@@ -7,74 +7,74 @@ class SalesDataOrderStatusHistoryInterface
     /**
      * Comment.
      *
-     * @var string
+     * @var string|null
      */
     protected $comment;
     /**
      * Created-at timestamp.
      *
-     * @var string
+     * @var string|null
      */
     protected $createdAt;
     /**
      * Order status history ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $entityId;
     /**
      * Entity name.
      *
-     * @var string
+     * @var string|null
      */
     protected $entityName;
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\OrderStatusHistoryInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Is-customer-notified flag value.
      *
-     * @var int
+     * @var int|null
      */
     protected $isCustomerNotified;
     /**
      * Is-visible-on-storefront flag value.
      *
-     * @var int
+     * @var int|null
      */
     protected $isVisibleOnFront;
     /**
      * Parent ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $parentId;
     /**
      * Status.
      *
-     * @var string
+     * @var string|null
      */
     protected $status;
     /**
      * Comment.
      *
-     * @return string
+     * @return string|null
      */
-    public function getComment(): string
+    public function getComment(): ?string
     {
         return $this->comment;
     }
     /**
      * Comment.
      *
-     * @param string $comment
+     * @param string|null $comment
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(?string $comment): self
     {
         $this->comment = $comment;
         return $this;
@@ -82,20 +82,20 @@ class SalesDataOrderStatusHistoryInterface
     /**
      * Created-at timestamp.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt(): ?string
     {
         return $this->createdAt;
     }
     /**
      * Created-at timestamp.
      *
-     * @param string $createdAt
+     * @param string|null $createdAt
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(?string $createdAt): self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -103,20 +103,20 @@ class SalesDataOrderStatusHistoryInterface
     /**
      * Order status history ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getEntityId(): int
+    public function getEntityId(): ?int
     {
         return $this->entityId;
     }
     /**
      * Order status history ID.
      *
-     * @param int $entityId
+     * @param int|null $entityId
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(?int $entityId): self
     {
         $this->entityId = $entityId;
         return $this;
@@ -124,20 +124,20 @@ class SalesDataOrderStatusHistoryInterface
     /**
      * Entity name.
      *
-     * @return string
+     * @return string|null
      */
-    public function getEntityName(): string
+    public function getEntityName(): ?string
     {
         return $this->entityName;
     }
     /**
      * Entity name.
      *
-     * @param string $entityName
+     * @param string|null $entityName
      *
      * @return self
      */
-    public function setEntityName(string $entityName): self
+    public function setEntityName(?string $entityName): self
     {
         $this->entityName = $entityName;
         return $this;
@@ -166,20 +166,20 @@ class SalesDataOrderStatusHistoryInterface
     /**
      * Is-customer-notified flag value.
      *
-     * @return int
+     * @return int|null
      */
-    public function getIsCustomerNotified(): int
+    public function getIsCustomerNotified(): ?int
     {
         return $this->isCustomerNotified;
     }
     /**
      * Is-customer-notified flag value.
      *
-     * @param int $isCustomerNotified
+     * @param int|null $isCustomerNotified
      *
      * @return self
      */
-    public function setIsCustomerNotified(int $isCustomerNotified): self
+    public function setIsCustomerNotified(?int $isCustomerNotified): self
     {
         $this->isCustomerNotified = $isCustomerNotified;
         return $this;
@@ -187,20 +187,20 @@ class SalesDataOrderStatusHistoryInterface
     /**
      * Is-visible-on-storefront flag value.
      *
-     * @return int
+     * @return int|null
      */
-    public function getIsVisibleOnFront(): int
+    public function getIsVisibleOnFront(): ?int
     {
         return $this->isVisibleOnFront;
     }
     /**
      * Is-visible-on-storefront flag value.
      *
-     * @param int $isVisibleOnFront
+     * @param int|null $isVisibleOnFront
      *
      * @return self
      */
-    public function setIsVisibleOnFront(int $isVisibleOnFront): self
+    public function setIsVisibleOnFront(?int $isVisibleOnFront): self
     {
         $this->isVisibleOnFront = $isVisibleOnFront;
         return $this;
@@ -208,20 +208,20 @@ class SalesDataOrderStatusHistoryInterface
     /**
      * Parent ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getParentId(): int
+    public function getParentId(): ?int
     {
         return $this->parentId;
     }
     /**
      * Parent ID.
      *
-     * @param int $parentId
+     * @param int|null $parentId
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(?int $parentId): self
     {
         $this->parentId = $parentId;
         return $this;
@@ -229,20 +229,20 @@ class SalesDataOrderStatusHistoryInterface
     /**
      * Status.
      *
-     * @return string
+     * @return string|null
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
     /**
      * Status.
      *
-     * @param string $status
+     * @param string|null $status
      *
      * @return self
      */
-    public function setStatus(string $status): self
+    public function setStatus(?string $status): self
     {
         $this->status = $status;
         return $this;

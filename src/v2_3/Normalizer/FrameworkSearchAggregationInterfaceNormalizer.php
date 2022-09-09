@@ -40,19 +40,23 @@ class FrameworkSearchAggregationInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('bucket_names', $data)) {
+        if (\array_key_exists('bucket_names', $data) && $data['bucket_names'] !== null) {
             $values = array();
             foreach ($data['bucket_names'] as $value) {
                 $values[] = $value;
             }
             $object->setBucketNames($values);
+        } elseif (\array_key_exists('bucket_names', $data) && $data['bucket_names'] === null) {
+            $object->setBucketNames(null);
         }
-        if (\array_key_exists('buckets', $data)) {
+        if (\array_key_exists('buckets', $data) && $data['buckets'] !== null) {
             $values_1 = array();
             foreach ($data['buckets'] as $value_1) {
                 $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_3\\Model\\FrameworkSearchBucketInterface', 'json', $context);
             }
             $object->setBuckets($values_1);
+        } elseif (\array_key_exists('buckets', $data) && $data['buckets'] === null) {
+            $object->setBuckets(null);
         }
         return $object;
     }

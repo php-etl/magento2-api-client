@@ -7,56 +7,56 @@ class V1OrderOrderIdInvoicePostBody
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $appendComment;
     /**
      * Interface for creation arguments for Invoice.
      *
-     * @var SalesDataInvoiceCreationArgumentsInterface
+     * @var SalesDataInvoiceCreationArgumentsInterface|null
      */
     protected $arguments;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $capture;
     /**
      * Interface InvoiceCommentCreationInterface
      *
-     * @var SalesDataInvoiceCommentCreationInterface
+     * @var SalesDataInvoiceCommentCreationInterface|null
      */
     protected $comment;
     /**
      *
      *
-     * @var SalesDataInvoiceItemCreationInterface[]
+     * @var SalesDataInvoiceItemCreationInterface[]|null
      */
     protected $items;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $notify;
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getAppendComment(): bool
+    public function getAppendComment(): ?bool
     {
         return $this->appendComment;
     }
     /**
      *
      *
-     * @param bool $appendComment
+     * @param bool|null $appendComment
      *
      * @return self
      */
-    public function setAppendComment(bool $appendComment): self
+    public function setAppendComment(?bool $appendComment): self
     {
         $this->appendComment = $appendComment;
         return $this;
@@ -64,20 +64,20 @@ class V1OrderOrderIdInvoicePostBody
     /**
      * Interface for creation arguments for Invoice.
      *
-     * @return SalesDataInvoiceCreationArgumentsInterface
+     * @return SalesDataInvoiceCreationArgumentsInterface|null
      */
-    public function getArguments(): SalesDataInvoiceCreationArgumentsInterface
+    public function getArguments(): ?SalesDataInvoiceCreationArgumentsInterface
     {
         return $this->arguments;
     }
     /**
      * Interface for creation arguments for Invoice.
      *
-     * @param SalesDataInvoiceCreationArgumentsInterface $arguments
+     * @param SalesDataInvoiceCreationArgumentsInterface|null $arguments
      *
      * @return self
      */
-    public function setArguments(SalesDataInvoiceCreationArgumentsInterface $arguments): self
+    public function setArguments(?SalesDataInvoiceCreationArgumentsInterface $arguments): self
     {
         $this->arguments = $arguments;
         return $this;
@@ -85,20 +85,20 @@ class V1OrderOrderIdInvoicePostBody
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getCapture(): bool
+    public function getCapture(): ?bool
     {
         return $this->capture;
     }
     /**
      *
      *
-     * @param bool $capture
+     * @param bool|null $capture
      *
      * @return self
      */
-    public function setCapture(bool $capture): self
+    public function setCapture(?bool $capture): self
     {
         $this->capture = $capture;
         return $this;
@@ -106,20 +106,20 @@ class V1OrderOrderIdInvoicePostBody
     /**
      * Interface InvoiceCommentCreationInterface
      *
-     * @return SalesDataInvoiceCommentCreationInterface
+     * @return SalesDataInvoiceCommentCreationInterface|null
      */
-    public function getComment(): SalesDataInvoiceCommentCreationInterface
+    public function getComment(): ?SalesDataInvoiceCommentCreationInterface
     {
         return $this->comment;
     }
     /**
      * Interface InvoiceCommentCreationInterface
      *
-     * @param SalesDataInvoiceCommentCreationInterface $comment
+     * @param SalesDataInvoiceCommentCreationInterface|null $comment
      *
      * @return self
      */
-    public function setComment(SalesDataInvoiceCommentCreationInterface $comment): self
+    public function setComment(?SalesDataInvoiceCommentCreationInterface $comment): self
     {
         $this->comment = $comment;
         return $this;
@@ -127,20 +127,20 @@ class V1OrderOrderIdInvoicePostBody
     /**
      *
      *
-     * @return SalesDataInvoiceItemCreationInterface[]
+     * @return SalesDataInvoiceItemCreationInterface[]|null
      */
-    public function getItems(): array
+    public function getItems(): ?array
     {
         return $this->items;
     }
     /**
      *
      *
-     * @param SalesDataInvoiceItemCreationInterface[] $items
+     * @param SalesDataInvoiceItemCreationInterface[]|null $items
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(?array $items): self
     {
         $this->items = $items;
         return $this;
@@ -148,20 +148,20 @@ class V1OrderOrderIdInvoicePostBody
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getNotify(): bool
+    public function getNotify(): ?bool
     {
         return $this->notify;
     }
     /**
      *
      *
-     * @param bool $notify
+     * @param bool|null $notify
      *
      * @return self
      */
-    public function setNotify(bool $notify): self
+    public function setNotify(?bool $notify): self
     {
         $this->notify = $notify;
         return $this;

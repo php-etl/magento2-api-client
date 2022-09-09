@@ -7,26 +7,26 @@ class V1ReturnsIdCommentsPostBody
     /**
      * Interface CommentInterface
      *
-     * @var RmaDataCommentInterface
+     * @var RmaDataCommentInterface|null
      */
     protected $data;
     /**
      * Interface CommentInterface
      *
-     * @return RmaDataCommentInterface
+     * @return RmaDataCommentInterface|null
      */
-    public function getData(): RmaDataCommentInterface
+    public function getData(): ?RmaDataCommentInterface
     {
         return $this->data;
     }
     /**
      * Interface CommentInterface
      *
-     * @param RmaDataCommentInterface $data
+     * @param RmaDataCommentInterface|null $data
      *
      * @return self
      */
-    public function setData(RmaDataCommentInterface $data): self
+    public function setData(?RmaDataCommentInterface $data): self
     {
         $this->data = $data;
         return $this;

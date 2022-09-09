@@ -40,21 +40,29 @@ class BundleDataBundleOptionInterfaceNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('option_id', $data)) {
+        if (\array_key_exists('option_id', $data) && $data['option_id'] !== null) {
             $object->setOptionId($data['option_id']);
+        } elseif (\array_key_exists('option_id', $data) && $data['option_id'] === null) {
+            $object->setOptionId(null);
         }
-        if (\array_key_exists('option_qty', $data)) {
+        if (\array_key_exists('option_qty', $data) && $data['option_qty'] !== null) {
             $object->setOptionQty($data['option_qty']);
+        } elseif (\array_key_exists('option_qty', $data) && $data['option_qty'] === null) {
+            $object->setOptionQty(null);
         }
-        if (\array_key_exists('option_selections', $data)) {
+        if (\array_key_exists('option_selections', $data) && $data['option_selections'] !== null) {
             $values = array();
             foreach ($data['option_selections'] as $value) {
                 $values[] = $value;
             }
             $object->setOptionSelections($values);
+        } elseif (\array_key_exists('option_selections', $data) && $data['option_selections'] === null) {
+            $object->setOptionSelections(null);
         }
         return $object;
     }

@@ -40,8 +40,10 @@ class V1CompanyCreditsIdPutBodyNormalizer implements DenormalizerInterface, Norm
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('creditLimit', $data)) {
+        if (\array_key_exists('creditLimit', $data) && $data['creditLimit'] !== null) {
             $object->setCreditLimit($this->denormalizer->denormalize($data['creditLimit'], 'Kiboko\\Magento\\V2_2\\Model\\CompanyCreditDataCreditLimitInterface', 'json', $context));
+        } elseif (\array_key_exists('creditLimit', $data) && $data['creditLimit'] === null) {
+            $object->setCreditLimit(null);
         }
         return $object;
     }

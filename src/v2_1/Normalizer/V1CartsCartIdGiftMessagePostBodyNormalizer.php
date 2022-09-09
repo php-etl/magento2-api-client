@@ -40,8 +40,10 @@ class V1CartsCartIdGiftMessagePostBodyNormalizer implements DenormalizerInterfac
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('giftMessage', $data)) {
+        if (\array_key_exists('giftMessage', $data) && $data['giftMessage'] !== null) {
             $object->setGiftMessage($this->denormalizer->denormalize($data['giftMessage'], 'Kiboko\\Magento\\V2_1\\Model\\GiftMessageDataMessageInterface', 'json', $context));
+        } elseif (\array_key_exists('giftMessage', $data) && $data['giftMessage'] === null) {
+            $object->setGiftMessage(null);
         }
         return $object;
     }

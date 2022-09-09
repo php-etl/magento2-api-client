@@ -40,20 +40,30 @@ class EavDataAttributeSetInterfaceNormalizer implements DenormalizerInterface, N
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('attribute_set_id', $data)) {
+        if (\array_key_exists('attribute_set_id', $data) && $data['attribute_set_id'] !== null) {
             $object->setAttributeSetId($data['attribute_set_id']);
+        } elseif (\array_key_exists('attribute_set_id', $data) && $data['attribute_set_id'] === null) {
+            $object->setAttributeSetId(null);
         }
-        if (\array_key_exists('attribute_set_name', $data)) {
+        if (\array_key_exists('attribute_set_name', $data) && $data['attribute_set_name'] !== null) {
             $object->setAttributeSetName($data['attribute_set_name']);
+        } elseif (\array_key_exists('attribute_set_name', $data) && $data['attribute_set_name'] === null) {
+            $object->setAttributeSetName(null);
         }
-        if (\array_key_exists('entity_type_id', $data)) {
+        if (\array_key_exists('entity_type_id', $data) && $data['entity_type_id'] !== null) {
             $object->setEntityTypeId($data['entity_type_id']);
+        } elseif (\array_key_exists('entity_type_id', $data) && $data['entity_type_id'] === null) {
+            $object->setEntityTypeId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('sort_order', $data)) {
+        if (\array_key_exists('sort_order', $data) && $data['sort_order'] !== null) {
             $object->setSortOrder($data['sort_order']);
+        } elseif (\array_key_exists('sort_order', $data) && $data['sort_order'] === null) {
+            $object->setSortOrder(null);
         }
         return $object;
     }

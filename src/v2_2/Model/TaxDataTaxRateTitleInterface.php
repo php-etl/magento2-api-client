@@ -7,19 +7,19 @@ class TaxDataTaxRateTitleInterface
     /**
      * ExtensionInterface class for @see \Magento\Tax\Api\Data\TaxRateTitleInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Store id
      *
-     * @var string
+     * @var string|null
      */
     protected $storeId;
     /**
      * Title value
      *
-     * @var string
+     * @var string|null
      */
     protected $value;
     /**
@@ -46,20 +46,20 @@ class TaxDataTaxRateTitleInterface
     /**
      * Store id
      *
-     * @return string
+     * @return string|null
      */
-    public function getStoreId(): string
+    public function getStoreId(): ?string
     {
         return $this->storeId;
     }
     /**
      * Store id
      *
-     * @param string $storeId
+     * @param string|null $storeId
      *
      * @return self
      */
-    public function setStoreId(string $storeId): self
+    public function setStoreId(?string $storeId): self
     {
         $this->storeId = $storeId;
         return $this;
@@ -67,20 +67,20 @@ class TaxDataTaxRateTitleInterface
     /**
      * Title value
      *
-     * @return string
+     * @return string|null
      */
-    public function getValue(): string
+    public function getValue(): ?string
     {
         return $this->value;
     }
     /**
      * Title value
      *
-     * @param string $value
+     * @param string|null $value
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(?string $value): self
     {
         $this->value = $value;
         return $this;

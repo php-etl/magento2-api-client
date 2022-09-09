@@ -40,33 +40,49 @@ class BundleDataOptionInterfaceNormalizer implements DenormalizerInterface, Norm
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('option_id', $data)) {
+        if (\array_key_exists('option_id', $data) && $data['option_id'] !== null) {
             $object->setOptionId($data['option_id']);
+        } elseif (\array_key_exists('option_id', $data) && $data['option_id'] === null) {
+            $object->setOptionId(null);
         }
-        if (\array_key_exists('position', $data)) {
+        if (\array_key_exists('position', $data) && $data['position'] !== null) {
             $object->setPosition($data['position']);
+        } elseif (\array_key_exists('position', $data) && $data['position'] === null) {
+            $object->setPosition(null);
         }
-        if (\array_key_exists('product_links', $data)) {
+        if (\array_key_exists('product_links', $data) && $data['product_links'] !== null) {
             $values = array();
             foreach ($data['product_links'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\BundleDataLinkInterface', 'json', $context);
             }
             $object->setProductLinks($values);
+        } elseif (\array_key_exists('product_links', $data) && $data['product_links'] === null) {
+            $object->setProductLinks(null);
         }
-        if (\array_key_exists('required', $data)) {
+        if (\array_key_exists('required', $data) && $data['required'] !== null) {
             $object->setRequired($data['required']);
+        } elseif (\array_key_exists('required', $data) && $data['required'] === null) {
+            $object->setRequired(null);
         }
-        if (\array_key_exists('sku', $data)) {
+        if (\array_key_exists('sku', $data) && $data['sku'] !== null) {
             $object->setSku($data['sku']);
+        } elseif (\array_key_exists('sku', $data) && $data['sku'] === null) {
+            $object->setSku(null);
         }
-        if (\array_key_exists('title', $data)) {
+        if (\array_key_exists('title', $data) && $data['title'] !== null) {
             $object->setTitle($data['title']);
+        } elseif (\array_key_exists('title', $data) && $data['title'] === null) {
+            $object->setTitle(null);
         }
-        if (\array_key_exists('type', $data)) {
+        if (\array_key_exists('type', $data) && $data['type'] !== null) {
             $object->setType($data['type']);
+        } elseif (\array_key_exists('type', $data) && $data['type'] === null) {
+            $object->setType(null);
         }
         return $object;
     }

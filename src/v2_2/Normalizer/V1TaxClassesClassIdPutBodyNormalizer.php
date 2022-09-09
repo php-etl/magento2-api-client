@@ -40,8 +40,10 @@ class V1TaxClassesClassIdPutBodyNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('taxClass', $data)) {
+        if (\array_key_exists('taxClass', $data) && $data['taxClass'] !== null) {
             $object->setTaxClass($this->denormalizer->denormalize($data['taxClass'], 'Kiboko\\Magento\\V2_2\\Model\\TaxDataTaxClassInterface', 'json', $context));
+        } elseif (\array_key_exists('taxClass', $data) && $data['taxClass'] === null) {
+            $object->setTaxClass(null);
         }
         return $object;
     }

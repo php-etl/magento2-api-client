@@ -40,8 +40,10 @@ class CatalogDataCustomOptionExtensionInterfaceNormalizer implements Denormalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('file_info', $data)) {
+        if (\array_key_exists('file_info', $data) && $data['file_info'] !== null) {
             $object->setFileInfo($this->denormalizer->denormalize($data['file_info'], 'Kiboko\\Magento\\V2_4\\Model\\FrameworkDataImageContentInterface', 'json', $context));
+        } elseif (\array_key_exists('file_info', $data) && $data['file_info'] === null) {
+            $object->setFileInfo(null);
         }
         return $object;
     }

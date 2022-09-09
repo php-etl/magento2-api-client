@@ -7,32 +7,32 @@ class V1CouponsDeleteByCodesPostBody
     /**
      *
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $codes;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $ignoreInvalidCoupons;
     /**
      *
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getCodes(): array
+    public function getCodes(): ?array
     {
         return $this->codes;
     }
     /**
      *
      *
-     * @param string[] $codes
+     * @param string[]|null $codes
      *
      * @return self
      */
-    public function setCodes(array $codes): self
+    public function setCodes(?array $codes): self
     {
         $this->codes = $codes;
         return $this;
@@ -40,20 +40,20 @@ class V1CouponsDeleteByCodesPostBody
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIgnoreInvalidCoupons(): bool
+    public function getIgnoreInvalidCoupons(): ?bool
     {
         return $this->ignoreInvalidCoupons;
     }
     /**
      *
      *
-     * @param bool $ignoreInvalidCoupons
+     * @param bool|null $ignoreInvalidCoupons
      *
      * @return self
      */
-    public function setIgnoreInvalidCoupons(bool $ignoreInvalidCoupons): self
+    public function setIgnoreInvalidCoupons(?bool $ignoreInvalidCoupons): self
     {
         $this->ignoreInvalidCoupons = $ignoreInvalidCoupons;
         return $this;

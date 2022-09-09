@@ -7,32 +7,32 @@ class V1ConfigurableProductsVariationPutBody
     /**
      *
      *
-     * @var ConfigurableProductDataOptionInterface[]
+     * @var ConfigurableProductDataOptionInterface[]|null
      */
     protected $options;
     /**
      *
      *
-     * @var CatalogDataProductInterface
+     * @var CatalogDataProductInterface|null
      */
     protected $product;
     /**
      *
      *
-     * @return ConfigurableProductDataOptionInterface[]
+     * @return ConfigurableProductDataOptionInterface[]|null
      */
-    public function getOptions(): array
+    public function getOptions(): ?array
     {
         return $this->options;
     }
     /**
      *
      *
-     * @param ConfigurableProductDataOptionInterface[] $options
+     * @param ConfigurableProductDataOptionInterface[]|null $options
      *
      * @return self
      */
-    public function setOptions(array $options): self
+    public function setOptions(?array $options): self
     {
         $this->options = $options;
         return $this;
@@ -40,20 +40,20 @@ class V1ConfigurableProductsVariationPutBody
     /**
      *
      *
-     * @return CatalogDataProductInterface
+     * @return CatalogDataProductInterface|null
      */
-    public function getProduct(): CatalogDataProductInterface
+    public function getProduct(): ?CatalogDataProductInterface
     {
         return $this->product;
     }
     /**
      *
      *
-     * @param CatalogDataProductInterface $product
+     * @param CatalogDataProductInterface|null $product
      *
      * @return self
      */
-    public function setProduct(CatalogDataProductInterface $product): self
+    public function setProduct(?CatalogDataProductInterface $product): self
     {
         $this->product = $product;
         return $this;

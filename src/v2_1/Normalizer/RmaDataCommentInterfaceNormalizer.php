@@ -40,39 +40,59 @@ class RmaDataCommentInterfaceNormalizer implements DenormalizerInterface, Normal
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('admin', $data)) {
+        if (\array_key_exists('admin', $data) && $data['admin'] !== null) {
             $object->setAdmin($data['admin']);
+        } elseif (\array_key_exists('admin', $data) && $data['admin'] === null) {
+            $object->setAdmin(null);
         }
-        if (\array_key_exists('comment', $data)) {
+        if (\array_key_exists('comment', $data) && $data['comment'] !== null) {
             $object->setComment($data['comment']);
+        } elseif (\array_key_exists('comment', $data) && $data['comment'] === null) {
+            $object->setComment(null);
         }
-        if (\array_key_exists('created_at', $data)) {
+        if (\array_key_exists('created_at', $data) && $data['created_at'] !== null) {
             $object->setCreatedAt($data['created_at']);
+        } elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+            $object->setCreatedAt(null);
         }
-        if (\array_key_exists('custom_attributes', $data)) {
+        if (\array_key_exists('custom_attributes', $data) && $data['custom_attributes'] !== null) {
             $values = array();
             foreach ($data['custom_attributes'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setCustomAttributes($values);
+        } elseif (\array_key_exists('custom_attributes', $data) && $data['custom_attributes'] === null) {
+            $object->setCustomAttributes(null);
         }
-        if (\array_key_exists('customer_notified', $data)) {
+        if (\array_key_exists('customer_notified', $data) && $data['customer_notified'] !== null) {
             $object->setCustomerNotified($data['customer_notified']);
+        } elseif (\array_key_exists('customer_notified', $data) && $data['customer_notified'] === null) {
+            $object->setCustomerNotified(null);
         }
-        if (\array_key_exists('entity_id', $data)) {
+        if (\array_key_exists('entity_id', $data) && $data['entity_id'] !== null) {
             $object->setEntityId($data['entity_id']);
+        } elseif (\array_key_exists('entity_id', $data) && $data['entity_id'] === null) {
+            $object->setEntityId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('rma_entity_id', $data)) {
+        if (\array_key_exists('rma_entity_id', $data) && $data['rma_entity_id'] !== null) {
             $object->setRmaEntityId($data['rma_entity_id']);
+        } elseif (\array_key_exists('rma_entity_id', $data) && $data['rma_entity_id'] === null) {
+            $object->setRmaEntityId(null);
         }
-        if (\array_key_exists('status', $data)) {
+        if (\array_key_exists('status', $data) && $data['status'] !== null) {
             $object->setStatus($data['status']);
+        } elseif (\array_key_exists('status', $data) && $data['status'] === null) {
+            $object->setStatus(null);
         }
-        if (\array_key_exists('visible_on_front', $data)) {
+        if (\array_key_exists('visible_on_front', $data) && $data['visible_on_front'] !== null) {
             $object->setVisibleOnFront($data['visible_on_front']);
+        } elseif (\array_key_exists('visible_on_front', $data) && $data['visible_on_front'] === null) {
+            $object->setVisibleOnFront(null);
         }
         return $object;
     }

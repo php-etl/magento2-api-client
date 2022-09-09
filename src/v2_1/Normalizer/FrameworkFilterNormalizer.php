@@ -40,14 +40,20 @@ class FrameworkFilterNormalizer implements DenormalizerInterface, NormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('condition_type', $data)) {
+        if (\array_key_exists('condition_type', $data) && $data['condition_type'] !== null) {
             $object->setConditionType($data['condition_type']);
+        } elseif (\array_key_exists('condition_type', $data) && $data['condition_type'] === null) {
+            $object->setConditionType(null);
         }
-        if (\array_key_exists('field', $data)) {
+        if (\array_key_exists('field', $data) && $data['field'] !== null) {
             $object->setField($data['field']);
+        } elseif (\array_key_exists('field', $data) && $data['field'] === null) {
+            $object->setField(null);
         }
-        if (\array_key_exists('value', $data)) {
+        if (\array_key_exists('value', $data) && $data['value'] !== null) {
             $object->setValue($data['value']);
+        } elseif (\array_key_exists('value', $data) && $data['value'] === null) {
+            $object->setValue(null);
         }
         return $object;
     }

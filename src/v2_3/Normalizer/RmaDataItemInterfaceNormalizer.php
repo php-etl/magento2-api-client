@@ -40,41 +40,65 @@ class RmaDataItemInterfaceNormalizer implements DenormalizerInterface, Normalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('condition', $data)) {
+        if (\array_key_exists('condition', $data) && $data['condition'] !== null) {
             $object->setCondition($data['condition']);
+        } elseif (\array_key_exists('condition', $data) && $data['condition'] === null) {
+            $object->setCondition(null);
         }
-        if (\array_key_exists('entity_id', $data)) {
+        if (\array_key_exists('entity_id', $data) && $data['entity_id'] !== null) {
             $object->setEntityId($data['entity_id']);
+        } elseif (\array_key_exists('entity_id', $data) && $data['entity_id'] === null) {
+            $object->setEntityId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('order_item_id', $data)) {
+        if (\array_key_exists('order_item_id', $data) && $data['order_item_id'] !== null) {
             $object->setOrderItemId($data['order_item_id']);
+        } elseif (\array_key_exists('order_item_id', $data) && $data['order_item_id'] === null) {
+            $object->setOrderItemId(null);
         }
-        if (\array_key_exists('qty_approved', $data)) {
+        if (\array_key_exists('qty_approved', $data) && $data['qty_approved'] !== null) {
             $object->setQtyApproved($data['qty_approved']);
+        } elseif (\array_key_exists('qty_approved', $data) && $data['qty_approved'] === null) {
+            $object->setQtyApproved(null);
         }
-        if (\array_key_exists('qty_authorized', $data)) {
+        if (\array_key_exists('qty_authorized', $data) && $data['qty_authorized'] !== null) {
             $object->setQtyAuthorized($data['qty_authorized']);
+        } elseif (\array_key_exists('qty_authorized', $data) && $data['qty_authorized'] === null) {
+            $object->setQtyAuthorized(null);
         }
-        if (\array_key_exists('qty_requested', $data)) {
+        if (\array_key_exists('qty_requested', $data) && $data['qty_requested'] !== null) {
             $object->setQtyRequested($data['qty_requested']);
+        } elseif (\array_key_exists('qty_requested', $data) && $data['qty_requested'] === null) {
+            $object->setQtyRequested(null);
         }
-        if (\array_key_exists('qty_returned', $data)) {
+        if (\array_key_exists('qty_returned', $data) && $data['qty_returned'] !== null) {
             $object->setQtyReturned($data['qty_returned']);
+        } elseif (\array_key_exists('qty_returned', $data) && $data['qty_returned'] === null) {
+            $object->setQtyReturned(null);
         }
-        if (\array_key_exists('reason', $data)) {
+        if (\array_key_exists('reason', $data) && $data['reason'] !== null) {
             $object->setReason($data['reason']);
+        } elseif (\array_key_exists('reason', $data) && $data['reason'] === null) {
+            $object->setReason(null);
         }
-        if (\array_key_exists('resolution', $data)) {
+        if (\array_key_exists('resolution', $data) && $data['resolution'] !== null) {
             $object->setResolution($data['resolution']);
+        } elseif (\array_key_exists('resolution', $data) && $data['resolution'] === null) {
+            $object->setResolution(null);
         }
-        if (\array_key_exists('rma_entity_id', $data)) {
+        if (\array_key_exists('rma_entity_id', $data) && $data['rma_entity_id'] !== null) {
             $object->setRmaEntityId($data['rma_entity_id']);
+        } elseif (\array_key_exists('rma_entity_id', $data) && $data['rma_entity_id'] === null) {
+            $object->setRmaEntityId(null);
         }
-        if (\array_key_exists('status', $data)) {
+        if (\array_key_exists('status', $data) && $data['status'] !== null) {
             $object->setStatus($data['status']);
+        } elseif (\array_key_exists('status', $data) && $data['status'] === null) {
+            $object->setStatus(null);
         }
         return $object;
     }

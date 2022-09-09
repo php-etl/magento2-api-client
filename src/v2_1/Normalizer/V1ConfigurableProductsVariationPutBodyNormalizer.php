@@ -40,15 +40,19 @@ class V1ConfigurableProductsVariationPutBodyNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('options', $data)) {
+        if (\array_key_exists('options', $data) && $data['options'] !== null) {
             $values = array();
             foreach ($data['options'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\ConfigurableProductDataOptionInterface', 'json', $context);
             }
             $object->setOptions($values);
+        } elseif (\array_key_exists('options', $data) && $data['options'] === null) {
+            $object->setOptions(null);
         }
-        if (\array_key_exists('product', $data)) {
+        if (\array_key_exists('product', $data) && $data['product'] !== null) {
             $object->setProduct($this->denormalizer->denormalize($data['product'], 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataProductInterface', 'json', $context));
+        } elseif (\array_key_exists('product', $data) && $data['product'] === null) {
+            $object->setProduct(null);
         }
         return $object;
     }

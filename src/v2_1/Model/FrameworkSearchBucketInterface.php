@@ -7,32 +7,32 @@ class FrameworkSearchBucketInterface
     /**
      * Field name
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * Field values
      *
-     * @var FrameworkSearchAggregationValueInterface[]
+     * @var FrameworkSearchAggregationValueInterface[]|null
      */
     protected $values;
     /**
      * Field name
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      * Field name
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;
@@ -40,20 +40,20 @@ class FrameworkSearchBucketInterface
     /**
      * Field values
      *
-     * @return FrameworkSearchAggregationValueInterface[]
+     * @return FrameworkSearchAggregationValueInterface[]|null
      */
-    public function getValues(): array
+    public function getValues(): ?array
     {
         return $this->values;
     }
     /**
      * Field values
      *
-     * @param FrameworkSearchAggregationValueInterface[] $values
+     * @param FrameworkSearchAggregationValueInterface[]|null $values
      *
      * @return self
      */
-    public function setValues(array $values): self
+    public function setValues(?array $values): self
     {
         $this->values = $values;
         return $this;

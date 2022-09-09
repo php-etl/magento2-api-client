@@ -40,12 +40,14 @@ class DownloadableDataDownloadableOptionInterfaceNormalizer implements Denormali
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('downloadable_links', $data)) {
+        if (\array_key_exists('downloadable_links', $data) && $data['downloadable_links'] !== null) {
             $values = array();
             foreach ($data['downloadable_links'] as $value) {
                 $values[] = $value;
             }
             $object->setDownloadableLinks($values);
+        } elseif (\array_key_exists('downloadable_links', $data) && $data['downloadable_links'] === null) {
+            $object->setDownloadableLinks(null);
         }
         return $object;
     }

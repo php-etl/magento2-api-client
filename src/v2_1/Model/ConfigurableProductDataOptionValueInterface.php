@@ -7,13 +7,13 @@ class ConfigurableProductDataOptionValueInterface
     /**
      * ExtensionInterface class for @see \Magento\ConfigurableProduct\Api\Data\OptionValueInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $valueIndex;
     /**
@@ -40,20 +40,20 @@ class ConfigurableProductDataOptionValueInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getValueIndex(): int
+    public function getValueIndex(): ?int
     {
         return $this->valueIndex;
     }
     /**
      *
      *
-     * @param int $valueIndex
+     * @param int|null $valueIndex
      *
      * @return self
      */
-    public function setValueIndex(int $valueIndex): self
+    public function setValueIndex(?int $valueIndex): self
     {
         $this->valueIndex = $valueIndex;
         return $this;

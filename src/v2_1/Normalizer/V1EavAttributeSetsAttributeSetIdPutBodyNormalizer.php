@@ -40,8 +40,10 @@ class V1EavAttributeSetsAttributeSetIdPutBodyNormalizer implements DenormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('attributeSet', $data)) {
+        if (\array_key_exists('attributeSet', $data) && $data['attributeSet'] !== null) {
             $object->setAttributeSet($this->denormalizer->denormalize($data['attributeSet'], 'Kiboko\\Magento\\V2_1\\Model\\EavDataAttributeSetInterface', 'json', $context));
+        } elseif (\array_key_exists('attributeSet', $data) && $data['attributeSet'] === null) {
+            $object->setAttributeSet(null);
         }
         return $object;
     }

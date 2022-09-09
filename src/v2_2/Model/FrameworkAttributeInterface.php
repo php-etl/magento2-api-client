@@ -7,32 +7,32 @@ class FrameworkAttributeInterface
     /**
      * Attribute code
      *
-     * @var string
+     * @var string|null
      */
     protected $attributeCode;
     /**
      * Attribute value
      *
-     * @var string
+     * @var string|null
      */
     protected $value;
     /**
      * Attribute code
      *
-     * @return string
+     * @return string|null
      */
-    public function getAttributeCode(): string
+    public function getAttributeCode(): ?string
     {
         return $this->attributeCode;
     }
     /**
      * Attribute code
      *
-     * @param string $attributeCode
+     * @param string|null $attributeCode
      *
      * @return self
      */
-    public function setAttributeCode(string $attributeCode): self
+    public function setAttributeCode(?string $attributeCode): self
     {
         $this->attributeCode = $attributeCode;
         return $this;
@@ -40,20 +40,20 @@ class FrameworkAttributeInterface
     /**
      * Attribute value
      *
-     * @return string
+     * @return string|array|null
      */
-    public function getValue(): string
+    public function getValue(): string|array|null
     {
         return $this->value;
     }
     /**
      * Attribute value
      *
-     * @param string|array $value
+     * @param string|array|null  $value
      *
      * @return self
      */
-    public function setValue(string|array $value): self
+    public function setValue(string|array|null $value): self
     {
         $this->value = $value;
         return $this;

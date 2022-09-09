@@ -40,8 +40,10 @@ class CatalogDataProductAttributeMediaGalleryEntryExtensionInterfaceNormalizer i
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('video_content', $data)) {
+        if (\array_key_exists('video_content', $data) && $data['video_content'] !== null) {
             $object->setVideoContent($this->denormalizer->denormalize($data['video_content'], 'Kiboko\\Magento\\V2_2\\Model\\FrameworkDataVideoContentInterface', 'json', $context));
+        } elseif (\array_key_exists('video_content', $data) && $data['video_content'] === null) {
+            $object->setVideoContent(null);
         }
         return $object;
     }

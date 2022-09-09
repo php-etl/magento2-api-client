@@ -40,27 +40,39 @@ class V1InvoiceInvoiceIdRefundPostBodyNormalizer implements DenormalizerInterfac
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('appendComment', $data)) {
+        if (\array_key_exists('appendComment', $data) && $data['appendComment'] !== null) {
             $object->setAppendComment($data['appendComment']);
+        } elseif (\array_key_exists('appendComment', $data) && $data['appendComment'] === null) {
+            $object->setAppendComment(null);
         }
-        if (\array_key_exists('arguments', $data)) {
+        if (\array_key_exists('arguments', $data) && $data['arguments'] !== null) {
             $object->setArguments($this->denormalizer->denormalize($data['arguments'], 'Kiboko\\Magento\\V2_2\\Model\\SalesDataCreditmemoCreationArgumentsInterface', 'json', $context));
+        } elseif (\array_key_exists('arguments', $data) && $data['arguments'] === null) {
+            $object->setArguments(null);
         }
-        if (\array_key_exists('comment', $data)) {
+        if (\array_key_exists('comment', $data) && $data['comment'] !== null) {
             $object->setComment($this->denormalizer->denormalize($data['comment'], 'Kiboko\\Magento\\V2_2\\Model\\SalesDataCreditmemoCommentCreationInterface', 'json', $context));
+        } elseif (\array_key_exists('comment', $data) && $data['comment'] === null) {
+            $object->setComment(null);
         }
-        if (\array_key_exists('isOnline', $data)) {
+        if (\array_key_exists('isOnline', $data) && $data['isOnline'] !== null) {
             $object->setIsOnline($data['isOnline']);
+        } elseif (\array_key_exists('isOnline', $data) && $data['isOnline'] === null) {
+            $object->setIsOnline(null);
         }
-        if (\array_key_exists('items', $data)) {
+        if (\array_key_exists('items', $data) && $data['items'] !== null) {
             $values = array();
             foreach ($data['items'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\SalesDataCreditmemoItemCreationInterface', 'json', $context);
             }
             $object->setItems($values);
+        } elseif (\array_key_exists('items', $data) && $data['items'] === null) {
+            $object->setItems(null);
         }
-        if (\array_key_exists('notify', $data)) {
+        if (\array_key_exists('notify', $data) && $data['notify'] !== null) {
             $object->setNotify($data['notify']);
+        } elseif (\array_key_exists('notify', $data) && $data['notify'] === null) {
+            $object->setNotify(null);
         }
         return $object;
     }

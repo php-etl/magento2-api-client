@@ -40,15 +40,19 @@ class QuoteDataAddressExtensionInterfaceNormalizer implements DenormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('checkout_fields', $data)) {
+        if (\array_key_exists('checkout_fields', $data) && $data['checkout_fields'] !== null) {
             $values = array();
             foreach ($data['checkout_fields'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setCheckoutFields($values);
+        } elseif (\array_key_exists('checkout_fields', $data) && $data['checkout_fields'] === null) {
+            $object->setCheckoutFields(null);
         }
-        if (\array_key_exists('gift_registry_id', $data)) {
+        if (\array_key_exists('gift_registry_id', $data) && $data['gift_registry_id'] !== null) {
             $object->setGiftRegistryId($data['gift_registry_id']);
+        } elseif (\array_key_exists('gift_registry_id', $data) && $data['gift_registry_id'] === null) {
+            $object->setGiftRegistryId(null);
         }
         return $object;
     }

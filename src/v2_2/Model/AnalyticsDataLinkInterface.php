@@ -7,32 +7,32 @@ class AnalyticsDataLinkInterface
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $initializationVector;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $url;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getInitializationVector(): string
+    public function getInitializationVector(): ?string
     {
         return $this->initializationVector;
     }
     /**
      *
      *
-     * @param string $initializationVector
+     * @param string|null $initializationVector
      *
      * @return self
      */
-    public function setInitializationVector(string $initializationVector): self
+    public function setInitializationVector(?string $initializationVector): self
     {
         $this->initializationVector = $initializationVector;
         return $this;
@@ -40,20 +40,20 @@ class AnalyticsDataLinkInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getUrl(): string
+    public function getUrl(): ?string
     {
         return $this->url;
     }
     /**
      *
      *
-     * @param string $url
+     * @param string|null $url
      *
      * @return self
      */
-    public function setUrl(string $url): self
+    public function setUrl(?string $url): self
     {
         $this->url = $url;
         return $this;

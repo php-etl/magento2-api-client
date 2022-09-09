@@ -7,26 +7,26 @@ class V1TemandoRmaRmaIdShipmentsPutBody
     /**
      *
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $returnShipmentIds;
     /**
      *
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getReturnShipmentIds(): array
+    public function getReturnShipmentIds(): ?array
     {
         return $this->returnShipmentIds;
     }
     /**
      *
      *
-     * @param string[] $returnShipmentIds
+     * @param string[]|null $returnShipmentIds
      *
      * @return self
      */
-    public function setReturnShipmentIds(array $returnShipmentIds): self
+    public function setReturnShipmentIds(?array $returnShipmentIds): self
     {
         $this->returnShipmentIds = $returnShipmentIds;
         return $this;

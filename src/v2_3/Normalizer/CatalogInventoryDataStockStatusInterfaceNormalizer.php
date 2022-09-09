@@ -40,23 +40,35 @@ class CatalogInventoryDataStockStatusInterfaceNormalizer implements Denormalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('product_id', $data)) {
+        if (\array_key_exists('product_id', $data) && $data['product_id'] !== null) {
             $object->setProductId($data['product_id']);
+        } elseif (\array_key_exists('product_id', $data) && $data['product_id'] === null) {
+            $object->setProductId(null);
         }
-        if (\array_key_exists('qty', $data)) {
+        if (\array_key_exists('qty', $data) && $data['qty'] !== null) {
             $object->setQty($data['qty']);
+        } elseif (\array_key_exists('qty', $data) && $data['qty'] === null) {
+            $object->setQty(null);
         }
-        if (\array_key_exists('stock_id', $data)) {
+        if (\array_key_exists('stock_id', $data) && $data['stock_id'] !== null) {
             $object->setStockId($data['stock_id']);
+        } elseif (\array_key_exists('stock_id', $data) && $data['stock_id'] === null) {
+            $object->setStockId(null);
         }
-        if (\array_key_exists('stock_item', $data)) {
+        if (\array_key_exists('stock_item', $data) && $data['stock_item'] !== null) {
             $object->setStockItem($this->denormalizer->denormalize($data['stock_item'], 'Kiboko\\Magento\\V2_3\\Model\\CatalogInventoryDataStockItemInterface', 'json', $context));
+        } elseif (\array_key_exists('stock_item', $data) && $data['stock_item'] === null) {
+            $object->setStockItem(null);
         }
-        if (\array_key_exists('stock_status', $data)) {
+        if (\array_key_exists('stock_status', $data) && $data['stock_status'] !== null) {
             $object->setStockStatus($data['stock_status']);
+        } elseif (\array_key_exists('stock_status', $data) && $data['stock_status'] === null) {
+            $object->setStockStatus(null);
         }
         return $object;
     }

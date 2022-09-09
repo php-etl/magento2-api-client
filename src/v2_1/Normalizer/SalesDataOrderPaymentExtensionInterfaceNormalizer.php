@@ -40,8 +40,10 @@ class SalesDataOrderPaymentExtensionInterfaceNormalizer implements DenormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('vault_payment_token', $data)) {
+        if (\array_key_exists('vault_payment_token', $data) && $data['vault_payment_token'] !== null) {
             $object->setVaultPaymentToken($this->denormalizer->denormalize($data['vault_payment_token'], 'Kiboko\\Magento\\V2_1\\Model\\VaultDataPaymentTokenInterface', 'json', $context));
+        } elseif (\array_key_exists('vault_payment_token', $data) && $data['vault_payment_token'] === null) {
+            $object->setVaultPaymentToken(null);
         }
         return $object;
     }

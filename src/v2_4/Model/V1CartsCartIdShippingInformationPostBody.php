@@ -7,26 +7,26 @@ class V1CartsCartIdShippingInformationPostBody
     /**
      * Interface ShippingInformationInterface
      *
-     * @var CheckoutDataShippingInformationInterface
+     * @var CheckoutDataShippingInformationInterface|null
      */
     protected $addressInformation;
     /**
      * Interface ShippingInformationInterface
      *
-     * @return CheckoutDataShippingInformationInterface
+     * @return CheckoutDataShippingInformationInterface|null
      */
-    public function getAddressInformation(): CheckoutDataShippingInformationInterface
+    public function getAddressInformation(): ?CheckoutDataShippingInformationInterface
     {
         return $this->addressInformation;
     }
     /**
      * Interface ShippingInformationInterface
      *
-     * @param CheckoutDataShippingInformationInterface $addressInformation
+     * @param CheckoutDataShippingInformationInterface|null $addressInformation
      *
      * @return self
      */
-    public function setAddressInformation(CheckoutDataShippingInformationInterface $addressInformation): self
+    public function setAddressInformation(?CheckoutDataShippingInformationInterface $addressInformation): self
     {
         $this->addressInformation = $addressInformation;
         return $this;

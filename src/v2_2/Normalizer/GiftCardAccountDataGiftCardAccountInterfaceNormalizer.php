@@ -52,27 +52,39 @@ class GiftCardAccountDataGiftCardAccountInterfaceNormalizer implements Denormali
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('base_gift_cards_amount', $data)) {
+        if (\array_key_exists('base_gift_cards_amount', $data) && $data['base_gift_cards_amount'] !== null) {
             $object->setBaseGiftCardsAmount($data['base_gift_cards_amount']);
+        } elseif (\array_key_exists('base_gift_cards_amount', $data) && $data['base_gift_cards_amount'] === null) {
+            $object->setBaseGiftCardsAmount(null);
         }
-        if (\array_key_exists('base_gift_cards_amount_used', $data)) {
+        if (\array_key_exists('base_gift_cards_amount_used', $data) && $data['base_gift_cards_amount_used'] !== null) {
             $object->setBaseGiftCardsAmountUsed($data['base_gift_cards_amount_used']);
+        } elseif (\array_key_exists('base_gift_cards_amount_used', $data) && $data['base_gift_cards_amount_used'] === null) {
+            $object->setBaseGiftCardsAmountUsed(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('gift_cards', $data)) {
+        if (\array_key_exists('gift_cards', $data) && $data['gift_cards'] !== null) {
             $values = array();
             foreach ($data['gift_cards'] as $value) {
                 $values[] = $value;
             }
             $object->setGiftCards($values);
+        } elseif (\array_key_exists('gift_cards', $data) && $data['gift_cards'] === null) {
+            $object->setGiftCards(null);
         }
-        if (\array_key_exists('gift_cards_amount', $data)) {
+        if (\array_key_exists('gift_cards_amount', $data) && $data['gift_cards_amount'] !== null) {
             $object->setGiftCardsAmount($data['gift_cards_amount']);
+        } elseif (\array_key_exists('gift_cards_amount', $data) && $data['gift_cards_amount'] === null) {
+            $object->setGiftCardsAmount(null);
         }
-        if (\array_key_exists('gift_cards_amount_used', $data)) {
+        if (\array_key_exists('gift_cards_amount_used', $data) && $data['gift_cards_amount_used'] !== null) {
             $object->setGiftCardsAmountUsed($data['gift_cards_amount_used']);
+        } elseif (\array_key_exists('gift_cards_amount_used', $data) && $data['gift_cards_amount_used'] === null) {
+            $object->setGiftCardsAmountUsed(null);
         }
         return $object;
     }

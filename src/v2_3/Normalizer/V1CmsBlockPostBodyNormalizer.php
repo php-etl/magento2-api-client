@@ -40,8 +40,10 @@ class V1CmsBlockPostBodyNormalizer implements DenormalizerInterface, NormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('block', $data)) {
+        if (\array_key_exists('block', $data) && $data['block'] !== null) {
             $object->setBlock($this->denormalizer->denormalize($data['block'], 'Kiboko\\Magento\\V2_3\\Model\\CmsDataBlockInterface', 'json', $context));
+        } elseif (\array_key_exists('block', $data) && $data['block'] === null) {
+            $object->setBlock(null);
         }
         return $object;
     }

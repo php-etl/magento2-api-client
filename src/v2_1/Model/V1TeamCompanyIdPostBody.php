@@ -7,26 +7,26 @@ class V1TeamCompanyIdPostBody
     /**
      * Team interface
      *
-     * @var CompanyDataTeamInterface
+     * @var CompanyDataTeamInterface|null
      */
     protected $team;
     /**
      * Team interface
      *
-     * @return CompanyDataTeamInterface
+     * @return CompanyDataTeamInterface|null
      */
-    public function getTeam(): CompanyDataTeamInterface
+    public function getTeam(): ?CompanyDataTeamInterface
     {
         return $this->team;
     }
     /**
      * Team interface
      *
-     * @param CompanyDataTeamInterface $team
+     * @param CompanyDataTeamInterface|null $team
      *
      * @return self
      */
-    public function setTeam(CompanyDataTeamInterface $team): self
+    public function setTeam(?CompanyDataTeamInterface $team): self
     {
         $this->team = $team;
         return $this;

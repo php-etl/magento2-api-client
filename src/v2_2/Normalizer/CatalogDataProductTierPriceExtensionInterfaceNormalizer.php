@@ -43,11 +43,15 @@ class CatalogDataProductTierPriceExtensionInterfaceNormalizer implements Denorma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('percentage_value', $data)) {
+        if (\array_key_exists('percentage_value', $data) && $data['percentage_value'] !== null) {
             $object->setPercentageValue($data['percentage_value']);
+        } elseif (\array_key_exists('percentage_value', $data) && $data['percentage_value'] === null) {
+            $object->setPercentageValue(null);
         }
-        if (\array_key_exists('website_id', $data)) {
+        if (\array_key_exists('website_id', $data) && $data['website_id'] !== null) {
             $object->setWebsiteId($data['website_id']);
+        } elseif (\array_key_exists('website_id', $data) && $data['website_id'] === null) {
+            $object->setWebsiteId(null);
         }
         return $object;
     }

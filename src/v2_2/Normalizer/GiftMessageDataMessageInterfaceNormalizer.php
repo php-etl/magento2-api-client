@@ -40,23 +40,35 @@ class GiftMessageDataMessageInterfaceNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('customer_id', $data)) {
+        if (\array_key_exists('customer_id', $data) && $data['customer_id'] !== null) {
             $object->setCustomerId($data['customer_id']);
+        } elseif (\array_key_exists('customer_id', $data) && $data['customer_id'] === null) {
+            $object->setCustomerId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_2\\Model\\GiftMessageDataMessageExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('gift_message_id', $data)) {
+        if (\array_key_exists('gift_message_id', $data) && $data['gift_message_id'] !== null) {
             $object->setGiftMessageId($data['gift_message_id']);
+        } elseif (\array_key_exists('gift_message_id', $data) && $data['gift_message_id'] === null) {
+            $object->setGiftMessageId(null);
         }
-        if (\array_key_exists('message', $data)) {
+        if (\array_key_exists('message', $data) && $data['message'] !== null) {
             $object->setMessage($data['message']);
+        } elseif (\array_key_exists('message', $data) && $data['message'] === null) {
+            $object->setMessage(null);
         }
-        if (\array_key_exists('recipient', $data)) {
+        if (\array_key_exists('recipient', $data) && $data['recipient'] !== null) {
             $object->setRecipient($data['recipient']);
+        } elseif (\array_key_exists('recipient', $data) && $data['recipient'] === null) {
+            $object->setRecipient(null);
         }
-        if (\array_key_exists('sender', $data)) {
+        if (\array_key_exists('sender', $data) && $data['sender'] !== null) {
             $object->setSender($data['sender']);
+        } elseif (\array_key_exists('sender', $data) && $data['sender'] === null) {
+            $object->setSender(null);
         }
         return $object;
     }

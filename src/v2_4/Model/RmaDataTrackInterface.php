@@ -7,56 +7,56 @@ class RmaDataTrackInterface
     /**
      * Carrier code
      *
-     * @var string
+     * @var string|null
      */
     protected $carrierCode;
     /**
      * Carrier title
      *
-     * @var string
+     * @var string|null
      */
     protected $carrierTitle;
     /**
      * Entity id
      *
-     * @var int
+     * @var int|null
      */
     protected $entityId;
     /**
      * ExtensionInterface class for @see \Magento\Rma\Api\Data\TrackInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Rma entity id
      *
-     * @var int
+     * @var int|null
      */
     protected $rmaEntityId;
     /**
      * Track number
      *
-     * @var string
+     * @var string|null
      */
     protected $trackNumber;
     /**
      * Carrier code
      *
-     * @return string
+     * @return string|null
      */
-    public function getCarrierCode(): string
+    public function getCarrierCode(): ?string
     {
         return $this->carrierCode;
     }
     /**
      * Carrier code
      *
-     * @param string $carrierCode
+     * @param string|null $carrierCode
      *
      * @return self
      */
-    public function setCarrierCode(string $carrierCode): self
+    public function setCarrierCode(?string $carrierCode): self
     {
         $this->carrierCode = $carrierCode;
         return $this;
@@ -64,20 +64,20 @@ class RmaDataTrackInterface
     /**
      * Carrier title
      *
-     * @return string
+     * @return string|null
      */
-    public function getCarrierTitle(): string
+    public function getCarrierTitle(): ?string
     {
         return $this->carrierTitle;
     }
     /**
      * Carrier title
      *
-     * @param string $carrierTitle
+     * @param string|null $carrierTitle
      *
      * @return self
      */
-    public function setCarrierTitle(string $carrierTitle): self
+    public function setCarrierTitle(?string $carrierTitle): self
     {
         $this->carrierTitle = $carrierTitle;
         return $this;
@@ -85,20 +85,20 @@ class RmaDataTrackInterface
     /**
      * Entity id
      *
-     * @return int
+     * @return int|null
      */
-    public function getEntityId(): int
+    public function getEntityId(): ?int
     {
         return $this->entityId;
     }
     /**
      * Entity id
      *
-     * @param int $entityId
+     * @param int|null $entityId
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(?int $entityId): self
     {
         $this->entityId = $entityId;
         return $this;
@@ -127,20 +127,20 @@ class RmaDataTrackInterface
     /**
      * Rma entity id
      *
-     * @return int
+     * @return int|null
      */
-    public function getRmaEntityId(): int
+    public function getRmaEntityId(): ?int
     {
         return $this->rmaEntityId;
     }
     /**
      * Rma entity id
      *
-     * @param int $rmaEntityId
+     * @param int|null $rmaEntityId
      *
      * @return self
      */
-    public function setRmaEntityId(int $rmaEntityId): self
+    public function setRmaEntityId(?int $rmaEntityId): self
     {
         $this->rmaEntityId = $rmaEntityId;
         return $this;
@@ -148,20 +148,20 @@ class RmaDataTrackInterface
     /**
      * Track number
      *
-     * @return string
+     * @return string|null
      */
-    public function getTrackNumber(): string
+    public function getTrackNumber(): ?string
     {
         return $this->trackNumber;
     }
     /**
      * Track number
      *
-     * @param string $trackNumber
+     * @param string|null $trackNumber
      *
      * @return self
      */
-    public function setTrackNumber(string $trackNumber): self
+    public function setTrackNumber(?string $trackNumber): self
     {
         $this->trackNumber = $trackNumber;
         return $this;

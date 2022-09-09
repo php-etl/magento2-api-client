@@ -40,14 +40,20 @@ class V1CustomersPostBodyNormalizer implements DenormalizerInterface, Normalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('customer', $data)) {
+        if (\array_key_exists('customer', $data) && $data['customer'] !== null) {
             $object->setCustomer($this->denormalizer->denormalize($data['customer'], 'Kiboko\\Magento\\V2_4\\Model\\CustomerDataCustomerInterface', 'json', $context));
+        } elseif (\array_key_exists('customer', $data) && $data['customer'] === null) {
+            $object->setCustomer(null);
         }
-        if (\array_key_exists('password', $data)) {
+        if (\array_key_exists('password', $data) && $data['password'] !== null) {
             $object->setPassword($data['password']);
+        } elseif (\array_key_exists('password', $data) && $data['password'] === null) {
+            $object->setPassword(null);
         }
-        if (\array_key_exists('redirectUrl', $data)) {
+        if (\array_key_exists('redirectUrl', $data) && $data['redirectUrl'] !== null) {
             $object->setRedirectUrl($data['redirectUrl']);
+        } elseif (\array_key_exists('redirectUrl', $data) && $data['redirectUrl'] === null) {
+            $object->setRedirectUrl(null);
         }
         return $object;
     }

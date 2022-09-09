@@ -40,11 +40,15 @@ class EavDataAttributeGroupExtensionInterfaceNormalizer implements DenormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('attribute_group_code', $data)) {
+        if (\array_key_exists('attribute_group_code', $data) && $data['attribute_group_code'] !== null) {
             $object->setAttributeGroupCode($data['attribute_group_code']);
+        } elseif (\array_key_exists('attribute_group_code', $data) && $data['attribute_group_code'] === null) {
+            $object->setAttributeGroupCode(null);
         }
-        if (\array_key_exists('sort_order', $data)) {
+        if (\array_key_exists('sort_order', $data) && $data['sort_order'] !== null) {
             $object->setSortOrder($data['sort_order']);
+        } elseif (\array_key_exists('sort_order', $data) && $data['sort_order'] === null) {
+            $object->setSortOrder(null);
         }
         return $object;
     }

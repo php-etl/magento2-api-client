@@ -7,49 +7,49 @@ class DownloadableDataSampleInterface
     /**
      * ExtensionInterface class for @see \Magento\Downloadable\Api\Data\SampleInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Sample(or link) id
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * relative file path
      *
-     * @var string
+     * @var string|null
      */
     protected $sampleFile;
     /**
      *
      *
-     * @var DownloadableDataFileContentInterface
+     * @var DownloadableDataFileContentInterface|null
      */
     protected $sampleFileContent;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $sampleType;
     /**
      * file URL
      *
-     * @var string
+     * @var string|null
      */
     protected $sampleUrl;
     /**
      * Order index for sample
      *
-     * @var int
+     * @var int|null
      */
     protected $sortOrder;
     /**
      * Title
      *
-     * @var string
+     * @var string|null
      */
     protected $title;
     /**
@@ -76,20 +76,20 @@ class DownloadableDataSampleInterface
     /**
      * Sample(or link) id
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * Sample(or link) id
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -97,20 +97,20 @@ class DownloadableDataSampleInterface
     /**
      * relative file path
      *
-     * @return string
+     * @return string|null
      */
-    public function getSampleFile(): string
+    public function getSampleFile(): ?string
     {
         return $this->sampleFile;
     }
     /**
      * relative file path
      *
-     * @param string $sampleFile
+     * @param string|null $sampleFile
      *
      * @return self
      */
-    public function setSampleFile(string $sampleFile): self
+    public function setSampleFile(?string $sampleFile): self
     {
         $this->sampleFile = $sampleFile;
         return $this;
@@ -118,20 +118,20 @@ class DownloadableDataSampleInterface
     /**
      *
      *
-     * @return DownloadableDataFileContentInterface
+     * @return DownloadableDataFileContentInterface|null
      */
-    public function getSampleFileContent(): DownloadableDataFileContentInterface
+    public function getSampleFileContent(): ?DownloadableDataFileContentInterface
     {
         return $this->sampleFileContent;
     }
     /**
      *
      *
-     * @param DownloadableDataFileContentInterface $sampleFileContent
+     * @param DownloadableDataFileContentInterface|null $sampleFileContent
      *
      * @return self
      */
-    public function setSampleFileContent(DownloadableDataFileContentInterface $sampleFileContent): self
+    public function setSampleFileContent(?DownloadableDataFileContentInterface $sampleFileContent): self
     {
         $this->sampleFileContent = $sampleFileContent;
         return $this;
@@ -139,20 +139,20 @@ class DownloadableDataSampleInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getSampleType(): string
+    public function getSampleType(): ?string
     {
         return $this->sampleType;
     }
     /**
      *
      *
-     * @param string $sampleType
+     * @param string|null $sampleType
      *
      * @return self
      */
-    public function setSampleType(string $sampleType): self
+    public function setSampleType(?string $sampleType): self
     {
         $this->sampleType = $sampleType;
         return $this;
@@ -160,20 +160,20 @@ class DownloadableDataSampleInterface
     /**
      * file URL
      *
-     * @return string
+     * @return string|null
      */
-    public function getSampleUrl(): string
+    public function getSampleUrl(): ?string
     {
         return $this->sampleUrl;
     }
     /**
      * file URL
      *
-     * @param string $sampleUrl
+     * @param string|null $sampleUrl
      *
      * @return self
      */
-    public function setSampleUrl(string $sampleUrl): self
+    public function setSampleUrl(?string $sampleUrl): self
     {
         $this->sampleUrl = $sampleUrl;
         return $this;
@@ -181,20 +181,20 @@ class DownloadableDataSampleInterface
     /**
      * Order index for sample
      *
-     * @return int
+     * @return int|null
      */
-    public function getSortOrder(): int
+    public function getSortOrder(): ?int
     {
         return $this->sortOrder;
     }
     /**
      * Order index for sample
      *
-     * @param int $sortOrder
+     * @param int|null $sortOrder
      *
      * @return self
      */
-    public function setSortOrder(int $sortOrder): self
+    public function setSortOrder(?int $sortOrder): self
     {
         $this->sortOrder = $sortOrder;
         return $this;
@@ -202,20 +202,20 @@ class DownloadableDataSampleInterface
     /**
      * Title
      *
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
     /**
      * Title
      *
-     * @param string $title
+     * @param string|null $title
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
         return $this;

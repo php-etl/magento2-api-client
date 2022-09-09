@@ -40,12 +40,14 @@ class V1SharedCatalogIdUnassignCategoriesPostBodyNormalizer implements Denormali
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('categories', $data)) {
+        if (\array_key_exists('categories', $data) && $data['categories'] !== null) {
             $values = array();
             foreach ($data['categories'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\CatalogDataCategoryInterface', 'json', $context);
             }
             $object->setCategories($values);
+        } elseif (\array_key_exists('categories', $data) && $data['categories'] === null) {
+            $object->setCategories(null);
         }
         return $object;
     }

@@ -46,35 +46,55 @@ class BundleDataLinkInterfaceNormalizer implements DenormalizerInterface, Normal
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('can_change_quantity', $data)) {
+        if (\array_key_exists('can_change_quantity', $data) && $data['can_change_quantity'] !== null) {
             $object->setCanChangeQuantity($data['can_change_quantity']);
+        } elseif (\array_key_exists('can_change_quantity', $data) && $data['can_change_quantity'] === null) {
+            $object->setCanChangeQuantity(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('is_default', $data)) {
+        if (\array_key_exists('is_default', $data) && $data['is_default'] !== null) {
             $object->setIsDefault($data['is_default']);
+        } elseif (\array_key_exists('is_default', $data) && $data['is_default'] === null) {
+            $object->setIsDefault(null);
         }
-        if (\array_key_exists('option_id', $data)) {
+        if (\array_key_exists('option_id', $data) && $data['option_id'] !== null) {
             $object->setOptionId($data['option_id']);
+        } elseif (\array_key_exists('option_id', $data) && $data['option_id'] === null) {
+            $object->setOptionId(null);
         }
-        if (\array_key_exists('position', $data)) {
+        if (\array_key_exists('position', $data) && $data['position'] !== null) {
             $object->setPosition($data['position']);
+        } elseif (\array_key_exists('position', $data) && $data['position'] === null) {
+            $object->setPosition(null);
         }
-        if (\array_key_exists('price', $data)) {
+        if (\array_key_exists('price', $data) && $data['price'] !== null) {
             $object->setPrice($data['price']);
+        } elseif (\array_key_exists('price', $data) && $data['price'] === null) {
+            $object->setPrice(null);
         }
-        if (\array_key_exists('price_type', $data)) {
+        if (\array_key_exists('price_type', $data) && $data['price_type'] !== null) {
             $object->setPriceType($data['price_type']);
+        } elseif (\array_key_exists('price_type', $data) && $data['price_type'] === null) {
+            $object->setPriceType(null);
         }
-        if (\array_key_exists('qty', $data)) {
+        if (\array_key_exists('qty', $data) && $data['qty'] !== null) {
             $object->setQty($data['qty']);
+        } elseif (\array_key_exists('qty', $data) && $data['qty'] === null) {
+            $object->setQty(null);
         }
-        if (\array_key_exists('sku', $data)) {
+        if (\array_key_exists('sku', $data) && $data['sku'] !== null) {
             $object->setSku($data['sku']);
+        } elseif (\array_key_exists('sku', $data) && $data['sku'] === null) {
+            $object->setSku(null);
         }
         return $object;
     }

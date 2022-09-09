@@ -40,26 +40,40 @@ class SalesDataShipmentCommentInterfaceNormalizer implements DenormalizerInterfa
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('comment', $data)) {
+        if (\array_key_exists('comment', $data) && $data['comment'] !== null) {
             $object->setComment($data['comment']);
+        } elseif (\array_key_exists('comment', $data) && $data['comment'] === null) {
+            $object->setComment(null);
         }
-        if (\array_key_exists('created_at', $data)) {
+        if (\array_key_exists('created_at', $data) && $data['created_at'] !== null) {
             $object->setCreatedAt($data['created_at']);
+        } elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+            $object->setCreatedAt(null);
         }
-        if (\array_key_exists('entity_id', $data)) {
+        if (\array_key_exists('entity_id', $data) && $data['entity_id'] !== null) {
             $object->setEntityId($data['entity_id']);
+        } elseif (\array_key_exists('entity_id', $data) && $data['entity_id'] === null) {
+            $object->setEntityId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('is_customer_notified', $data)) {
+        if (\array_key_exists('is_customer_notified', $data) && $data['is_customer_notified'] !== null) {
             $object->setIsCustomerNotified($data['is_customer_notified']);
+        } elseif (\array_key_exists('is_customer_notified', $data) && $data['is_customer_notified'] === null) {
+            $object->setIsCustomerNotified(null);
         }
-        if (\array_key_exists('is_visible_on_front', $data)) {
+        if (\array_key_exists('is_visible_on_front', $data) && $data['is_visible_on_front'] !== null) {
             $object->setIsVisibleOnFront($data['is_visible_on_front']);
+        } elseif (\array_key_exists('is_visible_on_front', $data) && $data['is_visible_on_front'] === null) {
+            $object->setIsVisibleOnFront(null);
         }
-        if (\array_key_exists('parent_id', $data)) {
+        if (\array_key_exists('parent_id', $data) && $data['parent_id'] !== null) {
             $object->setParentId($data['parent_id']);
+        } elseif (\array_key_exists('parent_id', $data) && $data['parent_id'] === null) {
+            $object->setParentId(null);
         }
         return $object;
     }

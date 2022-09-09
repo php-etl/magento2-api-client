@@ -7,38 +7,38 @@ class SalesDataCreditmemoCommentCreationInterface
     /**
      * Comment.
      *
-     * @var string
+     * @var string|null
      */
     protected $comment;
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\CreditmemoCommentCreationInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Is-visible-on-storefront flag value.
      *
-     * @var int
+     * @var int|null
      */
     protected $isVisibleOnFront;
     /**
      * Comment.
      *
-     * @return string
+     * @return string|null
      */
-    public function getComment(): string
+    public function getComment(): ?string
     {
         return $this->comment;
     }
     /**
      * Comment.
      *
-     * @param string $comment
+     * @param string|null $comment
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(?string $comment): self
     {
         $this->comment = $comment;
         return $this;
@@ -67,20 +67,20 @@ class SalesDataCreditmemoCommentCreationInterface
     /**
      * Is-visible-on-storefront flag value.
      *
-     * @return int
+     * @return int|null
      */
-    public function getIsVisibleOnFront(): int
+    public function getIsVisibleOnFront(): ?int
     {
         return $this->isVisibleOnFront;
     }
     /**
      * Is-visible-on-storefront flag value.
      *
-     * @param int $isVisibleOnFront
+     * @param int|null $isVisibleOnFront
      *
      * @return self
      */
-    public function setIsVisibleOnFront(int $isVisibleOnFront): self
+    public function setIsVisibleOnFront(?int $isVisibleOnFront): self
     {
         $this->isVisibleOnFront = $isVisibleOnFront;
         return $this;

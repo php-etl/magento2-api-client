@@ -43,45 +43,69 @@ class TaxDataTaxRateInterfaceNormalizer implements DenormalizerInterface, Normal
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('code', $data)) {
+        if (\array_key_exists('code', $data) && $data['code'] !== null) {
             $object->setCode($data['code']);
+        } elseif (\array_key_exists('code', $data) && $data['code'] === null) {
+            $object->setCode(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('rate', $data)) {
+        if (\array_key_exists('rate', $data) && $data['rate'] !== null) {
             $object->setRate($data['rate']);
+        } elseif (\array_key_exists('rate', $data) && $data['rate'] === null) {
+            $object->setRate(null);
         }
-        if (\array_key_exists('region_name', $data)) {
+        if (\array_key_exists('region_name', $data) && $data['region_name'] !== null) {
             $object->setRegionName($data['region_name']);
+        } elseif (\array_key_exists('region_name', $data) && $data['region_name'] === null) {
+            $object->setRegionName(null);
         }
-        if (\array_key_exists('tax_country_id', $data)) {
+        if (\array_key_exists('tax_country_id', $data) && $data['tax_country_id'] !== null) {
             $object->setTaxCountryId($data['tax_country_id']);
+        } elseif (\array_key_exists('tax_country_id', $data) && $data['tax_country_id'] === null) {
+            $object->setTaxCountryId(null);
         }
-        if (\array_key_exists('tax_postcode', $data)) {
+        if (\array_key_exists('tax_postcode', $data) && $data['tax_postcode'] !== null) {
             $object->setTaxPostcode($data['tax_postcode']);
+        } elseif (\array_key_exists('tax_postcode', $data) && $data['tax_postcode'] === null) {
+            $object->setTaxPostcode(null);
         }
-        if (\array_key_exists('tax_region_id', $data)) {
+        if (\array_key_exists('tax_region_id', $data) && $data['tax_region_id'] !== null) {
             $object->setTaxRegionId($data['tax_region_id']);
+        } elseif (\array_key_exists('tax_region_id', $data) && $data['tax_region_id'] === null) {
+            $object->setTaxRegionId(null);
         }
-        if (\array_key_exists('titles', $data)) {
+        if (\array_key_exists('titles', $data) && $data['titles'] !== null) {
             $values = array();
             foreach ($data['titles'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\TaxDataTaxRateTitleInterface', 'json', $context);
             }
             $object->setTitles($values);
+        } elseif (\array_key_exists('titles', $data) && $data['titles'] === null) {
+            $object->setTitles(null);
         }
-        if (\array_key_exists('zip_from', $data)) {
+        if (\array_key_exists('zip_from', $data) && $data['zip_from'] !== null) {
             $object->setZipFrom($data['zip_from']);
+        } elseif (\array_key_exists('zip_from', $data) && $data['zip_from'] === null) {
+            $object->setZipFrom(null);
         }
-        if (\array_key_exists('zip_is_range', $data)) {
+        if (\array_key_exists('zip_is_range', $data) && $data['zip_is_range'] !== null) {
             $object->setZipIsRange($data['zip_is_range']);
+        } elseif (\array_key_exists('zip_is_range', $data) && $data['zip_is_range'] === null) {
+            $object->setZipIsRange(null);
         }
-        if (\array_key_exists('zip_to', $data)) {
+        if (\array_key_exists('zip_to', $data) && $data['zip_to'] !== null) {
             $object->setZipTo($data['zip_to']);
+        } elseif (\array_key_exists('zip_to', $data) && $data['zip_to'] === null) {
+            $object->setZipTo(null);
         }
         return $object;
     }

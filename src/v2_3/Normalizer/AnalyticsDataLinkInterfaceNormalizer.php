@@ -40,11 +40,15 @@ class AnalyticsDataLinkInterfaceNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('initialization_vector', $data)) {
+        if (\array_key_exists('initialization_vector', $data) && $data['initialization_vector'] !== null) {
             $object->setInitializationVector($data['initialization_vector']);
+        } elseif (\array_key_exists('initialization_vector', $data) && $data['initialization_vector'] === null) {
+            $object->setInitializationVector(null);
         }
-        if (\array_key_exists('url', $data)) {
+        if (\array_key_exists('url', $data) && $data['url'] !== null) {
             $object->setUrl($data['url']);
+        } elseif (\array_key_exists('url', $data) && $data['url'] === null) {
+            $object->setUrl(null);
         }
         return $object;
     }

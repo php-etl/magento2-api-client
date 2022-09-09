@@ -7,104 +7,104 @@ class CatalogDataCategoryInterface
     /**
      *
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $availableSortBy;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $children;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $createdAt;
     /**
      * Custom attributes values.
      *
-     * @var FrameworkAttributeInterface[]
+     * @var FrameworkAttributeInterface[]|null
      */
     protected $customAttributes;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\CategoryInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $includeInMenu;
     /**
      * Whether category is active
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isActive;
     /**
      * Category level
      *
-     * @var int
+     * @var int|null
      */
     protected $level;
     /**
      * Category name
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * Parent category ID
      *
-     * @var int
+     * @var int|null
      */
     protected $parentId;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $path;
     /**
      * Category position
      *
-     * @var int
+     * @var int|null
      */
     protected $position;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $updatedAt;
     /**
      *
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getAvailableSortBy(): array
+    public function getAvailableSortBy(): ?array
     {
         return $this->availableSortBy;
     }
     /**
      *
      *
-     * @param string[] $availableSortBy
+     * @param string[]|null $availableSortBy
      *
      * @return self
      */
-    public function setAvailableSortBy(array $availableSortBy): self
+    public function setAvailableSortBy(?array $availableSortBy): self
     {
         $this->availableSortBy = $availableSortBy;
         return $this;
@@ -112,20 +112,20 @@ class CatalogDataCategoryInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getChildren(): string
+    public function getChildren(): ?string
     {
         return $this->children;
     }
     /**
      *
      *
-     * @param string $children
+     * @param string|null $children
      *
      * @return self
      */
-    public function setChildren(string $children): self
+    public function setChildren(?string $children): self
     {
         $this->children = $children;
         return $this;
@@ -133,20 +133,20 @@ class CatalogDataCategoryInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt(): ?string
     {
         return $this->createdAt;
     }
     /**
      *
      *
-     * @param string $createdAt
+     * @param string|null $createdAt
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(?string $createdAt): self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -154,20 +154,20 @@ class CatalogDataCategoryInterface
     /**
      * Custom attributes values.
      *
-     * @return FrameworkAttributeInterface[]
+     * @return FrameworkAttributeInterface[]|null
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes(): ?array
     {
         return $this->customAttributes;
     }
     /**
      * Custom attributes values.
      *
-     * @param FrameworkAttributeInterface[] $customAttributes
+     * @param FrameworkAttributeInterface[]|null $customAttributes
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(?array $customAttributes): self
     {
         $this->customAttributes = $customAttributes;
         return $this;
@@ -196,20 +196,20 @@ class CatalogDataCategoryInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      *
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -217,20 +217,20 @@ class CatalogDataCategoryInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIncludeInMenu(): bool
+    public function getIncludeInMenu(): ?bool
     {
         return $this->includeInMenu;
     }
     /**
      *
      *
-     * @param bool $includeInMenu
+     * @param bool|null $includeInMenu
      *
      * @return self
      */
-    public function setIncludeInMenu(bool $includeInMenu): self
+    public function setIncludeInMenu(?bool $includeInMenu): self
     {
         $this->includeInMenu = $includeInMenu;
         return $this;
@@ -238,20 +238,20 @@ class CatalogDataCategoryInterface
     /**
      * Whether category is active
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsActive(): bool
+    public function getIsActive(): ?bool
     {
         return $this->isActive;
     }
     /**
      * Whether category is active
      *
-     * @param bool $isActive
+     * @param bool|null $isActive
      *
      * @return self
      */
-    public function setIsActive(bool $isActive): self
+    public function setIsActive(?bool $isActive): self
     {
         $this->isActive = $isActive;
         return $this;
@@ -259,20 +259,20 @@ class CatalogDataCategoryInterface
     /**
      * Category level
      *
-     * @return int
+     * @return int|null
      */
-    public function getLevel(): int
+    public function getLevel(): ?int
     {
         return $this->level;
     }
     /**
      * Category level
      *
-     * @param int $level
+     * @param int|null $level
      *
      * @return self
      */
-    public function setLevel(int $level): self
+    public function setLevel(?int $level): self
     {
         $this->level = $level;
         return $this;
@@ -280,20 +280,20 @@ class CatalogDataCategoryInterface
     /**
      * Category name
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      * Category name
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;
@@ -301,20 +301,20 @@ class CatalogDataCategoryInterface
     /**
      * Parent category ID
      *
-     * @return int
+     * @return int|null
      */
-    public function getParentId(): int
+    public function getParentId(): ?int
     {
         return $this->parentId;
     }
     /**
      * Parent category ID
      *
-     * @param int $parentId
+     * @param int|null $parentId
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(?int $parentId): self
     {
         $this->parentId = $parentId;
         return $this;
@@ -322,20 +322,20 @@ class CatalogDataCategoryInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getPath(): string
+    public function getPath(): ?string
     {
         return $this->path;
     }
     /**
      *
      *
-     * @param string $path
+     * @param string|null $path
      *
      * @return self
      */
-    public function setPath(string $path): self
+    public function setPath(?string $path): self
     {
         $this->path = $path;
         return $this;
@@ -343,20 +343,20 @@ class CatalogDataCategoryInterface
     /**
      * Category position
      *
-     * @return int
+     * @return int|null
      */
-    public function getPosition(): int
+    public function getPosition(): ?int
     {
         return $this->position;
     }
     /**
      * Category position
      *
-     * @param int $position
+     * @param int|null $position
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(?int $position): self
     {
         $this->position = $position;
         return $this;
@@ -364,20 +364,20 @@ class CatalogDataCategoryInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt(): ?string
     {
         return $this->updatedAt;
     }
     /**
      *
      *
-     * @param string $updatedAt
+     * @param string|null $updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(?string $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
         return $this;

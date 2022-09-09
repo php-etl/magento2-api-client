@@ -7,44 +7,44 @@ class SalesDataShippingInterface
     /**
      * Order address interface. An order is a document that a web store issues to a customer. Magento generates a sales order that lists the product items, billing and shipping addresses, and shipping and payment methods. A corresponding external document, known as a purchase order, is emailed to the customer.
      *
-     * @var SalesDataOrderAddressInterface
+     * @var SalesDataOrderAddressInterface|null
      */
     protected $address;
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\ShippingInterface
      *
-     * @var SalesDataShippingExtensionInterface
+     * @var SalesDataShippingExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * Shipping method
      *
-     * @var string
+     * @var string|null
      */
     protected $method;
     /**
      * Interface TotalInterface
      *
-     * @var SalesDataTotalInterface
+     * @var SalesDataTotalInterface|null
      */
     protected $total;
     /**
      * Order address interface. An order is a document that a web store issues to a customer. Magento generates a sales order that lists the product items, billing and shipping addresses, and shipping and payment methods. A corresponding external document, known as a purchase order, is emailed to the customer.
      *
-     * @return SalesDataOrderAddressInterface
+     * @return SalesDataOrderAddressInterface|null
      */
-    public function getAddress(): SalesDataOrderAddressInterface
+    public function getAddress(): ?SalesDataOrderAddressInterface
     {
         return $this->address;
     }
     /**
      * Order address interface. An order is a document that a web store issues to a customer. Magento generates a sales order that lists the product items, billing and shipping addresses, and shipping and payment methods. A corresponding external document, known as a purchase order, is emailed to the customer.
      *
-     * @param SalesDataOrderAddressInterface $address
+     * @param SalesDataOrderAddressInterface|null $address
      *
      * @return self
      */
-    public function setAddress(SalesDataOrderAddressInterface $address): self
+    public function setAddress(?SalesDataOrderAddressInterface $address): self
     {
         $this->address = $address;
         return $this;
@@ -52,20 +52,20 @@ class SalesDataShippingInterface
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\ShippingInterface
      *
-     * @return SalesDataShippingExtensionInterface
+     * @return SalesDataShippingExtensionInterface|null
      */
-    public function getExtensionAttributes(): SalesDataShippingExtensionInterface
+    public function getExtensionAttributes(): ?SalesDataShippingExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\ShippingInterface
      *
-     * @param SalesDataShippingExtensionInterface $extensionAttributes
+     * @param SalesDataShippingExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(SalesDataShippingExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?SalesDataShippingExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -73,20 +73,20 @@ class SalesDataShippingInterface
     /**
      * Shipping method
      *
-     * @return string
+     * @return string|null
      */
-    public function getMethod(): string
+    public function getMethod(): ?string
     {
         return $this->method;
     }
     /**
      * Shipping method
      *
-     * @param string $method
+     * @param string|null $method
      *
      * @return self
      */
-    public function setMethod(string $method): self
+    public function setMethod(?string $method): self
     {
         $this->method = $method;
         return $this;
@@ -94,20 +94,20 @@ class SalesDataShippingInterface
     /**
      * Interface TotalInterface
      *
-     * @return SalesDataTotalInterface
+     * @return SalesDataTotalInterface|null
      */
-    public function getTotal(): SalesDataTotalInterface
+    public function getTotal(): ?SalesDataTotalInterface
     {
         return $this->total;
     }
     /**
      * Interface TotalInterface
      *
-     * @param SalesDataTotalInterface $total
+     * @param SalesDataTotalInterface|null $total
      *
      * @return self
      */
-    public function setTotal(SalesDataTotalInterface $total): self
+    public function setTotal(?SalesDataTotalInterface $total): self
     {
         $this->total = $total;
         return $this;

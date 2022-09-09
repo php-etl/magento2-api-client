@@ -7,44 +7,44 @@ class TaxDataTaxClassInterface
     /**
      * Tax class ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $classId;
     /**
      * Tax class name.
      *
-     * @var string
+     * @var string|null
      */
     protected $className;
     /**
      * Tax class type.
      *
-     * @var string
+     * @var string|null
      */
     protected $classType;
     /**
      * ExtensionInterface class for @see \Magento\Tax\Api\Data\TaxClassInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Tax class ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getClassId(): int
+    public function getClassId(): ?int
     {
         return $this->classId;
     }
     /**
      * Tax class ID.
      *
-     * @param int $classId
+     * @param int|null $classId
      *
      * @return self
      */
-    public function setClassId(int $classId): self
+    public function setClassId(?int $classId): self
     {
         $this->classId = $classId;
         return $this;
@@ -52,20 +52,20 @@ class TaxDataTaxClassInterface
     /**
      * Tax class name.
      *
-     * @return string
+     * @return string|null
      */
-    public function getClassName(): string
+    public function getClassName(): ?string
     {
         return $this->className;
     }
     /**
      * Tax class name.
      *
-     * @param string $className
+     * @param string|null $className
      *
      * @return self
      */
-    public function setClassName(string $className): self
+    public function setClassName(?string $className): self
     {
         $this->className = $className;
         return $this;
@@ -73,20 +73,20 @@ class TaxDataTaxClassInterface
     /**
      * Tax class type.
      *
-     * @return string
+     * @return string|null
      */
-    public function getClassType(): string
+    public function getClassType(): ?string
     {
         return $this->classType;
     }
     /**
      * Tax class type.
      *
-     * @param string $classType
+     * @param string|null $classType
      *
      * @return self
      */
-    public function setClassType(string $classType): self
+    public function setClassType(?string $classType): self
     {
         $this->classType = $classType;
         return $this;

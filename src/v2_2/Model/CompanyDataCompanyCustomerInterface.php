@@ -7,56 +7,56 @@ class CompanyDataCompanyCustomerInterface
     /**
      * Company ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $companyId;
     /**
      * Customer ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $customerId;
     /**
      * ExtensionInterface class for @see \Magento\Company\Api\Data\CompanyCustomerInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Get job title.
      *
-     * @var string
+     * @var string|null
      */
     protected $jobTitle;
     /**
      * Customer status.
      *
-     * @var int
+     * @var int|null
      */
     protected $status;
     /**
      * Get telephone.
      *
-     * @var string
+     * @var string|null
      */
     protected $telephone;
     /**
      * Company ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getCompanyId(): int
+    public function getCompanyId(): ?int
     {
         return $this->companyId;
     }
     /**
      * Company ID.
      *
-     * @param int $companyId
+     * @param int|null $companyId
      *
      * @return self
      */
-    public function setCompanyId(int $companyId): self
+    public function setCompanyId(?int $companyId): self
     {
         $this->companyId = $companyId;
         return $this;
@@ -64,20 +64,20 @@ class CompanyDataCompanyCustomerInterface
     /**
      * Customer ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getCustomerId(): int
+    public function getCustomerId(): ?int
     {
         return $this->customerId;
     }
     /**
      * Customer ID.
      *
-     * @param int $customerId
+     * @param int|null $customerId
      *
      * @return self
      */
-    public function setCustomerId(int $customerId): self
+    public function setCustomerId(?int $customerId): self
     {
         $this->customerId = $customerId;
         return $this;
@@ -106,20 +106,20 @@ class CompanyDataCompanyCustomerInterface
     /**
      * Get job title.
      *
-     * @return string
+     * @return string|null
      */
-    public function getJobTitle(): string
+    public function getJobTitle(): ?string
     {
         return $this->jobTitle;
     }
     /**
      * Get job title.
      *
-     * @param string $jobTitle
+     * @param string|null $jobTitle
      *
      * @return self
      */
-    public function setJobTitle(string $jobTitle): self
+    public function setJobTitle(?string $jobTitle): self
     {
         $this->jobTitle = $jobTitle;
         return $this;
@@ -127,20 +127,20 @@ class CompanyDataCompanyCustomerInterface
     /**
      * Customer status.
      *
-     * @return int
+     * @return int|null
      */
-    public function getStatus(): int
+    public function getStatus(): ?int
     {
         return $this->status;
     }
     /**
      * Customer status.
      *
-     * @param int $status
+     * @param int|null $status
      *
      * @return self
      */
-    public function setStatus(int $status): self
+    public function setStatus(?int $status): self
     {
         $this->status = $status;
         return $this;
@@ -148,20 +148,20 @@ class CompanyDataCompanyCustomerInterface
     /**
      * Get telephone.
      *
-     * @return string
+     * @return string|null
      */
-    public function getTelephone(): string
+    public function getTelephone(): ?string
     {
         return $this->telephone;
     }
     /**
      * Get telephone.
      *
-     * @param string $telephone
+     * @param string|null $telephone
      *
      * @return self
      */
-    public function setTelephone(string $telephone): self
+    public function setTelephone(?string $telephone): self
     {
         $this->telephone = $telephone;
         return $this;

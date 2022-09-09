@@ -40,23 +40,35 @@ class MsrpDataProductRenderMsrpPriceInfoInterfaceNormalizer implements Denormali
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('explanation_message', $data)) {
+        if (\array_key_exists('explanation_message', $data) && $data['explanation_message'] !== null) {
             $object->setExplanationMessage($data['explanation_message']);
+        } elseif (\array_key_exists('explanation_message', $data) && $data['explanation_message'] === null) {
+            $object->setExplanationMessage(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('is_applicable', $data)) {
+        if (\array_key_exists('is_applicable', $data) && $data['is_applicable'] !== null) {
             $object->setIsApplicable($data['is_applicable']);
+        } elseif (\array_key_exists('is_applicable', $data) && $data['is_applicable'] === null) {
+            $object->setIsApplicable(null);
         }
-        if (\array_key_exists('is_shown_price_on_gesture', $data)) {
+        if (\array_key_exists('is_shown_price_on_gesture', $data) && $data['is_shown_price_on_gesture'] !== null) {
             $object->setIsShownPriceOnGesture($data['is_shown_price_on_gesture']);
+        } elseif (\array_key_exists('is_shown_price_on_gesture', $data) && $data['is_shown_price_on_gesture'] === null) {
+            $object->setIsShownPriceOnGesture(null);
         }
-        if (\array_key_exists('msrp_message', $data)) {
+        if (\array_key_exists('msrp_message', $data) && $data['msrp_message'] !== null) {
             $object->setMsrpMessage($data['msrp_message']);
+        } elseif (\array_key_exists('msrp_message', $data) && $data['msrp_message'] === null) {
+            $object->setMsrpMessage(null);
         }
-        if (\array_key_exists('msrp_price', $data)) {
+        if (\array_key_exists('msrp_price', $data) && $data['msrp_price'] !== null) {
             $object->setMsrpPrice($data['msrp_price']);
+        } elseif (\array_key_exists('msrp_price', $data) && $data['msrp_price'] === null) {
+            $object->setMsrpPrice(null);
         }
         return $object;
     }

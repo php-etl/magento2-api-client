@@ -40,12 +40,14 @@ class V1CartsMineCheckoutFieldsPostBodyNormalizer implements DenormalizerInterfa
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('serviceSelection', $data)) {
+        if (\array_key_exists('serviceSelection', $data) && $data['serviceSelection'] !== null) {
             $values = array();
             foreach ($data['serviceSelection'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setServiceSelection($values);
+        } elseif (\array_key_exists('serviceSelection', $data) && $data['serviceSelection'] === null) {
+            $object->setServiceSelection(null);
         }
         return $object;
     }

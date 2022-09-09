@@ -40,12 +40,14 @@ class FrameworkSearchFilterGroupNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('filters', $data)) {
+        if (\array_key_exists('filters', $data) && $data['filters'] !== null) {
             $values = array();
             foreach ($data['filters'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\FrameworkFilter', 'json', $context);
             }
             $object->setFilters($values);
+        } elseif (\array_key_exists('filters', $data) && $data['filters'] === null) {
+            $object->setFilters(null);
         }
         return $object;
     }

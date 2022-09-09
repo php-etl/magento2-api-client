@@ -7,26 +7,26 @@ class QuoteDataTotalsItemExtensionInterface
     /**
      * Extension attribute for quote item totals model.
      *
-     * @var NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
+     * @var NegotiableQuoteDataNegotiableQuoteItemTotalsInterface|null
      */
     protected $negotiableQuoteItemTotals;
     /**
      * Extension attribute for quote item totals model.
      *
-     * @return NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
+     * @return NegotiableQuoteDataNegotiableQuoteItemTotalsInterface|null
      */
-    public function getNegotiableQuoteItemTotals(): NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
+    public function getNegotiableQuoteItemTotals(): ?NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
     {
         return $this->negotiableQuoteItemTotals;
     }
     /**
      * Extension attribute for quote item totals model.
      *
-     * @param NegotiableQuoteDataNegotiableQuoteItemTotalsInterface $negotiableQuoteItemTotals
+     * @param NegotiableQuoteDataNegotiableQuoteItemTotalsInterface|null $negotiableQuoteItemTotals
      *
      * @return self
      */
-    public function setNegotiableQuoteItemTotals(NegotiableQuoteDataNegotiableQuoteItemTotalsInterface $negotiableQuoteItemTotals): self
+    public function setNegotiableQuoteItemTotals(?NegotiableQuoteDataNegotiableQuoteItemTotalsInterface $negotiableQuoteItemTotals): self
     {
         $this->negotiableQuoteItemTotals = $negotiableQuoteItemTotals;
         return $this;

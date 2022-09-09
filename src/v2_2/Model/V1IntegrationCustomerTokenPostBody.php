@@ -7,32 +7,32 @@ class V1IntegrationCustomerTokenPostBody
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $password;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $username;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getPassword(): string
+    public function getPassword(): ?string
     {
         return $this->password;
     }
     /**
      *
      *
-     * @param string $password
+     * @param string|null $password
      *
      * @return self
      */
-    public function setPassword(string $password): self
+    public function setPassword(?string $password): self
     {
         $this->password = $password;
         return $this;
@@ -40,20 +40,20 @@ class V1IntegrationCustomerTokenPostBody
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getUsername(): string
+    public function getUsername(): ?string
     {
         return $this->username;
     }
     /**
      *
      *
-     * @param string $username
+     * @param string|null $username
      *
      * @return self
      */
-    public function setUsername(string $username): self
+    public function setUsername(?string $username): self
     {
         $this->username = $username;
         return $this;

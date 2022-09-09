@@ -40,8 +40,10 @@ class V1OrdersIdCommentsPostBodyNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('statusHistory', $data)) {
+        if (\array_key_exists('statusHistory', $data) && $data['statusHistory'] !== null) {
             $object->setStatusHistory($this->denormalizer->denormalize($data['statusHistory'], 'Kiboko\\Magento\\V2_3\\Model\\SalesDataOrderStatusHistoryInterface', 'json', $context));
+        } elseif (\array_key_exists('statusHistory', $data) && $data['statusHistory'] === null) {
+            $object->setStatusHistory(null);
         }
         return $object;
     }

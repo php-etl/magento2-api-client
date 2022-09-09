@@ -40,33 +40,49 @@ class ConfigurableProductDataOptionInterfaceNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('attribute_id', $data)) {
+        if (\array_key_exists('attribute_id', $data) && $data['attribute_id'] !== null) {
             $object->setAttributeId($data['attribute_id']);
+        } elseif (\array_key_exists('attribute_id', $data) && $data['attribute_id'] === null) {
+            $object->setAttributeId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('is_use_default', $data)) {
+        if (\array_key_exists('is_use_default', $data) && $data['is_use_default'] !== null) {
             $object->setIsUseDefault($data['is_use_default']);
+        } elseif (\array_key_exists('is_use_default', $data) && $data['is_use_default'] === null) {
+            $object->setIsUseDefault(null);
         }
-        if (\array_key_exists('label', $data)) {
+        if (\array_key_exists('label', $data) && $data['label'] !== null) {
             $object->setLabel($data['label']);
+        } elseif (\array_key_exists('label', $data) && $data['label'] === null) {
+            $object->setLabel(null);
         }
-        if (\array_key_exists('position', $data)) {
+        if (\array_key_exists('position', $data) && $data['position'] !== null) {
             $object->setPosition($data['position']);
+        } elseif (\array_key_exists('position', $data) && $data['position'] === null) {
+            $object->setPosition(null);
         }
-        if (\array_key_exists('product_id', $data)) {
+        if (\array_key_exists('product_id', $data) && $data['product_id'] !== null) {
             $object->setProductId($data['product_id']);
+        } elseif (\array_key_exists('product_id', $data) && $data['product_id'] === null) {
+            $object->setProductId(null);
         }
-        if (\array_key_exists('values', $data)) {
+        if (\array_key_exists('values', $data) && $data['values'] !== null) {
             $values = array();
             foreach ($data['values'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\ConfigurableProductDataOptionValueInterface', 'json', $context);
             }
             $object->setValues($values);
+        } elseif (\array_key_exists('values', $data) && $data['values'] === null) {
+            $object->setValues(null);
         }
         return $object;
     }

@@ -40,11 +40,15 @@ class V1CartsCartIdPutBodyNormalizer implements DenormalizerInterface, Normalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('customerId', $data)) {
+        if (\array_key_exists('customerId', $data) && $data['customerId'] !== null) {
             $object->setCustomerId($data['customerId']);
+        } elseif (\array_key_exists('customerId', $data) && $data['customerId'] === null) {
+            $object->setCustomerId(null);
         }
-        if (\array_key_exists('storeId', $data)) {
+        if (\array_key_exists('storeId', $data) && $data['storeId'] !== null) {
             $object->setStoreId($data['storeId']);
+        } elseif (\array_key_exists('storeId', $data) && $data['storeId'] === null) {
+            $object->setStoreId(null);
         }
         return $object;
     }

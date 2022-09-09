@@ -7,26 +7,26 @@ class V1AmazonShippingAddressAmazonOrderReferenceIdPutBody
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $addressConsentToken;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getAddressConsentToken(): string
+    public function getAddressConsentToken(): ?string
     {
         return $this->addressConsentToken;
     }
     /**
      *
      *
-     * @param string $addressConsentToken
+     * @param string|null $addressConsentToken
      *
      * @return self
      */
-    public function setAddressConsentToken(string $addressConsentToken): self
+    public function setAddressConsentToken(?string $addressConsentToken): self
     {
         $this->addressConsentToken = $addressConsentToken;
         return $this;

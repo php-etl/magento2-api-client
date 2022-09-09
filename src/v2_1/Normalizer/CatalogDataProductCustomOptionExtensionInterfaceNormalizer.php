@@ -40,8 +40,10 @@ class CatalogDataProductCustomOptionExtensionInterfaceNormalizer implements Deno
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('vertex_flex_field', $data)) {
+        if (\array_key_exists('vertex_flex_field', $data) && $data['vertex_flex_field'] !== null) {
             $object->setVertexFlexField($data['vertex_flex_field']);
+        } elseif (\array_key_exists('vertex_flex_field', $data) && $data['vertex_flex_field'] === null) {
+            $object->setVertexFlexField(null);
         }
         return $object;
     }

@@ -7,92 +7,92 @@ class SalesDataTransactionInterface
     /**
      * Array of additional information. Otherwise, null.
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $additionalInformation;
     /**
      * Array of child transactions.
      *
-     * @var SalesDataTransactionInterface[]
+     * @var SalesDataTransactionInterface[]|null
      */
     protected $childTransactions;
     /**
      * Created-at timestamp.
      *
-     * @var string
+     * @var string|null
      */
     protected $createdAt;
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\TransactionInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Is-closed flag value.
      *
-     * @var int
+     * @var int|null
      */
     protected $isClosed;
     /**
      * Order ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $orderId;
     /**
      * The parent ID for the transaction. Otherwise, null.
      *
-     * @var int
+     * @var int|null
      */
     protected $parentId;
     /**
      * Parent transaction business ID.
      *
-     * @var string
+     * @var string|null
      */
     protected $parentTxnId;
     /**
      * Payment ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $paymentId;
     /**
      * Transaction ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $transactionId;
     /**
      * Transaction business ID.
      *
-     * @var string
+     * @var string|null
      */
     protected $txnId;
     /**
      * Transaction type.
      *
-     * @var string
+     * @var string|null
      */
     protected $txnType;
     /**
      * Array of additional information. Otherwise, null.
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getAdditionalInformation(): array
+    public function getAdditionalInformation(): ?array
     {
         return $this->additionalInformation;
     }
     /**
      * Array of additional information. Otherwise, null.
      *
-     * @param string[] $additionalInformation
+     * @param string[]|null $additionalInformation
      *
      * @return self
      */
-    public function setAdditionalInformation(array $additionalInformation): self
+    public function setAdditionalInformation(?array $additionalInformation): self
     {
         $this->additionalInformation = $additionalInformation;
         return $this;
@@ -100,20 +100,20 @@ class SalesDataTransactionInterface
     /**
      * Array of child transactions.
      *
-     * @return SalesDataTransactionInterface[]
+     * @return SalesDataTransactionInterface[]|null
      */
-    public function getChildTransactions(): array
+    public function getChildTransactions(): ?array
     {
         return $this->childTransactions;
     }
     /**
      * Array of child transactions.
      *
-     * @param SalesDataTransactionInterface[] $childTransactions
+     * @param SalesDataTransactionInterface[]|null $childTransactions
      *
      * @return self
      */
-    public function setChildTransactions(array $childTransactions): self
+    public function setChildTransactions(?array $childTransactions): self
     {
         $this->childTransactions = $childTransactions;
         return $this;
@@ -121,20 +121,20 @@ class SalesDataTransactionInterface
     /**
      * Created-at timestamp.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt(): ?string
     {
         return $this->createdAt;
     }
     /**
      * Created-at timestamp.
      *
-     * @param string $createdAt
+     * @param string|null $createdAt
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(?string $createdAt): self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -163,20 +163,20 @@ class SalesDataTransactionInterface
     /**
      * Is-closed flag value.
      *
-     * @return int
+     * @return int|null
      */
-    public function getIsClosed(): int
+    public function getIsClosed(): ?int
     {
         return $this->isClosed;
     }
     /**
      * Is-closed flag value.
      *
-     * @param int $isClosed
+     * @param int|null $isClosed
      *
      * @return self
      */
-    public function setIsClosed(int $isClosed): self
+    public function setIsClosed(?int $isClosed): self
     {
         $this->isClosed = $isClosed;
         return $this;
@@ -184,20 +184,20 @@ class SalesDataTransactionInterface
     /**
      * Order ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getOrderId(): int
+    public function getOrderId(): ?int
     {
         return $this->orderId;
     }
     /**
      * Order ID.
      *
-     * @param int $orderId
+     * @param int|null $orderId
      *
      * @return self
      */
-    public function setOrderId(int $orderId): self
+    public function setOrderId(?int $orderId): self
     {
         $this->orderId = $orderId;
         return $this;
@@ -205,20 +205,20 @@ class SalesDataTransactionInterface
     /**
      * The parent ID for the transaction. Otherwise, null.
      *
-     * @return int
+     * @return int|null
      */
-    public function getParentId(): int
+    public function getParentId(): ?int
     {
         return $this->parentId;
     }
     /**
      * The parent ID for the transaction. Otherwise, null.
      *
-     * @param int $parentId
+     * @param int|null $parentId
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(?int $parentId): self
     {
         $this->parentId = $parentId;
         return $this;
@@ -226,20 +226,20 @@ class SalesDataTransactionInterface
     /**
      * Parent transaction business ID.
      *
-     * @return string
+     * @return string|null
      */
-    public function getParentTxnId(): string
+    public function getParentTxnId(): ?string
     {
         return $this->parentTxnId;
     }
     /**
      * Parent transaction business ID.
      *
-     * @param string $parentTxnId
+     * @param string|null $parentTxnId
      *
      * @return self
      */
-    public function setParentTxnId(string $parentTxnId): self
+    public function setParentTxnId(?string $parentTxnId): self
     {
         $this->parentTxnId = $parentTxnId;
         return $this;
@@ -247,20 +247,20 @@ class SalesDataTransactionInterface
     /**
      * Payment ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getPaymentId(): int
+    public function getPaymentId(): ?int
     {
         return $this->paymentId;
     }
     /**
      * Payment ID.
      *
-     * @param int $paymentId
+     * @param int|null $paymentId
      *
      * @return self
      */
-    public function setPaymentId(int $paymentId): self
+    public function setPaymentId(?int $paymentId): self
     {
         $this->paymentId = $paymentId;
         return $this;
@@ -268,20 +268,20 @@ class SalesDataTransactionInterface
     /**
      * Transaction ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getTransactionId(): int
+    public function getTransactionId(): ?int
     {
         return $this->transactionId;
     }
     /**
      * Transaction ID.
      *
-     * @param int $transactionId
+     * @param int|null $transactionId
      *
      * @return self
      */
-    public function setTransactionId(int $transactionId): self
+    public function setTransactionId(?int $transactionId): self
     {
         $this->transactionId = $transactionId;
         return $this;
@@ -289,20 +289,20 @@ class SalesDataTransactionInterface
     /**
      * Transaction business ID.
      *
-     * @return string
+     * @return string|null
      */
-    public function getTxnId(): string
+    public function getTxnId(): ?string
     {
         return $this->txnId;
     }
     /**
      * Transaction business ID.
      *
-     * @param string $txnId
+     * @param string|null $txnId
      *
      * @return self
      */
-    public function setTxnId(string $txnId): self
+    public function setTxnId(?string $txnId): self
     {
         $this->txnId = $txnId;
         return $this;
@@ -310,20 +310,20 @@ class SalesDataTransactionInterface
     /**
      * Transaction type.
      *
-     * @return string
+     * @return string|null
      */
-    public function getTxnType(): string
+    public function getTxnType(): ?string
     {
         return $this->txnType;
     }
     /**
      * Transaction type.
      *
-     * @param string $txnType
+     * @param string|null $txnType
      *
      * @return self
      */
-    public function setTxnType(string $txnType): self
+    public function setTxnType(?string $txnType): self
     {
         $this->txnType = $txnType;
         return $this;

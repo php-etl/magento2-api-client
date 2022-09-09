@@ -40,14 +40,20 @@ class ErrorParametersItemNormalizer implements DenormalizerInterface, Normalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('fieldName', $data)) {
+        if (\array_key_exists('fieldName', $data) && $data['fieldName'] !== null) {
             $object->setFieldName($data['fieldName']);
+        } elseif (\array_key_exists('fieldName', $data) && $data['fieldName'] === null) {
+            $object->setFieldName(null);
         }
-        if (\array_key_exists('fieldValue', $data)) {
+        if (\array_key_exists('fieldValue', $data) && $data['fieldValue'] !== null) {
             $object->setFieldValue($data['fieldValue']);
+        } elseif (\array_key_exists('fieldValue', $data) && $data['fieldValue'] === null) {
+            $object->setFieldValue(null);
         }
-        if (\array_key_exists('resources', $data)) {
+        if (\array_key_exists('resources', $data) && $data['resources'] !== null) {
             $object->setResources($data['resources']);
+        } elseif (\array_key_exists('resources', $data) && $data['resources'] === null) {
+            $object->setResources(null);
         }
         return $object;
     }

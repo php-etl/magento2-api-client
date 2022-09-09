@@ -40,8 +40,10 @@ class V1BundleProductsSkuLinksIdPutBodyNormalizer implements DenormalizerInterfa
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('linkedProduct', $data)) {
+        if (\array_key_exists('linkedProduct', $data) && $data['linkedProduct'] !== null) {
             $object->setLinkedProduct($this->denormalizer->denormalize($data['linkedProduct'], 'Kiboko\\Magento\\V2_4\\Model\\BundleDataLinkInterface', 'json', $context));
+        } elseif (\array_key_exists('linkedProduct', $data) && $data['linkedProduct'] === null) {
+            $object->setLinkedProduct(null);
         }
         return $object;
     }

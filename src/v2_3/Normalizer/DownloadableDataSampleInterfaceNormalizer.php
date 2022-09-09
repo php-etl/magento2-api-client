@@ -40,29 +40,45 @@ class DownloadableDataSampleInterfaceNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('sample_file', $data)) {
+        if (\array_key_exists('sample_file', $data) && $data['sample_file'] !== null) {
             $object->setSampleFile($data['sample_file']);
+        } elseif (\array_key_exists('sample_file', $data) && $data['sample_file'] === null) {
+            $object->setSampleFile(null);
         }
-        if (\array_key_exists('sample_file_content', $data)) {
+        if (\array_key_exists('sample_file_content', $data) && $data['sample_file_content'] !== null) {
             $object->setSampleFileContent($this->denormalizer->denormalize($data['sample_file_content'], 'Kiboko\\Magento\\V2_3\\Model\\DownloadableDataFileContentInterface', 'json', $context));
+        } elseif (\array_key_exists('sample_file_content', $data) && $data['sample_file_content'] === null) {
+            $object->setSampleFileContent(null);
         }
-        if (\array_key_exists('sample_type', $data)) {
+        if (\array_key_exists('sample_type', $data) && $data['sample_type'] !== null) {
             $object->setSampleType($data['sample_type']);
+        } elseif (\array_key_exists('sample_type', $data) && $data['sample_type'] === null) {
+            $object->setSampleType(null);
         }
-        if (\array_key_exists('sample_url', $data)) {
+        if (\array_key_exists('sample_url', $data) && $data['sample_url'] !== null) {
             $object->setSampleUrl($data['sample_url']);
+        } elseif (\array_key_exists('sample_url', $data) && $data['sample_url'] === null) {
+            $object->setSampleUrl(null);
         }
-        if (\array_key_exists('sort_order', $data)) {
+        if (\array_key_exists('sort_order', $data) && $data['sort_order'] !== null) {
             $object->setSortOrder($data['sort_order']);
+        } elseif (\array_key_exists('sort_order', $data) && $data['sort_order'] === null) {
+            $object->setSortOrder(null);
         }
-        if (\array_key_exists('title', $data)) {
+        if (\array_key_exists('title', $data) && $data['title'] !== null) {
             $object->setTitle($data['title']);
+        } elseif (\array_key_exists('title', $data) && $data['title'] === null) {
+            $object->setTitle(null);
         }
         return $object;
     }

@@ -7,26 +7,26 @@ class V1ConfigurableProductsSkuOptionsIdPutBody
     /**
      * Interface OptionInterface
      *
-     * @var ConfigurableProductDataOptionInterface
+     * @var ConfigurableProductDataOptionInterface|null
      */
     protected $option;
     /**
      * Interface OptionInterface
      *
-     * @return ConfigurableProductDataOptionInterface
+     * @return ConfigurableProductDataOptionInterface|null
      */
-    public function getOption(): ConfigurableProductDataOptionInterface
+    public function getOption(): ?ConfigurableProductDataOptionInterface
     {
         return $this->option;
     }
     /**
      * Interface OptionInterface
      *
-     * @param ConfigurableProductDataOptionInterface $option
+     * @param ConfigurableProductDataOptionInterface|null $option
      *
      * @return self
      */
-    public function setOption(ConfigurableProductDataOptionInterface $option): self
+    public function setOption(?ConfigurableProductDataOptionInterface $option): self
     {
         $this->option = $option;
         return $this;

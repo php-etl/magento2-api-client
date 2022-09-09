@@ -7,74 +7,74 @@ class SalesRuleDataCouponGenerationSpecInterface
     /**
      * The delimiter
      *
-     * @var string
+     * @var string|null
      */
     protected $delimiter;
     /**
      * The spacing where the delimiter should exist
      *
-     * @var int
+     * @var int|null
      */
     protected $delimiterAtEvery;
     /**
      * ExtensionInterface class for @see \Magento\SalesRule\Api\Data\CouponGenerationSpecInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Format of generated coupon code
      *
-     * @var string
+     * @var string|null
      */
     protected $format;
     /**
      * Length of coupon code
      *
-     * @var int
+     * @var int|null
      */
     protected $length;
     /**
      * The prefix
      *
-     * @var string
+     * @var string|null
      */
     protected $prefix;
     /**
      * Of coupons to generate
      *
-     * @var int
+     * @var int|null
      */
     protected $quantity;
     /**
      * The id of the rule associated with the coupon
      *
-     * @var int
+     * @var int|null
      */
     protected $ruleId;
     /**
      * The suffix
      *
-     * @var string
+     * @var string|null
      */
     protected $suffix;
     /**
      * The delimiter
      *
-     * @return string
+     * @return string|null
      */
-    public function getDelimiter(): string
+    public function getDelimiter(): ?string
     {
         return $this->delimiter;
     }
     /**
      * The delimiter
      *
-     * @param string $delimiter
+     * @param string|null $delimiter
      *
      * @return self
      */
-    public function setDelimiter(string $delimiter): self
+    public function setDelimiter(?string $delimiter): self
     {
         $this->delimiter = $delimiter;
         return $this;
@@ -82,20 +82,20 @@ class SalesRuleDataCouponGenerationSpecInterface
     /**
      * The spacing where the delimiter should exist
      *
-     * @return int
+     * @return int|null
      */
-    public function getDelimiterAtEvery(): int
+    public function getDelimiterAtEvery(): ?int
     {
         return $this->delimiterAtEvery;
     }
     /**
      * The spacing where the delimiter should exist
      *
-     * @param int $delimiterAtEvery
+     * @param int|null $delimiterAtEvery
      *
      * @return self
      */
-    public function setDelimiterAtEvery(int $delimiterAtEvery): self
+    public function setDelimiterAtEvery(?int $delimiterAtEvery): self
     {
         $this->delimiterAtEvery = $delimiterAtEvery;
         return $this;
@@ -124,20 +124,20 @@ class SalesRuleDataCouponGenerationSpecInterface
     /**
      * Format of generated coupon code
      *
-     * @return string
+     * @return string|null
      */
-    public function getFormat(): string
+    public function getFormat(): ?string
     {
         return $this->format;
     }
     /**
      * Format of generated coupon code
      *
-     * @param string $format
+     * @param string|null $format
      *
      * @return self
      */
-    public function setFormat(string $format): self
+    public function setFormat(?string $format): self
     {
         $this->format = $format;
         return $this;
@@ -145,20 +145,20 @@ class SalesRuleDataCouponGenerationSpecInterface
     /**
      * Length of coupon code
      *
-     * @return int
+     * @return int|null
      */
-    public function getLength(): int
+    public function getLength(): ?int
     {
         return $this->length;
     }
     /**
      * Length of coupon code
      *
-     * @param int $length
+     * @param int|null $length
      *
      * @return self
      */
-    public function setLength(int $length): self
+    public function setLength(?int $length): self
     {
         $this->length = $length;
         return $this;
@@ -166,20 +166,20 @@ class SalesRuleDataCouponGenerationSpecInterface
     /**
      * The prefix
      *
-     * @return string
+     * @return string|null
      */
-    public function getPrefix(): string
+    public function getPrefix(): ?string
     {
         return $this->prefix;
     }
     /**
      * The prefix
      *
-     * @param string $prefix
+     * @param string|null $prefix
      *
      * @return self
      */
-    public function setPrefix(string $prefix): self
+    public function setPrefix(?string $prefix): self
     {
         $this->prefix = $prefix;
         return $this;
@@ -187,20 +187,20 @@ class SalesRuleDataCouponGenerationSpecInterface
     /**
      * Of coupons to generate
      *
-     * @return int
+     * @return int|null
      */
-    public function getQuantity(): int
+    public function getQuantity(): ?int
     {
         return $this->quantity;
     }
     /**
      * Of coupons to generate
      *
-     * @param int $quantity
+     * @param int|null $quantity
      *
      * @return self
      */
-    public function setQuantity(int $quantity): self
+    public function setQuantity(?int $quantity): self
     {
         $this->quantity = $quantity;
         return $this;
@@ -208,20 +208,20 @@ class SalesRuleDataCouponGenerationSpecInterface
     /**
      * The id of the rule associated with the coupon
      *
-     * @return int
+     * @return int|null
      */
-    public function getRuleId(): int
+    public function getRuleId(): ?int
     {
         return $this->ruleId;
     }
     /**
      * The id of the rule associated with the coupon
      *
-     * @param int $ruleId
+     * @param int|null $ruleId
      *
      * @return self
      */
-    public function setRuleId(int $ruleId): self
+    public function setRuleId(?int $ruleId): self
     {
         $this->ruleId = $ruleId;
         return $this;
@@ -229,20 +229,20 @@ class SalesRuleDataCouponGenerationSpecInterface
     /**
      * The suffix
      *
-     * @return string
+     * @return string|null
      */
-    public function getSuffix(): string
+    public function getSuffix(): ?string
     {
         return $this->suffix;
     }
     /**
      * The suffix
      *
-     * @param string $suffix
+     * @param string|null $suffix
      *
      * @return self
      */
-    public function setSuffix(string $suffix): self
+    public function setSuffix(?string $suffix): self
     {
         $this->suffix = $suffix;
         return $this;

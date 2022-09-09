@@ -7,32 +7,32 @@ class QuoteDataAddressExtensionInterface
     /**
      *
      *
-     * @var FrameworkAttributeInterface[]
+     * @var FrameworkAttributeInterface[]|null
      */
     protected $checkoutFields;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $giftRegistryId;
     /**
      *
      *
-     * @return FrameworkAttributeInterface[]
+     * @return FrameworkAttributeInterface[]|null
      */
-    public function getCheckoutFields(): array
+    public function getCheckoutFields(): ?array
     {
         return $this->checkoutFields;
     }
     /**
      *
      *
-     * @param FrameworkAttributeInterface[] $checkoutFields
+     * @param FrameworkAttributeInterface[]|null $checkoutFields
      *
      * @return self
      */
-    public function setCheckoutFields(array $checkoutFields): self
+    public function setCheckoutFields(?array $checkoutFields): self
     {
         $this->checkoutFields = $checkoutFields;
         return $this;
@@ -40,20 +40,20 @@ class QuoteDataAddressExtensionInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getGiftRegistryId(): int
+    public function getGiftRegistryId(): ?int
     {
         return $this->giftRegistryId;
     }
     /**
      *
      *
-     * @param int $giftRegistryId
+     * @param int|null $giftRegistryId
      *
      * @return self
      */
-    public function setGiftRegistryId(int $giftRegistryId): self
+    public function setGiftRegistryId(?int $giftRegistryId): self
     {
         $this->giftRegistryId = $giftRegistryId;
         return $this;

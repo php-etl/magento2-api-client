@@ -40,45 +40,69 @@ class CatalogDataProductRenderInterfaceNormalizer implements DenormalizerInterfa
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('add_to_cart_button', $data)) {
+        if (\array_key_exists('add_to_cart_button', $data) && $data['add_to_cart_button'] !== null) {
             $object->setAddToCartButton($this->denormalizer->denormalize($data['add_to_cart_button'], 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductRenderButtonInterface', 'json', $context));
+        } elseif (\array_key_exists('add_to_cart_button', $data) && $data['add_to_cart_button'] === null) {
+            $object->setAddToCartButton(null);
         }
-        if (\array_key_exists('add_to_compare_button', $data)) {
+        if (\array_key_exists('add_to_compare_button', $data) && $data['add_to_compare_button'] !== null) {
             $object->setAddToCompareButton($this->denormalizer->denormalize($data['add_to_compare_button'], 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductRenderButtonInterface', 'json', $context));
+        } elseif (\array_key_exists('add_to_compare_button', $data) && $data['add_to_compare_button'] === null) {
+            $object->setAddToCompareButton(null);
         }
-        if (\array_key_exists('currency_code', $data)) {
+        if (\array_key_exists('currency_code', $data) && $data['currency_code'] !== null) {
             $object->setCurrencyCode($data['currency_code']);
+        } elseif (\array_key_exists('currency_code', $data) && $data['currency_code'] === null) {
+            $object->setCurrencyCode(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductRenderExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('images', $data)) {
+        if (\array_key_exists('images', $data) && $data['images'] !== null) {
             $values = array();
             foreach ($data['images'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductRenderImageInterface', 'json', $context);
             }
             $object->setImages($values);
+        } elseif (\array_key_exists('images', $data) && $data['images'] === null) {
+            $object->setImages(null);
         }
-        if (\array_key_exists('is_salable', $data)) {
+        if (\array_key_exists('is_salable', $data) && $data['is_salable'] !== null) {
             $object->setIsSalable($data['is_salable']);
+        } elseif (\array_key_exists('is_salable', $data) && $data['is_salable'] === null) {
+            $object->setIsSalable(null);
         }
-        if (\array_key_exists('name', $data)) {
+        if (\array_key_exists('name', $data) && $data['name'] !== null) {
             $object->setName($data['name']);
+        } elseif (\array_key_exists('name', $data) && $data['name'] === null) {
+            $object->setName(null);
         }
-        if (\array_key_exists('price_info', $data)) {
+        if (\array_key_exists('price_info', $data) && $data['price_info'] !== null) {
             $object->setPriceInfo($this->denormalizer->denormalize($data['price_info'], 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductRenderPriceInfoInterface', 'json', $context));
+        } elseif (\array_key_exists('price_info', $data) && $data['price_info'] === null) {
+            $object->setPriceInfo(null);
         }
-        if (\array_key_exists('store_id', $data)) {
+        if (\array_key_exists('store_id', $data) && $data['store_id'] !== null) {
             $object->setStoreId($data['store_id']);
+        } elseif (\array_key_exists('store_id', $data) && $data['store_id'] === null) {
+            $object->setStoreId(null);
         }
-        if (\array_key_exists('type', $data)) {
+        if (\array_key_exists('type', $data) && $data['type'] !== null) {
             $object->setType($data['type']);
+        } elseif (\array_key_exists('type', $data) && $data['type'] === null) {
+            $object->setType(null);
         }
-        if (\array_key_exists('url', $data)) {
+        if (\array_key_exists('url', $data) && $data['url'] !== null) {
             $object->setUrl($data['url']);
+        } elseif (\array_key_exists('url', $data) && $data['url'] === null) {
+            $object->setUrl(null);
         }
         return $object;
     }

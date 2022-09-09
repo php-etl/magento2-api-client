@@ -46,41 +46,65 @@ class SalesDataShipmentTrackInterfaceNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('carrier_code', $data)) {
+        if (\array_key_exists('carrier_code', $data) && $data['carrier_code'] !== null) {
             $object->setCarrierCode($data['carrier_code']);
+        } elseif (\array_key_exists('carrier_code', $data) && $data['carrier_code'] === null) {
+            $object->setCarrierCode(null);
         }
-        if (\array_key_exists('created_at', $data)) {
+        if (\array_key_exists('created_at', $data) && $data['created_at'] !== null) {
             $object->setCreatedAt($data['created_at']);
+        } elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+            $object->setCreatedAt(null);
         }
-        if (\array_key_exists('description', $data)) {
+        if (\array_key_exists('description', $data) && $data['description'] !== null) {
             $object->setDescription($data['description']);
+        } elseif (\array_key_exists('description', $data) && $data['description'] === null) {
+            $object->setDescription(null);
         }
-        if (\array_key_exists('entity_id', $data)) {
+        if (\array_key_exists('entity_id', $data) && $data['entity_id'] !== null) {
             $object->setEntityId($data['entity_id']);
+        } elseif (\array_key_exists('entity_id', $data) && $data['entity_id'] === null) {
+            $object->setEntityId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('order_id', $data)) {
+        if (\array_key_exists('order_id', $data) && $data['order_id'] !== null) {
             $object->setOrderId($data['order_id']);
+        } elseif (\array_key_exists('order_id', $data) && $data['order_id'] === null) {
+            $object->setOrderId(null);
         }
-        if (\array_key_exists('parent_id', $data)) {
+        if (\array_key_exists('parent_id', $data) && $data['parent_id'] !== null) {
             $object->setParentId($data['parent_id']);
+        } elseif (\array_key_exists('parent_id', $data) && $data['parent_id'] === null) {
+            $object->setParentId(null);
         }
-        if (\array_key_exists('qty', $data)) {
+        if (\array_key_exists('qty', $data) && $data['qty'] !== null) {
             $object->setQty($data['qty']);
+        } elseif (\array_key_exists('qty', $data) && $data['qty'] === null) {
+            $object->setQty(null);
         }
-        if (\array_key_exists('title', $data)) {
+        if (\array_key_exists('title', $data) && $data['title'] !== null) {
             $object->setTitle($data['title']);
+        } elseif (\array_key_exists('title', $data) && $data['title'] === null) {
+            $object->setTitle(null);
         }
-        if (\array_key_exists('track_number', $data)) {
+        if (\array_key_exists('track_number', $data) && $data['track_number'] !== null) {
             $object->setTrackNumber($data['track_number']);
+        } elseif (\array_key_exists('track_number', $data) && $data['track_number'] === null) {
+            $object->setTrackNumber(null);
         }
-        if (\array_key_exists('updated_at', $data)) {
+        if (\array_key_exists('updated_at', $data) && $data['updated_at'] !== null) {
             $object->setUpdatedAt($data['updated_at']);
+        } elseif (\array_key_exists('updated_at', $data) && $data['updated_at'] === null) {
+            $object->setUpdatedAt(null);
         }
-        if (\array_key_exists('weight', $data)) {
+        if (\array_key_exists('weight', $data) && $data['weight'] !== null) {
             $object->setWeight($data['weight']);
+        } elseif (\array_key_exists('weight', $data) && $data['weight'] === null) {
+            $object->setWeight(null);
         }
         return $object;
     }

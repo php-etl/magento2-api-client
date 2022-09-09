@@ -7,302 +7,302 @@ class SalesDataInvoiceInterface
     /**
      * Base currency code.
      *
-     * @var string
+     * @var string|null
      */
     protected $baseCurrencyCode;
     /**
      * Base discount amount.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseDiscountAmount;
     /**
      * Base discount tax compensation amount.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseDiscountTaxCompensationAmount;
     /**
      * Base grand total.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseGrandTotal;
     /**
      * Base shipping amount.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseShippingAmount;
     /**
      * Base shipping discount tax compensation amount.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseShippingDiscountTaxCompensationAmnt;
     /**
      * Base shipping including tax.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseShippingInclTax;
     /**
      * Base shipping tax amount.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseShippingTaxAmount;
     /**
      * Base subtotal.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseSubtotal;
     /**
      * Base subtotal including tax.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseSubtotalInclTax;
     /**
      * Base tax amount.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseTaxAmount;
     /**
      * Base-to-global rate.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseToGlobalRate;
     /**
      * Base-to-order rate.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseToOrderRate;
     /**
      * Base total refunded.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseTotalRefunded;
     /**
      * Billing address ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $billingAddressId;
     /**
      * Can void flag value.
      *
-     * @var int
+     * @var int|null
      */
     protected $canVoidFlag;
     /**
      * Array of any invoice comments. Otherwise, null.
      *
-     * @var SalesDataInvoiceCommentInterface[]
+     * @var SalesDataInvoiceCommentInterface[]|null
      */
     protected $comments;
     /**
      * Created-at timestamp.
      *
-     * @var string
+     * @var string|null
      */
     protected $createdAt;
     /**
      * Discount amount.
      *
-     * @var float
+     * @var float|null
      */
     protected $discountAmount;
     /**
      * Discount description.
      *
-     * @var string
+     * @var string|null
      */
     protected $discountDescription;
     /**
      * Discount tax compensation amount.
      *
-     * @var float
+     * @var float|null
      */
     protected $discountTaxCompensationAmount;
     /**
      * Email-sent flag value.
      *
-     * @var int
+     * @var int|null
      */
     protected $emailSent;
     /**
      * Invoice ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $entityId;
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\InvoiceInterface
      *
-     * @var SalesDataInvoiceExtensionInterface
+     * @var SalesDataInvoiceExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * Global currency code.
      *
-     * @var string
+     * @var string|null
      */
     protected $globalCurrencyCode;
     /**
      * Grand total.
      *
-     * @var float
+     * @var float|null
      */
     protected $grandTotal;
     /**
      * Increment ID.
      *
-     * @var string
+     * @var string|null
      */
     protected $incrementId;
     /**
      * Is-used-for-refund flag value.
      *
-     * @var int
+     * @var int|null
      */
     protected $isUsedForRefund;
     /**
      * Array of invoice items.
      *
-     * @var SalesDataInvoiceItemInterface[]
+     * @var SalesDataInvoiceItemInterface[]|null
      */
     protected $items;
     /**
      * Order currency code.
      *
-     * @var string
+     * @var string|null
      */
     protected $orderCurrencyCode;
     /**
      * Order ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $orderId;
     /**
      * Shipping address ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $shippingAddressId;
     /**
      * Shipping amount.
      *
-     * @var float
+     * @var float|null
      */
     protected $shippingAmount;
     /**
      * Shipping discount tax compensation amount.
      *
-     * @var float
+     * @var float|null
      */
     protected $shippingDiscountTaxCompensationAmount;
     /**
      * Shipping including tax.
      *
-     * @var float
+     * @var float|null
      */
     protected $shippingInclTax;
     /**
      * Shipping tax amount.
      *
-     * @var float
+     * @var float|null
      */
     protected $shippingTaxAmount;
     /**
      * State.
      *
-     * @var int
+     * @var int|null
      */
     protected $state;
     /**
      * Store currency code.
      *
-     * @var string
+     * @var string|null
      */
     protected $storeCurrencyCode;
     /**
      * Store ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $storeId;
     /**
      * Store-to-base rate.
      *
-     * @var float
+     * @var float|null
      */
     protected $storeToBaseRate;
     /**
      * Store-to-order rate.
      *
-     * @var float
+     * @var float|null
      */
     protected $storeToOrderRate;
     /**
      * Subtotal.
      *
-     * @var float
+     * @var float|null
      */
     protected $subtotal;
     /**
      * Subtotal including tax.
      *
-     * @var float
+     * @var float|null
      */
     protected $subtotalInclTax;
     /**
      * Tax amount.
      *
-     * @var float
+     * @var float|null
      */
     protected $taxAmount;
     /**
      * Total quantity.
      *
-     * @var float
+     * @var float|null
      */
     protected $totalQty;
     /**
      * Transaction ID.
      *
-     * @var string
+     * @var string|null
      */
     protected $transactionId;
     /**
      * Updated-at timestamp.
      *
-     * @var string
+     * @var string|null
      */
     protected $updatedAt;
     /**
      * Base currency code.
      *
-     * @return string
+     * @return string|null
      */
-    public function getBaseCurrencyCode(): string
+    public function getBaseCurrencyCode(): ?string
     {
         return $this->baseCurrencyCode;
     }
     /**
      * Base currency code.
      *
-     * @param string $baseCurrencyCode
+     * @param string|null $baseCurrencyCode
      *
      * @return self
      */
-    public function setBaseCurrencyCode(string $baseCurrencyCode): self
+    public function setBaseCurrencyCode(?string $baseCurrencyCode): self
     {
         $this->baseCurrencyCode = $baseCurrencyCode;
         return $this;
@@ -310,20 +310,20 @@ class SalesDataInvoiceInterface
     /**
      * Base discount amount.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseDiscountAmount(): float
+    public function getBaseDiscountAmount(): ?float
     {
         return $this->baseDiscountAmount;
     }
     /**
      * Base discount amount.
      *
-     * @param float $baseDiscountAmount
+     * @param float|null $baseDiscountAmount
      *
      * @return self
      */
-    public function setBaseDiscountAmount(float $baseDiscountAmount): self
+    public function setBaseDiscountAmount(?float $baseDiscountAmount): self
     {
         $this->baseDiscountAmount = $baseDiscountAmount;
         return $this;
@@ -331,20 +331,20 @@ class SalesDataInvoiceInterface
     /**
      * Base discount tax compensation amount.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseDiscountTaxCompensationAmount(): float
+    public function getBaseDiscountTaxCompensationAmount(): ?float
     {
         return $this->baseDiscountTaxCompensationAmount;
     }
     /**
      * Base discount tax compensation amount.
      *
-     * @param float $baseDiscountTaxCompensationAmount
+     * @param float|null $baseDiscountTaxCompensationAmount
      *
      * @return self
      */
-    public function setBaseDiscountTaxCompensationAmount(float $baseDiscountTaxCompensationAmount): self
+    public function setBaseDiscountTaxCompensationAmount(?float $baseDiscountTaxCompensationAmount): self
     {
         $this->baseDiscountTaxCompensationAmount = $baseDiscountTaxCompensationAmount;
         return $this;
@@ -352,20 +352,20 @@ class SalesDataInvoiceInterface
     /**
      * Base grand total.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseGrandTotal(): float
+    public function getBaseGrandTotal(): ?float
     {
         return $this->baseGrandTotal;
     }
     /**
      * Base grand total.
      *
-     * @param float $baseGrandTotal
+     * @param float|null $baseGrandTotal
      *
      * @return self
      */
-    public function setBaseGrandTotal(float $baseGrandTotal): self
+    public function setBaseGrandTotal(?float $baseGrandTotal): self
     {
         $this->baseGrandTotal = $baseGrandTotal;
         return $this;
@@ -373,20 +373,20 @@ class SalesDataInvoiceInterface
     /**
      * Base shipping amount.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseShippingAmount(): float
+    public function getBaseShippingAmount(): ?float
     {
         return $this->baseShippingAmount;
     }
     /**
      * Base shipping amount.
      *
-     * @param float $baseShippingAmount
+     * @param float|null $baseShippingAmount
      *
      * @return self
      */
-    public function setBaseShippingAmount(float $baseShippingAmount): self
+    public function setBaseShippingAmount(?float $baseShippingAmount): self
     {
         $this->baseShippingAmount = $baseShippingAmount;
         return $this;
@@ -394,20 +394,20 @@ class SalesDataInvoiceInterface
     /**
      * Base shipping discount tax compensation amount.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseShippingDiscountTaxCompensationAmnt(): float
+    public function getBaseShippingDiscountTaxCompensationAmnt(): ?float
     {
         return $this->baseShippingDiscountTaxCompensationAmnt;
     }
     /**
      * Base shipping discount tax compensation amount.
      *
-     * @param float $baseShippingDiscountTaxCompensationAmnt
+     * @param float|null $baseShippingDiscountTaxCompensationAmnt
      *
      * @return self
      */
-    public function setBaseShippingDiscountTaxCompensationAmnt(float $baseShippingDiscountTaxCompensationAmnt): self
+    public function setBaseShippingDiscountTaxCompensationAmnt(?float $baseShippingDiscountTaxCompensationAmnt): self
     {
         $this->baseShippingDiscountTaxCompensationAmnt = $baseShippingDiscountTaxCompensationAmnt;
         return $this;
@@ -415,20 +415,20 @@ class SalesDataInvoiceInterface
     /**
      * Base shipping including tax.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseShippingInclTax(): float
+    public function getBaseShippingInclTax(): ?float
     {
         return $this->baseShippingInclTax;
     }
     /**
      * Base shipping including tax.
      *
-     * @param float $baseShippingInclTax
+     * @param float|null $baseShippingInclTax
      *
      * @return self
      */
-    public function setBaseShippingInclTax(float $baseShippingInclTax): self
+    public function setBaseShippingInclTax(?float $baseShippingInclTax): self
     {
         $this->baseShippingInclTax = $baseShippingInclTax;
         return $this;
@@ -436,20 +436,20 @@ class SalesDataInvoiceInterface
     /**
      * Base shipping tax amount.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseShippingTaxAmount(): float
+    public function getBaseShippingTaxAmount(): ?float
     {
         return $this->baseShippingTaxAmount;
     }
     /**
      * Base shipping tax amount.
      *
-     * @param float $baseShippingTaxAmount
+     * @param float|null $baseShippingTaxAmount
      *
      * @return self
      */
-    public function setBaseShippingTaxAmount(float $baseShippingTaxAmount): self
+    public function setBaseShippingTaxAmount(?float $baseShippingTaxAmount): self
     {
         $this->baseShippingTaxAmount = $baseShippingTaxAmount;
         return $this;
@@ -457,20 +457,20 @@ class SalesDataInvoiceInterface
     /**
      * Base subtotal.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseSubtotal(): float
+    public function getBaseSubtotal(): ?float
     {
         return $this->baseSubtotal;
     }
     /**
      * Base subtotal.
      *
-     * @param float $baseSubtotal
+     * @param float|null $baseSubtotal
      *
      * @return self
      */
-    public function setBaseSubtotal(float $baseSubtotal): self
+    public function setBaseSubtotal(?float $baseSubtotal): self
     {
         $this->baseSubtotal = $baseSubtotal;
         return $this;
@@ -478,20 +478,20 @@ class SalesDataInvoiceInterface
     /**
      * Base subtotal including tax.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseSubtotalInclTax(): float
+    public function getBaseSubtotalInclTax(): ?float
     {
         return $this->baseSubtotalInclTax;
     }
     /**
      * Base subtotal including tax.
      *
-     * @param float $baseSubtotalInclTax
+     * @param float|null $baseSubtotalInclTax
      *
      * @return self
      */
-    public function setBaseSubtotalInclTax(float $baseSubtotalInclTax): self
+    public function setBaseSubtotalInclTax(?float $baseSubtotalInclTax): self
     {
         $this->baseSubtotalInclTax = $baseSubtotalInclTax;
         return $this;
@@ -499,20 +499,20 @@ class SalesDataInvoiceInterface
     /**
      * Base tax amount.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseTaxAmount(): float
+    public function getBaseTaxAmount(): ?float
     {
         return $this->baseTaxAmount;
     }
     /**
      * Base tax amount.
      *
-     * @param float $baseTaxAmount
+     * @param float|null $baseTaxAmount
      *
      * @return self
      */
-    public function setBaseTaxAmount(float $baseTaxAmount): self
+    public function setBaseTaxAmount(?float $baseTaxAmount): self
     {
         $this->baseTaxAmount = $baseTaxAmount;
         return $this;
@@ -520,20 +520,20 @@ class SalesDataInvoiceInterface
     /**
      * Base-to-global rate.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseToGlobalRate(): float
+    public function getBaseToGlobalRate(): ?float
     {
         return $this->baseToGlobalRate;
     }
     /**
      * Base-to-global rate.
      *
-     * @param float $baseToGlobalRate
+     * @param float|null $baseToGlobalRate
      *
      * @return self
      */
-    public function setBaseToGlobalRate(float $baseToGlobalRate): self
+    public function setBaseToGlobalRate(?float $baseToGlobalRate): self
     {
         $this->baseToGlobalRate = $baseToGlobalRate;
         return $this;
@@ -541,20 +541,20 @@ class SalesDataInvoiceInterface
     /**
      * Base-to-order rate.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseToOrderRate(): float
+    public function getBaseToOrderRate(): ?float
     {
         return $this->baseToOrderRate;
     }
     /**
      * Base-to-order rate.
      *
-     * @param float $baseToOrderRate
+     * @param float|null $baseToOrderRate
      *
      * @return self
      */
-    public function setBaseToOrderRate(float $baseToOrderRate): self
+    public function setBaseToOrderRate(?float $baseToOrderRate): self
     {
         $this->baseToOrderRate = $baseToOrderRate;
         return $this;
@@ -562,20 +562,20 @@ class SalesDataInvoiceInterface
     /**
      * Base total refunded.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseTotalRefunded(): float
+    public function getBaseTotalRefunded(): ?float
     {
         return $this->baseTotalRefunded;
     }
     /**
      * Base total refunded.
      *
-     * @param float $baseTotalRefunded
+     * @param float|null $baseTotalRefunded
      *
      * @return self
      */
-    public function setBaseTotalRefunded(float $baseTotalRefunded): self
+    public function setBaseTotalRefunded(?float $baseTotalRefunded): self
     {
         $this->baseTotalRefunded = $baseTotalRefunded;
         return $this;
@@ -583,20 +583,20 @@ class SalesDataInvoiceInterface
     /**
      * Billing address ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getBillingAddressId(): int
+    public function getBillingAddressId(): ?int
     {
         return $this->billingAddressId;
     }
     /**
      * Billing address ID.
      *
-     * @param int $billingAddressId
+     * @param int|null $billingAddressId
      *
      * @return self
      */
-    public function setBillingAddressId(int $billingAddressId): self
+    public function setBillingAddressId(?int $billingAddressId): self
     {
         $this->billingAddressId = $billingAddressId;
         return $this;
@@ -604,20 +604,20 @@ class SalesDataInvoiceInterface
     /**
      * Can void flag value.
      *
-     * @return int
+     * @return int|null
      */
-    public function getCanVoidFlag(): int
+    public function getCanVoidFlag(): ?int
     {
         return $this->canVoidFlag;
     }
     /**
      * Can void flag value.
      *
-     * @param int $canVoidFlag
+     * @param int|null $canVoidFlag
      *
      * @return self
      */
-    public function setCanVoidFlag(int $canVoidFlag): self
+    public function setCanVoidFlag(?int $canVoidFlag): self
     {
         $this->canVoidFlag = $canVoidFlag;
         return $this;
@@ -625,20 +625,20 @@ class SalesDataInvoiceInterface
     /**
      * Array of any invoice comments. Otherwise, null.
      *
-     * @return SalesDataInvoiceCommentInterface[]
+     * @return SalesDataInvoiceCommentInterface[]|null
      */
-    public function getComments(): array
+    public function getComments(): ?array
     {
         return $this->comments;
     }
     /**
      * Array of any invoice comments. Otherwise, null.
      *
-     * @param SalesDataInvoiceCommentInterface[] $comments
+     * @param SalesDataInvoiceCommentInterface[]|null $comments
      *
      * @return self
      */
-    public function setComments(array $comments): self
+    public function setComments(?array $comments): self
     {
         $this->comments = $comments;
         return $this;
@@ -646,20 +646,20 @@ class SalesDataInvoiceInterface
     /**
      * Created-at timestamp.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt(): ?string
     {
         return $this->createdAt;
     }
     /**
      * Created-at timestamp.
      *
-     * @param string $createdAt
+     * @param string|null $createdAt
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(?string $createdAt): self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -667,20 +667,20 @@ class SalesDataInvoiceInterface
     /**
      * Discount amount.
      *
-     * @return float
+     * @return float|null
      */
-    public function getDiscountAmount(): float
+    public function getDiscountAmount(): ?float
     {
         return $this->discountAmount;
     }
     /**
      * Discount amount.
      *
-     * @param float $discountAmount
+     * @param float|null $discountAmount
      *
      * @return self
      */
-    public function setDiscountAmount(float $discountAmount): self
+    public function setDiscountAmount(?float $discountAmount): self
     {
         $this->discountAmount = $discountAmount;
         return $this;
@@ -688,20 +688,20 @@ class SalesDataInvoiceInterface
     /**
      * Discount description.
      *
-     * @return string
+     * @return string|null
      */
-    public function getDiscountDescription(): string
+    public function getDiscountDescription(): ?string
     {
         return $this->discountDescription;
     }
     /**
      * Discount description.
      *
-     * @param string $discountDescription
+     * @param string|null $discountDescription
      *
      * @return self
      */
-    public function setDiscountDescription(string $discountDescription): self
+    public function setDiscountDescription(?string $discountDescription): self
     {
         $this->discountDescription = $discountDescription;
         return $this;
@@ -709,20 +709,20 @@ class SalesDataInvoiceInterface
     /**
      * Discount tax compensation amount.
      *
-     * @return float
+     * @return float|null
      */
-    public function getDiscountTaxCompensationAmount(): float
+    public function getDiscountTaxCompensationAmount(): ?float
     {
         return $this->discountTaxCompensationAmount;
     }
     /**
      * Discount tax compensation amount.
      *
-     * @param float $discountTaxCompensationAmount
+     * @param float|null $discountTaxCompensationAmount
      *
      * @return self
      */
-    public function setDiscountTaxCompensationAmount(float $discountTaxCompensationAmount): self
+    public function setDiscountTaxCompensationAmount(?float $discountTaxCompensationAmount): self
     {
         $this->discountTaxCompensationAmount = $discountTaxCompensationAmount;
         return $this;
@@ -730,20 +730,20 @@ class SalesDataInvoiceInterface
     /**
      * Email-sent flag value.
      *
-     * @return int
+     * @return int|null
      */
-    public function getEmailSent(): int
+    public function getEmailSent(): ?int
     {
         return $this->emailSent;
     }
     /**
      * Email-sent flag value.
      *
-     * @param int $emailSent
+     * @param int|null $emailSent
      *
      * @return self
      */
-    public function setEmailSent(int $emailSent): self
+    public function setEmailSent(?int $emailSent): self
     {
         $this->emailSent = $emailSent;
         return $this;
@@ -751,20 +751,20 @@ class SalesDataInvoiceInterface
     /**
      * Invoice ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getEntityId(): int
+    public function getEntityId(): ?int
     {
         return $this->entityId;
     }
     /**
      * Invoice ID.
      *
-     * @param int $entityId
+     * @param int|null $entityId
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(?int $entityId): self
     {
         $this->entityId = $entityId;
         return $this;
@@ -772,20 +772,20 @@ class SalesDataInvoiceInterface
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\InvoiceInterface
      *
-     * @return SalesDataInvoiceExtensionInterface
+     * @return SalesDataInvoiceExtensionInterface|null
      */
-    public function getExtensionAttributes(): SalesDataInvoiceExtensionInterface
+    public function getExtensionAttributes(): ?SalesDataInvoiceExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\InvoiceInterface
      *
-     * @param SalesDataInvoiceExtensionInterface $extensionAttributes
+     * @param SalesDataInvoiceExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(SalesDataInvoiceExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?SalesDataInvoiceExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -793,20 +793,20 @@ class SalesDataInvoiceInterface
     /**
      * Global currency code.
      *
-     * @return string
+     * @return string|null
      */
-    public function getGlobalCurrencyCode(): string
+    public function getGlobalCurrencyCode(): ?string
     {
         return $this->globalCurrencyCode;
     }
     /**
      * Global currency code.
      *
-     * @param string $globalCurrencyCode
+     * @param string|null $globalCurrencyCode
      *
      * @return self
      */
-    public function setGlobalCurrencyCode(string $globalCurrencyCode): self
+    public function setGlobalCurrencyCode(?string $globalCurrencyCode): self
     {
         $this->globalCurrencyCode = $globalCurrencyCode;
         return $this;
@@ -814,20 +814,20 @@ class SalesDataInvoiceInterface
     /**
      * Grand total.
      *
-     * @return float
+     * @return float|null
      */
-    public function getGrandTotal(): float
+    public function getGrandTotal(): ?float
     {
         return $this->grandTotal;
     }
     /**
      * Grand total.
      *
-     * @param float $grandTotal
+     * @param float|null $grandTotal
      *
      * @return self
      */
-    public function setGrandTotal(float $grandTotal): self
+    public function setGrandTotal(?float $grandTotal): self
     {
         $this->grandTotal = $grandTotal;
         return $this;
@@ -835,20 +835,20 @@ class SalesDataInvoiceInterface
     /**
      * Increment ID.
      *
-     * @return string
+     * @return string|null
      */
-    public function getIncrementId(): string
+    public function getIncrementId(): ?string
     {
         return $this->incrementId;
     }
     /**
      * Increment ID.
      *
-     * @param string $incrementId
+     * @param string|null $incrementId
      *
      * @return self
      */
-    public function setIncrementId(string $incrementId): self
+    public function setIncrementId(?string $incrementId): self
     {
         $this->incrementId = $incrementId;
         return $this;
@@ -856,20 +856,20 @@ class SalesDataInvoiceInterface
     /**
      * Is-used-for-refund flag value.
      *
-     * @return int
+     * @return int|null
      */
-    public function getIsUsedForRefund(): int
+    public function getIsUsedForRefund(): ?int
     {
         return $this->isUsedForRefund;
     }
     /**
      * Is-used-for-refund flag value.
      *
-     * @param int $isUsedForRefund
+     * @param int|null $isUsedForRefund
      *
      * @return self
      */
-    public function setIsUsedForRefund(int $isUsedForRefund): self
+    public function setIsUsedForRefund(?int $isUsedForRefund): self
     {
         $this->isUsedForRefund = $isUsedForRefund;
         return $this;
@@ -877,20 +877,20 @@ class SalesDataInvoiceInterface
     /**
      * Array of invoice items.
      *
-     * @return SalesDataInvoiceItemInterface[]
+     * @return SalesDataInvoiceItemInterface[]|null
      */
-    public function getItems(): array
+    public function getItems(): ?array
     {
         return $this->items;
     }
     /**
      * Array of invoice items.
      *
-     * @param SalesDataInvoiceItemInterface[] $items
+     * @param SalesDataInvoiceItemInterface[]|null $items
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(?array $items): self
     {
         $this->items = $items;
         return $this;
@@ -898,20 +898,20 @@ class SalesDataInvoiceInterface
     /**
      * Order currency code.
      *
-     * @return string
+     * @return string|null
      */
-    public function getOrderCurrencyCode(): string
+    public function getOrderCurrencyCode(): ?string
     {
         return $this->orderCurrencyCode;
     }
     /**
      * Order currency code.
      *
-     * @param string $orderCurrencyCode
+     * @param string|null $orderCurrencyCode
      *
      * @return self
      */
-    public function setOrderCurrencyCode(string $orderCurrencyCode): self
+    public function setOrderCurrencyCode(?string $orderCurrencyCode): self
     {
         $this->orderCurrencyCode = $orderCurrencyCode;
         return $this;
@@ -919,20 +919,20 @@ class SalesDataInvoiceInterface
     /**
      * Order ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getOrderId(): int
+    public function getOrderId(): ?int
     {
         return $this->orderId;
     }
     /**
      * Order ID.
      *
-     * @param int $orderId
+     * @param int|null $orderId
      *
      * @return self
      */
-    public function setOrderId(int $orderId): self
+    public function setOrderId(?int $orderId): self
     {
         $this->orderId = $orderId;
         return $this;
@@ -940,20 +940,20 @@ class SalesDataInvoiceInterface
     /**
      * Shipping address ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getShippingAddressId(): int
+    public function getShippingAddressId(): ?int
     {
         return $this->shippingAddressId;
     }
     /**
      * Shipping address ID.
      *
-     * @param int $shippingAddressId
+     * @param int|null $shippingAddressId
      *
      * @return self
      */
-    public function setShippingAddressId(int $shippingAddressId): self
+    public function setShippingAddressId(?int $shippingAddressId): self
     {
         $this->shippingAddressId = $shippingAddressId;
         return $this;
@@ -961,20 +961,20 @@ class SalesDataInvoiceInterface
     /**
      * Shipping amount.
      *
-     * @return float
+     * @return float|null
      */
-    public function getShippingAmount(): float
+    public function getShippingAmount(): ?float
     {
         return $this->shippingAmount;
     }
     /**
      * Shipping amount.
      *
-     * @param float $shippingAmount
+     * @param float|null $shippingAmount
      *
      * @return self
      */
-    public function setShippingAmount(float $shippingAmount): self
+    public function setShippingAmount(?float $shippingAmount): self
     {
         $this->shippingAmount = $shippingAmount;
         return $this;
@@ -982,20 +982,20 @@ class SalesDataInvoiceInterface
     /**
      * Shipping discount tax compensation amount.
      *
-     * @return float
+     * @return float|null
      */
-    public function getShippingDiscountTaxCompensationAmount(): float
+    public function getShippingDiscountTaxCompensationAmount(): ?float
     {
         return $this->shippingDiscountTaxCompensationAmount;
     }
     /**
      * Shipping discount tax compensation amount.
      *
-     * @param float $shippingDiscountTaxCompensationAmount
+     * @param float|null $shippingDiscountTaxCompensationAmount
      *
      * @return self
      */
-    public function setShippingDiscountTaxCompensationAmount(float $shippingDiscountTaxCompensationAmount): self
+    public function setShippingDiscountTaxCompensationAmount(?float $shippingDiscountTaxCompensationAmount): self
     {
         $this->shippingDiscountTaxCompensationAmount = $shippingDiscountTaxCompensationAmount;
         return $this;
@@ -1003,20 +1003,20 @@ class SalesDataInvoiceInterface
     /**
      * Shipping including tax.
      *
-     * @return float
+     * @return float|null
      */
-    public function getShippingInclTax(): float
+    public function getShippingInclTax(): ?float
     {
         return $this->shippingInclTax;
     }
     /**
      * Shipping including tax.
      *
-     * @param float $shippingInclTax
+     * @param float|null $shippingInclTax
      *
      * @return self
      */
-    public function setShippingInclTax(float $shippingInclTax): self
+    public function setShippingInclTax(?float $shippingInclTax): self
     {
         $this->shippingInclTax = $shippingInclTax;
         return $this;
@@ -1024,20 +1024,20 @@ class SalesDataInvoiceInterface
     /**
      * Shipping tax amount.
      *
-     * @return float
+     * @return float|null
      */
-    public function getShippingTaxAmount(): float
+    public function getShippingTaxAmount(): ?float
     {
         return $this->shippingTaxAmount;
     }
     /**
      * Shipping tax amount.
      *
-     * @param float $shippingTaxAmount
+     * @param float|null $shippingTaxAmount
      *
      * @return self
      */
-    public function setShippingTaxAmount(float $shippingTaxAmount): self
+    public function setShippingTaxAmount(?float $shippingTaxAmount): self
     {
         $this->shippingTaxAmount = $shippingTaxAmount;
         return $this;
@@ -1045,20 +1045,20 @@ class SalesDataInvoiceInterface
     /**
      * State.
      *
-     * @return int
+     * @return int|null
      */
-    public function getState(): int
+    public function getState(): ?int
     {
         return $this->state;
     }
     /**
      * State.
      *
-     * @param int $state
+     * @param int|null $state
      *
      * @return self
      */
-    public function setState(int $state): self
+    public function setState(?int $state): self
     {
         $this->state = $state;
         return $this;
@@ -1066,20 +1066,20 @@ class SalesDataInvoiceInterface
     /**
      * Store currency code.
      *
-     * @return string
+     * @return string|null
      */
-    public function getStoreCurrencyCode(): string
+    public function getStoreCurrencyCode(): ?string
     {
         return $this->storeCurrencyCode;
     }
     /**
      * Store currency code.
      *
-     * @param string $storeCurrencyCode
+     * @param string|null $storeCurrencyCode
      *
      * @return self
      */
-    public function setStoreCurrencyCode(string $storeCurrencyCode): self
+    public function setStoreCurrencyCode(?string $storeCurrencyCode): self
     {
         $this->storeCurrencyCode = $storeCurrencyCode;
         return $this;
@@ -1087,20 +1087,20 @@ class SalesDataInvoiceInterface
     /**
      * Store ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getStoreId(): int
+    public function getStoreId(): ?int
     {
         return $this->storeId;
     }
     /**
      * Store ID.
      *
-     * @param int $storeId
+     * @param int|null $storeId
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(?int $storeId): self
     {
         $this->storeId = $storeId;
         return $this;
@@ -1108,20 +1108,20 @@ class SalesDataInvoiceInterface
     /**
      * Store-to-base rate.
      *
-     * @return float
+     * @return float|null
      */
-    public function getStoreToBaseRate(): float
+    public function getStoreToBaseRate(): ?float
     {
         return $this->storeToBaseRate;
     }
     /**
      * Store-to-base rate.
      *
-     * @param float $storeToBaseRate
+     * @param float|null $storeToBaseRate
      *
      * @return self
      */
-    public function setStoreToBaseRate(float $storeToBaseRate): self
+    public function setStoreToBaseRate(?float $storeToBaseRate): self
     {
         $this->storeToBaseRate = $storeToBaseRate;
         return $this;
@@ -1129,20 +1129,20 @@ class SalesDataInvoiceInterface
     /**
      * Store-to-order rate.
      *
-     * @return float
+     * @return float|null
      */
-    public function getStoreToOrderRate(): float
+    public function getStoreToOrderRate(): ?float
     {
         return $this->storeToOrderRate;
     }
     /**
      * Store-to-order rate.
      *
-     * @param float $storeToOrderRate
+     * @param float|null $storeToOrderRate
      *
      * @return self
      */
-    public function setStoreToOrderRate(float $storeToOrderRate): self
+    public function setStoreToOrderRate(?float $storeToOrderRate): self
     {
         $this->storeToOrderRate = $storeToOrderRate;
         return $this;
@@ -1150,20 +1150,20 @@ class SalesDataInvoiceInterface
     /**
      * Subtotal.
      *
-     * @return float
+     * @return float|null
      */
-    public function getSubtotal(): float
+    public function getSubtotal(): ?float
     {
         return $this->subtotal;
     }
     /**
      * Subtotal.
      *
-     * @param float $subtotal
+     * @param float|null $subtotal
      *
      * @return self
      */
-    public function setSubtotal(float $subtotal): self
+    public function setSubtotal(?float $subtotal): self
     {
         $this->subtotal = $subtotal;
         return $this;
@@ -1171,20 +1171,20 @@ class SalesDataInvoiceInterface
     /**
      * Subtotal including tax.
      *
-     * @return float
+     * @return float|null
      */
-    public function getSubtotalInclTax(): float
+    public function getSubtotalInclTax(): ?float
     {
         return $this->subtotalInclTax;
     }
     /**
      * Subtotal including tax.
      *
-     * @param float $subtotalInclTax
+     * @param float|null $subtotalInclTax
      *
      * @return self
      */
-    public function setSubtotalInclTax(float $subtotalInclTax): self
+    public function setSubtotalInclTax(?float $subtotalInclTax): self
     {
         $this->subtotalInclTax = $subtotalInclTax;
         return $this;
@@ -1192,20 +1192,20 @@ class SalesDataInvoiceInterface
     /**
      * Tax amount.
      *
-     * @return float
+     * @return float|null
      */
-    public function getTaxAmount(): float
+    public function getTaxAmount(): ?float
     {
         return $this->taxAmount;
     }
     /**
      * Tax amount.
      *
-     * @param float $taxAmount
+     * @param float|null $taxAmount
      *
      * @return self
      */
-    public function setTaxAmount(float $taxAmount): self
+    public function setTaxAmount(?float $taxAmount): self
     {
         $this->taxAmount = $taxAmount;
         return $this;
@@ -1213,20 +1213,20 @@ class SalesDataInvoiceInterface
     /**
      * Total quantity.
      *
-     * @return float
+     * @return float|null
      */
-    public function getTotalQty(): float
+    public function getTotalQty(): ?float
     {
         return $this->totalQty;
     }
     /**
      * Total quantity.
      *
-     * @param float $totalQty
+     * @param float|null $totalQty
      *
      * @return self
      */
-    public function setTotalQty(float $totalQty): self
+    public function setTotalQty(?float $totalQty): self
     {
         $this->totalQty = $totalQty;
         return $this;
@@ -1234,20 +1234,20 @@ class SalesDataInvoiceInterface
     /**
      * Transaction ID.
      *
-     * @return string
+     * @return string|null
      */
-    public function getTransactionId(): string
+    public function getTransactionId(): ?string
     {
         return $this->transactionId;
     }
     /**
      * Transaction ID.
      *
-     * @param string $transactionId
+     * @param string|null $transactionId
      *
      * @return self
      */
-    public function setTransactionId(string $transactionId): self
+    public function setTransactionId(?string $transactionId): self
     {
         $this->transactionId = $transactionId;
         return $this;
@@ -1255,20 +1255,20 @@ class SalesDataInvoiceInterface
     /**
      * Updated-at timestamp.
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt(): ?string
     {
         return $this->updatedAt;
     }
     /**
      * Updated-at timestamp.
      *
-     * @param string $updatedAt
+     * @param string|null $updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(?string $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
         return $this;

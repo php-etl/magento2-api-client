@@ -7,38 +7,38 @@ class SalesDataInvoiceItemExtensionInterface
     /**
      *
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $invoiceTextCodes;
     /**
      *
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $taxCodes;
     /**
      *
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $vertexTaxCodes;
     /**
      *
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getInvoiceTextCodes(): array
+    public function getInvoiceTextCodes(): ?array
     {
         return $this->invoiceTextCodes;
     }
     /**
      *
      *
-     * @param string[] $invoiceTextCodes
+     * @param string[]|null $invoiceTextCodes
      *
      * @return self
      */
-    public function setInvoiceTextCodes(array $invoiceTextCodes): self
+    public function setInvoiceTextCodes(?array $invoiceTextCodes): self
     {
         $this->invoiceTextCodes = $invoiceTextCodes;
         return $this;
@@ -46,20 +46,20 @@ class SalesDataInvoiceItemExtensionInterface
     /**
      *
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getTaxCodes(): array
+    public function getTaxCodes(): ?array
     {
         return $this->taxCodes;
     }
     /**
      *
      *
-     * @param string[] $taxCodes
+     * @param string[]|null $taxCodes
      *
      * @return self
      */
-    public function setTaxCodes(array $taxCodes): self
+    public function setTaxCodes(?array $taxCodes): self
     {
         $this->taxCodes = $taxCodes;
         return $this;
@@ -67,20 +67,20 @@ class SalesDataInvoiceItemExtensionInterface
     /**
      *
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getVertexTaxCodes(): array
+    public function getVertexTaxCodes(): ?array
     {
         return $this->vertexTaxCodes;
     }
     /**
      *
      *
-     * @param string[] $vertexTaxCodes
+     * @param string[]|null $vertexTaxCodes
      *
      * @return self
      */
-    public function setVertexTaxCodes(array $vertexTaxCodes): self
+    public function setVertexTaxCodes(?array $vertexTaxCodes): self
     {
         $this->vertexTaxCodes = $vertexTaxCodes;
         return $this;

@@ -40,11 +40,15 @@ class V1CartsMineCollectionPointSearchRequestPutBodyNormalizer implements Denorm
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('countryId', $data)) {
+        if (\array_key_exists('countryId', $data) && $data['countryId'] !== null) {
             $object->setCountryId($data['countryId']);
+        } elseif (\array_key_exists('countryId', $data) && $data['countryId'] === null) {
+            $object->setCountryId(null);
         }
-        if (\array_key_exists('postcode', $data)) {
+        if (\array_key_exists('postcode', $data) && $data['postcode'] !== null) {
             $object->setPostcode($data['postcode']);
+        } elseif (\array_key_exists('postcode', $data) && $data['postcode'] === null) {
+            $object->setPostcode(null);
         }
         return $object;
     }

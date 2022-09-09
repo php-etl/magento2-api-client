@@ -40,23 +40,35 @@ class FrameworkDataVideoContentInterfaceNormalizer implements DenormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('media_type', $data)) {
+        if (\array_key_exists('media_type', $data) && $data['media_type'] !== null) {
             $object->setMediaType($data['media_type']);
+        } elseif (\array_key_exists('media_type', $data) && $data['media_type'] === null) {
+            $object->setMediaType(null);
         }
-        if (\array_key_exists('video_description', $data)) {
+        if (\array_key_exists('video_description', $data) && $data['video_description'] !== null) {
             $object->setVideoDescription($data['video_description']);
+        } elseif (\array_key_exists('video_description', $data) && $data['video_description'] === null) {
+            $object->setVideoDescription(null);
         }
-        if (\array_key_exists('video_metadata', $data)) {
+        if (\array_key_exists('video_metadata', $data) && $data['video_metadata'] !== null) {
             $object->setVideoMetadata($data['video_metadata']);
+        } elseif (\array_key_exists('video_metadata', $data) && $data['video_metadata'] === null) {
+            $object->setVideoMetadata(null);
         }
-        if (\array_key_exists('video_provider', $data)) {
+        if (\array_key_exists('video_provider', $data) && $data['video_provider'] !== null) {
             $object->setVideoProvider($data['video_provider']);
+        } elseif (\array_key_exists('video_provider', $data) && $data['video_provider'] === null) {
+            $object->setVideoProvider(null);
         }
-        if (\array_key_exists('video_title', $data)) {
+        if (\array_key_exists('video_title', $data) && $data['video_title'] !== null) {
             $object->setVideoTitle($data['video_title']);
+        } elseif (\array_key_exists('video_title', $data) && $data['video_title'] === null) {
+            $object->setVideoTitle(null);
         }
-        if (\array_key_exists('video_url', $data)) {
+        if (\array_key_exists('video_url', $data) && $data['video_url'] !== null) {
             $object->setVideoUrl($data['video_url']);
+        } elseif (\array_key_exists('video_url', $data) && $data['video_url'] === null) {
+            $object->setVideoUrl(null);
         }
         return $object;
     }

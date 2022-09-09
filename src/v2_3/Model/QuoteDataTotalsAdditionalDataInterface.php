@@ -7,32 +7,32 @@ class QuoteDataTotalsAdditionalDataInterface
     /**
      * Custom attributes values.
      *
-     * @var FrameworkAttributeInterface[]
+     * @var FrameworkAttributeInterface[]|null
      */
     protected $customAttributes;
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\TotalsAdditionalDataInterface
      *
-     * @var QuoteDataTotalsAdditionalDataExtensionInterface
+     * @var QuoteDataTotalsAdditionalDataExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * Custom attributes values.
      *
-     * @return FrameworkAttributeInterface[]
+     * @return FrameworkAttributeInterface[]|null
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes(): ?array
     {
         return $this->customAttributes;
     }
     /**
      * Custom attributes values.
      *
-     * @param FrameworkAttributeInterface[] $customAttributes
+     * @param FrameworkAttributeInterface[]|null $customAttributes
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(?array $customAttributes): self
     {
         $this->customAttributes = $customAttributes;
         return $this;
@@ -40,20 +40,20 @@ class QuoteDataTotalsAdditionalDataInterface
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\TotalsAdditionalDataInterface
      *
-     * @return QuoteDataTotalsAdditionalDataExtensionInterface
+     * @return QuoteDataTotalsAdditionalDataExtensionInterface|null
      */
-    public function getExtensionAttributes(): QuoteDataTotalsAdditionalDataExtensionInterface
+    public function getExtensionAttributes(): ?QuoteDataTotalsAdditionalDataExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\TotalsAdditionalDataInterface
      *
-     * @param QuoteDataTotalsAdditionalDataExtensionInterface $extensionAttributes
+     * @param QuoteDataTotalsAdditionalDataExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(QuoteDataTotalsAdditionalDataExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?QuoteDataTotalsAdditionalDataExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

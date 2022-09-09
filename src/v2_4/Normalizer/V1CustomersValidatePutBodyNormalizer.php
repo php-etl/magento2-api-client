@@ -40,8 +40,10 @@ class V1CustomersValidatePutBodyNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('customer', $data)) {
+        if (\array_key_exists('customer', $data) && $data['customer'] !== null) {
             $object->setCustomer($this->denormalizer->denormalize($data['customer'], 'Kiboko\\Magento\\V2_4\\Model\\CustomerDataCustomerInterface', 'json', $context));
+        } elseif (\array_key_exists('customer', $data) && $data['customer'] === null) {
+            $object->setCustomer(null);
         }
         return $object;
     }

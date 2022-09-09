@@ -7,26 +7,26 @@ class DownloadableDataDownloadableOptionInterface
     /**
      * The list of downloadable links
      *
-     * @var int[]
+     * @var int[]|null
      */
     protected $downloadableLinks;
     /**
      * The list of downloadable links
      *
-     * @return int[]
+     * @return int[]|null
      */
-    public function getDownloadableLinks(): array
+    public function getDownloadableLinks(): ?array
     {
         return $this->downloadableLinks;
     }
     /**
      * The list of downloadable links
      *
-     * @param int[] $downloadableLinks
+     * @param int[]|null $downloadableLinks
      *
      * @return self
      */
-    public function setDownloadableLinks(array $downloadableLinks): self
+    public function setDownloadableLinks(?array $downloadableLinks): self
     {
         $this->downloadableLinks = $downloadableLinks;
         return $this;

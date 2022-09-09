@@ -46,78 +46,116 @@ class SalesDataShipmentInterfaceNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('billing_address_id', $data)) {
+        if (\array_key_exists('billing_address_id', $data) && $data['billing_address_id'] !== null) {
             $object->setBillingAddressId($data['billing_address_id']);
+        } elseif (\array_key_exists('billing_address_id', $data) && $data['billing_address_id'] === null) {
+            $object->setBillingAddressId(null);
         }
-        if (\array_key_exists('comments', $data)) {
+        if (\array_key_exists('comments', $data) && $data['comments'] !== null) {
             $values = array();
             foreach ($data['comments'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\SalesDataShipmentCommentInterface', 'json', $context);
             }
             $object->setComments($values);
+        } elseif (\array_key_exists('comments', $data) && $data['comments'] === null) {
+            $object->setComments(null);
         }
-        if (\array_key_exists('created_at', $data)) {
+        if (\array_key_exists('created_at', $data) && $data['created_at'] !== null) {
             $object->setCreatedAt($data['created_at']);
+        } elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+            $object->setCreatedAt(null);
         }
-        if (\array_key_exists('customer_id', $data)) {
+        if (\array_key_exists('customer_id', $data) && $data['customer_id'] !== null) {
             $object->setCustomerId($data['customer_id']);
+        } elseif (\array_key_exists('customer_id', $data) && $data['customer_id'] === null) {
+            $object->setCustomerId(null);
         }
-        if (\array_key_exists('email_sent', $data)) {
+        if (\array_key_exists('email_sent', $data) && $data['email_sent'] !== null) {
             $object->setEmailSent($data['email_sent']);
+        } elseif (\array_key_exists('email_sent', $data) && $data['email_sent'] === null) {
+            $object->setEmailSent(null);
         }
-        if (\array_key_exists('entity_id', $data)) {
+        if (\array_key_exists('entity_id', $data) && $data['entity_id'] !== null) {
             $object->setEntityId($data['entity_id']);
+        } elseif (\array_key_exists('entity_id', $data) && $data['entity_id'] === null) {
+            $object->setEntityId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_2\\Model\\SalesDataShipmentExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('increment_id', $data)) {
+        if (\array_key_exists('increment_id', $data) && $data['increment_id'] !== null) {
             $object->setIncrementId($data['increment_id']);
+        } elseif (\array_key_exists('increment_id', $data) && $data['increment_id'] === null) {
+            $object->setIncrementId(null);
         }
-        if (\array_key_exists('items', $data)) {
+        if (\array_key_exists('items', $data) && $data['items'] !== null) {
             $values_1 = array();
             foreach ($data['items'] as $value_1) {
                 $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_2\\Model\\SalesDataShipmentItemInterface', 'json', $context);
             }
             $object->setItems($values_1);
+        } elseif (\array_key_exists('items', $data) && $data['items'] === null) {
+            $object->setItems(null);
         }
-        if (\array_key_exists('order_id', $data)) {
+        if (\array_key_exists('order_id', $data) && $data['order_id'] !== null) {
             $object->setOrderId($data['order_id']);
+        } elseif (\array_key_exists('order_id', $data) && $data['order_id'] === null) {
+            $object->setOrderId(null);
         }
-        if (\array_key_exists('packages', $data)) {
+        if (\array_key_exists('packages', $data) && $data['packages'] !== null) {
             $values_2 = array();
             foreach ($data['packages'] as $value_2) {
                 $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\V2_2\\Model\\SalesDataShipmentPackageInterface', 'json', $context);
             }
             $object->setPackages($values_2);
+        } elseif (\array_key_exists('packages', $data) && $data['packages'] === null) {
+            $object->setPackages(null);
         }
-        if (\array_key_exists('shipment_status', $data)) {
+        if (\array_key_exists('shipment_status', $data) && $data['shipment_status'] !== null) {
             $object->setShipmentStatus($data['shipment_status']);
+        } elseif (\array_key_exists('shipment_status', $data) && $data['shipment_status'] === null) {
+            $object->setShipmentStatus(null);
         }
-        if (\array_key_exists('shipping_address_id', $data)) {
+        if (\array_key_exists('shipping_address_id', $data) && $data['shipping_address_id'] !== null) {
             $object->setShippingAddressId($data['shipping_address_id']);
+        } elseif (\array_key_exists('shipping_address_id', $data) && $data['shipping_address_id'] === null) {
+            $object->setShippingAddressId(null);
         }
-        if (\array_key_exists('shipping_label', $data)) {
+        if (\array_key_exists('shipping_label', $data) && $data['shipping_label'] !== null) {
             $object->setShippingLabel($data['shipping_label']);
+        } elseif (\array_key_exists('shipping_label', $data) && $data['shipping_label'] === null) {
+            $object->setShippingLabel(null);
         }
-        if (\array_key_exists('store_id', $data)) {
+        if (\array_key_exists('store_id', $data) && $data['store_id'] !== null) {
             $object->setStoreId($data['store_id']);
+        } elseif (\array_key_exists('store_id', $data) && $data['store_id'] === null) {
+            $object->setStoreId(null);
         }
-        if (\array_key_exists('total_qty', $data)) {
+        if (\array_key_exists('total_qty', $data) && $data['total_qty'] !== null) {
             $object->setTotalQty($data['total_qty']);
+        } elseif (\array_key_exists('total_qty', $data) && $data['total_qty'] === null) {
+            $object->setTotalQty(null);
         }
-        if (\array_key_exists('total_weight', $data)) {
+        if (\array_key_exists('total_weight', $data) && $data['total_weight'] !== null) {
             $object->setTotalWeight($data['total_weight']);
+        } elseif (\array_key_exists('total_weight', $data) && $data['total_weight'] === null) {
+            $object->setTotalWeight(null);
         }
-        if (\array_key_exists('tracks', $data)) {
+        if (\array_key_exists('tracks', $data) && $data['tracks'] !== null) {
             $values_3 = array();
             foreach ($data['tracks'] as $value_3) {
                 $values_3[] = $this->denormalizer->denormalize($value_3, 'Kiboko\\Magento\\V2_2\\Model\\SalesDataShipmentTrackInterface', 'json', $context);
             }
             $object->setTracks($values_3);
+        } elseif (\array_key_exists('tracks', $data) && $data['tracks'] === null) {
+            $object->setTracks(null);
         }
-        if (\array_key_exists('updated_at', $data)) {
+        if (\array_key_exists('updated_at', $data) && $data['updated_at'] !== null) {
             $object->setUpdatedAt($data['updated_at']);
+        } elseif (\array_key_exists('updated_at', $data) && $data['updated_at'] === null) {
+            $object->setUpdatedAt(null);
         }
         return $object;
     }

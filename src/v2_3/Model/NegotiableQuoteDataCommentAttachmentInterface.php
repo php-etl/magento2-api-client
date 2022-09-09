@@ -7,56 +7,56 @@ class NegotiableQuoteDataCommentAttachmentInterface
     /**
      * Attachment ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $attachmentId;
     /**
      * Comment ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $commentId;
     /**
      * ExtensionInterface class for @see \Magento\NegotiableQuote\Api\Data\CommentAttachmentInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * File name.
      *
-     * @var string
+     * @var string|null
      */
     protected $fileName;
     /**
      * File path.
      *
-     * @var string
+     * @var string|null
      */
     protected $filePath;
     /**
      * File type.
      *
-     * @var string
+     * @var string|null
      */
     protected $fileType;
     /**
      * Attachment ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getAttachmentId(): int
+    public function getAttachmentId(): ?int
     {
         return $this->attachmentId;
     }
     /**
      * Attachment ID.
      *
-     * @param int $attachmentId
+     * @param int|null $attachmentId
      *
      * @return self
      */
-    public function setAttachmentId(int $attachmentId): self
+    public function setAttachmentId(?int $attachmentId): self
     {
         $this->attachmentId = $attachmentId;
         return $this;
@@ -64,20 +64,20 @@ class NegotiableQuoteDataCommentAttachmentInterface
     /**
      * Comment ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getCommentId(): int
+    public function getCommentId(): ?int
     {
         return $this->commentId;
     }
     /**
      * Comment ID.
      *
-     * @param int $commentId
+     * @param int|null $commentId
      *
      * @return self
      */
-    public function setCommentId(int $commentId): self
+    public function setCommentId(?int $commentId): self
     {
         $this->commentId = $commentId;
         return $this;
@@ -106,20 +106,20 @@ class NegotiableQuoteDataCommentAttachmentInterface
     /**
      * File name.
      *
-     * @return string
+     * @return string|null
      */
-    public function getFileName(): string
+    public function getFileName(): ?string
     {
         return $this->fileName;
     }
     /**
      * File name.
      *
-     * @param string $fileName
+     * @param string|null $fileName
      *
      * @return self
      */
-    public function setFileName(string $fileName): self
+    public function setFileName(?string $fileName): self
     {
         $this->fileName = $fileName;
         return $this;
@@ -127,20 +127,20 @@ class NegotiableQuoteDataCommentAttachmentInterface
     /**
      * File path.
      *
-     * @return string
+     * @return string|null
      */
-    public function getFilePath(): string
+    public function getFilePath(): ?string
     {
         return $this->filePath;
     }
     /**
      * File path.
      *
-     * @param string $filePath
+     * @param string|null $filePath
      *
      * @return self
      */
-    public function setFilePath(string $filePath): self
+    public function setFilePath(?string $filePath): self
     {
         $this->filePath = $filePath;
         return $this;
@@ -148,20 +148,20 @@ class NegotiableQuoteDataCommentAttachmentInterface
     /**
      * File type.
      *
-     * @return string
+     * @return string|null
      */
-    public function getFileType(): string
+    public function getFileType(): ?string
     {
         return $this->fileType;
     }
     /**
      * File type.
      *
-     * @param string $fileType
+     * @param string|null $fileType
      *
      * @return self
      */
-    public function setFileType(string $fileType): self
+    public function setFileType(?string $fileType): self
     {
         $this->fileType = $fileType;
         return $this;

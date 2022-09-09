@@ -40,14 +40,20 @@ class FrameworkDataImageContentInterfaceNormalizer implements DenormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('base64_encoded_data', $data)) {
+        if (\array_key_exists('base64_encoded_data', $data) && $data['base64_encoded_data'] !== null) {
             $object->setBase64EncodedData($data['base64_encoded_data']);
+        } elseif (\array_key_exists('base64_encoded_data', $data) && $data['base64_encoded_data'] === null) {
+            $object->setBase64EncodedData(null);
         }
-        if (\array_key_exists('name', $data)) {
+        if (\array_key_exists('name', $data) && $data['name'] !== null) {
             $object->setName($data['name']);
+        } elseif (\array_key_exists('name', $data) && $data['name'] === null) {
+            $object->setName(null);
         }
-        if (\array_key_exists('type', $data)) {
+        if (\array_key_exists('type', $data) && $data['type'] !== null) {
             $object->setType($data['type']);
+        } elseif (\array_key_exists('type', $data) && $data['type'] === null) {
+            $object->setType(null);
         }
         return $object;
     }

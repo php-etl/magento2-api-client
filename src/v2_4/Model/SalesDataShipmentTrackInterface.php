@@ -7,92 +7,92 @@ class SalesDataShipmentTrackInterface
     /**
      * Carrier code.
      *
-     * @var string
+     * @var string|null
      */
     protected $carrierCode;
     /**
      * Created-at timestamp.
      *
-     * @var string
+     * @var string|null
      */
     protected $createdAt;
     /**
      * Description.
      *
-     * @var string
+     * @var string|null
      */
     protected $description;
     /**
      * Shipment package ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $entityId;
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\ShipmentTrackInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * The order_id for the shipment package.
      *
-     * @var int
+     * @var int|null
      */
     protected $orderId;
     /**
      * Parent ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $parentId;
     /**
      * Quantity.
      *
-     * @var float
+     * @var float|null
      */
     protected $qty;
     /**
      * Title.
      *
-     * @var string
+     * @var string|null
      */
     protected $title;
     /**
      * Track number.
      *
-     * @var string
+     * @var string|null
      */
     protected $trackNumber;
     /**
      * Updated-at timestamp.
      *
-     * @var string
+     * @var string|null
      */
     protected $updatedAt;
     /**
      * Weight.
      *
-     * @var float
+     * @var float|null
      */
     protected $weight;
     /**
      * Carrier code.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCarrierCode(): string
+    public function getCarrierCode(): ?string
     {
         return $this->carrierCode;
     }
     /**
      * Carrier code.
      *
-     * @param string $carrierCode
+     * @param string|null $carrierCode
      *
      * @return self
      */
-    public function setCarrierCode(string $carrierCode): self
+    public function setCarrierCode(?string $carrierCode): self
     {
         $this->carrierCode = $carrierCode;
         return $this;
@@ -100,20 +100,20 @@ class SalesDataShipmentTrackInterface
     /**
      * Created-at timestamp.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt(): ?string
     {
         return $this->createdAt;
     }
     /**
      * Created-at timestamp.
      *
-     * @param string $createdAt
+     * @param string|null $createdAt
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(?string $createdAt): self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -121,20 +121,20 @@ class SalesDataShipmentTrackInterface
     /**
      * Description.
      *
-     * @return string
+     * @return string|null
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
     /**
      * Description.
      *
-     * @param string $description
+     * @param string|null $description
      *
      * @return self
      */
-    public function setDescription(string $description): self
+    public function setDescription(?string $description): self
     {
         $this->description = $description;
         return $this;
@@ -142,20 +142,20 @@ class SalesDataShipmentTrackInterface
     /**
      * Shipment package ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getEntityId(): int
+    public function getEntityId(): ?int
     {
         return $this->entityId;
     }
     /**
      * Shipment package ID.
      *
-     * @param int $entityId
+     * @param int|null $entityId
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(?int $entityId): self
     {
         $this->entityId = $entityId;
         return $this;
@@ -184,20 +184,20 @@ class SalesDataShipmentTrackInterface
     /**
      * The order_id for the shipment package.
      *
-     * @return int
+     * @return int|null
      */
-    public function getOrderId(): int
+    public function getOrderId(): ?int
     {
         return $this->orderId;
     }
     /**
      * The order_id for the shipment package.
      *
-     * @param int $orderId
+     * @param int|null $orderId
      *
      * @return self
      */
-    public function setOrderId(int $orderId): self
+    public function setOrderId(?int $orderId): self
     {
         $this->orderId = $orderId;
         return $this;
@@ -205,20 +205,20 @@ class SalesDataShipmentTrackInterface
     /**
      * Parent ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getParentId(): int
+    public function getParentId(): ?int
     {
         return $this->parentId;
     }
     /**
      * Parent ID.
      *
-     * @param int $parentId
+     * @param int|null $parentId
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(?int $parentId): self
     {
         $this->parentId = $parentId;
         return $this;
@@ -226,20 +226,20 @@ class SalesDataShipmentTrackInterface
     /**
      * Quantity.
      *
-     * @return float
+     * @return float|null
      */
-    public function getQty(): float
+    public function getQty(): ?float
     {
         return $this->qty;
     }
     /**
      * Quantity.
      *
-     * @param float $qty
+     * @param float|null $qty
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(?float $qty): self
     {
         $this->qty = $qty;
         return $this;
@@ -247,20 +247,20 @@ class SalesDataShipmentTrackInterface
     /**
      * Title.
      *
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
     /**
      * Title.
      *
-     * @param string $title
+     * @param string|null $title
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
         return $this;
@@ -268,20 +268,20 @@ class SalesDataShipmentTrackInterface
     /**
      * Track number.
      *
-     * @return string
+     * @return string|null
      */
-    public function getTrackNumber(): string
+    public function getTrackNumber(): ?string
     {
         return $this->trackNumber;
     }
     /**
      * Track number.
      *
-     * @param string $trackNumber
+     * @param string|null $trackNumber
      *
      * @return self
      */
-    public function setTrackNumber(string $trackNumber): self
+    public function setTrackNumber(?string $trackNumber): self
     {
         $this->trackNumber = $trackNumber;
         return $this;
@@ -289,20 +289,20 @@ class SalesDataShipmentTrackInterface
     /**
      * Updated-at timestamp.
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt(): ?string
     {
         return $this->updatedAt;
     }
     /**
      * Updated-at timestamp.
      *
-     * @param string $updatedAt
+     * @param string|null $updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(?string $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
         return $this;
@@ -310,20 +310,20 @@ class SalesDataShipmentTrackInterface
     /**
      * Weight.
      *
-     * @return float
+     * @return float|null
      */
-    public function getWeight(): float
+    public function getWeight(): ?float
     {
         return $this->weight;
     }
     /**
      * Weight.
      *
-     * @param float $weight
+     * @param float|null $weight
      *
      * @return self
      */
-    public function setWeight(float $weight): self
+    public function setWeight(?float $weight): self
     {
         $this->weight = $weight;
         return $this;

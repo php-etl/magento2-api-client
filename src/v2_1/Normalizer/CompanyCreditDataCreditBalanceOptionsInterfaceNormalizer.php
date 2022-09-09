@@ -40,17 +40,25 @@ class CompanyCreditDataCreditBalanceOptionsInterfaceNormalizer implements Denorm
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('currency_base', $data)) {
+        if (\array_key_exists('currency_base', $data) && $data['currency_base'] !== null) {
             $object->setCurrencyBase($data['currency_base']);
+        } elseif (\array_key_exists('currency_base', $data) && $data['currency_base'] === null) {
+            $object->setCurrencyBase(null);
         }
-        if (\array_key_exists('currency_display', $data)) {
+        if (\array_key_exists('currency_display', $data) && $data['currency_display'] !== null) {
             $object->setCurrencyDisplay($data['currency_display']);
+        } elseif (\array_key_exists('currency_display', $data) && $data['currency_display'] === null) {
+            $object->setCurrencyDisplay(null);
         }
-        if (\array_key_exists('order_increment', $data)) {
+        if (\array_key_exists('order_increment', $data) && $data['order_increment'] !== null) {
             $object->setOrderIncrement($data['order_increment']);
+        } elseif (\array_key_exists('order_increment', $data) && $data['order_increment'] === null) {
+            $object->setOrderIncrement(null);
         }
-        if (\array_key_exists('purchase_order', $data)) {
+        if (\array_key_exists('purchase_order', $data) && $data['purchase_order'] !== null) {
             $object->setPurchaseOrder($data['purchase_order']);
+        } elseif (\array_key_exists('purchase_order', $data) && $data['purchase_order'] === null) {
+            $object->setPurchaseOrder(null);
         }
         return $object;
     }

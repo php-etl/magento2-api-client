@@ -40,64 +40,82 @@ class CatalogDataProductExtensionInterfaceNormalizer implements DenormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('bundle_product_options', $data)) {
+        if (\array_key_exists('bundle_product_options', $data) && $data['bundle_product_options'] !== null) {
             $values = array();
             foreach ($data['bundle_product_options'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\BundleDataOptionInterface', 'json', $context);
             }
             $object->setBundleProductOptions($values);
+        } elseif (\array_key_exists('bundle_product_options', $data) && $data['bundle_product_options'] === null) {
+            $object->setBundleProductOptions(null);
         }
-        if (\array_key_exists('category_links', $data)) {
+        if (\array_key_exists('category_links', $data) && $data['category_links'] !== null) {
             $values_1 = array();
             foreach ($data['category_links'] as $value_1) {
                 $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataCategoryLinkInterface', 'json', $context);
             }
             $object->setCategoryLinks($values_1);
+        } elseif (\array_key_exists('category_links', $data) && $data['category_links'] === null) {
+            $object->setCategoryLinks(null);
         }
-        if (\array_key_exists('configurable_product_links', $data)) {
+        if (\array_key_exists('configurable_product_links', $data) && $data['configurable_product_links'] !== null) {
             $values_2 = array();
             foreach ($data['configurable_product_links'] as $value_2) {
                 $values_2[] = $value_2;
             }
             $object->setConfigurableProductLinks($values_2);
+        } elseif (\array_key_exists('configurable_product_links', $data) && $data['configurable_product_links'] === null) {
+            $object->setConfigurableProductLinks(null);
         }
-        if (\array_key_exists('configurable_product_options', $data)) {
+        if (\array_key_exists('configurable_product_options', $data) && $data['configurable_product_options'] !== null) {
             $values_3 = array();
             foreach ($data['configurable_product_options'] as $value_3) {
                 $values_3[] = $this->denormalizer->denormalize($value_3, 'Kiboko\\Magento\\V2_1\\Model\\ConfigurableProductDataOptionInterface', 'json', $context);
             }
             $object->setConfigurableProductOptions($values_3);
+        } elseif (\array_key_exists('configurable_product_options', $data) && $data['configurable_product_options'] === null) {
+            $object->setConfigurableProductOptions(null);
         }
-        if (\array_key_exists('downloadable_product_links', $data)) {
+        if (\array_key_exists('downloadable_product_links', $data) && $data['downloadable_product_links'] !== null) {
             $values_4 = array();
             foreach ($data['downloadable_product_links'] as $value_4) {
                 $values_4[] = $this->denormalizer->denormalize($value_4, 'Kiboko\\Magento\\V2_1\\Model\\DownloadableDataLinkInterface', 'json', $context);
             }
             $object->setDownloadableProductLinks($values_4);
+        } elseif (\array_key_exists('downloadable_product_links', $data) && $data['downloadable_product_links'] === null) {
+            $object->setDownloadableProductLinks(null);
         }
-        if (\array_key_exists('downloadable_product_samples', $data)) {
+        if (\array_key_exists('downloadable_product_samples', $data) && $data['downloadable_product_samples'] !== null) {
             $values_5 = array();
             foreach ($data['downloadable_product_samples'] as $value_5) {
                 $values_5[] = $this->denormalizer->denormalize($value_5, 'Kiboko\\Magento\\V2_1\\Model\\DownloadableDataSampleInterface', 'json', $context);
             }
             $object->setDownloadableProductSamples($values_5);
+        } elseif (\array_key_exists('downloadable_product_samples', $data) && $data['downloadable_product_samples'] === null) {
+            $object->setDownloadableProductSamples(null);
         }
-        if (\array_key_exists('giftcard_amounts', $data)) {
+        if (\array_key_exists('giftcard_amounts', $data) && $data['giftcard_amounts'] !== null) {
             $values_6 = array();
             foreach ($data['giftcard_amounts'] as $value_6) {
                 $values_6[] = $this->denormalizer->denormalize($value_6, 'Kiboko\\Magento\\V2_1\\Model\\GiftCardDataGiftcardAmountInterface', 'json', $context);
             }
             $object->setGiftcardAmounts($values_6);
+        } elseif (\array_key_exists('giftcard_amounts', $data) && $data['giftcard_amounts'] === null) {
+            $object->setGiftcardAmounts(null);
         }
-        if (\array_key_exists('stock_item', $data)) {
+        if (\array_key_exists('stock_item', $data) && $data['stock_item'] !== null) {
             $object->setStockItem($this->denormalizer->denormalize($data['stock_item'], 'Kiboko\\Magento\\V2_1\\Model\\CatalogInventoryDataStockItemInterface', 'json', $context));
+        } elseif (\array_key_exists('stock_item', $data) && $data['stock_item'] === null) {
+            $object->setStockItem(null);
         }
-        if (\array_key_exists('website_ids', $data)) {
+        if (\array_key_exists('website_ids', $data) && $data['website_ids'] !== null) {
             $values_7 = array();
             foreach ($data['website_ids'] as $value_7) {
                 $values_7[] = $value_7;
             }
             $object->setWebsiteIds($values_7);
+        } elseif (\array_key_exists('website_ids', $data) && $data['website_ids'] === null) {
+            $object->setWebsiteIds(null);
         }
         return $object;
     }

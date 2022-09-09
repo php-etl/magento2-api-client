@@ -7,37 +7,37 @@ class CatalogDataSpecialPriceInterface
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\SpecialPriceInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Product special price value.
      *
-     * @var float
+     * @var float|null
      */
     protected $price;
     /**
      * Start date for special price in Y-m-d H:i:s format.
      *
-     * @var string
+     * @var string|null
      */
     protected $priceFrom;
     /**
      * End date for special price in Y-m-d H:i:s format.
      *
-     * @var string
+     * @var string|null
      */
     protected $priceTo;
     /**
      * SKU of product, that contains special price value.
      *
-     * @var string
+     * @var string|null
      */
     protected $sku;
     /**
      * ID of store, that contains special price value.
      *
-     * @var int
+     * @var int|null
      */
     protected $storeId;
     /**
@@ -64,20 +64,20 @@ class CatalogDataSpecialPriceInterface
     /**
      * Product special price value.
      *
-     * @return float
+     * @return float|null
      */
-    public function getPrice(): float
+    public function getPrice(): ?float
     {
         return $this->price;
     }
     /**
      * Product special price value.
      *
-     * @param float $price
+     * @param float|null $price
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(?float $price): self
     {
         $this->price = $price;
         return $this;
@@ -85,20 +85,20 @@ class CatalogDataSpecialPriceInterface
     /**
      * Start date for special price in Y-m-d H:i:s format.
      *
-     * @return string
+     * @return string|null
      */
-    public function getPriceFrom(): string
+    public function getPriceFrom(): ?string
     {
         return $this->priceFrom;
     }
     /**
      * Start date for special price in Y-m-d H:i:s format.
      *
-     * @param string $priceFrom
+     * @param string|null $priceFrom
      *
      * @return self
      */
-    public function setPriceFrom(string $priceFrom): self
+    public function setPriceFrom(?string $priceFrom): self
     {
         $this->priceFrom = $priceFrom;
         return $this;
@@ -106,20 +106,20 @@ class CatalogDataSpecialPriceInterface
     /**
      * End date for special price in Y-m-d H:i:s format.
      *
-     * @return string
+     * @return string|null
      */
-    public function getPriceTo(): string
+    public function getPriceTo(): ?string
     {
         return $this->priceTo;
     }
     /**
      * End date for special price in Y-m-d H:i:s format.
      *
-     * @param string $priceTo
+     * @param string|null $priceTo
      *
      * @return self
      */
-    public function setPriceTo(string $priceTo): self
+    public function setPriceTo(?string $priceTo): self
     {
         $this->priceTo = $priceTo;
         return $this;
@@ -127,20 +127,20 @@ class CatalogDataSpecialPriceInterface
     /**
      * SKU of product, that contains special price value.
      *
-     * @return string
+     * @return string|null
      */
-    public function getSku(): string
+    public function getSku(): ?string
     {
         return $this->sku;
     }
     /**
      * SKU of product, that contains special price value.
      *
-     * @param string $sku
+     * @param string|null $sku
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(?string $sku): self
     {
         $this->sku = $sku;
         return $this;
@@ -148,20 +148,20 @@ class CatalogDataSpecialPriceInterface
     /**
      * ID of store, that contains special price value.
      *
-     * @return int
+     * @return int|null
      */
-    public function getStoreId(): int
+    public function getStoreId(): ?int
     {
         return $this->storeId;
     }
     /**
      * ID of store, that contains special price value.
      *
-     * @param int $storeId
+     * @param int|null $storeId
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(?int $storeId): self
     {
         $this->storeId = $storeId;
         return $this;

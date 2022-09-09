@@ -7,26 +7,26 @@ class V1TaxRatesPutBody
     /**
      * Tax rate interface.
      *
-     * @var TaxDataTaxRateInterface
+     * @var TaxDataTaxRateInterface|null
      */
     protected $taxRate;
     /**
      * Tax rate interface.
      *
-     * @return TaxDataTaxRateInterface
+     * @return TaxDataTaxRateInterface|null
      */
-    public function getTaxRate(): TaxDataTaxRateInterface
+    public function getTaxRate(): ?TaxDataTaxRateInterface
     {
         return $this->taxRate;
     }
     /**
      * Tax rate interface.
      *
-     * @param TaxDataTaxRateInterface $taxRate
+     * @param TaxDataTaxRateInterface|null $taxRate
      *
      * @return self
      */
-    public function setTaxRate(TaxDataTaxRateInterface $taxRate): self
+    public function setTaxRate(?TaxDataTaxRateInterface $taxRate): self
     {
         $this->taxRate = $taxRate;
         return $this;

@@ -7,32 +7,32 @@ class V1ProductsPostBody
     /**
      *
      *
-     * @var CatalogDataProductInterface
+     * @var CatalogDataProductInterface|null
      */
     protected $product;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $saveOptions;
     /**
      *
      *
-     * @return CatalogDataProductInterface
+     * @return CatalogDataProductInterface|null
      */
-    public function getProduct(): CatalogDataProductInterface
+    public function getProduct(): ?CatalogDataProductInterface
     {
         return $this->product;
     }
     /**
      *
      *
-     * @param CatalogDataProductInterface $product
+     * @param CatalogDataProductInterface|null $product
      *
      * @return self
      */
-    public function setProduct(CatalogDataProductInterface $product): self
+    public function setProduct(?CatalogDataProductInterface $product): self
     {
         $this->product = $product;
         return $this;
@@ -40,20 +40,20 @@ class V1ProductsPostBody
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getSaveOptions(): bool
+    public function getSaveOptions(): ?bool
     {
         return $this->saveOptions;
     }
     /**
      *
      *
-     * @param bool $saveOptions
+     * @param bool|null $saveOptions
      *
      * @return self
      */
-    public function setSaveOptions(bool $saveOptions): self
+    public function setSaveOptions(?bool $saveOptions): self
     {
         $this->saveOptions = $saveOptions;
         return $this;

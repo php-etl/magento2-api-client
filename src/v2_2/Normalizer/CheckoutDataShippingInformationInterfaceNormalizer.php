@@ -40,27 +40,39 @@ class CheckoutDataShippingInformationInterfaceNormalizer implements Denormalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('billing_address', $data)) {
+        if (\array_key_exists('billing_address', $data) && $data['billing_address'] !== null) {
             $object->setBillingAddress($this->denormalizer->denormalize($data['billing_address'], 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataAddressInterface', 'json', $context));
+        } elseif (\array_key_exists('billing_address', $data) && $data['billing_address'] === null) {
+            $object->setBillingAddress(null);
         }
-        if (\array_key_exists('custom_attributes', $data)) {
+        if (\array_key_exists('custom_attributes', $data) && $data['custom_attributes'] !== null) {
             $values = array();
             foreach ($data['custom_attributes'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setCustomAttributes($values);
+        } elseif (\array_key_exists('custom_attributes', $data) && $data['custom_attributes'] === null) {
+            $object->setCustomAttributes(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('shipping_address', $data)) {
+        if (\array_key_exists('shipping_address', $data) && $data['shipping_address'] !== null) {
             $object->setShippingAddress($this->denormalizer->denormalize($data['shipping_address'], 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataAddressInterface', 'json', $context));
+        } elseif (\array_key_exists('shipping_address', $data) && $data['shipping_address'] === null) {
+            $object->setShippingAddress(null);
         }
-        if (\array_key_exists('shipping_carrier_code', $data)) {
+        if (\array_key_exists('shipping_carrier_code', $data) && $data['shipping_carrier_code'] !== null) {
             $object->setShippingCarrierCode($data['shipping_carrier_code']);
+        } elseif (\array_key_exists('shipping_carrier_code', $data) && $data['shipping_carrier_code'] === null) {
+            $object->setShippingCarrierCode(null);
         }
-        if (\array_key_exists('shipping_method_code', $data)) {
+        if (\array_key_exists('shipping_method_code', $data) && $data['shipping_method_code'] !== null) {
             $object->setShippingMethodCode($data['shipping_method_code']);
+        } elseif (\array_key_exists('shipping_method_code', $data) && $data['shipping_method_code'] === null) {
+            $object->setShippingMethodCode(null);
         }
         return $object;
     }

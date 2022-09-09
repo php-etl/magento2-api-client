@@ -40,33 +40,49 @@ class CatalogDataCategoryTreeInterfaceNormalizer implements DenormalizerInterfac
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('children_data', $data)) {
+        if (\array_key_exists('children_data', $data) && $data['children_data'] !== null) {
             $values = array();
             foreach ($data['children_data'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataCategoryTreeInterface', 'json', $context);
             }
             $object->setChildrenData($values);
+        } elseif (\array_key_exists('children_data', $data) && $data['children_data'] === null) {
+            $object->setChildrenData(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('is_active', $data)) {
+        if (\array_key_exists('is_active', $data) && $data['is_active'] !== null) {
             $object->setIsActive($data['is_active']);
+        } elseif (\array_key_exists('is_active', $data) && $data['is_active'] === null) {
+            $object->setIsActive(null);
         }
-        if (\array_key_exists('level', $data)) {
+        if (\array_key_exists('level', $data) && $data['level'] !== null) {
             $object->setLevel($data['level']);
+        } elseif (\array_key_exists('level', $data) && $data['level'] === null) {
+            $object->setLevel(null);
         }
-        if (\array_key_exists('name', $data)) {
+        if (\array_key_exists('name', $data) && $data['name'] !== null) {
             $object->setName($data['name']);
+        } elseif (\array_key_exists('name', $data) && $data['name'] === null) {
+            $object->setName(null);
         }
-        if (\array_key_exists('parent_id', $data)) {
+        if (\array_key_exists('parent_id', $data) && $data['parent_id'] !== null) {
             $object->setParentId($data['parent_id']);
+        } elseif (\array_key_exists('parent_id', $data) && $data['parent_id'] === null) {
+            $object->setParentId(null);
         }
-        if (\array_key_exists('position', $data)) {
+        if (\array_key_exists('position', $data) && $data['position'] !== null) {
             $object->setPosition($data['position']);
+        } elseif (\array_key_exists('position', $data) && $data['position'] === null) {
+            $object->setPosition(null);
         }
-        if (\array_key_exists('product_count', $data)) {
+        if (\array_key_exists('product_count', $data) && $data['product_count'] !== null) {
             $object->setProductCount($data['product_count']);
+        } elseif (\array_key_exists('product_count', $data) && $data['product_count'] === null) {
+            $object->setProductCount(null);
         }
         return $object;
     }

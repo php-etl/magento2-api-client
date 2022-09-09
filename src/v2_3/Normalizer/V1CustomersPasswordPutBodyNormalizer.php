@@ -40,14 +40,20 @@ class V1CustomersPasswordPutBodyNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('email', $data)) {
+        if (\array_key_exists('email', $data) && $data['email'] !== null) {
             $object->setEmail($data['email']);
+        } elseif (\array_key_exists('email', $data) && $data['email'] === null) {
+            $object->setEmail(null);
         }
-        if (\array_key_exists('template', $data)) {
+        if (\array_key_exists('template', $data) && $data['template'] !== null) {
             $object->setTemplate($data['template']);
+        } elseif (\array_key_exists('template', $data) && $data['template'] === null) {
+            $object->setTemplate(null);
         }
-        if (\array_key_exists('websiteId', $data)) {
+        if (\array_key_exists('websiteId', $data) && $data['websiteId'] !== null) {
             $object->setWebsiteId($data['websiteId']);
+        } elseif (\array_key_exists('websiteId', $data) && $data['websiteId'] === null) {
+            $object->setWebsiteId(null);
         }
         return $object;
     }

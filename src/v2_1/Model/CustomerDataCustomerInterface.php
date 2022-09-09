@@ -7,158 +7,158 @@ class CustomerDataCustomerInterface
     /**
      * Customer addresses.
      *
-     * @var CustomerDataAddressInterface[]
+     * @var CustomerDataAddressInterface[]|null
      */
     protected $addresses;
     /**
      * Confirmation
      *
-     * @var string
+     * @var string|null
      */
     protected $confirmation;
     /**
      * Created at time
      *
-     * @var string
+     * @var string|null
      */
     protected $createdAt;
     /**
      * Created in area
      *
-     * @var string
+     * @var string|null
      */
     protected $createdIn;
     /**
      * Custom attributes values.
      *
-     * @var FrameworkAttributeInterface[]
+     * @var FrameworkAttributeInterface[]|null
      */
     protected $customAttributes;
     /**
      * Default billing address id
      *
-     * @var string
+     * @var string|null
      */
     protected $defaultBilling;
     /**
      * Default shipping address id
      *
-     * @var string
+     * @var string|null
      */
     protected $defaultShipping;
     /**
      * Disable auto group change flag.
      *
-     * @var int
+     * @var int|null
      */
     protected $disableAutoGroupChange;
     /**
      * Date of birth
      *
-     * @var string
+     * @var string|null
      */
     protected $dob;
     /**
      * Email address
      *
-     * @var string
+     * @var string|null
      */
     protected $email;
     /**
      * ExtensionInterface class for @see \Magento\Customer\Api\Data\CustomerInterface
      *
-     * @var CustomerDataCustomerExtensionInterface
+     * @var CustomerDataCustomerExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * First name
      *
-     * @var string
+     * @var string|null
      */
     protected $firstname;
     /**
      * Gender
      *
-     * @var int
+     * @var int|null
      */
     protected $gender;
     /**
      * Group id
      *
-     * @var int
+     * @var int|null
      */
     protected $groupId;
     /**
      * Customer id
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Last name
      *
-     * @var string
+     * @var string|null
      */
     protected $lastname;
     /**
      * Middle name
      *
-     * @var string
+     * @var string|null
      */
     protected $middlename;
     /**
      * Prefix
      *
-     * @var string
+     * @var string|null
      */
     protected $prefix;
     /**
      * Store id
      *
-     * @var int
+     * @var int|null
      */
     protected $storeId;
     /**
      * Suffix
      *
-     * @var string
+     * @var string|null
      */
     protected $suffix;
     /**
      * Tax Vat
      *
-     * @var string
+     * @var string|null
      */
     protected $taxvat;
     /**
      * Updated at time
      *
-     * @var string
+     * @var string|null
      */
     protected $updatedAt;
     /**
      * Website id
      *
-     * @var int
+     * @var int|null
      */
     protected $websiteId;
     /**
      * Customer addresses.
      *
-     * @return CustomerDataAddressInterface[]
+     * @return CustomerDataAddressInterface[]|null
      */
-    public function getAddresses(): array
+    public function getAddresses(): ?array
     {
         return $this->addresses;
     }
     /**
      * Customer addresses.
      *
-     * @param CustomerDataAddressInterface[] $addresses
+     * @param CustomerDataAddressInterface[]|null $addresses
      *
      * @return self
      */
-    public function setAddresses(array $addresses): self
+    public function setAddresses(?array $addresses): self
     {
         $this->addresses = $addresses;
         return $this;
@@ -166,20 +166,20 @@ class CustomerDataCustomerInterface
     /**
      * Confirmation
      *
-     * @return string
+     * @return string|null
      */
-    public function getConfirmation(): string
+    public function getConfirmation(): ?string
     {
         return $this->confirmation;
     }
     /**
      * Confirmation
      *
-     * @param string $confirmation
+     * @param string|null $confirmation
      *
      * @return self
      */
-    public function setConfirmation(string $confirmation): self
+    public function setConfirmation(?string $confirmation): self
     {
         $this->confirmation = $confirmation;
         return $this;
@@ -187,20 +187,20 @@ class CustomerDataCustomerInterface
     /**
      * Created at time
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt(): ?string
     {
         return $this->createdAt;
     }
     /**
      * Created at time
      *
-     * @param string $createdAt
+     * @param string|null $createdAt
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(?string $createdAt): self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -208,20 +208,20 @@ class CustomerDataCustomerInterface
     /**
      * Created in area
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreatedIn(): string
+    public function getCreatedIn(): ?string
     {
         return $this->createdIn;
     }
     /**
      * Created in area
      *
-     * @param string $createdIn
+     * @param string|null $createdIn
      *
      * @return self
      */
-    public function setCreatedIn(string $createdIn): self
+    public function setCreatedIn(?string $createdIn): self
     {
         $this->createdIn = $createdIn;
         return $this;
@@ -229,20 +229,20 @@ class CustomerDataCustomerInterface
     /**
      * Custom attributes values.
      *
-     * @return FrameworkAttributeInterface[]
+     * @return FrameworkAttributeInterface[]|null
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes(): ?array
     {
         return $this->customAttributes;
     }
     /**
      * Custom attributes values.
      *
-     * @param FrameworkAttributeInterface[] $customAttributes
+     * @param FrameworkAttributeInterface[]|null $customAttributes
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(?array $customAttributes): self
     {
         $this->customAttributes = $customAttributes;
         return $this;
@@ -250,20 +250,20 @@ class CustomerDataCustomerInterface
     /**
      * Default billing address id
      *
-     * @return string
+     * @return string|null
      */
-    public function getDefaultBilling(): string
+    public function getDefaultBilling(): ?string
     {
         return $this->defaultBilling;
     }
     /**
      * Default billing address id
      *
-     * @param string $defaultBilling
+     * @param string|null $defaultBilling
      *
      * @return self
      */
-    public function setDefaultBilling(string $defaultBilling): self
+    public function setDefaultBilling(?string $defaultBilling): self
     {
         $this->defaultBilling = $defaultBilling;
         return $this;
@@ -271,20 +271,20 @@ class CustomerDataCustomerInterface
     /**
      * Default shipping address id
      *
-     * @return string
+     * @return string|null
      */
-    public function getDefaultShipping(): string
+    public function getDefaultShipping(): ?string
     {
         return $this->defaultShipping;
     }
     /**
      * Default shipping address id
      *
-     * @param string $defaultShipping
+     * @param string|null $defaultShipping
      *
      * @return self
      */
-    public function setDefaultShipping(string $defaultShipping): self
+    public function setDefaultShipping(?string $defaultShipping): self
     {
         $this->defaultShipping = $defaultShipping;
         return $this;
@@ -292,20 +292,20 @@ class CustomerDataCustomerInterface
     /**
      * Disable auto group change flag.
      *
-     * @return int
+     * @return int|null
      */
-    public function getDisableAutoGroupChange(): int
+    public function getDisableAutoGroupChange(): ?int
     {
         return $this->disableAutoGroupChange;
     }
     /**
      * Disable auto group change flag.
      *
-     * @param int $disableAutoGroupChange
+     * @param int|null $disableAutoGroupChange
      *
      * @return self
      */
-    public function setDisableAutoGroupChange(int $disableAutoGroupChange): self
+    public function setDisableAutoGroupChange(?int $disableAutoGroupChange): self
     {
         $this->disableAutoGroupChange = $disableAutoGroupChange;
         return $this;
@@ -313,20 +313,20 @@ class CustomerDataCustomerInterface
     /**
      * Date of birth
      *
-     * @return string
+     * @return string|null
      */
-    public function getDob(): string
+    public function getDob(): ?string
     {
         return $this->dob;
     }
     /**
      * Date of birth
      *
-     * @param string $dob
+     * @param string|null $dob
      *
      * @return self
      */
-    public function setDob(string $dob): self
+    public function setDob(?string $dob): self
     {
         $this->dob = $dob;
         return $this;
@@ -334,20 +334,20 @@ class CustomerDataCustomerInterface
     /**
      * Email address
      *
-     * @return string
+     * @return string|null
      */
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
     /**
      * Email address
      *
-     * @param string $email
+     * @param string|null $email
      *
      * @return self
      */
-    public function setEmail(string $email): self
+    public function setEmail(?string $email): self
     {
         $this->email = $email;
         return $this;
@@ -355,20 +355,20 @@ class CustomerDataCustomerInterface
     /**
      * ExtensionInterface class for @see \Magento\Customer\Api\Data\CustomerInterface
      *
-     * @return CustomerDataCustomerExtensionInterface
+     * @return CustomerDataCustomerExtensionInterface|null
      */
-    public function getExtensionAttributes(): CustomerDataCustomerExtensionInterface
+    public function getExtensionAttributes(): ?CustomerDataCustomerExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Customer\Api\Data\CustomerInterface
      *
-     * @param CustomerDataCustomerExtensionInterface $extensionAttributes
+     * @param CustomerDataCustomerExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(CustomerDataCustomerExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?CustomerDataCustomerExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -376,20 +376,20 @@ class CustomerDataCustomerInterface
     /**
      * First name
      *
-     * @return string
+     * @return string|null
      */
-    public function getFirstname(): string
+    public function getFirstname(): ?string
     {
         return $this->firstname;
     }
     /**
      * First name
      *
-     * @param string $firstname
+     * @param string|null $firstname
      *
      * @return self
      */
-    public function setFirstname(string $firstname): self
+    public function setFirstname(?string $firstname): self
     {
         $this->firstname = $firstname;
         return $this;
@@ -397,20 +397,20 @@ class CustomerDataCustomerInterface
     /**
      * Gender
      *
-     * @return int
+     * @return int|null
      */
-    public function getGender(): int
+    public function getGender(): ?int
     {
         return $this->gender;
     }
     /**
      * Gender
      *
-     * @param int $gender
+     * @param int|null $gender
      *
      * @return self
      */
-    public function setGender(int $gender): self
+    public function setGender(?int $gender): self
     {
         $this->gender = $gender;
         return $this;
@@ -418,20 +418,20 @@ class CustomerDataCustomerInterface
     /**
      * Group id
      *
-     * @return int
+     * @return int|null
      */
-    public function getGroupId(): int
+    public function getGroupId(): ?int
     {
         return $this->groupId;
     }
     /**
      * Group id
      *
-     * @param int $groupId
+     * @param int|null $groupId
      *
      * @return self
      */
-    public function setGroupId(int $groupId): self
+    public function setGroupId(?int $groupId): self
     {
         $this->groupId = $groupId;
         return $this;
@@ -439,20 +439,20 @@ class CustomerDataCustomerInterface
     /**
      * Customer id
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * Customer id
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -460,20 +460,20 @@ class CustomerDataCustomerInterface
     /**
      * Last name
      *
-     * @return string
+     * @return string|null
      */
-    public function getLastname(): string
+    public function getLastname(): ?string
     {
         return $this->lastname;
     }
     /**
      * Last name
      *
-     * @param string $lastname
+     * @param string|null $lastname
      *
      * @return self
      */
-    public function setLastname(string $lastname): self
+    public function setLastname(?string $lastname): self
     {
         $this->lastname = $lastname;
         return $this;
@@ -481,20 +481,20 @@ class CustomerDataCustomerInterface
     /**
      * Middle name
      *
-     * @return string
+     * @return string|null
      */
-    public function getMiddlename(): string
+    public function getMiddlename(): ?string
     {
         return $this->middlename;
     }
     /**
      * Middle name
      *
-     * @param string $middlename
+     * @param string|null $middlename
      *
      * @return self
      */
-    public function setMiddlename(string $middlename): self
+    public function setMiddlename(?string $middlename): self
     {
         $this->middlename = $middlename;
         return $this;
@@ -502,20 +502,20 @@ class CustomerDataCustomerInterface
     /**
      * Prefix
      *
-     * @return string
+     * @return string|null
      */
-    public function getPrefix(): string
+    public function getPrefix(): ?string
     {
         return $this->prefix;
     }
     /**
      * Prefix
      *
-     * @param string $prefix
+     * @param string|null $prefix
      *
      * @return self
      */
-    public function setPrefix(string $prefix): self
+    public function setPrefix(?string $prefix): self
     {
         $this->prefix = $prefix;
         return $this;
@@ -523,20 +523,20 @@ class CustomerDataCustomerInterface
     /**
      * Store id
      *
-     * @return int
+     * @return int|null
      */
-    public function getStoreId(): int
+    public function getStoreId(): ?int
     {
         return $this->storeId;
     }
     /**
      * Store id
      *
-     * @param int $storeId
+     * @param int|null $storeId
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(?int $storeId): self
     {
         $this->storeId = $storeId;
         return $this;
@@ -544,20 +544,20 @@ class CustomerDataCustomerInterface
     /**
      * Suffix
      *
-     * @return string
+     * @return string|null
      */
-    public function getSuffix(): string
+    public function getSuffix(): ?string
     {
         return $this->suffix;
     }
     /**
      * Suffix
      *
-     * @param string $suffix
+     * @param string|null $suffix
      *
      * @return self
      */
-    public function setSuffix(string $suffix): self
+    public function setSuffix(?string $suffix): self
     {
         $this->suffix = $suffix;
         return $this;
@@ -565,20 +565,20 @@ class CustomerDataCustomerInterface
     /**
      * Tax Vat
      *
-     * @return string
+     * @return string|null
      */
-    public function getTaxvat(): string
+    public function getTaxvat(): ?string
     {
         return $this->taxvat;
     }
     /**
      * Tax Vat
      *
-     * @param string $taxvat
+     * @param string|null $taxvat
      *
      * @return self
      */
-    public function setTaxvat(string $taxvat): self
+    public function setTaxvat(?string $taxvat): self
     {
         $this->taxvat = $taxvat;
         return $this;
@@ -586,20 +586,20 @@ class CustomerDataCustomerInterface
     /**
      * Updated at time
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt(): ?string
     {
         return $this->updatedAt;
     }
     /**
      * Updated at time
      *
-     * @param string $updatedAt
+     * @param string|null $updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(?string $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
         return $this;
@@ -607,20 +607,20 @@ class CustomerDataCustomerInterface
     /**
      * Website id
      *
-     * @return int
+     * @return int|null
      */
-    public function getWebsiteId(): int
+    public function getWebsiteId(): ?int
     {
         return $this->websiteId;
     }
     /**
      * Website id
      *
-     * @param int $websiteId
+     * @param int|null $websiteId
      *
      * @return self
      */
-    public function setWebsiteId(int $websiteId): self
+    public function setWebsiteId(?int $websiteId): self
     {
         $this->websiteId = $websiteId;
         return $this;

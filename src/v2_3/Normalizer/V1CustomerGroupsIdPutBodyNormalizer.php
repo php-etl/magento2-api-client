@@ -40,8 +40,10 @@ class V1CustomerGroupsIdPutBodyNormalizer implements DenormalizerInterface, Norm
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('group', $data)) {
+        if (\array_key_exists('group', $data) && $data['group'] !== null) {
             $object->setGroup($this->denormalizer->denormalize($data['group'], 'Kiboko\\Magento\\V2_3\\Model\\CustomerDataGroupInterface', 'json', $context));
+        } elseif (\array_key_exists('group', $data) && $data['group'] === null) {
+            $object->setGroup(null);
         }
         return $object;
     }

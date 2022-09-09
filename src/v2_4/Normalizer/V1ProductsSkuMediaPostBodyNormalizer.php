@@ -40,8 +40,10 @@ class V1ProductsSkuMediaPostBodyNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('entry', $data)) {
+        if (\array_key_exists('entry', $data) && $data['entry'] !== null) {
             $object->setEntry($this->denormalizer->denormalize($data['entry'], 'Kiboko\\Magento\\V2_4\\Model\\CatalogDataProductAttributeMediaGalleryEntryInterface', 'json', $context));
+        } elseif (\array_key_exists('entry', $data) && $data['entry'] === null) {
+            $object->setEntry(null);
         }
         return $object;
     }

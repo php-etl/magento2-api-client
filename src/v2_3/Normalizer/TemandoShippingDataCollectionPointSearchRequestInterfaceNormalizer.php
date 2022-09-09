@@ -40,17 +40,25 @@ class TemandoShippingDataCollectionPointSearchRequestInterfaceNormalizer impleme
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('country_id', $data)) {
+        if (\array_key_exists('country_id', $data) && $data['country_id'] !== null) {
             $object->setCountryId($data['country_id']);
+        } elseif (\array_key_exists('country_id', $data) && $data['country_id'] === null) {
+            $object->setCountryId(null);
         }
-        if (\array_key_exists('pending', $data)) {
+        if (\array_key_exists('pending', $data) && $data['pending'] !== null) {
             $object->setPending($data['pending']);
+        } elseif (\array_key_exists('pending', $data) && $data['pending'] === null) {
+            $object->setPending(null);
         }
-        if (\array_key_exists('postcode', $data)) {
+        if (\array_key_exists('postcode', $data) && $data['postcode'] !== null) {
             $object->setPostcode($data['postcode']);
+        } elseif (\array_key_exists('postcode', $data) && $data['postcode'] === null) {
+            $object->setPostcode(null);
         }
-        if (\array_key_exists('shipping_address_id', $data)) {
+        if (\array_key_exists('shipping_address_id', $data) && $data['shipping_address_id'] !== null) {
             $object->setShippingAddressId($data['shipping_address_id']);
+        } elseif (\array_key_exists('shipping_address_id', $data) && $data['shipping_address_id'] === null) {
+            $object->setShippingAddressId(null);
         }
         return $object;
     }

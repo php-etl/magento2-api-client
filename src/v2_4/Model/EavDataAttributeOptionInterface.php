@@ -7,50 +7,50 @@ class EavDataAttributeOptionInterface
     /**
      * Default
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isDefault;
     /**
      * Option label
      *
-     * @var string
+     * @var string|null
      */
     protected $label;
     /**
      * Option order
      *
-     * @var int
+     * @var int|null
      */
     protected $sortOrder;
     /**
      * Option label for store scopes
      *
-     * @var EavDataAttributeOptionLabelInterface[]
+     * @var EavDataAttributeOptionLabelInterface[]|null
      */
     protected $storeLabels;
     /**
      * Option value
      *
-     * @var string
+     * @var string|null
      */
     protected $value;
     /**
      * Default
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsDefault(): bool
+    public function getIsDefault(): ?bool
     {
         return $this->isDefault;
     }
     /**
      * Default
      *
-     * @param bool $isDefault
+     * @param bool|null $isDefault
      *
      * @return self
      */
-    public function setIsDefault(bool $isDefault): self
+    public function setIsDefault(?bool $isDefault): self
     {
         $this->isDefault = $isDefault;
         return $this;
@@ -58,20 +58,20 @@ class EavDataAttributeOptionInterface
     /**
      * Option label
      *
-     * @return string
+     * @return string|null
      */
-    public function getLabel(): string
+    public function getLabel(): ?string
     {
         return $this->label;
     }
     /**
      * Option label
      *
-     * @param string $label
+     * @param string|null $label
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(?string $label): self
     {
         $this->label = $label;
         return $this;
@@ -79,20 +79,20 @@ class EavDataAttributeOptionInterface
     /**
      * Option order
      *
-     * @return int
+     * @return int|null
      */
-    public function getSortOrder(): int
+    public function getSortOrder(): ?int
     {
         return $this->sortOrder;
     }
     /**
      * Option order
      *
-     * @param int $sortOrder
+     * @param int|null $sortOrder
      *
      * @return self
      */
-    public function setSortOrder(int $sortOrder): self
+    public function setSortOrder(?int $sortOrder): self
     {
         $this->sortOrder = $sortOrder;
         return $this;
@@ -100,20 +100,20 @@ class EavDataAttributeOptionInterface
     /**
      * Option label for store scopes
      *
-     * @return EavDataAttributeOptionLabelInterface[]
+     * @return EavDataAttributeOptionLabelInterface[]|null
      */
-    public function getStoreLabels(): array
+    public function getStoreLabels(): ?array
     {
         return $this->storeLabels;
     }
     /**
      * Option label for store scopes
      *
-     * @param EavDataAttributeOptionLabelInterface[] $storeLabels
+     * @param EavDataAttributeOptionLabelInterface[]|null $storeLabels
      *
      * @return self
      */
-    public function setStoreLabels(array $storeLabels): self
+    public function setStoreLabels(?array $storeLabels): self
     {
         $this->storeLabels = $storeLabels;
         return $this;
@@ -121,20 +121,20 @@ class EavDataAttributeOptionInterface
     /**
      * Option value
      *
-     * @return string
+     * @return string|null
      */
-    public function getValue(): string
+    public function getValue(): ?string
     {
         return $this->value;
     }
     /**
      * Option value
      *
-     * @param string $value
+     * @param string|null $value
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(?string $value): self
     {
         $this->value = $value;
         return $this;

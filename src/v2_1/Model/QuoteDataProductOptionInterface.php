@@ -7,26 +7,26 @@ class QuoteDataProductOptionInterface
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\ProductOptionInterface
      *
-     * @var QuoteDataProductOptionExtensionInterface
+     * @var QuoteDataProductOptionExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\ProductOptionInterface
      *
-     * @return QuoteDataProductOptionExtensionInterface
+     * @return QuoteDataProductOptionExtensionInterface|null
      */
-    public function getExtensionAttributes(): QuoteDataProductOptionExtensionInterface
+    public function getExtensionAttributes(): ?QuoteDataProductOptionExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\ProductOptionInterface
      *
-     * @param QuoteDataProductOptionExtensionInterface $extensionAttributes
+     * @param QuoteDataProductOptionExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(QuoteDataProductOptionExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?QuoteDataProductOptionExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

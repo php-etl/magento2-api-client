@@ -40,32 +40,42 @@ class CatalogDataProductOptionExtensionInterfaceNormalizer implements Denormaliz
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('bundle_options', $data)) {
+        if (\array_key_exists('bundle_options', $data) && $data['bundle_options'] !== null) {
             $values = array();
             foreach ($data['bundle_options'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\BundleDataBundleOptionInterface', 'json', $context);
             }
             $object->setBundleOptions($values);
+        } elseif (\array_key_exists('bundle_options', $data) && $data['bundle_options'] === null) {
+            $object->setBundleOptions(null);
         }
-        if (\array_key_exists('configurable_item_options', $data)) {
+        if (\array_key_exists('configurable_item_options', $data) && $data['configurable_item_options'] !== null) {
             $values_1 = array();
             foreach ($data['configurable_item_options'] as $value_1) {
                 $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_2\\Model\\ConfigurableProductDataConfigurableItemOptionValueInterface', 'json', $context);
             }
             $object->setConfigurableItemOptions($values_1);
+        } elseif (\array_key_exists('configurable_item_options', $data) && $data['configurable_item_options'] === null) {
+            $object->setConfigurableItemOptions(null);
         }
-        if (\array_key_exists('custom_options', $data)) {
+        if (\array_key_exists('custom_options', $data) && $data['custom_options'] !== null) {
             $values_2 = array();
             foreach ($data['custom_options'] as $value_2) {
                 $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataCustomOptionInterface', 'json', $context);
             }
             $object->setCustomOptions($values_2);
+        } elseif (\array_key_exists('custom_options', $data) && $data['custom_options'] === null) {
+            $object->setCustomOptions(null);
         }
-        if (\array_key_exists('downloadable_option', $data)) {
+        if (\array_key_exists('downloadable_option', $data) && $data['downloadable_option'] !== null) {
             $object->setDownloadableOption($this->denormalizer->denormalize($data['downloadable_option'], 'Kiboko\\Magento\\V2_2\\Model\\DownloadableDataDownloadableOptionInterface', 'json', $context));
+        } elseif (\array_key_exists('downloadable_option', $data) && $data['downloadable_option'] === null) {
+            $object->setDownloadableOption(null);
         }
-        if (\array_key_exists('giftcard_item_option', $data)) {
+        if (\array_key_exists('giftcard_item_option', $data) && $data['giftcard_item_option'] !== null) {
             $object->setGiftcardItemOption($this->denormalizer->denormalize($data['giftcard_item_option'], 'Kiboko\\Magento\\V2_2\\Model\\GiftCardDataGiftCardOptionInterface', 'json', $context));
+        } elseif (\array_key_exists('giftcard_item_option', $data) && $data['giftcard_item_option'] === null) {
+            $object->setGiftcardItemOption(null);
         }
         return $object;
     }

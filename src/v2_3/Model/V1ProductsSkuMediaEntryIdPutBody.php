@@ -7,26 +7,26 @@ class V1ProductsSkuMediaEntryIdPutBody
     /**
      *
      *
-     * @var CatalogDataProductAttributeMediaGalleryEntryInterface
+     * @var CatalogDataProductAttributeMediaGalleryEntryInterface|null
      */
     protected $entry;
     /**
      *
      *
-     * @return CatalogDataProductAttributeMediaGalleryEntryInterface
+     * @return CatalogDataProductAttributeMediaGalleryEntryInterface|null
      */
-    public function getEntry(): CatalogDataProductAttributeMediaGalleryEntryInterface
+    public function getEntry(): ?CatalogDataProductAttributeMediaGalleryEntryInterface
     {
         return $this->entry;
     }
     /**
      *
      *
-     * @param CatalogDataProductAttributeMediaGalleryEntryInterface $entry
+     * @param CatalogDataProductAttributeMediaGalleryEntryInterface|null $entry
      *
      * @return self
      */
-    public function setEntry(CatalogDataProductAttributeMediaGalleryEntryInterface $entry): self
+    public function setEntry(?CatalogDataProductAttributeMediaGalleryEntryInterface $entry): self
     {
         $this->entry = $entry;
         return $this;

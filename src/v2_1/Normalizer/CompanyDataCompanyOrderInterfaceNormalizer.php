@@ -40,17 +40,25 @@ class CompanyDataCompanyOrderInterfaceNormalizer implements DenormalizerInterfac
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('company_id', $data)) {
+        if (\array_key_exists('company_id', $data) && $data['company_id'] !== null) {
             $object->setCompanyId($data['company_id']);
+        } elseif (\array_key_exists('company_id', $data) && $data['company_id'] === null) {
+            $object->setCompanyId(null);
         }
-        if (\array_key_exists('company_name', $data)) {
+        if (\array_key_exists('company_name', $data) && $data['company_name'] !== null) {
             $object->setCompanyName($data['company_name']);
+        } elseif (\array_key_exists('company_name', $data) && $data['company_name'] === null) {
+            $object->setCompanyName(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('order_id', $data)) {
+        if (\array_key_exists('order_id', $data) && $data['order_id'] !== null) {
             $object->setOrderId($data['order_id']);
+        } elseif (\array_key_exists('order_id', $data) && $data['order_id'] === null) {
+            $object->setOrderId(null);
         }
         return $object;
     }

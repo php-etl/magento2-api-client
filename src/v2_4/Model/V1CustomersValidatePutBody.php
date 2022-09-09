@@ -7,26 +7,26 @@ class V1CustomersValidatePutBody
     /**
      * Customer interface.
      *
-     * @var CustomerDataCustomerInterface
+     * @var CustomerDataCustomerInterface|null
      */
     protected $customer;
     /**
      * Customer interface.
      *
-     * @return CustomerDataCustomerInterface
+     * @return CustomerDataCustomerInterface|null
      */
-    public function getCustomer(): CustomerDataCustomerInterface
+    public function getCustomer(): ?CustomerDataCustomerInterface
     {
         return $this->customer;
     }
     /**
      * Customer interface.
      *
-     * @param CustomerDataCustomerInterface $customer
+     * @param CustomerDataCustomerInterface|null $customer
      *
      * @return self
      */
-    public function setCustomer(CustomerDataCustomerInterface $customer): self
+    public function setCustomer(?CustomerDataCustomerInterface $customer): self
     {
         $this->customer = $customer;
         return $this;

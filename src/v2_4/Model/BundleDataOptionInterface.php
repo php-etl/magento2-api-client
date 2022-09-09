@@ -7,49 +7,49 @@ class BundleDataOptionInterface
     /**
      * ExtensionInterface class for @see \Magento\Bundle\Api\Data\OptionInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Option id
      *
-     * @var int
+     * @var int|null
      */
     protected $optionId;
     /**
      * Option position
      *
-     * @var int
+     * @var int|null
      */
     protected $position;
     /**
      * Product links
      *
-     * @var BundleDataLinkInterface[]
+     * @var BundleDataLinkInterface[]|null
      */
     protected $productLinks;
     /**
      * Is required option
      *
-     * @var bool
+     * @var bool|null
      */
     protected $required;
     /**
      * Product sku
      *
-     * @var string
+     * @var string|null
      */
     protected $sku;
     /**
      * Option title
      *
-     * @var string
+     * @var string|null
      */
     protected $title;
     /**
      * Input type
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
@@ -76,20 +76,20 @@ class BundleDataOptionInterface
     /**
      * Option id
      *
-     * @return int
+     * @return int|null
      */
-    public function getOptionId(): int
+    public function getOptionId(): ?int
     {
         return $this->optionId;
     }
     /**
      * Option id
      *
-     * @param int $optionId
+     * @param int|null $optionId
      *
      * @return self
      */
-    public function setOptionId(int $optionId): self
+    public function setOptionId(?int $optionId): self
     {
         $this->optionId = $optionId;
         return $this;
@@ -97,20 +97,20 @@ class BundleDataOptionInterface
     /**
      * Option position
      *
-     * @return int
+     * @return int|null
      */
-    public function getPosition(): int
+    public function getPosition(): ?int
     {
         return $this->position;
     }
     /**
      * Option position
      *
-     * @param int $position
+     * @param int|null $position
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(?int $position): self
     {
         $this->position = $position;
         return $this;
@@ -118,20 +118,20 @@ class BundleDataOptionInterface
     /**
      * Product links
      *
-     * @return BundleDataLinkInterface[]
+     * @return BundleDataLinkInterface[]|null
      */
-    public function getProductLinks(): array
+    public function getProductLinks(): ?array
     {
         return $this->productLinks;
     }
     /**
      * Product links
      *
-     * @param BundleDataLinkInterface[] $productLinks
+     * @param BundleDataLinkInterface[]|null $productLinks
      *
      * @return self
      */
-    public function setProductLinks(array $productLinks): self
+    public function setProductLinks(?array $productLinks): self
     {
         $this->productLinks = $productLinks;
         return $this;
@@ -139,20 +139,20 @@ class BundleDataOptionInterface
     /**
      * Is required option
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getRequired(): bool
+    public function getRequired(): ?bool
     {
         return $this->required;
     }
     /**
      * Is required option
      *
-     * @param bool $required
+     * @param bool|null $required
      *
      * @return self
      */
-    public function setRequired(bool $required): self
+    public function setRequired(?bool $required): self
     {
         $this->required = $required;
         return $this;
@@ -160,20 +160,20 @@ class BundleDataOptionInterface
     /**
      * Product sku
      *
-     * @return string
+     * @return string|null
      */
-    public function getSku(): string
+    public function getSku(): ?string
     {
         return $this->sku;
     }
     /**
      * Product sku
      *
-     * @param string $sku
+     * @param string|null $sku
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(?string $sku): self
     {
         $this->sku = $sku;
         return $this;
@@ -181,20 +181,20 @@ class BundleDataOptionInterface
     /**
      * Option title
      *
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
     /**
      * Option title
      *
-     * @param string $title
+     * @param string|null $title
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
         return $this;
@@ -202,20 +202,20 @@ class BundleDataOptionInterface
     /**
      * Input type
      *
-     * @return string
+     * @return string|null
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
     /**
      * Input type
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type): self
+    public function setType(?string $type): self
     {
         $this->type = $type;
         return $this;

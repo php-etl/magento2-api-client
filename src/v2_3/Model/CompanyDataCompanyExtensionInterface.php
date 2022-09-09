@@ -7,44 +7,44 @@ class CompanyDataCompanyExtensionInterface
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $applicablePaymentMethod;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $availablePaymentMethods;
     /**
      * Interface CompanyQuoteConfigInterface
      *
-     * @var NegotiableQuoteDataCompanyQuoteConfigInterface
+     * @var NegotiableQuoteDataCompanyQuoteConfigInterface|null
      */
     protected $quoteConfig;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $useConfigSettings;
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getApplicablePaymentMethod(): int
+    public function getApplicablePaymentMethod(): ?int
     {
         return $this->applicablePaymentMethod;
     }
     /**
      *
      *
-     * @param int $applicablePaymentMethod
+     * @param int|null $applicablePaymentMethod
      *
      * @return self
      */
-    public function setApplicablePaymentMethod(int $applicablePaymentMethod): self
+    public function setApplicablePaymentMethod(?int $applicablePaymentMethod): self
     {
         $this->applicablePaymentMethod = $applicablePaymentMethod;
         return $this;
@@ -52,20 +52,20 @@ class CompanyDataCompanyExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getAvailablePaymentMethods(): string
+    public function getAvailablePaymentMethods(): ?string
     {
         return $this->availablePaymentMethods;
     }
     /**
      *
      *
-     * @param string $availablePaymentMethods
+     * @param string|null $availablePaymentMethods
      *
      * @return self
      */
-    public function setAvailablePaymentMethods(string $availablePaymentMethods): self
+    public function setAvailablePaymentMethods(?string $availablePaymentMethods): self
     {
         $this->availablePaymentMethods = $availablePaymentMethods;
         return $this;
@@ -73,20 +73,20 @@ class CompanyDataCompanyExtensionInterface
     /**
      * Interface CompanyQuoteConfigInterface
      *
-     * @return NegotiableQuoteDataCompanyQuoteConfigInterface
+     * @return NegotiableQuoteDataCompanyQuoteConfigInterface|null
      */
-    public function getQuoteConfig(): NegotiableQuoteDataCompanyQuoteConfigInterface
+    public function getQuoteConfig(): ?NegotiableQuoteDataCompanyQuoteConfigInterface
     {
         return $this->quoteConfig;
     }
     /**
      * Interface CompanyQuoteConfigInterface
      *
-     * @param NegotiableQuoteDataCompanyQuoteConfigInterface $quoteConfig
+     * @param NegotiableQuoteDataCompanyQuoteConfigInterface|null $quoteConfig
      *
      * @return self
      */
-    public function setQuoteConfig(NegotiableQuoteDataCompanyQuoteConfigInterface $quoteConfig): self
+    public function setQuoteConfig(?NegotiableQuoteDataCompanyQuoteConfigInterface $quoteConfig): self
     {
         $this->quoteConfig = $quoteConfig;
         return $this;
@@ -94,20 +94,20 @@ class CompanyDataCompanyExtensionInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getUseConfigSettings(): int
+    public function getUseConfigSettings(): ?int
     {
         return $this->useConfigSettings;
     }
     /**
      *
      *
-     * @param int $useConfigSettings
+     * @param int|null $useConfigSettings
      *
      * @return self
      */
-    public function setUseConfigSettings(int $useConfigSettings): self
+    public function setUseConfigSettings(?int $useConfigSettings): self
     {
         $this->useConfigSettings = $useConfigSettings;
         return $this;

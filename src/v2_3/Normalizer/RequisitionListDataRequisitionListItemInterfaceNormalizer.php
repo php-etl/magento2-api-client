@@ -43,33 +43,49 @@ class RequisitionListDataRequisitionListItemInterfaceNormalizer implements Denor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('added_at', $data)) {
+        if (\array_key_exists('added_at', $data) && $data['added_at'] !== null) {
             $object->setAddedAt($data['added_at']);
+        } elseif (\array_key_exists('added_at', $data) && $data['added_at'] === null) {
+            $object->setAddedAt(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('options', $data)) {
+        if (\array_key_exists('options', $data) && $data['options'] !== null) {
             $values = array();
             foreach ($data['options'] as $value) {
                 $values[] = $value;
             }
             $object->setOptions($values);
+        } elseif (\array_key_exists('options', $data) && $data['options'] === null) {
+            $object->setOptions(null);
         }
-        if (\array_key_exists('qty', $data)) {
+        if (\array_key_exists('qty', $data) && $data['qty'] !== null) {
             $object->setQty($data['qty']);
+        } elseif (\array_key_exists('qty', $data) && $data['qty'] === null) {
+            $object->setQty(null);
         }
-        if (\array_key_exists('requisition_list_id', $data)) {
+        if (\array_key_exists('requisition_list_id', $data) && $data['requisition_list_id'] !== null) {
             $object->setRequisitionListId($data['requisition_list_id']);
+        } elseif (\array_key_exists('requisition_list_id', $data) && $data['requisition_list_id'] === null) {
+            $object->setRequisitionListId(null);
         }
-        if (\array_key_exists('sku', $data)) {
+        if (\array_key_exists('sku', $data) && $data['sku'] !== null) {
             $object->setSku($data['sku']);
+        } elseif (\array_key_exists('sku', $data) && $data['sku'] === null) {
+            $object->setSku(null);
         }
-        if (\array_key_exists('store_id', $data)) {
+        if (\array_key_exists('store_id', $data) && $data['store_id'] !== null) {
             $object->setStoreId($data['store_id']);
+        } elseif (\array_key_exists('store_id', $data) && $data['store_id'] === null) {
+            $object->setStoreId(null);
         }
         return $object;
     }

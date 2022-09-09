@@ -7,32 +7,32 @@ class V1ProductsAttributeSetsPostBody
     /**
      * Interface AttributeSetInterface
      *
-     * @var EavDataAttributeSetInterface
+     * @var EavDataAttributeSetInterface|null
      */
     protected $attributeSet;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $skeletonId;
     /**
      * Interface AttributeSetInterface
      *
-     * @return EavDataAttributeSetInterface
+     * @return EavDataAttributeSetInterface|null
      */
-    public function getAttributeSet(): EavDataAttributeSetInterface
+    public function getAttributeSet(): ?EavDataAttributeSetInterface
     {
         return $this->attributeSet;
     }
     /**
      * Interface AttributeSetInterface
      *
-     * @param EavDataAttributeSetInterface $attributeSet
+     * @param EavDataAttributeSetInterface|null $attributeSet
      *
      * @return self
      */
-    public function setAttributeSet(EavDataAttributeSetInterface $attributeSet): self
+    public function setAttributeSet(?EavDataAttributeSetInterface $attributeSet): self
     {
         $this->attributeSet = $attributeSet;
         return $this;
@@ -40,20 +40,20 @@ class V1ProductsAttributeSetsPostBody
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getSkeletonId(): int
+    public function getSkeletonId(): ?int
     {
         return $this->skeletonId;
     }
     /**
      *
      *
-     * @param int $skeletonId
+     * @param int|null $skeletonId
      *
      * @return self
      */
-    public function setSkeletonId(int $skeletonId): self
+    public function setSkeletonId(?int $skeletonId): self
     {
         $this->skeletonId = $skeletonId;
         return $this;

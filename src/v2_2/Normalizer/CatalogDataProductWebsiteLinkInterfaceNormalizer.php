@@ -40,11 +40,15 @@ class CatalogDataProductWebsiteLinkInterfaceNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('sku', $data)) {
+        if (\array_key_exists('sku', $data) && $data['sku'] !== null) {
             $object->setSku($data['sku']);
+        } elseif (\array_key_exists('sku', $data) && $data['sku'] === null) {
+            $object->setSku(null);
         }
-        if (\array_key_exists('website_id', $data)) {
+        if (\array_key_exists('website_id', $data) && $data['website_id'] !== null) {
             $object->setWebsiteId($data['website_id']);
+        } elseif (\array_key_exists('website_id', $data) && $data['website_id'] === null) {
+            $object->setWebsiteId(null);
         }
         return $object;
     }

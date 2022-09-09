@@ -7,38 +7,38 @@ class V1CustomersConfirmPostBody
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $email;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $redirectUrl;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $websiteId;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
     /**
      *
      *
-     * @param string $email
+     * @param string|null $email
      *
      * @return self
      */
-    public function setEmail(string $email): self
+    public function setEmail(?string $email): self
     {
         $this->email = $email;
         return $this;
@@ -46,20 +46,20 @@ class V1CustomersConfirmPostBody
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getRedirectUrl(): string
+    public function getRedirectUrl(): ?string
     {
         return $this->redirectUrl;
     }
     /**
      *
      *
-     * @param string $redirectUrl
+     * @param string|null $redirectUrl
      *
      * @return self
      */
-    public function setRedirectUrl(string $redirectUrl): self
+    public function setRedirectUrl(?string $redirectUrl): self
     {
         $this->redirectUrl = $redirectUrl;
         return $this;
@@ -67,20 +67,20 @@ class V1CustomersConfirmPostBody
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getWebsiteId(): int
+    public function getWebsiteId(): ?int
     {
         return $this->websiteId;
     }
     /**
      *
      *
-     * @param int $websiteId
+     * @param int|null $websiteId
      *
      * @return self
      */
-    public function setWebsiteId(int $websiteId): self
+    public function setWebsiteId(?int $websiteId): self
     {
         $this->websiteId = $websiteId;
         return $this;

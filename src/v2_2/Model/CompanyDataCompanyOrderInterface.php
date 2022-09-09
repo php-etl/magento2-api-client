@@ -7,44 +7,44 @@ class CompanyDataCompanyOrderInterface
     /**
      * Company ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $companyId;
     /**
      * Company name.
      *
-     * @var string
+     * @var string|null
      */
     protected $companyName;
     /**
      * ExtensionInterface class for @see \Magento\Company\Api\Data\CompanyOrderInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Order ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $orderId;
     /**
      * Company ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getCompanyId(): int
+    public function getCompanyId(): ?int
     {
         return $this->companyId;
     }
     /**
      * Company ID.
      *
-     * @param int $companyId
+     * @param int|null $companyId
      *
      * @return self
      */
-    public function setCompanyId(int $companyId): self
+    public function setCompanyId(?int $companyId): self
     {
         $this->companyId = $companyId;
         return $this;
@@ -52,20 +52,20 @@ class CompanyDataCompanyOrderInterface
     /**
      * Company name.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCompanyName(): string
+    public function getCompanyName(): ?string
     {
         return $this->companyName;
     }
     /**
      * Company name.
      *
-     * @param string $companyName
+     * @param string|null $companyName
      *
      * @return self
      */
-    public function setCompanyName(string $companyName): self
+    public function setCompanyName(?string $companyName): self
     {
         $this->companyName = $companyName;
         return $this;
@@ -94,20 +94,20 @@ class CompanyDataCompanyOrderInterface
     /**
      * Order ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getOrderId(): int
+    public function getOrderId(): ?int
     {
         return $this->orderId;
     }
     /**
      * Order ID.
      *
-     * @param int $orderId
+     * @param int|null $orderId
      *
      * @return self
      */
-    public function setOrderId(int $orderId): self
+    public function setOrderId(?int $orderId): self
     {
         $this->orderId = $orderId;
         return $this;

@@ -7,110 +7,110 @@ class CatalogDataProductCustomOptionInterface
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductCustomOptionInterface
      *
-     * @var CatalogDataProductCustomOptionExtensionInterface
+     * @var CatalogDataProductCustomOptionExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $fileExtension;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $imageSizeX;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $imageSizeY;
     /**
      * Is require
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isRequire;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $maxCharacters;
     /**
      * Option id
      *
-     * @var int
+     * @var int|null
      */
     protected $optionId;
     /**
      * Price
      *
-     * @var float
+     * @var float|null
      */
     protected $price;
     /**
      * Price type
      *
-     * @var string
+     * @var string|null
      */
     protected $priceType;
     /**
      * Product SKU
      *
-     * @var string
+     * @var string|null
      */
     protected $productSku;
     /**
      * Sku
      *
-     * @var string
+     * @var string|null
      */
     protected $sku;
     /**
      * Sort order
      *
-     * @var int
+     * @var int|null
      */
     protected $sortOrder;
     /**
      * Option title
      *
-     * @var string
+     * @var string|null
      */
     protected $title;
     /**
      * Option type
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
      *
      *
-     * @var CatalogDataProductCustomOptionValuesInterface[]
+     * @var CatalogDataProductCustomOptionValuesInterface[]|null
      */
     protected $values;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductCustomOptionInterface
      *
-     * @return CatalogDataProductCustomOptionExtensionInterface
+     * @return CatalogDataProductCustomOptionExtensionInterface|null
      */
-    public function getExtensionAttributes(): CatalogDataProductCustomOptionExtensionInterface
+    public function getExtensionAttributes(): ?CatalogDataProductCustomOptionExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductCustomOptionInterface
      *
-     * @param CatalogDataProductCustomOptionExtensionInterface $extensionAttributes
+     * @param CatalogDataProductCustomOptionExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(CatalogDataProductCustomOptionExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?CatalogDataProductCustomOptionExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -118,20 +118,20 @@ class CatalogDataProductCustomOptionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getFileExtension(): string
+    public function getFileExtension(): ?string
     {
         return $this->fileExtension;
     }
     /**
      *
      *
-     * @param string $fileExtension
+     * @param string|null $fileExtension
      *
      * @return self
      */
-    public function setFileExtension(string $fileExtension): self
+    public function setFileExtension(?string $fileExtension): self
     {
         $this->fileExtension = $fileExtension;
         return $this;
@@ -139,20 +139,20 @@ class CatalogDataProductCustomOptionInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getImageSizeX(): int
+    public function getImageSizeX(): ?int
     {
         return $this->imageSizeX;
     }
     /**
      *
      *
-     * @param int $imageSizeX
+     * @param int|null $imageSizeX
      *
      * @return self
      */
-    public function setImageSizeX(int $imageSizeX): self
+    public function setImageSizeX(?int $imageSizeX): self
     {
         $this->imageSizeX = $imageSizeX;
         return $this;
@@ -160,20 +160,20 @@ class CatalogDataProductCustomOptionInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getImageSizeY(): int
+    public function getImageSizeY(): ?int
     {
         return $this->imageSizeY;
     }
     /**
      *
      *
-     * @param int $imageSizeY
+     * @param int|null $imageSizeY
      *
      * @return self
      */
-    public function setImageSizeY(int $imageSizeY): self
+    public function setImageSizeY(?int $imageSizeY): self
     {
         $this->imageSizeY = $imageSizeY;
         return $this;
@@ -181,20 +181,20 @@ class CatalogDataProductCustomOptionInterface
     /**
      * Is require
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsRequire(): bool
+    public function getIsRequire(): ?bool
     {
         return $this->isRequire;
     }
     /**
      * Is require
      *
-     * @param bool $isRequire
+     * @param bool|null $isRequire
      *
      * @return self
      */
-    public function setIsRequire(bool $isRequire): self
+    public function setIsRequire(?bool $isRequire): self
     {
         $this->isRequire = $isRequire;
         return $this;
@@ -202,20 +202,20 @@ class CatalogDataProductCustomOptionInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getMaxCharacters(): int
+    public function getMaxCharacters(): ?int
     {
         return $this->maxCharacters;
     }
     /**
      *
      *
-     * @param int $maxCharacters
+     * @param int|null $maxCharacters
      *
      * @return self
      */
-    public function setMaxCharacters(int $maxCharacters): self
+    public function setMaxCharacters(?int $maxCharacters): self
     {
         $this->maxCharacters = $maxCharacters;
         return $this;
@@ -223,20 +223,20 @@ class CatalogDataProductCustomOptionInterface
     /**
      * Option id
      *
-     * @return int
+     * @return int|null
      */
-    public function getOptionId(): int
+    public function getOptionId(): ?int
     {
         return $this->optionId;
     }
     /**
      * Option id
      *
-     * @param int $optionId
+     * @param int|null $optionId
      *
      * @return self
      */
-    public function setOptionId(int $optionId): self
+    public function setOptionId(?int $optionId): self
     {
         $this->optionId = $optionId;
         return $this;
@@ -244,20 +244,20 @@ class CatalogDataProductCustomOptionInterface
     /**
      * Price
      *
-     * @return float
+     * @return float|null
      */
-    public function getPrice(): float
+    public function getPrice(): ?float
     {
         return $this->price;
     }
     /**
      * Price
      *
-     * @param float $price
+     * @param float|null $price
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(?float $price): self
     {
         $this->price = $price;
         return $this;
@@ -265,20 +265,20 @@ class CatalogDataProductCustomOptionInterface
     /**
      * Price type
      *
-     * @return string
+     * @return string|null
      */
-    public function getPriceType(): string
+    public function getPriceType(): ?string
     {
         return $this->priceType;
     }
     /**
      * Price type
      *
-     * @param string $priceType
+     * @param string|null $priceType
      *
      * @return self
      */
-    public function setPriceType(string $priceType): self
+    public function setPriceType(?string $priceType): self
     {
         $this->priceType = $priceType;
         return $this;
@@ -286,20 +286,20 @@ class CatalogDataProductCustomOptionInterface
     /**
      * Product SKU
      *
-     * @return string
+     * @return string|null
      */
-    public function getProductSku(): string
+    public function getProductSku(): ?string
     {
         return $this->productSku;
     }
     /**
      * Product SKU
      *
-     * @param string $productSku
+     * @param string|null $productSku
      *
      * @return self
      */
-    public function setProductSku(string $productSku): self
+    public function setProductSku(?string $productSku): self
     {
         $this->productSku = $productSku;
         return $this;
@@ -307,20 +307,20 @@ class CatalogDataProductCustomOptionInterface
     /**
      * Sku
      *
-     * @return string
+     * @return string|null
      */
-    public function getSku(): string
+    public function getSku(): ?string
     {
         return $this->sku;
     }
     /**
      * Sku
      *
-     * @param string $sku
+     * @param string|null $sku
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(?string $sku): self
     {
         $this->sku = $sku;
         return $this;
@@ -328,20 +328,20 @@ class CatalogDataProductCustomOptionInterface
     /**
      * Sort order
      *
-     * @return int
+     * @return int|null
      */
-    public function getSortOrder(): int
+    public function getSortOrder(): ?int
     {
         return $this->sortOrder;
     }
     /**
      * Sort order
      *
-     * @param int $sortOrder
+     * @param int|null $sortOrder
      *
      * @return self
      */
-    public function setSortOrder(int $sortOrder): self
+    public function setSortOrder(?int $sortOrder): self
     {
         $this->sortOrder = $sortOrder;
         return $this;
@@ -349,20 +349,20 @@ class CatalogDataProductCustomOptionInterface
     /**
      * Option title
      *
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
     /**
      * Option title
      *
-     * @param string $title
+     * @param string|null $title
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
         return $this;
@@ -370,20 +370,20 @@ class CatalogDataProductCustomOptionInterface
     /**
      * Option type
      *
-     * @return string
+     * @return string|null
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
     /**
      * Option type
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type): self
+    public function setType(?string $type): self
     {
         $this->type = $type;
         return $this;
@@ -391,20 +391,20 @@ class CatalogDataProductCustomOptionInterface
     /**
      *
      *
-     * @return CatalogDataProductCustomOptionValuesInterface[]
+     * @return CatalogDataProductCustomOptionValuesInterface[]|null
      */
-    public function getValues(): array
+    public function getValues(): ?array
     {
         return $this->values;
     }
     /**
      *
      *
-     * @param CatalogDataProductCustomOptionValuesInterface[] $values
+     * @param CatalogDataProductCustomOptionValuesInterface[]|null $values
      *
      * @return self
      */
-    public function setValues(array $values): self
+    public function setValues(?array $values): self
     {
         $this->values = $values;
         return $this;

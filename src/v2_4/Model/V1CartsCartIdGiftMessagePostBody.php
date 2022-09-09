@@ -7,26 +7,26 @@ class V1CartsCartIdGiftMessagePostBody
     /**
      * Interface MessageInterface
      *
-     * @var GiftMessageDataMessageInterface
+     * @var GiftMessageDataMessageInterface|null
      */
     protected $giftMessage;
     /**
      * Interface MessageInterface
      *
-     * @return GiftMessageDataMessageInterface
+     * @return GiftMessageDataMessageInterface|null
      */
-    public function getGiftMessage(): GiftMessageDataMessageInterface
+    public function getGiftMessage(): ?GiftMessageDataMessageInterface
     {
         return $this->giftMessage;
     }
     /**
      * Interface MessageInterface
      *
-     * @param GiftMessageDataMessageInterface $giftMessage
+     * @param GiftMessageDataMessageInterface|null $giftMessage
      *
      * @return self
      */
-    public function setGiftMessage(GiftMessageDataMessageInterface $giftMessage): self
+    public function setGiftMessage(?GiftMessageDataMessageInterface $giftMessage): self
     {
         $this->giftMessage = $giftMessage;
         return $this;

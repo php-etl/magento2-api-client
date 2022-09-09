@@ -7,26 +7,26 @@ class CatalogDataProductOptionInterface
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductOptionInterface
      *
-     * @var CatalogDataProductOptionExtensionInterface
+     * @var CatalogDataProductOptionExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductOptionInterface
      *
-     * @return CatalogDataProductOptionExtensionInterface
+     * @return CatalogDataProductOptionExtensionInterface|null
      */
-    public function getExtensionAttributes(): CatalogDataProductOptionExtensionInterface
+    public function getExtensionAttributes(): ?CatalogDataProductOptionExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductOptionInterface
      *
-     * @param CatalogDataProductOptionExtensionInterface $extensionAttributes
+     * @param CatalogDataProductOptionExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(CatalogDataProductOptionExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?CatalogDataProductOptionExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

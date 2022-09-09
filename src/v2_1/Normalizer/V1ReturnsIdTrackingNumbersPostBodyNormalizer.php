@@ -40,8 +40,10 @@ class V1ReturnsIdTrackingNumbersPostBodyNormalizer implements DenormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('track', $data)) {
+        if (\array_key_exists('track', $data) && $data['track'] !== null) {
             $object->setTrack($this->denormalizer->denormalize($data['track'], 'Kiboko\\Magento\\V2_1\\Model\\RmaDataTrackInterface', 'json', $context));
+        } elseif (\array_key_exists('track', $data) && $data['track'] === null) {
+            $object->setTrack(null);
         }
         return $object;
     }

@@ -40,11 +40,15 @@ class PaymentDataPaymentAdditionalInfoInterfaceNormalizer implements Denormalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('key', $data)) {
+        if (\array_key_exists('key', $data) && $data['key'] !== null) {
             $object->setKey($data['key']);
+        } elseif (\array_key_exists('key', $data) && $data['key'] === null) {
+            $object->setKey(null);
         }
-        if (\array_key_exists('value', $data)) {
+        if (\array_key_exists('value', $data) && $data['value'] !== null) {
             $object->setValue($data['value']);
+        } elseif (\array_key_exists('value', $data) && $data['value'] === null) {
+            $object->setValue(null);
         }
         return $object;
     }

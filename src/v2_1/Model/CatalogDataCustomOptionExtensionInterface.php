@@ -7,26 +7,26 @@ class CatalogDataCustomOptionExtensionInterface
     /**
      * Image Content data interface
      *
-     * @var FrameworkDataImageContentInterface
+     * @var FrameworkDataImageContentInterface|null
      */
     protected $fileInfo;
     /**
      * Image Content data interface
      *
-     * @return FrameworkDataImageContentInterface
+     * @return FrameworkDataImageContentInterface|null
      */
-    public function getFileInfo(): FrameworkDataImageContentInterface
+    public function getFileInfo(): ?FrameworkDataImageContentInterface
     {
         return $this->fileInfo;
     }
     /**
      * Image Content data interface
      *
-     * @param FrameworkDataImageContentInterface $fileInfo
+     * @param FrameworkDataImageContentInterface|null $fileInfo
      *
      * @return self
      */
-    public function setFileInfo(FrameworkDataImageContentInterface $fileInfo): self
+    public function setFileInfo(?FrameworkDataImageContentInterface $fileInfo): self
     {
         $this->fileInfo = $fileInfo;
         return $this;

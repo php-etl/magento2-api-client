@@ -7,26 +7,26 @@ class SalesRuleDataRuleExtensionInterface
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $rewardPointsDelta;
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getRewardPointsDelta(): int
+    public function getRewardPointsDelta(): ?int
     {
         return $this->rewardPointsDelta;
     }
     /**
      *
      *
-     * @param int $rewardPointsDelta
+     * @param int|null $rewardPointsDelta
      *
      * @return self
      */
-    public function setRewardPointsDelta(int $rewardPointsDelta): self
+    public function setRewardPointsDelta(?int $rewardPointsDelta): self
     {
         $this->rewardPointsDelta = $rewardPointsDelta;
         return $this;

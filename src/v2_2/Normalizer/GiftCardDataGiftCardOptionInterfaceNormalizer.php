@@ -43,29 +43,45 @@ class GiftCardDataGiftCardOptionInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('custom_giftcard_amount', $data)) {
+        if (\array_key_exists('custom_giftcard_amount', $data) && $data['custom_giftcard_amount'] !== null) {
             $object->setCustomGiftcardAmount($data['custom_giftcard_amount']);
+        } elseif (\array_key_exists('custom_giftcard_amount', $data) && $data['custom_giftcard_amount'] === null) {
+            $object->setCustomGiftcardAmount(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('giftcard_amount', $data)) {
+        if (\array_key_exists('giftcard_amount', $data) && $data['giftcard_amount'] !== null) {
             $object->setGiftcardAmount($data['giftcard_amount']);
+        } elseif (\array_key_exists('giftcard_amount', $data) && $data['giftcard_amount'] === null) {
+            $object->setGiftcardAmount(null);
         }
-        if (\array_key_exists('giftcard_message', $data)) {
+        if (\array_key_exists('giftcard_message', $data) && $data['giftcard_message'] !== null) {
             $object->setGiftcardMessage($data['giftcard_message']);
+        } elseif (\array_key_exists('giftcard_message', $data) && $data['giftcard_message'] === null) {
+            $object->setGiftcardMessage(null);
         }
-        if (\array_key_exists('giftcard_recipient_email', $data)) {
+        if (\array_key_exists('giftcard_recipient_email', $data) && $data['giftcard_recipient_email'] !== null) {
             $object->setGiftcardRecipientEmail($data['giftcard_recipient_email']);
+        } elseif (\array_key_exists('giftcard_recipient_email', $data) && $data['giftcard_recipient_email'] === null) {
+            $object->setGiftcardRecipientEmail(null);
         }
-        if (\array_key_exists('giftcard_recipient_name', $data)) {
+        if (\array_key_exists('giftcard_recipient_name', $data) && $data['giftcard_recipient_name'] !== null) {
             $object->setGiftcardRecipientName($data['giftcard_recipient_name']);
+        } elseif (\array_key_exists('giftcard_recipient_name', $data) && $data['giftcard_recipient_name'] === null) {
+            $object->setGiftcardRecipientName(null);
         }
-        if (\array_key_exists('giftcard_sender_email', $data)) {
+        if (\array_key_exists('giftcard_sender_email', $data) && $data['giftcard_sender_email'] !== null) {
             $object->setGiftcardSenderEmail($data['giftcard_sender_email']);
+        } elseif (\array_key_exists('giftcard_sender_email', $data) && $data['giftcard_sender_email'] === null) {
+            $object->setGiftcardSenderEmail(null);
         }
-        if (\array_key_exists('giftcard_sender_name', $data)) {
+        if (\array_key_exists('giftcard_sender_name', $data) && $data['giftcard_sender_name'] !== null) {
             $object->setGiftcardSenderName($data['giftcard_sender_name']);
+        } elseif (\array_key_exists('giftcard_sender_name', $data) && $data['giftcard_sender_name'] === null) {
+            $object->setGiftcardSenderName(null);
         }
         return $object;
     }

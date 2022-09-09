@@ -52,44 +52,70 @@ class SalesDataShipmentItemInterfaceNormalizer implements DenormalizerInterface,
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('additional_data', $data)) {
+        if (\array_key_exists('additional_data', $data) && $data['additional_data'] !== null) {
             $object->setAdditionalData($data['additional_data']);
+        } elseif (\array_key_exists('additional_data', $data) && $data['additional_data'] === null) {
+            $object->setAdditionalData(null);
         }
-        if (\array_key_exists('description', $data)) {
+        if (\array_key_exists('description', $data) && $data['description'] !== null) {
             $object->setDescription($data['description']);
+        } elseif (\array_key_exists('description', $data) && $data['description'] === null) {
+            $object->setDescription(null);
         }
-        if (\array_key_exists('entity_id', $data)) {
+        if (\array_key_exists('entity_id', $data) && $data['entity_id'] !== null) {
             $object->setEntityId($data['entity_id']);
+        } elseif (\array_key_exists('entity_id', $data) && $data['entity_id'] === null) {
+            $object->setEntityId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('name', $data)) {
+        if (\array_key_exists('name', $data) && $data['name'] !== null) {
             $object->setName($data['name']);
+        } elseif (\array_key_exists('name', $data) && $data['name'] === null) {
+            $object->setName(null);
         }
-        if (\array_key_exists('order_item_id', $data)) {
+        if (\array_key_exists('order_item_id', $data) && $data['order_item_id'] !== null) {
             $object->setOrderItemId($data['order_item_id']);
+        } elseif (\array_key_exists('order_item_id', $data) && $data['order_item_id'] === null) {
+            $object->setOrderItemId(null);
         }
-        if (\array_key_exists('parent_id', $data)) {
+        if (\array_key_exists('parent_id', $data) && $data['parent_id'] !== null) {
             $object->setParentId($data['parent_id']);
+        } elseif (\array_key_exists('parent_id', $data) && $data['parent_id'] === null) {
+            $object->setParentId(null);
         }
-        if (\array_key_exists('price', $data)) {
+        if (\array_key_exists('price', $data) && $data['price'] !== null) {
             $object->setPrice($data['price']);
+        } elseif (\array_key_exists('price', $data) && $data['price'] === null) {
+            $object->setPrice(null);
         }
-        if (\array_key_exists('product_id', $data)) {
+        if (\array_key_exists('product_id', $data) && $data['product_id'] !== null) {
             $object->setProductId($data['product_id']);
+        } elseif (\array_key_exists('product_id', $data) && $data['product_id'] === null) {
+            $object->setProductId(null);
         }
-        if (\array_key_exists('qty', $data)) {
+        if (\array_key_exists('qty', $data) && $data['qty'] !== null) {
             $object->setQty($data['qty']);
+        } elseif (\array_key_exists('qty', $data) && $data['qty'] === null) {
+            $object->setQty(null);
         }
-        if (\array_key_exists('row_total', $data)) {
+        if (\array_key_exists('row_total', $data) && $data['row_total'] !== null) {
             $object->setRowTotal($data['row_total']);
+        } elseif (\array_key_exists('row_total', $data) && $data['row_total'] === null) {
+            $object->setRowTotal(null);
         }
-        if (\array_key_exists('sku', $data)) {
+        if (\array_key_exists('sku', $data) && $data['sku'] !== null) {
             $object->setSku($data['sku']);
+        } elseif (\array_key_exists('sku', $data) && $data['sku'] === null) {
+            $object->setSku(null);
         }
-        if (\array_key_exists('weight', $data)) {
+        if (\array_key_exists('weight', $data) && $data['weight'] !== null) {
             $object->setWeight($data['weight']);
+        } elseif (\array_key_exists('weight', $data) && $data['weight'] === null) {
+            $object->setWeight(null);
         }
         return $object;
     }

@@ -40,12 +40,14 @@ class V1ProductsSpecialPricePostBodyNormalizer implements DenormalizerInterface,
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('prices', $data)) {
+        if (\array_key_exists('prices', $data) && $data['prices'] !== null) {
             $values = array();
             foreach ($data['prices'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\CatalogDataSpecialPriceInterface', 'json', $context);
             }
             $object->setPrices($values);
+        } elseif (\array_key_exists('prices', $data) && $data['prices'] === null) {
+            $object->setPrices(null);
         }
         return $object;
     }

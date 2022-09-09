@@ -40,23 +40,35 @@ class CatalogDataProductLinkInterfaceNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductLinkExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('link_type', $data)) {
+        if (\array_key_exists('link_type', $data) && $data['link_type'] !== null) {
             $object->setLinkType($data['link_type']);
+        } elseif (\array_key_exists('link_type', $data) && $data['link_type'] === null) {
+            $object->setLinkType(null);
         }
-        if (\array_key_exists('linked_product_sku', $data)) {
+        if (\array_key_exists('linked_product_sku', $data) && $data['linked_product_sku'] !== null) {
             $object->setLinkedProductSku($data['linked_product_sku']);
+        } elseif (\array_key_exists('linked_product_sku', $data) && $data['linked_product_sku'] === null) {
+            $object->setLinkedProductSku(null);
         }
-        if (\array_key_exists('linked_product_type', $data)) {
+        if (\array_key_exists('linked_product_type', $data) && $data['linked_product_type'] !== null) {
             $object->setLinkedProductType($data['linked_product_type']);
+        } elseif (\array_key_exists('linked_product_type', $data) && $data['linked_product_type'] === null) {
+            $object->setLinkedProductType(null);
         }
-        if (\array_key_exists('position', $data)) {
+        if (\array_key_exists('position', $data) && $data['position'] !== null) {
             $object->setPosition($data['position']);
+        } elseif (\array_key_exists('position', $data) && $data['position'] === null) {
+            $object->setPosition(null);
         }
-        if (\array_key_exists('sku', $data)) {
+        if (\array_key_exists('sku', $data) && $data['sku'] !== null) {
             $object->setSku($data['sku']);
+        } elseif (\array_key_exists('sku', $data) && $data['sku'] === null) {
+            $object->setSku(null);
         }
         return $object;
     }

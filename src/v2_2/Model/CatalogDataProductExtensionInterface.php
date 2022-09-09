@@ -7,74 +7,74 @@ class CatalogDataProductExtensionInterface
     /**
      *
      *
-     * @var BundleDataOptionInterface[]
+     * @var BundleDataOptionInterface[]|null
      */
     protected $bundleProductOptions;
     /**
      *
      *
-     * @var CatalogDataCategoryLinkInterface[]
+     * @var CatalogDataCategoryLinkInterface[]|null
      */
     protected $categoryLinks;
     /**
      *
      *
-     * @var int[]
+     * @var int[]|null
      */
     protected $configurableProductLinks;
     /**
      *
      *
-     * @var ConfigurableProductDataOptionInterface[]
+     * @var ConfigurableProductDataOptionInterface[]|null
      */
     protected $configurableProductOptions;
     /**
      *
      *
-     * @var DownloadableDataLinkInterface[]
+     * @var DownloadableDataLinkInterface[]|null
      */
     protected $downloadableProductLinks;
     /**
      *
      *
-     * @var DownloadableDataSampleInterface[]
+     * @var DownloadableDataSampleInterface[]|null
      */
     protected $downloadableProductSamples;
     /**
      *
      *
-     * @var GiftCardDataGiftcardAmountInterface[]
+     * @var GiftCardDataGiftcardAmountInterface[]|null
      */
     protected $giftcardAmounts;
     /**
      * Interface StockItem
      *
-     * @var CatalogInventoryDataStockItemInterface
+     * @var CatalogInventoryDataStockItemInterface|null
      */
     protected $stockItem;
     /**
      *
      *
-     * @var int[]
+     * @var int[]|null
      */
     protected $websiteIds;
     /**
      *
      *
-     * @return BundleDataOptionInterface[]
+     * @return BundleDataOptionInterface[]|null
      */
-    public function getBundleProductOptions(): array
+    public function getBundleProductOptions(): ?array
     {
         return $this->bundleProductOptions;
     }
     /**
      *
      *
-     * @param BundleDataOptionInterface[] $bundleProductOptions
+     * @param BundleDataOptionInterface[]|null $bundleProductOptions
      *
      * @return self
      */
-    public function setBundleProductOptions(array $bundleProductOptions): self
+    public function setBundleProductOptions(?array $bundleProductOptions): self
     {
         $this->bundleProductOptions = $bundleProductOptions;
         return $this;
@@ -82,20 +82,20 @@ class CatalogDataProductExtensionInterface
     /**
      *
      *
-     * @return CatalogDataCategoryLinkInterface[]
+     * @return CatalogDataCategoryLinkInterface[]|null
      */
-    public function getCategoryLinks(): array
+    public function getCategoryLinks(): ?array
     {
         return $this->categoryLinks;
     }
     /**
      *
      *
-     * @param CatalogDataCategoryLinkInterface[] $categoryLinks
+     * @param CatalogDataCategoryLinkInterface[]|null $categoryLinks
      *
      * @return self
      */
-    public function setCategoryLinks(array $categoryLinks): self
+    public function setCategoryLinks(?array $categoryLinks): self
     {
         $this->categoryLinks = $categoryLinks;
         return $this;
@@ -103,20 +103,20 @@ class CatalogDataProductExtensionInterface
     /**
      *
      *
-     * @return int[]
+     * @return int[]|null
      */
-    public function getConfigurableProductLinks(): array
+    public function getConfigurableProductLinks(): ?array
     {
         return $this->configurableProductLinks;
     }
     /**
      *
      *
-     * @param int[] $configurableProductLinks
+     * @param int[]|null $configurableProductLinks
      *
      * @return self
      */
-    public function setConfigurableProductLinks(array $configurableProductLinks): self
+    public function setConfigurableProductLinks(?array $configurableProductLinks): self
     {
         $this->configurableProductLinks = $configurableProductLinks;
         return $this;
@@ -124,20 +124,20 @@ class CatalogDataProductExtensionInterface
     /**
      *
      *
-     * @return ConfigurableProductDataOptionInterface[]
+     * @return ConfigurableProductDataOptionInterface[]|null
      */
-    public function getConfigurableProductOptions(): array
+    public function getConfigurableProductOptions(): ?array
     {
         return $this->configurableProductOptions;
     }
     /**
      *
      *
-     * @param ConfigurableProductDataOptionInterface[] $configurableProductOptions
+     * @param ConfigurableProductDataOptionInterface[]|null $configurableProductOptions
      *
      * @return self
      */
-    public function setConfigurableProductOptions(array $configurableProductOptions): self
+    public function setConfigurableProductOptions(?array $configurableProductOptions): self
     {
         $this->configurableProductOptions = $configurableProductOptions;
         return $this;
@@ -145,20 +145,20 @@ class CatalogDataProductExtensionInterface
     /**
      *
      *
-     * @return DownloadableDataLinkInterface[]
+     * @return DownloadableDataLinkInterface[]|null
      */
-    public function getDownloadableProductLinks(): array
+    public function getDownloadableProductLinks(): ?array
     {
         return $this->downloadableProductLinks;
     }
     /**
      *
      *
-     * @param DownloadableDataLinkInterface[] $downloadableProductLinks
+     * @param DownloadableDataLinkInterface[]|null $downloadableProductLinks
      *
      * @return self
      */
-    public function setDownloadableProductLinks(array $downloadableProductLinks): self
+    public function setDownloadableProductLinks(?array $downloadableProductLinks): self
     {
         $this->downloadableProductLinks = $downloadableProductLinks;
         return $this;
@@ -166,20 +166,20 @@ class CatalogDataProductExtensionInterface
     /**
      *
      *
-     * @return DownloadableDataSampleInterface[]
+     * @return DownloadableDataSampleInterface[]|null
      */
-    public function getDownloadableProductSamples(): array
+    public function getDownloadableProductSamples(): ?array
     {
         return $this->downloadableProductSamples;
     }
     /**
      *
      *
-     * @param DownloadableDataSampleInterface[] $downloadableProductSamples
+     * @param DownloadableDataSampleInterface[]|null $downloadableProductSamples
      *
      * @return self
      */
-    public function setDownloadableProductSamples(array $downloadableProductSamples): self
+    public function setDownloadableProductSamples(?array $downloadableProductSamples): self
     {
         $this->downloadableProductSamples = $downloadableProductSamples;
         return $this;
@@ -187,20 +187,20 @@ class CatalogDataProductExtensionInterface
     /**
      *
      *
-     * @return GiftCardDataGiftcardAmountInterface[]
+     * @return GiftCardDataGiftcardAmountInterface[]|null
      */
-    public function getGiftcardAmounts(): array
+    public function getGiftcardAmounts(): ?array
     {
         return $this->giftcardAmounts;
     }
     /**
      *
      *
-     * @param GiftCardDataGiftcardAmountInterface[] $giftcardAmounts
+     * @param GiftCardDataGiftcardAmountInterface[]|null $giftcardAmounts
      *
      * @return self
      */
-    public function setGiftcardAmounts(array $giftcardAmounts): self
+    public function setGiftcardAmounts(?array $giftcardAmounts): self
     {
         $this->giftcardAmounts = $giftcardAmounts;
         return $this;
@@ -208,20 +208,20 @@ class CatalogDataProductExtensionInterface
     /**
      * Interface StockItem
      *
-     * @return CatalogInventoryDataStockItemInterface
+     * @return CatalogInventoryDataStockItemInterface|null
      */
-    public function getStockItem(): CatalogInventoryDataStockItemInterface
+    public function getStockItem(): ?CatalogInventoryDataStockItemInterface
     {
         return $this->stockItem;
     }
     /**
      * Interface StockItem
      *
-     * @param CatalogInventoryDataStockItemInterface $stockItem
+     * @param CatalogInventoryDataStockItemInterface|null $stockItem
      *
      * @return self
      */
-    public function setStockItem(CatalogInventoryDataStockItemInterface $stockItem): self
+    public function setStockItem(?CatalogInventoryDataStockItemInterface $stockItem): self
     {
         $this->stockItem = $stockItem;
         return $this;
@@ -229,20 +229,20 @@ class CatalogDataProductExtensionInterface
     /**
      *
      *
-     * @return int[]
+     * @return int[]|null
      */
-    public function getWebsiteIds(): array
+    public function getWebsiteIds(): ?array
     {
         return $this->websiteIds;
     }
     /**
      *
      *
-     * @param int[] $websiteIds
+     * @param int[]|null $websiteIds
      *
      * @return self
      */
-    public function setWebsiteIds(array $websiteIds): self
+    public function setWebsiteIds(?array $websiteIds): self
     {
         $this->websiteIds = $websiteIds;
         return $this;

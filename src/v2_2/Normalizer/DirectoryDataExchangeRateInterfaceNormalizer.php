@@ -43,14 +43,20 @@ class DirectoryDataExchangeRateInterfaceNormalizer implements DenormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('currency_to', $data)) {
+        if (\array_key_exists('currency_to', $data) && $data['currency_to'] !== null) {
             $object->setCurrencyTo($data['currency_to']);
+        } elseif (\array_key_exists('currency_to', $data) && $data['currency_to'] === null) {
+            $object->setCurrencyTo(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('rate', $data)) {
+        if (\array_key_exists('rate', $data) && $data['rate'] !== null) {
             $object->setRate($data['rate']);
+        } elseif (\array_key_exists('rate', $data) && $data['rate'] === null) {
+            $object->setRate(null);
         }
         return $object;
     }

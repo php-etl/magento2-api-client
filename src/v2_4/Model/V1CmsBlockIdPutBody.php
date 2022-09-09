@@ -7,26 +7,26 @@ class V1CmsBlockIdPutBody
     /**
      * CMS block interface.
      *
-     * @var CmsDataBlockInterface
+     * @var CmsDataBlockInterface|null
      */
     protected $block;
     /**
      * CMS block interface.
      *
-     * @return CmsDataBlockInterface
+     * @return CmsDataBlockInterface|null
      */
-    public function getBlock(): CmsDataBlockInterface
+    public function getBlock(): ?CmsDataBlockInterface
     {
         return $this->block;
     }
     /**
      * CMS block interface.
      *
-     * @param CmsDataBlockInterface $block
+     * @param CmsDataBlockInterface|null $block
      *
      * @return self
      */
-    public function setBlock(CmsDataBlockInterface $block): self
+    public function setBlock(?CmsDataBlockInterface $block): self
     {
         $this->block = $block;
         return $this;

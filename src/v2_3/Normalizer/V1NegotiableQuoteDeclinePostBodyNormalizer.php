@@ -40,11 +40,15 @@ class V1NegotiableQuoteDeclinePostBodyNormalizer implements DenormalizerInterfac
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('quoteId', $data)) {
+        if (\array_key_exists('quoteId', $data) && $data['quoteId'] !== null) {
             $object->setQuoteId($data['quoteId']);
+        } elseif (\array_key_exists('quoteId', $data) && $data['quoteId'] === null) {
+            $object->setQuoteId(null);
         }
-        if (\array_key_exists('reason', $data)) {
+        if (\array_key_exists('reason', $data) && $data['reason'] !== null) {
             $object->setReason($data['reason']);
+        } elseif (\array_key_exists('reason', $data) && $data['reason'] === null) {
+            $object->setReason(null);
         }
         return $object;
     }

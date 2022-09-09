@@ -7,38 +7,38 @@ class TaxDataGrandTotalDetailsInterface
     /**
      * Tax amount value
      *
-     * @var float
+     * @var float|null
      */
     protected $amount;
     /**
      * Group identifier
      *
-     * @var int
+     * @var int|null
      */
     protected $groupId;
     /**
      * Tax rates info
      *
-     * @var TaxDataGrandTotalRatesInterface[]
+     * @var TaxDataGrandTotalRatesInterface[]|null
      */
     protected $rates;
     /**
      * Tax amount value
      *
-     * @return float
+     * @return float|null
      */
-    public function getAmount(): float
+    public function getAmount(): ?float
     {
         return $this->amount;
     }
     /**
      * Tax amount value
      *
-     * @param float $amount
+     * @param float|null $amount
      *
      * @return self
      */
-    public function setAmount(float $amount): self
+    public function setAmount(?float $amount): self
     {
         $this->amount = $amount;
         return $this;
@@ -46,20 +46,20 @@ class TaxDataGrandTotalDetailsInterface
     /**
      * Group identifier
      *
-     * @return int
+     * @return int|null
      */
-    public function getGroupId(): int
+    public function getGroupId(): ?int
     {
         return $this->groupId;
     }
     /**
      * Group identifier
      *
-     * @param int $groupId
+     * @param int|null $groupId
      *
      * @return self
      */
-    public function setGroupId(int $groupId): self
+    public function setGroupId(?int $groupId): self
     {
         $this->groupId = $groupId;
         return $this;
@@ -67,20 +67,20 @@ class TaxDataGrandTotalDetailsInterface
     /**
      * Tax rates info
      *
-     * @return TaxDataGrandTotalRatesInterface[]
+     * @return TaxDataGrandTotalRatesInterface[]|null
      */
-    public function getRates(): array
+    public function getRates(): ?array
     {
         return $this->rates;
     }
     /**
      * Tax rates info
      *
-     * @param TaxDataGrandTotalRatesInterface[] $rates
+     * @param TaxDataGrandTotalRatesInterface[]|null $rates
      *
      * @return self
      */
-    public function setRates(array $rates): self
+    public function setRates(?array $rates): self
     {
         $this->rates = $rates;
         return $this;

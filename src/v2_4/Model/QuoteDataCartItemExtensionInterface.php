@@ -7,26 +7,26 @@ class QuoteDataCartItemExtensionInterface
     /**
      * Interface CompanyQuoteConfigInterface
      *
-     * @var NegotiableQuoteDataNegotiableQuoteItemInterface
+     * @var NegotiableQuoteDataNegotiableQuoteItemInterface|null
      */
     protected $negotiableQuoteItem;
     /**
      * Interface CompanyQuoteConfigInterface
      *
-     * @return NegotiableQuoteDataNegotiableQuoteItemInterface
+     * @return NegotiableQuoteDataNegotiableQuoteItemInterface|null
      */
-    public function getNegotiableQuoteItem(): NegotiableQuoteDataNegotiableQuoteItemInterface
+    public function getNegotiableQuoteItem(): ?NegotiableQuoteDataNegotiableQuoteItemInterface
     {
         return $this->negotiableQuoteItem;
     }
     /**
      * Interface CompanyQuoteConfigInterface
      *
-     * @param NegotiableQuoteDataNegotiableQuoteItemInterface $negotiableQuoteItem
+     * @param NegotiableQuoteDataNegotiableQuoteItemInterface|null $negotiableQuoteItem
      *
      * @return self
      */
-    public function setNegotiableQuoteItem(NegotiableQuoteDataNegotiableQuoteItemInterface $negotiableQuoteItem): self
+    public function setNegotiableQuoteItem(?NegotiableQuoteDataNegotiableQuoteItemInterface $negotiableQuoteItem): self
     {
         $this->negotiableQuoteItem = $negotiableQuoteItem;
         return $this;

@@ -55,26 +55,40 @@ class QuoteDataTotalsExtensionInterfaceNormalizer implements DenormalizerInterfa
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('base_customer_balance_amount', $data)) {
+        if (\array_key_exists('base_customer_balance_amount', $data) && $data['base_customer_balance_amount'] !== null) {
             $object->setBaseCustomerBalanceAmount($data['base_customer_balance_amount']);
+        } elseif (\array_key_exists('base_customer_balance_amount', $data) && $data['base_customer_balance_amount'] === null) {
+            $object->setBaseCustomerBalanceAmount(null);
         }
-        if (\array_key_exists('base_reward_currency_amount', $data)) {
+        if (\array_key_exists('base_reward_currency_amount', $data) && $data['base_reward_currency_amount'] !== null) {
             $object->setBaseRewardCurrencyAmount($data['base_reward_currency_amount']);
+        } elseif (\array_key_exists('base_reward_currency_amount', $data) && $data['base_reward_currency_amount'] === null) {
+            $object->setBaseRewardCurrencyAmount(null);
         }
-        if (\array_key_exists('coupon_label', $data)) {
+        if (\array_key_exists('coupon_label', $data) && $data['coupon_label'] !== null) {
             $object->setCouponLabel($data['coupon_label']);
+        } elseif (\array_key_exists('coupon_label', $data) && $data['coupon_label'] === null) {
+            $object->setCouponLabel(null);
         }
-        if (\array_key_exists('customer_balance_amount', $data)) {
+        if (\array_key_exists('customer_balance_amount', $data) && $data['customer_balance_amount'] !== null) {
             $object->setCustomerBalanceAmount($data['customer_balance_amount']);
+        } elseif (\array_key_exists('customer_balance_amount', $data) && $data['customer_balance_amount'] === null) {
+            $object->setCustomerBalanceAmount(null);
         }
-        if (\array_key_exists('negotiable_quote_totals', $data)) {
+        if (\array_key_exists('negotiable_quote_totals', $data) && $data['negotiable_quote_totals'] !== null) {
             $object->setNegotiableQuoteTotals($this->denormalizer->denormalize($data['negotiable_quote_totals'], 'Kiboko\\Magento\\V2_3\\Model\\NegotiableQuoteDataNegotiableQuoteTotalsInterface', 'json', $context));
+        } elseif (\array_key_exists('negotiable_quote_totals', $data) && $data['negotiable_quote_totals'] === null) {
+            $object->setNegotiableQuoteTotals(null);
         }
-        if (\array_key_exists('reward_currency_amount', $data)) {
+        if (\array_key_exists('reward_currency_amount', $data) && $data['reward_currency_amount'] !== null) {
             $object->setRewardCurrencyAmount($data['reward_currency_amount']);
+        } elseif (\array_key_exists('reward_currency_amount', $data) && $data['reward_currency_amount'] === null) {
+            $object->setRewardCurrencyAmount(null);
         }
-        if (\array_key_exists('reward_points_balance', $data)) {
+        if (\array_key_exists('reward_points_balance', $data) && $data['reward_points_balance'] !== null) {
             $object->setRewardPointsBalance($data['reward_points_balance']);
+        } elseif (\array_key_exists('reward_points_balance', $data) && $data['reward_points_balance'] === null) {
+            $object->setRewardPointsBalance(null);
         }
         return $object;
     }

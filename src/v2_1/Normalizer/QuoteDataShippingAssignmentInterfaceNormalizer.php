@@ -40,18 +40,24 @@ class QuoteDataShippingAssignmentInterfaceNormalizer implements DenormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('items', $data)) {
+        if (\array_key_exists('items', $data) && $data['items'] !== null) {
             $values = array();
             foreach ($data['items'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\QuoteDataCartItemInterface', 'json', $context);
             }
             $object->setItems($values);
+        } elseif (\array_key_exists('items', $data) && $data['items'] === null) {
+            $object->setItems(null);
         }
-        if (\array_key_exists('shipping', $data)) {
+        if (\array_key_exists('shipping', $data) && $data['shipping'] !== null) {
             $object->setShipping($this->denormalizer->denormalize($data['shipping'], 'Kiboko\\Magento\\V2_1\\Model\\QuoteDataShippingInterface', 'json', $context));
+        } elseif (\array_key_exists('shipping', $data) && $data['shipping'] === null) {
+            $object->setShipping(null);
         }
         return $object;
     }

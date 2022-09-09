@@ -7,50 +7,50 @@ class FrameworkSearchSearchCriteriaInterface
     /**
      * Current page.
      *
-     * @var int
+     * @var int|null
      */
     protected $currentPage;
     /**
      * A list of filter groups.
      *
-     * @var FrameworkSearchFilterGroup[]
+     * @var FrameworkSearchFilterGroup[]|null
      */
     protected $filterGroups;
     /**
      * Page size.
      *
-     * @var int
+     * @var int|null
      */
     protected $pageSize;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $requestName;
     /**
      * Sort order.
      *
-     * @var FrameworkSortOrder[]
+     * @var FrameworkSortOrder[]|null
      */
     protected $sortOrders;
     /**
      * Current page.
      *
-     * @return int
+     * @return int|null
      */
-    public function getCurrentPage(): int
+    public function getCurrentPage(): ?int
     {
         return $this->currentPage;
     }
     /**
      * Current page.
      *
-     * @param int $currentPage
+     * @param int|null $currentPage
      *
      * @return self
      */
-    public function setCurrentPage(int $currentPage): self
+    public function setCurrentPage(?int $currentPage): self
     {
         $this->currentPage = $currentPage;
         return $this;
@@ -58,20 +58,20 @@ class FrameworkSearchSearchCriteriaInterface
     /**
      * A list of filter groups.
      *
-     * @return FrameworkSearchFilterGroup[]
+     * @return FrameworkSearchFilterGroup[]|null
      */
-    public function getFilterGroups(): array
+    public function getFilterGroups(): ?array
     {
         return $this->filterGroups;
     }
     /**
      * A list of filter groups.
      *
-     * @param FrameworkSearchFilterGroup[] $filterGroups
+     * @param FrameworkSearchFilterGroup[]|null $filterGroups
      *
      * @return self
      */
-    public function setFilterGroups(array $filterGroups): self
+    public function setFilterGroups(?array $filterGroups): self
     {
         $this->filterGroups = $filterGroups;
         return $this;
@@ -79,20 +79,20 @@ class FrameworkSearchSearchCriteriaInterface
     /**
      * Page size.
      *
-     * @return int
+     * @return int|null
      */
-    public function getPageSize(): int
+    public function getPageSize(): ?int
     {
         return $this->pageSize;
     }
     /**
      * Page size.
      *
-     * @param int $pageSize
+     * @param int|null $pageSize
      *
      * @return self
      */
-    public function setPageSize(int $pageSize): self
+    public function setPageSize(?int $pageSize): self
     {
         $this->pageSize = $pageSize;
         return $this;
@@ -100,20 +100,20 @@ class FrameworkSearchSearchCriteriaInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getRequestName(): string
+    public function getRequestName(): ?string
     {
         return $this->requestName;
     }
     /**
      *
      *
-     * @param string $requestName
+     * @param string|null $requestName
      *
      * @return self
      */
-    public function setRequestName(string $requestName): self
+    public function setRequestName(?string $requestName): self
     {
         $this->requestName = $requestName;
         return $this;
@@ -121,20 +121,20 @@ class FrameworkSearchSearchCriteriaInterface
     /**
      * Sort order.
      *
-     * @return FrameworkSortOrder[]
+     * @return FrameworkSortOrder[]|null
      */
-    public function getSortOrders(): array
+    public function getSortOrders(): ?array
     {
         return $this->sortOrders;
     }
     /**
      * Sort order.
      *
-     * @param FrameworkSortOrder[] $sortOrders
+     * @param FrameworkSortOrder[]|null $sortOrders
      *
      * @return self
      */
-    public function setSortOrders(array $sortOrders): self
+    public function setSortOrders(?array $sortOrders): self
     {
         $this->sortOrders = $sortOrders;
         return $this;

@@ -7,32 +7,32 @@ class V1GiftWrappingsPostBody
     /**
      * Interface WrappingInterface
      *
-     * @var GiftWrappingDataWrappingInterface
+     * @var GiftWrappingDataWrappingInterface|null
      */
     protected $data;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $storeId;
     /**
      * Interface WrappingInterface
      *
-     * @return GiftWrappingDataWrappingInterface
+     * @return GiftWrappingDataWrappingInterface|null
      */
-    public function getData(): GiftWrappingDataWrappingInterface
+    public function getData(): ?GiftWrappingDataWrappingInterface
     {
         return $this->data;
     }
     /**
      * Interface WrappingInterface
      *
-     * @param GiftWrappingDataWrappingInterface $data
+     * @param GiftWrappingDataWrappingInterface|null $data
      *
      * @return self
      */
-    public function setData(GiftWrappingDataWrappingInterface $data): self
+    public function setData(?GiftWrappingDataWrappingInterface $data): self
     {
         $this->data = $data;
         return $this;
@@ -40,20 +40,20 @@ class V1GiftWrappingsPostBody
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getStoreId(): int
+    public function getStoreId(): ?int
     {
         return $this->storeId;
     }
     /**
      *
      *
-     * @param int $storeId
+     * @param int|null $storeId
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(?int $storeId): self
     {
         $this->storeId = $storeId;
         return $this;

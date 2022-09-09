@@ -7,134 +7,134 @@ class CmsDataPageInterface
     /**
      * Active
      *
-     * @var bool
+     * @var bool|null
      */
     protected $active;
     /**
      * Content
      *
-     * @var string
+     * @var string|null
      */
     protected $content;
     /**
      * Content heading
      *
-     * @var string
+     * @var string|null
      */
     protected $contentHeading;
     /**
      * Creation time
      *
-     * @var string
+     * @var string|null
      */
     protected $creationTime;
     /**
      * Custom layout update xml
      *
-     * @var string
+     * @var string|null
      */
     protected $customLayoutUpdateXml;
     /**
      * Custom root template
      *
-     * @var string
+     * @var string|null
      */
     protected $customRootTemplate;
     /**
      * Custom theme
      *
-     * @var string
+     * @var string|null
      */
     protected $customTheme;
     /**
      * Custom theme from
      *
-     * @var string
+     * @var string|null
      */
     protected $customThemeFrom;
     /**
      * Custom theme to
      *
-     * @var string
+     * @var string|null
      */
     protected $customThemeTo;
     /**
      * ID
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Identifier
      *
-     * @var string
+     * @var string|null
      */
     protected $identifier;
     /**
      * Layout update xml
      *
-     * @var string
+     * @var string|null
      */
     protected $layoutUpdateXml;
     /**
      * Meta description
      *
-     * @var string
+     * @var string|null
      */
     protected $metaDescription;
     /**
      * Meta keywords
      *
-     * @var string
+     * @var string|null
      */
     protected $metaKeywords;
     /**
      * Meta title
      *
-     * @var string
+     * @var string|null
      */
     protected $metaTitle;
     /**
      * Page layout
      *
-     * @var string
+     * @var string|null
      */
     protected $pageLayout;
     /**
      * Sort order
      *
-     * @var string
+     * @var string|null
      */
     protected $sortOrder;
     /**
      * Title
      *
-     * @var string
+     * @var string|null
      */
     protected $title;
     /**
      * Update time
      *
-     * @var string
+     * @var string|null
      */
     protected $updateTime;
     /**
      * Active
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getActive(): bool
+    public function getActive(): ?bool
     {
         return $this->active;
     }
     /**
      * Active
      *
-     * @param bool $active
+     * @param bool|null $active
      *
      * @return self
      */
-    public function setActive(bool $active): self
+    public function setActive(?bool $active): self
     {
         $this->active = $active;
         return $this;
@@ -142,20 +142,20 @@ class CmsDataPageInterface
     /**
      * Content
      *
-     * @return string
+     * @return string|null
      */
-    public function getContent(): string
+    public function getContent(): ?string
     {
         return $this->content;
     }
     /**
      * Content
      *
-     * @param string $content
+     * @param string|null $content
      *
      * @return self
      */
-    public function setContent(string $content): self
+    public function setContent(?string $content): self
     {
         $this->content = $content;
         return $this;
@@ -163,20 +163,20 @@ class CmsDataPageInterface
     /**
      * Content heading
      *
-     * @return string
+     * @return string|null
      */
-    public function getContentHeading(): string
+    public function getContentHeading(): ?string
     {
         return $this->contentHeading;
     }
     /**
      * Content heading
      *
-     * @param string $contentHeading
+     * @param string|null $contentHeading
      *
      * @return self
      */
-    public function setContentHeading(string $contentHeading): self
+    public function setContentHeading(?string $contentHeading): self
     {
         $this->contentHeading = $contentHeading;
         return $this;
@@ -184,20 +184,20 @@ class CmsDataPageInterface
     /**
      * Creation time
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreationTime(): string
+    public function getCreationTime(): ?string
     {
         return $this->creationTime;
     }
     /**
      * Creation time
      *
-     * @param string $creationTime
+     * @param string|null $creationTime
      *
      * @return self
      */
-    public function setCreationTime(string $creationTime): self
+    public function setCreationTime(?string $creationTime): self
     {
         $this->creationTime = $creationTime;
         return $this;
@@ -205,20 +205,20 @@ class CmsDataPageInterface
     /**
      * Custom layout update xml
      *
-     * @return string
+     * @return string|null
      */
-    public function getCustomLayoutUpdateXml(): string
+    public function getCustomLayoutUpdateXml(): ?string
     {
         return $this->customLayoutUpdateXml;
     }
     /**
      * Custom layout update xml
      *
-     * @param string $customLayoutUpdateXml
+     * @param string|null $customLayoutUpdateXml
      *
      * @return self
      */
-    public function setCustomLayoutUpdateXml(string $customLayoutUpdateXml): self
+    public function setCustomLayoutUpdateXml(?string $customLayoutUpdateXml): self
     {
         $this->customLayoutUpdateXml = $customLayoutUpdateXml;
         return $this;
@@ -226,20 +226,20 @@ class CmsDataPageInterface
     /**
      * Custom root template
      *
-     * @return string
+     * @return string|null
      */
-    public function getCustomRootTemplate(): string
+    public function getCustomRootTemplate(): ?string
     {
         return $this->customRootTemplate;
     }
     /**
      * Custom root template
      *
-     * @param string $customRootTemplate
+     * @param string|null $customRootTemplate
      *
      * @return self
      */
-    public function setCustomRootTemplate(string $customRootTemplate): self
+    public function setCustomRootTemplate(?string $customRootTemplate): self
     {
         $this->customRootTemplate = $customRootTemplate;
         return $this;
@@ -247,20 +247,20 @@ class CmsDataPageInterface
     /**
      * Custom theme
      *
-     * @return string
+     * @return string|null
      */
-    public function getCustomTheme(): string
+    public function getCustomTheme(): ?string
     {
         return $this->customTheme;
     }
     /**
      * Custom theme
      *
-     * @param string $customTheme
+     * @param string|null $customTheme
      *
      * @return self
      */
-    public function setCustomTheme(string $customTheme): self
+    public function setCustomTheme(?string $customTheme): self
     {
         $this->customTheme = $customTheme;
         return $this;
@@ -268,20 +268,20 @@ class CmsDataPageInterface
     /**
      * Custom theme from
      *
-     * @return string
+     * @return string|null
      */
-    public function getCustomThemeFrom(): string
+    public function getCustomThemeFrom(): ?string
     {
         return $this->customThemeFrom;
     }
     /**
      * Custom theme from
      *
-     * @param string $customThemeFrom
+     * @param string|null $customThemeFrom
      *
      * @return self
      */
-    public function setCustomThemeFrom(string $customThemeFrom): self
+    public function setCustomThemeFrom(?string $customThemeFrom): self
     {
         $this->customThemeFrom = $customThemeFrom;
         return $this;
@@ -289,20 +289,20 @@ class CmsDataPageInterface
     /**
      * Custom theme to
      *
-     * @return string
+     * @return string|null
      */
-    public function getCustomThemeTo(): string
+    public function getCustomThemeTo(): ?string
     {
         return $this->customThemeTo;
     }
     /**
      * Custom theme to
      *
-     * @param string $customThemeTo
+     * @param string|null $customThemeTo
      *
      * @return self
      */
-    public function setCustomThemeTo(string $customThemeTo): self
+    public function setCustomThemeTo(?string $customThemeTo): self
     {
         $this->customThemeTo = $customThemeTo;
         return $this;
@@ -310,20 +310,20 @@ class CmsDataPageInterface
     /**
      * ID
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * ID
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -331,20 +331,20 @@ class CmsDataPageInterface
     /**
      * Identifier
      *
-     * @return string
+     * @return string|null
      */
-    public function getIdentifier(): string
+    public function getIdentifier(): ?string
     {
         return $this->identifier;
     }
     /**
      * Identifier
      *
-     * @param string $identifier
+     * @param string|null $identifier
      *
      * @return self
      */
-    public function setIdentifier(string $identifier): self
+    public function setIdentifier(?string $identifier): self
     {
         $this->identifier = $identifier;
         return $this;
@@ -352,20 +352,20 @@ class CmsDataPageInterface
     /**
      * Layout update xml
      *
-     * @return string
+     * @return string|null
      */
-    public function getLayoutUpdateXml(): string
+    public function getLayoutUpdateXml(): ?string
     {
         return $this->layoutUpdateXml;
     }
     /**
      * Layout update xml
      *
-     * @param string $layoutUpdateXml
+     * @param string|null $layoutUpdateXml
      *
      * @return self
      */
-    public function setLayoutUpdateXml(string $layoutUpdateXml): self
+    public function setLayoutUpdateXml(?string $layoutUpdateXml): self
     {
         $this->layoutUpdateXml = $layoutUpdateXml;
         return $this;
@@ -373,20 +373,20 @@ class CmsDataPageInterface
     /**
      * Meta description
      *
-     * @return string
+     * @return string|null
      */
-    public function getMetaDescription(): string
+    public function getMetaDescription(): ?string
     {
         return $this->metaDescription;
     }
     /**
      * Meta description
      *
-     * @param string $metaDescription
+     * @param string|null $metaDescription
      *
      * @return self
      */
-    public function setMetaDescription(string $metaDescription): self
+    public function setMetaDescription(?string $metaDescription): self
     {
         $this->metaDescription = $metaDescription;
         return $this;
@@ -394,20 +394,20 @@ class CmsDataPageInterface
     /**
      * Meta keywords
      *
-     * @return string
+     * @return string|null
      */
-    public function getMetaKeywords(): string
+    public function getMetaKeywords(): ?string
     {
         return $this->metaKeywords;
     }
     /**
      * Meta keywords
      *
-     * @param string $metaKeywords
+     * @param string|null $metaKeywords
      *
      * @return self
      */
-    public function setMetaKeywords(string $metaKeywords): self
+    public function setMetaKeywords(?string $metaKeywords): self
     {
         $this->metaKeywords = $metaKeywords;
         return $this;
@@ -415,20 +415,20 @@ class CmsDataPageInterface
     /**
      * Meta title
      *
-     * @return string
+     * @return string|null
      */
-    public function getMetaTitle(): string
+    public function getMetaTitle(): ?string
     {
         return $this->metaTitle;
     }
     /**
      * Meta title
      *
-     * @param string $metaTitle
+     * @param string|null $metaTitle
      *
      * @return self
      */
-    public function setMetaTitle(string $metaTitle): self
+    public function setMetaTitle(?string $metaTitle): self
     {
         $this->metaTitle = $metaTitle;
         return $this;
@@ -436,20 +436,20 @@ class CmsDataPageInterface
     /**
      * Page layout
      *
-     * @return string
+     * @return string|null
      */
-    public function getPageLayout(): string
+    public function getPageLayout(): ?string
     {
         return $this->pageLayout;
     }
     /**
      * Page layout
      *
-     * @param string $pageLayout
+     * @param string|null $pageLayout
      *
      * @return self
      */
-    public function setPageLayout(string $pageLayout): self
+    public function setPageLayout(?string $pageLayout): self
     {
         $this->pageLayout = $pageLayout;
         return $this;
@@ -457,20 +457,20 @@ class CmsDataPageInterface
     /**
      * Sort order
      *
-     * @return string
+     * @return string|null
      */
-    public function getSortOrder(): string
+    public function getSortOrder(): ?string
     {
         return $this->sortOrder;
     }
     /**
      * Sort order
      *
-     * @param string $sortOrder
+     * @param string|null $sortOrder
      *
      * @return self
      */
-    public function setSortOrder(string $sortOrder): self
+    public function setSortOrder(?string $sortOrder): self
     {
         $this->sortOrder = $sortOrder;
         return $this;
@@ -478,20 +478,20 @@ class CmsDataPageInterface
     /**
      * Title
      *
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
     /**
      * Title
      *
-     * @param string $title
+     * @param string|null $title
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
         return $this;
@@ -499,20 +499,20 @@ class CmsDataPageInterface
     /**
      * Update time
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdateTime(): string
+    public function getUpdateTime(): ?string
     {
         return $this->updateTime;
     }
     /**
      * Update time
      *
-     * @param string $updateTime
+     * @param string|null $updateTime
      *
      * @return self
      */
-    public function setUpdateTime(string $updateTime): self
+    public function setUpdateTime(?string $updateTime): self
     {
         $this->updateTime = $updateTime;
         return $this;

@@ -43,50 +43,80 @@ class DownloadableDataLinkInterfaceNormalizer implements DenormalizerInterface, 
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('is_shareable', $data)) {
+        if (\array_key_exists('is_shareable', $data) && $data['is_shareable'] !== null) {
             $object->setIsShareable($data['is_shareable']);
+        } elseif (\array_key_exists('is_shareable', $data) && $data['is_shareable'] === null) {
+            $object->setIsShareable(null);
         }
-        if (\array_key_exists('link_file', $data)) {
+        if (\array_key_exists('link_file', $data) && $data['link_file'] !== null) {
             $object->setLinkFile($data['link_file']);
+        } elseif (\array_key_exists('link_file', $data) && $data['link_file'] === null) {
+            $object->setLinkFile(null);
         }
-        if (\array_key_exists('link_file_content', $data)) {
+        if (\array_key_exists('link_file_content', $data) && $data['link_file_content'] !== null) {
             $object->setLinkFileContent($this->denormalizer->denormalize($data['link_file_content'], 'Kiboko\\Magento\\V2_4\\Model\\DownloadableDataFileContentInterface', 'json', $context));
+        } elseif (\array_key_exists('link_file_content', $data) && $data['link_file_content'] === null) {
+            $object->setLinkFileContent(null);
         }
-        if (\array_key_exists('link_type', $data)) {
+        if (\array_key_exists('link_type', $data) && $data['link_type'] !== null) {
             $object->setLinkType($data['link_type']);
+        } elseif (\array_key_exists('link_type', $data) && $data['link_type'] === null) {
+            $object->setLinkType(null);
         }
-        if (\array_key_exists('link_url', $data)) {
+        if (\array_key_exists('link_url', $data) && $data['link_url'] !== null) {
             $object->setLinkUrl($data['link_url']);
+        } elseif (\array_key_exists('link_url', $data) && $data['link_url'] === null) {
+            $object->setLinkUrl(null);
         }
-        if (\array_key_exists('number_of_downloads', $data)) {
+        if (\array_key_exists('number_of_downloads', $data) && $data['number_of_downloads'] !== null) {
             $object->setNumberOfDownloads($data['number_of_downloads']);
+        } elseif (\array_key_exists('number_of_downloads', $data) && $data['number_of_downloads'] === null) {
+            $object->setNumberOfDownloads(null);
         }
-        if (\array_key_exists('price', $data)) {
+        if (\array_key_exists('price', $data) && $data['price'] !== null) {
             $object->setPrice($data['price']);
+        } elseif (\array_key_exists('price', $data) && $data['price'] === null) {
+            $object->setPrice(null);
         }
-        if (\array_key_exists('sample_file', $data)) {
+        if (\array_key_exists('sample_file', $data) && $data['sample_file'] !== null) {
             $object->setSampleFile($data['sample_file']);
+        } elseif (\array_key_exists('sample_file', $data) && $data['sample_file'] === null) {
+            $object->setSampleFile(null);
         }
-        if (\array_key_exists('sample_file_content', $data)) {
+        if (\array_key_exists('sample_file_content', $data) && $data['sample_file_content'] !== null) {
             $object->setSampleFileContent($this->denormalizer->denormalize($data['sample_file_content'], 'Kiboko\\Magento\\V2_4\\Model\\DownloadableDataFileContentInterface', 'json', $context));
+        } elseif (\array_key_exists('sample_file_content', $data) && $data['sample_file_content'] === null) {
+            $object->setSampleFileContent(null);
         }
-        if (\array_key_exists('sample_type', $data)) {
+        if (\array_key_exists('sample_type', $data) && $data['sample_type'] !== null) {
             $object->setSampleType($data['sample_type']);
+        } elseif (\array_key_exists('sample_type', $data) && $data['sample_type'] === null) {
+            $object->setSampleType(null);
         }
-        if (\array_key_exists('sample_url', $data)) {
+        if (\array_key_exists('sample_url', $data) && $data['sample_url'] !== null) {
             $object->setSampleUrl($data['sample_url']);
+        } elseif (\array_key_exists('sample_url', $data) && $data['sample_url'] === null) {
+            $object->setSampleUrl(null);
         }
-        if (\array_key_exists('sort_order', $data)) {
+        if (\array_key_exists('sort_order', $data) && $data['sort_order'] !== null) {
             $object->setSortOrder($data['sort_order']);
+        } elseif (\array_key_exists('sort_order', $data) && $data['sort_order'] === null) {
+            $object->setSortOrder(null);
         }
-        if (\array_key_exists('title', $data)) {
+        if (\array_key_exists('title', $data) && $data['title'] !== null) {
             $object->setTitle($data['title']);
+        } elseif (\array_key_exists('title', $data) && $data['title'] === null) {
+            $object->setTitle(null);
         }
         return $object;
     }

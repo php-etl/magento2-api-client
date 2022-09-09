@@ -7,50 +7,50 @@ class GiftMessageDataMessageExtensionInterface
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $entityId;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $entityType;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $wrappingAddPrintedCard;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $wrappingAllowGiftReceipt;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $wrappingId;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getEntityId(): string
+    public function getEntityId(): ?string
     {
         return $this->entityId;
     }
     /**
      *
      *
-     * @param string $entityId
+     * @param string|null $entityId
      *
      * @return self
      */
-    public function setEntityId(string $entityId): self
+    public function setEntityId(?string $entityId): self
     {
         $this->entityId = $entityId;
         return $this;
@@ -58,20 +58,20 @@ class GiftMessageDataMessageExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getEntityType(): string
+    public function getEntityType(): ?string
     {
         return $this->entityType;
     }
     /**
      *
      *
-     * @param string $entityType
+     * @param string|null $entityType
      *
      * @return self
      */
-    public function setEntityType(string $entityType): self
+    public function setEntityType(?string $entityType): self
     {
         $this->entityType = $entityType;
         return $this;
@@ -79,20 +79,20 @@ class GiftMessageDataMessageExtensionInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getWrappingAddPrintedCard(): bool
+    public function getWrappingAddPrintedCard(): ?bool
     {
         return $this->wrappingAddPrintedCard;
     }
     /**
      *
      *
-     * @param bool $wrappingAddPrintedCard
+     * @param bool|null $wrappingAddPrintedCard
      *
      * @return self
      */
-    public function setWrappingAddPrintedCard(bool $wrappingAddPrintedCard): self
+    public function setWrappingAddPrintedCard(?bool $wrappingAddPrintedCard): self
     {
         $this->wrappingAddPrintedCard = $wrappingAddPrintedCard;
         return $this;
@@ -100,20 +100,20 @@ class GiftMessageDataMessageExtensionInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getWrappingAllowGiftReceipt(): bool
+    public function getWrappingAllowGiftReceipt(): ?bool
     {
         return $this->wrappingAllowGiftReceipt;
     }
     /**
      *
      *
-     * @param bool $wrappingAllowGiftReceipt
+     * @param bool|null $wrappingAllowGiftReceipt
      *
      * @return self
      */
-    public function setWrappingAllowGiftReceipt(bool $wrappingAllowGiftReceipt): self
+    public function setWrappingAllowGiftReceipt(?bool $wrappingAllowGiftReceipt): self
     {
         $this->wrappingAllowGiftReceipt = $wrappingAllowGiftReceipt;
         return $this;
@@ -121,20 +121,20 @@ class GiftMessageDataMessageExtensionInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getWrappingId(): int
+    public function getWrappingId(): ?int
     {
         return $this->wrappingId;
     }
     /**
      *
      *
-     * @param int $wrappingId
+     * @param int|null $wrappingId
      *
      * @return self
      */
-    public function setWrappingId(int $wrappingId): self
+    public function setWrappingId(?int $wrappingId): self
     {
         $this->wrappingId = $wrappingId;
         return $this;

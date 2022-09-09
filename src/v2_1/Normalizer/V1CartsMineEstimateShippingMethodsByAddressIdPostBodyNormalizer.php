@@ -40,8 +40,10 @@ class V1CartsMineEstimateShippingMethodsByAddressIdPostBodyNormalizer implements
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('addressId', $data)) {
+        if (\array_key_exists('addressId', $data) && $data['addressId'] !== null) {
             $object->setAddressId($data['addressId']);
+        } elseif (\array_key_exists('addressId', $data) && $data['addressId'] === null) {
+            $object->setAddressId(null);
         }
         return $object;
     }

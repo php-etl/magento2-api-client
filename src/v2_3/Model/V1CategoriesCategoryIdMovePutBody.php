@@ -7,32 +7,32 @@ class V1CategoriesCategoryIdMovePutBody
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $afterId;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $parentId;
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getAfterId(): int
+    public function getAfterId(): ?int
     {
         return $this->afterId;
     }
     /**
      *
      *
-     * @param int $afterId
+     * @param int|null $afterId
      *
      * @return self
      */
-    public function setAfterId(int $afterId): self
+    public function setAfterId(?int $afterId): self
     {
         $this->afterId = $afterId;
         return $this;
@@ -40,20 +40,20 @@ class V1CategoriesCategoryIdMovePutBody
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getParentId(): int
+    public function getParentId(): ?int
     {
         return $this->parentId;
     }
     /**
      *
      *
-     * @param int $parentId
+     * @param int|null $parentId
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(?int $parentId): self
     {
         $this->parentId = $parentId;
         return $this;

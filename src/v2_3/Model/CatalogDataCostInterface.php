@@ -7,44 +7,44 @@ class CatalogDataCostInterface
     /**
      * Cost value.
      *
-     * @var float
+     * @var float|null
      */
     protected $cost;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\CostInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * SKU.
      *
-     * @var string
+     * @var string|null
      */
     protected $sku;
     /**
      * Store id.
      *
-     * @var int
+     * @var int|null
      */
     protected $storeId;
     /**
      * Cost value.
      *
-     * @return float
+     * @return float|null
      */
-    public function getCost(): float
+    public function getCost(): ?float
     {
         return $this->cost;
     }
     /**
      * Cost value.
      *
-     * @param float $cost
+     * @param float|null $cost
      *
      * @return self
      */
-    public function setCost(float $cost): self
+    public function setCost(?float $cost): self
     {
         $this->cost = $cost;
         return $this;
@@ -73,20 +73,20 @@ class CatalogDataCostInterface
     /**
      * SKU.
      *
-     * @return string
+     * @return string|null
      */
-    public function getSku(): string
+    public function getSku(): ?string
     {
         return $this->sku;
     }
     /**
      * SKU.
      *
-     * @param string $sku
+     * @param string|null $sku
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(?string $sku): self
     {
         $this->sku = $sku;
         return $this;
@@ -94,20 +94,20 @@ class CatalogDataCostInterface
     /**
      * Store id.
      *
-     * @return int
+     * @return int|null
      */
-    public function getStoreId(): int
+    public function getStoreId(): ?int
     {
         return $this->storeId;
     }
     /**
      * Store id.
      *
-     * @param int $storeId
+     * @param int|null $storeId
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(?int $storeId): self
     {
         $this->storeId = $storeId;
         return $this;

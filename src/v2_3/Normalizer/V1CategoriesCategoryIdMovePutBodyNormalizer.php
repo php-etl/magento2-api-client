@@ -40,11 +40,15 @@ class V1CategoriesCategoryIdMovePutBodyNormalizer implements DenormalizerInterfa
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('afterId', $data)) {
+        if (\array_key_exists('afterId', $data) && $data['afterId'] !== null) {
             $object->setAfterId($data['afterId']);
+        } elseif (\array_key_exists('afterId', $data) && $data['afterId'] === null) {
+            $object->setAfterId(null);
         }
-        if (\array_key_exists('parentId', $data)) {
+        if (\array_key_exists('parentId', $data) && $data['parentId'] !== null) {
             $object->setParentId($data['parentId']);
+        } elseif (\array_key_exists('parentId', $data) && $data['parentId'] === null) {
+            $object->setParentId(null);
         }
         return $object;
     }

@@ -7,32 +7,32 @@ class V1GuestCartsCartIdPutBody
     /**
      * The customer ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $customerId;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $storeId;
     /**
      * The customer ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getCustomerId(): int
+    public function getCustomerId(): ?int
     {
         return $this->customerId;
     }
     /**
      * The customer ID.
      *
-     * @param int $customerId
+     * @param int|null $customerId
      *
      * @return self
      */
-    public function setCustomerId(int $customerId): self
+    public function setCustomerId(?int $customerId): self
     {
         $this->customerId = $customerId;
         return $this;
@@ -40,20 +40,20 @@ class V1GuestCartsCartIdPutBody
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getStoreId(): int
+    public function getStoreId(): ?int
     {
         return $this->storeId;
     }
     /**
      *
      *
-     * @param int $storeId
+     * @param int|null $storeId
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(?int $storeId): self
     {
         $this->storeId = $storeId;
         return $this;

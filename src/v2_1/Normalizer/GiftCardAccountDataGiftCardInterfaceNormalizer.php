@@ -46,17 +46,25 @@ class GiftCardAccountDataGiftCardInterfaceNormalizer implements DenormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('amount', $data)) {
+        if (\array_key_exists('amount', $data) && $data['amount'] !== null) {
             $object->setAmount($data['amount']);
+        } elseif (\array_key_exists('amount', $data) && $data['amount'] === null) {
+            $object->setAmount(null);
         }
-        if (\array_key_exists('base_amount', $data)) {
+        if (\array_key_exists('base_amount', $data) && $data['base_amount'] !== null) {
             $object->setBaseAmount($data['base_amount']);
+        } elseif (\array_key_exists('base_amount', $data) && $data['base_amount'] === null) {
+            $object->setBaseAmount(null);
         }
-        if (\array_key_exists('code', $data)) {
+        if (\array_key_exists('code', $data) && $data['code'] !== null) {
             $object->setCode($data['code']);
+        } elseif (\array_key_exists('code', $data) && $data['code'] === null) {
+            $object->setCode(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
         return $object;
     }

@@ -40,92 +40,142 @@ class QuoteDataTotalSegmentExtensionInterfaceNormalizer implements DenormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('gift_cards', $data)) {
+        if (\array_key_exists('gift_cards', $data) && $data['gift_cards'] !== null) {
             $object->setGiftCards($data['gift_cards']);
+        } elseif (\array_key_exists('gift_cards', $data) && $data['gift_cards'] === null) {
+            $object->setGiftCards(null);
         }
-        if (\array_key_exists('gw_add_card', $data)) {
+        if (\array_key_exists('gw_add_card', $data) && $data['gw_add_card'] !== null) {
             $object->setGwAddCard($data['gw_add_card']);
+        } elseif (\array_key_exists('gw_add_card', $data) && $data['gw_add_card'] === null) {
+            $object->setGwAddCard(null);
         }
-        if (\array_key_exists('gw_allow_gift_receipt', $data)) {
+        if (\array_key_exists('gw_allow_gift_receipt', $data) && $data['gw_allow_gift_receipt'] !== null) {
             $object->setGwAllowGiftReceipt($data['gw_allow_gift_receipt']);
+        } elseif (\array_key_exists('gw_allow_gift_receipt', $data) && $data['gw_allow_gift_receipt'] === null) {
+            $object->setGwAllowGiftReceipt(null);
         }
-        if (\array_key_exists('gw_base_price', $data)) {
+        if (\array_key_exists('gw_base_price', $data) && $data['gw_base_price'] !== null) {
             $object->setGwBasePrice($data['gw_base_price']);
+        } elseif (\array_key_exists('gw_base_price', $data) && $data['gw_base_price'] === null) {
+            $object->setGwBasePrice(null);
         }
-        if (\array_key_exists('gw_base_price_incl_tax', $data)) {
+        if (\array_key_exists('gw_base_price_incl_tax', $data) && $data['gw_base_price_incl_tax'] !== null) {
             $object->setGwBasePriceInclTax($data['gw_base_price_incl_tax']);
+        } elseif (\array_key_exists('gw_base_price_incl_tax', $data) && $data['gw_base_price_incl_tax'] === null) {
+            $object->setGwBasePriceInclTax(null);
         }
-        if (\array_key_exists('gw_base_tax_amount', $data)) {
+        if (\array_key_exists('gw_base_tax_amount', $data) && $data['gw_base_tax_amount'] !== null) {
             $object->setGwBaseTaxAmount($data['gw_base_tax_amount']);
+        } elseif (\array_key_exists('gw_base_tax_amount', $data) && $data['gw_base_tax_amount'] === null) {
+            $object->setGwBaseTaxAmount(null);
         }
-        if (\array_key_exists('gw_card_base_price', $data)) {
+        if (\array_key_exists('gw_card_base_price', $data) && $data['gw_card_base_price'] !== null) {
             $object->setGwCardBasePrice($data['gw_card_base_price']);
+        } elseif (\array_key_exists('gw_card_base_price', $data) && $data['gw_card_base_price'] === null) {
+            $object->setGwCardBasePrice(null);
         }
-        if (\array_key_exists('gw_card_base_price_incl_tax', $data)) {
+        if (\array_key_exists('gw_card_base_price_incl_tax', $data) && $data['gw_card_base_price_incl_tax'] !== null) {
             $object->setGwCardBasePriceInclTax($data['gw_card_base_price_incl_tax']);
+        } elseif (\array_key_exists('gw_card_base_price_incl_tax', $data) && $data['gw_card_base_price_incl_tax'] === null) {
+            $object->setGwCardBasePriceInclTax(null);
         }
-        if (\array_key_exists('gw_card_base_tax_amount', $data)) {
+        if (\array_key_exists('gw_card_base_tax_amount', $data) && $data['gw_card_base_tax_amount'] !== null) {
             $object->setGwCardBaseTaxAmount($data['gw_card_base_tax_amount']);
+        } elseif (\array_key_exists('gw_card_base_tax_amount', $data) && $data['gw_card_base_tax_amount'] === null) {
+            $object->setGwCardBaseTaxAmount(null);
         }
-        if (\array_key_exists('gw_card_price', $data)) {
+        if (\array_key_exists('gw_card_price', $data) && $data['gw_card_price'] !== null) {
             $object->setGwCardPrice($data['gw_card_price']);
+        } elseif (\array_key_exists('gw_card_price', $data) && $data['gw_card_price'] === null) {
+            $object->setGwCardPrice(null);
         }
-        if (\array_key_exists('gw_card_price_incl_tax', $data)) {
+        if (\array_key_exists('gw_card_price_incl_tax', $data) && $data['gw_card_price_incl_tax'] !== null) {
             $object->setGwCardPriceInclTax($data['gw_card_price_incl_tax']);
+        } elseif (\array_key_exists('gw_card_price_incl_tax', $data) && $data['gw_card_price_incl_tax'] === null) {
+            $object->setGwCardPriceInclTax(null);
         }
-        if (\array_key_exists('gw_card_tax_amount', $data)) {
+        if (\array_key_exists('gw_card_tax_amount', $data) && $data['gw_card_tax_amount'] !== null) {
             $object->setGwCardTaxAmount($data['gw_card_tax_amount']);
+        } elseif (\array_key_exists('gw_card_tax_amount', $data) && $data['gw_card_tax_amount'] === null) {
+            $object->setGwCardTaxAmount(null);
         }
-        if (\array_key_exists('gw_item_ids', $data)) {
+        if (\array_key_exists('gw_item_ids', $data) && $data['gw_item_ids'] !== null) {
             $values = array();
             foreach ($data['gw_item_ids'] as $value) {
                 $values[] = $value;
             }
             $object->setGwItemIds($values);
+        } elseif (\array_key_exists('gw_item_ids', $data) && $data['gw_item_ids'] === null) {
+            $object->setGwItemIds(null);
         }
-        if (\array_key_exists('gw_items_base_price', $data)) {
+        if (\array_key_exists('gw_items_base_price', $data) && $data['gw_items_base_price'] !== null) {
             $object->setGwItemsBasePrice($data['gw_items_base_price']);
+        } elseif (\array_key_exists('gw_items_base_price', $data) && $data['gw_items_base_price'] === null) {
+            $object->setGwItemsBasePrice(null);
         }
-        if (\array_key_exists('gw_items_base_price_incl_tax', $data)) {
+        if (\array_key_exists('gw_items_base_price_incl_tax', $data) && $data['gw_items_base_price_incl_tax'] !== null) {
             $object->setGwItemsBasePriceInclTax($data['gw_items_base_price_incl_tax']);
+        } elseif (\array_key_exists('gw_items_base_price_incl_tax', $data) && $data['gw_items_base_price_incl_tax'] === null) {
+            $object->setGwItemsBasePriceInclTax(null);
         }
-        if (\array_key_exists('gw_items_base_tax_amount', $data)) {
+        if (\array_key_exists('gw_items_base_tax_amount', $data) && $data['gw_items_base_tax_amount'] !== null) {
             $object->setGwItemsBaseTaxAmount($data['gw_items_base_tax_amount']);
+        } elseif (\array_key_exists('gw_items_base_tax_amount', $data) && $data['gw_items_base_tax_amount'] === null) {
+            $object->setGwItemsBaseTaxAmount(null);
         }
-        if (\array_key_exists('gw_items_price', $data)) {
+        if (\array_key_exists('gw_items_price', $data) && $data['gw_items_price'] !== null) {
             $object->setGwItemsPrice($data['gw_items_price']);
+        } elseif (\array_key_exists('gw_items_price', $data) && $data['gw_items_price'] === null) {
+            $object->setGwItemsPrice(null);
         }
-        if (\array_key_exists('gw_items_price_incl_tax', $data)) {
+        if (\array_key_exists('gw_items_price_incl_tax', $data) && $data['gw_items_price_incl_tax'] !== null) {
             $object->setGwItemsPriceInclTax($data['gw_items_price_incl_tax']);
+        } elseif (\array_key_exists('gw_items_price_incl_tax', $data) && $data['gw_items_price_incl_tax'] === null) {
+            $object->setGwItemsPriceInclTax(null);
         }
-        if (\array_key_exists('gw_items_tax_amount', $data)) {
+        if (\array_key_exists('gw_items_tax_amount', $data) && $data['gw_items_tax_amount'] !== null) {
             $object->setGwItemsTaxAmount($data['gw_items_tax_amount']);
+        } elseif (\array_key_exists('gw_items_tax_amount', $data) && $data['gw_items_tax_amount'] === null) {
+            $object->setGwItemsTaxAmount(null);
         }
-        if (\array_key_exists('gw_order_id', $data)) {
+        if (\array_key_exists('gw_order_id', $data) && $data['gw_order_id'] !== null) {
             $object->setGwOrderId($data['gw_order_id']);
+        } elseif (\array_key_exists('gw_order_id', $data) && $data['gw_order_id'] === null) {
+            $object->setGwOrderId(null);
         }
-        if (\array_key_exists('gw_price', $data)) {
+        if (\array_key_exists('gw_price', $data) && $data['gw_price'] !== null) {
             $object->setGwPrice($data['gw_price']);
+        } elseif (\array_key_exists('gw_price', $data) && $data['gw_price'] === null) {
+            $object->setGwPrice(null);
         }
-        if (\array_key_exists('gw_price_incl_tax', $data)) {
+        if (\array_key_exists('gw_price_incl_tax', $data) && $data['gw_price_incl_tax'] !== null) {
             $object->setGwPriceInclTax($data['gw_price_incl_tax']);
+        } elseif (\array_key_exists('gw_price_incl_tax', $data) && $data['gw_price_incl_tax'] === null) {
+            $object->setGwPriceInclTax(null);
         }
-        if (\array_key_exists('gw_tax_amount', $data)) {
+        if (\array_key_exists('gw_tax_amount', $data) && $data['gw_tax_amount'] !== null) {
             $object->setGwTaxAmount($data['gw_tax_amount']);
+        } elseif (\array_key_exists('gw_tax_amount', $data) && $data['gw_tax_amount'] === null) {
+            $object->setGwTaxAmount(null);
         }
-        if (\array_key_exists('tax_grandtotal_details', $data)) {
+        if (\array_key_exists('tax_grandtotal_details', $data) && $data['tax_grandtotal_details'] !== null) {
             $values_1 = array();
             foreach ($data['tax_grandtotal_details'] as $value_1) {
                 $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_2\\Model\\TaxDataGrandTotalDetailsInterface', 'json', $context);
             }
             $object->setTaxGrandtotalDetails($values_1);
+        } elseif (\array_key_exists('tax_grandtotal_details', $data) && $data['tax_grandtotal_details'] === null) {
+            $object->setTaxGrandtotalDetails(null);
         }
-        if (\array_key_exists('vertex_tax_calculation_messages', $data)) {
+        if (\array_key_exists('vertex_tax_calculation_messages', $data) && $data['vertex_tax_calculation_messages'] !== null) {
             $values_2 = array();
             foreach ($data['vertex_tax_calculation_messages'] as $value_2) {
                 $values_2[] = $value_2;
             }
             $object->setVertexTaxCalculationMessages($values_2);
+        } elseif (\array_key_exists('vertex_tax_calculation_messages', $data) && $data['vertex_tax_calculation_messages'] === null) {
+            $object->setVertexTaxCalculationMessages(null);
         }
         return $object;
     }

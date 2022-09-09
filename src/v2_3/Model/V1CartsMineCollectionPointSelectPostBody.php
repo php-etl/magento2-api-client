@@ -7,26 +7,26 @@ class V1CartsMineCollectionPointSelectPostBody
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $entityId;
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getEntityId(): int
+    public function getEntityId(): ?int
     {
         return $this->entityId;
     }
     /**
      *
      *
-     * @param int $entityId
+     * @param int|null $entityId
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(?int $entityId): self
     {
         $this->entityId = $entityId;
         return $this;

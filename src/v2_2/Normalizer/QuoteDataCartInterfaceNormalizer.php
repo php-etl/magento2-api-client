@@ -43,69 +43,109 @@ class QuoteDataCartInterfaceNormalizer implements DenormalizerInterface, Normali
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('billing_address', $data)) {
+        if (\array_key_exists('billing_address', $data) && $data['billing_address'] !== null) {
             $object->setBillingAddress($this->denormalizer->denormalize($data['billing_address'], 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataAddressInterface', 'json', $context));
+        } elseif (\array_key_exists('billing_address', $data) && $data['billing_address'] === null) {
+            $object->setBillingAddress(null);
         }
-        if (\array_key_exists('converted_at', $data)) {
+        if (\array_key_exists('converted_at', $data) && $data['converted_at'] !== null) {
             $object->setConvertedAt($data['converted_at']);
+        } elseif (\array_key_exists('converted_at', $data) && $data['converted_at'] === null) {
+            $object->setConvertedAt(null);
         }
-        if (\array_key_exists('created_at', $data)) {
+        if (\array_key_exists('created_at', $data) && $data['created_at'] !== null) {
             $object->setCreatedAt($data['created_at']);
+        } elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+            $object->setCreatedAt(null);
         }
-        if (\array_key_exists('currency', $data)) {
+        if (\array_key_exists('currency', $data) && $data['currency'] !== null) {
             $object->setCurrency($this->denormalizer->denormalize($data['currency'], 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataCurrencyInterface', 'json', $context));
+        } elseif (\array_key_exists('currency', $data) && $data['currency'] === null) {
+            $object->setCurrency(null);
         }
-        if (\array_key_exists('customer', $data)) {
+        if (\array_key_exists('customer', $data) && $data['customer'] !== null) {
             $object->setCustomer($this->denormalizer->denormalize($data['customer'], 'Kiboko\\Magento\\V2_2\\Model\\CustomerDataCustomerInterface', 'json', $context));
+        } elseif (\array_key_exists('customer', $data) && $data['customer'] === null) {
+            $object->setCustomer(null);
         }
-        if (\array_key_exists('customer_is_guest', $data)) {
+        if (\array_key_exists('customer_is_guest', $data) && $data['customer_is_guest'] !== null) {
             $object->setCustomerIsGuest($data['customer_is_guest']);
+        } elseif (\array_key_exists('customer_is_guest', $data) && $data['customer_is_guest'] === null) {
+            $object->setCustomerIsGuest(null);
         }
-        if (\array_key_exists('customer_note', $data)) {
+        if (\array_key_exists('customer_note', $data) && $data['customer_note'] !== null) {
             $object->setCustomerNote($data['customer_note']);
+        } elseif (\array_key_exists('customer_note', $data) && $data['customer_note'] === null) {
+            $object->setCustomerNote(null);
         }
-        if (\array_key_exists('customer_note_notify', $data)) {
+        if (\array_key_exists('customer_note_notify', $data) && $data['customer_note_notify'] !== null) {
             $object->setCustomerNoteNotify($data['customer_note_notify']);
+        } elseif (\array_key_exists('customer_note_notify', $data) && $data['customer_note_notify'] === null) {
+            $object->setCustomerNoteNotify(null);
         }
-        if (\array_key_exists('customer_tax_class_id', $data)) {
+        if (\array_key_exists('customer_tax_class_id', $data) && $data['customer_tax_class_id'] !== null) {
             $object->setCustomerTaxClassId($data['customer_tax_class_id']);
+        } elseif (\array_key_exists('customer_tax_class_id', $data) && $data['customer_tax_class_id'] === null) {
+            $object->setCustomerTaxClassId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataCartExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('is_active', $data)) {
+        if (\array_key_exists('is_active', $data) && $data['is_active'] !== null) {
             $object->setIsActive($data['is_active']);
+        } elseif (\array_key_exists('is_active', $data) && $data['is_active'] === null) {
+            $object->setIsActive(null);
         }
-        if (\array_key_exists('is_virtual', $data)) {
+        if (\array_key_exists('is_virtual', $data) && $data['is_virtual'] !== null) {
             $object->setIsVirtual($data['is_virtual']);
+        } elseif (\array_key_exists('is_virtual', $data) && $data['is_virtual'] === null) {
+            $object->setIsVirtual(null);
         }
-        if (\array_key_exists('items', $data)) {
+        if (\array_key_exists('items', $data) && $data['items'] !== null) {
             $values = array();
             foreach ($data['items'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataCartItemInterface', 'json', $context);
             }
             $object->setItems($values);
+        } elseif (\array_key_exists('items', $data) && $data['items'] === null) {
+            $object->setItems(null);
         }
-        if (\array_key_exists('items_count', $data)) {
+        if (\array_key_exists('items_count', $data) && $data['items_count'] !== null) {
             $object->setItemsCount($data['items_count']);
+        } elseif (\array_key_exists('items_count', $data) && $data['items_count'] === null) {
+            $object->setItemsCount(null);
         }
-        if (\array_key_exists('items_qty', $data)) {
+        if (\array_key_exists('items_qty', $data) && $data['items_qty'] !== null) {
             $object->setItemsQty($data['items_qty']);
+        } elseif (\array_key_exists('items_qty', $data) && $data['items_qty'] === null) {
+            $object->setItemsQty(null);
         }
-        if (\array_key_exists('orig_order_id', $data)) {
+        if (\array_key_exists('orig_order_id', $data) && $data['orig_order_id'] !== null) {
             $object->setOrigOrderId($data['orig_order_id']);
+        } elseif (\array_key_exists('orig_order_id', $data) && $data['orig_order_id'] === null) {
+            $object->setOrigOrderId(null);
         }
-        if (\array_key_exists('reserved_order_id', $data)) {
+        if (\array_key_exists('reserved_order_id', $data) && $data['reserved_order_id'] !== null) {
             $object->setReservedOrderId($data['reserved_order_id']);
+        } elseif (\array_key_exists('reserved_order_id', $data) && $data['reserved_order_id'] === null) {
+            $object->setReservedOrderId(null);
         }
-        if (\array_key_exists('store_id', $data)) {
+        if (\array_key_exists('store_id', $data) && $data['store_id'] !== null) {
             $object->setStoreId($data['store_id']);
+        } elseif (\array_key_exists('store_id', $data) && $data['store_id'] === null) {
+            $object->setStoreId(null);
         }
-        if (\array_key_exists('updated_at', $data)) {
+        if (\array_key_exists('updated_at', $data) && $data['updated_at'] !== null) {
             $object->setUpdatedAt($data['updated_at']);
+        } elseif (\array_key_exists('updated_at', $data) && $data['updated_at'] === null) {
+            $object->setUpdatedAt(null);
         }
         return $object;
     }

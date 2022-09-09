@@ -40,15 +40,19 @@ class ErrorErrorsItemNormalizer implements DenormalizerInterface, NormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('message', $data)) {
+        if (\array_key_exists('message', $data) && $data['message'] !== null) {
             $object->setMessage($data['message']);
+        } elseif (\array_key_exists('message', $data) && $data['message'] === null) {
+            $object->setMessage(null);
         }
-        if (\array_key_exists('parameters', $data)) {
+        if (\array_key_exists('parameters', $data) && $data['parameters'] !== null) {
             $values = array();
             foreach ($data['parameters'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\ErrorParametersItem', 'json', $context);
             }
             $object->setParameters($values);
+        } elseif (\array_key_exists('parameters', $data) && $data['parameters'] === null) {
+            $object->setParameters(null);
         }
         return $object;
     }

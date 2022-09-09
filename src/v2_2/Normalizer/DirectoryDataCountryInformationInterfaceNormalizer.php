@@ -40,30 +40,44 @@ class DirectoryDataCountryInformationInterfaceNormalizer implements Denormalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('available_regions', $data)) {
+        if (\array_key_exists('available_regions', $data) && $data['available_regions'] !== null) {
             $values = array();
             foreach ($data['available_regions'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\DirectoryDataRegionInformationInterface', 'json', $context);
             }
             $object->setAvailableRegions($values);
+        } elseif (\array_key_exists('available_regions', $data) && $data['available_regions'] === null) {
+            $object->setAvailableRegions(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('full_name_english', $data)) {
+        if (\array_key_exists('full_name_english', $data) && $data['full_name_english'] !== null) {
             $object->setFullNameEnglish($data['full_name_english']);
+        } elseif (\array_key_exists('full_name_english', $data) && $data['full_name_english'] === null) {
+            $object->setFullNameEnglish(null);
         }
-        if (\array_key_exists('full_name_locale', $data)) {
+        if (\array_key_exists('full_name_locale', $data) && $data['full_name_locale'] !== null) {
             $object->setFullNameLocale($data['full_name_locale']);
+        } elseif (\array_key_exists('full_name_locale', $data) && $data['full_name_locale'] === null) {
+            $object->setFullNameLocale(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('three_letter_abbreviation', $data)) {
+        if (\array_key_exists('three_letter_abbreviation', $data) && $data['three_letter_abbreviation'] !== null) {
             $object->setThreeLetterAbbreviation($data['three_letter_abbreviation']);
+        } elseif (\array_key_exists('three_letter_abbreviation', $data) && $data['three_letter_abbreviation'] === null) {
+            $object->setThreeLetterAbbreviation(null);
         }
-        if (\array_key_exists('two_letter_abbreviation', $data)) {
+        if (\array_key_exists('two_letter_abbreviation', $data) && $data['two_letter_abbreviation'] !== null) {
             $object->setTwoLetterAbbreviation($data['two_letter_abbreviation']);
+        } elseif (\array_key_exists('two_letter_abbreviation', $data) && $data['two_letter_abbreviation'] === null) {
+            $object->setTwoLetterAbbreviation(null);
         }
         return $object;
     }

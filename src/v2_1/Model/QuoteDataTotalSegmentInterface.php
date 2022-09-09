@@ -7,50 +7,50 @@ class QuoteDataTotalSegmentInterface
     /**
      * Display area code.
      *
-     * @var string
+     * @var string|null
      */
     protected $area;
     /**
      * Code
      *
-     * @var string
+     * @var string|null
      */
     protected $code;
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\TotalSegmentInterface
      *
-     * @var QuoteDataTotalSegmentExtensionInterface
+     * @var QuoteDataTotalSegmentExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * Total title
      *
-     * @var string
+     * @var string|null
      */
     protected $title;
     /**
      * Total value
      *
-     * @var float
+     * @var float|null
      */
     protected $value;
     /**
      * Display area code.
      *
-     * @return string
+     * @return string|null
      */
-    public function getArea(): string
+    public function getArea(): ?string
     {
         return $this->area;
     }
     /**
      * Display area code.
      *
-     * @param string $area
+     * @param string|null $area
      *
      * @return self
      */
-    public function setArea(string $area): self
+    public function setArea(?string $area): self
     {
         $this->area = $area;
         return $this;
@@ -58,20 +58,20 @@ class QuoteDataTotalSegmentInterface
     /**
      * Code
      *
-     * @return string
+     * @return string|null
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
     /**
      * Code
      *
-     * @param string $code
+     * @param string|null $code
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
         return $this;
@@ -79,20 +79,20 @@ class QuoteDataTotalSegmentInterface
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\TotalSegmentInterface
      *
-     * @return QuoteDataTotalSegmentExtensionInterface
+     * @return QuoteDataTotalSegmentExtensionInterface|null
      */
-    public function getExtensionAttributes(): QuoteDataTotalSegmentExtensionInterface
+    public function getExtensionAttributes(): ?QuoteDataTotalSegmentExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\TotalSegmentInterface
      *
-     * @param QuoteDataTotalSegmentExtensionInterface $extensionAttributes
+     * @param QuoteDataTotalSegmentExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(QuoteDataTotalSegmentExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?QuoteDataTotalSegmentExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -100,20 +100,20 @@ class QuoteDataTotalSegmentInterface
     /**
      * Total title
      *
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
     /**
      * Total title
      *
-     * @param string $title
+     * @param string|null $title
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
         return $this;
@@ -121,20 +121,20 @@ class QuoteDataTotalSegmentInterface
     /**
      * Total value
      *
-     * @return float
+     * @return float|null
      */
-    public function getValue(): float
+    public function getValue(): ?float
     {
         return $this->value;
     }
     /**
      * Total value
      *
-     * @param float $value
+     * @param float|null $value
      *
      * @return self
      */
-    public function setValue(float $value): self
+    public function setValue(?float $value): self
     {
         $this->value = $value;
         return $this;

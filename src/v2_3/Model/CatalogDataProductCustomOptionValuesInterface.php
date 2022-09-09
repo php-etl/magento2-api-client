@@ -7,56 +7,56 @@ class CatalogDataProductCustomOptionValuesInterface
     /**
      * Option type id
      *
-     * @var int
+     * @var int|null
      */
     protected $optionTypeId;
     /**
      * Price
      *
-     * @var float
+     * @var float|null
      */
     protected $price;
     /**
      * Price type
      *
-     * @var string
+     * @var string|null
      */
     protected $priceType;
     /**
      * Sku
      *
-     * @var string
+     * @var string|null
      */
     protected $sku;
     /**
      * Sort order
      *
-     * @var int
+     * @var int|null
      */
     protected $sortOrder;
     /**
      * Option title
      *
-     * @var string
+     * @var string|null
      */
     protected $title;
     /**
      * Option type id
      *
-     * @return int
+     * @return int|null
      */
-    public function getOptionTypeId(): int
+    public function getOptionTypeId(): ?int
     {
         return $this->optionTypeId;
     }
     /**
      * Option type id
      *
-     * @param int $optionTypeId
+     * @param int|null $optionTypeId
      *
      * @return self
      */
-    public function setOptionTypeId(int $optionTypeId): self
+    public function setOptionTypeId(?int $optionTypeId): self
     {
         $this->optionTypeId = $optionTypeId;
         return $this;
@@ -64,20 +64,20 @@ class CatalogDataProductCustomOptionValuesInterface
     /**
      * Price
      *
-     * @return float
+     * @return float|null
      */
-    public function getPrice(): float
+    public function getPrice(): ?float
     {
         return $this->price;
     }
     /**
      * Price
      *
-     * @param float $price
+     * @param float|null $price
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(?float $price): self
     {
         $this->price = $price;
         return $this;
@@ -85,20 +85,20 @@ class CatalogDataProductCustomOptionValuesInterface
     /**
      * Price type
      *
-     * @return string
+     * @return string|null
      */
-    public function getPriceType(): string
+    public function getPriceType(): ?string
     {
         return $this->priceType;
     }
     /**
      * Price type
      *
-     * @param string $priceType
+     * @param string|null $priceType
      *
      * @return self
      */
-    public function setPriceType(string $priceType): self
+    public function setPriceType(?string $priceType): self
     {
         $this->priceType = $priceType;
         return $this;
@@ -106,20 +106,20 @@ class CatalogDataProductCustomOptionValuesInterface
     /**
      * Sku
      *
-     * @return string
+     * @return string|null
      */
-    public function getSku(): string
+    public function getSku(): ?string
     {
         return $this->sku;
     }
     /**
      * Sku
      *
-     * @param string $sku
+     * @param string|null $sku
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(?string $sku): self
     {
         $this->sku = $sku;
         return $this;
@@ -127,20 +127,20 @@ class CatalogDataProductCustomOptionValuesInterface
     /**
      * Sort order
      *
-     * @return int
+     * @return int|null
      */
-    public function getSortOrder(): int
+    public function getSortOrder(): ?int
     {
         return $this->sortOrder;
     }
     /**
      * Sort order
      *
-     * @param int $sortOrder
+     * @param int|null $sortOrder
      *
      * @return self
      */
-    public function setSortOrder(int $sortOrder): self
+    public function setSortOrder(?int $sortOrder): self
     {
         $this->sortOrder = $sortOrder;
         return $this;
@@ -148,20 +148,20 @@ class CatalogDataProductCustomOptionValuesInterface
     /**
      * Option title
      *
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
     /**
      * Option title
      *
-     * @param string $title
+     * @param string|null $title
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
         return $this;

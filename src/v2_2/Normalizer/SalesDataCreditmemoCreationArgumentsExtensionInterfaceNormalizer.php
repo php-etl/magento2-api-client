@@ -40,12 +40,14 @@ class SalesDataCreditmemoCreationArgumentsExtensionInterfaceNormalizer implement
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('return_to_stock_items', $data)) {
+        if (\array_key_exists('return_to_stock_items', $data) && $data['return_to_stock_items'] !== null) {
             $values = array();
             foreach ($data['return_to_stock_items'] as $value) {
                 $values[] = $value;
             }
             $object->setReturnToStockItems($values);
+        } elseif (\array_key_exists('return_to_stock_items', $data) && $data['return_to_stock_items'] === null) {
+            $object->setReturnToStockItems(null);
         }
         return $object;
     }

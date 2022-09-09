@@ -40,11 +40,15 @@ class V1ProductsSkuDownloadableLinksIdPutBodyNormalizer implements DenormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('isGlobalScopeContent', $data)) {
+        if (\array_key_exists('isGlobalScopeContent', $data) && $data['isGlobalScopeContent'] !== null) {
             $object->setIsGlobalScopeContent($data['isGlobalScopeContent']);
+        } elseif (\array_key_exists('isGlobalScopeContent', $data) && $data['isGlobalScopeContent'] === null) {
+            $object->setIsGlobalScopeContent(null);
         }
-        if (\array_key_exists('link', $data)) {
+        if (\array_key_exists('link', $data) && $data['link'] !== null) {
             $object->setLink($this->denormalizer->denormalize($data['link'], 'Kiboko\\Magento\\V2_1\\Model\\DownloadableDataLinkInterface', 'json', $context));
+        } elseif (\array_key_exists('link', $data) && $data['link'] === null) {
+            $object->setLink(null);
         }
         return $object;
     }

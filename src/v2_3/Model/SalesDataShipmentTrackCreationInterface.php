@@ -7,44 +7,44 @@ class SalesDataShipmentTrackCreationInterface
     /**
      * Carrier code.
      *
-     * @var string
+     * @var string|null
      */
     protected $carrierCode;
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\ShipmentTrackCreationInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Title.
      *
-     * @var string
+     * @var string|null
      */
     protected $title;
     /**
      * Track number.
      *
-     * @var string
+     * @var string|null
      */
     protected $trackNumber;
     /**
      * Carrier code.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCarrierCode(): string
+    public function getCarrierCode(): ?string
     {
         return $this->carrierCode;
     }
     /**
      * Carrier code.
      *
-     * @param string $carrierCode
+     * @param string|null $carrierCode
      *
      * @return self
      */
-    public function setCarrierCode(string $carrierCode): self
+    public function setCarrierCode(?string $carrierCode): self
     {
         $this->carrierCode = $carrierCode;
         return $this;
@@ -73,20 +73,20 @@ class SalesDataShipmentTrackCreationInterface
     /**
      * Title.
      *
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
     /**
      * Title.
      *
-     * @param string $title
+     * @param string|null $title
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
         return $this;
@@ -94,20 +94,20 @@ class SalesDataShipmentTrackCreationInterface
     /**
      * Track number.
      *
-     * @return string
+     * @return string|null
      */
-    public function getTrackNumber(): string
+    public function getTrackNumber(): ?string
     {
         return $this->trackNumber;
     }
     /**
      * Track number.
      *
-     * @param string $trackNumber
+     * @param string|null $trackNumber
      *
      * @return self
      */
-    public function setTrackNumber(string $trackNumber): self
+    public function setTrackNumber(?string $trackNumber): self
     {
         $this->trackNumber = $trackNumber;
         return $this;

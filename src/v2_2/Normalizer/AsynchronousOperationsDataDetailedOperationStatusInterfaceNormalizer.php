@@ -40,32 +40,50 @@ class AsynchronousOperationsDataDetailedOperationStatusInterfaceNormalizer imple
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('bulk_uuid', $data)) {
+        if (\array_key_exists('bulk_uuid', $data) && $data['bulk_uuid'] !== null) {
             $object->setBulkUuid($data['bulk_uuid']);
+        } elseif (\array_key_exists('bulk_uuid', $data) && $data['bulk_uuid'] === null) {
+            $object->setBulkUuid(null);
         }
-        if (\array_key_exists('error_code', $data)) {
+        if (\array_key_exists('error_code', $data) && $data['error_code'] !== null) {
             $object->setErrorCode($data['error_code']);
+        } elseif (\array_key_exists('error_code', $data) && $data['error_code'] === null) {
+            $object->setErrorCode(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('result_message', $data)) {
+        if (\array_key_exists('result_message', $data) && $data['result_message'] !== null) {
             $object->setResultMessage($data['result_message']);
+        } elseif (\array_key_exists('result_message', $data) && $data['result_message'] === null) {
+            $object->setResultMessage(null);
         }
-        if (\array_key_exists('result_serialized_data', $data)) {
+        if (\array_key_exists('result_serialized_data', $data) && $data['result_serialized_data'] !== null) {
             $object->setResultSerializedData($data['result_serialized_data']);
+        } elseif (\array_key_exists('result_serialized_data', $data) && $data['result_serialized_data'] === null) {
+            $object->setResultSerializedData(null);
         }
-        if (\array_key_exists('serialized_data', $data)) {
+        if (\array_key_exists('serialized_data', $data) && $data['serialized_data'] !== null) {
             $object->setSerializedData($data['serialized_data']);
+        } elseif (\array_key_exists('serialized_data', $data) && $data['serialized_data'] === null) {
+            $object->setSerializedData(null);
         }
-        if (\array_key_exists('status', $data)) {
+        if (\array_key_exists('status', $data) && $data['status'] !== null) {
             $object->setStatus($data['status']);
+        } elseif (\array_key_exists('status', $data) && $data['status'] === null) {
+            $object->setStatus(null);
         }
-        if (\array_key_exists('topic_name', $data)) {
+        if (\array_key_exists('topic_name', $data) && $data['topic_name'] !== null) {
             $object->setTopicName($data['topic_name']);
+        } elseif (\array_key_exists('topic_name', $data) && $data['topic_name'] === null) {
+            $object->setTopicName(null);
         }
         return $object;
     }

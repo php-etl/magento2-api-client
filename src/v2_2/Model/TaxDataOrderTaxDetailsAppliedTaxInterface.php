@@ -7,56 +7,56 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
     /**
      * Tax amount
      *
-     * @var float
+     * @var float|null
      */
     protected $amount;
     /**
      * Tax amount in base currency
      *
-     * @var float
+     * @var float|null
      */
     protected $baseAmount;
     /**
      * Code
      *
-     * @var string
+     * @var string|null
      */
     protected $code;
     /**
      * ExtensionInterface class for @see \Magento\Tax\Api\Data\OrderTaxDetailsAppliedTaxInterface
      *
-     * @var TaxDataOrderTaxDetailsAppliedTaxExtensionInterface
+     * @var TaxDataOrderTaxDetailsAppliedTaxExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * Tax Percent
      *
-     * @var float
+     * @var float|null
      */
     protected $percent;
     /**
      * Title
      *
-     * @var string
+     * @var string|null
      */
     protected $title;
     /**
      * Tax amount
      *
-     * @return float
+     * @return float|null
      */
-    public function getAmount(): float
+    public function getAmount(): ?float
     {
         return $this->amount;
     }
     /**
      * Tax amount
      *
-     * @param float $amount
+     * @param float|null $amount
      *
      * @return self
      */
-    public function setAmount(float $amount): self
+    public function setAmount(?float $amount): self
     {
         $this->amount = $amount;
         return $this;
@@ -64,20 +64,20 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
     /**
      * Tax amount in base currency
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseAmount(): float
+    public function getBaseAmount(): ?float
     {
         return $this->baseAmount;
     }
     /**
      * Tax amount in base currency
      *
-     * @param float $baseAmount
+     * @param float|null $baseAmount
      *
      * @return self
      */
-    public function setBaseAmount(float $baseAmount): self
+    public function setBaseAmount(?float $baseAmount): self
     {
         $this->baseAmount = $baseAmount;
         return $this;
@@ -85,20 +85,20 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
     /**
      * Code
      *
-     * @return string
+     * @return string|null
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
     /**
      * Code
      *
-     * @param string $code
+     * @param string|null $code
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
         return $this;
@@ -106,20 +106,20 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
     /**
      * ExtensionInterface class for @see \Magento\Tax\Api\Data\OrderTaxDetailsAppliedTaxInterface
      *
-     * @return TaxDataOrderTaxDetailsAppliedTaxExtensionInterface
+     * @return TaxDataOrderTaxDetailsAppliedTaxExtensionInterface|null
      */
-    public function getExtensionAttributes(): TaxDataOrderTaxDetailsAppliedTaxExtensionInterface
+    public function getExtensionAttributes(): ?TaxDataOrderTaxDetailsAppliedTaxExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Tax\Api\Data\OrderTaxDetailsAppliedTaxInterface
      *
-     * @param TaxDataOrderTaxDetailsAppliedTaxExtensionInterface $extensionAttributes
+     * @param TaxDataOrderTaxDetailsAppliedTaxExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(TaxDataOrderTaxDetailsAppliedTaxExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?TaxDataOrderTaxDetailsAppliedTaxExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -127,20 +127,20 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
     /**
      * Tax Percent
      *
-     * @return float
+     * @return float|null
      */
-    public function getPercent(): float
+    public function getPercent(): ?float
     {
         return $this->percent;
     }
     /**
      * Tax Percent
      *
-     * @param float $percent
+     * @param float|null $percent
      *
      * @return self
      */
-    public function setPercent(float $percent): self
+    public function setPercent(?float $percent): self
     {
         $this->percent = $percent;
         return $this;
@@ -148,20 +148,20 @@ class TaxDataOrderTaxDetailsAppliedTaxInterface
     /**
      * Title
      *
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
     /**
      * Title
      *
-     * @param string $title
+     * @param string|null $title
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
         return $this;

@@ -7,32 +7,32 @@ class SalesRuleDataCouponMassDeleteResultInterface
     /**
      * List of failed items.
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $failedItems;
     /**
      * List of missing items.
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $missingItems;
     /**
      * List of failed items.
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getFailedItems(): array
+    public function getFailedItems(): ?array
     {
         return $this->failedItems;
     }
     /**
      * List of failed items.
      *
-     * @param string[] $failedItems
+     * @param string[]|null $failedItems
      *
      * @return self
      */
-    public function setFailedItems(array $failedItems): self
+    public function setFailedItems(?array $failedItems): self
     {
         $this->failedItems = $failedItems;
         return $this;
@@ -40,20 +40,20 @@ class SalesRuleDataCouponMassDeleteResultInterface
     /**
      * List of missing items.
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getMissingItems(): array
+    public function getMissingItems(): ?array
     {
         return $this->missingItems;
     }
     /**
      * List of missing items.
      *
-     * @param string[] $missingItems
+     * @param string[]|null $missingItems
      *
      * @return self
      */
-    public function setMissingItems(array $missingItems): self
+    public function setMissingItems(?array $missingItems): self
     {
         $this->missingItems = $missingItems;
         return $this;

@@ -7,62 +7,62 @@ class DirectoryDataCountryInformationInterface
     /**
      * The available regions for the store.
      *
-     * @var DirectoryDataRegionInformationInterface[]
+     * @var DirectoryDataRegionInformationInterface[]|null
      */
     protected $availableRegions;
     /**
      * ExtensionInterface class for @see \Magento\Directory\Api\Data\CountryInformationInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * The country full name (in English) for the store.
      *
-     * @var string
+     * @var string|null
      */
     protected $fullNameEnglish;
     /**
      * The country full name (in store locale) for the store.
      *
-     * @var string
+     * @var string|null
      */
     protected $fullNameLocale;
     /**
      * The country id for the store.
      *
-     * @var string
+     * @var string|null
      */
     protected $id;
     /**
      * The country 3 letter abbreviation for the store.
      *
-     * @var string
+     * @var string|null
      */
     protected $threeLetterAbbreviation;
     /**
      * The country 2 letter abbreviation for the store.
      *
-     * @var string
+     * @var string|null
      */
     protected $twoLetterAbbreviation;
     /**
      * The available regions for the store.
      *
-     * @return DirectoryDataRegionInformationInterface[]
+     * @return DirectoryDataRegionInformationInterface[]|null
      */
-    public function getAvailableRegions(): array
+    public function getAvailableRegions(): ?array
     {
         return $this->availableRegions;
     }
     /**
      * The available regions for the store.
      *
-     * @param DirectoryDataRegionInformationInterface[] $availableRegions
+     * @param DirectoryDataRegionInformationInterface[]|null $availableRegions
      *
      * @return self
      */
-    public function setAvailableRegions(array $availableRegions): self
+    public function setAvailableRegions(?array $availableRegions): self
     {
         $this->availableRegions = $availableRegions;
         return $this;
@@ -91,20 +91,20 @@ class DirectoryDataCountryInformationInterface
     /**
      * The country full name (in English) for the store.
      *
-     * @return string
+     * @return string|null
      */
-    public function getFullNameEnglish(): string
+    public function getFullNameEnglish(): ?string
     {
         return $this->fullNameEnglish;
     }
     /**
      * The country full name (in English) for the store.
      *
-     * @param string $fullNameEnglish
+     * @param string|null $fullNameEnglish
      *
      * @return self
      */
-    public function setFullNameEnglish(string $fullNameEnglish): self
+    public function setFullNameEnglish(?string $fullNameEnglish): self
     {
         $this->fullNameEnglish = $fullNameEnglish;
         return $this;
@@ -112,20 +112,20 @@ class DirectoryDataCountryInformationInterface
     /**
      * The country full name (in store locale) for the store.
      *
-     * @return string
+     * @return string|null
      */
-    public function getFullNameLocale(): string
+    public function getFullNameLocale(): ?string
     {
         return $this->fullNameLocale;
     }
     /**
      * The country full name (in store locale) for the store.
      *
-     * @param string $fullNameLocale
+     * @param string|null $fullNameLocale
      *
      * @return self
      */
-    public function setFullNameLocale(string $fullNameLocale): self
+    public function setFullNameLocale(?string $fullNameLocale): self
     {
         $this->fullNameLocale = $fullNameLocale;
         return $this;
@@ -133,20 +133,20 @@ class DirectoryDataCountryInformationInterface
     /**
      * The country id for the store.
      *
-     * @return string
+     * @return string|null
      */
-    public function getId(): string
+    public function getId(): ?string
     {
         return $this->id;
     }
     /**
      * The country id for the store.
      *
-     * @param string $id
+     * @param string|null $id
      *
      * @return self
      */
-    public function setId(string $id): self
+    public function setId(?string $id): self
     {
         $this->id = $id;
         return $this;
@@ -154,20 +154,20 @@ class DirectoryDataCountryInformationInterface
     /**
      * The country 3 letter abbreviation for the store.
      *
-     * @return string
+     * @return string|null
      */
-    public function getThreeLetterAbbreviation(): string
+    public function getThreeLetterAbbreviation(): ?string
     {
         return $this->threeLetterAbbreviation;
     }
     /**
      * The country 3 letter abbreviation for the store.
      *
-     * @param string $threeLetterAbbreviation
+     * @param string|null $threeLetterAbbreviation
      *
      * @return self
      */
-    public function setThreeLetterAbbreviation(string $threeLetterAbbreviation): self
+    public function setThreeLetterAbbreviation(?string $threeLetterAbbreviation): self
     {
         $this->threeLetterAbbreviation = $threeLetterAbbreviation;
         return $this;
@@ -175,20 +175,20 @@ class DirectoryDataCountryInformationInterface
     /**
      * The country 2 letter abbreviation for the store.
      *
-     * @return string
+     * @return string|null
      */
-    public function getTwoLetterAbbreviation(): string
+    public function getTwoLetterAbbreviation(): ?string
     {
         return $this->twoLetterAbbreviation;
     }
     /**
      * The country 2 letter abbreviation for the store.
      *
-     * @param string $twoLetterAbbreviation
+     * @param string|null $twoLetterAbbreviation
      *
      * @return self
      */
-    public function setTwoLetterAbbreviation(string $twoLetterAbbreviation): self
+    public function setTwoLetterAbbreviation(?string $twoLetterAbbreviation): self
     {
         $this->twoLetterAbbreviation = $twoLetterAbbreviation;
         return $this;

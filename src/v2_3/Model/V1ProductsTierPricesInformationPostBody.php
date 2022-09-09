@@ -7,26 +7,26 @@ class V1ProductsTierPricesInformationPostBody
     /**
      *
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $skus;
     /**
      *
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getSkus(): array
+    public function getSkus(): ?array
     {
         return $this->skus;
     }
     /**
      *
      *
-     * @param string[] $skus
+     * @param string[]|null $skus
      *
      * @return self
      */
-    public function setSkus(array $skus): self
+    public function setSkus(?array $skus): self
     {
         $this->skus = $skus;
         return $this;

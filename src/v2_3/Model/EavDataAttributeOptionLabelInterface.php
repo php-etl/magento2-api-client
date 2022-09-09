@@ -7,32 +7,32 @@ class EavDataAttributeOptionLabelInterface
     /**
      * Option label
      *
-     * @var string
+     * @var string|null
      */
     protected $label;
     /**
      * Store id
      *
-     * @var int
+     * @var int|null
      */
     protected $storeId;
     /**
      * Option label
      *
-     * @return string
+     * @return string|null
      */
-    public function getLabel(): string
+    public function getLabel(): ?string
     {
         return $this->label;
     }
     /**
      * Option label
      *
-     * @param string $label
+     * @param string|null $label
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(?string $label): self
     {
         $this->label = $label;
         return $this;
@@ -40,20 +40,20 @@ class EavDataAttributeOptionLabelInterface
     /**
      * Store id
      *
-     * @return int
+     * @return int|null
      */
-    public function getStoreId(): int
+    public function getStoreId(): ?int
     {
         return $this->storeId;
     }
     /**
      * Store id
      *
-     * @param int $storeId
+     * @param int|null $storeId
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(?int $storeId): self
     {
         $this->storeId = $storeId;
         return $this;

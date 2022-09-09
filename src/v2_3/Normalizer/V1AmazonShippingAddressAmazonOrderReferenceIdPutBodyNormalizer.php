@@ -40,8 +40,10 @@ class V1AmazonShippingAddressAmazonOrderReferenceIdPutBodyNormalizer implements 
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('addressConsentToken', $data)) {
+        if (\array_key_exists('addressConsentToken', $data) && $data['addressConsentToken'] !== null) {
             $object->setAddressConsentToken($data['addressConsentToken']);
+        } elseif (\array_key_exists('addressConsentToken', $data) && $data['addressConsentToken'] === null) {
+            $object->setAddressConsentToken(null);
         }
         return $object;
     }

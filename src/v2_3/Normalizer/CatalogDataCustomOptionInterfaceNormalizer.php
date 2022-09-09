@@ -40,14 +40,20 @@ class CatalogDataCustomOptionInterfaceNormalizer implements DenormalizerInterfac
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_3\\Model\\CatalogDataCustomOptionExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('option_id', $data)) {
+        if (\array_key_exists('option_id', $data) && $data['option_id'] !== null) {
             $object->setOptionId($data['option_id']);
+        } elseif (\array_key_exists('option_id', $data) && $data['option_id'] === null) {
+            $object->setOptionId(null);
         }
-        if (\array_key_exists('option_value', $data)) {
+        if (\array_key_exists('option_value', $data) && $data['option_value'] !== null) {
             $object->setOptionValue($data['option_value']);
+        } elseif (\array_key_exists('option_value', $data) && $data['option_value'] === null) {
+            $object->setOptionValue(null);
         }
         return $object;
     }

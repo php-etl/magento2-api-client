@@ -40,18 +40,24 @@ class QuoteDataCartExtensionInterfaceNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('amazon_order_reference_id', $data)) {
+        if (\array_key_exists('amazon_order_reference_id', $data) && $data['amazon_order_reference_id'] !== null) {
             $object->setAmazonOrderReferenceId($data['amazon_order_reference_id']);
+        } elseif (\array_key_exists('amazon_order_reference_id', $data) && $data['amazon_order_reference_id'] === null) {
+            $object->setAmazonOrderReferenceId(null);
         }
-        if (\array_key_exists('negotiable_quote', $data)) {
+        if (\array_key_exists('negotiable_quote', $data) && $data['negotiable_quote'] !== null) {
             $object->setNegotiableQuote($this->denormalizer->denormalize($data['negotiable_quote'], 'Kiboko\\Magento\\V2_2\\Model\\NegotiableQuoteDataNegotiableQuoteInterface', 'json', $context));
+        } elseif (\array_key_exists('negotiable_quote', $data) && $data['negotiable_quote'] === null) {
+            $object->setNegotiableQuote(null);
         }
-        if (\array_key_exists('shipping_assignments', $data)) {
+        if (\array_key_exists('shipping_assignments', $data) && $data['shipping_assignments'] !== null) {
             $values = array();
             foreach ($data['shipping_assignments'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataShippingAssignmentInterface', 'json', $context);
             }
             $object->setShippingAssignments($values);
+        } elseif (\array_key_exists('shipping_assignments', $data) && $data['shipping_assignments'] === null) {
+            $object->setShippingAssignments(null);
         }
         return $object;
     }

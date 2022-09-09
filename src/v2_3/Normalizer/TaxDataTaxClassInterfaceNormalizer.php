@@ -40,17 +40,25 @@ class TaxDataTaxClassInterfaceNormalizer implements DenormalizerInterface, Norma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('class_id', $data)) {
+        if (\array_key_exists('class_id', $data) && $data['class_id'] !== null) {
             $object->setClassId($data['class_id']);
+        } elseif (\array_key_exists('class_id', $data) && $data['class_id'] === null) {
+            $object->setClassId(null);
         }
-        if (\array_key_exists('class_name', $data)) {
+        if (\array_key_exists('class_name', $data) && $data['class_name'] !== null) {
             $object->setClassName($data['class_name']);
+        } elseif (\array_key_exists('class_name', $data) && $data['class_name'] === null) {
+            $object->setClassName(null);
         }
-        if (\array_key_exists('class_type', $data)) {
+        if (\array_key_exists('class_type', $data) && $data['class_type'] !== null) {
             $object->setClassType($data['class_type']);
+        } elseif (\array_key_exists('class_type', $data) && $data['class_type'] === null) {
+            $object->setClassType(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
         return $object;
     }

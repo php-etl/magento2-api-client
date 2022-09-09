@@ -40,8 +40,10 @@ class V1CompanyCompanyIdPutBodyNormalizer implements DenormalizerInterface, Norm
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('company', $data)) {
+        if (\array_key_exists('company', $data) && $data['company'] !== null) {
             $object->setCompany($this->denormalizer->denormalize($data['company'], 'Kiboko\\Magento\\V2_3\\Model\\CompanyDataCompanyInterface', 'json', $context));
+        } elseif (\array_key_exists('company', $data) && $data['company'] === null) {
+            $object->setCompany(null);
         }
         return $object;
     }

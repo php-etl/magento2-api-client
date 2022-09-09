@@ -7,32 +7,32 @@ class TaxDataGrandTotalRatesInterface
     /**
      * Tax percentage value
      *
-     * @var string
+     * @var string|null
      */
     protected $percent;
     /**
      * Rate title
      *
-     * @var string
+     * @var string|null
      */
     protected $title;
     /**
      * Tax percentage value
      *
-     * @return string
+     * @return string|null
      */
-    public function getPercent(): string
+    public function getPercent(): ?string
     {
         return $this->percent;
     }
     /**
      * Tax percentage value
      *
-     * @param string $percent
+     * @param string|null $percent
      *
      * @return self
      */
-    public function setPercent(string $percent): self
+    public function setPercent(?string $percent): self
     {
         $this->percent = $percent;
         return $this;
@@ -40,20 +40,20 @@ class TaxDataGrandTotalRatesInterface
     /**
      * Rate title
      *
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
     /**
      * Rate title
      *
-     * @param string $title
+     * @param string|null $title
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
         return $this;

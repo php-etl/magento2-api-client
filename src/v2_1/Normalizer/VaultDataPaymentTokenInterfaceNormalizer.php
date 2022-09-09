@@ -40,38 +40,60 @@ class VaultDataPaymentTokenInterfaceNormalizer implements DenormalizerInterface,
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('created_at', $data)) {
+        if (\array_key_exists('created_at', $data) && $data['created_at'] !== null) {
             $object->setCreatedAt($data['created_at']);
+        } elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+            $object->setCreatedAt(null);
         }
-        if (\array_key_exists('customer_id', $data)) {
+        if (\array_key_exists('customer_id', $data) && $data['customer_id'] !== null) {
             $object->setCustomerId($data['customer_id']);
+        } elseif (\array_key_exists('customer_id', $data) && $data['customer_id'] === null) {
+            $object->setCustomerId(null);
         }
-        if (\array_key_exists('entity_id', $data)) {
+        if (\array_key_exists('entity_id', $data) && $data['entity_id'] !== null) {
             $object->setEntityId($data['entity_id']);
+        } elseif (\array_key_exists('entity_id', $data) && $data['entity_id'] === null) {
+            $object->setEntityId(null);
         }
-        if (\array_key_exists('expires_at', $data)) {
+        if (\array_key_exists('expires_at', $data) && $data['expires_at'] !== null) {
             $object->setExpiresAt($data['expires_at']);
+        } elseif (\array_key_exists('expires_at', $data) && $data['expires_at'] === null) {
+            $object->setExpiresAt(null);
         }
-        if (\array_key_exists('gateway_token', $data)) {
+        if (\array_key_exists('gateway_token', $data) && $data['gateway_token'] !== null) {
             $object->setGatewayToken($data['gateway_token']);
+        } elseif (\array_key_exists('gateway_token', $data) && $data['gateway_token'] === null) {
+            $object->setGatewayToken(null);
         }
-        if (\array_key_exists('is_active', $data)) {
+        if (\array_key_exists('is_active', $data) && $data['is_active'] !== null) {
             $object->setIsActive($data['is_active']);
+        } elseif (\array_key_exists('is_active', $data) && $data['is_active'] === null) {
+            $object->setIsActive(null);
         }
-        if (\array_key_exists('is_visible', $data)) {
+        if (\array_key_exists('is_visible', $data) && $data['is_visible'] !== null) {
             $object->setIsVisible($data['is_visible']);
+        } elseif (\array_key_exists('is_visible', $data) && $data['is_visible'] === null) {
+            $object->setIsVisible(null);
         }
-        if (\array_key_exists('payment_method_code', $data)) {
+        if (\array_key_exists('payment_method_code', $data) && $data['payment_method_code'] !== null) {
             $object->setPaymentMethodCode($data['payment_method_code']);
+        } elseif (\array_key_exists('payment_method_code', $data) && $data['payment_method_code'] === null) {
+            $object->setPaymentMethodCode(null);
         }
-        if (\array_key_exists('public_hash', $data)) {
+        if (\array_key_exists('public_hash', $data) && $data['public_hash'] !== null) {
             $object->setPublicHash($data['public_hash']);
+        } elseif (\array_key_exists('public_hash', $data) && $data['public_hash'] === null) {
+            $object->setPublicHash(null);
         }
-        if (\array_key_exists('token_details', $data)) {
+        if (\array_key_exists('token_details', $data) && $data['token_details'] !== null) {
             $object->setTokenDetails($data['token_details']);
+        } elseif (\array_key_exists('token_details', $data) && $data['token_details'] === null) {
+            $object->setTokenDetails(null);
         }
-        if (\array_key_exists('type', $data)) {
+        if (\array_key_exists('type', $data) && $data['type'] !== null) {
             $object->setType($data['type']);
+        } elseif (\array_key_exists('type', $data) && $data['type'] === null) {
+            $object->setType(null);
         }
         return $object;
     }

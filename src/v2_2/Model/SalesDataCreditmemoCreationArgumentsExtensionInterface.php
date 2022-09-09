@@ -7,26 +7,26 @@ class SalesDataCreditmemoCreationArgumentsExtensionInterface
     /**
      *
      *
-     * @var int[]
+     * @var int[]|null
      */
     protected $returnToStockItems;
     /**
      *
      *
-     * @return int[]
+     * @return int[]|null
      */
-    public function getReturnToStockItems(): array
+    public function getReturnToStockItems(): ?array
     {
         return $this->returnToStockItems;
     }
     /**
      *
      *
-     * @param int[] $returnToStockItems
+     * @param int[]|null $returnToStockItems
      *
      * @return self
      */
-    public function setReturnToStockItems(array $returnToStockItems): self
+    public function setReturnToStockItems(?array $returnToStockItems): self
     {
         $this->returnToStockItems = $returnToStockItems;
         return $this;

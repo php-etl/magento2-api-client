@@ -49,20 +49,30 @@ class NegotiableQuoteDataNegotiableQuoteItemInterfaceNormalizer implements Denor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('item_id', $data)) {
+        if (\array_key_exists('item_id', $data) && $data['item_id'] !== null) {
             $object->setItemId($data['item_id']);
+        } elseif (\array_key_exists('item_id', $data) && $data['item_id'] === null) {
+            $object->setItemId(null);
         }
-        if (\array_key_exists('original_discount_amount', $data)) {
+        if (\array_key_exists('original_discount_amount', $data) && $data['original_discount_amount'] !== null) {
             $object->setOriginalDiscountAmount($data['original_discount_amount']);
+        } elseif (\array_key_exists('original_discount_amount', $data) && $data['original_discount_amount'] === null) {
+            $object->setOriginalDiscountAmount(null);
         }
-        if (\array_key_exists('original_price', $data)) {
+        if (\array_key_exists('original_price', $data) && $data['original_price'] !== null) {
             $object->setOriginalPrice($data['original_price']);
+        } elseif (\array_key_exists('original_price', $data) && $data['original_price'] === null) {
+            $object->setOriginalPrice(null);
         }
-        if (\array_key_exists('original_tax_amount', $data)) {
+        if (\array_key_exists('original_tax_amount', $data) && $data['original_tax_amount'] !== null) {
             $object->setOriginalTaxAmount($data['original_tax_amount']);
+        } elseif (\array_key_exists('original_tax_amount', $data) && $data['original_tax_amount'] === null) {
+            $object->setOriginalTaxAmount(null);
         }
         return $object;
     }

@@ -7,38 +7,38 @@ class CatalogDataCustomOptionInterface
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\CustomOptionInterface
      *
-     * @var CatalogDataCustomOptionExtensionInterface
+     * @var CatalogDataCustomOptionExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * Option id
      *
-     * @var string
+     * @var string|null
      */
     protected $optionId;
     /**
      * Option value
      *
-     * @var string
+     * @var string|null
      */
     protected $optionValue;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\CustomOptionInterface
      *
-     * @return CatalogDataCustomOptionExtensionInterface
+     * @return CatalogDataCustomOptionExtensionInterface|null
      */
-    public function getExtensionAttributes(): CatalogDataCustomOptionExtensionInterface
+    public function getExtensionAttributes(): ?CatalogDataCustomOptionExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\CustomOptionInterface
      *
-     * @param CatalogDataCustomOptionExtensionInterface $extensionAttributes
+     * @param CatalogDataCustomOptionExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(CatalogDataCustomOptionExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?CatalogDataCustomOptionExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -46,20 +46,20 @@ class CatalogDataCustomOptionInterface
     /**
      * Option id
      *
-     * @return string
+     * @return string|null
      */
-    public function getOptionId(): string
+    public function getOptionId(): ?string
     {
         return $this->optionId;
     }
     /**
      * Option id
      *
-     * @param string $optionId
+     * @param string|null $optionId
      *
      * @return self
      */
-    public function setOptionId(string $optionId): self
+    public function setOptionId(?string $optionId): self
     {
         $this->optionId = $optionId;
         return $this;
@@ -67,20 +67,20 @@ class CatalogDataCustomOptionInterface
     /**
      * Option value
      *
-     * @return string
+     * @return string|null
      */
-    public function getOptionValue(): string
+    public function getOptionValue(): ?string
     {
         return $this->optionValue;
     }
     /**
      * Option value
      *
-     * @param string $optionValue
+     * @param string|null $optionValue
      *
      * @return self
      */
-    public function setOptionValue(string $optionValue): self
+    public function setOptionValue(?string $optionValue): self
     {
         $this->optionValue = $optionValue;
         return $this;

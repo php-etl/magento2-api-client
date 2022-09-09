@@ -7,38 +7,38 @@ class CompanyDataRoleSearchResultsInterface
     /**
      * Roles list.
      *
-     * @var CompanyDataRoleInterface[]
+     * @var CompanyDataRoleInterface[]|null
      */
     protected $items;
     /**
      * Search criteria interface.
      *
-     * @var FrameworkSearchCriteriaInterface
+     * @var FrameworkSearchCriteriaInterface|null
      */
     protected $searchCriteria;
     /**
      * Total count.
      *
-     * @var int
+     * @var int|null
      */
     protected $totalCount;
     /**
      * Roles list.
      *
-     * @return CompanyDataRoleInterface[]
+     * @return CompanyDataRoleInterface[]|null
      */
-    public function getItems(): array
+    public function getItems(): ?array
     {
         return $this->items;
     }
     /**
      * Roles list.
      *
-     * @param CompanyDataRoleInterface[] $items
+     * @param CompanyDataRoleInterface[]|null $items
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(?array $items): self
     {
         $this->items = $items;
         return $this;
@@ -46,20 +46,20 @@ class CompanyDataRoleSearchResultsInterface
     /**
      * Search criteria interface.
      *
-     * @return FrameworkSearchCriteriaInterface
+     * @return FrameworkSearchCriteriaInterface|null
      */
-    public function getSearchCriteria(): FrameworkSearchCriteriaInterface
+    public function getSearchCriteria(): ?FrameworkSearchCriteriaInterface
     {
         return $this->searchCriteria;
     }
     /**
      * Search criteria interface.
      *
-     * @param FrameworkSearchCriteriaInterface $searchCriteria
+     * @param FrameworkSearchCriteriaInterface|null $searchCriteria
      *
      * @return self
      */
-    public function setSearchCriteria(FrameworkSearchCriteriaInterface $searchCriteria): self
+    public function setSearchCriteria(?FrameworkSearchCriteriaInterface $searchCriteria): self
     {
         $this->searchCriteria = $searchCriteria;
         return $this;
@@ -67,20 +67,20 @@ class CompanyDataRoleSearchResultsInterface
     /**
      * Total count.
      *
-     * @return int
+     * @return int|null
      */
-    public function getTotalCount(): int
+    public function getTotalCount(): ?int
     {
         return $this->totalCount;
     }
     /**
      * Total count.
      *
-     * @param int $totalCount
+     * @param int|null $totalCount
      *
      * @return self
      */
-    public function setTotalCount(int $totalCount): self
+    public function setTotalCount(?int $totalCount): self
     {
         $this->totalCount = $totalCount;
         return $this;

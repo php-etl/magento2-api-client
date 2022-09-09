@@ -7,38 +7,38 @@ class DirectoryDataExchangeRateInterface
     /**
      * The currency code associated with the exchange rate.
      *
-     * @var string
+     * @var string|null
      */
     protected $currencyTo;
     /**
      * ExtensionInterface class for @see \Magento\Directory\Api\Data\ExchangeRateInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * The exchange rate for the associated currency and the store's base currency.
      *
-     * @var float
+     * @var float|null
      */
     protected $rate;
     /**
      * The currency code associated with the exchange rate.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCurrencyTo(): string
+    public function getCurrencyTo(): ?string
     {
         return $this->currencyTo;
     }
     /**
      * The currency code associated with the exchange rate.
      *
-     * @param string $currencyTo
+     * @param string|null $currencyTo
      *
      * @return self
      */
-    public function setCurrencyTo(string $currencyTo): self
+    public function setCurrencyTo(?string $currencyTo): self
     {
         $this->currencyTo = $currencyTo;
         return $this;
@@ -67,20 +67,20 @@ class DirectoryDataExchangeRateInterface
     /**
      * The exchange rate for the associated currency and the store's base currency.
      *
-     * @return float
+     * @return float|null
      */
-    public function getRate(): float
+    public function getRate(): ?float
     {
         return $this->rate;
     }
     /**
      * The exchange rate for the associated currency and the store's base currency.
      *
-     * @param float $rate
+     * @param float|null $rate
      *
      * @return self
      */
-    public function setRate(float $rate): self
+    public function setRate(?float $rate): self
     {
         $this->rate = $rate;
         return $this;

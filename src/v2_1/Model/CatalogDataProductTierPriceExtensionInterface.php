@@ -7,32 +7,32 @@ class CatalogDataProductTierPriceExtensionInterface
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $percentageValue;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $websiteId;
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getPercentageValue(): float
+    public function getPercentageValue(): ?float
     {
         return $this->percentageValue;
     }
     /**
      *
      *
-     * @param float $percentageValue
+     * @param float|null $percentageValue
      *
      * @return self
      */
-    public function setPercentageValue(float $percentageValue): self
+    public function setPercentageValue(?float $percentageValue): self
     {
         $this->percentageValue = $percentageValue;
         return $this;
@@ -40,20 +40,20 @@ class CatalogDataProductTierPriceExtensionInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getWebsiteId(): int
+    public function getWebsiteId(): ?int
     {
         return $this->websiteId;
     }
     /**
      *
      *
-     * @param int $websiteId
+     * @param int|null $websiteId
      *
      * @return self
      */
-    public function setWebsiteId(int $websiteId): self
+    public function setWebsiteId(?int $websiteId): self
     {
         $this->websiteId = $websiteId;
         return $this;

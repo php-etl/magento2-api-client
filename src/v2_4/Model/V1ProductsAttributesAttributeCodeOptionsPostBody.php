@@ -7,26 +7,26 @@ class V1ProductsAttributesAttributeCodeOptionsPostBody
     /**
      * Created from:
      *
-     * @var EavDataAttributeOptionInterface
+     * @var EavDataAttributeOptionInterface|null
      */
     protected $option;
     /**
      * Created from:
      *
-     * @return EavDataAttributeOptionInterface
+     * @return EavDataAttributeOptionInterface|null
      */
-    public function getOption(): EavDataAttributeOptionInterface
+    public function getOption(): ?EavDataAttributeOptionInterface
     {
         return $this->option;
     }
     /**
      * Created from:
      *
-     * @param EavDataAttributeOptionInterface $option
+     * @param EavDataAttributeOptionInterface|null $option
      *
      * @return self
      */
-    public function setOption(EavDataAttributeOptionInterface $option): self
+    public function setOption(?EavDataAttributeOptionInterface $option): self
     {
         $this->option = $option;
         return $this;

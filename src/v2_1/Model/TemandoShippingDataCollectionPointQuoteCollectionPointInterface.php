@@ -7,92 +7,92 @@ class TemandoShippingDataCollectionPointQuoteCollectionPointInterface
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $city;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $collectionPointId;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $country;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $entityId;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      *
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $openingHours;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $postcode;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $recipientAddressId;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $region;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $selected;
     /**
      *
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $shippingExperiences;
     /**
      *
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $street;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getCity(): string
+    public function getCity(): ?string
     {
         return $this->city;
     }
     /**
      *
      *
-     * @param string $city
+     * @param string|null $city
      *
      * @return self
      */
-    public function setCity(string $city): self
+    public function setCity(?string $city): self
     {
         $this->city = $city;
         return $this;
@@ -100,20 +100,20 @@ class TemandoShippingDataCollectionPointQuoteCollectionPointInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getCollectionPointId(): string
+    public function getCollectionPointId(): ?string
     {
         return $this->collectionPointId;
     }
     /**
      *
      *
-     * @param string $collectionPointId
+     * @param string|null $collectionPointId
      *
      * @return self
      */
-    public function setCollectionPointId(string $collectionPointId): self
+    public function setCollectionPointId(?string $collectionPointId): self
     {
         $this->collectionPointId = $collectionPointId;
         return $this;
@@ -121,20 +121,20 @@ class TemandoShippingDataCollectionPointQuoteCollectionPointInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getCountry(): string
+    public function getCountry(): ?string
     {
         return $this->country;
     }
     /**
      *
      *
-     * @param string $country
+     * @param string|null $country
      *
      * @return self
      */
-    public function setCountry(string $country): self
+    public function setCountry(?string $country): self
     {
         $this->country = $country;
         return $this;
@@ -142,20 +142,20 @@ class TemandoShippingDataCollectionPointQuoteCollectionPointInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getEntityId(): int
+    public function getEntityId(): ?int
     {
         return $this->entityId;
     }
     /**
      *
      *
-     * @param int $entityId
+     * @param int|null $entityId
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(?int $entityId): self
     {
         $this->entityId = $entityId;
         return $this;
@@ -163,20 +163,20 @@ class TemandoShippingDataCollectionPointQuoteCollectionPointInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      *
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;
@@ -184,20 +184,20 @@ class TemandoShippingDataCollectionPointQuoteCollectionPointInterface
     /**
      *
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getOpeningHours(): array
+    public function getOpeningHours(): ?array
     {
         return $this->openingHours;
     }
     /**
      *
      *
-     * @param string[] $openingHours
+     * @param string[]|null $openingHours
      *
      * @return self
      */
-    public function setOpeningHours(array $openingHours): self
+    public function setOpeningHours(?array $openingHours): self
     {
         $this->openingHours = $openingHours;
         return $this;
@@ -205,20 +205,20 @@ class TemandoShippingDataCollectionPointQuoteCollectionPointInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getPostcode(): string
+    public function getPostcode(): ?string
     {
         return $this->postcode;
     }
     /**
      *
      *
-     * @param string $postcode
+     * @param string|null $postcode
      *
      * @return self
      */
-    public function setPostcode(string $postcode): self
+    public function setPostcode(?string $postcode): self
     {
         $this->postcode = $postcode;
         return $this;
@@ -226,20 +226,20 @@ class TemandoShippingDataCollectionPointQuoteCollectionPointInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getRecipientAddressId(): int
+    public function getRecipientAddressId(): ?int
     {
         return $this->recipientAddressId;
     }
     /**
      *
      *
-     * @param int $recipientAddressId
+     * @param int|null $recipientAddressId
      *
      * @return self
      */
-    public function setRecipientAddressId(int $recipientAddressId): self
+    public function setRecipientAddressId(?int $recipientAddressId): self
     {
         $this->recipientAddressId = $recipientAddressId;
         return $this;
@@ -247,20 +247,20 @@ class TemandoShippingDataCollectionPointQuoteCollectionPointInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getRegion(): string
+    public function getRegion(): ?string
     {
         return $this->region;
     }
     /**
      *
      *
-     * @param string $region
+     * @param string|null $region
      *
      * @return self
      */
-    public function setRegion(string $region): self
+    public function setRegion(?string $region): self
     {
         $this->region = $region;
         return $this;
@@ -268,20 +268,20 @@ class TemandoShippingDataCollectionPointQuoteCollectionPointInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getSelected(): bool
+    public function getSelected(): ?bool
     {
         return $this->selected;
     }
     /**
      *
      *
-     * @param bool $selected
+     * @param bool|null $selected
      *
      * @return self
      */
-    public function setSelected(bool $selected): self
+    public function setSelected(?bool $selected): self
     {
         $this->selected = $selected;
         return $this;
@@ -289,20 +289,20 @@ class TemandoShippingDataCollectionPointQuoteCollectionPointInterface
     /**
      *
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getShippingExperiences(): array
+    public function getShippingExperiences(): ?array
     {
         return $this->shippingExperiences;
     }
     /**
      *
      *
-     * @param string[] $shippingExperiences
+     * @param string[]|null $shippingExperiences
      *
      * @return self
      */
-    public function setShippingExperiences(array $shippingExperiences): self
+    public function setShippingExperiences(?array $shippingExperiences): self
     {
         $this->shippingExperiences = $shippingExperiences;
         return $this;
@@ -310,20 +310,20 @@ class TemandoShippingDataCollectionPointQuoteCollectionPointInterface
     /**
      *
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getStreet(): array
+    public function getStreet(): ?array
     {
         return $this->street;
     }
     /**
      *
      *
-     * @param string[] $street
+     * @param string[]|null $street
      *
      * @return self
      */
-    public function setStreet(array $street): self
+    public function setStreet(?array $street): self
     {
         $this->street = $street;
         return $this;

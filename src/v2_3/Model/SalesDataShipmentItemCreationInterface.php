@@ -7,19 +7,19 @@ class SalesDataShipmentItemCreationInterface
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\ShipmentItemCreationInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Order item ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $orderItemId;
     /**
      * Quantity.
      *
-     * @var float
+     * @var float|null
      */
     protected $qty;
     /**
@@ -46,20 +46,20 @@ class SalesDataShipmentItemCreationInterface
     /**
      * Order item ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getOrderItemId(): int
+    public function getOrderItemId(): ?int
     {
         return $this->orderItemId;
     }
     /**
      * Order item ID.
      *
-     * @param int $orderItemId
+     * @param int|null $orderItemId
      *
      * @return self
      */
-    public function setOrderItemId(int $orderItemId): self
+    public function setOrderItemId(?int $orderItemId): self
     {
         $this->orderItemId = $orderItemId;
         return $this;
@@ -67,20 +67,20 @@ class SalesDataShipmentItemCreationInterface
     /**
      * Quantity.
      *
-     * @return float
+     * @return float|null
      */
-    public function getQty(): float
+    public function getQty(): ?float
     {
         return $this->qty;
     }
     /**
      * Quantity.
      *
-     * @param float $qty
+     * @param float|null $qty
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(?float $qty): self
     {
         $this->qty = $qty;
         return $this;

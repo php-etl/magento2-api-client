@@ -40,11 +40,15 @@ class V1ProductsSkuDownloadableLinksSamplesPostBodyNormalizer implements Denorma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('isGlobalScopeContent', $data)) {
+        if (\array_key_exists('isGlobalScopeContent', $data) && $data['isGlobalScopeContent'] !== null) {
             $object->setIsGlobalScopeContent($data['isGlobalScopeContent']);
+        } elseif (\array_key_exists('isGlobalScopeContent', $data) && $data['isGlobalScopeContent'] === null) {
+            $object->setIsGlobalScopeContent(null);
         }
-        if (\array_key_exists('sample', $data)) {
+        if (\array_key_exists('sample', $data) && $data['sample'] !== null) {
             $object->setSample($this->denormalizer->denormalize($data['sample'], 'Kiboko\\Magento\\V2_4\\Model\\DownloadableDataSampleInterface', 'json', $context));
+        } elseif (\array_key_exists('sample', $data) && $data['sample'] === null) {
+            $object->setSample(null);
         }
         return $object;
     }

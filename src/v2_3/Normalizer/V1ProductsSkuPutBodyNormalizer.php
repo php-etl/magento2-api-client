@@ -40,11 +40,15 @@ class V1ProductsSkuPutBodyNormalizer implements DenormalizerInterface, Normalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('product', $data)) {
+        if (\array_key_exists('product', $data) && $data['product'] !== null) {
             $object->setProduct($this->denormalizer->denormalize($data['product'], 'Kiboko\\Magento\\V2_3\\Model\\CatalogDataProductInterface', 'json', $context));
+        } elseif (\array_key_exists('product', $data) && $data['product'] === null) {
+            $object->setProduct(null);
         }
-        if (\array_key_exists('saveOptions', $data)) {
+        if (\array_key_exists('saveOptions', $data) && $data['saveOptions'] !== null) {
             $object->setSaveOptions($data['saveOptions']);
+        } elseif (\array_key_exists('saveOptions', $data) && $data['saveOptions'] === null) {
+            $object->setSaveOptions(null);
         }
         return $object;
     }

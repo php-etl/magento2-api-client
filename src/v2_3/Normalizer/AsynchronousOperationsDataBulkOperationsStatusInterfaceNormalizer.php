@@ -40,30 +40,44 @@ class AsynchronousOperationsDataBulkOperationsStatusInterfaceNormalizer implemen
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('bulk_id', $data)) {
+        if (\array_key_exists('bulk_id', $data) && $data['bulk_id'] !== null) {
             $object->setBulkId($data['bulk_id']);
+        } elseif (\array_key_exists('bulk_id', $data) && $data['bulk_id'] === null) {
+            $object->setBulkId(null);
         }
-        if (\array_key_exists('description', $data)) {
+        if (\array_key_exists('description', $data) && $data['description'] !== null) {
             $object->setDescription($data['description']);
+        } elseif (\array_key_exists('description', $data) && $data['description'] === null) {
+            $object->setDescription(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('operation_count', $data)) {
+        if (\array_key_exists('operation_count', $data) && $data['operation_count'] !== null) {
             $object->setOperationCount($data['operation_count']);
+        } elseif (\array_key_exists('operation_count', $data) && $data['operation_count'] === null) {
+            $object->setOperationCount(null);
         }
-        if (\array_key_exists('operations_list', $data)) {
+        if (\array_key_exists('operations_list', $data) && $data['operations_list'] !== null) {
             $values = array();
             foreach ($data['operations_list'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\AsynchronousOperationsDataSummaryOperationStatusInterface', 'json', $context);
             }
             $object->setOperationsList($values);
+        } elseif (\array_key_exists('operations_list', $data) && $data['operations_list'] === null) {
+            $object->setOperationsList(null);
         }
-        if (\array_key_exists('start_time', $data)) {
+        if (\array_key_exists('start_time', $data) && $data['start_time'] !== null) {
             $object->setStartTime($data['start_time']);
+        } elseif (\array_key_exists('start_time', $data) && $data['start_time'] === null) {
+            $object->setStartTime(null);
         }
-        if (\array_key_exists('user_id', $data)) {
+        if (\array_key_exists('user_id', $data) && $data['user_id'] !== null) {
             $object->setUserId($data['user_id']);
+        } elseif (\array_key_exists('user_id', $data) && $data['user_id'] === null) {
+            $object->setUserId(null);
         }
         return $object;
     }

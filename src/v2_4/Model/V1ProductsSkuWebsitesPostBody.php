@@ -7,26 +7,26 @@ class V1ProductsSkuWebsitesPostBody
     /**
      *
      *
-     * @var CatalogDataProductWebsiteLinkInterface
+     * @var CatalogDataProductWebsiteLinkInterface|null
      */
     protected $productWebsiteLink;
     /**
      *
      *
-     * @return CatalogDataProductWebsiteLinkInterface
+     * @return CatalogDataProductWebsiteLinkInterface|null
      */
-    public function getProductWebsiteLink(): CatalogDataProductWebsiteLinkInterface
+    public function getProductWebsiteLink(): ?CatalogDataProductWebsiteLinkInterface
     {
         return $this->productWebsiteLink;
     }
     /**
      *
      *
-     * @param CatalogDataProductWebsiteLinkInterface $productWebsiteLink
+     * @param CatalogDataProductWebsiteLinkInterface|null $productWebsiteLink
      *
      * @return self
      */
-    public function setProductWebsiteLink(CatalogDataProductWebsiteLinkInterface $productWebsiteLink): self
+    public function setProductWebsiteLink(?CatalogDataProductWebsiteLinkInterface $productWebsiteLink): self
     {
         $this->productWebsiteLink = $productWebsiteLink;
         return $this;

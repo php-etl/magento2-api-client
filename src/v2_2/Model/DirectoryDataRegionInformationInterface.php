@@ -7,44 +7,44 @@ class DirectoryDataRegionInformationInterface
     /**
      * Region code
      *
-     * @var string
+     * @var string|null
      */
     protected $code;
     /**
      * ExtensionInterface class for @see \Magento\Directory\Api\Data\RegionInformationInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Region id
      *
-     * @var string
+     * @var string|null
      */
     protected $id;
     /**
      * Region name
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * Region code
      *
-     * @return string
+     * @return string|null
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
     /**
      * Region code
      *
-     * @param string $code
+     * @param string|null $code
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
         return $this;
@@ -73,20 +73,20 @@ class DirectoryDataRegionInformationInterface
     /**
      * Region id
      *
-     * @return string
+     * @return string|null
      */
-    public function getId(): string
+    public function getId(): ?string
     {
         return $this->id;
     }
     /**
      * Region id
      *
-     * @param string $id
+     * @param string|null $id
      *
      * @return self
      */
-    public function setId(string $id): self
+    public function setId(?string $id): self
     {
         $this->id = $id;
         return $this;
@@ -94,20 +94,20 @@ class DirectoryDataRegionInformationInterface
     /**
      * Region name
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      * Region name
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;

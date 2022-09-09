@@ -7,26 +7,26 @@ class V1CartsCartIdGiftCardsPutBody
     /**
      * Gift Card Account data
      *
-     * @var GiftCardAccountDataGiftCardAccountInterface
+     * @var GiftCardAccountDataGiftCardAccountInterface|null
      */
     protected $giftCardAccountData;
     /**
      * Gift Card Account data
      *
-     * @return GiftCardAccountDataGiftCardAccountInterface
+     * @return GiftCardAccountDataGiftCardAccountInterface|null
      */
-    public function getGiftCardAccountData(): GiftCardAccountDataGiftCardAccountInterface
+    public function getGiftCardAccountData(): ?GiftCardAccountDataGiftCardAccountInterface
     {
         return $this->giftCardAccountData;
     }
     /**
      * Gift Card Account data
      *
-     * @param GiftCardAccountDataGiftCardAccountInterface $giftCardAccountData
+     * @param GiftCardAccountDataGiftCardAccountInterface|null $giftCardAccountData
      *
      * @return self
      */
-    public function setGiftCardAccountData(GiftCardAccountDataGiftCardAccountInterface $giftCardAccountData): self
+    public function setGiftCardAccountData(?GiftCardAccountDataGiftCardAccountInterface $giftCardAccountData): self
     {
         $this->giftCardAccountData = $giftCardAccountData;
         return $this;

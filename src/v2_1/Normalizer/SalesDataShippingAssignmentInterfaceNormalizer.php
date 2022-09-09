@@ -40,21 +40,29 @@ class SalesDataShippingAssignmentInterfaceNormalizer implements DenormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('items', $data)) {
+        if (\array_key_exists('items', $data) && $data['items'] !== null) {
             $values = array();
             foreach ($data['items'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\SalesDataOrderItemInterface', 'json', $context);
             }
             $object->setItems($values);
+        } elseif (\array_key_exists('items', $data) && $data['items'] === null) {
+            $object->setItems(null);
         }
-        if (\array_key_exists('shipping', $data)) {
+        if (\array_key_exists('shipping', $data) && $data['shipping'] !== null) {
             $object->setShipping($this->denormalizer->denormalize($data['shipping'], 'Kiboko\\Magento\\V2_1\\Model\\SalesDataShippingInterface', 'json', $context));
+        } elseif (\array_key_exists('shipping', $data) && $data['shipping'] === null) {
+            $object->setShipping(null);
         }
-        if (\array_key_exists('stock_id', $data)) {
+        if (\array_key_exists('stock_id', $data) && $data['stock_id'] !== null) {
             $object->setStockId($data['stock_id']);
+        } elseif (\array_key_exists('stock_id', $data) && $data['stock_id'] === null) {
+            $object->setStockId(null);
         }
         return $object;
     }

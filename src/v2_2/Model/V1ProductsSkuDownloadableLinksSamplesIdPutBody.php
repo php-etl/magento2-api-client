@@ -7,32 +7,32 @@ class V1ProductsSkuDownloadableLinksSamplesIdPutBody
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isGlobalScopeContent;
     /**
      *
      *
-     * @var DownloadableDataSampleInterface
+     * @var DownloadableDataSampleInterface|null
      */
     protected $sample;
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsGlobalScopeContent(): bool
+    public function getIsGlobalScopeContent(): ?bool
     {
         return $this->isGlobalScopeContent;
     }
     /**
      *
      *
-     * @param bool $isGlobalScopeContent
+     * @param bool|null $isGlobalScopeContent
      *
      * @return self
      */
-    public function setIsGlobalScopeContent(bool $isGlobalScopeContent): self
+    public function setIsGlobalScopeContent(?bool $isGlobalScopeContent): self
     {
         $this->isGlobalScopeContent = $isGlobalScopeContent;
         return $this;
@@ -40,20 +40,20 @@ class V1ProductsSkuDownloadableLinksSamplesIdPutBody
     /**
      *
      *
-     * @return DownloadableDataSampleInterface
+     * @return DownloadableDataSampleInterface|null
      */
-    public function getSample(): DownloadableDataSampleInterface
+    public function getSample(): ?DownloadableDataSampleInterface
     {
         return $this->sample;
     }
     /**
      *
      *
-     * @param DownloadableDataSampleInterface $sample
+     * @param DownloadableDataSampleInterface|null $sample
      *
      * @return self
      */
-    public function setSample(DownloadableDataSampleInterface $sample): self
+    public function setSample(?DownloadableDataSampleInterface $sample): self
     {
         $this->sample = $sample;
         return $this;

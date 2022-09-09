@@ -7,26 +7,26 @@ class V1ProductsTierPricesDeletePostBody
     /**
      *
      *
-     * @var CatalogDataTierPriceInterface[]
+     * @var CatalogDataTierPriceInterface[]|null
      */
     protected $prices;
     /**
      *
      *
-     * @return CatalogDataTierPriceInterface[]
+     * @return CatalogDataTierPriceInterface[]|null
      */
-    public function getPrices(): array
+    public function getPrices(): ?array
     {
         return $this->prices;
     }
     /**
      *
      *
-     * @param CatalogDataTierPriceInterface[] $prices
+     * @param CatalogDataTierPriceInterface[]|null $prices
      *
      * @return self
      */
-    public function setPrices(array $prices): self
+    public function setPrices(?array $prices): self
     {
         $this->prices = $prices;
         return $this;

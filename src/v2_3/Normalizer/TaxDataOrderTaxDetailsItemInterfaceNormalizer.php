@@ -40,24 +40,34 @@ class TaxDataOrderTaxDetailsItemInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('applied_taxes', $data)) {
+        if (\array_key_exists('applied_taxes', $data) && $data['applied_taxes'] !== null) {
             $values = array();
             foreach ($data['applied_taxes'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\TaxDataOrderTaxDetailsAppliedTaxInterface', 'json', $context);
             }
             $object->setAppliedTaxes($values);
+        } elseif (\array_key_exists('applied_taxes', $data) && $data['applied_taxes'] === null) {
+            $object->setAppliedTaxes(null);
         }
-        if (\array_key_exists('associated_item_id', $data)) {
+        if (\array_key_exists('associated_item_id', $data) && $data['associated_item_id'] !== null) {
             $object->setAssociatedItemId($data['associated_item_id']);
+        } elseif (\array_key_exists('associated_item_id', $data) && $data['associated_item_id'] === null) {
+            $object->setAssociatedItemId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('item_id', $data)) {
+        if (\array_key_exists('item_id', $data) && $data['item_id'] !== null) {
             $object->setItemId($data['item_id']);
+        } elseif (\array_key_exists('item_id', $data) && $data['item_id'] === null) {
+            $object->setItemId(null);
         }
-        if (\array_key_exists('type', $data)) {
+        if (\array_key_exists('type', $data) && $data['type'] !== null) {
             $object->setType($data['type']);
+        } elseif (\array_key_exists('type', $data) && $data['type'] === null) {
+            $object->setType(null);
         }
         return $object;
     }

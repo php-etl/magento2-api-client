@@ -7,38 +7,38 @@ class TemandoShippingDataOrderShippingExperienceInterface
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $code;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $cost;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $label;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
     /**
      *
      *
-     * @param string $code
+     * @param string|null $code
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
         return $this;
@@ -46,20 +46,20 @@ class TemandoShippingDataOrderShippingExperienceInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getCost(): float
+    public function getCost(): ?float
     {
         return $this->cost;
     }
     /**
      *
      *
-     * @param float $cost
+     * @param float|null $cost
      *
      * @return self
      */
-    public function setCost(float $cost): self
+    public function setCost(?float $cost): self
     {
         $this->cost = $cost;
         return $this;
@@ -67,20 +67,20 @@ class TemandoShippingDataOrderShippingExperienceInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getLabel(): string
+    public function getLabel(): ?string
     {
         return $this->label;
     }
     /**
      *
      *
-     * @param string $label
+     * @param string|null $label
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(?string $label): self
     {
         $this->label = $label;
         return $this;

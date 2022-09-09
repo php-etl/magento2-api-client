@@ -40,8 +40,10 @@ class V1ProductsAttributesPostBodyNormalizer implements DenormalizerInterface, N
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('attribute', $data)) {
+        if (\array_key_exists('attribute', $data) && $data['attribute'] !== null) {
             $object->setAttribute($this->denormalizer->denormalize($data['attribute'], 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataProductAttributeInterface', 'json', $context));
+        } elseif (\array_key_exists('attribute', $data) && $data['attribute'] === null) {
+            $object->setAttribute(null);
         }
         return $object;
     }

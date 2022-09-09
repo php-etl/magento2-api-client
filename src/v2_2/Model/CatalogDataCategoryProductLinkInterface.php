@@ -7,44 +7,44 @@ class CatalogDataCategoryProductLinkInterface
     /**
      * Category id
      *
-     * @var string
+     * @var string|null
      */
     protected $categoryId;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\CategoryProductLinkInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $position;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $sku;
     /**
      * Category id
      *
-     * @return string
+     * @return string|null
      */
-    public function getCategoryId(): string
+    public function getCategoryId(): ?string
     {
         return $this->categoryId;
     }
     /**
      * Category id
      *
-     * @param string $categoryId
+     * @param string|null $categoryId
      *
      * @return self
      */
-    public function setCategoryId(string $categoryId): self
+    public function setCategoryId(?string $categoryId): self
     {
         $this->categoryId = $categoryId;
         return $this;
@@ -73,20 +73,20 @@ class CatalogDataCategoryProductLinkInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getPosition(): int
+    public function getPosition(): ?int
     {
         return $this->position;
     }
     /**
      *
      *
-     * @param int $position
+     * @param int|null $position
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(?int $position): self
     {
         $this->position = $position;
         return $this;
@@ -94,20 +94,20 @@ class CatalogDataCategoryProductLinkInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getSku(): string
+    public function getSku(): ?string
     {
         return $this->sku;
     }
     /**
      *
      *
-     * @param string $sku
+     * @param string|null $sku
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(?string $sku): self
     {
         $this->sku = $sku;
         return $this;

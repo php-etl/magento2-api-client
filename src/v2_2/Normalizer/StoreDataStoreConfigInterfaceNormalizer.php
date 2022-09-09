@@ -40,56 +40,90 @@ class StoreDataStoreConfigInterfaceNormalizer implements DenormalizerInterface, 
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('base_currency_code', $data)) {
+        if (\array_key_exists('base_currency_code', $data) && $data['base_currency_code'] !== null) {
             $object->setBaseCurrencyCode($data['base_currency_code']);
+        } elseif (\array_key_exists('base_currency_code', $data) && $data['base_currency_code'] === null) {
+            $object->setBaseCurrencyCode(null);
         }
-        if (\array_key_exists('base_link_url', $data)) {
+        if (\array_key_exists('base_link_url', $data) && $data['base_link_url'] !== null) {
             $object->setBaseLinkUrl($data['base_link_url']);
+        } elseif (\array_key_exists('base_link_url', $data) && $data['base_link_url'] === null) {
+            $object->setBaseLinkUrl(null);
         }
-        if (\array_key_exists('base_media_url', $data)) {
+        if (\array_key_exists('base_media_url', $data) && $data['base_media_url'] !== null) {
             $object->setBaseMediaUrl($data['base_media_url']);
+        } elseif (\array_key_exists('base_media_url', $data) && $data['base_media_url'] === null) {
+            $object->setBaseMediaUrl(null);
         }
-        if (\array_key_exists('base_static_url', $data)) {
+        if (\array_key_exists('base_static_url', $data) && $data['base_static_url'] !== null) {
             $object->setBaseStaticUrl($data['base_static_url']);
+        } elseif (\array_key_exists('base_static_url', $data) && $data['base_static_url'] === null) {
+            $object->setBaseStaticUrl(null);
         }
-        if (\array_key_exists('base_url', $data)) {
+        if (\array_key_exists('base_url', $data) && $data['base_url'] !== null) {
             $object->setBaseUrl($data['base_url']);
+        } elseif (\array_key_exists('base_url', $data) && $data['base_url'] === null) {
+            $object->setBaseUrl(null);
         }
-        if (\array_key_exists('code', $data)) {
+        if (\array_key_exists('code', $data) && $data['code'] !== null) {
             $object->setCode($data['code']);
+        } elseif (\array_key_exists('code', $data) && $data['code'] === null) {
+            $object->setCode(null);
         }
-        if (\array_key_exists('default_display_currency_code', $data)) {
+        if (\array_key_exists('default_display_currency_code', $data) && $data['default_display_currency_code'] !== null) {
             $object->setDefaultDisplayCurrencyCode($data['default_display_currency_code']);
+        } elseif (\array_key_exists('default_display_currency_code', $data) && $data['default_display_currency_code'] === null) {
+            $object->setDefaultDisplayCurrencyCode(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('locale', $data)) {
+        if (\array_key_exists('locale', $data) && $data['locale'] !== null) {
             $object->setLocale($data['locale']);
+        } elseif (\array_key_exists('locale', $data) && $data['locale'] === null) {
+            $object->setLocale(null);
         }
-        if (\array_key_exists('secure_base_link_url', $data)) {
+        if (\array_key_exists('secure_base_link_url', $data) && $data['secure_base_link_url'] !== null) {
             $object->setSecureBaseLinkUrl($data['secure_base_link_url']);
+        } elseif (\array_key_exists('secure_base_link_url', $data) && $data['secure_base_link_url'] === null) {
+            $object->setSecureBaseLinkUrl(null);
         }
-        if (\array_key_exists('secure_base_media_url', $data)) {
+        if (\array_key_exists('secure_base_media_url', $data) && $data['secure_base_media_url'] !== null) {
             $object->setSecureBaseMediaUrl($data['secure_base_media_url']);
+        } elseif (\array_key_exists('secure_base_media_url', $data) && $data['secure_base_media_url'] === null) {
+            $object->setSecureBaseMediaUrl(null);
         }
-        if (\array_key_exists('secure_base_static_url', $data)) {
+        if (\array_key_exists('secure_base_static_url', $data) && $data['secure_base_static_url'] !== null) {
             $object->setSecureBaseStaticUrl($data['secure_base_static_url']);
+        } elseif (\array_key_exists('secure_base_static_url', $data) && $data['secure_base_static_url'] === null) {
+            $object->setSecureBaseStaticUrl(null);
         }
-        if (\array_key_exists('secure_base_url', $data)) {
+        if (\array_key_exists('secure_base_url', $data) && $data['secure_base_url'] !== null) {
             $object->setSecureBaseUrl($data['secure_base_url']);
+        } elseif (\array_key_exists('secure_base_url', $data) && $data['secure_base_url'] === null) {
+            $object->setSecureBaseUrl(null);
         }
-        if (\array_key_exists('timezone', $data)) {
+        if (\array_key_exists('timezone', $data) && $data['timezone'] !== null) {
             $object->setTimezone($data['timezone']);
+        } elseif (\array_key_exists('timezone', $data) && $data['timezone'] === null) {
+            $object->setTimezone(null);
         }
-        if (\array_key_exists('website_id', $data)) {
+        if (\array_key_exists('website_id', $data) && $data['website_id'] !== null) {
             $object->setWebsiteId($data['website_id']);
+        } elseif (\array_key_exists('website_id', $data) && $data['website_id'] === null) {
+            $object->setWebsiteId(null);
         }
-        if (\array_key_exists('weight_unit', $data)) {
+        if (\array_key_exists('weight_unit', $data) && $data['weight_unit'] !== null) {
             $object->setWeightUnit($data['weight_unit']);
+        } elseif (\array_key_exists('weight_unit', $data) && $data['weight_unit'] === null) {
+            $object->setWeightUnit(null);
         }
         return $object;
     }

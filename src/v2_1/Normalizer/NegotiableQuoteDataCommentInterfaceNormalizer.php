@@ -40,39 +40,59 @@ class NegotiableQuoteDataCommentInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('attachments', $data)) {
+        if (\array_key_exists('attachments', $data) && $data['attachments'] !== null) {
             $values = array();
             foreach ($data['attachments'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\NegotiableQuoteDataCommentAttachmentInterface', 'json', $context);
             }
             $object->setAttachments($values);
+        } elseif (\array_key_exists('attachments', $data) && $data['attachments'] === null) {
+            $object->setAttachments(null);
         }
-        if (\array_key_exists('comment', $data)) {
+        if (\array_key_exists('comment', $data) && $data['comment'] !== null) {
             $object->setComment($data['comment']);
+        } elseif (\array_key_exists('comment', $data) && $data['comment'] === null) {
+            $object->setComment(null);
         }
-        if (\array_key_exists('created_at', $data)) {
+        if (\array_key_exists('created_at', $data) && $data['created_at'] !== null) {
             $object->setCreatedAt($data['created_at']);
+        } elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+            $object->setCreatedAt(null);
         }
-        if (\array_key_exists('creator_id', $data)) {
+        if (\array_key_exists('creator_id', $data) && $data['creator_id'] !== null) {
             $object->setCreatorId($data['creator_id']);
+        } elseif (\array_key_exists('creator_id', $data) && $data['creator_id'] === null) {
+            $object->setCreatorId(null);
         }
-        if (\array_key_exists('creator_type', $data)) {
+        if (\array_key_exists('creator_type', $data) && $data['creator_type'] !== null) {
             $object->setCreatorType($data['creator_type']);
+        } elseif (\array_key_exists('creator_type', $data) && $data['creator_type'] === null) {
+            $object->setCreatorType(null);
         }
-        if (\array_key_exists('entity_id', $data)) {
+        if (\array_key_exists('entity_id', $data) && $data['entity_id'] !== null) {
             $object->setEntityId($data['entity_id']);
+        } elseif (\array_key_exists('entity_id', $data) && $data['entity_id'] === null) {
+            $object->setEntityId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('is_decline', $data)) {
+        if (\array_key_exists('is_decline', $data) && $data['is_decline'] !== null) {
             $object->setIsDecline($data['is_decline']);
+        } elseif (\array_key_exists('is_decline', $data) && $data['is_decline'] === null) {
+            $object->setIsDecline(null);
         }
-        if (\array_key_exists('is_draft', $data)) {
+        if (\array_key_exists('is_draft', $data) && $data['is_draft'] !== null) {
             $object->setIsDraft($data['is_draft']);
+        } elseif (\array_key_exists('is_draft', $data) && $data['is_draft'] === null) {
+            $object->setIsDraft(null);
         }
-        if (\array_key_exists('parent_id', $data)) {
+        if (\array_key_exists('parent_id', $data) && $data['parent_id'] !== null) {
             $object->setParentId($data['parent_id']);
+        } elseif (\array_key_exists('parent_id', $data) && $data['parent_id'] === null) {
+            $object->setParentId(null);
         }
         return $object;
     }

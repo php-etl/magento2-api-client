@@ -40,12 +40,14 @@ class TaxDataOrderTaxDetailsAppliedTaxExtensionInterfaceNormalizer implements De
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('rates', $data)) {
+        if (\array_key_exists('rates', $data) && $data['rates'] !== null) {
             $values = array();
             foreach ($data['rates'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\TaxDataAppliedTaxRateInterface', 'json', $context);
             }
             $object->setRates($values);
+        } elseif (\array_key_exists('rates', $data) && $data['rates'] === null) {
+            $object->setRates(null);
         }
         return $object;
     }

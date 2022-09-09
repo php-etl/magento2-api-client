@@ -7,19 +7,19 @@ class DownloadableDataFileContentInterface
     /**
      * ExtensionInterface class for @see \Magento\Downloadable\Api\Data\File\ContentInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Data (base64 encoded content)
      *
-     * @var string
+     * @var string|null
      */
     protected $fileData;
     /**
      * File name
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
@@ -46,20 +46,20 @@ class DownloadableDataFileContentInterface
     /**
      * Data (base64 encoded content)
      *
-     * @return string
+     * @return string|null
      */
-    public function getFileData(): string
+    public function getFileData(): ?string
     {
         return $this->fileData;
     }
     /**
      * Data (base64 encoded content)
      *
-     * @param string $fileData
+     * @param string|null $fileData
      *
      * @return self
      */
-    public function setFileData(string $fileData): self
+    public function setFileData(?string $fileData): self
     {
         $this->fileData = $fileData;
         return $this;
@@ -67,20 +67,20 @@ class DownloadableDataFileContentInterface
     /**
      * File name
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      * File name
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;

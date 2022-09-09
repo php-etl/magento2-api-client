@@ -7,62 +7,62 @@ class SalesDataInvoiceCommentInterface
     /**
      * Comment.
      *
-     * @var string
+     * @var string|null
      */
     protected $comment;
     /**
      * Created-at timestamp.
      *
-     * @var string
+     * @var string|null
      */
     protected $createdAt;
     /**
      * Invoice ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $entityId;
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\InvoiceCommentInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Is-customer-notified flag value.
      *
-     * @var int
+     * @var int|null
      */
     protected $isCustomerNotified;
     /**
      * Is-visible-on-storefront flag value.
      *
-     * @var int
+     * @var int|null
      */
     protected $isVisibleOnFront;
     /**
      * Parent ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $parentId;
     /**
      * Comment.
      *
-     * @return string
+     * @return string|null
      */
-    public function getComment(): string
+    public function getComment(): ?string
     {
         return $this->comment;
     }
     /**
      * Comment.
      *
-     * @param string $comment
+     * @param string|null $comment
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(?string $comment): self
     {
         $this->comment = $comment;
         return $this;
@@ -70,20 +70,20 @@ class SalesDataInvoiceCommentInterface
     /**
      * Created-at timestamp.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt(): ?string
     {
         return $this->createdAt;
     }
     /**
      * Created-at timestamp.
      *
-     * @param string $createdAt
+     * @param string|null $createdAt
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(?string $createdAt): self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -91,20 +91,20 @@ class SalesDataInvoiceCommentInterface
     /**
      * Invoice ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getEntityId(): int
+    public function getEntityId(): ?int
     {
         return $this->entityId;
     }
     /**
      * Invoice ID.
      *
-     * @param int $entityId
+     * @param int|null $entityId
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(?int $entityId): self
     {
         $this->entityId = $entityId;
         return $this;
@@ -133,20 +133,20 @@ class SalesDataInvoiceCommentInterface
     /**
      * Is-customer-notified flag value.
      *
-     * @return int
+     * @return int|null
      */
-    public function getIsCustomerNotified(): int
+    public function getIsCustomerNotified(): ?int
     {
         return $this->isCustomerNotified;
     }
     /**
      * Is-customer-notified flag value.
      *
-     * @param int $isCustomerNotified
+     * @param int|null $isCustomerNotified
      *
      * @return self
      */
-    public function setIsCustomerNotified(int $isCustomerNotified): self
+    public function setIsCustomerNotified(?int $isCustomerNotified): self
     {
         $this->isCustomerNotified = $isCustomerNotified;
         return $this;
@@ -154,20 +154,20 @@ class SalesDataInvoiceCommentInterface
     /**
      * Is-visible-on-storefront flag value.
      *
-     * @return int
+     * @return int|null
      */
-    public function getIsVisibleOnFront(): int
+    public function getIsVisibleOnFront(): ?int
     {
         return $this->isVisibleOnFront;
     }
     /**
      * Is-visible-on-storefront flag value.
      *
-     * @param int $isVisibleOnFront
+     * @param int|null $isVisibleOnFront
      *
      * @return self
      */
-    public function setIsVisibleOnFront(int $isVisibleOnFront): self
+    public function setIsVisibleOnFront(?int $isVisibleOnFront): self
     {
         $this->isVisibleOnFront = $isVisibleOnFront;
         return $this;
@@ -175,20 +175,20 @@ class SalesDataInvoiceCommentInterface
     /**
      * Parent ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getParentId(): int
+    public function getParentId(): ?int
     {
         return $this->parentId;
     }
     /**
      * Parent ID.
      *
-     * @param int $parentId
+     * @param int|null $parentId
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(?int $parentId): self
     {
         $this->parentId = $parentId;
         return $this;

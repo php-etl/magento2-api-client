@@ -40,11 +40,15 @@ class V1CustomersIsEmailAvailablePostBodyNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('customerEmail', $data)) {
+        if (\array_key_exists('customerEmail', $data) && $data['customerEmail'] !== null) {
             $object->setCustomerEmail($data['customerEmail']);
+        } elseif (\array_key_exists('customerEmail', $data) && $data['customerEmail'] === null) {
+            $object->setCustomerEmail(null);
         }
-        if (\array_key_exists('websiteId', $data)) {
+        if (\array_key_exists('websiteId', $data) && $data['websiteId'] !== null) {
             $object->setWebsiteId($data['websiteId']);
+        } elseif (\array_key_exists('websiteId', $data) && $data['websiteId'] === null) {
+            $object->setWebsiteId(null);
         }
         return $object;
     }

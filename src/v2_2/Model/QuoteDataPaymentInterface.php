@@ -7,44 +7,44 @@ class QuoteDataPaymentInterface
     /**
      * Payment additional details
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $additionalData;
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\PaymentInterface
      *
-     * @var QuoteDataPaymentExtensionInterface
+     * @var QuoteDataPaymentExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * Payment method code
      *
-     * @var string
+     * @var string|null
      */
     protected $method;
     /**
      * Purchase order number
      *
-     * @var string
+     * @var string|null
      */
     protected $poNumber;
     /**
      * Payment additional details
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getAdditionalData(): array
+    public function getAdditionalData(): ?array
     {
         return $this->additionalData;
     }
     /**
      * Payment additional details
      *
-     * @param string[] $additionalData
+     * @param string[]|null $additionalData
      *
      * @return self
      */
-    public function setAdditionalData(array $additionalData): self
+    public function setAdditionalData(?array $additionalData): self
     {
         $this->additionalData = $additionalData;
         return $this;
@@ -52,20 +52,20 @@ class QuoteDataPaymentInterface
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\PaymentInterface
      *
-     * @return QuoteDataPaymentExtensionInterface
+     * @return QuoteDataPaymentExtensionInterface|null
      */
-    public function getExtensionAttributes(): QuoteDataPaymentExtensionInterface
+    public function getExtensionAttributes(): ?QuoteDataPaymentExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\PaymentInterface
      *
-     * @param QuoteDataPaymentExtensionInterface $extensionAttributes
+     * @param QuoteDataPaymentExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(QuoteDataPaymentExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?QuoteDataPaymentExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -73,20 +73,20 @@ class QuoteDataPaymentInterface
     /**
      * Payment method code
      *
-     * @return string
+     * @return string|null
      */
-    public function getMethod(): string
+    public function getMethod(): ?string
     {
         return $this->method;
     }
     /**
      * Payment method code
      *
-     * @param string $method
+     * @param string|null $method
      *
      * @return self
      */
-    public function setMethod(string $method): self
+    public function setMethod(?string $method): self
     {
         $this->method = $method;
         return $this;
@@ -94,20 +94,20 @@ class QuoteDataPaymentInterface
     /**
      * Purchase order number
      *
-     * @return string
+     * @return string|null
      */
-    public function getPoNumber(): string
+    public function getPoNumber(): ?string
     {
         return $this->poNumber;
     }
     /**
      * Purchase order number
      *
-     * @param string $poNumber
+     * @param string|null $poNumber
      *
      * @return self
      */
-    public function setPoNumber(string $poNumber): self
+    public function setPoNumber(?string $poNumber): self
     {
         $this->poNumber = $poNumber;
         return $this;

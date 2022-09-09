@@ -7,38 +7,38 @@ class V1CustomersPostBody
     /**
      * Customer interface.
      *
-     * @var CustomerDataCustomerInterface
+     * @var CustomerDataCustomerInterface|null
      */
     protected $customer;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $password;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $redirectUrl;
     /**
      * Customer interface.
      *
-     * @return CustomerDataCustomerInterface
+     * @return CustomerDataCustomerInterface|null
      */
-    public function getCustomer(): CustomerDataCustomerInterface
+    public function getCustomer(): ?CustomerDataCustomerInterface
     {
         return $this->customer;
     }
     /**
      * Customer interface.
      *
-     * @param CustomerDataCustomerInterface $customer
+     * @param CustomerDataCustomerInterface|null $customer
      *
      * @return self
      */
-    public function setCustomer(CustomerDataCustomerInterface $customer): self
+    public function setCustomer(?CustomerDataCustomerInterface $customer): self
     {
         $this->customer = $customer;
         return $this;
@@ -46,20 +46,20 @@ class V1CustomersPostBody
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getPassword(): string
+    public function getPassword(): ?string
     {
         return $this->password;
     }
     /**
      *
      *
-     * @param string $password
+     * @param string|null $password
      *
      * @return self
      */
-    public function setPassword(string $password): self
+    public function setPassword(?string $password): self
     {
         $this->password = $password;
         return $this;
@@ -67,20 +67,20 @@ class V1CustomersPostBody
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getRedirectUrl(): string
+    public function getRedirectUrl(): ?string
     {
         return $this->redirectUrl;
     }
     /**
      *
      *
-     * @param string $redirectUrl
+     * @param string|null $redirectUrl
      *
      * @return self
      */
-    public function setRedirectUrl(string $redirectUrl): self
+    public function setRedirectUrl(?string $redirectUrl): self
     {
         $this->redirectUrl = $redirectUrl;
         return $this;

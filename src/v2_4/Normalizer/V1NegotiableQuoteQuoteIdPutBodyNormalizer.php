@@ -40,8 +40,10 @@ class V1NegotiableQuoteQuoteIdPutBodyNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('quote', $data)) {
+        if (\array_key_exists('quote', $data) && $data['quote'] !== null) {
             $object->setQuote($this->denormalizer->denormalize($data['quote'], 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataCartInterface', 'json', $context));
+        } elseif (\array_key_exists('quote', $data) && $data['quote'] === null) {
+            $object->setQuote(null);
         }
         return $object;
     }

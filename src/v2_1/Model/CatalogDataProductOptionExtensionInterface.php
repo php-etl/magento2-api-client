@@ -7,50 +7,50 @@ class CatalogDataProductOptionExtensionInterface
     /**
      *
      *
-     * @var BundleDataBundleOptionInterface[]
+     * @var BundleDataBundleOptionInterface[]|null
      */
     protected $bundleOptions;
     /**
      *
      *
-     * @var ConfigurableProductDataConfigurableItemOptionValueInterface[]
+     * @var ConfigurableProductDataConfigurableItemOptionValueInterface[]|null
      */
     protected $configurableItemOptions;
     /**
      *
      *
-     * @var CatalogDataCustomOptionInterface[]
+     * @var CatalogDataCustomOptionInterface[]|null
      */
     protected $customOptions;
     /**
      * Downloadable Option
      *
-     * @var DownloadableDataDownloadableOptionInterface
+     * @var DownloadableDataDownloadableOptionInterface|null
      */
     protected $downloadableOption;
     /**
      * Interface GiftCardOptionInterface
      *
-     * @var GiftCardDataGiftCardOptionInterface
+     * @var GiftCardDataGiftCardOptionInterface|null
      */
     protected $giftcardItemOption;
     /**
      *
      *
-     * @return BundleDataBundleOptionInterface[]
+     * @return BundleDataBundleOptionInterface[]|null
      */
-    public function getBundleOptions(): array
+    public function getBundleOptions(): ?array
     {
         return $this->bundleOptions;
     }
     /**
      *
      *
-     * @param BundleDataBundleOptionInterface[] $bundleOptions
+     * @param BundleDataBundleOptionInterface[]|null $bundleOptions
      *
      * @return self
      */
-    public function setBundleOptions(array $bundleOptions): self
+    public function setBundleOptions(?array $bundleOptions): self
     {
         $this->bundleOptions = $bundleOptions;
         return $this;
@@ -58,20 +58,20 @@ class CatalogDataProductOptionExtensionInterface
     /**
      *
      *
-     * @return ConfigurableProductDataConfigurableItemOptionValueInterface[]
+     * @return ConfigurableProductDataConfigurableItemOptionValueInterface[]|null
      */
-    public function getConfigurableItemOptions(): array
+    public function getConfigurableItemOptions(): ?array
     {
         return $this->configurableItemOptions;
     }
     /**
      *
      *
-     * @param ConfigurableProductDataConfigurableItemOptionValueInterface[] $configurableItemOptions
+     * @param ConfigurableProductDataConfigurableItemOptionValueInterface[]|null $configurableItemOptions
      *
      * @return self
      */
-    public function setConfigurableItemOptions(array $configurableItemOptions): self
+    public function setConfigurableItemOptions(?array $configurableItemOptions): self
     {
         $this->configurableItemOptions = $configurableItemOptions;
         return $this;
@@ -79,20 +79,20 @@ class CatalogDataProductOptionExtensionInterface
     /**
      *
      *
-     * @return CatalogDataCustomOptionInterface[]
+     * @return CatalogDataCustomOptionInterface[]|null
      */
-    public function getCustomOptions(): array
+    public function getCustomOptions(): ?array
     {
         return $this->customOptions;
     }
     /**
      *
      *
-     * @param CatalogDataCustomOptionInterface[] $customOptions
+     * @param CatalogDataCustomOptionInterface[]|null $customOptions
      *
      * @return self
      */
-    public function setCustomOptions(array $customOptions): self
+    public function setCustomOptions(?array $customOptions): self
     {
         $this->customOptions = $customOptions;
         return $this;
@@ -100,20 +100,20 @@ class CatalogDataProductOptionExtensionInterface
     /**
      * Downloadable Option
      *
-     * @return DownloadableDataDownloadableOptionInterface
+     * @return DownloadableDataDownloadableOptionInterface|null
      */
-    public function getDownloadableOption(): DownloadableDataDownloadableOptionInterface
+    public function getDownloadableOption(): ?DownloadableDataDownloadableOptionInterface
     {
         return $this->downloadableOption;
     }
     /**
      * Downloadable Option
      *
-     * @param DownloadableDataDownloadableOptionInterface $downloadableOption
+     * @param DownloadableDataDownloadableOptionInterface|null $downloadableOption
      *
      * @return self
      */
-    public function setDownloadableOption(DownloadableDataDownloadableOptionInterface $downloadableOption): self
+    public function setDownloadableOption(?DownloadableDataDownloadableOptionInterface $downloadableOption): self
     {
         $this->downloadableOption = $downloadableOption;
         return $this;
@@ -121,20 +121,20 @@ class CatalogDataProductOptionExtensionInterface
     /**
      * Interface GiftCardOptionInterface
      *
-     * @return GiftCardDataGiftCardOptionInterface
+     * @return GiftCardDataGiftCardOptionInterface|null
      */
-    public function getGiftcardItemOption(): GiftCardDataGiftCardOptionInterface
+    public function getGiftcardItemOption(): ?GiftCardDataGiftCardOptionInterface
     {
         return $this->giftcardItemOption;
     }
     /**
      * Interface GiftCardOptionInterface
      *
-     * @param GiftCardDataGiftCardOptionInterface $giftcardItemOption
+     * @param GiftCardDataGiftCardOptionInterface|null $giftcardItemOption
      *
      * @return self
      */
-    public function setGiftcardItemOption(GiftCardDataGiftCardOptionInterface $giftcardItemOption): self
+    public function setGiftcardItemOption(?GiftCardDataGiftCardOptionInterface $giftcardItemOption): self
     {
         $this->giftcardItemOption = $giftcardItemOption;
         return $this;

@@ -94,62 +94,100 @@ class SalesDataTotalInterfaceNormalizer implements DenormalizerInterface, Normal
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('base_shipping_amount', $data)) {
+        if (\array_key_exists('base_shipping_amount', $data) && $data['base_shipping_amount'] !== null) {
             $object->setBaseShippingAmount($data['base_shipping_amount']);
+        } elseif (\array_key_exists('base_shipping_amount', $data) && $data['base_shipping_amount'] === null) {
+            $object->setBaseShippingAmount(null);
         }
-        if (\array_key_exists('base_shipping_canceled', $data)) {
+        if (\array_key_exists('base_shipping_canceled', $data) && $data['base_shipping_canceled'] !== null) {
             $object->setBaseShippingCanceled($data['base_shipping_canceled']);
+        } elseif (\array_key_exists('base_shipping_canceled', $data) && $data['base_shipping_canceled'] === null) {
+            $object->setBaseShippingCanceled(null);
         }
-        if (\array_key_exists('base_shipping_discount_amount', $data)) {
+        if (\array_key_exists('base_shipping_discount_amount', $data) && $data['base_shipping_discount_amount'] !== null) {
             $object->setBaseShippingDiscountAmount($data['base_shipping_discount_amount']);
+        } elseif (\array_key_exists('base_shipping_discount_amount', $data) && $data['base_shipping_discount_amount'] === null) {
+            $object->setBaseShippingDiscountAmount(null);
         }
-        if (\array_key_exists('base_shipping_discount_tax_compensation_amnt', $data)) {
+        if (\array_key_exists('base_shipping_discount_tax_compensation_amnt', $data) && $data['base_shipping_discount_tax_compensation_amnt'] !== null) {
             $object->setBaseShippingDiscountTaxCompensationAmnt($data['base_shipping_discount_tax_compensation_amnt']);
+        } elseif (\array_key_exists('base_shipping_discount_tax_compensation_amnt', $data) && $data['base_shipping_discount_tax_compensation_amnt'] === null) {
+            $object->setBaseShippingDiscountTaxCompensationAmnt(null);
         }
-        if (\array_key_exists('base_shipping_incl_tax', $data)) {
+        if (\array_key_exists('base_shipping_incl_tax', $data) && $data['base_shipping_incl_tax'] !== null) {
             $object->setBaseShippingInclTax($data['base_shipping_incl_tax']);
+        } elseif (\array_key_exists('base_shipping_incl_tax', $data) && $data['base_shipping_incl_tax'] === null) {
+            $object->setBaseShippingInclTax(null);
         }
-        if (\array_key_exists('base_shipping_invoiced', $data)) {
+        if (\array_key_exists('base_shipping_invoiced', $data) && $data['base_shipping_invoiced'] !== null) {
             $object->setBaseShippingInvoiced($data['base_shipping_invoiced']);
+        } elseif (\array_key_exists('base_shipping_invoiced', $data) && $data['base_shipping_invoiced'] === null) {
+            $object->setBaseShippingInvoiced(null);
         }
-        if (\array_key_exists('base_shipping_refunded', $data)) {
+        if (\array_key_exists('base_shipping_refunded', $data) && $data['base_shipping_refunded'] !== null) {
             $object->setBaseShippingRefunded($data['base_shipping_refunded']);
+        } elseif (\array_key_exists('base_shipping_refunded', $data) && $data['base_shipping_refunded'] === null) {
+            $object->setBaseShippingRefunded(null);
         }
-        if (\array_key_exists('base_shipping_tax_amount', $data)) {
+        if (\array_key_exists('base_shipping_tax_amount', $data) && $data['base_shipping_tax_amount'] !== null) {
             $object->setBaseShippingTaxAmount($data['base_shipping_tax_amount']);
+        } elseif (\array_key_exists('base_shipping_tax_amount', $data) && $data['base_shipping_tax_amount'] === null) {
+            $object->setBaseShippingTaxAmount(null);
         }
-        if (\array_key_exists('base_shipping_tax_refunded', $data)) {
+        if (\array_key_exists('base_shipping_tax_refunded', $data) && $data['base_shipping_tax_refunded'] !== null) {
             $object->setBaseShippingTaxRefunded($data['base_shipping_tax_refunded']);
+        } elseif (\array_key_exists('base_shipping_tax_refunded', $data) && $data['base_shipping_tax_refunded'] === null) {
+            $object->setBaseShippingTaxRefunded(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('shipping_amount', $data)) {
+        if (\array_key_exists('shipping_amount', $data) && $data['shipping_amount'] !== null) {
             $object->setShippingAmount($data['shipping_amount']);
+        } elseif (\array_key_exists('shipping_amount', $data) && $data['shipping_amount'] === null) {
+            $object->setShippingAmount(null);
         }
-        if (\array_key_exists('shipping_canceled', $data)) {
+        if (\array_key_exists('shipping_canceled', $data) && $data['shipping_canceled'] !== null) {
             $object->setShippingCanceled($data['shipping_canceled']);
+        } elseif (\array_key_exists('shipping_canceled', $data) && $data['shipping_canceled'] === null) {
+            $object->setShippingCanceled(null);
         }
-        if (\array_key_exists('shipping_discount_amount', $data)) {
+        if (\array_key_exists('shipping_discount_amount', $data) && $data['shipping_discount_amount'] !== null) {
             $object->setShippingDiscountAmount($data['shipping_discount_amount']);
+        } elseif (\array_key_exists('shipping_discount_amount', $data) && $data['shipping_discount_amount'] === null) {
+            $object->setShippingDiscountAmount(null);
         }
-        if (\array_key_exists('shipping_discount_tax_compensation_amount', $data)) {
+        if (\array_key_exists('shipping_discount_tax_compensation_amount', $data) && $data['shipping_discount_tax_compensation_amount'] !== null) {
             $object->setShippingDiscountTaxCompensationAmount($data['shipping_discount_tax_compensation_amount']);
+        } elseif (\array_key_exists('shipping_discount_tax_compensation_amount', $data) && $data['shipping_discount_tax_compensation_amount'] === null) {
+            $object->setShippingDiscountTaxCompensationAmount(null);
         }
-        if (\array_key_exists('shipping_incl_tax', $data)) {
+        if (\array_key_exists('shipping_incl_tax', $data) && $data['shipping_incl_tax'] !== null) {
             $object->setShippingInclTax($data['shipping_incl_tax']);
+        } elseif (\array_key_exists('shipping_incl_tax', $data) && $data['shipping_incl_tax'] === null) {
+            $object->setShippingInclTax(null);
         }
-        if (\array_key_exists('shipping_invoiced', $data)) {
+        if (\array_key_exists('shipping_invoiced', $data) && $data['shipping_invoiced'] !== null) {
             $object->setShippingInvoiced($data['shipping_invoiced']);
+        } elseif (\array_key_exists('shipping_invoiced', $data) && $data['shipping_invoiced'] === null) {
+            $object->setShippingInvoiced(null);
         }
-        if (\array_key_exists('shipping_refunded', $data)) {
+        if (\array_key_exists('shipping_refunded', $data) && $data['shipping_refunded'] !== null) {
             $object->setShippingRefunded($data['shipping_refunded']);
+        } elseif (\array_key_exists('shipping_refunded', $data) && $data['shipping_refunded'] === null) {
+            $object->setShippingRefunded(null);
         }
-        if (\array_key_exists('shipping_tax_amount', $data)) {
+        if (\array_key_exists('shipping_tax_amount', $data) && $data['shipping_tax_amount'] !== null) {
             $object->setShippingTaxAmount($data['shipping_tax_amount']);
+        } elseif (\array_key_exists('shipping_tax_amount', $data) && $data['shipping_tax_amount'] === null) {
+            $object->setShippingTaxAmount(null);
         }
-        if (\array_key_exists('shipping_tax_refunded', $data)) {
+        if (\array_key_exists('shipping_tax_refunded', $data) && $data['shipping_tax_refunded'] !== null) {
             $object->setShippingTaxRefunded($data['shipping_tax_refunded']);
+        } elseif (\array_key_exists('shipping_tax_refunded', $data) && $data['shipping_tax_refunded'] === null) {
+            $object->setShippingTaxRefunded(null);
         }
         return $object;
     }

@@ -40,15 +40,19 @@ class CustomerDataValidationResultsInterfaceNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('messages', $data)) {
+        if (\array_key_exists('messages', $data) && $data['messages'] !== null) {
             $values = array();
             foreach ($data['messages'] as $value) {
                 $values[] = $value;
             }
             $object->setMessages($values);
+        } elseif (\array_key_exists('messages', $data) && $data['messages'] === null) {
+            $object->setMessages(null);
         }
-        if (\array_key_exists('valid', $data)) {
+        if (\array_key_exists('valid', $data) && $data['valid'] !== null) {
             $object->setValid($data['valid']);
+        } elseif (\array_key_exists('valid', $data) && $data['valid'] === null) {
+            $object->setValid(null);
         }
         return $object;
     }

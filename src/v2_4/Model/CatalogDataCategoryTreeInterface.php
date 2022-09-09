@@ -7,68 +7,68 @@ class CatalogDataCategoryTreeInterface
     /**
      *
      *
-     * @var CatalogDataCategoryTreeInterface[]
+     * @var CatalogDataCategoryTreeInterface[]|null
      */
     protected $childrenData;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Whether category is active
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isActive;
     /**
      * Category level
      *
-     * @var int
+     * @var int|null
      */
     protected $level;
     /**
      * Category name
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * Parent category ID
      *
-     * @var int
+     * @var int|null
      */
     protected $parentId;
     /**
      * Category position
      *
-     * @var int
+     * @var int|null
      */
     protected $position;
     /**
      * Product count
      *
-     * @var int
+     * @var int|null
      */
     protected $productCount;
     /**
      *
      *
-     * @return CatalogDataCategoryTreeInterface[]
+     * @return CatalogDataCategoryTreeInterface[]|null
      */
-    public function getChildrenData(): array
+    public function getChildrenData(): ?array
     {
         return $this->childrenData;
     }
     /**
      *
      *
-     * @param CatalogDataCategoryTreeInterface[] $childrenData
+     * @param CatalogDataCategoryTreeInterface[]|null $childrenData
      *
      * @return self
      */
-    public function setChildrenData(array $childrenData): self
+    public function setChildrenData(?array $childrenData): self
     {
         $this->childrenData = $childrenData;
         return $this;
@@ -76,20 +76,20 @@ class CatalogDataCategoryTreeInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      *
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -97,20 +97,20 @@ class CatalogDataCategoryTreeInterface
     /**
      * Whether category is active
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsActive(): bool
+    public function getIsActive(): ?bool
     {
         return $this->isActive;
     }
     /**
      * Whether category is active
      *
-     * @param bool $isActive
+     * @param bool|null $isActive
      *
      * @return self
      */
-    public function setIsActive(bool $isActive): self
+    public function setIsActive(?bool $isActive): self
     {
         $this->isActive = $isActive;
         return $this;
@@ -118,20 +118,20 @@ class CatalogDataCategoryTreeInterface
     /**
      * Category level
      *
-     * @return int
+     * @return int|null
      */
-    public function getLevel(): int
+    public function getLevel(): ?int
     {
         return $this->level;
     }
     /**
      * Category level
      *
-     * @param int $level
+     * @param int|null $level
      *
      * @return self
      */
-    public function setLevel(int $level): self
+    public function setLevel(?int $level): self
     {
         $this->level = $level;
         return $this;
@@ -139,20 +139,20 @@ class CatalogDataCategoryTreeInterface
     /**
      * Category name
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      * Category name
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;
@@ -160,20 +160,20 @@ class CatalogDataCategoryTreeInterface
     /**
      * Parent category ID
      *
-     * @return int
+     * @return int|null
      */
-    public function getParentId(): int
+    public function getParentId(): ?int
     {
         return $this->parentId;
     }
     /**
      * Parent category ID
      *
-     * @param int $parentId
+     * @param int|null $parentId
      *
      * @return self
      */
-    public function setParentId(int $parentId): self
+    public function setParentId(?int $parentId): self
     {
         $this->parentId = $parentId;
         return $this;
@@ -181,20 +181,20 @@ class CatalogDataCategoryTreeInterface
     /**
      * Category position
      *
-     * @return int
+     * @return int|null
      */
-    public function getPosition(): int
+    public function getPosition(): ?int
     {
         return $this->position;
     }
     /**
      * Category position
      *
-     * @param int $position
+     * @param int|null $position
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(?int $position): self
     {
         $this->position = $position;
         return $this;
@@ -202,20 +202,20 @@ class CatalogDataCategoryTreeInterface
     /**
      * Product count
      *
-     * @return int
+     * @return int|null
      */
-    public function getProductCount(): int
+    public function getProductCount(): ?int
     {
         return $this->productCount;
     }
     /**
      * Product count
      *
-     * @param int $productCount
+     * @param int|null $productCount
      *
      * @return self
      */
-    public function setProductCount(int $productCount): self
+    public function setProductCount(?int $productCount): self
     {
         $this->productCount = $productCount;
         return $this;

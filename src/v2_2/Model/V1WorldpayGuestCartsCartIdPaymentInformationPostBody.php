@@ -7,38 +7,38 @@ class V1WorldpayGuestCartsCartIdPaymentInformationPostBody
     /**
      * Interface AddressInterface
      *
-     * @var QuoteDataAddressInterface
+     * @var QuoteDataAddressInterface|null
      */
     protected $billingAddress;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $email;
     /**
      * Interface PaymentInterface
      *
-     * @var QuoteDataPaymentInterface
+     * @var QuoteDataPaymentInterface|null
      */
     protected $paymentMethod;
     /**
      * Interface AddressInterface
      *
-     * @return QuoteDataAddressInterface
+     * @return QuoteDataAddressInterface|null
      */
-    public function getBillingAddress(): QuoteDataAddressInterface
+    public function getBillingAddress(): ?QuoteDataAddressInterface
     {
         return $this->billingAddress;
     }
     /**
      * Interface AddressInterface
      *
-     * @param QuoteDataAddressInterface $billingAddress
+     * @param QuoteDataAddressInterface|null $billingAddress
      *
      * @return self
      */
-    public function setBillingAddress(QuoteDataAddressInterface $billingAddress): self
+    public function setBillingAddress(?QuoteDataAddressInterface $billingAddress): self
     {
         $this->billingAddress = $billingAddress;
         return $this;
@@ -46,20 +46,20 @@ class V1WorldpayGuestCartsCartIdPaymentInformationPostBody
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
     /**
      *
      *
-     * @param string $email
+     * @param string|null $email
      *
      * @return self
      */
-    public function setEmail(string $email): self
+    public function setEmail(?string $email): self
     {
         $this->email = $email;
         return $this;
@@ -67,20 +67,20 @@ class V1WorldpayGuestCartsCartIdPaymentInformationPostBody
     /**
      * Interface PaymentInterface
      *
-     * @return QuoteDataPaymentInterface
+     * @return QuoteDataPaymentInterface|null
      */
-    public function getPaymentMethod(): QuoteDataPaymentInterface
+    public function getPaymentMethod(): ?QuoteDataPaymentInterface
     {
         return $this->paymentMethod;
     }
     /**
      * Interface PaymentInterface
      *
-     * @param QuoteDataPaymentInterface $paymentMethod
+     * @param QuoteDataPaymentInterface|null $paymentMethod
      *
      * @return self
      */
-    public function setPaymentMethod(QuoteDataPaymentInterface $paymentMethod): self
+    public function setPaymentMethod(?QuoteDataPaymentInterface $paymentMethod): self
     {
         $this->paymentMethod = $paymentMethod;
         return $this;

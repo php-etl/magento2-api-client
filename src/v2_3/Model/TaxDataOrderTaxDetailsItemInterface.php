@@ -7,50 +7,50 @@ class TaxDataOrderTaxDetailsItemInterface
     /**
      * Applied taxes
      *
-     * @var TaxDataOrderTaxDetailsAppliedTaxInterface[]
+     * @var TaxDataOrderTaxDetailsAppliedTaxInterface[]|null
      */
     protected $appliedTaxes;
     /**
      * Associated item id if this item is associated with another item, null otherwise
      *
-     * @var int
+     * @var int|null
      */
     protected $associatedItemId;
     /**
      * ExtensionInterface class for @see \Magento\Tax\Api\Data\OrderTaxDetailsItemInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Item id if this item is a product
      *
-     * @var int
+     * @var int|null
      */
     protected $itemId;
     /**
      * Type (shipping, product, weee, gift wrapping, etc)
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
      * Applied taxes
      *
-     * @return TaxDataOrderTaxDetailsAppliedTaxInterface[]
+     * @return TaxDataOrderTaxDetailsAppliedTaxInterface[]|null
      */
-    public function getAppliedTaxes(): array
+    public function getAppliedTaxes(): ?array
     {
         return $this->appliedTaxes;
     }
     /**
      * Applied taxes
      *
-     * @param TaxDataOrderTaxDetailsAppliedTaxInterface[] $appliedTaxes
+     * @param TaxDataOrderTaxDetailsAppliedTaxInterface[]|null $appliedTaxes
      *
      * @return self
      */
-    public function setAppliedTaxes(array $appliedTaxes): self
+    public function setAppliedTaxes(?array $appliedTaxes): self
     {
         $this->appliedTaxes = $appliedTaxes;
         return $this;
@@ -58,20 +58,20 @@ class TaxDataOrderTaxDetailsItemInterface
     /**
      * Associated item id if this item is associated with another item, null otherwise
      *
-     * @return int
+     * @return int|null
      */
-    public function getAssociatedItemId(): int
+    public function getAssociatedItemId(): ?int
     {
         return $this->associatedItemId;
     }
     /**
      * Associated item id if this item is associated with another item, null otherwise
      *
-     * @param int $associatedItemId
+     * @param int|null $associatedItemId
      *
      * @return self
      */
-    public function setAssociatedItemId(int $associatedItemId): self
+    public function setAssociatedItemId(?int $associatedItemId): self
     {
         $this->associatedItemId = $associatedItemId;
         return $this;
@@ -100,20 +100,20 @@ class TaxDataOrderTaxDetailsItemInterface
     /**
      * Item id if this item is a product
      *
-     * @return int
+     * @return int|null
      */
-    public function getItemId(): int
+    public function getItemId(): ?int
     {
         return $this->itemId;
     }
     /**
      * Item id if this item is a product
      *
-     * @param int $itemId
+     * @param int|null $itemId
      *
      * @return self
      */
-    public function setItemId(int $itemId): self
+    public function setItemId(?int $itemId): self
     {
         $this->itemId = $itemId;
         return $this;
@@ -121,20 +121,20 @@ class TaxDataOrderTaxDetailsItemInterface
     /**
      * Type (shipping, product, weee, gift wrapping, etc)
      *
-     * @return string
+     * @return string|null
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
     /**
      * Type (shipping, product, weee, gift wrapping, etc)
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type): self
+    public function setType(?string $type): self
     {
         $this->type = $type;
         return $this;

@@ -7,86 +7,86 @@ class QuoteDataShippingMethodInterface
     /**
      * Shipping amount in store currency.
      *
-     * @var float
+     * @var float|null
      */
     protected $amount;
     /**
      * The value of the availability flag for the current shipping method.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $available;
     /**
      * Shipping amount in base currency.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseAmount;
     /**
      * Shipping carrier code.
      *
-     * @var string
+     * @var string|null
      */
     protected $carrierCode;
     /**
      * Shipping carrier title. Otherwise, null.
      *
-     * @var string
+     * @var string|null
      */
     protected $carrierTitle;
     /**
      * Shipping Error message.
      *
-     * @var string
+     * @var string|null
      */
     protected $errorMessage;
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\ShippingMethodInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Shipping method code.
      *
-     * @var string
+     * @var string|null
      */
     protected $methodCode;
     /**
      * Shipping method title. Otherwise, null.
      *
-     * @var string
+     * @var string|null
      */
     protected $methodTitle;
     /**
      * Shipping price excl tax.
      *
-     * @var float
+     * @var float|null
      */
     protected $priceExclTax;
     /**
      * Shipping price incl tax.
      *
-     * @var float
+     * @var float|null
      */
     protected $priceInclTax;
     /**
      * Shipping amount in store currency.
      *
-     * @return float
+     * @return float|null
      */
-    public function getAmount(): float
+    public function getAmount(): ?float
     {
         return $this->amount;
     }
     /**
      * Shipping amount in store currency.
      *
-     * @param float $amount
+     * @param float|null $amount
      *
      * @return self
      */
-    public function setAmount(float $amount): self
+    public function setAmount(?float $amount): self
     {
         $this->amount = $amount;
         return $this;
@@ -94,20 +94,20 @@ class QuoteDataShippingMethodInterface
     /**
      * The value of the availability flag for the current shipping method.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getAvailable(): bool
+    public function getAvailable(): ?bool
     {
         return $this->available;
     }
     /**
      * The value of the availability flag for the current shipping method.
      *
-     * @param bool $available
+     * @param bool|null $available
      *
      * @return self
      */
-    public function setAvailable(bool $available): self
+    public function setAvailable(?bool $available): self
     {
         $this->available = $available;
         return $this;
@@ -115,20 +115,20 @@ class QuoteDataShippingMethodInterface
     /**
      * Shipping amount in base currency.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseAmount(): float
+    public function getBaseAmount(): ?float
     {
         return $this->baseAmount;
     }
     /**
      * Shipping amount in base currency.
      *
-     * @param float $baseAmount
+     * @param float|null $baseAmount
      *
      * @return self
      */
-    public function setBaseAmount(float $baseAmount): self
+    public function setBaseAmount(?float $baseAmount): self
     {
         $this->baseAmount = $baseAmount;
         return $this;
@@ -136,20 +136,20 @@ class QuoteDataShippingMethodInterface
     /**
      * Shipping carrier code.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCarrierCode(): string
+    public function getCarrierCode(): ?string
     {
         return $this->carrierCode;
     }
     /**
      * Shipping carrier code.
      *
-     * @param string $carrierCode
+     * @param string|null $carrierCode
      *
      * @return self
      */
-    public function setCarrierCode(string $carrierCode): self
+    public function setCarrierCode(?string $carrierCode): self
     {
         $this->carrierCode = $carrierCode;
         return $this;
@@ -157,20 +157,20 @@ class QuoteDataShippingMethodInterface
     /**
      * Shipping carrier title. Otherwise, null.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCarrierTitle(): string
+    public function getCarrierTitle(): ?string
     {
         return $this->carrierTitle;
     }
     /**
      * Shipping carrier title. Otherwise, null.
      *
-     * @param string $carrierTitle
+     * @param string|null $carrierTitle
      *
      * @return self
      */
-    public function setCarrierTitle(string $carrierTitle): self
+    public function setCarrierTitle(?string $carrierTitle): self
     {
         $this->carrierTitle = $carrierTitle;
         return $this;
@@ -178,20 +178,20 @@ class QuoteDataShippingMethodInterface
     /**
      * Shipping Error message.
      *
-     * @return string
+     * @return string|null
      */
-    public function getErrorMessage(): string
+    public function getErrorMessage(): ?string
     {
         return $this->errorMessage;
     }
     /**
      * Shipping Error message.
      *
-     * @param string $errorMessage
+     * @param string|null $errorMessage
      *
      * @return self
      */
-    public function setErrorMessage(string $errorMessage): self
+    public function setErrorMessage(?string $errorMessage): self
     {
         $this->errorMessage = $errorMessage;
         return $this;
@@ -220,20 +220,20 @@ class QuoteDataShippingMethodInterface
     /**
      * Shipping method code.
      *
-     * @return string
+     * @return string|null
      */
-    public function getMethodCode(): string
+    public function getMethodCode(): ?string
     {
         return $this->methodCode;
     }
     /**
      * Shipping method code.
      *
-     * @param string $methodCode
+     * @param string|null $methodCode
      *
      * @return self
      */
-    public function setMethodCode(string $methodCode): self
+    public function setMethodCode(?string $methodCode): self
     {
         $this->methodCode = $methodCode;
         return $this;
@@ -241,20 +241,20 @@ class QuoteDataShippingMethodInterface
     /**
      * Shipping method title. Otherwise, null.
      *
-     * @return string
+     * @return string|null
      */
-    public function getMethodTitle(): string
+    public function getMethodTitle(): ?string
     {
         return $this->methodTitle;
     }
     /**
      * Shipping method title. Otherwise, null.
      *
-     * @param string $methodTitle
+     * @param string|null $methodTitle
      *
      * @return self
      */
-    public function setMethodTitle(string $methodTitle): self
+    public function setMethodTitle(?string $methodTitle): self
     {
         $this->methodTitle = $methodTitle;
         return $this;
@@ -262,20 +262,20 @@ class QuoteDataShippingMethodInterface
     /**
      * Shipping price excl tax.
      *
-     * @return float
+     * @return float|null
      */
-    public function getPriceExclTax(): float
+    public function getPriceExclTax(): ?float
     {
         return $this->priceExclTax;
     }
     /**
      * Shipping price excl tax.
      *
-     * @param float $priceExclTax
+     * @param float|null $priceExclTax
      *
      * @return self
      */
-    public function setPriceExclTax(float $priceExclTax): self
+    public function setPriceExclTax(?float $priceExclTax): self
     {
         $this->priceExclTax = $priceExclTax;
         return $this;
@@ -283,20 +283,20 @@ class QuoteDataShippingMethodInterface
     /**
      * Shipping price incl tax.
      *
-     * @return float
+     * @return float|null
      */
-    public function getPriceInclTax(): float
+    public function getPriceInclTax(): ?float
     {
         return $this->priceInclTax;
     }
     /**
      * Shipping price incl tax.
      *
-     * @param float $priceInclTax
+     * @param float|null $priceInclTax
      *
      * @return self
      */
-    public function setPriceInclTax(float $priceInclTax): self
+    public function setPriceInclTax(?float $priceInclTax): self
     {
         $this->priceInclTax = $priceInclTax;
         return $this;

@@ -40,8 +40,10 @@ class V1ReturnsIdDeleteBodyNormalizer implements DenormalizerInterface, Normaliz
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('rmaDataObject', $data)) {
+        if (\array_key_exists('rmaDataObject', $data) && $data['rmaDataObject'] !== null) {
             $object->setRmaDataObject($this->denormalizer->denormalize($data['rmaDataObject'], 'Kiboko\\Magento\\V2_3\\Model\\RmaDataRmaInterface', 'json', $context));
+        } elseif (\array_key_exists('rmaDataObject', $data) && $data['rmaDataObject'] === null) {
+            $object->setRmaDataObject(null);
         }
         return $object;
     }

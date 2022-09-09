@@ -7,26 +7,26 @@ class V1ProductsSkuLinksPostBody
     /**
      *
      *
-     * @var CatalogDataProductLinkInterface[]
+     * @var CatalogDataProductLinkInterface[]|null
      */
     protected $items;
     /**
      *
      *
-     * @return CatalogDataProductLinkInterface[]
+     * @return CatalogDataProductLinkInterface[]|null
      */
-    public function getItems(): array
+    public function getItems(): ?array
     {
         return $this->items;
     }
     /**
      *
      *
-     * @param CatalogDataProductLinkInterface[] $items
+     * @param CatalogDataProductLinkInterface[]|null $items
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(?array $items): self
     {
         $this->items = $items;
         return $this;

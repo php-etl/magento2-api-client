@@ -7,38 +7,38 @@ class CatalogDataProductLinkAttributeInterface
     /**
      * Attribute code
      *
-     * @var string
+     * @var string|null
      */
     protected $code;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductLinkAttributeInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Attribute type
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
      * Attribute code
      *
-     * @return string
+     * @return string|null
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
     /**
      * Attribute code
      *
-     * @param string $code
+     * @param string|null $code
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
         return $this;
@@ -67,20 +67,20 @@ class CatalogDataProductLinkAttributeInterface
     /**
      * Attribute type
      *
-     * @return string
+     * @return string|null
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
     /**
      * Attribute type
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type): self
+    public function setType(?string $type): self
     {
         $this->type = $type;
         return $this;

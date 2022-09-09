@@ -40,55 +40,83 @@ class CatalogDataCategoryInterfaceNormalizer implements DenormalizerInterface, N
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('available_sort_by', $data)) {
+        if (\array_key_exists('available_sort_by', $data) && $data['available_sort_by'] !== null) {
             $values = array();
             foreach ($data['available_sort_by'] as $value) {
                 $values[] = $value;
             }
             $object->setAvailableSortBy($values);
+        } elseif (\array_key_exists('available_sort_by', $data) && $data['available_sort_by'] === null) {
+            $object->setAvailableSortBy(null);
         }
-        if (\array_key_exists('children', $data)) {
+        if (\array_key_exists('children', $data) && $data['children'] !== null) {
             $object->setChildren($data['children']);
+        } elseif (\array_key_exists('children', $data) && $data['children'] === null) {
+            $object->setChildren(null);
         }
-        if (\array_key_exists('created_at', $data)) {
+        if (\array_key_exists('created_at', $data) && $data['created_at'] !== null) {
             $object->setCreatedAt($data['created_at']);
+        } elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+            $object->setCreatedAt(null);
         }
-        if (\array_key_exists('custom_attributes', $data)) {
+        if (\array_key_exists('custom_attributes', $data) && $data['custom_attributes'] !== null) {
             $values_1 = array();
             foreach ($data['custom_attributes'] as $value_1) {
                 $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_3\\Model\\FrameworkAttributeInterface', 'json', $context);
             }
             $object->setCustomAttributes($values_1);
+        } elseif (\array_key_exists('custom_attributes', $data) && $data['custom_attributes'] === null) {
+            $object->setCustomAttributes(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('include_in_menu', $data)) {
+        if (\array_key_exists('include_in_menu', $data) && $data['include_in_menu'] !== null) {
             $object->setIncludeInMenu($data['include_in_menu']);
+        } elseif (\array_key_exists('include_in_menu', $data) && $data['include_in_menu'] === null) {
+            $object->setIncludeInMenu(null);
         }
-        if (\array_key_exists('is_active', $data)) {
+        if (\array_key_exists('is_active', $data) && $data['is_active'] !== null) {
             $object->setIsActive($data['is_active']);
+        } elseif (\array_key_exists('is_active', $data) && $data['is_active'] === null) {
+            $object->setIsActive(null);
         }
-        if (\array_key_exists('level', $data)) {
+        if (\array_key_exists('level', $data) && $data['level'] !== null) {
             $object->setLevel($data['level']);
+        } elseif (\array_key_exists('level', $data) && $data['level'] === null) {
+            $object->setLevel(null);
         }
-        if (\array_key_exists('name', $data)) {
+        if (\array_key_exists('name', $data) && $data['name'] !== null) {
             $object->setName($data['name']);
+        } elseif (\array_key_exists('name', $data) && $data['name'] === null) {
+            $object->setName(null);
         }
-        if (\array_key_exists('parent_id', $data)) {
+        if (\array_key_exists('parent_id', $data) && $data['parent_id'] !== null) {
             $object->setParentId($data['parent_id']);
+        } elseif (\array_key_exists('parent_id', $data) && $data['parent_id'] === null) {
+            $object->setParentId(null);
         }
-        if (\array_key_exists('path', $data)) {
+        if (\array_key_exists('path', $data) && $data['path'] !== null) {
             $object->setPath($data['path']);
+        } elseif (\array_key_exists('path', $data) && $data['path'] === null) {
+            $object->setPath(null);
         }
-        if (\array_key_exists('position', $data)) {
+        if (\array_key_exists('position', $data) && $data['position'] !== null) {
             $object->setPosition($data['position']);
+        } elseif (\array_key_exists('position', $data) && $data['position'] === null) {
+            $object->setPosition(null);
         }
-        if (\array_key_exists('updated_at', $data)) {
+        if (\array_key_exists('updated_at', $data) && $data['updated_at'] !== null) {
             $object->setUpdatedAt($data['updated_at']);
+        } elseif (\array_key_exists('updated_at', $data) && $data['updated_at'] === null) {
+            $object->setUpdatedAt(null);
         }
         return $object;
     }

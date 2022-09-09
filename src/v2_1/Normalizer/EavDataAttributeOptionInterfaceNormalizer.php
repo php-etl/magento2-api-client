@@ -40,24 +40,34 @@ class EavDataAttributeOptionInterfaceNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('is_default', $data)) {
+        if (\array_key_exists('is_default', $data) && $data['is_default'] !== null) {
             $object->setIsDefault($data['is_default']);
+        } elseif (\array_key_exists('is_default', $data) && $data['is_default'] === null) {
+            $object->setIsDefault(null);
         }
-        if (\array_key_exists('label', $data)) {
+        if (\array_key_exists('label', $data) && $data['label'] !== null) {
             $object->setLabel($data['label']);
+        } elseif (\array_key_exists('label', $data) && $data['label'] === null) {
+            $object->setLabel(null);
         }
-        if (\array_key_exists('sort_order', $data)) {
+        if (\array_key_exists('sort_order', $data) && $data['sort_order'] !== null) {
             $object->setSortOrder($data['sort_order']);
+        } elseif (\array_key_exists('sort_order', $data) && $data['sort_order'] === null) {
+            $object->setSortOrder(null);
         }
-        if (\array_key_exists('store_labels', $data)) {
+        if (\array_key_exists('store_labels', $data) && $data['store_labels'] !== null) {
             $values = array();
             foreach ($data['store_labels'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\EavDataAttributeOptionLabelInterface', 'json', $context);
             }
             $object->setStoreLabels($values);
+        } elseif (\array_key_exists('store_labels', $data) && $data['store_labels'] === null) {
+            $object->setStoreLabels(null);
         }
-        if (\array_key_exists('value', $data)) {
+        if (\array_key_exists('value', $data) && $data['value'] !== null) {
             $object->setValue($data['value']);
+        } elseif (\array_key_exists('value', $data) && $data['value'] === null) {
+            $object->setValue(null);
         }
         return $object;
     }

@@ -7,26 +7,26 @@ class V1CartsMineCheckoutFieldsPostBody
     /**
      *
      *
-     * @var FrameworkAttributeInterface[]
+     * @var FrameworkAttributeInterface[]|null
      */
     protected $serviceSelection;
     /**
      *
      *
-     * @return FrameworkAttributeInterface[]
+     * @return FrameworkAttributeInterface[]|null
      */
-    public function getServiceSelection(): array
+    public function getServiceSelection(): ?array
     {
         return $this->serviceSelection;
     }
     /**
      *
      *
-     * @param FrameworkAttributeInterface[] $serviceSelection
+     * @param FrameworkAttributeInterface[]|null $serviceSelection
      *
      * @return self
      */
-    public function setServiceSelection(array $serviceSelection): self
+    public function setServiceSelection(?array $serviceSelection): self
     {
         $this->serviceSelection = $serviceSelection;
         return $this;

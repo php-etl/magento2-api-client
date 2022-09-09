@@ -7,26 +7,26 @@ class V1GuestCartsCartIdOrderPutBody
     /**
      * Interface PaymentInterface
      *
-     * @var QuoteDataPaymentInterface
+     * @var QuoteDataPaymentInterface|null
      */
     protected $paymentMethod;
     /**
      * Interface PaymentInterface
      *
-     * @return QuoteDataPaymentInterface
+     * @return QuoteDataPaymentInterface|null
      */
-    public function getPaymentMethod(): QuoteDataPaymentInterface
+    public function getPaymentMethod(): ?QuoteDataPaymentInterface
     {
         return $this->paymentMethod;
     }
     /**
      * Interface PaymentInterface
      *
-     * @param QuoteDataPaymentInterface $paymentMethod
+     * @param QuoteDataPaymentInterface|null $paymentMethod
      *
      * @return self
      */
-    public function setPaymentMethod(QuoteDataPaymentInterface $paymentMethod): self
+    public function setPaymentMethod(?QuoteDataPaymentInterface $paymentMethod): self
     {
         $this->paymentMethod = $paymentMethod;
         return $this;

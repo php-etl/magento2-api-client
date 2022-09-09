@@ -7,44 +7,44 @@ class V1ProductsAttributeSetsAttributesPostBody
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $attributeCode;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $attributeGroupId;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $attributeSetId;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $sortOrder;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getAttributeCode(): string
+    public function getAttributeCode(): ?string
     {
         return $this->attributeCode;
     }
     /**
      *
      *
-     * @param string $attributeCode
+     * @param string|null $attributeCode
      *
      * @return self
      */
-    public function setAttributeCode(string $attributeCode): self
+    public function setAttributeCode(?string $attributeCode): self
     {
         $this->attributeCode = $attributeCode;
         return $this;
@@ -52,20 +52,20 @@ class V1ProductsAttributeSetsAttributesPostBody
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getAttributeGroupId(): int
+    public function getAttributeGroupId(): ?int
     {
         return $this->attributeGroupId;
     }
     /**
      *
      *
-     * @param int $attributeGroupId
+     * @param int|null $attributeGroupId
      *
      * @return self
      */
-    public function setAttributeGroupId(int $attributeGroupId): self
+    public function setAttributeGroupId(?int $attributeGroupId): self
     {
         $this->attributeGroupId = $attributeGroupId;
         return $this;
@@ -73,20 +73,20 @@ class V1ProductsAttributeSetsAttributesPostBody
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getAttributeSetId(): int
+    public function getAttributeSetId(): ?int
     {
         return $this->attributeSetId;
     }
     /**
      *
      *
-     * @param int $attributeSetId
+     * @param int|null $attributeSetId
      *
      * @return self
      */
-    public function setAttributeSetId(int $attributeSetId): self
+    public function setAttributeSetId(?int $attributeSetId): self
     {
         $this->attributeSetId = $attributeSetId;
         return $this;
@@ -94,20 +94,20 @@ class V1ProductsAttributeSetsAttributesPostBody
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getSortOrder(): int
+    public function getSortOrder(): ?int
     {
         return $this->sortOrder;
     }
     /**
      *
      *
-     * @param int $sortOrder
+     * @param int|null $sortOrder
      *
      * @return self
      */
-    public function setSortOrder(int $sortOrder): self
+    public function setSortOrder(?int $sortOrder): self
     {
         $this->sortOrder = $sortOrder;
         return $this;

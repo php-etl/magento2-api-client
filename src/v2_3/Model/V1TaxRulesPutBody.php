@@ -7,26 +7,26 @@ class V1TaxRulesPutBody
     /**
      * Tax rule interface.
      *
-     * @var TaxDataTaxRuleInterface
+     * @var TaxDataTaxRuleInterface|null
      */
     protected $rule;
     /**
      * Tax rule interface.
      *
-     * @return TaxDataTaxRuleInterface
+     * @return TaxDataTaxRuleInterface|null
      */
-    public function getRule(): TaxDataTaxRuleInterface
+    public function getRule(): ?TaxDataTaxRuleInterface
     {
         return $this->rule;
     }
     /**
      * Tax rule interface.
      *
-     * @param TaxDataTaxRuleInterface $rule
+     * @param TaxDataTaxRuleInterface|null $rule
      *
      * @return self
      */
-    public function setRule(TaxDataTaxRuleInterface $rule): self
+    public function setRule(?TaxDataTaxRuleInterface $rule): self
     {
         $this->rule = $rule;
         return $this;

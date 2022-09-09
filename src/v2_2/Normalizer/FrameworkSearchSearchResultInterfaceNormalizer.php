@@ -40,21 +40,29 @@ class FrameworkSearchSearchResultInterfaceNormalizer implements DenormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('aggregations', $data)) {
+        if (\array_key_exists('aggregations', $data) && $data['aggregations'] !== null) {
             $object->setAggregations($this->denormalizer->denormalize($data['aggregations'], 'Kiboko\\Magento\\V2_2\\Model\\FrameworkSearchAggregationInterface', 'json', $context));
+        } elseif (\array_key_exists('aggregations', $data) && $data['aggregations'] === null) {
+            $object->setAggregations(null);
         }
-        if (\array_key_exists('items', $data)) {
+        if (\array_key_exists('items', $data) && $data['items'] !== null) {
             $values = array();
             foreach ($data['items'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\FrameworkSearchDocumentInterface', 'json', $context);
             }
             $object->setItems($values);
+        } elseif (\array_key_exists('items', $data) && $data['items'] === null) {
+            $object->setItems(null);
         }
-        if (\array_key_exists('search_criteria', $data)) {
+        if (\array_key_exists('search_criteria', $data) && $data['search_criteria'] !== null) {
             $object->setSearchCriteria($this->denormalizer->denormalize($data['search_criteria'], 'Kiboko\\Magento\\V2_2\\Model\\FrameworkSearchSearchCriteriaInterface', 'json', $context));
+        } elseif (\array_key_exists('search_criteria', $data) && $data['search_criteria'] === null) {
+            $object->setSearchCriteria(null);
         }
-        if (\array_key_exists('total_count', $data)) {
+        if (\array_key_exists('total_count', $data) && $data['total_count'] !== null) {
             $object->setTotalCount($data['total_count']);
+        } elseif (\array_key_exists('total_count', $data) && $data['total_count'] === null) {
+            $object->setTotalCount(null);
         }
         return $object;
     }

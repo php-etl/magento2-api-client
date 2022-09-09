@@ -40,11 +40,15 @@ class V1CustomersMePasswordPutBodyNormalizer implements DenormalizerInterface, N
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('currentPassword', $data)) {
+        if (\array_key_exists('currentPassword', $data) && $data['currentPassword'] !== null) {
             $object->setCurrentPassword($data['currentPassword']);
+        } elseif (\array_key_exists('currentPassword', $data) && $data['currentPassword'] === null) {
+            $object->setCurrentPassword(null);
         }
-        if (\array_key_exists('newPassword', $data)) {
+        if (\array_key_exists('newPassword', $data) && $data['newPassword'] !== null) {
             $object->setNewPassword($data['newPassword']);
+        } elseif (\array_key_exists('newPassword', $data) && $data['newPassword'] === null) {
+            $object->setNewPassword(null);
         }
         return $object;
     }

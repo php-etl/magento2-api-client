@@ -7,56 +7,56 @@ class StoreDataStoreInterface
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $code;
     /**
      * ExtensionInterface class for @see \Magento\Store\Api\Data\StoreInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Store name
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $storeGroupId;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $websiteId;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
     /**
      *
      *
-     * @param string $code
+     * @param string|null $code
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
         return $this;
@@ -85,20 +85,20 @@ class StoreDataStoreInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      *
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -106,20 +106,20 @@ class StoreDataStoreInterface
     /**
      * Store name
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      * Store name
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;
@@ -127,20 +127,20 @@ class StoreDataStoreInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getStoreGroupId(): int
+    public function getStoreGroupId(): ?int
     {
         return $this->storeGroupId;
     }
     /**
      *
      *
-     * @param int $storeGroupId
+     * @param int|null $storeGroupId
      *
      * @return self
      */
-    public function setStoreGroupId(int $storeGroupId): self
+    public function setStoreGroupId(?int $storeGroupId): self
     {
         $this->storeGroupId = $storeGroupId;
         return $this;
@@ -148,20 +148,20 @@ class StoreDataStoreInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getWebsiteId(): int
+    public function getWebsiteId(): ?int
     {
         return $this->websiteId;
     }
     /**
      *
      *
-     * @param int $websiteId
+     * @param int|null $websiteId
      *
      * @return self
      */
-    public function setWebsiteId(int $websiteId): self
+    public function setWebsiteId(?int $websiteId): self
     {
         $this->websiteId = $websiteId;
         return $this;

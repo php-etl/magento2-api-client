@@ -40,8 +40,10 @@ class V1TeamCompanyIdPostBodyNormalizer implements DenormalizerInterface, Normal
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('team', $data)) {
+        if (\array_key_exists('team', $data) && $data['team'] !== null) {
             $object->setTeam($this->denormalizer->denormalize($data['team'], 'Kiboko\\Magento\\V2_4\\Model\\CompanyDataTeamInterface', 'json', $context));
+        } elseif (\array_key_exists('team', $data) && $data['team'] === null) {
+            $object->setTeam(null);
         }
         return $object;
     }

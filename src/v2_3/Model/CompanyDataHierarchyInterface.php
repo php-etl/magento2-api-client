@@ -7,50 +7,50 @@ class CompanyDataHierarchyInterface
     /**
      * Entity ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $entityId;
     /**
      * Entity type.
      *
-     * @var string
+     * @var string|null
      */
     protected $entityType;
     /**
      * ExtensionInterface class for @see \Magento\Company\Api\Data\HierarchyInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Structure ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $structureId;
     /**
      * Structure parent ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $structureParentId;
     /**
      * Entity ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getEntityId(): int
+    public function getEntityId(): ?int
     {
         return $this->entityId;
     }
     /**
      * Entity ID.
      *
-     * @param int $entityId
+     * @param int|null $entityId
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(?int $entityId): self
     {
         $this->entityId = $entityId;
         return $this;
@@ -58,20 +58,20 @@ class CompanyDataHierarchyInterface
     /**
      * Entity type.
      *
-     * @return string
+     * @return string|null
      */
-    public function getEntityType(): string
+    public function getEntityType(): ?string
     {
         return $this->entityType;
     }
     /**
      * Entity type.
      *
-     * @param string $entityType
+     * @param string|null $entityType
      *
      * @return self
      */
-    public function setEntityType(string $entityType): self
+    public function setEntityType(?string $entityType): self
     {
         $this->entityType = $entityType;
         return $this;
@@ -100,20 +100,20 @@ class CompanyDataHierarchyInterface
     /**
      * Structure ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getStructureId(): int
+    public function getStructureId(): ?int
     {
         return $this->structureId;
     }
     /**
      * Structure ID.
      *
-     * @param int $structureId
+     * @param int|null $structureId
      *
      * @return self
      */
-    public function setStructureId(int $structureId): self
+    public function setStructureId(?int $structureId): self
     {
         $this->structureId = $structureId;
         return $this;
@@ -121,20 +121,20 @@ class CompanyDataHierarchyInterface
     /**
      * Structure parent ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getStructureParentId(): int
+    public function getStructureParentId(): ?int
     {
         return $this->structureParentId;
     }
     /**
      * Structure parent ID.
      *
-     * @param int $structureParentId
+     * @param int|null $structureParentId
      *
      * @return self
      */
-    public function setStructureParentId(int $structureParentId): self
+    public function setStructureParentId(?int $structureParentId): self
     {
         $this->structureParentId = $structureParentId;
         return $this;

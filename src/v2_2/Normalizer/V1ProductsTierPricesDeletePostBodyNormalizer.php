@@ -40,12 +40,14 @@ class V1ProductsTierPricesDeletePostBodyNormalizer implements DenormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('prices', $data)) {
+        if (\array_key_exists('prices', $data) && $data['prices'] !== null) {
             $values = array();
             foreach ($data['prices'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataTierPriceInterface', 'json', $context);
             }
             $object->setPrices($values);
+        } elseif (\array_key_exists('prices', $data) && $data['prices'] === null) {
+            $object->setPrices(null);
         }
         return $object;
     }

@@ -7,19 +7,19 @@ class SalesRuleDataRuleLabelInterface
     /**
      * ExtensionInterface class for @see \Magento\SalesRule\Api\Data\RuleLabelInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * StoreId
      *
-     * @var int
+     * @var int|null
      */
     protected $storeId;
     /**
      * The label for the store
      *
-     * @var string
+     * @var string|null
      */
     protected $storeLabel;
     /**
@@ -46,20 +46,20 @@ class SalesRuleDataRuleLabelInterface
     /**
      * StoreId
      *
-     * @return int
+     * @return int|null
      */
-    public function getStoreId(): int
+    public function getStoreId(): ?int
     {
         return $this->storeId;
     }
     /**
      * StoreId
      *
-     * @param int $storeId
+     * @param int|null $storeId
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(?int $storeId): self
     {
         $this->storeId = $storeId;
         return $this;
@@ -67,20 +67,20 @@ class SalesRuleDataRuleLabelInterface
     /**
      * The label for the store
      *
-     * @return string
+     * @return string|null
      */
-    public function getStoreLabel(): string
+    public function getStoreLabel(): ?string
     {
         return $this->storeLabel;
     }
     /**
      * The label for the store
      *
-     * @param string $storeLabel
+     * @param string|null $storeLabel
      *
      * @return self
      */
-    public function setStoreLabel(string $storeLabel): self
+    public function setStoreLabel(?string $storeLabel): self
     {
         $this->storeLabel = $storeLabel;
         return $this;

@@ -40,8 +40,10 @@ class V1NegotiableQuoteQuoteIdShippingMethodPutBodyNormalizer implements Denorma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('shippingMethod', $data)) {
+        if (\array_key_exists('shippingMethod', $data) && $data['shippingMethod'] !== null) {
             $object->setShippingMethod($data['shippingMethod']);
+        } elseif (\array_key_exists('shippingMethod', $data) && $data['shippingMethod'] === null) {
+            $object->setShippingMethod(null);
         }
         return $object;
     }

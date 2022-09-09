@@ -7,32 +7,32 @@ class FrameworkSortOrder
     /**
      * Sorting direction.
      *
-     * @var string
+     * @var string|null
      */
     protected $direction;
     /**
      * Sorting field.
      *
-     * @var string
+     * @var string|null
      */
     protected $field;
     /**
      * Sorting direction.
      *
-     * @return string
+     * @return string|null
      */
-    public function getDirection(): string
+    public function getDirection(): ?string
     {
         return $this->direction;
     }
     /**
      * Sorting direction.
      *
-     * @param string $direction
+     * @param string|null $direction
      *
      * @return self
      */
-    public function setDirection(string $direction): self
+    public function setDirection(?string $direction): self
     {
         $this->direction = $direction;
         return $this;
@@ -40,20 +40,20 @@ class FrameworkSortOrder
     /**
      * Sorting field.
      *
-     * @return string
+     * @return string|null
      */
-    public function getField(): string
+    public function getField(): ?string
     {
         return $this->field;
     }
     /**
      * Sorting field.
      *
-     * @param string $field
+     * @param string|null $field
      *
      * @return self
      */
-    public function setField(string $field): self
+    public function setField(?string $field): self
     {
         $this->field = $field;
         return $this;

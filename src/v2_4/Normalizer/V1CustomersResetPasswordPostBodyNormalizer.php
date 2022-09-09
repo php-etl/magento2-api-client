@@ -40,14 +40,20 @@ class V1CustomersResetPasswordPostBodyNormalizer implements DenormalizerInterfac
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('email', $data)) {
+        if (\array_key_exists('email', $data) && $data['email'] !== null) {
             $object->setEmail($data['email']);
+        } elseif (\array_key_exists('email', $data) && $data['email'] === null) {
+            $object->setEmail(null);
         }
-        if (\array_key_exists('newPassword', $data)) {
+        if (\array_key_exists('newPassword', $data) && $data['newPassword'] !== null) {
             $object->setNewPassword($data['newPassword']);
+        } elseif (\array_key_exists('newPassword', $data) && $data['newPassword'] === null) {
+            $object->setNewPassword(null);
         }
-        if (\array_key_exists('resetToken', $data)) {
+        if (\array_key_exists('resetToken', $data) && $data['resetToken'] !== null) {
             $object->setResetToken($data['resetToken']);
+        } elseif (\array_key_exists('resetToken', $data) && $data['resetToken'] === null) {
+            $object->setResetToken(null);
         }
         return $object;
     }

@@ -52,29 +52,45 @@ class CatalogDataProductRenderImageInterfaceNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('code', $data)) {
+        if (\array_key_exists('code', $data) && $data['code'] !== null) {
             $object->setCode($data['code']);
+        } elseif (\array_key_exists('code', $data) && $data['code'] === null) {
+            $object->setCode(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('height', $data)) {
+        if (\array_key_exists('height', $data) && $data['height'] !== null) {
             $object->setHeight($data['height']);
+        } elseif (\array_key_exists('height', $data) && $data['height'] === null) {
+            $object->setHeight(null);
         }
-        if (\array_key_exists('label', $data)) {
+        if (\array_key_exists('label', $data) && $data['label'] !== null) {
             $object->setLabel($data['label']);
+        } elseif (\array_key_exists('label', $data) && $data['label'] === null) {
+            $object->setLabel(null);
         }
-        if (\array_key_exists('resized_height', $data)) {
+        if (\array_key_exists('resized_height', $data) && $data['resized_height'] !== null) {
             $object->setResizedHeight($data['resized_height']);
+        } elseif (\array_key_exists('resized_height', $data) && $data['resized_height'] === null) {
+            $object->setResizedHeight(null);
         }
-        if (\array_key_exists('resized_width', $data)) {
+        if (\array_key_exists('resized_width', $data) && $data['resized_width'] !== null) {
             $object->setResizedWidth($data['resized_width']);
+        } elseif (\array_key_exists('resized_width', $data) && $data['resized_width'] === null) {
+            $object->setResizedWidth(null);
         }
-        if (\array_key_exists('url', $data)) {
+        if (\array_key_exists('url', $data) && $data['url'] !== null) {
             $object->setUrl($data['url']);
+        } elseif (\array_key_exists('url', $data) && $data['url'] === null) {
+            $object->setUrl(null);
         }
-        if (\array_key_exists('width', $data)) {
+        if (\array_key_exists('width', $data) && $data['width'] !== null) {
             $object->setWidth($data['width']);
+        } elseif (\array_key_exists('width', $data) && $data['width'] === null) {
+            $object->setWidth(null);
         }
         return $object;
     }

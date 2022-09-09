@@ -7,146 +7,146 @@ class CustomerDataAttributeMetadataInterface
     /**
      * Code of the attribute.
      *
-     * @var string
+     * @var string|null
      */
     protected $attributeCode;
     /**
      * Backend type.
      *
-     * @var string
+     * @var string|null
      */
     protected $backendType;
     /**
      * Data model for attribute.
      *
-     * @var string
+     * @var string|null
      */
     protected $dataModel;
     /**
      * Class which is used to display the attribute on frontend.
      *
-     * @var string
+     * @var string|null
      */
     protected $frontendClass;
     /**
      * HTML for input element.
      *
-     * @var string
+     * @var string|null
      */
     protected $frontendInput;
     /**
      * Label which supposed to be displayed on frontend.
      *
-     * @var string
+     * @var string|null
      */
     protected $frontendLabel;
     /**
      * Template used for input (e.g. "date")
      *
-     * @var string
+     * @var string|null
      */
     protected $inputFilter;
     /**
      * It is filterable in customer grid
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isFilterableInGrid;
     /**
      * It is searchable in customer grid
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isSearchableInGrid;
     /**
      * It is used in customer grid
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isUsedInGrid;
     /**
      * It is visible in customer grid
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isVisibleInGrid;
     /**
      * Of lines of the attribute value.
      *
-     * @var int
+     * @var int|null
      */
     protected $multilineCount;
     /**
      * The note attribute for the element.
      *
-     * @var string
+     * @var string|null
      */
     protected $note;
     /**
      * Options of the attribute (key => value pairs for select)
      *
-     * @var CustomerDataOptionInterface[]
+     * @var CustomerDataOptionInterface[]|null
      */
     protected $options;
     /**
      * Attribute is required.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $required;
     /**
      * Attributes sort order.
      *
-     * @var int
+     * @var int|null
      */
     protected $sortOrder;
     /**
      * Label of the store.
      *
-     * @var string
+     * @var string|null
      */
     protected $storeLabel;
     /**
      * This is a system attribute.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $system;
     /**
      * Current attribute has been defined by a user.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $userDefined;
     /**
      * Validation rules.
      *
-     * @var CustomerDataValidationRuleInterface[]
+     * @var CustomerDataValidationRuleInterface[]|null
      */
     protected $validationRules;
     /**
      * Attribute is visible on frontend.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $visible;
     /**
      * Code of the attribute.
      *
-     * @return string
+     * @return string|null
      */
-    public function getAttributeCode(): string
+    public function getAttributeCode(): ?string
     {
         return $this->attributeCode;
     }
     /**
      * Code of the attribute.
      *
-     * @param string $attributeCode
+     * @param string|null $attributeCode
      *
      * @return self
      */
-    public function setAttributeCode(string $attributeCode): self
+    public function setAttributeCode(?string $attributeCode): self
     {
         $this->attributeCode = $attributeCode;
         return $this;
@@ -154,20 +154,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * Backend type.
      *
-     * @return string
+     * @return string|null
      */
-    public function getBackendType(): string
+    public function getBackendType(): ?string
     {
         return $this->backendType;
     }
     /**
      * Backend type.
      *
-     * @param string $backendType
+     * @param string|null $backendType
      *
      * @return self
      */
-    public function setBackendType(string $backendType): self
+    public function setBackendType(?string $backendType): self
     {
         $this->backendType = $backendType;
         return $this;
@@ -175,20 +175,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * Data model for attribute.
      *
-     * @return string
+     * @return string|null
      */
-    public function getDataModel(): string
+    public function getDataModel(): ?string
     {
         return $this->dataModel;
     }
     /**
      * Data model for attribute.
      *
-     * @param string $dataModel
+     * @param string|null $dataModel
      *
      * @return self
      */
-    public function setDataModel(string $dataModel): self
+    public function setDataModel(?string $dataModel): self
     {
         $this->dataModel = $dataModel;
         return $this;
@@ -196,20 +196,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * Class which is used to display the attribute on frontend.
      *
-     * @return string
+     * @return string|null
      */
-    public function getFrontendClass(): string
+    public function getFrontendClass(): ?string
     {
         return $this->frontendClass;
     }
     /**
      * Class which is used to display the attribute on frontend.
      *
-     * @param string $frontendClass
+     * @param string|null $frontendClass
      *
      * @return self
      */
-    public function setFrontendClass(string $frontendClass): self
+    public function setFrontendClass(?string $frontendClass): self
     {
         $this->frontendClass = $frontendClass;
         return $this;
@@ -217,20 +217,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * HTML for input element.
      *
-     * @return string
+     * @return string|null
      */
-    public function getFrontendInput(): string
+    public function getFrontendInput(): ?string
     {
         return $this->frontendInput;
     }
     /**
      * HTML for input element.
      *
-     * @param string $frontendInput
+     * @param string|null $frontendInput
      *
      * @return self
      */
-    public function setFrontendInput(string $frontendInput): self
+    public function setFrontendInput(?string $frontendInput): self
     {
         $this->frontendInput = $frontendInput;
         return $this;
@@ -238,20 +238,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * Label which supposed to be displayed on frontend.
      *
-     * @return string
+     * @return string|null
      */
-    public function getFrontendLabel(): string
+    public function getFrontendLabel(): ?string
     {
         return $this->frontendLabel;
     }
     /**
      * Label which supposed to be displayed on frontend.
      *
-     * @param string $frontendLabel
+     * @param string|null $frontendLabel
      *
      * @return self
      */
-    public function setFrontendLabel(string $frontendLabel): self
+    public function setFrontendLabel(?string $frontendLabel): self
     {
         $this->frontendLabel = $frontendLabel;
         return $this;
@@ -259,20 +259,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * Template used for input (e.g. "date")
      *
-     * @return string
+     * @return string|null
      */
-    public function getInputFilter(): string
+    public function getInputFilter(): ?string
     {
         return $this->inputFilter;
     }
     /**
      * Template used for input (e.g. "date")
      *
-     * @param string $inputFilter
+     * @param string|null $inputFilter
      *
      * @return self
      */
-    public function setInputFilter(string $inputFilter): self
+    public function setInputFilter(?string $inputFilter): self
     {
         $this->inputFilter = $inputFilter;
         return $this;
@@ -280,20 +280,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * It is filterable in customer grid
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsFilterableInGrid(): bool
+    public function getIsFilterableInGrid(): ?bool
     {
         return $this->isFilterableInGrid;
     }
     /**
      * It is filterable in customer grid
      *
-     * @param bool $isFilterableInGrid
+     * @param bool|null $isFilterableInGrid
      *
      * @return self
      */
-    public function setIsFilterableInGrid(bool $isFilterableInGrid): self
+    public function setIsFilterableInGrid(?bool $isFilterableInGrid): self
     {
         $this->isFilterableInGrid = $isFilterableInGrid;
         return $this;
@@ -301,20 +301,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * It is searchable in customer grid
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsSearchableInGrid(): bool
+    public function getIsSearchableInGrid(): ?bool
     {
         return $this->isSearchableInGrid;
     }
     /**
      * It is searchable in customer grid
      *
-     * @param bool $isSearchableInGrid
+     * @param bool|null $isSearchableInGrid
      *
      * @return self
      */
-    public function setIsSearchableInGrid(bool $isSearchableInGrid): self
+    public function setIsSearchableInGrid(?bool $isSearchableInGrid): self
     {
         $this->isSearchableInGrid = $isSearchableInGrid;
         return $this;
@@ -322,20 +322,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * It is used in customer grid
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsUsedInGrid(): bool
+    public function getIsUsedInGrid(): ?bool
     {
         return $this->isUsedInGrid;
     }
     /**
      * It is used in customer grid
      *
-     * @param bool $isUsedInGrid
+     * @param bool|null $isUsedInGrid
      *
      * @return self
      */
-    public function setIsUsedInGrid(bool $isUsedInGrid): self
+    public function setIsUsedInGrid(?bool $isUsedInGrid): self
     {
         $this->isUsedInGrid = $isUsedInGrid;
         return $this;
@@ -343,20 +343,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * It is visible in customer grid
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsVisibleInGrid(): bool
+    public function getIsVisibleInGrid(): ?bool
     {
         return $this->isVisibleInGrid;
     }
     /**
      * It is visible in customer grid
      *
-     * @param bool $isVisibleInGrid
+     * @param bool|null $isVisibleInGrid
      *
      * @return self
      */
-    public function setIsVisibleInGrid(bool $isVisibleInGrid): self
+    public function setIsVisibleInGrid(?bool $isVisibleInGrid): self
     {
         $this->isVisibleInGrid = $isVisibleInGrid;
         return $this;
@@ -364,20 +364,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * Of lines of the attribute value.
      *
-     * @return int
+     * @return int|null
      */
-    public function getMultilineCount(): int
+    public function getMultilineCount(): ?int
     {
         return $this->multilineCount;
     }
     /**
      * Of lines of the attribute value.
      *
-     * @param int $multilineCount
+     * @param int|null $multilineCount
      *
      * @return self
      */
-    public function setMultilineCount(int $multilineCount): self
+    public function setMultilineCount(?int $multilineCount): self
     {
         $this->multilineCount = $multilineCount;
         return $this;
@@ -385,20 +385,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * The note attribute for the element.
      *
-     * @return string
+     * @return string|null
      */
-    public function getNote(): string
+    public function getNote(): ?string
     {
         return $this->note;
     }
     /**
      * The note attribute for the element.
      *
-     * @param string $note
+     * @param string|null $note
      *
      * @return self
      */
-    public function setNote(string $note): self
+    public function setNote(?string $note): self
     {
         $this->note = $note;
         return $this;
@@ -406,20 +406,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * Options of the attribute (key => value pairs for select)
      *
-     * @return CustomerDataOptionInterface[]
+     * @return CustomerDataOptionInterface[]|null
      */
-    public function getOptions(): array
+    public function getOptions(): ?array
     {
         return $this->options;
     }
     /**
      * Options of the attribute (key => value pairs for select)
      *
-     * @param CustomerDataOptionInterface[] $options
+     * @param CustomerDataOptionInterface[]|null $options
      *
      * @return self
      */
-    public function setOptions(array $options): self
+    public function setOptions(?array $options): self
     {
         $this->options = $options;
         return $this;
@@ -427,20 +427,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * Attribute is required.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getRequired(): bool
+    public function getRequired(): ?bool
     {
         return $this->required;
     }
     /**
      * Attribute is required.
      *
-     * @param bool $required
+     * @param bool|null $required
      *
      * @return self
      */
-    public function setRequired(bool $required): self
+    public function setRequired(?bool $required): self
     {
         $this->required = $required;
         return $this;
@@ -448,20 +448,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * Attributes sort order.
      *
-     * @return int
+     * @return int|null
      */
-    public function getSortOrder(): int
+    public function getSortOrder(): ?int
     {
         return $this->sortOrder;
     }
     /**
      * Attributes sort order.
      *
-     * @param int $sortOrder
+     * @param int|null $sortOrder
      *
      * @return self
      */
-    public function setSortOrder(int $sortOrder): self
+    public function setSortOrder(?int $sortOrder): self
     {
         $this->sortOrder = $sortOrder;
         return $this;
@@ -469,20 +469,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * Label of the store.
      *
-     * @return string
+     * @return string|null
      */
-    public function getStoreLabel(): string
+    public function getStoreLabel(): ?string
     {
         return $this->storeLabel;
     }
     /**
      * Label of the store.
      *
-     * @param string $storeLabel
+     * @param string|null $storeLabel
      *
      * @return self
      */
-    public function setStoreLabel(string $storeLabel): self
+    public function setStoreLabel(?string $storeLabel): self
     {
         $this->storeLabel = $storeLabel;
         return $this;
@@ -490,20 +490,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * This is a system attribute.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getSystem(): bool
+    public function getSystem(): ?bool
     {
         return $this->system;
     }
     /**
      * This is a system attribute.
      *
-     * @param bool $system
+     * @param bool|null $system
      *
      * @return self
      */
-    public function setSystem(bool $system): self
+    public function setSystem(?bool $system): self
     {
         $this->system = $system;
         return $this;
@@ -511,20 +511,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * Current attribute has been defined by a user.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getUserDefined(): bool
+    public function getUserDefined(): ?bool
     {
         return $this->userDefined;
     }
     /**
      * Current attribute has been defined by a user.
      *
-     * @param bool $userDefined
+     * @param bool|null $userDefined
      *
      * @return self
      */
-    public function setUserDefined(bool $userDefined): self
+    public function setUserDefined(?bool $userDefined): self
     {
         $this->userDefined = $userDefined;
         return $this;
@@ -532,20 +532,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * Validation rules.
      *
-     * @return CustomerDataValidationRuleInterface[]
+     * @return CustomerDataValidationRuleInterface[]|null
      */
-    public function getValidationRules(): array
+    public function getValidationRules(): ?array
     {
         return $this->validationRules;
     }
     /**
      * Validation rules.
      *
-     * @param CustomerDataValidationRuleInterface[] $validationRules
+     * @param CustomerDataValidationRuleInterface[]|null $validationRules
      *
      * @return self
      */
-    public function setValidationRules(array $validationRules): self
+    public function setValidationRules(?array $validationRules): self
     {
         $this->validationRules = $validationRules;
         return $this;
@@ -553,20 +553,20 @@ class CustomerDataAttributeMetadataInterface
     /**
      * Attribute is visible on frontend.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getVisible(): bool
+    public function getVisible(): ?bool
     {
         return $this->visible;
     }
     /**
      * Attribute is visible on frontend.
      *
-     * @param bool $visible
+     * @param bool|null $visible
      *
      * @return self
      */
-    public function setVisible(bool $visible): self
+    public function setVisible(?bool $visible): self
     {
         $this->visible = $visible;
         return $this;

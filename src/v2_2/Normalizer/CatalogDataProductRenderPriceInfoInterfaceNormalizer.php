@@ -61,32 +61,50 @@ class CatalogDataProductRenderPriceInfoInterfaceNormalizer implements Denormaliz
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductRenderPriceInfoExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('final_price', $data)) {
+        if (\array_key_exists('final_price', $data) && $data['final_price'] !== null) {
             $object->setFinalPrice($data['final_price']);
+        } elseif (\array_key_exists('final_price', $data) && $data['final_price'] === null) {
+            $object->setFinalPrice(null);
         }
-        if (\array_key_exists('formatted_prices', $data)) {
+        if (\array_key_exists('formatted_prices', $data) && $data['formatted_prices'] !== null) {
             $object->setFormattedPrices($this->denormalizer->denormalize($data['formatted_prices'], 'Kiboko\\Magento\\V2_2\\Model\\CatalogDataProductRenderFormattedPriceInfoInterface', 'json', $context));
+        } elseif (\array_key_exists('formatted_prices', $data) && $data['formatted_prices'] === null) {
+            $object->setFormattedPrices(null);
         }
-        if (\array_key_exists('max_price', $data)) {
+        if (\array_key_exists('max_price', $data) && $data['max_price'] !== null) {
             $object->setMaxPrice($data['max_price']);
+        } elseif (\array_key_exists('max_price', $data) && $data['max_price'] === null) {
+            $object->setMaxPrice(null);
         }
-        if (\array_key_exists('max_regular_price', $data)) {
+        if (\array_key_exists('max_regular_price', $data) && $data['max_regular_price'] !== null) {
             $object->setMaxRegularPrice($data['max_regular_price']);
+        } elseif (\array_key_exists('max_regular_price', $data) && $data['max_regular_price'] === null) {
+            $object->setMaxRegularPrice(null);
         }
-        if (\array_key_exists('minimal_price', $data)) {
+        if (\array_key_exists('minimal_price', $data) && $data['minimal_price'] !== null) {
             $object->setMinimalPrice($data['minimal_price']);
+        } elseif (\array_key_exists('minimal_price', $data) && $data['minimal_price'] === null) {
+            $object->setMinimalPrice(null);
         }
-        if (\array_key_exists('minimal_regular_price', $data)) {
+        if (\array_key_exists('minimal_regular_price', $data) && $data['minimal_regular_price'] !== null) {
             $object->setMinimalRegularPrice($data['minimal_regular_price']);
+        } elseif (\array_key_exists('minimal_regular_price', $data) && $data['minimal_regular_price'] === null) {
+            $object->setMinimalRegularPrice(null);
         }
-        if (\array_key_exists('regular_price', $data)) {
+        if (\array_key_exists('regular_price', $data) && $data['regular_price'] !== null) {
             $object->setRegularPrice($data['regular_price']);
+        } elseif (\array_key_exists('regular_price', $data) && $data['regular_price'] === null) {
+            $object->setRegularPrice(null);
         }
-        if (\array_key_exists('special_price', $data)) {
+        if (\array_key_exists('special_price', $data) && $data['special_price'] !== null) {
             $object->setSpecialPrice($data['special_price']);
+        } elseif (\array_key_exists('special_price', $data) && $data['special_price'] === null) {
+            $object->setSpecialPrice(null);
         }
         return $object;
     }

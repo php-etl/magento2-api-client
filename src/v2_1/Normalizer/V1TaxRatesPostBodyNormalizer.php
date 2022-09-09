@@ -40,8 +40,10 @@ class V1TaxRatesPostBodyNormalizer implements DenormalizerInterface, NormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('taxRate', $data)) {
+        if (\array_key_exists('taxRate', $data) && $data['taxRate'] !== null) {
             $object->setTaxRate($this->denormalizer->denormalize($data['taxRate'], 'Kiboko\\Magento\\V2_1\\Model\\TaxDataTaxRateInterface', 'json', $context));
+        } elseif (\array_key_exists('taxRate', $data) && $data['taxRate'] === null) {
+            $object->setTaxRate(null);
         }
         return $object;
     }

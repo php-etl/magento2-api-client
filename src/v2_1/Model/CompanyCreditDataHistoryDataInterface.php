@@ -7,116 +7,116 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * Amount.
      *
-     * @var float
+     * @var float|null
      */
     protected $amount;
     /**
      * Available limit.
      *
-     * @var float
+     * @var float|null
      */
     protected $availableLimit;
     /**
      * Outstanding balance.
      *
-     * @var float
+     * @var float|null
      */
     protected $balance;
     /**
      * Comment.
      *
-     * @var string
+     * @var string|null
      */
     protected $comment;
     /**
      * Company credit id.
      *
-     * @var int
+     * @var int|null
      */
     protected $companyCreditId;
     /**
      * Credit limit.
      *
-     * @var float
+     * @var float|null
      */
     protected $creditLimit;
     /**
      * Currency code of credit.
      *
-     * @var string
+     * @var string|null
      */
     protected $currencyCredit;
     /**
      * Currency code of operation.
      *
-     * @var string
+     * @var string|null
      */
     protected $currencyOperation;
     /**
      * Operation datetime.
      *
-     * @var string
+     * @var string|null
      */
     protected $datetime;
     /**
      * ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Purchase Order number.
      *
-     * @var string
+     * @var string|null
      */
     protected $purchaseOrder;
     /**
      * Currency rate between credit and operation currencies.
      *
-     * @var float
+     * @var float|null
      */
     protected $rate;
     /**
      * Rate between credit and base currencies.
      *
-     * @var float
+     * @var float|null
      */
     protected $rateCredit;
     /**
      * Type of operation.
      *
-     * @var int
+     * @var int|null
      */
     protected $type;
     /**
      * User Id.
      *
-     * @var int
+     * @var int|null
      */
     protected $userId;
     /**
      * User type: integration, admin, customer.
      *
-     * @var int
+     * @var int|null
      */
     protected $userType;
     /**
      * Amount.
      *
-     * @return float
+     * @return float|null
      */
-    public function getAmount(): float
+    public function getAmount(): ?float
     {
         return $this->amount;
     }
     /**
      * Amount.
      *
-     * @param float $amount
+     * @param float|null $amount
      *
      * @return self
      */
-    public function setAmount(float $amount): self
+    public function setAmount(?float $amount): self
     {
         $this->amount = $amount;
         return $this;
@@ -124,20 +124,20 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * Available limit.
      *
-     * @return float
+     * @return float|null
      */
-    public function getAvailableLimit(): float
+    public function getAvailableLimit(): ?float
     {
         return $this->availableLimit;
     }
     /**
      * Available limit.
      *
-     * @param float $availableLimit
+     * @param float|null $availableLimit
      *
      * @return self
      */
-    public function setAvailableLimit(float $availableLimit): self
+    public function setAvailableLimit(?float $availableLimit): self
     {
         $this->availableLimit = $availableLimit;
         return $this;
@@ -145,20 +145,20 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * Outstanding balance.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBalance(): float
+    public function getBalance(): ?float
     {
         return $this->balance;
     }
     /**
      * Outstanding balance.
      *
-     * @param float $balance
+     * @param float|null $balance
      *
      * @return self
      */
-    public function setBalance(float $balance): self
+    public function setBalance(?float $balance): self
     {
         $this->balance = $balance;
         return $this;
@@ -166,20 +166,20 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * Comment.
      *
-     * @return string
+     * @return string|null
      */
-    public function getComment(): string
+    public function getComment(): ?string
     {
         return $this->comment;
     }
     /**
      * Comment.
      *
-     * @param string $comment
+     * @param string|null $comment
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(?string $comment): self
     {
         $this->comment = $comment;
         return $this;
@@ -187,20 +187,20 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * Company credit id.
      *
-     * @return int
+     * @return int|null
      */
-    public function getCompanyCreditId(): int
+    public function getCompanyCreditId(): ?int
     {
         return $this->companyCreditId;
     }
     /**
      * Company credit id.
      *
-     * @param int $companyCreditId
+     * @param int|null $companyCreditId
      *
      * @return self
      */
-    public function setCompanyCreditId(int $companyCreditId): self
+    public function setCompanyCreditId(?int $companyCreditId): self
     {
         $this->companyCreditId = $companyCreditId;
         return $this;
@@ -208,20 +208,20 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * Credit limit.
      *
-     * @return float
+     * @return float|null
      */
-    public function getCreditLimit(): float
+    public function getCreditLimit(): ?float
     {
         return $this->creditLimit;
     }
     /**
      * Credit limit.
      *
-     * @param float $creditLimit
+     * @param float|null $creditLimit
      *
      * @return self
      */
-    public function setCreditLimit(float $creditLimit): self
+    public function setCreditLimit(?float $creditLimit): self
     {
         $this->creditLimit = $creditLimit;
         return $this;
@@ -229,20 +229,20 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * Currency code of credit.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCurrencyCredit(): string
+    public function getCurrencyCredit(): ?string
     {
         return $this->currencyCredit;
     }
     /**
      * Currency code of credit.
      *
-     * @param string $currencyCredit
+     * @param string|null $currencyCredit
      *
      * @return self
      */
-    public function setCurrencyCredit(string $currencyCredit): self
+    public function setCurrencyCredit(?string $currencyCredit): self
     {
         $this->currencyCredit = $currencyCredit;
         return $this;
@@ -250,20 +250,20 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * Currency code of operation.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCurrencyOperation(): string
+    public function getCurrencyOperation(): ?string
     {
         return $this->currencyOperation;
     }
     /**
      * Currency code of operation.
      *
-     * @param string $currencyOperation
+     * @param string|null $currencyOperation
      *
      * @return self
      */
-    public function setCurrencyOperation(string $currencyOperation): self
+    public function setCurrencyOperation(?string $currencyOperation): self
     {
         $this->currencyOperation = $currencyOperation;
         return $this;
@@ -271,20 +271,20 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * Operation datetime.
      *
-     * @return string
+     * @return string|null
      */
-    public function getDatetime(): string
+    public function getDatetime(): ?string
     {
         return $this->datetime;
     }
     /**
      * Operation datetime.
      *
-     * @param string $datetime
+     * @param string|null $datetime
      *
      * @return self
      */
-    public function setDatetime(string $datetime): self
+    public function setDatetime(?string $datetime): self
     {
         $this->datetime = $datetime;
         return $this;
@@ -292,20 +292,20 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * ID.
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -313,20 +313,20 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * Purchase Order number.
      *
-     * @return string
+     * @return string|null
      */
-    public function getPurchaseOrder(): string
+    public function getPurchaseOrder(): ?string
     {
         return $this->purchaseOrder;
     }
     /**
      * Purchase Order number.
      *
-     * @param string $purchaseOrder
+     * @param string|null $purchaseOrder
      *
      * @return self
      */
-    public function setPurchaseOrder(string $purchaseOrder): self
+    public function setPurchaseOrder(?string $purchaseOrder): self
     {
         $this->purchaseOrder = $purchaseOrder;
         return $this;
@@ -334,20 +334,20 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * Currency rate between credit and operation currencies.
      *
-     * @return float
+     * @return float|null
      */
-    public function getRate(): float
+    public function getRate(): ?float
     {
         return $this->rate;
     }
     /**
      * Currency rate between credit and operation currencies.
      *
-     * @param float $rate
+     * @param float|null $rate
      *
      * @return self
      */
-    public function setRate(float $rate): self
+    public function setRate(?float $rate): self
     {
         $this->rate = $rate;
         return $this;
@@ -355,20 +355,20 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * Rate between credit and base currencies.
      *
-     * @return float
+     * @return float|null
      */
-    public function getRateCredit(): float
+    public function getRateCredit(): ?float
     {
         return $this->rateCredit;
     }
     /**
      * Rate between credit and base currencies.
      *
-     * @param float $rateCredit
+     * @param float|null $rateCredit
      *
      * @return self
      */
-    public function setRateCredit(float $rateCredit): self
+    public function setRateCredit(?float $rateCredit): self
     {
         $this->rateCredit = $rateCredit;
         return $this;
@@ -376,20 +376,20 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * Type of operation.
      *
-     * @return int
+     * @return int|null
      */
-    public function getType(): int
+    public function getType(): ?int
     {
         return $this->type;
     }
     /**
      * Type of operation.
      *
-     * @param int $type
+     * @param int|null $type
      *
      * @return self
      */
-    public function setType(int $type): self
+    public function setType(?int $type): self
     {
         $this->type = $type;
         return $this;
@@ -397,20 +397,20 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * User Id.
      *
-     * @return int
+     * @return int|null
      */
-    public function getUserId(): int
+    public function getUserId(): ?int
     {
         return $this->userId;
     }
     /**
      * User Id.
      *
-     * @param int $userId
+     * @param int|null $userId
      *
      * @return self
      */
-    public function setUserId(int $userId): self
+    public function setUserId(?int $userId): self
     {
         $this->userId = $userId;
         return $this;
@@ -418,20 +418,20 @@ class CompanyCreditDataHistoryDataInterface
     /**
      * User type: integration, admin, customer.
      *
-     * @return int
+     * @return int|null
      */
-    public function getUserType(): int
+    public function getUserType(): ?int
     {
         return $this->userType;
     }
     /**
      * User type: integration, admin, customer.
      *
-     * @param int $userType
+     * @param int|null $userType
      *
      * @return self
      */
-    public function setUserType(int $userType): self
+    public function setUserType(?int $userType): self
     {
         $this->userType = $userType;
         return $this;

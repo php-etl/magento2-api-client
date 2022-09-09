@@ -7,32 +7,32 @@ class CatalogDataProductWebsiteLinkInterface
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $sku;
     /**
      * Website ids
      *
-     * @var int
+     * @var int|null
      */
     protected $websiteId;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getSku(): string
+    public function getSku(): ?string
     {
         return $this->sku;
     }
     /**
      *
      *
-     * @param string $sku
+     * @param string|null $sku
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(?string $sku): self
     {
         $this->sku = $sku;
         return $this;
@@ -40,20 +40,20 @@ class CatalogDataProductWebsiteLinkInterface
     /**
      * Website ids
      *
-     * @return int
+     * @return int|null
      */
-    public function getWebsiteId(): int
+    public function getWebsiteId(): ?int
     {
         return $this->websiteId;
     }
     /**
      * Website ids
      *
-     * @param int $websiteId
+     * @param int|null $websiteId
      *
      * @return self
      */
-    public function setWebsiteId(int $websiteId): self
+    public function setWebsiteId(?int $websiteId): self
     {
         $this->websiteId = $websiteId;
         return $this;

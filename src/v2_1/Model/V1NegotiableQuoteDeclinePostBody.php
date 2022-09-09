@@ -7,32 +7,32 @@ class V1NegotiableQuoteDeclinePostBody
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $quoteId;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $reason;
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getQuoteId(): int
+    public function getQuoteId(): ?int
     {
         return $this->quoteId;
     }
     /**
      *
      *
-     * @param int $quoteId
+     * @param int|null $quoteId
      *
      * @return self
      */
-    public function setQuoteId(int $quoteId): self
+    public function setQuoteId(?int $quoteId): self
     {
         $this->quoteId = $quoteId;
         return $this;
@@ -40,20 +40,20 @@ class V1NegotiableQuoteDeclinePostBody
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getReason(): string
+    public function getReason(): ?string
     {
         return $this->reason;
     }
     /**
      *
      *
-     * @param string $reason
+     * @param string|null $reason
      *
      * @return self
      */
-    public function setReason(string $reason): self
+    public function setReason(?string $reason): self
     {
         $this->reason = $reason;
         return $this;

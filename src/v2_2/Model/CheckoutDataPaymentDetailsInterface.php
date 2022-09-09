@@ -7,19 +7,19 @@ class CheckoutDataPaymentDetailsInterface
     /**
      * ExtensionInterface class for @see \Magento\Checkout\Api\Data\PaymentDetailsInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      *
      *
-     * @var QuoteDataPaymentMethodInterface[]
+     * @var QuoteDataPaymentMethodInterface[]|null
      */
     protected $paymentMethods;
     /**
      * Interface TotalsInterface
      *
-     * @var QuoteDataTotalsInterface
+     * @var QuoteDataTotalsInterface|null
      */
     protected $totals;
     /**
@@ -46,20 +46,20 @@ class CheckoutDataPaymentDetailsInterface
     /**
      *
      *
-     * @return QuoteDataPaymentMethodInterface[]
+     * @return QuoteDataPaymentMethodInterface[]|null
      */
-    public function getPaymentMethods(): array
+    public function getPaymentMethods(): ?array
     {
         return $this->paymentMethods;
     }
     /**
      *
      *
-     * @param QuoteDataPaymentMethodInterface[] $paymentMethods
+     * @param QuoteDataPaymentMethodInterface[]|null $paymentMethods
      *
      * @return self
      */
-    public function setPaymentMethods(array $paymentMethods): self
+    public function setPaymentMethods(?array $paymentMethods): self
     {
         $this->paymentMethods = $paymentMethods;
         return $this;
@@ -67,20 +67,20 @@ class CheckoutDataPaymentDetailsInterface
     /**
      * Interface TotalsInterface
      *
-     * @return QuoteDataTotalsInterface
+     * @return QuoteDataTotalsInterface|null
      */
-    public function getTotals(): QuoteDataTotalsInterface
+    public function getTotals(): ?QuoteDataTotalsInterface
     {
         return $this->totals;
     }
     /**
      * Interface TotalsInterface
      *
-     * @param QuoteDataTotalsInterface $totals
+     * @param QuoteDataTotalsInterface|null $totals
      *
      * @return self
      */
-    public function setTotals(QuoteDataTotalsInterface $totals): self
+    public function setTotals(?QuoteDataTotalsInterface $totals): self
     {
         $this->totals = $totals;
         return $this;

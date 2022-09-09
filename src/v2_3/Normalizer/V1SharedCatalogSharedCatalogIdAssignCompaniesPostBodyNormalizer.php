@@ -40,12 +40,14 @@ class V1SharedCatalogSharedCatalogIdAssignCompaniesPostBodyNormalizer implements
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('companies', $data)) {
+        if (\array_key_exists('companies', $data) && $data['companies'] !== null) {
             $values = array();
             foreach ($data['companies'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\CompanyDataCompanyInterface', 'json', $context);
             }
             $object->setCompanies($values);
+        } elseif (\array_key_exists('companies', $data) && $data['companies'] === null) {
+            $object->setCompanies(null);
         }
         return $object;
     }

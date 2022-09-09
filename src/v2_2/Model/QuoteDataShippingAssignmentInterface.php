@@ -7,19 +7,19 @@ class QuoteDataShippingAssignmentInterface
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\ShippingAssignmentInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      *
      *
-     * @var QuoteDataCartItemInterface[]
+     * @var QuoteDataCartItemInterface[]|null
      */
     protected $items;
     /**
      * Interface ShippingInterface
      *
-     * @var QuoteDataShippingInterface
+     * @var QuoteDataShippingInterface|null
      */
     protected $shipping;
     /**
@@ -46,20 +46,20 @@ class QuoteDataShippingAssignmentInterface
     /**
      *
      *
-     * @return QuoteDataCartItemInterface[]
+     * @return QuoteDataCartItemInterface[]|null
      */
-    public function getItems(): array
+    public function getItems(): ?array
     {
         return $this->items;
     }
     /**
      *
      *
-     * @param QuoteDataCartItemInterface[] $items
+     * @param QuoteDataCartItemInterface[]|null $items
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(?array $items): self
     {
         $this->items = $items;
         return $this;
@@ -67,20 +67,20 @@ class QuoteDataShippingAssignmentInterface
     /**
      * Interface ShippingInterface
      *
-     * @return QuoteDataShippingInterface
+     * @return QuoteDataShippingInterface|null
      */
-    public function getShipping(): QuoteDataShippingInterface
+    public function getShipping(): ?QuoteDataShippingInterface
     {
         return $this->shipping;
     }
     /**
      * Interface ShippingInterface
      *
-     * @param QuoteDataShippingInterface $shipping
+     * @param QuoteDataShippingInterface|null $shipping
      *
      * @return self
      */
-    public function setShipping(QuoteDataShippingInterface $shipping): self
+    public function setShipping(?QuoteDataShippingInterface $shipping): self
     {
         $this->shipping = $shipping;
         return $this;

@@ -7,32 +7,32 @@ class FrameworkSearchAggregationValueInterface
     /**
      * Metrics
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $metrics;
     /**
      * Aggregation
      *
-     * @var string
+     * @var string|null
      */
     protected $value;
     /**
      * Metrics
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getMetrics(): array
+    public function getMetrics(): ?array
     {
         return $this->metrics;
     }
     /**
      * Metrics
      *
-     * @param string[] $metrics
+     * @param string[]|null $metrics
      *
      * @return self
      */
-    public function setMetrics(array $metrics): self
+    public function setMetrics(?array $metrics): self
     {
         $this->metrics = $metrics;
         return $this;
@@ -40,20 +40,20 @@ class FrameworkSearchAggregationValueInterface
     /**
      * Aggregation
      *
-     * @return string
+     * @return string|null
      */
-    public function getValue(): string
+    public function getValue(): ?string
     {
         return $this->value;
     }
     /**
      * Aggregation
      *
-     * @param string $value
+     * @param string|null $value
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(?string $value): self
     {
         $this->value = $value;
         return $this;

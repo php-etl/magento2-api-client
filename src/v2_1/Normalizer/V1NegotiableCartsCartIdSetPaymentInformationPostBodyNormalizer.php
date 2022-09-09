@@ -40,11 +40,15 @@ class V1NegotiableCartsCartIdSetPaymentInformationPostBodyNormalizer implements 
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('billingAddress', $data)) {
+        if (\array_key_exists('billingAddress', $data) && $data['billingAddress'] !== null) {
             $object->setBillingAddress($this->denormalizer->denormalize($data['billingAddress'], 'Kiboko\\Magento\\V2_1\\Model\\QuoteDataAddressInterface', 'json', $context));
+        } elseif (\array_key_exists('billingAddress', $data) && $data['billingAddress'] === null) {
+            $object->setBillingAddress(null);
         }
-        if (\array_key_exists('paymentMethod', $data)) {
+        if (\array_key_exists('paymentMethod', $data) && $data['paymentMethod'] !== null) {
             $object->setPaymentMethod($this->denormalizer->denormalize($data['paymentMethod'], 'Kiboko\\Magento\\V2_1\\Model\\QuoteDataPaymentInterface', 'json', $context));
+        } elseif (\array_key_exists('paymentMethod', $data) && $data['paymentMethod'] === null) {
+            $object->setPaymentMethod(null);
         }
         return $object;
     }

@@ -7,62 +7,62 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
     /**
      * Bulk uuid
      *
-     * @var string
+     * @var string|null
      */
     protected $bulkId;
     /**
      * Bulk description
      *
-     * @var string
+     * @var string|null
      */
     protected $description;
     /**
      * ExtensionInterface class for @see \Magento\AsynchronousOperations\Api\Data\BulkSummaryInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Total number of operations scheduled in scope of this bulk
      *
-     * @var int
+     * @var int|null
      */
     protected $operationCount;
     /**
      * Operations list.
      *
-     * @var AsynchronousOperationsDataDetailedOperationStatusInterface[]
+     * @var AsynchronousOperationsDataDetailedOperationStatusInterface[]|null
      */
     protected $operationsList;
     /**
      * Bulk scheduled time
      *
-     * @var string
+     * @var string|null
      */
     protected $startTime;
     /**
      * User id
      *
-     * @var int
+     * @var int|null
      */
     protected $userId;
     /**
      * Bulk uuid
      *
-     * @return string
+     * @return string|null
      */
-    public function getBulkId(): string
+    public function getBulkId(): ?string
     {
         return $this->bulkId;
     }
     /**
      * Bulk uuid
      *
-     * @param string $bulkId
+     * @param string|null $bulkId
      *
      * @return self
      */
-    public function setBulkId(string $bulkId): self
+    public function setBulkId(?string $bulkId): self
     {
         $this->bulkId = $bulkId;
         return $this;
@@ -70,20 +70,20 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
     /**
      * Bulk description
      *
-     * @return string
+     * @return string|null
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
     /**
      * Bulk description
      *
-     * @param string $description
+     * @param string|null $description
      *
      * @return self
      */
-    public function setDescription(string $description): self
+    public function setDescription(?string $description): self
     {
         $this->description = $description;
         return $this;
@@ -112,20 +112,20 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
     /**
      * Total number of operations scheduled in scope of this bulk
      *
-     * @return int
+     * @return int|null
      */
-    public function getOperationCount(): int
+    public function getOperationCount(): ?int
     {
         return $this->operationCount;
     }
     /**
      * Total number of operations scheduled in scope of this bulk
      *
-     * @param int $operationCount
+     * @param int|null $operationCount
      *
      * @return self
      */
-    public function setOperationCount(int $operationCount): self
+    public function setOperationCount(?int $operationCount): self
     {
         $this->operationCount = $operationCount;
         return $this;
@@ -133,20 +133,20 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
     /**
      * Operations list.
      *
-     * @return AsynchronousOperationsDataDetailedOperationStatusInterface[]
+     * @return AsynchronousOperationsDataDetailedOperationStatusInterface[]|null
      */
-    public function getOperationsList(): array
+    public function getOperationsList(): ?array
     {
         return $this->operationsList;
     }
     /**
      * Operations list.
      *
-     * @param AsynchronousOperationsDataDetailedOperationStatusInterface[] $operationsList
+     * @param AsynchronousOperationsDataDetailedOperationStatusInterface[]|null $operationsList
      *
      * @return self
      */
-    public function setOperationsList(array $operationsList): self
+    public function setOperationsList(?array $operationsList): self
     {
         $this->operationsList = $operationsList;
         return $this;
@@ -154,20 +154,20 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
     /**
      * Bulk scheduled time
      *
-     * @return string
+     * @return string|null
      */
-    public function getStartTime(): string
+    public function getStartTime(): ?string
     {
         return $this->startTime;
     }
     /**
      * Bulk scheduled time
      *
-     * @param string $startTime
+     * @param string|null $startTime
      *
      * @return self
      */
-    public function setStartTime(string $startTime): self
+    public function setStartTime(?string $startTime): self
     {
         $this->startTime = $startTime;
         return $this;
@@ -175,20 +175,20 @@ class AsynchronousOperationsDataDetailedBulkOperationsStatusInterface
     /**
      * User id
      *
-     * @return int
+     * @return int|null
      */
-    public function getUserId(): int
+    public function getUserId(): ?int
     {
         return $this->userId;
     }
     /**
      * User id
      *
-     * @param int $userId
+     * @param int|null $userId
      *
      * @return self
      */
-    public function setUserId(int $userId): self
+    public function setUserId(?int $userId): self
     {
         $this->userId = $userId;
         return $this;

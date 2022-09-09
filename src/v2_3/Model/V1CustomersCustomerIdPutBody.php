@@ -7,32 +7,32 @@ class V1CustomersCustomerIdPutBody
     /**
      * Customer interface.
      *
-     * @var CustomerDataCustomerInterface
+     * @var CustomerDataCustomerInterface|null
      */
     protected $customer;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $passwordHash;
     /**
      * Customer interface.
      *
-     * @return CustomerDataCustomerInterface
+     * @return CustomerDataCustomerInterface|null
      */
-    public function getCustomer(): CustomerDataCustomerInterface
+    public function getCustomer(): ?CustomerDataCustomerInterface
     {
         return $this->customer;
     }
     /**
      * Customer interface.
      *
-     * @param CustomerDataCustomerInterface $customer
+     * @param CustomerDataCustomerInterface|null $customer
      *
      * @return self
      */
-    public function setCustomer(CustomerDataCustomerInterface $customer): self
+    public function setCustomer(?CustomerDataCustomerInterface $customer): self
     {
         $this->customer = $customer;
         return $this;
@@ -40,20 +40,20 @@ class V1CustomersCustomerIdPutBody
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getPasswordHash(): string
+    public function getPasswordHash(): ?string
     {
         return $this->passwordHash;
     }
     /**
      *
      *
-     * @param string $passwordHash
+     * @param string|null $passwordHash
      *
      * @return self
      */
-    public function setPasswordHash(string $passwordHash): self
+    public function setPasswordHash(?string $passwordHash): self
     {
         $this->passwordHash = $passwordHash;
         return $this;

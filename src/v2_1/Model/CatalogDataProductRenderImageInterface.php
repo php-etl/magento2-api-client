@@ -7,68 +7,68 @@ class CatalogDataProductRenderImageInterface
     /**
      * Image code
      *
-     * @var string
+     * @var string|null
      */
     protected $code;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductRender\ImageInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Image height
      *
-     * @var float
+     * @var float|null
      */
     protected $height;
     /**
      * Image label
      *
-     * @var string
+     * @var string|null
      */
     protected $label;
     /**
      * Resize height
      *
-     * @var float
+     * @var float|null
      */
     protected $resizedHeight;
     /**
      * Resize width
      *
-     * @var float
+     * @var float|null
      */
     protected $resizedWidth;
     /**
      * Image url
      *
-     * @var string
+     * @var string|null
      */
     protected $url;
     /**
      * Image width in px
      *
-     * @var float
+     * @var float|null
      */
     protected $width;
     /**
      * Image code
      *
-     * @return string
+     * @return string|null
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
     /**
      * Image code
      *
-     * @param string $code
+     * @param string|null $code
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
         return $this;
@@ -97,20 +97,20 @@ class CatalogDataProductRenderImageInterface
     /**
      * Image height
      *
-     * @return float
+     * @return float|null
      */
-    public function getHeight(): float
+    public function getHeight(): ?float
     {
         return $this->height;
     }
     /**
      * Image height
      *
-     * @param float $height
+     * @param float|null $height
      *
      * @return self
      */
-    public function setHeight(float $height): self
+    public function setHeight(?float $height): self
     {
         $this->height = $height;
         return $this;
@@ -118,20 +118,20 @@ class CatalogDataProductRenderImageInterface
     /**
      * Image label
      *
-     * @return string
+     * @return string|null
      */
-    public function getLabel(): string
+    public function getLabel(): ?string
     {
         return $this->label;
     }
     /**
      * Image label
      *
-     * @param string $label
+     * @param string|null $label
      *
      * @return self
      */
-    public function setLabel(string $label): self
+    public function setLabel(?string $label): self
     {
         $this->label = $label;
         return $this;
@@ -139,20 +139,20 @@ class CatalogDataProductRenderImageInterface
     /**
      * Resize height
      *
-     * @return float
+     * @return float|null
      */
-    public function getResizedHeight(): float
+    public function getResizedHeight(): ?float
     {
         return $this->resizedHeight;
     }
     /**
      * Resize height
      *
-     * @param float $resizedHeight
+     * @param float|null $resizedHeight
      *
      * @return self
      */
-    public function setResizedHeight(float $resizedHeight): self
+    public function setResizedHeight(?float $resizedHeight): self
     {
         $this->resizedHeight = $resizedHeight;
         return $this;
@@ -160,20 +160,20 @@ class CatalogDataProductRenderImageInterface
     /**
      * Resize width
      *
-     * @return float
+     * @return float|null
      */
-    public function getResizedWidth(): float
+    public function getResizedWidth(): ?float
     {
         return $this->resizedWidth;
     }
     /**
      * Resize width
      *
-     * @param float $resizedWidth
+     * @param float|null $resizedWidth
      *
      * @return self
      */
-    public function setResizedWidth(float $resizedWidth): self
+    public function setResizedWidth(?float $resizedWidth): self
     {
         $this->resizedWidth = $resizedWidth;
         return $this;
@@ -181,20 +181,20 @@ class CatalogDataProductRenderImageInterface
     /**
      * Image url
      *
-     * @return string
+     * @return string|null
      */
-    public function getUrl(): string
+    public function getUrl(): ?string
     {
         return $this->url;
     }
     /**
      * Image url
      *
-     * @param string $url
+     * @param string|null $url
      *
      * @return self
      */
-    public function setUrl(string $url): self
+    public function setUrl(?string $url): self
     {
         $this->url = $url;
         return $this;
@@ -202,20 +202,20 @@ class CatalogDataProductRenderImageInterface
     /**
      * Image width in px
      *
-     * @return float
+     * @return float|null
      */
-    public function getWidth(): float
+    public function getWidth(): ?float
     {
         return $this->width;
     }
     /**
      * Image width in px
      *
-     * @param float $width
+     * @param float|null $width
      *
      * @return self
      */
-    public function setWidth(float $width): self
+    public function setWidth(?float $width): self
     {
         $this->width = $width;
         return $this;

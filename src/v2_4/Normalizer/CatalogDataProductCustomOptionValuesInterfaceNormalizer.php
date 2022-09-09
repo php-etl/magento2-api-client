@@ -43,23 +43,35 @@ class CatalogDataProductCustomOptionValuesInterfaceNormalizer implements Denorma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('option_type_id', $data)) {
+        if (\array_key_exists('option_type_id', $data) && $data['option_type_id'] !== null) {
             $object->setOptionTypeId($data['option_type_id']);
+        } elseif (\array_key_exists('option_type_id', $data) && $data['option_type_id'] === null) {
+            $object->setOptionTypeId(null);
         }
-        if (\array_key_exists('price', $data)) {
+        if (\array_key_exists('price', $data) && $data['price'] !== null) {
             $object->setPrice($data['price']);
+        } elseif (\array_key_exists('price', $data) && $data['price'] === null) {
+            $object->setPrice(null);
         }
-        if (\array_key_exists('price_type', $data)) {
+        if (\array_key_exists('price_type', $data) && $data['price_type'] !== null) {
             $object->setPriceType($data['price_type']);
+        } elseif (\array_key_exists('price_type', $data) && $data['price_type'] === null) {
+            $object->setPriceType(null);
         }
-        if (\array_key_exists('sku', $data)) {
+        if (\array_key_exists('sku', $data) && $data['sku'] !== null) {
             $object->setSku($data['sku']);
+        } elseif (\array_key_exists('sku', $data) && $data['sku'] === null) {
+            $object->setSku(null);
         }
-        if (\array_key_exists('sort_order', $data)) {
+        if (\array_key_exists('sort_order', $data) && $data['sort_order'] !== null) {
             $object->setSortOrder($data['sort_order']);
+        } elseif (\array_key_exists('sort_order', $data) && $data['sort_order'] === null) {
+            $object->setSortOrder(null);
         }
-        if (\array_key_exists('title', $data)) {
+        if (\array_key_exists('title', $data) && $data['title'] !== null) {
             $object->setTitle($data['title']);
+        } elseif (\array_key_exists('title', $data) && $data['title'] === null) {
+            $object->setTitle(null);
         }
         return $object;
     }

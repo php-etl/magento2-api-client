@@ -7,140 +7,140 @@ class QuoteDataCartInterface
     /**
      * Interface AddressInterface
      *
-     * @var QuoteDataAddressInterface
+     * @var QuoteDataAddressInterface|null
      */
     protected $billingAddress;
     /**
      * Cart conversion date and time. Otherwise, null.
      *
-     * @var string
+     * @var string|null
      */
     protected $convertedAt;
     /**
      * Cart creation date and time. Otherwise, null.
      *
-     * @var string
+     * @var string|null
      */
     protected $createdAt;
     /**
      * Interface CurrencyInterface
      *
-     * @var QuoteDataCurrencyInterface
+     * @var QuoteDataCurrencyInterface|null
      */
     protected $currency;
     /**
      * Customer interface.
      *
-     * @var CustomerDataCustomerInterface
+     * @var CustomerDataCustomerInterface|null
      */
     protected $customer;
     /**
      * For guest customers, false for logged in customers
      *
-     * @var bool
+     * @var bool|null
      */
     protected $customerIsGuest;
     /**
      * Notice text
      *
-     * @var string
+     * @var string|null
      */
     protected $customerNote;
     /**
      * Customer notification flag
      *
-     * @var bool
+     * @var bool|null
      */
     protected $customerNoteNotify;
     /**
      * Customer tax class ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $customerTaxClassId;
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\CartInterface
      *
-     * @var QuoteDataCartExtensionInterface
+     * @var QuoteDataCartExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * Cart/quote ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Active status flag value. Otherwise, null.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isActive;
     /**
      * Virtual flag value. Otherwise, null.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isVirtual;
     /**
      * Array of items. Otherwise, null.
      *
-     * @var QuoteDataCartItemInterface[]
+     * @var QuoteDataCartItemInterface[]|null
      */
     protected $items;
     /**
      * Number of different items or products in the cart. Otherwise, null.
      *
-     * @var int
+     * @var int|null
      */
     protected $itemsCount;
     /**
      * Total quantity of all cart items. Otherwise, null.
      *
-     * @var float
+     * @var float|null
      */
     protected $itemsQty;
     /**
      * Original order ID. Otherwise, null.
      *
-     * @var int
+     * @var int|null
      */
     protected $origOrderId;
     /**
      * Reserved order ID. Otherwise, null.
      *
-     * @var string
+     * @var string|null
      */
     protected $reservedOrderId;
     /**
      * Store identifier
      *
-     * @var int
+     * @var int|null
      */
     protected $storeId;
     /**
      * Cart last update date and time. Otherwise, null.
      *
-     * @var string
+     * @var string|null
      */
     protected $updatedAt;
     /**
      * Interface AddressInterface
      *
-     * @return QuoteDataAddressInterface
+     * @return QuoteDataAddressInterface|null
      */
-    public function getBillingAddress(): QuoteDataAddressInterface
+    public function getBillingAddress(): ?QuoteDataAddressInterface
     {
         return $this->billingAddress;
     }
     /**
      * Interface AddressInterface
      *
-     * @param QuoteDataAddressInterface $billingAddress
+     * @param QuoteDataAddressInterface|null $billingAddress
      *
      * @return self
      */
-    public function setBillingAddress(QuoteDataAddressInterface $billingAddress): self
+    public function setBillingAddress(?QuoteDataAddressInterface $billingAddress): self
     {
         $this->billingAddress = $billingAddress;
         return $this;
@@ -148,20 +148,20 @@ class QuoteDataCartInterface
     /**
      * Cart conversion date and time. Otherwise, null.
      *
-     * @return string
+     * @return string|null
      */
-    public function getConvertedAt(): string
+    public function getConvertedAt(): ?string
     {
         return $this->convertedAt;
     }
     /**
      * Cart conversion date and time. Otherwise, null.
      *
-     * @param string $convertedAt
+     * @param string|null $convertedAt
      *
      * @return self
      */
-    public function setConvertedAt(string $convertedAt): self
+    public function setConvertedAt(?string $convertedAt): self
     {
         $this->convertedAt = $convertedAt;
         return $this;
@@ -169,20 +169,20 @@ class QuoteDataCartInterface
     /**
      * Cart creation date and time. Otherwise, null.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt(): ?string
     {
         return $this->createdAt;
     }
     /**
      * Cart creation date and time. Otherwise, null.
      *
-     * @param string $createdAt
+     * @param string|null $createdAt
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(?string $createdAt): self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -190,20 +190,20 @@ class QuoteDataCartInterface
     /**
      * Interface CurrencyInterface
      *
-     * @return QuoteDataCurrencyInterface
+     * @return QuoteDataCurrencyInterface|null
      */
-    public function getCurrency(): QuoteDataCurrencyInterface
+    public function getCurrency(): ?QuoteDataCurrencyInterface
     {
         return $this->currency;
     }
     /**
      * Interface CurrencyInterface
      *
-     * @param QuoteDataCurrencyInterface $currency
+     * @param QuoteDataCurrencyInterface|null $currency
      *
      * @return self
      */
-    public function setCurrency(QuoteDataCurrencyInterface $currency): self
+    public function setCurrency(?QuoteDataCurrencyInterface $currency): self
     {
         $this->currency = $currency;
         return $this;
@@ -211,20 +211,20 @@ class QuoteDataCartInterface
     /**
      * Customer interface.
      *
-     * @return CustomerDataCustomerInterface
+     * @return CustomerDataCustomerInterface|null
      */
-    public function getCustomer(): CustomerDataCustomerInterface
+    public function getCustomer(): ?CustomerDataCustomerInterface
     {
         return $this->customer;
     }
     /**
      * Customer interface.
      *
-     * @param CustomerDataCustomerInterface $customer
+     * @param CustomerDataCustomerInterface|null $customer
      *
      * @return self
      */
-    public function setCustomer(CustomerDataCustomerInterface $customer): self
+    public function setCustomer(?CustomerDataCustomerInterface $customer): self
     {
         $this->customer = $customer;
         return $this;
@@ -232,20 +232,20 @@ class QuoteDataCartInterface
     /**
      * For guest customers, false for logged in customers
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getCustomerIsGuest(): bool
+    public function getCustomerIsGuest(): ?bool
     {
         return $this->customerIsGuest;
     }
     /**
      * For guest customers, false for logged in customers
      *
-     * @param bool $customerIsGuest
+     * @param bool|null $customerIsGuest
      *
      * @return self
      */
-    public function setCustomerIsGuest(bool $customerIsGuest): self
+    public function setCustomerIsGuest(?bool $customerIsGuest): self
     {
         $this->customerIsGuest = $customerIsGuest;
         return $this;
@@ -253,20 +253,20 @@ class QuoteDataCartInterface
     /**
      * Notice text
      *
-     * @return string
+     * @return string|null
      */
-    public function getCustomerNote(): string
+    public function getCustomerNote(): ?string
     {
         return $this->customerNote;
     }
     /**
      * Notice text
      *
-     * @param string $customerNote
+     * @param string|null $customerNote
      *
      * @return self
      */
-    public function setCustomerNote(string $customerNote): self
+    public function setCustomerNote(?string $customerNote): self
     {
         $this->customerNote = $customerNote;
         return $this;
@@ -274,20 +274,20 @@ class QuoteDataCartInterface
     /**
      * Customer notification flag
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getCustomerNoteNotify(): bool
+    public function getCustomerNoteNotify(): ?bool
     {
         return $this->customerNoteNotify;
     }
     /**
      * Customer notification flag
      *
-     * @param bool $customerNoteNotify
+     * @param bool|null $customerNoteNotify
      *
      * @return self
      */
-    public function setCustomerNoteNotify(bool $customerNoteNotify): self
+    public function setCustomerNoteNotify(?bool $customerNoteNotify): self
     {
         $this->customerNoteNotify = $customerNoteNotify;
         return $this;
@@ -295,20 +295,20 @@ class QuoteDataCartInterface
     /**
      * Customer tax class ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getCustomerTaxClassId(): int
+    public function getCustomerTaxClassId(): ?int
     {
         return $this->customerTaxClassId;
     }
     /**
      * Customer tax class ID.
      *
-     * @param int $customerTaxClassId
+     * @param int|null $customerTaxClassId
      *
      * @return self
      */
-    public function setCustomerTaxClassId(int $customerTaxClassId): self
+    public function setCustomerTaxClassId(?int $customerTaxClassId): self
     {
         $this->customerTaxClassId = $customerTaxClassId;
         return $this;
@@ -316,20 +316,20 @@ class QuoteDataCartInterface
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\CartInterface
      *
-     * @return QuoteDataCartExtensionInterface
+     * @return QuoteDataCartExtensionInterface|null
      */
-    public function getExtensionAttributes(): QuoteDataCartExtensionInterface
+    public function getExtensionAttributes(): ?QuoteDataCartExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\CartInterface
      *
-     * @param QuoteDataCartExtensionInterface $extensionAttributes
+     * @param QuoteDataCartExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(QuoteDataCartExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?QuoteDataCartExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -337,20 +337,20 @@ class QuoteDataCartInterface
     /**
      * Cart/quote ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * Cart/quote ID.
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -358,20 +358,20 @@ class QuoteDataCartInterface
     /**
      * Active status flag value. Otherwise, null.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsActive(): bool
+    public function getIsActive(): ?bool
     {
         return $this->isActive;
     }
     /**
      * Active status flag value. Otherwise, null.
      *
-     * @param bool $isActive
+     * @param bool|null $isActive
      *
      * @return self
      */
-    public function setIsActive(bool $isActive): self
+    public function setIsActive(?bool $isActive): self
     {
         $this->isActive = $isActive;
         return $this;
@@ -379,20 +379,20 @@ class QuoteDataCartInterface
     /**
      * Virtual flag value. Otherwise, null.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsVirtual(): bool
+    public function getIsVirtual(): ?bool
     {
         return $this->isVirtual;
     }
     /**
      * Virtual flag value. Otherwise, null.
      *
-     * @param bool $isVirtual
+     * @param bool|null $isVirtual
      *
      * @return self
      */
-    public function setIsVirtual(bool $isVirtual): self
+    public function setIsVirtual(?bool $isVirtual): self
     {
         $this->isVirtual = $isVirtual;
         return $this;
@@ -400,20 +400,20 @@ class QuoteDataCartInterface
     /**
      * Array of items. Otherwise, null.
      *
-     * @return QuoteDataCartItemInterface[]
+     * @return QuoteDataCartItemInterface[]|null
      */
-    public function getItems(): array
+    public function getItems(): ?array
     {
         return $this->items;
     }
     /**
      * Array of items. Otherwise, null.
      *
-     * @param QuoteDataCartItemInterface[] $items
+     * @param QuoteDataCartItemInterface[]|null $items
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(?array $items): self
     {
         $this->items = $items;
         return $this;
@@ -421,20 +421,20 @@ class QuoteDataCartInterface
     /**
      * Number of different items or products in the cart. Otherwise, null.
      *
-     * @return int
+     * @return int|null
      */
-    public function getItemsCount(): int
+    public function getItemsCount(): ?int
     {
         return $this->itemsCount;
     }
     /**
      * Number of different items or products in the cart. Otherwise, null.
      *
-     * @param int $itemsCount
+     * @param int|null $itemsCount
      *
      * @return self
      */
-    public function setItemsCount(int $itemsCount): self
+    public function setItemsCount(?int $itemsCount): self
     {
         $this->itemsCount = $itemsCount;
         return $this;
@@ -442,20 +442,20 @@ class QuoteDataCartInterface
     /**
      * Total quantity of all cart items. Otherwise, null.
      *
-     * @return float
+     * @return float|null
      */
-    public function getItemsQty(): float
+    public function getItemsQty(): ?float
     {
         return $this->itemsQty;
     }
     /**
      * Total quantity of all cart items. Otherwise, null.
      *
-     * @param float $itemsQty
+     * @param float|null $itemsQty
      *
      * @return self
      */
-    public function setItemsQty(float $itemsQty): self
+    public function setItemsQty(?float $itemsQty): self
     {
         $this->itemsQty = $itemsQty;
         return $this;
@@ -463,20 +463,20 @@ class QuoteDataCartInterface
     /**
      * Original order ID. Otherwise, null.
      *
-     * @return int
+     * @return int|null
      */
-    public function getOrigOrderId(): int
+    public function getOrigOrderId(): ?int
     {
         return $this->origOrderId;
     }
     /**
      * Original order ID. Otherwise, null.
      *
-     * @param int $origOrderId
+     * @param int|null $origOrderId
      *
      * @return self
      */
-    public function setOrigOrderId(int $origOrderId): self
+    public function setOrigOrderId(?int $origOrderId): self
     {
         $this->origOrderId = $origOrderId;
         return $this;
@@ -484,20 +484,20 @@ class QuoteDataCartInterface
     /**
      * Reserved order ID. Otherwise, null.
      *
-     * @return string
+     * @return string|null
      */
-    public function getReservedOrderId(): string
+    public function getReservedOrderId(): ?string
     {
         return $this->reservedOrderId;
     }
     /**
      * Reserved order ID. Otherwise, null.
      *
-     * @param string $reservedOrderId
+     * @param string|null $reservedOrderId
      *
      * @return self
      */
-    public function setReservedOrderId(string $reservedOrderId): self
+    public function setReservedOrderId(?string $reservedOrderId): self
     {
         $this->reservedOrderId = $reservedOrderId;
         return $this;
@@ -505,20 +505,20 @@ class QuoteDataCartInterface
     /**
      * Store identifier
      *
-     * @return int
+     * @return int|null
      */
-    public function getStoreId(): int
+    public function getStoreId(): ?int
     {
         return $this->storeId;
     }
     /**
      * Store identifier
      *
-     * @param int $storeId
+     * @param int|null $storeId
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(?int $storeId): self
     {
         $this->storeId = $storeId;
         return $this;
@@ -526,20 +526,20 @@ class QuoteDataCartInterface
     /**
      * Cart last update date and time. Otherwise, null.
      *
-     * @return string
+     * @return string|null
      */
-    public function getUpdatedAt(): string
+    public function getUpdatedAt(): ?string
     {
         return $this->updatedAt;
     }
     /**
      * Cart last update date and time. Otherwise, null.
      *
-     * @param string $updatedAt
+     * @param string|null $updatedAt
      *
      * @return self
      */
-    public function setUpdatedAt(string $updatedAt): self
+    public function setUpdatedAt(?string $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
         return $this;

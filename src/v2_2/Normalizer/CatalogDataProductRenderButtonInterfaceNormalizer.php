@@ -40,17 +40,25 @@ class CatalogDataProductRenderButtonInterfaceNormalizer implements DenormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('post_data', $data)) {
+        if (\array_key_exists('post_data', $data) && $data['post_data'] !== null) {
             $object->setPostData($data['post_data']);
+        } elseif (\array_key_exists('post_data', $data) && $data['post_data'] === null) {
+            $object->setPostData(null);
         }
-        if (\array_key_exists('required_options', $data)) {
+        if (\array_key_exists('required_options', $data) && $data['required_options'] !== null) {
             $object->setRequiredOptions($data['required_options']);
+        } elseif (\array_key_exists('required_options', $data) && $data['required_options'] === null) {
+            $object->setRequiredOptions(null);
         }
-        if (\array_key_exists('url', $data)) {
+        if (\array_key_exists('url', $data) && $data['url'] !== null) {
             $object->setUrl($data['url']);
+        } elseif (\array_key_exists('url', $data) && $data['url'] === null) {
+            $object->setUrl(null);
         }
         return $object;
     }

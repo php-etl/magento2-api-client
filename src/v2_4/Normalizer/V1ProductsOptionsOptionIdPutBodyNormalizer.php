@@ -40,8 +40,10 @@ class V1ProductsOptionsOptionIdPutBodyNormalizer implements DenormalizerInterfac
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('option', $data)) {
+        if (\array_key_exists('option', $data) && $data['option'] !== null) {
             $object->setOption($this->denormalizer->denormalize($data['option'], 'Kiboko\\Magento\\V2_4\\Model\\CatalogDataProductCustomOptionInterface', 'json', $context));
+        } elseif (\array_key_exists('option', $data) && $data['option'] === null) {
+            $object->setOption(null);
         }
         return $object;
     }

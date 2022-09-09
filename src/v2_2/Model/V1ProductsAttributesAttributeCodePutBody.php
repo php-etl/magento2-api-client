@@ -7,26 +7,26 @@ class V1ProductsAttributesAttributeCodePutBody
     /**
      *
      *
-     * @var CatalogDataProductAttributeInterface
+     * @var CatalogDataProductAttributeInterface|null
      */
     protected $attribute;
     /**
      *
      *
-     * @return CatalogDataProductAttributeInterface
+     * @return CatalogDataProductAttributeInterface|null
      */
-    public function getAttribute(): CatalogDataProductAttributeInterface
+    public function getAttribute(): ?CatalogDataProductAttributeInterface
     {
         return $this->attribute;
     }
     /**
      *
      *
-     * @param CatalogDataProductAttributeInterface $attribute
+     * @param CatalogDataProductAttributeInterface|null $attribute
      *
      * @return self
      */
-    public function setAttribute(CatalogDataProductAttributeInterface $attribute): self
+    public function setAttribute(?CatalogDataProductAttributeInterface $attribute): self
     {
         $this->attribute = $attribute;
         return $this;

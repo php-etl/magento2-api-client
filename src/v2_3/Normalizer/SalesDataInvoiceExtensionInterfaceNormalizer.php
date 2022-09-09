@@ -52,62 +52,100 @@ class SalesDataInvoiceExtensionInterfaceNormalizer implements DenormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('base_customer_balance_amount', $data)) {
+        if (\array_key_exists('base_customer_balance_amount', $data) && $data['base_customer_balance_amount'] !== null) {
             $object->setBaseCustomerBalanceAmount($data['base_customer_balance_amount']);
+        } elseif (\array_key_exists('base_customer_balance_amount', $data) && $data['base_customer_balance_amount'] === null) {
+            $object->setBaseCustomerBalanceAmount(null);
         }
-        if (\array_key_exists('base_gift_cards_amount', $data)) {
+        if (\array_key_exists('base_gift_cards_amount', $data) && $data['base_gift_cards_amount'] !== null) {
             $object->setBaseGiftCardsAmount($data['base_gift_cards_amount']);
+        } elseif (\array_key_exists('base_gift_cards_amount', $data) && $data['base_gift_cards_amount'] === null) {
+            $object->setBaseGiftCardsAmount(null);
         }
-        if (\array_key_exists('customer_balance_amount', $data)) {
+        if (\array_key_exists('customer_balance_amount', $data) && $data['customer_balance_amount'] !== null) {
             $object->setCustomerBalanceAmount($data['customer_balance_amount']);
+        } elseif (\array_key_exists('customer_balance_amount', $data) && $data['customer_balance_amount'] === null) {
+            $object->setCustomerBalanceAmount(null);
         }
-        if (\array_key_exists('gift_cards_amount', $data)) {
+        if (\array_key_exists('gift_cards_amount', $data) && $data['gift_cards_amount'] !== null) {
             $object->setGiftCardsAmount($data['gift_cards_amount']);
+        } elseif (\array_key_exists('gift_cards_amount', $data) && $data['gift_cards_amount'] === null) {
+            $object->setGiftCardsAmount(null);
         }
-        if (\array_key_exists('gw_base_price', $data)) {
+        if (\array_key_exists('gw_base_price', $data) && $data['gw_base_price'] !== null) {
             $object->setGwBasePrice($data['gw_base_price']);
+        } elseif (\array_key_exists('gw_base_price', $data) && $data['gw_base_price'] === null) {
+            $object->setGwBasePrice(null);
         }
-        if (\array_key_exists('gw_base_tax_amount', $data)) {
+        if (\array_key_exists('gw_base_tax_amount', $data) && $data['gw_base_tax_amount'] !== null) {
             $object->setGwBaseTaxAmount($data['gw_base_tax_amount']);
+        } elseif (\array_key_exists('gw_base_tax_amount', $data) && $data['gw_base_tax_amount'] === null) {
+            $object->setGwBaseTaxAmount(null);
         }
-        if (\array_key_exists('gw_card_base_price', $data)) {
+        if (\array_key_exists('gw_card_base_price', $data) && $data['gw_card_base_price'] !== null) {
             $object->setGwCardBasePrice($data['gw_card_base_price']);
+        } elseif (\array_key_exists('gw_card_base_price', $data) && $data['gw_card_base_price'] === null) {
+            $object->setGwCardBasePrice(null);
         }
-        if (\array_key_exists('gw_card_base_tax_amount', $data)) {
+        if (\array_key_exists('gw_card_base_tax_amount', $data) && $data['gw_card_base_tax_amount'] !== null) {
             $object->setGwCardBaseTaxAmount($data['gw_card_base_tax_amount']);
+        } elseif (\array_key_exists('gw_card_base_tax_amount', $data) && $data['gw_card_base_tax_amount'] === null) {
+            $object->setGwCardBaseTaxAmount(null);
         }
-        if (\array_key_exists('gw_card_price', $data)) {
+        if (\array_key_exists('gw_card_price', $data) && $data['gw_card_price'] !== null) {
             $object->setGwCardPrice($data['gw_card_price']);
+        } elseif (\array_key_exists('gw_card_price', $data) && $data['gw_card_price'] === null) {
+            $object->setGwCardPrice(null);
         }
-        if (\array_key_exists('gw_card_tax_amount', $data)) {
+        if (\array_key_exists('gw_card_tax_amount', $data) && $data['gw_card_tax_amount'] !== null) {
             $object->setGwCardTaxAmount($data['gw_card_tax_amount']);
+        } elseif (\array_key_exists('gw_card_tax_amount', $data) && $data['gw_card_tax_amount'] === null) {
+            $object->setGwCardTaxAmount(null);
         }
-        if (\array_key_exists('gw_items_base_price', $data)) {
+        if (\array_key_exists('gw_items_base_price', $data) && $data['gw_items_base_price'] !== null) {
             $object->setGwItemsBasePrice($data['gw_items_base_price']);
+        } elseif (\array_key_exists('gw_items_base_price', $data) && $data['gw_items_base_price'] === null) {
+            $object->setGwItemsBasePrice(null);
         }
-        if (\array_key_exists('gw_items_base_tax_amount', $data)) {
+        if (\array_key_exists('gw_items_base_tax_amount', $data) && $data['gw_items_base_tax_amount'] !== null) {
             $object->setGwItemsBaseTaxAmount($data['gw_items_base_tax_amount']);
+        } elseif (\array_key_exists('gw_items_base_tax_amount', $data) && $data['gw_items_base_tax_amount'] === null) {
+            $object->setGwItemsBaseTaxAmount(null);
         }
-        if (\array_key_exists('gw_items_price', $data)) {
+        if (\array_key_exists('gw_items_price', $data) && $data['gw_items_price'] !== null) {
             $object->setGwItemsPrice($data['gw_items_price']);
+        } elseif (\array_key_exists('gw_items_price', $data) && $data['gw_items_price'] === null) {
+            $object->setGwItemsPrice(null);
         }
-        if (\array_key_exists('gw_items_tax_amount', $data)) {
+        if (\array_key_exists('gw_items_tax_amount', $data) && $data['gw_items_tax_amount'] !== null) {
             $object->setGwItemsTaxAmount($data['gw_items_tax_amount']);
+        } elseif (\array_key_exists('gw_items_tax_amount', $data) && $data['gw_items_tax_amount'] === null) {
+            $object->setGwItemsTaxAmount(null);
         }
-        if (\array_key_exists('gw_price', $data)) {
+        if (\array_key_exists('gw_price', $data) && $data['gw_price'] !== null) {
             $object->setGwPrice($data['gw_price']);
+        } elseif (\array_key_exists('gw_price', $data) && $data['gw_price'] === null) {
+            $object->setGwPrice(null);
         }
-        if (\array_key_exists('gw_tax_amount', $data)) {
+        if (\array_key_exists('gw_tax_amount', $data) && $data['gw_tax_amount'] !== null) {
             $object->setGwTaxAmount($data['gw_tax_amount']);
+        } elseif (\array_key_exists('gw_tax_amount', $data) && $data['gw_tax_amount'] === null) {
+            $object->setGwTaxAmount(null);
         }
-        if (\array_key_exists('vertex_tax_calculation_billing_address', $data)) {
+        if (\array_key_exists('vertex_tax_calculation_billing_address', $data) && $data['vertex_tax_calculation_billing_address'] !== null) {
             $object->setVertexTaxCalculationBillingAddress($this->denormalizer->denormalize($data['vertex_tax_calculation_billing_address'], 'Kiboko\\Magento\\V2_3\\Model\\SalesDataOrderAddressInterface', 'json', $context));
+        } elseif (\array_key_exists('vertex_tax_calculation_billing_address', $data) && $data['vertex_tax_calculation_billing_address'] === null) {
+            $object->setVertexTaxCalculationBillingAddress(null);
         }
-        if (\array_key_exists('vertex_tax_calculation_order', $data)) {
+        if (\array_key_exists('vertex_tax_calculation_order', $data) && $data['vertex_tax_calculation_order'] !== null) {
             $object->setVertexTaxCalculationOrder($this->denormalizer->denormalize($data['vertex_tax_calculation_order'], 'Kiboko\\Magento\\V2_3\\Model\\SalesDataOrderInterface', 'json', $context));
+        } elseif (\array_key_exists('vertex_tax_calculation_order', $data) && $data['vertex_tax_calculation_order'] === null) {
+            $object->setVertexTaxCalculationOrder(null);
         }
-        if (\array_key_exists('vertex_tax_calculation_shipping_address', $data)) {
+        if (\array_key_exists('vertex_tax_calculation_shipping_address', $data) && $data['vertex_tax_calculation_shipping_address'] !== null) {
             $object->setVertexTaxCalculationShippingAddress($this->denormalizer->denormalize($data['vertex_tax_calculation_shipping_address'], 'Kiboko\\Magento\\V2_3\\Model\\SalesDataOrderAddressInterface', 'json', $context));
+        } elseif (\array_key_exists('vertex_tax_calculation_shipping_address', $data) && $data['vertex_tax_calculation_shipping_address'] === null) {
+            $object->setVertexTaxCalculationShippingAddress(null);
         }
         return $object;
     }

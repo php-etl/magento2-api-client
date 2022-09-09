@@ -7,26 +7,26 @@ class V1NegotiableCartsCartIdEstimateShippingMethodsPostBody
     /**
      * Interface AddressInterface
      *
-     * @var QuoteDataAddressInterface
+     * @var QuoteDataAddressInterface|null
      */
     protected $address;
     /**
      * Interface AddressInterface
      *
-     * @return QuoteDataAddressInterface
+     * @return QuoteDataAddressInterface|null
      */
-    public function getAddress(): QuoteDataAddressInterface
+    public function getAddress(): ?QuoteDataAddressInterface
     {
         return $this->address;
     }
     /**
      * Interface AddressInterface
      *
-     * @param QuoteDataAddressInterface $address
+     * @param QuoteDataAddressInterface|null $address
      *
      * @return self
      */
-    public function setAddress(QuoteDataAddressInterface $address): self
+    public function setAddress(?QuoteDataAddressInterface $address): self
     {
         $this->address = $address;
         return $this;

@@ -7,38 +7,38 @@ class FrameworkDataImageContentInterface
     /**
      * Media data (base64 encoded content)
      *
-     * @var string
+     * @var string|null
      */
     protected $base64EncodedData;
     /**
      * Image name
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * MIME type
      *
-     * @var string
+     * @var string|null
      */
     protected $type;
     /**
      * Media data (base64 encoded content)
      *
-     * @return string
+     * @return string|null
      */
-    public function getBase64EncodedData(): string
+    public function getBase64EncodedData(): ?string
     {
         return $this->base64EncodedData;
     }
     /**
      * Media data (base64 encoded content)
      *
-     * @param string $base64EncodedData
+     * @param string|null $base64EncodedData
      *
      * @return self
      */
-    public function setBase64EncodedData(string $base64EncodedData): self
+    public function setBase64EncodedData(?string $base64EncodedData): self
     {
         $this->base64EncodedData = $base64EncodedData;
         return $this;
@@ -46,20 +46,20 @@ class FrameworkDataImageContentInterface
     /**
      * Image name
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      * Image name
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;
@@ -67,20 +67,20 @@ class FrameworkDataImageContentInterface
     /**
      * MIME type
      *
-     * @return string
+     * @return string|null
      */
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
     /**
      * MIME type
      *
-     * @param string $type
+     * @param string|null $type
      *
      * @return self
      */
-    public function setType(string $type): self
+    public function setType(?string $type): self
     {
         $this->type = $type;
         return $this;

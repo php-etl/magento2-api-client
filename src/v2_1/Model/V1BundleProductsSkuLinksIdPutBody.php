@@ -7,26 +7,26 @@ class V1BundleProductsSkuLinksIdPutBody
     /**
      * Interface LinkInterface
      *
-     * @var BundleDataLinkInterface
+     * @var BundleDataLinkInterface|null
      */
     protected $linkedProduct;
     /**
      * Interface LinkInterface
      *
-     * @return BundleDataLinkInterface
+     * @return BundleDataLinkInterface|null
      */
-    public function getLinkedProduct(): BundleDataLinkInterface
+    public function getLinkedProduct(): ?BundleDataLinkInterface
     {
         return $this->linkedProduct;
     }
     /**
      * Interface LinkInterface
      *
-     * @param BundleDataLinkInterface $linkedProduct
+     * @param BundleDataLinkInterface|null $linkedProduct
      *
      * @return self
      */
-    public function setLinkedProduct(BundleDataLinkInterface $linkedProduct): self
+    public function setLinkedProduct(?BundleDataLinkInterface $linkedProduct): self
     {
         $this->linkedProduct = $linkedProduct;
         return $this;

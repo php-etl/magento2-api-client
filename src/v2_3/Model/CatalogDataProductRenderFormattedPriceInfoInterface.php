@@ -7,49 +7,49 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductRender\FormattedPriceInfoInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Html with final price
      *
-     * @var string
+     * @var string|null
      */
     protected $finalPrice;
     /**
      * Max price of a product
      *
-     * @var string
+     * @var string|null
      */
     protected $maxPrice;
     /**
      * Max regular price
      *
-     * @var string
+     * @var string|null
      */
     protected $maxRegularPrice;
     /**
      * The minimal price of the product or variation
      *
-     * @var string
+     * @var string|null
      */
     protected $minimalPrice;
     /**
      * Minimal regular price
      *
-     * @var string
+     * @var string|null
      */
     protected $minimalRegularPrice;
     /**
      * Price - is price of product without discounts and special price with taxes and fixed product tax
      *
-     * @var string
+     * @var string|null
      */
     protected $regularPrice;
     /**
      * Special price
      *
-     * @var string
+     * @var string|null
      */
     protected $specialPrice;
     /**
@@ -76,20 +76,20 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
     /**
      * Html with final price
      *
-     * @return string
+     * @return string|null
      */
-    public function getFinalPrice(): string
+    public function getFinalPrice(): ?string
     {
         return $this->finalPrice;
     }
     /**
      * Html with final price
      *
-     * @param string $finalPrice
+     * @param string|null $finalPrice
      *
      * @return self
      */
-    public function setFinalPrice(string $finalPrice): self
+    public function setFinalPrice(?string $finalPrice): self
     {
         $this->finalPrice = $finalPrice;
         return $this;
@@ -97,20 +97,20 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
     /**
      * Max price of a product
      *
-     * @return string
+     * @return string|null
      */
-    public function getMaxPrice(): string
+    public function getMaxPrice(): ?string
     {
         return $this->maxPrice;
     }
     /**
      * Max price of a product
      *
-     * @param string $maxPrice
+     * @param string|null $maxPrice
      *
      * @return self
      */
-    public function setMaxPrice(string $maxPrice): self
+    public function setMaxPrice(?string $maxPrice): self
     {
         $this->maxPrice = $maxPrice;
         return $this;
@@ -118,20 +118,20 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
     /**
      * Max regular price
      *
-     * @return string
+     * @return string|null
      */
-    public function getMaxRegularPrice(): string
+    public function getMaxRegularPrice(): ?string
     {
         return $this->maxRegularPrice;
     }
     /**
      * Max regular price
      *
-     * @param string $maxRegularPrice
+     * @param string|null $maxRegularPrice
      *
      * @return self
      */
-    public function setMaxRegularPrice(string $maxRegularPrice): self
+    public function setMaxRegularPrice(?string $maxRegularPrice): self
     {
         $this->maxRegularPrice = $maxRegularPrice;
         return $this;
@@ -139,20 +139,20 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
     /**
      * The minimal price of the product or variation
      *
-     * @return string
+     * @return string|null
      */
-    public function getMinimalPrice(): string
+    public function getMinimalPrice(): ?string
     {
         return $this->minimalPrice;
     }
     /**
      * The minimal price of the product or variation
      *
-     * @param string $minimalPrice
+     * @param string|null $minimalPrice
      *
      * @return self
      */
-    public function setMinimalPrice(string $minimalPrice): self
+    public function setMinimalPrice(?string $minimalPrice): self
     {
         $this->minimalPrice = $minimalPrice;
         return $this;
@@ -160,20 +160,20 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
     /**
      * Minimal regular price
      *
-     * @return string
+     * @return string|null
      */
-    public function getMinimalRegularPrice(): string
+    public function getMinimalRegularPrice(): ?string
     {
         return $this->minimalRegularPrice;
     }
     /**
      * Minimal regular price
      *
-     * @param string $minimalRegularPrice
+     * @param string|null $minimalRegularPrice
      *
      * @return self
      */
-    public function setMinimalRegularPrice(string $minimalRegularPrice): self
+    public function setMinimalRegularPrice(?string $minimalRegularPrice): self
     {
         $this->minimalRegularPrice = $minimalRegularPrice;
         return $this;
@@ -181,20 +181,20 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
     /**
      * Price - is price of product without discounts and special price with taxes and fixed product tax
      *
-     * @return string
+     * @return string|null
      */
-    public function getRegularPrice(): string
+    public function getRegularPrice(): ?string
     {
         return $this->regularPrice;
     }
     /**
      * Price - is price of product without discounts and special price with taxes and fixed product tax
      *
-     * @param string $regularPrice
+     * @param string|null $regularPrice
      *
      * @return self
      */
-    public function setRegularPrice(string $regularPrice): self
+    public function setRegularPrice(?string $regularPrice): self
     {
         $this->regularPrice = $regularPrice;
         return $this;
@@ -202,20 +202,20 @@ class CatalogDataProductRenderFormattedPriceInfoInterface
     /**
      * Special price
      *
-     * @return string
+     * @return string|null
      */
-    public function getSpecialPrice(): string
+    public function getSpecialPrice(): ?string
     {
         return $this->specialPrice;
     }
     /**
      * Special price
      *
-     * @param string $specialPrice
+     * @param string|null $specialPrice
      *
      * @return self
      */
-    public function setSpecialPrice(string $specialPrice): self
+    public function setSpecialPrice(?string $specialPrice): self
     {
         $this->specialPrice = $specialPrice;
         return $this;

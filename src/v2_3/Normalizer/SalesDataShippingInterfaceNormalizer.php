@@ -40,17 +40,25 @@ class SalesDataShippingInterfaceNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('address', $data)) {
+        if (\array_key_exists('address', $data) && $data['address'] !== null) {
             $object->setAddress($this->denormalizer->denormalize($data['address'], 'Kiboko\\Magento\\V2_3\\Model\\SalesDataOrderAddressInterface', 'json', $context));
+        } elseif (\array_key_exists('address', $data) && $data['address'] === null) {
+            $object->setAddress(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_3\\Model\\SalesDataShippingExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('method', $data)) {
+        if (\array_key_exists('method', $data) && $data['method'] !== null) {
             $object->setMethod($data['method']);
+        } elseif (\array_key_exists('method', $data) && $data['method'] === null) {
+            $object->setMethod(null);
         }
-        if (\array_key_exists('total', $data)) {
+        if (\array_key_exists('total', $data) && $data['total'] !== null) {
             $object->setTotal($this->denormalizer->denormalize($data['total'], 'Kiboko\\Magento\\V2_3\\Model\\SalesDataTotalInterface', 'json', $context));
+        } elseif (\array_key_exists('total', $data) && $data['total'] === null) {
+            $object->setTotal(null);
         }
         return $object;
     }

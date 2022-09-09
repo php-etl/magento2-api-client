@@ -40,11 +40,15 @@ class ConfigurableProductDataOptionValueInterfaceNormalizer implements Denormali
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('value_index', $data)) {
+        if (\array_key_exists('value_index', $data) && $data['value_index'] !== null) {
             $object->setValueIndex($data['value_index']);
+        } elseif (\array_key_exists('value_index', $data) && $data['value_index'] === null) {
+            $object->setValueIndex(null);
         }
         return $object;
     }

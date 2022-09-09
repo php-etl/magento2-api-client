@@ -40,14 +40,20 @@ class SalesDataInvoiceCommentCreationInterfaceNormalizer implements Denormalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('comment', $data)) {
+        if (\array_key_exists('comment', $data) && $data['comment'] !== null) {
             $object->setComment($data['comment']);
+        } elseif (\array_key_exists('comment', $data) && $data['comment'] === null) {
+            $object->setComment(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('is_visible_on_front', $data)) {
+        if (\array_key_exists('is_visible_on_front', $data) && $data['is_visible_on_front'] !== null) {
             $object->setIsVisibleOnFront($data['is_visible_on_front']);
+        } elseif (\array_key_exists('is_visible_on_front', $data) && $data['is_visible_on_front'] === null) {
+            $object->setIsVisibleOnFront(null);
         }
         return $object;
     }

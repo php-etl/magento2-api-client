@@ -58,74 +58,120 @@ class NegotiableQuoteDataNegotiableQuoteInterfaceNormalizer implements Denormali
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('applied_rule_ids', $data)) {
+        if (\array_key_exists('applied_rule_ids', $data) && $data['applied_rule_ids'] !== null) {
             $object->setAppliedRuleIds($data['applied_rule_ids']);
+        } elseif (\array_key_exists('applied_rule_ids', $data) && $data['applied_rule_ids'] === null) {
+            $object->setAppliedRuleIds(null);
         }
-        if (\array_key_exists('base_negotiated_total_price', $data)) {
+        if (\array_key_exists('base_negotiated_total_price', $data) && $data['base_negotiated_total_price'] !== null) {
             $object->setBaseNegotiatedTotalPrice($data['base_negotiated_total_price']);
+        } elseif (\array_key_exists('base_negotiated_total_price', $data) && $data['base_negotiated_total_price'] === null) {
+            $object->setBaseNegotiatedTotalPrice(null);
         }
-        if (\array_key_exists('base_original_total_price', $data)) {
+        if (\array_key_exists('base_original_total_price', $data) && $data['base_original_total_price'] !== null) {
             $object->setBaseOriginalTotalPrice($data['base_original_total_price']);
+        } elseif (\array_key_exists('base_original_total_price', $data) && $data['base_original_total_price'] === null) {
+            $object->setBaseOriginalTotalPrice(null);
         }
-        if (\array_key_exists('creator_id', $data)) {
+        if (\array_key_exists('creator_id', $data) && $data['creator_id'] !== null) {
             $object->setCreatorId($data['creator_id']);
+        } elseif (\array_key_exists('creator_id', $data) && $data['creator_id'] === null) {
+            $object->setCreatorId(null);
         }
-        if (\array_key_exists('creator_type', $data)) {
+        if (\array_key_exists('creator_type', $data) && $data['creator_type'] !== null) {
             $object->setCreatorType($data['creator_type']);
+        } elseif (\array_key_exists('creator_type', $data) && $data['creator_type'] === null) {
+            $object->setCreatorType(null);
         }
-        if (\array_key_exists('deleted_sku', $data)) {
+        if (\array_key_exists('deleted_sku', $data) && $data['deleted_sku'] !== null) {
             $object->setDeletedSku($data['deleted_sku']);
+        } elseif (\array_key_exists('deleted_sku', $data) && $data['deleted_sku'] === null) {
+            $object->setDeletedSku(null);
         }
-        if (\array_key_exists('email_notification_status', $data)) {
+        if (\array_key_exists('email_notification_status', $data) && $data['email_notification_status'] !== null) {
             $object->setEmailNotificationStatus($data['email_notification_status']);
+        } elseif (\array_key_exists('email_notification_status', $data) && $data['email_notification_status'] === null) {
+            $object->setEmailNotificationStatus(null);
         }
-        if (\array_key_exists('expiration_period', $data)) {
+        if (\array_key_exists('expiration_period', $data) && $data['expiration_period'] !== null) {
             $object->setExpirationPeriod($data['expiration_period']);
+        } elseif (\array_key_exists('expiration_period', $data) && $data['expiration_period'] === null) {
+            $object->setExpirationPeriod(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('has_unconfirmed_changes', $data)) {
+        if (\array_key_exists('has_unconfirmed_changes', $data) && $data['has_unconfirmed_changes'] !== null) {
             $object->setHasUnconfirmedChanges($data['has_unconfirmed_changes']);
+        } elseif (\array_key_exists('has_unconfirmed_changes', $data) && $data['has_unconfirmed_changes'] === null) {
+            $object->setHasUnconfirmedChanges(null);
         }
-        if (\array_key_exists('is_address_draft', $data)) {
+        if (\array_key_exists('is_address_draft', $data) && $data['is_address_draft'] !== null) {
             $object->setIsAddressDraft($data['is_address_draft']);
+        } elseif (\array_key_exists('is_address_draft', $data) && $data['is_address_draft'] === null) {
+            $object->setIsAddressDraft(null);
         }
-        if (\array_key_exists('is_customer_price_changed', $data)) {
+        if (\array_key_exists('is_customer_price_changed', $data) && $data['is_customer_price_changed'] !== null) {
             $object->setIsCustomerPriceChanged($data['is_customer_price_changed']);
+        } elseif (\array_key_exists('is_customer_price_changed', $data) && $data['is_customer_price_changed'] === null) {
+            $object->setIsCustomerPriceChanged(null);
         }
-        if (\array_key_exists('is_regular_quote', $data)) {
+        if (\array_key_exists('is_regular_quote', $data) && $data['is_regular_quote'] !== null) {
             $object->setIsRegularQuote($data['is_regular_quote']);
+        } elseif (\array_key_exists('is_regular_quote', $data) && $data['is_regular_quote'] === null) {
+            $object->setIsRegularQuote(null);
         }
-        if (\array_key_exists('is_shipping_tax_changed', $data)) {
+        if (\array_key_exists('is_shipping_tax_changed', $data) && $data['is_shipping_tax_changed'] !== null) {
             $object->setIsShippingTaxChanged($data['is_shipping_tax_changed']);
+        } elseif (\array_key_exists('is_shipping_tax_changed', $data) && $data['is_shipping_tax_changed'] === null) {
+            $object->setIsShippingTaxChanged(null);
         }
-        if (\array_key_exists('negotiated_price_type', $data)) {
+        if (\array_key_exists('negotiated_price_type', $data) && $data['negotiated_price_type'] !== null) {
             $object->setNegotiatedPriceType($data['negotiated_price_type']);
+        } elseif (\array_key_exists('negotiated_price_type', $data) && $data['negotiated_price_type'] === null) {
+            $object->setNegotiatedPriceType(null);
         }
-        if (\array_key_exists('negotiated_price_value', $data)) {
+        if (\array_key_exists('negotiated_price_value', $data) && $data['negotiated_price_value'] !== null) {
             $object->setNegotiatedPriceValue($data['negotiated_price_value']);
+        } elseif (\array_key_exists('negotiated_price_value', $data) && $data['negotiated_price_value'] === null) {
+            $object->setNegotiatedPriceValue(null);
         }
-        if (\array_key_exists('negotiated_total_price', $data)) {
+        if (\array_key_exists('negotiated_total_price', $data) && $data['negotiated_total_price'] !== null) {
             $object->setNegotiatedTotalPrice($data['negotiated_total_price']);
+        } elseif (\array_key_exists('negotiated_total_price', $data) && $data['negotiated_total_price'] === null) {
+            $object->setNegotiatedTotalPrice(null);
         }
-        if (\array_key_exists('notifications', $data)) {
+        if (\array_key_exists('notifications', $data) && $data['notifications'] !== null) {
             $object->setNotifications($data['notifications']);
+        } elseif (\array_key_exists('notifications', $data) && $data['notifications'] === null) {
+            $object->setNotifications(null);
         }
-        if (\array_key_exists('original_total_price', $data)) {
+        if (\array_key_exists('original_total_price', $data) && $data['original_total_price'] !== null) {
             $object->setOriginalTotalPrice($data['original_total_price']);
+        } elseif (\array_key_exists('original_total_price', $data) && $data['original_total_price'] === null) {
+            $object->setOriginalTotalPrice(null);
         }
-        if (\array_key_exists('quote_id', $data)) {
+        if (\array_key_exists('quote_id', $data) && $data['quote_id'] !== null) {
             $object->setQuoteId($data['quote_id']);
+        } elseif (\array_key_exists('quote_id', $data) && $data['quote_id'] === null) {
+            $object->setQuoteId(null);
         }
-        if (\array_key_exists('quote_name', $data)) {
+        if (\array_key_exists('quote_name', $data) && $data['quote_name'] !== null) {
             $object->setQuoteName($data['quote_name']);
+        } elseif (\array_key_exists('quote_name', $data) && $data['quote_name'] === null) {
+            $object->setQuoteName(null);
         }
-        if (\array_key_exists('shipping_price', $data)) {
+        if (\array_key_exists('shipping_price', $data) && $data['shipping_price'] !== null) {
             $object->setShippingPrice($data['shipping_price']);
+        } elseif (\array_key_exists('shipping_price', $data) && $data['shipping_price'] === null) {
+            $object->setShippingPrice(null);
         }
-        if (\array_key_exists('status', $data)) {
+        if (\array_key_exists('status', $data) && $data['status'] !== null) {
             $object->setStatus($data['status']);
+        } elseif (\array_key_exists('status', $data) && $data['status'] === null) {
+            $object->setStatus(null);
         }
         return $object;
     }

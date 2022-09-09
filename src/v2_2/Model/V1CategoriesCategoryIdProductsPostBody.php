@@ -7,26 +7,26 @@ class V1CategoriesCategoryIdProductsPostBody
     /**
      *
      *
-     * @var CatalogDataCategoryProductLinkInterface
+     * @var CatalogDataCategoryProductLinkInterface|null
      */
     protected $productLink;
     /**
      *
      *
-     * @return CatalogDataCategoryProductLinkInterface
+     * @return CatalogDataCategoryProductLinkInterface|null
      */
-    public function getProductLink(): CatalogDataCategoryProductLinkInterface
+    public function getProductLink(): ?CatalogDataCategoryProductLinkInterface
     {
         return $this->productLink;
     }
     /**
      *
      *
-     * @param CatalogDataCategoryProductLinkInterface $productLink
+     * @param CatalogDataCategoryProductLinkInterface|null $productLink
      *
      * @return self
      */
-    public function setProductLink(CatalogDataCategoryProductLinkInterface $productLink): self
+    public function setProductLink(?CatalogDataCategoryProductLinkInterface $productLink): self
     {
         $this->productLink = $productLink;
         return $this;

@@ -7,50 +7,50 @@ class V1CompanyCreditsCreditIdIncreaseBalancePostBody
     /**
      * [optional]
      *
-     * @var string
+     * @var string|null
      */
     protected $comment;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $currency;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $operationType;
     /**
      * Credit balance data transfer object interface.
      *
-     * @var CompanyCreditDataCreditBalanceOptionsInterface
+     * @var CompanyCreditDataCreditBalanceOptionsInterface|null
      */
     protected $options;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $value;
     /**
      * [optional]
      *
-     * @return string
+     * @return string|null
      */
-    public function getComment(): string
+    public function getComment(): ?string
     {
         return $this->comment;
     }
     /**
      * [optional]
      *
-     * @param string $comment
+     * @param string|null $comment
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(?string $comment): self
     {
         $this->comment = $comment;
         return $this;
@@ -58,20 +58,20 @@ class V1CompanyCreditsCreditIdIncreaseBalancePostBody
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getCurrency(): string
+    public function getCurrency(): ?string
     {
         return $this->currency;
     }
     /**
      *
      *
-     * @param string $currency
+     * @param string|null $currency
      *
      * @return self
      */
-    public function setCurrency(string $currency): self
+    public function setCurrency(?string $currency): self
     {
         $this->currency = $currency;
         return $this;
@@ -79,20 +79,20 @@ class V1CompanyCreditsCreditIdIncreaseBalancePostBody
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getOperationType(): int
+    public function getOperationType(): ?int
     {
         return $this->operationType;
     }
     /**
      *
      *
-     * @param int $operationType
+     * @param int|null $operationType
      *
      * @return self
      */
-    public function setOperationType(int $operationType): self
+    public function setOperationType(?int $operationType): self
     {
         $this->operationType = $operationType;
         return $this;
@@ -100,20 +100,20 @@ class V1CompanyCreditsCreditIdIncreaseBalancePostBody
     /**
      * Credit balance data transfer object interface.
      *
-     * @return CompanyCreditDataCreditBalanceOptionsInterface
+     * @return CompanyCreditDataCreditBalanceOptionsInterface|null
      */
-    public function getOptions(): CompanyCreditDataCreditBalanceOptionsInterface
+    public function getOptions(): ?CompanyCreditDataCreditBalanceOptionsInterface
     {
         return $this->options;
     }
     /**
      * Credit balance data transfer object interface.
      *
-     * @param CompanyCreditDataCreditBalanceOptionsInterface $options
+     * @param CompanyCreditDataCreditBalanceOptionsInterface|null $options
      *
      * @return self
      */
-    public function setOptions(CompanyCreditDataCreditBalanceOptionsInterface $options): self
+    public function setOptions(?CompanyCreditDataCreditBalanceOptionsInterface $options): self
     {
         $this->options = $options;
         return $this;
@@ -121,20 +121,20 @@ class V1CompanyCreditsCreditIdIncreaseBalancePostBody
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getValue(): float
+    public function getValue(): ?float
     {
         return $this->value;
     }
     /**
      *
      *
-     * @param float $value
+     * @param float|null $value
      *
      * @return self
      */
-    public function setValue(float $value): self
+    public function setValue(?float $value): self
     {
         $this->value = $value;
         return $this;

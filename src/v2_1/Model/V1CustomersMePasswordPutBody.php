@@ -7,32 +7,32 @@ class V1CustomersMePasswordPutBody
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $currentPassword;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $newPassword;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getCurrentPassword(): string
+    public function getCurrentPassword(): ?string
     {
         return $this->currentPassword;
     }
     /**
      *
      *
-     * @param string $currentPassword
+     * @param string|null $currentPassword
      *
      * @return self
      */
-    public function setCurrentPassword(string $currentPassword): self
+    public function setCurrentPassword(?string $currentPassword): self
     {
         $this->currentPassword = $currentPassword;
         return $this;
@@ -40,20 +40,20 @@ class V1CustomersMePasswordPutBody
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getNewPassword(): string
+    public function getNewPassword(): ?string
     {
         return $this->newPassword;
     }
     /**
      *
      *
-     * @param string $newPassword
+     * @param string|null $newPassword
      *
      * @return self
      */
-    public function setNewPassword(string $newPassword): self
+    public function setNewPassword(?string $newPassword): self
     {
         $this->newPassword = $newPassword;
         return $this;

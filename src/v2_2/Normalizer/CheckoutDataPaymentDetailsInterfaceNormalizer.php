@@ -40,18 +40,24 @@ class CheckoutDataPaymentDetailsInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('payment_methods', $data)) {
+        if (\array_key_exists('payment_methods', $data) && $data['payment_methods'] !== null) {
             $values = array();
             foreach ($data['payment_methods'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataPaymentMethodInterface', 'json', $context);
             }
             $object->setPaymentMethods($values);
+        } elseif (\array_key_exists('payment_methods', $data) && $data['payment_methods'] === null) {
+            $object->setPaymentMethods(null);
         }
-        if (\array_key_exists('totals', $data)) {
+        if (\array_key_exists('totals', $data) && $data['totals'] !== null) {
             $object->setTotals($this->denormalizer->denormalize($data['totals'], 'Kiboko\\Magento\\V2_2\\Model\\QuoteDataTotalsInterface', 'json', $context));
+        } elseif (\array_key_exists('totals', $data) && $data['totals'] === null) {
+            $object->setTotals(null);
         }
         return $object;
     }

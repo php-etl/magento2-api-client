@@ -7,37 +7,37 @@ class CatalogInventoryDataStockStatusInterface
     /**
      * ExtensionInterface class for @see \Magento\CatalogInventory\Api\Data\StockStatusInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $productId;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $qty;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $stockId;
     /**
      * Interface StockItem
      *
-     * @var CatalogInventoryDataStockItemInterface
+     * @var CatalogInventoryDataStockItemInterface|null
      */
     protected $stockItem;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $stockStatus;
     /**
@@ -64,20 +64,20 @@ class CatalogInventoryDataStockStatusInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getProductId(): int
+    public function getProductId(): ?int
     {
         return $this->productId;
     }
     /**
      *
      *
-     * @param int $productId
+     * @param int|null $productId
      *
      * @return self
      */
-    public function setProductId(int $productId): self
+    public function setProductId(?int $productId): self
     {
         $this->productId = $productId;
         return $this;
@@ -85,20 +85,20 @@ class CatalogInventoryDataStockStatusInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getQty(): int
+    public function getQty(): ?int
     {
         return $this->qty;
     }
     /**
      *
      *
-     * @param int $qty
+     * @param int|null $qty
      *
      * @return self
      */
-    public function setQty(int $qty): self
+    public function setQty(?int $qty): self
     {
         $this->qty = $qty;
         return $this;
@@ -106,20 +106,20 @@ class CatalogInventoryDataStockStatusInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getStockId(): int
+    public function getStockId(): ?int
     {
         return $this->stockId;
     }
     /**
      *
      *
-     * @param int $stockId
+     * @param int|null $stockId
      *
      * @return self
      */
-    public function setStockId(int $stockId): self
+    public function setStockId(?int $stockId): self
     {
         $this->stockId = $stockId;
         return $this;
@@ -127,20 +127,20 @@ class CatalogInventoryDataStockStatusInterface
     /**
      * Interface StockItem
      *
-     * @return CatalogInventoryDataStockItemInterface
+     * @return CatalogInventoryDataStockItemInterface|null
      */
-    public function getStockItem(): CatalogInventoryDataStockItemInterface
+    public function getStockItem(): ?CatalogInventoryDataStockItemInterface
     {
         return $this->stockItem;
     }
     /**
      * Interface StockItem
      *
-     * @param CatalogInventoryDataStockItemInterface $stockItem
+     * @param CatalogInventoryDataStockItemInterface|null $stockItem
      *
      * @return self
      */
-    public function setStockItem(CatalogInventoryDataStockItemInterface $stockItem): self
+    public function setStockItem(?CatalogInventoryDataStockItemInterface $stockItem): self
     {
         $this->stockItem = $stockItem;
         return $this;
@@ -148,20 +148,20 @@ class CatalogInventoryDataStockStatusInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getStockStatus(): int
+    public function getStockStatus(): ?int
     {
         return $this->stockStatus;
     }
     /**
      *
      *
-     * @param int $stockStatus
+     * @param int|null $stockStatus
      *
      * @return self
      */
-    public function setStockStatus(int $stockStatus): self
+    public function setStockStatus(?int $stockStatus): self
     {
         $this->stockStatus = $stockStatus;
         return $this;

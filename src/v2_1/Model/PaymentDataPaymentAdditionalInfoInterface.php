@@ -7,32 +7,32 @@ class PaymentDataPaymentAdditionalInfoInterface
     /**
      * Object key
      *
-     * @var string
+     * @var string|null
      */
     protected $key;
     /**
      * Object value
      *
-     * @var string
+     * @var string|null
      */
     protected $value;
     /**
      * Object key
      *
-     * @return string
+     * @return string|null
      */
-    public function getKey(): string
+    public function getKey(): ?string
     {
         return $this->key;
     }
     /**
      * Object key
      *
-     * @param string $key
+     * @param string|null $key
      *
      * @return self
      */
-    public function setKey(string $key): self
+    public function setKey(?string $key): self
     {
         $this->key = $key;
         return $this;
@@ -40,20 +40,20 @@ class PaymentDataPaymentAdditionalInfoInterface
     /**
      * Object value
      *
-     * @return string
+     * @return string|null
      */
-    public function getValue(): string
+    public function getValue(): ?string
     {
         return $this->value;
     }
     /**
      * Object value
      *
-     * @param string $value
+     * @param string|null $value
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(?string $value): self
     {
         $this->value = $value;
         return $this;

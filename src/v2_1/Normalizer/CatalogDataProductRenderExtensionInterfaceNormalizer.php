@@ -40,11 +40,15 @@ class CatalogDataProductRenderExtensionInterfaceNormalizer implements Denormaliz
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('review_html', $data)) {
+        if (\array_key_exists('review_html', $data) && $data['review_html'] !== null) {
             $object->setReviewHtml($data['review_html']);
+        } elseif (\array_key_exists('review_html', $data) && $data['review_html'] === null) {
+            $object->setReviewHtml(null);
         }
-        if (\array_key_exists('wishlist_button', $data)) {
+        if (\array_key_exists('wishlist_button', $data) && $data['wishlist_button'] !== null) {
             $object->setWishlistButton($this->denormalizer->denormalize($data['wishlist_button'], 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataProductRenderButtonInterface', 'json', $context));
+        } elseif (\array_key_exists('wishlist_button', $data) && $data['wishlist_button'] === null) {
+            $object->setWishlistButton(null);
         }
         return $object;
     }

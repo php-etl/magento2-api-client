@@ -40,28 +40,38 @@ class ErrorResponseNormalizer implements DenormalizerInterface, NormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('code', $data)) {
+        if (\array_key_exists('code', $data) && $data['code'] !== null) {
             $object->setCode($data['code']);
+        } elseif (\array_key_exists('code', $data) && $data['code'] === null) {
+            $object->setCode(null);
         }
-        if (\array_key_exists('errors', $data)) {
+        if (\array_key_exists('errors', $data) && $data['errors'] !== null) {
             $values = array();
             foreach ($data['errors'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_3\\Model\\ErrorErrorsItem', 'json', $context);
             }
             $object->setErrors($values);
+        } elseif (\array_key_exists('errors', $data) && $data['errors'] === null) {
+            $object->setErrors(null);
         }
-        if (\array_key_exists('message', $data)) {
+        if (\array_key_exists('message', $data) && $data['message'] !== null) {
             $object->setMessage($data['message']);
+        } elseif (\array_key_exists('message', $data) && $data['message'] === null) {
+            $object->setMessage(null);
         }
-        if (\array_key_exists('parameters', $data)) {
+        if (\array_key_exists('parameters', $data) && $data['parameters'] !== null) {
             $values_1 = array();
             foreach ($data['parameters'] as $value_1) {
                 $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_3\\Model\\ErrorParametersItem', 'json', $context);
             }
             $object->setParameters($values_1);
+        } elseif (\array_key_exists('parameters', $data) && $data['parameters'] === null) {
+            $object->setParameters(null);
         }
-        if (\array_key_exists('trace', $data)) {
+        if (\array_key_exists('trace', $data) && $data['trace'] !== null) {
             $object->setTrace($data['trace']);
+        } elseif (\array_key_exists('trace', $data) && $data['trace'] === null) {
+            $object->setTrace(null);
         }
         return $object;
     }

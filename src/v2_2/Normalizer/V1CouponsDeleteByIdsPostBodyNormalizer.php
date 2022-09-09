@@ -40,15 +40,19 @@ class V1CouponsDeleteByIdsPostBodyNormalizer implements DenormalizerInterface, N
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('ids', $data)) {
+        if (\array_key_exists('ids', $data) && $data['ids'] !== null) {
             $values = array();
             foreach ($data['ids'] as $value) {
                 $values[] = $value;
             }
             $object->setIds($values);
+        } elseif (\array_key_exists('ids', $data) && $data['ids'] === null) {
+            $object->setIds(null);
         }
-        if (\array_key_exists('ignoreInvalidCoupons', $data)) {
+        if (\array_key_exists('ignoreInvalidCoupons', $data) && $data['ignoreInvalidCoupons'] !== null) {
             $object->setIgnoreInvalidCoupons($data['ignoreInvalidCoupons']);
+        } elseif (\array_key_exists('ignoreInvalidCoupons', $data) && $data['ignoreInvalidCoupons'] === null) {
+            $object->setIgnoreInvalidCoupons(null);
         }
         return $object;
     }

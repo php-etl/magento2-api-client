@@ -40,26 +40,40 @@ class StoreDataGroupInterfaceNormalizer implements DenormalizerInterface, Normal
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('code', $data)) {
+        if (\array_key_exists('code', $data) && $data['code'] !== null) {
             $object->setCode($data['code']);
+        } elseif (\array_key_exists('code', $data) && $data['code'] === null) {
+            $object->setCode(null);
         }
-        if (\array_key_exists('default_store_id', $data)) {
+        if (\array_key_exists('default_store_id', $data) && $data['default_store_id'] !== null) {
             $object->setDefaultStoreId($data['default_store_id']);
+        } elseif (\array_key_exists('default_store_id', $data) && $data['default_store_id'] === null) {
+            $object->setDefaultStoreId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('name', $data)) {
+        if (\array_key_exists('name', $data) && $data['name'] !== null) {
             $object->setName($data['name']);
+        } elseif (\array_key_exists('name', $data) && $data['name'] === null) {
+            $object->setName(null);
         }
-        if (\array_key_exists('root_category_id', $data)) {
+        if (\array_key_exists('root_category_id', $data) && $data['root_category_id'] !== null) {
             $object->setRootCategoryId($data['root_category_id']);
+        } elseif (\array_key_exists('root_category_id', $data) && $data['root_category_id'] === null) {
+            $object->setRootCategoryId(null);
         }
-        if (\array_key_exists('website_id', $data)) {
+        if (\array_key_exists('website_id', $data) && $data['website_id'] !== null) {
             $object->setWebsiteId($data['website_id']);
+        } elseif (\array_key_exists('website_id', $data) && $data['website_id'] === null) {
+            $object->setWebsiteId(null);
         }
         return $object;
     }

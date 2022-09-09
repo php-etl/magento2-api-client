@@ -7,91 +7,91 @@ class DownloadableDataLinkInterface
     /**
      * ExtensionInterface class for @see \Magento\Downloadable\Api\Data\LinkInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Sample(or link) id
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Shareable status
      *
-     * @var int
+     * @var int|null
      */
     protected $isShareable;
     /**
      * relative file path
      *
-     * @var string
+     * @var string|null
      */
     protected $linkFile;
     /**
      *
      *
-     * @var DownloadableDataFileContentInterface
+     * @var DownloadableDataFileContentInterface|null
      */
     protected $linkFileContent;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $linkType;
     /**
      * Link url or null when type is 'file'
      *
-     * @var string
+     * @var string|null
      */
     protected $linkUrl;
     /**
      * Of downloads per user
      *
-     * @var int
+     * @var int|null
      */
     protected $numberOfDownloads;
     /**
      * Price
      *
-     * @var float
+     * @var float|null
      */
     protected $price;
     /**
      * relative file path
      *
-     * @var string
+     * @var string|null
      */
     protected $sampleFile;
     /**
      *
      *
-     * @var DownloadableDataFileContentInterface
+     * @var DownloadableDataFileContentInterface|null
      */
     protected $sampleFileContent;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $sampleType;
     /**
      * file URL
      *
-     * @var string
+     * @var string|null
      */
     protected $sampleUrl;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $sortOrder;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $title;
     /**
@@ -118,20 +118,20 @@ class DownloadableDataLinkInterface
     /**
      * Sample(or link) id
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * Sample(or link) id
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -139,20 +139,20 @@ class DownloadableDataLinkInterface
     /**
      * Shareable status
      *
-     * @return int
+     * @return int|null
      */
-    public function getIsShareable(): int
+    public function getIsShareable(): ?int
     {
         return $this->isShareable;
     }
     /**
      * Shareable status
      *
-     * @param int $isShareable
+     * @param int|null $isShareable
      *
      * @return self
      */
-    public function setIsShareable(int $isShareable): self
+    public function setIsShareable(?int $isShareable): self
     {
         $this->isShareable = $isShareable;
         return $this;
@@ -160,20 +160,20 @@ class DownloadableDataLinkInterface
     /**
      * relative file path
      *
-     * @return string
+     * @return string|null
      */
-    public function getLinkFile(): string
+    public function getLinkFile(): ?string
     {
         return $this->linkFile;
     }
     /**
      * relative file path
      *
-     * @param string $linkFile
+     * @param string|null $linkFile
      *
      * @return self
      */
-    public function setLinkFile(string $linkFile): self
+    public function setLinkFile(?string $linkFile): self
     {
         $this->linkFile = $linkFile;
         return $this;
@@ -181,20 +181,20 @@ class DownloadableDataLinkInterface
     /**
      *
      *
-     * @return DownloadableDataFileContentInterface
+     * @return DownloadableDataFileContentInterface|null
      */
-    public function getLinkFileContent(): DownloadableDataFileContentInterface
+    public function getLinkFileContent(): ?DownloadableDataFileContentInterface
     {
         return $this->linkFileContent;
     }
     /**
      *
      *
-     * @param DownloadableDataFileContentInterface $linkFileContent
+     * @param DownloadableDataFileContentInterface|null $linkFileContent
      *
      * @return self
      */
-    public function setLinkFileContent(DownloadableDataFileContentInterface $linkFileContent): self
+    public function setLinkFileContent(?DownloadableDataFileContentInterface $linkFileContent): self
     {
         $this->linkFileContent = $linkFileContent;
         return $this;
@@ -202,20 +202,20 @@ class DownloadableDataLinkInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getLinkType(): string
+    public function getLinkType(): ?string
     {
         return $this->linkType;
     }
     /**
      *
      *
-     * @param string $linkType
+     * @param string|null $linkType
      *
      * @return self
      */
-    public function setLinkType(string $linkType): self
+    public function setLinkType(?string $linkType): self
     {
         $this->linkType = $linkType;
         return $this;
@@ -223,20 +223,20 @@ class DownloadableDataLinkInterface
     /**
      * Link url or null when type is 'file'
      *
-     * @return string
+     * @return string|null
      */
-    public function getLinkUrl(): string
+    public function getLinkUrl(): ?string
     {
         return $this->linkUrl;
     }
     /**
      * Link url or null when type is 'file'
      *
-     * @param string $linkUrl
+     * @param string|null $linkUrl
      *
      * @return self
      */
-    public function setLinkUrl(string $linkUrl): self
+    public function setLinkUrl(?string $linkUrl): self
     {
         $this->linkUrl = $linkUrl;
         return $this;
@@ -244,20 +244,20 @@ class DownloadableDataLinkInterface
     /**
      * Of downloads per user
      *
-     * @return int
+     * @return int|null
      */
-    public function getNumberOfDownloads(): int
+    public function getNumberOfDownloads(): ?int
     {
         return $this->numberOfDownloads;
     }
     /**
      * Of downloads per user
      *
-     * @param int $numberOfDownloads
+     * @param int|null $numberOfDownloads
      *
      * @return self
      */
-    public function setNumberOfDownloads(int $numberOfDownloads): self
+    public function setNumberOfDownloads(?int $numberOfDownloads): self
     {
         $this->numberOfDownloads = $numberOfDownloads;
         return $this;
@@ -265,20 +265,20 @@ class DownloadableDataLinkInterface
     /**
      * Price
      *
-     * @return float
+     * @return float|null
      */
-    public function getPrice(): float
+    public function getPrice(): ?float
     {
         return $this->price;
     }
     /**
      * Price
      *
-     * @param float $price
+     * @param float|null $price
      *
      * @return self
      */
-    public function setPrice(float $price): self
+    public function setPrice(?float $price): self
     {
         $this->price = $price;
         return $this;
@@ -286,20 +286,20 @@ class DownloadableDataLinkInterface
     /**
      * relative file path
      *
-     * @return string
+     * @return string|null
      */
-    public function getSampleFile(): string
+    public function getSampleFile(): ?string
     {
         return $this->sampleFile;
     }
     /**
      * relative file path
      *
-     * @param string $sampleFile
+     * @param string|null $sampleFile
      *
      * @return self
      */
-    public function setSampleFile(string $sampleFile): self
+    public function setSampleFile(?string $sampleFile): self
     {
         $this->sampleFile = $sampleFile;
         return $this;
@@ -307,20 +307,20 @@ class DownloadableDataLinkInterface
     /**
      *
      *
-     * @return DownloadableDataFileContentInterface
+     * @return DownloadableDataFileContentInterface|null
      */
-    public function getSampleFileContent(): DownloadableDataFileContentInterface
+    public function getSampleFileContent(): ?DownloadableDataFileContentInterface
     {
         return $this->sampleFileContent;
     }
     /**
      *
      *
-     * @param DownloadableDataFileContentInterface $sampleFileContent
+     * @param DownloadableDataFileContentInterface|null $sampleFileContent
      *
      * @return self
      */
-    public function setSampleFileContent(DownloadableDataFileContentInterface $sampleFileContent): self
+    public function setSampleFileContent(?DownloadableDataFileContentInterface $sampleFileContent): self
     {
         $this->sampleFileContent = $sampleFileContent;
         return $this;
@@ -328,20 +328,20 @@ class DownloadableDataLinkInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getSampleType(): string
+    public function getSampleType(): ?string
     {
         return $this->sampleType;
     }
     /**
      *
      *
-     * @param string $sampleType
+     * @param string|null $sampleType
      *
      * @return self
      */
-    public function setSampleType(string $sampleType): self
+    public function setSampleType(?string $sampleType): self
     {
         $this->sampleType = $sampleType;
         return $this;
@@ -349,20 +349,20 @@ class DownloadableDataLinkInterface
     /**
      * file URL
      *
-     * @return string
+     * @return string|null
      */
-    public function getSampleUrl(): string
+    public function getSampleUrl(): ?string
     {
         return $this->sampleUrl;
     }
     /**
      * file URL
      *
-     * @param string $sampleUrl
+     * @param string|null $sampleUrl
      *
      * @return self
      */
-    public function setSampleUrl(string $sampleUrl): self
+    public function setSampleUrl(?string $sampleUrl): self
     {
         $this->sampleUrl = $sampleUrl;
         return $this;
@@ -370,20 +370,20 @@ class DownloadableDataLinkInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getSortOrder(): int
+    public function getSortOrder(): ?int
     {
         return $this->sortOrder;
     }
     /**
      *
      *
-     * @param int $sortOrder
+     * @param int|null $sortOrder
      *
      * @return self
      */
-    public function setSortOrder(int $sortOrder): self
+    public function setSortOrder(?int $sortOrder): self
     {
         $this->sortOrder = $sortOrder;
         return $this;
@@ -391,20 +391,20 @@ class DownloadableDataLinkInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
     /**
      *
      *
-     * @param string $title
+     * @param string|null $title
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
         return $this;

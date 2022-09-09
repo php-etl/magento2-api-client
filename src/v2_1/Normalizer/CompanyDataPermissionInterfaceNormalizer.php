@@ -40,17 +40,25 @@ class CompanyDataPermissionInterfaceNormalizer implements DenormalizerInterface,
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('permission', $data)) {
+        if (\array_key_exists('permission', $data) && $data['permission'] !== null) {
             $object->setPermission($data['permission']);
+        } elseif (\array_key_exists('permission', $data) && $data['permission'] === null) {
+            $object->setPermission(null);
         }
-        if (\array_key_exists('resource_id', $data)) {
+        if (\array_key_exists('resource_id', $data) && $data['resource_id'] !== null) {
             $object->setResourceId($data['resource_id']);
+        } elseif (\array_key_exists('resource_id', $data) && $data['resource_id'] === null) {
+            $object->setResourceId(null);
         }
-        if (\array_key_exists('role_id', $data)) {
+        if (\array_key_exists('role_id', $data) && $data['role_id'] !== null) {
             $object->setRoleId($data['role_id']);
+        } elseif (\array_key_exists('role_id', $data) && $data['role_id'] === null) {
+            $object->setRoleId(null);
         }
         return $object;
     }

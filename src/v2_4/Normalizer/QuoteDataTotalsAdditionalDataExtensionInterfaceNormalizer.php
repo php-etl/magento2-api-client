@@ -40,12 +40,14 @@ class QuoteDataTotalsAdditionalDataExtensionInterfaceNormalizer implements Denor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('gift_messages', $data)) {
+        if (\array_key_exists('gift_messages', $data) && $data['gift_messages'] !== null) {
             $values = array();
             foreach ($data['gift_messages'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\GiftMessageDataMessageInterface', 'json', $context);
             }
             $object->setGiftMessages($values);
+        } elseif (\array_key_exists('gift_messages', $data) && $data['gift_messages'] === null) {
+            $object->setGiftMessages(null);
         }
         return $object;
     }

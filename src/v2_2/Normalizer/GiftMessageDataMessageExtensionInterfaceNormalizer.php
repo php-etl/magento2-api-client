@@ -40,20 +40,30 @@ class GiftMessageDataMessageExtensionInterfaceNormalizer implements Denormalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('entity_id', $data)) {
+        if (\array_key_exists('entity_id', $data) && $data['entity_id'] !== null) {
             $object->setEntityId($data['entity_id']);
+        } elseif (\array_key_exists('entity_id', $data) && $data['entity_id'] === null) {
+            $object->setEntityId(null);
         }
-        if (\array_key_exists('entity_type', $data)) {
+        if (\array_key_exists('entity_type', $data) && $data['entity_type'] !== null) {
             $object->setEntityType($data['entity_type']);
+        } elseif (\array_key_exists('entity_type', $data) && $data['entity_type'] === null) {
+            $object->setEntityType(null);
         }
-        if (\array_key_exists('wrapping_add_printed_card', $data)) {
+        if (\array_key_exists('wrapping_add_printed_card', $data) && $data['wrapping_add_printed_card'] !== null) {
             $object->setWrappingAddPrintedCard($data['wrapping_add_printed_card']);
+        } elseif (\array_key_exists('wrapping_add_printed_card', $data) && $data['wrapping_add_printed_card'] === null) {
+            $object->setWrappingAddPrintedCard(null);
         }
-        if (\array_key_exists('wrapping_allow_gift_receipt', $data)) {
+        if (\array_key_exists('wrapping_allow_gift_receipt', $data) && $data['wrapping_allow_gift_receipt'] !== null) {
             $object->setWrappingAllowGiftReceipt($data['wrapping_allow_gift_receipt']);
+        } elseif (\array_key_exists('wrapping_allow_gift_receipt', $data) && $data['wrapping_allow_gift_receipt'] === null) {
+            $object->setWrappingAllowGiftReceipt(null);
         }
-        if (\array_key_exists('wrapping_id', $data)) {
+        if (\array_key_exists('wrapping_id', $data) && $data['wrapping_id'] !== null) {
             $object->setWrappingId($data['wrapping_id']);
+        } elseif (\array_key_exists('wrapping_id', $data) && $data['wrapping_id'] === null) {
+            $object->setWrappingId(null);
         }
         return $object;
     }

@@ -7,50 +7,50 @@ class GiftCardDataGiftcardAmountInterface
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $attributeId;
     /**
      * ExtensionInterface class for @see \Magento\GiftCard\Api\Data\GiftcardAmountInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $value;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $websiteId;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $websiteValue;
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getAttributeId(): int
+    public function getAttributeId(): ?int
     {
         return $this->attributeId;
     }
     /**
      *
      *
-     * @param int $attributeId
+     * @param int|null $attributeId
      *
      * @return self
      */
-    public function setAttributeId(int $attributeId): self
+    public function setAttributeId(?int $attributeId): self
     {
         $this->attributeId = $attributeId;
         return $this;
@@ -79,20 +79,20 @@ class GiftCardDataGiftcardAmountInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getValue(): float
+    public function getValue(): ?float
     {
         return $this->value;
     }
     /**
      *
      *
-     * @param float $value
+     * @param float|null $value
      *
      * @return self
      */
-    public function setValue(float $value): self
+    public function setValue(?float $value): self
     {
         $this->value = $value;
         return $this;
@@ -100,20 +100,20 @@ class GiftCardDataGiftcardAmountInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getWebsiteId(): int
+    public function getWebsiteId(): ?int
     {
         return $this->websiteId;
     }
     /**
      *
      *
-     * @param int $websiteId
+     * @param int|null $websiteId
      *
      * @return self
      */
-    public function setWebsiteId(int $websiteId): self
+    public function setWebsiteId(?int $websiteId): self
     {
         $this->websiteId = $websiteId;
         return $this;
@@ -121,20 +121,20 @@ class GiftCardDataGiftcardAmountInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getWebsiteValue(): float
+    public function getWebsiteValue(): ?float
     {
         return $this->websiteValue;
     }
     /**
      *
      *
-     * @param float $websiteValue
+     * @param float|null $websiteValue
      *
      * @return self
      */
-    public function setWebsiteValue(float $websiteValue): self
+    public function setWebsiteValue(?float $websiteValue): self
     {
         $this->websiteValue = $websiteValue;
         return $this;

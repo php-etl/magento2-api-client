@@ -40,49 +40,73 @@ class SalesDataTransactionInterfaceNormalizer implements DenormalizerInterface, 
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('additional_information', $data)) {
+        if (\array_key_exists('additional_information', $data) && $data['additional_information'] !== null) {
             $values = array();
             foreach ($data['additional_information'] as $value) {
                 $values[] = $value;
             }
             $object->setAdditionalInformation($values);
+        } elseif (\array_key_exists('additional_information', $data) && $data['additional_information'] === null) {
+            $object->setAdditionalInformation(null);
         }
-        if (\array_key_exists('child_transactions', $data)) {
+        if (\array_key_exists('child_transactions', $data) && $data['child_transactions'] !== null) {
             $values_1 = array();
             foreach ($data['child_transactions'] as $value_1) {
                 $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_3\\Model\\SalesDataTransactionInterface', 'json', $context);
             }
             $object->setChildTransactions($values_1);
+        } elseif (\array_key_exists('child_transactions', $data) && $data['child_transactions'] === null) {
+            $object->setChildTransactions(null);
         }
-        if (\array_key_exists('created_at', $data)) {
+        if (\array_key_exists('created_at', $data) && $data['created_at'] !== null) {
             $object->setCreatedAt($data['created_at']);
+        } elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+            $object->setCreatedAt(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('is_closed', $data)) {
+        if (\array_key_exists('is_closed', $data) && $data['is_closed'] !== null) {
             $object->setIsClosed($data['is_closed']);
+        } elseif (\array_key_exists('is_closed', $data) && $data['is_closed'] === null) {
+            $object->setIsClosed(null);
         }
-        if (\array_key_exists('order_id', $data)) {
+        if (\array_key_exists('order_id', $data) && $data['order_id'] !== null) {
             $object->setOrderId($data['order_id']);
+        } elseif (\array_key_exists('order_id', $data) && $data['order_id'] === null) {
+            $object->setOrderId(null);
         }
-        if (\array_key_exists('parent_id', $data)) {
+        if (\array_key_exists('parent_id', $data) && $data['parent_id'] !== null) {
             $object->setParentId($data['parent_id']);
+        } elseif (\array_key_exists('parent_id', $data) && $data['parent_id'] === null) {
+            $object->setParentId(null);
         }
-        if (\array_key_exists('parent_txn_id', $data)) {
+        if (\array_key_exists('parent_txn_id', $data) && $data['parent_txn_id'] !== null) {
             $object->setParentTxnId($data['parent_txn_id']);
+        } elseif (\array_key_exists('parent_txn_id', $data) && $data['parent_txn_id'] === null) {
+            $object->setParentTxnId(null);
         }
-        if (\array_key_exists('payment_id', $data)) {
+        if (\array_key_exists('payment_id', $data) && $data['payment_id'] !== null) {
             $object->setPaymentId($data['payment_id']);
+        } elseif (\array_key_exists('payment_id', $data) && $data['payment_id'] === null) {
+            $object->setPaymentId(null);
         }
-        if (\array_key_exists('transaction_id', $data)) {
+        if (\array_key_exists('transaction_id', $data) && $data['transaction_id'] !== null) {
             $object->setTransactionId($data['transaction_id']);
+        } elseif (\array_key_exists('transaction_id', $data) && $data['transaction_id'] === null) {
+            $object->setTransactionId(null);
         }
-        if (\array_key_exists('txn_id', $data)) {
+        if (\array_key_exists('txn_id', $data) && $data['txn_id'] !== null) {
             $object->setTxnId($data['txn_id']);
+        } elseif (\array_key_exists('txn_id', $data) && $data['txn_id'] === null) {
+            $object->setTxnId(null);
         }
-        if (\array_key_exists('txn_type', $data)) {
+        if (\array_key_exists('txn_type', $data) && $data['txn_type'] !== null) {
             $object->setTxnType($data['txn_type']);
+        } elseif (\array_key_exists('txn_type', $data) && $data['txn_type'] === null) {
+            $object->setTxnType(null);
         }
         return $object;
     }

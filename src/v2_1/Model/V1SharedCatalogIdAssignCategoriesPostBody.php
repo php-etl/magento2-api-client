@@ -7,26 +7,26 @@ class V1SharedCatalogIdAssignCategoriesPostBody
     /**
      *
      *
-     * @var CatalogDataCategoryInterface[]
+     * @var CatalogDataCategoryInterface[]|null
      */
     protected $categories;
     /**
      *
      *
-     * @return CatalogDataCategoryInterface[]
+     * @return CatalogDataCategoryInterface[]|null
      */
-    public function getCategories(): array
+    public function getCategories(): ?array
     {
         return $this->categories;
     }
     /**
      *
      *
-     * @param CatalogDataCategoryInterface[] $categories
+     * @param CatalogDataCategoryInterface[]|null $categories
      *
      * @return self
      */
-    public function setCategories(array $categories): self
+    public function setCategories(?array $categories): self
     {
         $this->categories = $categories;
         return $this;

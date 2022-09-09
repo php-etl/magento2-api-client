@@ -7,62 +7,62 @@ class QuoteDataTotalsExtensionInterface
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $baseCustomerBalanceAmount;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $baseRewardCurrencyAmount;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $couponLabel;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $customerBalanceAmount;
     /**
      * Extension attribute for quote totals model.
      *
-     * @var NegotiableQuoteDataNegotiableQuoteTotalsInterface
+     * @var NegotiableQuoteDataNegotiableQuoteTotalsInterface|null
      */
     protected $negotiableQuoteTotals;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $rewardCurrencyAmount;
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $rewardPointsBalance;
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseCustomerBalanceAmount(): float
+    public function getBaseCustomerBalanceAmount(): ?float
     {
         return $this->baseCustomerBalanceAmount;
     }
     /**
      *
      *
-     * @param float $baseCustomerBalanceAmount
+     * @param float|null $baseCustomerBalanceAmount
      *
      * @return self
      */
-    public function setBaseCustomerBalanceAmount(float $baseCustomerBalanceAmount): self
+    public function setBaseCustomerBalanceAmount(?float $baseCustomerBalanceAmount): self
     {
         $this->baseCustomerBalanceAmount = $baseCustomerBalanceAmount;
         return $this;
@@ -70,20 +70,20 @@ class QuoteDataTotalsExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseRewardCurrencyAmount(): float
+    public function getBaseRewardCurrencyAmount(): ?float
     {
         return $this->baseRewardCurrencyAmount;
     }
     /**
      *
      *
-     * @param float $baseRewardCurrencyAmount
+     * @param float|null $baseRewardCurrencyAmount
      *
      * @return self
      */
-    public function setBaseRewardCurrencyAmount(float $baseRewardCurrencyAmount): self
+    public function setBaseRewardCurrencyAmount(?float $baseRewardCurrencyAmount): self
     {
         $this->baseRewardCurrencyAmount = $baseRewardCurrencyAmount;
         return $this;
@@ -91,20 +91,20 @@ class QuoteDataTotalsExtensionInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getCouponLabel(): string
+    public function getCouponLabel(): ?string
     {
         return $this->couponLabel;
     }
     /**
      *
      *
-     * @param string $couponLabel
+     * @param string|null $couponLabel
      *
      * @return self
      */
-    public function setCouponLabel(string $couponLabel): self
+    public function setCouponLabel(?string $couponLabel): self
     {
         $this->couponLabel = $couponLabel;
         return $this;
@@ -112,20 +112,20 @@ class QuoteDataTotalsExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getCustomerBalanceAmount(): float
+    public function getCustomerBalanceAmount(): ?float
     {
         return $this->customerBalanceAmount;
     }
     /**
      *
      *
-     * @param float $customerBalanceAmount
+     * @param float|null $customerBalanceAmount
      *
      * @return self
      */
-    public function setCustomerBalanceAmount(float $customerBalanceAmount): self
+    public function setCustomerBalanceAmount(?float $customerBalanceAmount): self
     {
         $this->customerBalanceAmount = $customerBalanceAmount;
         return $this;
@@ -133,20 +133,20 @@ class QuoteDataTotalsExtensionInterface
     /**
      * Extension attribute for quote totals model.
      *
-     * @return NegotiableQuoteDataNegotiableQuoteTotalsInterface
+     * @return NegotiableQuoteDataNegotiableQuoteTotalsInterface|null
      */
-    public function getNegotiableQuoteTotals(): NegotiableQuoteDataNegotiableQuoteTotalsInterface
+    public function getNegotiableQuoteTotals(): ?NegotiableQuoteDataNegotiableQuoteTotalsInterface
     {
         return $this->negotiableQuoteTotals;
     }
     /**
      * Extension attribute for quote totals model.
      *
-     * @param NegotiableQuoteDataNegotiableQuoteTotalsInterface $negotiableQuoteTotals
+     * @param NegotiableQuoteDataNegotiableQuoteTotalsInterface|null $negotiableQuoteTotals
      *
      * @return self
      */
-    public function setNegotiableQuoteTotals(NegotiableQuoteDataNegotiableQuoteTotalsInterface $negotiableQuoteTotals): self
+    public function setNegotiableQuoteTotals(?NegotiableQuoteDataNegotiableQuoteTotalsInterface $negotiableQuoteTotals): self
     {
         $this->negotiableQuoteTotals = $negotiableQuoteTotals;
         return $this;
@@ -154,20 +154,20 @@ class QuoteDataTotalsExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getRewardCurrencyAmount(): float
+    public function getRewardCurrencyAmount(): ?float
     {
         return $this->rewardCurrencyAmount;
     }
     /**
      *
      *
-     * @param float $rewardCurrencyAmount
+     * @param float|null $rewardCurrencyAmount
      *
      * @return self
      */
-    public function setRewardCurrencyAmount(float $rewardCurrencyAmount): self
+    public function setRewardCurrencyAmount(?float $rewardCurrencyAmount): self
     {
         $this->rewardCurrencyAmount = $rewardCurrencyAmount;
         return $this;
@@ -175,20 +175,20 @@ class QuoteDataTotalsExtensionInterface
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getRewardPointsBalance(): float
+    public function getRewardPointsBalance(): ?float
     {
         return $this->rewardPointsBalance;
     }
     /**
      *
      *
-     * @param float $rewardPointsBalance
+     * @param float|null $rewardPointsBalance
      *
      * @return self
      */
-    public function setRewardPointsBalance(float $rewardPointsBalance): self
+    public function setRewardPointsBalance(?float $rewardPointsBalance): self
     {
         $this->rewardPointsBalance = $rewardPointsBalance;
         return $this;

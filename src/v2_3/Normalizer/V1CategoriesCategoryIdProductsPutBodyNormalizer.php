@@ -40,8 +40,10 @@ class V1CategoriesCategoryIdProductsPutBodyNormalizer implements DenormalizerInt
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('productLink', $data)) {
+        if (\array_key_exists('productLink', $data) && $data['productLink'] !== null) {
             $object->setProductLink($this->denormalizer->denormalize($data['productLink'], 'Kiboko\\Magento\\V2_3\\Model\\CatalogDataCategoryProductLinkInterface', 'json', $context));
+        } elseif (\array_key_exists('productLink', $data) && $data['productLink'] === null) {
+            $object->setProductLink(null);
         }
         return $object;
     }

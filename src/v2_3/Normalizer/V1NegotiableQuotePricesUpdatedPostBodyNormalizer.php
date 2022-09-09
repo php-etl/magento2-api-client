@@ -40,12 +40,14 @@ class V1NegotiableQuotePricesUpdatedPostBodyNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('quoteIds', $data)) {
+        if (\array_key_exists('quoteIds', $data) && $data['quoteIds'] !== null) {
             $values = array();
             foreach ($data['quoteIds'] as $value) {
                 $values[] = $value;
             }
             $object->setQuoteIds($values);
+        } elseif (\array_key_exists('quoteIds', $data) && $data['quoteIds'] === null) {
+            $object->setQuoteIds(null);
         }
         return $object;
     }

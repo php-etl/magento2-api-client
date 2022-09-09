@@ -7,19 +7,19 @@ class ConfigurableProductDataConfigurableItemOptionValueInterface
     /**
      * ExtensionInterface class for @see \Magento\ConfigurableProduct\Api\Data\ConfigurableItemOptionValueInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Option SKU
      *
-     * @var string
+     * @var string|null
      */
     protected $optionId;
     /**
      * Item id
      *
-     * @var int
+     * @var int|null
      */
     protected $optionValue;
     /**
@@ -46,20 +46,20 @@ class ConfigurableProductDataConfigurableItemOptionValueInterface
     /**
      * Option SKU
      *
-     * @return string
+     * @return string|null
      */
-    public function getOptionId(): string
+    public function getOptionId(): ?string
     {
         return $this->optionId;
     }
     /**
      * Option SKU
      *
-     * @param string $optionId
+     * @param string|null $optionId
      *
      * @return self
      */
-    public function setOptionId(string $optionId): self
+    public function setOptionId(?string $optionId): self
     {
         $this->optionId = $optionId;
         return $this;
@@ -67,20 +67,20 @@ class ConfigurableProductDataConfigurableItemOptionValueInterface
     /**
      * Item id
      *
-     * @return int
+     * @return int|null
      */
-    public function getOptionValue(): int
+    public function getOptionValue(): ?int
     {
         return $this->optionValue;
     }
     /**
      * Item id
      *
-     * @param int $optionValue
+     * @param int|null $optionValue
      *
      * @return self
      */
-    public function setOptionValue(int $optionValue): self
+    public function setOptionValue(?int $optionValue): self
     {
         $this->optionValue = $optionValue;
         return $this;

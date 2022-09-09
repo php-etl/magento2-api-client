@@ -7,26 +7,26 @@ class V1SharedCatalogIdAssignProductsPostBody
     /**
      *
      *
-     * @var CatalogDataProductInterface[]
+     * @var CatalogDataProductInterface[]|null
      */
     protected $products;
     /**
      *
      *
-     * @return CatalogDataProductInterface[]
+     * @return CatalogDataProductInterface[]|null
      */
-    public function getProducts(): array
+    public function getProducts(): ?array
     {
         return $this->products;
     }
     /**
      *
      *
-     * @param CatalogDataProductInterface[] $products
+     * @param CatalogDataProductInterface[]|null $products
      *
      * @return self
      */
-    public function setProducts(array $products): self
+    public function setProducts(?array $products): self
     {
         $this->products = $products;
         return $this;

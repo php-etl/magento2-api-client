@@ -40,26 +40,32 @@ class SalesDataCreditmemoItemExtensionInterfaceNormalizer implements Denormalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('invoice_text_codes', $data)) {
+        if (\array_key_exists('invoice_text_codes', $data) && $data['invoice_text_codes'] !== null) {
             $values = array();
             foreach ($data['invoice_text_codes'] as $value) {
                 $values[] = $value;
             }
             $object->setInvoiceTextCodes($values);
+        } elseif (\array_key_exists('invoice_text_codes', $data) && $data['invoice_text_codes'] === null) {
+            $object->setInvoiceTextCodes(null);
         }
-        if (\array_key_exists('tax_codes', $data)) {
+        if (\array_key_exists('tax_codes', $data) && $data['tax_codes'] !== null) {
             $values_1 = array();
             foreach ($data['tax_codes'] as $value_1) {
                 $values_1[] = $value_1;
             }
             $object->setTaxCodes($values_1);
+        } elseif (\array_key_exists('tax_codes', $data) && $data['tax_codes'] === null) {
+            $object->setTaxCodes(null);
         }
-        if (\array_key_exists('vertex_tax_codes', $data)) {
+        if (\array_key_exists('vertex_tax_codes', $data) && $data['vertex_tax_codes'] !== null) {
             $values_2 = array();
             foreach ($data['vertex_tax_codes'] as $value_2) {
                 $values_2[] = $value_2;
             }
             $object->setVertexTaxCodes($values_2);
+        } elseif (\array_key_exists('vertex_tax_codes', $data) && $data['vertex_tax_codes'] === null) {
+            $object->setVertexTaxCodes(null);
         }
         return $object;
     }

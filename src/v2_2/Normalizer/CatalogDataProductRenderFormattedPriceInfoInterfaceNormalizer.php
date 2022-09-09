@@ -40,29 +40,45 @@ class CatalogDataProductRenderFormattedPriceInfoInterfaceNormalizer implements D
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('final_price', $data)) {
+        if (\array_key_exists('final_price', $data) && $data['final_price'] !== null) {
             $object->setFinalPrice($data['final_price']);
+        } elseif (\array_key_exists('final_price', $data) && $data['final_price'] === null) {
+            $object->setFinalPrice(null);
         }
-        if (\array_key_exists('max_price', $data)) {
+        if (\array_key_exists('max_price', $data) && $data['max_price'] !== null) {
             $object->setMaxPrice($data['max_price']);
+        } elseif (\array_key_exists('max_price', $data) && $data['max_price'] === null) {
+            $object->setMaxPrice(null);
         }
-        if (\array_key_exists('max_regular_price', $data)) {
+        if (\array_key_exists('max_regular_price', $data) && $data['max_regular_price'] !== null) {
             $object->setMaxRegularPrice($data['max_regular_price']);
+        } elseif (\array_key_exists('max_regular_price', $data) && $data['max_regular_price'] === null) {
+            $object->setMaxRegularPrice(null);
         }
-        if (\array_key_exists('minimal_price', $data)) {
+        if (\array_key_exists('minimal_price', $data) && $data['minimal_price'] !== null) {
             $object->setMinimalPrice($data['minimal_price']);
+        } elseif (\array_key_exists('minimal_price', $data) && $data['minimal_price'] === null) {
+            $object->setMinimalPrice(null);
         }
-        if (\array_key_exists('minimal_regular_price', $data)) {
+        if (\array_key_exists('minimal_regular_price', $data) && $data['minimal_regular_price'] !== null) {
             $object->setMinimalRegularPrice($data['minimal_regular_price']);
+        } elseif (\array_key_exists('minimal_regular_price', $data) && $data['minimal_regular_price'] === null) {
+            $object->setMinimalRegularPrice(null);
         }
-        if (\array_key_exists('regular_price', $data)) {
+        if (\array_key_exists('regular_price', $data) && $data['regular_price'] !== null) {
             $object->setRegularPrice($data['regular_price']);
+        } elseif (\array_key_exists('regular_price', $data) && $data['regular_price'] === null) {
+            $object->setRegularPrice(null);
         }
-        if (\array_key_exists('special_price', $data)) {
+        if (\array_key_exists('special_price', $data) && $data['special_price'] !== null) {
             $object->setSpecialPrice($data['special_price']);
+        } elseif (\array_key_exists('special_price', $data) && $data['special_price'] === null) {
+            $object->setSpecialPrice(null);
         }
         return $object;
     }

@@ -40,8 +40,10 @@ class V1CartsMineOrderPutBodyNormalizer implements DenormalizerInterface, Normal
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('paymentMethod', $data)) {
+        if (\array_key_exists('paymentMethod', $data) && $data['paymentMethod'] !== null) {
             $object->setPaymentMethod($this->denormalizer->denormalize($data['paymentMethod'], 'Kiboko\\Magento\\V2_1\\Model\\QuoteDataPaymentInterface', 'json', $context));
+        } elseif (\array_key_exists('paymentMethod', $data) && $data['paymentMethod'] === null) {
+            $object->setPaymentMethod(null);
         }
         return $object;
     }

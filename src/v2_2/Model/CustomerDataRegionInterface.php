@@ -7,25 +7,25 @@ class CustomerDataRegionInterface
     /**
      * ExtensionInterface class for @see \Magento\Customer\Api\Data\RegionInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Region
      *
-     * @var string
+     * @var string|null
      */
     protected $region;
     /**
      * Region code
      *
-     * @var string
+     * @var string|null
      */
     protected $regionCode;
     /**
      * Region id
      *
-     * @var int
+     * @var int|null
      */
     protected $regionId;
     /**
@@ -52,20 +52,20 @@ class CustomerDataRegionInterface
     /**
      * Region
      *
-     * @return string
+     * @return string|null
      */
-    public function getRegion(): string
+    public function getRegion(): ?string
     {
         return $this->region;
     }
     /**
      * Region
      *
-     * @param string $region
+     * @param string|null $region
      *
      * @return self
      */
-    public function setRegion(string $region): self
+    public function setRegion(?string $region): self
     {
         $this->region = $region;
         return $this;
@@ -73,20 +73,20 @@ class CustomerDataRegionInterface
     /**
      * Region code
      *
-     * @return string
+     * @return string|null
      */
-    public function getRegionCode(): string
+    public function getRegionCode(): ?string
     {
         return $this->regionCode;
     }
     /**
      * Region code
      *
-     * @param string $regionCode
+     * @param string|null $regionCode
      *
      * @return self
      */
-    public function setRegionCode(string $regionCode): self
+    public function setRegionCode(?string $regionCode): self
     {
         $this->regionCode = $regionCode;
         return $this;
@@ -94,20 +94,20 @@ class CustomerDataRegionInterface
     /**
      * Region id
      *
-     * @return int
+     * @return int|null
      */
-    public function getRegionId(): int
+    public function getRegionId(): ?int
     {
         return $this->regionId;
     }
     /**
      * Region id
      *
-     * @param int $regionId
+     * @param int|null $regionId
      *
      * @return self
      */
-    public function setRegionId(int $regionId): self
+    public function setRegionId(?int $regionId): self
     {
         $this->regionId = $regionId;
         return $this;

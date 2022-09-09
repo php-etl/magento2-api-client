@@ -40,18 +40,24 @@ class V1NegotiableQuoteSubmitToCustomerPostBodyNormalizer implements Denormalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('comment', $data)) {
+        if (\array_key_exists('comment', $data) && $data['comment'] !== null) {
             $object->setComment($data['comment']);
+        } elseif (\array_key_exists('comment', $data) && $data['comment'] === null) {
+            $object->setComment(null);
         }
-        if (\array_key_exists('files', $data)) {
+        if (\array_key_exists('files', $data) && $data['files'] !== null) {
             $values = array();
             foreach ($data['files'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\NegotiableQuoteDataAttachmentContentInterface', 'json', $context);
             }
             $object->setFiles($values);
+        } elseif (\array_key_exists('files', $data) && $data['files'] === null) {
+            $object->setFiles(null);
         }
-        if (\array_key_exists('quoteId', $data)) {
+        if (\array_key_exists('quoteId', $data) && $data['quoteId'] !== null) {
             $object->setQuoteId($data['quoteId']);
+        } elseif (\array_key_exists('quoteId', $data) && $data['quoteId'] === null) {
+            $object->setQuoteId(null);
         }
         return $object;
     }

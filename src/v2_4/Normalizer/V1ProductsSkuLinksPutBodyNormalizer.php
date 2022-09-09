@@ -40,8 +40,10 @@ class V1ProductsSkuLinksPutBodyNormalizer implements DenormalizerInterface, Norm
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('entity', $data)) {
+        if (\array_key_exists('entity', $data) && $data['entity'] !== null) {
             $object->setEntity($this->denormalizer->denormalize($data['entity'], 'Kiboko\\Magento\\V2_4\\Model\\CatalogDataProductLinkInterface', 'json', $context));
+        } elseif (\array_key_exists('entity', $data) && $data['entity'] === null) {
+            $object->setEntity(null);
         }
         return $object;
     }

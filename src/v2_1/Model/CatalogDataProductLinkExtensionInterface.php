@@ -7,26 +7,26 @@ class CatalogDataProductLinkExtensionInterface
     /**
      *
      *
-     * @var float
+     * @var float|null
      */
     protected $qty;
     /**
      *
      *
-     * @return float
+     * @return float|null
      */
-    public function getQty(): float
+    public function getQty(): ?float
     {
         return $this->qty;
     }
     /**
      *
      *
-     * @param float $qty
+     * @param float|null $qty
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(?float $qty): self
     {
         $this->qty = $qty;
         return $this;

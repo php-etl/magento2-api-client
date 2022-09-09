@@ -7,38 +7,38 @@ class QuoteDataShippingInterface
     /**
      * Interface AddressInterface
      *
-     * @var QuoteDataAddressInterface
+     * @var QuoteDataAddressInterface|null
      */
     protected $address;
     /**
      * ExtensionInterface class for @see \Magento\Quote\Api\Data\ShippingInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Shipping method
      *
-     * @var string
+     * @var string|null
      */
     protected $method;
     /**
      * Interface AddressInterface
      *
-     * @return QuoteDataAddressInterface
+     * @return QuoteDataAddressInterface|null
      */
-    public function getAddress(): QuoteDataAddressInterface
+    public function getAddress(): ?QuoteDataAddressInterface
     {
         return $this->address;
     }
     /**
      * Interface AddressInterface
      *
-     * @param QuoteDataAddressInterface $address
+     * @param QuoteDataAddressInterface|null $address
      *
      * @return self
      */
-    public function setAddress(QuoteDataAddressInterface $address): self
+    public function setAddress(?QuoteDataAddressInterface $address): self
     {
         $this->address = $address;
         return $this;
@@ -67,20 +67,20 @@ class QuoteDataShippingInterface
     /**
      * Shipping method
      *
-     * @return string
+     * @return string|null
      */
-    public function getMethod(): string
+    public function getMethod(): ?string
     {
         return $this->method;
     }
     /**
      * Shipping method
      *
-     * @param string $method
+     * @param string|null $method
      *
      * @return self
      */
-    public function setMethod(string $method): self
+    public function setMethod(?string $method): self
     {
         $this->method = $method;
         return $this;

@@ -7,7 +7,7 @@ class SalesDataInvoiceCreationArgumentsInterface
     /**
      * ExtensionInterface class for @see \Magento\Sales\Api\Data\InvoiceCreationArgumentsInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**

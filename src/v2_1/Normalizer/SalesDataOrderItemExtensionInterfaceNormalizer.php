@@ -40,68 +40,102 @@ class SalesDataOrderItemExtensionInterfaceNormalizer implements DenormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('gift_message', $data)) {
+        if (\array_key_exists('gift_message', $data) && $data['gift_message'] !== null) {
             $object->setGiftMessage($this->denormalizer->denormalize($data['gift_message'], 'Kiboko\\Magento\\V2_1\\Model\\GiftMessageDataMessageInterface', 'json', $context));
+        } elseif (\array_key_exists('gift_message', $data) && $data['gift_message'] === null) {
+            $object->setGiftMessage(null);
         }
-        if (\array_key_exists('gw_base_price', $data)) {
+        if (\array_key_exists('gw_base_price', $data) && $data['gw_base_price'] !== null) {
             $object->setGwBasePrice($data['gw_base_price']);
+        } elseif (\array_key_exists('gw_base_price', $data) && $data['gw_base_price'] === null) {
+            $object->setGwBasePrice(null);
         }
-        if (\array_key_exists('gw_base_price_invoiced', $data)) {
+        if (\array_key_exists('gw_base_price_invoiced', $data) && $data['gw_base_price_invoiced'] !== null) {
             $object->setGwBasePriceInvoiced($data['gw_base_price_invoiced']);
+        } elseif (\array_key_exists('gw_base_price_invoiced', $data) && $data['gw_base_price_invoiced'] === null) {
+            $object->setGwBasePriceInvoiced(null);
         }
-        if (\array_key_exists('gw_base_price_refunded', $data)) {
+        if (\array_key_exists('gw_base_price_refunded', $data) && $data['gw_base_price_refunded'] !== null) {
             $object->setGwBasePriceRefunded($data['gw_base_price_refunded']);
+        } elseif (\array_key_exists('gw_base_price_refunded', $data) && $data['gw_base_price_refunded'] === null) {
+            $object->setGwBasePriceRefunded(null);
         }
-        if (\array_key_exists('gw_base_tax_amount', $data)) {
+        if (\array_key_exists('gw_base_tax_amount', $data) && $data['gw_base_tax_amount'] !== null) {
             $object->setGwBaseTaxAmount($data['gw_base_tax_amount']);
+        } elseif (\array_key_exists('gw_base_tax_amount', $data) && $data['gw_base_tax_amount'] === null) {
+            $object->setGwBaseTaxAmount(null);
         }
-        if (\array_key_exists('gw_base_tax_amount_invoiced', $data)) {
+        if (\array_key_exists('gw_base_tax_amount_invoiced', $data) && $data['gw_base_tax_amount_invoiced'] !== null) {
             $object->setGwBaseTaxAmountInvoiced($data['gw_base_tax_amount_invoiced']);
+        } elseif (\array_key_exists('gw_base_tax_amount_invoiced', $data) && $data['gw_base_tax_amount_invoiced'] === null) {
+            $object->setGwBaseTaxAmountInvoiced(null);
         }
-        if (\array_key_exists('gw_base_tax_amount_refunded', $data)) {
+        if (\array_key_exists('gw_base_tax_amount_refunded', $data) && $data['gw_base_tax_amount_refunded'] !== null) {
             $object->setGwBaseTaxAmountRefunded($data['gw_base_tax_amount_refunded']);
+        } elseif (\array_key_exists('gw_base_tax_amount_refunded', $data) && $data['gw_base_tax_amount_refunded'] === null) {
+            $object->setGwBaseTaxAmountRefunded(null);
         }
-        if (\array_key_exists('gw_id', $data)) {
+        if (\array_key_exists('gw_id', $data) && $data['gw_id'] !== null) {
             $object->setGwId($data['gw_id']);
+        } elseif (\array_key_exists('gw_id', $data) && $data['gw_id'] === null) {
+            $object->setGwId(null);
         }
-        if (\array_key_exists('gw_price', $data)) {
+        if (\array_key_exists('gw_price', $data) && $data['gw_price'] !== null) {
             $object->setGwPrice($data['gw_price']);
+        } elseif (\array_key_exists('gw_price', $data) && $data['gw_price'] === null) {
+            $object->setGwPrice(null);
         }
-        if (\array_key_exists('gw_price_invoiced', $data)) {
+        if (\array_key_exists('gw_price_invoiced', $data) && $data['gw_price_invoiced'] !== null) {
             $object->setGwPriceInvoiced($data['gw_price_invoiced']);
+        } elseif (\array_key_exists('gw_price_invoiced', $data) && $data['gw_price_invoiced'] === null) {
+            $object->setGwPriceInvoiced(null);
         }
-        if (\array_key_exists('gw_price_refunded', $data)) {
+        if (\array_key_exists('gw_price_refunded', $data) && $data['gw_price_refunded'] !== null) {
             $object->setGwPriceRefunded($data['gw_price_refunded']);
+        } elseif (\array_key_exists('gw_price_refunded', $data) && $data['gw_price_refunded'] === null) {
+            $object->setGwPriceRefunded(null);
         }
-        if (\array_key_exists('gw_tax_amount', $data)) {
+        if (\array_key_exists('gw_tax_amount', $data) && $data['gw_tax_amount'] !== null) {
             $object->setGwTaxAmount($data['gw_tax_amount']);
+        } elseif (\array_key_exists('gw_tax_amount', $data) && $data['gw_tax_amount'] === null) {
+            $object->setGwTaxAmount(null);
         }
-        if (\array_key_exists('gw_tax_amount_invoiced', $data)) {
+        if (\array_key_exists('gw_tax_amount_invoiced', $data) && $data['gw_tax_amount_invoiced'] !== null) {
             $object->setGwTaxAmountInvoiced($data['gw_tax_amount_invoiced']);
+        } elseif (\array_key_exists('gw_tax_amount_invoiced', $data) && $data['gw_tax_amount_invoiced'] === null) {
+            $object->setGwTaxAmountInvoiced(null);
         }
-        if (\array_key_exists('gw_tax_amount_refunded', $data)) {
+        if (\array_key_exists('gw_tax_amount_refunded', $data) && $data['gw_tax_amount_refunded'] !== null) {
             $object->setGwTaxAmountRefunded($data['gw_tax_amount_refunded']);
+        } elseif (\array_key_exists('gw_tax_amount_refunded', $data) && $data['gw_tax_amount_refunded'] === null) {
+            $object->setGwTaxAmountRefunded(null);
         }
-        if (\array_key_exists('invoice_text_codes', $data)) {
+        if (\array_key_exists('invoice_text_codes', $data) && $data['invoice_text_codes'] !== null) {
             $values = array();
             foreach ($data['invoice_text_codes'] as $value) {
                 $values[] = $value;
             }
             $object->setInvoiceTextCodes($values);
+        } elseif (\array_key_exists('invoice_text_codes', $data) && $data['invoice_text_codes'] === null) {
+            $object->setInvoiceTextCodes(null);
         }
-        if (\array_key_exists('tax_codes', $data)) {
+        if (\array_key_exists('tax_codes', $data) && $data['tax_codes'] !== null) {
             $values_1 = array();
             foreach ($data['tax_codes'] as $value_1) {
                 $values_1[] = $value_1;
             }
             $object->setTaxCodes($values_1);
+        } elseif (\array_key_exists('tax_codes', $data) && $data['tax_codes'] === null) {
+            $object->setTaxCodes(null);
         }
-        if (\array_key_exists('vertex_tax_codes', $data)) {
+        if (\array_key_exists('vertex_tax_codes', $data) && $data['vertex_tax_codes'] !== null) {
             $values_2 = array();
             foreach ($data['vertex_tax_codes'] as $value_2) {
                 $values_2[] = $value_2;
             }
             $object->setVertexTaxCodes($values_2);
+        } elseif (\array_key_exists('vertex_tax_codes', $data) && $data['vertex_tax_codes'] === null) {
+            $object->setVertexTaxCodes(null);
         }
         return $object;
     }

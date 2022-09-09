@@ -43,39 +43,59 @@ class GiftWrappingDataWrappingInterfaceNormalizer implements DenormalizerInterfa
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('base_currency_code', $data)) {
+        if (\array_key_exists('base_currency_code', $data) && $data['base_currency_code'] !== null) {
             $object->setBaseCurrencyCode($data['base_currency_code']);
+        } elseif (\array_key_exists('base_currency_code', $data) && $data['base_currency_code'] === null) {
+            $object->setBaseCurrencyCode(null);
         }
-        if (\array_key_exists('base_price', $data)) {
+        if (\array_key_exists('base_price', $data) && $data['base_price'] !== null) {
             $object->setBasePrice($data['base_price']);
+        } elseif (\array_key_exists('base_price', $data) && $data['base_price'] === null) {
+            $object->setBasePrice(null);
         }
-        if (\array_key_exists('design', $data)) {
+        if (\array_key_exists('design', $data) && $data['design'] !== null) {
             $object->setDesign($data['design']);
+        } elseif (\array_key_exists('design', $data) && $data['design'] === null) {
+            $object->setDesign(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('image_base64_content', $data)) {
+        if (\array_key_exists('image_base64_content', $data) && $data['image_base64_content'] !== null) {
             $object->setImageBase64Content($data['image_base64_content']);
+        } elseif (\array_key_exists('image_base64_content', $data) && $data['image_base64_content'] === null) {
+            $object->setImageBase64Content(null);
         }
-        if (\array_key_exists('image_name', $data)) {
+        if (\array_key_exists('image_name', $data) && $data['image_name'] !== null) {
             $object->setImageName($data['image_name']);
+        } elseif (\array_key_exists('image_name', $data) && $data['image_name'] === null) {
+            $object->setImageName(null);
         }
-        if (\array_key_exists('image_url', $data)) {
+        if (\array_key_exists('image_url', $data) && $data['image_url'] !== null) {
             $object->setImageUrl($data['image_url']);
+        } elseif (\array_key_exists('image_url', $data) && $data['image_url'] === null) {
+            $object->setImageUrl(null);
         }
-        if (\array_key_exists('status', $data)) {
+        if (\array_key_exists('status', $data) && $data['status'] !== null) {
             $object->setStatus($data['status']);
+        } elseif (\array_key_exists('status', $data) && $data['status'] === null) {
+            $object->setStatus(null);
         }
-        if (\array_key_exists('website_ids', $data)) {
+        if (\array_key_exists('website_ids', $data) && $data['website_ids'] !== null) {
             $values = array();
             foreach ($data['website_ids'] as $value) {
                 $values[] = $value;
             }
             $object->setWebsiteIds($values);
+        } elseif (\array_key_exists('website_ids', $data) && $data['website_ids'] === null) {
+            $object->setWebsiteIds(null);
         }
-        if (\array_key_exists('wrapping_id', $data)) {
+        if (\array_key_exists('wrapping_id', $data) && $data['wrapping_id'] !== null) {
             $object->setWrappingId($data['wrapping_id']);
+        } elseif (\array_key_exists('wrapping_id', $data) && $data['wrapping_id'] === null) {
+            $object->setWrappingId(null);
         }
         return $object;
     }

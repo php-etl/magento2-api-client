@@ -7,26 +7,26 @@ class V1CustomerGroupsPostBody
     /**
      * Customer group interface.
      *
-     * @var CustomerDataGroupInterface
+     * @var CustomerDataGroupInterface|null
      */
     protected $group;
     /**
      * Customer group interface.
      *
-     * @return CustomerDataGroupInterface
+     * @return CustomerDataGroupInterface|null
      */
-    public function getGroup(): CustomerDataGroupInterface
+    public function getGroup(): ?CustomerDataGroupInterface
     {
         return $this->group;
     }
     /**
      * Customer group interface.
      *
-     * @param CustomerDataGroupInterface $group
+     * @param CustomerDataGroupInterface|null $group
      *
      * @return self
      */
-    public function setGroup(CustomerDataGroupInterface $group): self
+    public function setGroup(?CustomerDataGroupInterface $group): self
     {
         $this->group = $group;
         return $this;

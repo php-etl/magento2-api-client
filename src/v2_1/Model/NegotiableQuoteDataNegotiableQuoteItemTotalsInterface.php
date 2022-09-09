@@ -7,92 +7,92 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
     /**
      * Cart price for quote item in base currency.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseCartPrice;
     /**
      * Cart price with included tax for quote item in base currency.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseCartPriceInclTax;
     /**
      * Tax from catalog price for quote item in base currency.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseCartTax;
     /**
      * Catalog price for quote item in base currency.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseCatalogPrice;
     /**
      * Catalog price with included tax for quote item in base currency.
      *
-     * @var float
+     * @var float|null
      */
     protected $baseCatalogPriceInclTax;
     /**
      * Cart price for quote item.
      *
-     * @var float
+     * @var float|null
      */
     protected $cartPrice;
     /**
      * Cart price with included tax for quote item.
      *
-     * @var float
+     * @var float|null
      */
     protected $cartPriceInclTax;
     /**
      * Tax from catalog price for quote item.
      *
-     * @var float
+     * @var float|null
      */
     protected $cartTax;
     /**
      * Catalog price for quote item.
      *
-     * @var float
+     * @var float|null
      */
     protected $catalogPrice;
     /**
      * Catalog price with included tax for quote item.
      *
-     * @var float
+     * @var float|null
      */
     protected $catalogPriceInclTax;
     /**
      * Cost for quote item.
      *
-     * @var float
+     * @var float|null
      */
     protected $cost;
     /**
      * ExtensionInterface class for @see \Magento\NegotiableQuote\Api\Data\NegotiableQuoteItemTotalsInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Cart price for quote item in base currency.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseCartPrice(): float
+    public function getBaseCartPrice(): ?float
     {
         return $this->baseCartPrice;
     }
     /**
      * Cart price for quote item in base currency.
      *
-     * @param float $baseCartPrice
+     * @param float|null $baseCartPrice
      *
      * @return self
      */
-    public function setBaseCartPrice(float $baseCartPrice): self
+    public function setBaseCartPrice(?float $baseCartPrice): self
     {
         $this->baseCartPrice = $baseCartPrice;
         return $this;
@@ -100,20 +100,20 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
     /**
      * Cart price with included tax for quote item in base currency.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseCartPriceInclTax(): float
+    public function getBaseCartPriceInclTax(): ?float
     {
         return $this->baseCartPriceInclTax;
     }
     /**
      * Cart price with included tax for quote item in base currency.
      *
-     * @param float $baseCartPriceInclTax
+     * @param float|null $baseCartPriceInclTax
      *
      * @return self
      */
-    public function setBaseCartPriceInclTax(float $baseCartPriceInclTax): self
+    public function setBaseCartPriceInclTax(?float $baseCartPriceInclTax): self
     {
         $this->baseCartPriceInclTax = $baseCartPriceInclTax;
         return $this;
@@ -121,20 +121,20 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
     /**
      * Tax from catalog price for quote item in base currency.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseCartTax(): float
+    public function getBaseCartTax(): ?float
     {
         return $this->baseCartTax;
     }
     /**
      * Tax from catalog price for quote item in base currency.
      *
-     * @param float $baseCartTax
+     * @param float|null $baseCartTax
      *
      * @return self
      */
-    public function setBaseCartTax(float $baseCartTax): self
+    public function setBaseCartTax(?float $baseCartTax): self
     {
         $this->baseCartTax = $baseCartTax;
         return $this;
@@ -142,20 +142,20 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
     /**
      * Catalog price for quote item in base currency.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseCatalogPrice(): float
+    public function getBaseCatalogPrice(): ?float
     {
         return $this->baseCatalogPrice;
     }
     /**
      * Catalog price for quote item in base currency.
      *
-     * @param float $baseCatalogPrice
+     * @param float|null $baseCatalogPrice
      *
      * @return self
      */
-    public function setBaseCatalogPrice(float $baseCatalogPrice): self
+    public function setBaseCatalogPrice(?float $baseCatalogPrice): self
     {
         $this->baseCatalogPrice = $baseCatalogPrice;
         return $this;
@@ -163,20 +163,20 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
     /**
      * Catalog price with included tax for quote item in base currency.
      *
-     * @return float
+     * @return float|null
      */
-    public function getBaseCatalogPriceInclTax(): float
+    public function getBaseCatalogPriceInclTax(): ?float
     {
         return $this->baseCatalogPriceInclTax;
     }
     /**
      * Catalog price with included tax for quote item in base currency.
      *
-     * @param float $baseCatalogPriceInclTax
+     * @param float|null $baseCatalogPriceInclTax
      *
      * @return self
      */
-    public function setBaseCatalogPriceInclTax(float $baseCatalogPriceInclTax): self
+    public function setBaseCatalogPriceInclTax(?float $baseCatalogPriceInclTax): self
     {
         $this->baseCatalogPriceInclTax = $baseCatalogPriceInclTax;
         return $this;
@@ -184,20 +184,20 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
     /**
      * Cart price for quote item.
      *
-     * @return float
+     * @return float|null
      */
-    public function getCartPrice(): float
+    public function getCartPrice(): ?float
     {
         return $this->cartPrice;
     }
     /**
      * Cart price for quote item.
      *
-     * @param float $cartPrice
+     * @param float|null $cartPrice
      *
      * @return self
      */
-    public function setCartPrice(float $cartPrice): self
+    public function setCartPrice(?float $cartPrice): self
     {
         $this->cartPrice = $cartPrice;
         return $this;
@@ -205,20 +205,20 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
     /**
      * Cart price with included tax for quote item.
      *
-     * @return float
+     * @return float|null
      */
-    public function getCartPriceInclTax(): float
+    public function getCartPriceInclTax(): ?float
     {
         return $this->cartPriceInclTax;
     }
     /**
      * Cart price with included tax for quote item.
      *
-     * @param float $cartPriceInclTax
+     * @param float|null $cartPriceInclTax
      *
      * @return self
      */
-    public function setCartPriceInclTax(float $cartPriceInclTax): self
+    public function setCartPriceInclTax(?float $cartPriceInclTax): self
     {
         $this->cartPriceInclTax = $cartPriceInclTax;
         return $this;
@@ -226,20 +226,20 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
     /**
      * Tax from catalog price for quote item.
      *
-     * @return float
+     * @return float|null
      */
-    public function getCartTax(): float
+    public function getCartTax(): ?float
     {
         return $this->cartTax;
     }
     /**
      * Tax from catalog price for quote item.
      *
-     * @param float $cartTax
+     * @param float|null $cartTax
      *
      * @return self
      */
-    public function setCartTax(float $cartTax): self
+    public function setCartTax(?float $cartTax): self
     {
         $this->cartTax = $cartTax;
         return $this;
@@ -247,20 +247,20 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
     /**
      * Catalog price for quote item.
      *
-     * @return float
+     * @return float|null
      */
-    public function getCatalogPrice(): float
+    public function getCatalogPrice(): ?float
     {
         return $this->catalogPrice;
     }
     /**
      * Catalog price for quote item.
      *
-     * @param float $catalogPrice
+     * @param float|null $catalogPrice
      *
      * @return self
      */
-    public function setCatalogPrice(float $catalogPrice): self
+    public function setCatalogPrice(?float $catalogPrice): self
     {
         $this->catalogPrice = $catalogPrice;
         return $this;
@@ -268,20 +268,20 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
     /**
      * Catalog price with included tax for quote item.
      *
-     * @return float
+     * @return float|null
      */
-    public function getCatalogPriceInclTax(): float
+    public function getCatalogPriceInclTax(): ?float
     {
         return $this->catalogPriceInclTax;
     }
     /**
      * Catalog price with included tax for quote item.
      *
-     * @param float $catalogPriceInclTax
+     * @param float|null $catalogPriceInclTax
      *
      * @return self
      */
-    public function setCatalogPriceInclTax(float $catalogPriceInclTax): self
+    public function setCatalogPriceInclTax(?float $catalogPriceInclTax): self
     {
         $this->catalogPriceInclTax = $catalogPriceInclTax;
         return $this;
@@ -289,20 +289,20 @@ class NegotiableQuoteDataNegotiableQuoteItemTotalsInterface
     /**
      * Cost for quote item.
      *
-     * @return float
+     * @return float|null
      */
-    public function getCost(): float
+    public function getCost(): ?float
     {
         return $this->cost;
     }
     /**
      * Cost for quote item.
      *
-     * @param float $cost
+     * @param float|null $cost
      *
      * @return self
      */
-    public function setCost(float $cost): self
+    public function setCost(?float $cost): self
     {
         $this->cost = $cost;
         return $this;

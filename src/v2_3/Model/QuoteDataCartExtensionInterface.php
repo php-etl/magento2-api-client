@@ -7,38 +7,38 @@ class QuoteDataCartExtensionInterface
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $amazonOrderReferenceId;
     /**
      * Interface NegotiableQuoteInterface
      *
-     * @var NegotiableQuoteDataNegotiableQuoteInterface
+     * @var NegotiableQuoteDataNegotiableQuoteInterface|null
      */
     protected $negotiableQuote;
     /**
      *
      *
-     * @var QuoteDataShippingAssignmentInterface[]
+     * @var QuoteDataShippingAssignmentInterface[]|null
      */
     protected $shippingAssignments;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getAmazonOrderReferenceId(): string
+    public function getAmazonOrderReferenceId(): ?string
     {
         return $this->amazonOrderReferenceId;
     }
     /**
      *
      *
-     * @param string $amazonOrderReferenceId
+     * @param string|null $amazonOrderReferenceId
      *
      * @return self
      */
-    public function setAmazonOrderReferenceId(string $amazonOrderReferenceId): self
+    public function setAmazonOrderReferenceId(?string $amazonOrderReferenceId): self
     {
         $this->amazonOrderReferenceId = $amazonOrderReferenceId;
         return $this;
@@ -46,20 +46,20 @@ class QuoteDataCartExtensionInterface
     /**
      * Interface NegotiableQuoteInterface
      *
-     * @return NegotiableQuoteDataNegotiableQuoteInterface
+     * @return NegotiableQuoteDataNegotiableQuoteInterface|null
      */
-    public function getNegotiableQuote(): NegotiableQuoteDataNegotiableQuoteInterface
+    public function getNegotiableQuote(): ?NegotiableQuoteDataNegotiableQuoteInterface
     {
         return $this->negotiableQuote;
     }
     /**
      * Interface NegotiableQuoteInterface
      *
-     * @param NegotiableQuoteDataNegotiableQuoteInterface $negotiableQuote
+     * @param NegotiableQuoteDataNegotiableQuoteInterface|null $negotiableQuote
      *
      * @return self
      */
-    public function setNegotiableQuote(NegotiableQuoteDataNegotiableQuoteInterface $negotiableQuote): self
+    public function setNegotiableQuote(?NegotiableQuoteDataNegotiableQuoteInterface $negotiableQuote): self
     {
         $this->negotiableQuote = $negotiableQuote;
         return $this;
@@ -67,20 +67,20 @@ class QuoteDataCartExtensionInterface
     /**
      *
      *
-     * @return QuoteDataShippingAssignmentInterface[]
+     * @return QuoteDataShippingAssignmentInterface[]|null
      */
-    public function getShippingAssignments(): array
+    public function getShippingAssignments(): ?array
     {
         return $this->shippingAssignments;
     }
     /**
      *
      *
-     * @param QuoteDataShippingAssignmentInterface[] $shippingAssignments
+     * @param QuoteDataShippingAssignmentInterface[]|null $shippingAssignments
      *
      * @return self
      */
-    public function setShippingAssignments(array $shippingAssignments): self
+    public function setShippingAssignments(?array $shippingAssignments): self
     {
         $this->shippingAssignments = $shippingAssignments;
         return $this;

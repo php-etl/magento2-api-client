@@ -7,26 +7,26 @@ class TaxDataOrderTaxDetailsAppliedTaxExtensionInterface
     /**
      *
      *
-     * @var TaxDataAppliedTaxRateInterface[]
+     * @var TaxDataAppliedTaxRateInterface[]|null
      */
     protected $rates;
     /**
      *
      *
-     * @return TaxDataAppliedTaxRateInterface[]
+     * @return TaxDataAppliedTaxRateInterface[]|null
      */
-    public function getRates(): array
+    public function getRates(): ?array
     {
         return $this->rates;
     }
     /**
      *
      *
-     * @param TaxDataAppliedTaxRateInterface[] $rates
+     * @param TaxDataAppliedTaxRateInterface[]|null $rates
      *
      * @return self
      */
-    public function setRates(array $rates): self
+    public function setRates(?array $rates): self
     {
         $this->rates = $rates;
         return $this;

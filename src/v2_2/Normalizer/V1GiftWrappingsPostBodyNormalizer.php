@@ -40,11 +40,15 @@ class V1GiftWrappingsPostBodyNormalizer implements DenormalizerInterface, Normal
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('data', $data)) {
+        if (\array_key_exists('data', $data) && $data['data'] !== null) {
             $object->setData($this->denormalizer->denormalize($data['data'], 'Kiboko\\Magento\\V2_2\\Model\\GiftWrappingDataWrappingInterface', 'json', $context));
+        } elseif (\array_key_exists('data', $data) && $data['data'] === null) {
+            $object->setData(null);
         }
-        if (\array_key_exists('storeId', $data)) {
+        if (\array_key_exists('storeId', $data) && $data['storeId'] !== null) {
             $object->setStoreId($data['storeId']);
+        } elseif (\array_key_exists('storeId', $data) && $data['storeId'] === null) {
+            $object->setStoreId(null);
         }
         return $object;
     }

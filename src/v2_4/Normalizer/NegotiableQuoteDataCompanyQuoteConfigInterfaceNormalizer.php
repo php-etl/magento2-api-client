@@ -40,14 +40,20 @@ class NegotiableQuoteDataCompanyQuoteConfigInterfaceNormalizer implements Denorm
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('company_id', $data)) {
+        if (\array_key_exists('company_id', $data) && $data['company_id'] !== null) {
             $object->setCompanyId($data['company_id']);
+        } elseif (\array_key_exists('company_id', $data) && $data['company_id'] === null) {
+            $object->setCompanyId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('is_quote_enabled', $data)) {
+        if (\array_key_exists('is_quote_enabled', $data) && $data['is_quote_enabled'] !== null) {
             $object->setIsQuoteEnabled($data['is_quote_enabled']);
+        } elseif (\array_key_exists('is_quote_enabled', $data) && $data['is_quote_enabled'] === null) {
+            $object->setIsQuoteEnabled(null);
         }
         return $object;
     }

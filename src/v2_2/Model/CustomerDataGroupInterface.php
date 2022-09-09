@@ -7,50 +7,50 @@ class CustomerDataGroupInterface
     /**
      * Code
      *
-     * @var string
+     * @var string|null
      */
     protected $code;
     /**
      * ExtensionInterface class for @see \Magento\Customer\Api\Data\GroupInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Id
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Tax class id
      *
-     * @var int
+     * @var int|null
      */
     protected $taxClassId;
     /**
      * Tax class name
      *
-     * @var string
+     * @var string|null
      */
     protected $taxClassName;
     /**
      * Code
      *
-     * @return string
+     * @return string|null
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
     /**
      * Code
      *
-     * @param string $code
+     * @param string|null $code
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
         return $this;
@@ -79,20 +79,20 @@ class CustomerDataGroupInterface
     /**
      * Id
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * Id
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -100,20 +100,20 @@ class CustomerDataGroupInterface
     /**
      * Tax class id
      *
-     * @return int
+     * @return int|null
      */
-    public function getTaxClassId(): int
+    public function getTaxClassId(): ?int
     {
         return $this->taxClassId;
     }
     /**
      * Tax class id
      *
-     * @param int $taxClassId
+     * @param int|null $taxClassId
      *
      * @return self
      */
-    public function setTaxClassId(int $taxClassId): self
+    public function setTaxClassId(?int $taxClassId): self
     {
         $this->taxClassId = $taxClassId;
         return $this;
@@ -121,20 +121,20 @@ class CustomerDataGroupInterface
     /**
      * Tax class name
      *
-     * @return string
+     * @return string|null
      */
-    public function getTaxClassName(): string
+    public function getTaxClassName(): ?string
     {
         return $this->taxClassName;
     }
     /**
      * Tax class name
      *
-     * @param string $taxClassName
+     * @param string|null $taxClassName
      *
      * @return self
      */
-    public function setTaxClassName(string $taxClassName): self
+    public function setTaxClassName(?string $taxClassName): self
     {
         $this->taxClassName = $taxClassName;
         return $this;

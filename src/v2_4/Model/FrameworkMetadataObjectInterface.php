@@ -7,26 +7,26 @@ class FrameworkMetadataObjectInterface
     /**
      * Code of the attribute.
      *
-     * @var string
+     * @var string|null
      */
     protected $attributeCode;
     /**
      * Code of the attribute.
      *
-     * @return string
+     * @return string|null
      */
-    public function getAttributeCode(): string
+    public function getAttributeCode(): ?string
     {
         return $this->attributeCode;
     }
     /**
      * Code of the attribute.
      *
-     * @param string $attributeCode
+     * @param string|null $attributeCode
      *
      * @return self
      */
-    public function setAttributeCode(string $attributeCode): self
+    public function setAttributeCode(?string $attributeCode): self
     {
         $this->attributeCode = $attributeCode;
         return $this;

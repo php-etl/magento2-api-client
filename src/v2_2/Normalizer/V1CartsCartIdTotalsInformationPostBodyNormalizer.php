@@ -40,8 +40,10 @@ class V1CartsCartIdTotalsInformationPostBodyNormalizer implements DenormalizerIn
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('addressInformation', $data)) {
+        if (\array_key_exists('addressInformation', $data) && $data['addressInformation'] !== null) {
             $object->setAddressInformation($this->denormalizer->denormalize($data['addressInformation'], 'Kiboko\\Magento\\V2_2\\Model\\CheckoutDataTotalsInformationInterface', 'json', $context));
+        } elseif (\array_key_exists('addressInformation', $data) && $data['addressInformation'] === null) {
+            $object->setAddressInformation(null);
         }
         return $object;
     }

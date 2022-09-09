@@ -7,38 +7,38 @@ class NegotiableQuoteDataCompanyQuoteConfigInterface
     /**
      * Company id
      *
-     * @var string
+     * @var string|null
      */
     protected $companyId;
     /**
      * ExtensionInterface class for @see \Magento\NegotiableQuote\Api\Data\CompanyQuoteConfigInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Quote enabled for company
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isQuoteEnabled;
     /**
      * Company id
      *
-     * @return string
+     * @return string|null
      */
-    public function getCompanyId(): string
+    public function getCompanyId(): ?string
     {
         return $this->companyId;
     }
     /**
      * Company id
      *
-     * @param string $companyId
+     * @param string|null $companyId
      *
      * @return self
      */
-    public function setCompanyId(string $companyId): self
+    public function setCompanyId(?string $companyId): self
     {
         $this->companyId = $companyId;
         return $this;
@@ -67,20 +67,20 @@ class NegotiableQuoteDataCompanyQuoteConfigInterface
     /**
      * Quote enabled for company
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsQuoteEnabled(): bool
+    public function getIsQuoteEnabled(): ?bool
     {
         return $this->isQuoteEnabled;
     }
     /**
      * Quote enabled for company
      *
-     * @param bool $isQuoteEnabled
+     * @param bool|null $isQuoteEnabled
      *
      * @return self
      */
-    public function setIsQuoteEnabled(bool $isQuoteEnabled): self
+    public function setIsQuoteEnabled(?bool $isQuoteEnabled): self
     {
         $this->isQuoteEnabled = $isQuoteEnabled;
         return $this;

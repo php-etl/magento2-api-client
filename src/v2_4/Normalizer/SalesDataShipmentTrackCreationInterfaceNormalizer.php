@@ -40,17 +40,25 @@ class SalesDataShipmentTrackCreationInterfaceNormalizer implements DenormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('carrier_code', $data)) {
+        if (\array_key_exists('carrier_code', $data) && $data['carrier_code'] !== null) {
             $object->setCarrierCode($data['carrier_code']);
+        } elseif (\array_key_exists('carrier_code', $data) && $data['carrier_code'] === null) {
+            $object->setCarrierCode(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('title', $data)) {
+        if (\array_key_exists('title', $data) && $data['title'] !== null) {
             $object->setTitle($data['title']);
+        } elseif (\array_key_exists('title', $data) && $data['title'] === null) {
+            $object->setTitle(null);
         }
-        if (\array_key_exists('track_number', $data)) {
+        if (\array_key_exists('track_number', $data) && $data['track_number'] !== null) {
             $object->setTrackNumber($data['track_number']);
+        } elseif (\array_key_exists('track_number', $data) && $data['track_number'] === null) {
+            $object->setTrackNumber(null);
         }
         return $object;
     }

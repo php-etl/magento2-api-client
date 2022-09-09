@@ -7,26 +7,26 @@ class V1ReturnsPostBody
     /**
      * Interface RmaInterface
      *
-     * @var RmaDataRmaInterface
+     * @var RmaDataRmaInterface|null
      */
     protected $rmaDataObject;
     /**
      * Interface RmaInterface
      *
-     * @return RmaDataRmaInterface
+     * @return RmaDataRmaInterface|null
      */
-    public function getRmaDataObject(): RmaDataRmaInterface
+    public function getRmaDataObject(): ?RmaDataRmaInterface
     {
         return $this->rmaDataObject;
     }
     /**
      * Interface RmaInterface
      *
-     * @param RmaDataRmaInterface $rmaDataObject
+     * @param RmaDataRmaInterface|null $rmaDataObject
      *
      * @return self
      */
-    public function setRmaDataObject(RmaDataRmaInterface $rmaDataObject): self
+    public function setRmaDataObject(?RmaDataRmaInterface $rmaDataObject): self
     {
         $this->rmaDataObject = $rmaDataObject;
         return $this;

@@ -7,50 +7,50 @@ class FrameworkCriteriaInterface
     /**
      * Criteria objects added to current Composite Criteria
      *
-     * @var FrameworkCriteriaInterface[]
+     * @var FrameworkCriteriaInterface[]|null
      */
     protected $criteriaList;
     /**
      * List of filters
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $filters;
     /**
      * Limit
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $limit;
     /**
      * Associated Mapper Interface name
      *
-     * @var string
+     * @var string|null
      */
     protected $mapperInterfaceName;
     /**
      * Ordering criteria
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $orders;
     /**
      * Criteria objects added to current Composite Criteria
      *
-     * @return FrameworkCriteriaInterface[]
+     * @return FrameworkCriteriaInterface[]|null
      */
-    public function getCriteriaList(): array
+    public function getCriteriaList(): ?array
     {
         return $this->criteriaList;
     }
     /**
      * Criteria objects added to current Composite Criteria
      *
-     * @param FrameworkCriteriaInterface[] $criteriaList
+     * @param FrameworkCriteriaInterface[]|null $criteriaList
      *
      * @return self
      */
-    public function setCriteriaList(array $criteriaList): self
+    public function setCriteriaList(?array $criteriaList): self
     {
         $this->criteriaList = $criteriaList;
         return $this;
@@ -58,20 +58,20 @@ class FrameworkCriteriaInterface
     /**
      * List of filters
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getFilters(): array
+    public function getFilters(): ?array
     {
         return $this->filters;
     }
     /**
      * List of filters
      *
-     * @param string[] $filters
+     * @param string[]|null $filters
      *
      * @return self
      */
-    public function setFilters(array $filters): self
+    public function setFilters(?array $filters): self
     {
         $this->filters = $filters;
         return $this;
@@ -79,20 +79,20 @@ class FrameworkCriteriaInterface
     /**
      * Limit
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getLimit(): array
+    public function getLimit(): ?array
     {
         return $this->limit;
     }
     /**
      * Limit
      *
-     * @param string[] $limit
+     * @param string[]|null $limit
      *
      * @return self
      */
-    public function setLimit(array $limit): self
+    public function setLimit(?array $limit): self
     {
         $this->limit = $limit;
         return $this;
@@ -100,20 +100,20 @@ class FrameworkCriteriaInterface
     /**
      * Associated Mapper Interface name
      *
-     * @return string
+     * @return string|null
      */
-    public function getMapperInterfaceName(): string
+    public function getMapperInterfaceName(): ?string
     {
         return $this->mapperInterfaceName;
     }
     /**
      * Associated Mapper Interface name
      *
-     * @param string $mapperInterfaceName
+     * @param string|null $mapperInterfaceName
      *
      * @return self
      */
-    public function setMapperInterfaceName(string $mapperInterfaceName): self
+    public function setMapperInterfaceName(?string $mapperInterfaceName): self
     {
         $this->mapperInterfaceName = $mapperInterfaceName;
         return $this;
@@ -121,20 +121,20 @@ class FrameworkCriteriaInterface
     /**
      * Ordering criteria
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getOrders(): array
+    public function getOrders(): ?array
     {
         return $this->orders;
     }
     /**
      * Ordering criteria
      *
-     * @param string[] $orders
+     * @param string[]|null $orders
      *
      * @return self
      */
-    public function setOrders(array $orders): self
+    public function setOrders(?array $orders): self
     {
         $this->orders = $orders;
         return $this;

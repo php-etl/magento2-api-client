@@ -7,68 +7,68 @@ class RequisitionListDataRequisitionListItemInterface
     /**
      * Added_at value.
      *
-     * @var string
+     * @var string|null
      */
     protected $addedAt;
     /**
      * ExtensionInterface class for @see \Magento\RequisitionList\Api\Data\RequisitionListItemInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Requisition List ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Requisition list item options.
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $options;
     /**
      * Product Qty.
      *
-     * @var float
+     * @var float|null
      */
     protected $qty;
     /**
      * Requisition List ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $requisitionListId;
     /**
      * Product SKU.
      *
-     * @var string
+     * @var string|null
      */
     protected $sku;
     /**
      * Store ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $storeId;
     /**
      * Added_at value.
      *
-     * @return string
+     * @return string|null
      */
-    public function getAddedAt(): string
+    public function getAddedAt(): ?string
     {
         return $this->addedAt;
     }
     /**
      * Added_at value.
      *
-     * @param string $addedAt
+     * @param string|null $addedAt
      *
      * @return self
      */
-    public function setAddedAt(string $addedAt): self
+    public function setAddedAt(?string $addedAt): self
     {
         $this->addedAt = $addedAt;
         return $this;
@@ -97,20 +97,20 @@ class RequisitionListDataRequisitionListItemInterface
     /**
      * Requisition List ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * Requisition List ID.
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -118,20 +118,20 @@ class RequisitionListDataRequisitionListItemInterface
     /**
      * Requisition list item options.
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getOptions(): array
+    public function getOptions(): ?array
     {
         return $this->options;
     }
     /**
      * Requisition list item options.
      *
-     * @param string[] $options
+     * @param string[]|null $options
      *
      * @return self
      */
-    public function setOptions(array $options): self
+    public function setOptions(?array $options): self
     {
         $this->options = $options;
         return $this;
@@ -139,20 +139,20 @@ class RequisitionListDataRequisitionListItemInterface
     /**
      * Product Qty.
      *
-     * @return float
+     * @return float|null
      */
-    public function getQty(): float
+    public function getQty(): ?float
     {
         return $this->qty;
     }
     /**
      * Product Qty.
      *
-     * @param float $qty
+     * @param float|null $qty
      *
      * @return self
      */
-    public function setQty(float $qty): self
+    public function setQty(?float $qty): self
     {
         $this->qty = $qty;
         return $this;
@@ -160,20 +160,20 @@ class RequisitionListDataRequisitionListItemInterface
     /**
      * Requisition List ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getRequisitionListId(): int
+    public function getRequisitionListId(): ?int
     {
         return $this->requisitionListId;
     }
     /**
      * Requisition List ID.
      *
-     * @param int $requisitionListId
+     * @param int|null $requisitionListId
      *
      * @return self
      */
-    public function setRequisitionListId(int $requisitionListId): self
+    public function setRequisitionListId(?int $requisitionListId): self
     {
         $this->requisitionListId = $requisitionListId;
         return $this;
@@ -181,20 +181,20 @@ class RequisitionListDataRequisitionListItemInterface
     /**
      * Product SKU.
      *
-     * @return string
+     * @return string|null
      */
-    public function getSku(): string
+    public function getSku(): ?string
     {
         return $this->sku;
     }
     /**
      * Product SKU.
      *
-     * @param string $sku
+     * @param string|null $sku
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(?string $sku): self
     {
         $this->sku = $sku;
         return $this;
@@ -202,20 +202,20 @@ class RequisitionListDataRequisitionListItemInterface
     /**
      * Store ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getStoreId(): int
+    public function getStoreId(): ?int
     {
         return $this->storeId;
     }
     /**
      * Store ID.
      *
-     * @param int $storeId
+     * @param int|null $storeId
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(?int $storeId): self
     {
         $this->storeId = $storeId;
         return $this;

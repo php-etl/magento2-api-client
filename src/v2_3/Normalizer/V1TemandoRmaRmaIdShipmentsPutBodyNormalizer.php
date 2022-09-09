@@ -40,12 +40,14 @@ class V1TemandoRmaRmaIdShipmentsPutBodyNormalizer implements DenormalizerInterfa
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('returnShipmentIds', $data)) {
+        if (\array_key_exists('returnShipmentIds', $data) && $data['returnShipmentIds'] !== null) {
             $values = array();
             foreach ($data['returnShipmentIds'] as $value) {
                 $values[] = $value;
             }
             $object->setReturnShipmentIds($values);
+        } elseif (\array_key_exists('returnShipmentIds', $data) && $data['returnShipmentIds'] === null) {
+            $object->setReturnShipmentIds(null);
         }
         return $object;
     }

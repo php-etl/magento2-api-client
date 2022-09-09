@@ -40,8 +40,10 @@ class QuoteDataCartItemExtensionInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('negotiable_quote_item', $data)) {
+        if (\array_key_exists('negotiable_quote_item', $data) && $data['negotiable_quote_item'] !== null) {
             $object->setNegotiableQuoteItem($this->denormalizer->denormalize($data['negotiable_quote_item'], 'Kiboko\\Magento\\V2_1\\Model\\NegotiableQuoteDataNegotiableQuoteItemInterface', 'json', $context));
+        } elseif (\array_key_exists('negotiable_quote_item', $data) && $data['negotiable_quote_item'] === null) {
+            $object->setNegotiableQuoteItem(null);
         }
         return $object;
     }

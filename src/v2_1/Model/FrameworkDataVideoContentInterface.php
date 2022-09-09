@@ -7,56 +7,56 @@ class FrameworkDataVideoContentInterface
     /**
      * MIME type
      *
-     * @var string
+     * @var string|null
      */
     protected $mediaType;
     /**
      * Video Description
      *
-     * @var string
+     * @var string|null
      */
     protected $videoDescription;
     /**
      * Metadata
      *
-     * @var string
+     * @var string|null
      */
     protected $videoMetadata;
     /**
      * Provider
      *
-     * @var string
+     * @var string|null
      */
     protected $videoProvider;
     /**
      * Title
      *
-     * @var string
+     * @var string|null
      */
     protected $videoTitle;
     /**
      * Video URL
      *
-     * @var string
+     * @var string|null
      */
     protected $videoUrl;
     /**
      * MIME type
      *
-     * @return string
+     * @return string|null
      */
-    public function getMediaType(): string
+    public function getMediaType(): ?string
     {
         return $this->mediaType;
     }
     /**
      * MIME type
      *
-     * @param string $mediaType
+     * @param string|null $mediaType
      *
      * @return self
      */
-    public function setMediaType(string $mediaType): self
+    public function setMediaType(?string $mediaType): self
     {
         $this->mediaType = $mediaType;
         return $this;
@@ -64,20 +64,20 @@ class FrameworkDataVideoContentInterface
     /**
      * Video Description
      *
-     * @return string
+     * @return string|null
      */
-    public function getVideoDescription(): string
+    public function getVideoDescription(): ?string
     {
         return $this->videoDescription;
     }
     /**
      * Video Description
      *
-     * @param string $videoDescription
+     * @param string|null $videoDescription
      *
      * @return self
      */
-    public function setVideoDescription(string $videoDescription): self
+    public function setVideoDescription(?string $videoDescription): self
     {
         $this->videoDescription = $videoDescription;
         return $this;
@@ -85,20 +85,20 @@ class FrameworkDataVideoContentInterface
     /**
      * Metadata
      *
-     * @return string
+     * @return string|null
      */
-    public function getVideoMetadata(): string
+    public function getVideoMetadata(): ?string
     {
         return $this->videoMetadata;
     }
     /**
      * Metadata
      *
-     * @param string $videoMetadata
+     * @param string|null $videoMetadata
      *
      * @return self
      */
-    public function setVideoMetadata(string $videoMetadata): self
+    public function setVideoMetadata(?string $videoMetadata): self
     {
         $this->videoMetadata = $videoMetadata;
         return $this;
@@ -106,20 +106,20 @@ class FrameworkDataVideoContentInterface
     /**
      * Provider
      *
-     * @return string
+     * @return string|null
      */
-    public function getVideoProvider(): string
+    public function getVideoProvider(): ?string
     {
         return $this->videoProvider;
     }
     /**
      * Provider
      *
-     * @param string $videoProvider
+     * @param string|null $videoProvider
      *
      * @return self
      */
-    public function setVideoProvider(string $videoProvider): self
+    public function setVideoProvider(?string $videoProvider): self
     {
         $this->videoProvider = $videoProvider;
         return $this;
@@ -127,20 +127,20 @@ class FrameworkDataVideoContentInterface
     /**
      * Title
      *
-     * @return string
+     * @return string|null
      */
-    public function getVideoTitle(): string
+    public function getVideoTitle(): ?string
     {
         return $this->videoTitle;
     }
     /**
      * Title
      *
-     * @param string $videoTitle
+     * @param string|null $videoTitle
      *
      * @return self
      */
-    public function setVideoTitle(string $videoTitle): self
+    public function setVideoTitle(?string $videoTitle): self
     {
         $this->videoTitle = $videoTitle;
         return $this;
@@ -148,20 +148,20 @@ class FrameworkDataVideoContentInterface
     /**
      * Video URL
      *
-     * @return string
+     * @return string|null
      */
-    public function getVideoUrl(): string
+    public function getVideoUrl(): ?string
     {
         return $this->videoUrl;
     }
     /**
      * Video URL
      *
-     * @param string $videoUrl
+     * @param string|null $videoUrl
      *
      * @return self
      */
-    public function setVideoUrl(string $videoUrl): self
+    public function setVideoUrl(?string $videoUrl): self
     {
         $this->videoUrl = $videoUrl;
         return $this;

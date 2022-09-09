@@ -40,20 +40,30 @@ class SalesDataShipmentExtensionInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('ext_location_id', $data)) {
+        if (\array_key_exists('ext_location_id', $data) && $data['ext_location_id'] !== null) {
             $object->setExtLocationId($data['ext_location_id']);
+        } elseif (\array_key_exists('ext_location_id', $data) && $data['ext_location_id'] === null) {
+            $object->setExtLocationId(null);
         }
-        if (\array_key_exists('ext_return_shipment_id', $data)) {
+        if (\array_key_exists('ext_return_shipment_id', $data) && $data['ext_return_shipment_id'] !== null) {
             $object->setExtReturnShipmentId($data['ext_return_shipment_id']);
+        } elseif (\array_key_exists('ext_return_shipment_id', $data) && $data['ext_return_shipment_id'] === null) {
+            $object->setExtReturnShipmentId(null);
         }
-        if (\array_key_exists('ext_shipment_id', $data)) {
+        if (\array_key_exists('ext_shipment_id', $data) && $data['ext_shipment_id'] !== null) {
             $object->setExtShipmentId($data['ext_shipment_id']);
+        } elseif (\array_key_exists('ext_shipment_id', $data) && $data['ext_shipment_id'] === null) {
+            $object->setExtShipmentId(null);
         }
-        if (\array_key_exists('ext_tracking_reference', $data)) {
+        if (\array_key_exists('ext_tracking_reference', $data) && $data['ext_tracking_reference'] !== null) {
             $object->setExtTrackingReference($data['ext_tracking_reference']);
+        } elseif (\array_key_exists('ext_tracking_reference', $data) && $data['ext_tracking_reference'] === null) {
+            $object->setExtTrackingReference(null);
         }
-        if (\array_key_exists('ext_tracking_url', $data)) {
+        if (\array_key_exists('ext_tracking_url', $data) && $data['ext_tracking_url'] !== null) {
             $object->setExtTrackingUrl($data['ext_tracking_url']);
+        } elseif (\array_key_exists('ext_tracking_url', $data) && $data['ext_tracking_url'] === null) {
+            $object->setExtTrackingUrl(null);
         }
         return $object;
     }

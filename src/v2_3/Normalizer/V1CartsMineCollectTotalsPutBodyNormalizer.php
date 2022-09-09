@@ -40,17 +40,25 @@ class V1CartsMineCollectTotalsPutBodyNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('additionalData', $data)) {
+        if (\array_key_exists('additionalData', $data) && $data['additionalData'] !== null) {
             $object->setAdditionalData($this->denormalizer->denormalize($data['additionalData'], 'Kiboko\\Magento\\V2_3\\Model\\QuoteDataTotalsAdditionalDataInterface', 'json', $context));
+        } elseif (\array_key_exists('additionalData', $data) && $data['additionalData'] === null) {
+            $object->setAdditionalData(null);
         }
-        if (\array_key_exists('paymentMethod', $data)) {
+        if (\array_key_exists('paymentMethod', $data) && $data['paymentMethod'] !== null) {
             $object->setPaymentMethod($this->denormalizer->denormalize($data['paymentMethod'], 'Kiboko\\Magento\\V2_3\\Model\\QuoteDataPaymentInterface', 'json', $context));
+        } elseif (\array_key_exists('paymentMethod', $data) && $data['paymentMethod'] === null) {
+            $object->setPaymentMethod(null);
         }
-        if (\array_key_exists('shippingCarrierCode', $data)) {
+        if (\array_key_exists('shippingCarrierCode', $data) && $data['shippingCarrierCode'] !== null) {
             $object->setShippingCarrierCode($data['shippingCarrierCode']);
+        } elseif (\array_key_exists('shippingCarrierCode', $data) && $data['shippingCarrierCode'] === null) {
+            $object->setShippingCarrierCode(null);
         }
-        if (\array_key_exists('shippingMethodCode', $data)) {
+        if (\array_key_exists('shippingMethodCode', $data) && $data['shippingMethodCode'] !== null) {
             $object->setShippingMethodCode($data['shippingMethodCode']);
+        } elseif (\array_key_exists('shippingMethodCode', $data) && $data['shippingMethodCode'] === null) {
+            $object->setShippingMethodCode(null);
         }
         return $object;
     }

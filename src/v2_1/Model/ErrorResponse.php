@@ -7,50 +7,50 @@ class ErrorResponse
     /**
      * Error code
      *
-     * @var int
+     * @var int|null
      */
     protected $code;
     /**
      * Errors list
      *
-     * @var ErrorErrorsItem[]
+     * @var ErrorErrorsItem[]|null
      */
     protected $errors;
     /**
      * Error message
      *
-     * @var string
+     * @var string|null
      */
     protected $message;
     /**
      * Error parameters list
      *
-     * @var ErrorParametersItem[]
+     * @var ErrorParametersItem[]|null
      */
     protected $parameters;
     /**
      * Stack trace
      *
-     * @var string
+     * @var string|null
      */
     protected $trace;
     /**
      * Error code
      *
-     * @return int
+     * @return int|null
      */
-    public function getCode(): int
+    public function getCode(): ?int
     {
         return $this->code;
     }
     /**
      * Error code
      *
-     * @param int $code
+     * @param int|null $code
      *
      * @return self
      */
-    public function setCode(int $code): self
+    public function setCode(?int $code): self
     {
         $this->code = $code;
         return $this;
@@ -58,20 +58,20 @@ class ErrorResponse
     /**
      * Errors list
      *
-     * @return ErrorErrorsItem[]
+     * @return ErrorErrorsItem[]|null
      */
-    public function getErrors(): array
+    public function getErrors(): ?array
     {
         return $this->errors;
     }
     /**
      * Errors list
      *
-     * @param ErrorErrorsItem[] $errors
+     * @param ErrorErrorsItem[]|null $errors
      *
      * @return self
      */
-    public function setErrors(array $errors): self
+    public function setErrors(?array $errors): self
     {
         $this->errors = $errors;
         return $this;
@@ -79,20 +79,20 @@ class ErrorResponse
     /**
      * Error message
      *
-     * @return string
+     * @return string|null
      */
-    public function getMessage(): string
+    public function getMessage(): ?string
     {
         return $this->message;
     }
     /**
      * Error message
      *
-     * @param string $message
+     * @param string|null $message
      *
      * @return self
      */
-    public function setMessage(string $message): self
+    public function setMessage(?string $message): self
     {
         $this->message = $message;
         return $this;
@@ -100,20 +100,20 @@ class ErrorResponse
     /**
      * Error parameters list
      *
-     * @return ErrorParametersItem[]
+     * @return ErrorParametersItem[]|null
      */
-    public function getParameters(): array
+    public function getParameters(): ?array
     {
         return $this->parameters;
     }
     /**
      * Error parameters list
      *
-     * @param ErrorParametersItem[] $parameters
+     * @param ErrorParametersItem[]|null $parameters
      *
      * @return self
      */
-    public function setParameters(array $parameters): self
+    public function setParameters(?array $parameters): self
     {
         $this->parameters = $parameters;
         return $this;
@@ -121,20 +121,20 @@ class ErrorResponse
     /**
      * Stack trace
      *
-     * @return string
+     * @return string|null
      */
-    public function getTrace(): string
+    public function getTrace(): ?string
     {
         return $this->trace;
     }
     /**
      * Stack trace
      *
-     * @param string $trace
+     * @param string|null $trace
      *
      * @return self
      */
-    public function setTrace(string $trace): self
+    public function setTrace(?string $trace): self
     {
         $this->trace = $trace;
         return $this;

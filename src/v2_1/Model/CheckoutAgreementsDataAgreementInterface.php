@@ -7,74 +7,74 @@ class CheckoutAgreementsDataAgreementInterface
     /**
      * Agreement ID.
      *
-     * @var int
+     * @var int|null
      */
     protected $agreementId;
     /**
      * Agreement checkbox text.
      *
-     * @var string
+     * @var string|null
      */
     protected $checkboxText;
     /**
      * Agreement content.
      *
-     * @var string
+     * @var string|null
      */
     protected $content;
     /**
      * Agreement content height. Otherwise, null.
      *
-     * @var string
+     * @var string|null
      */
     protected $contentHeight;
     /**
      * ExtensionInterface class for @see \Magento\CheckoutAgreements\Api\Data\AgreementInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Agreement status.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isActive;
     /**
      * * true - HTML. * false - plain text.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isHtml;
     /**
      * The agreement applied mode.
      *
-     * @var int
+     * @var int|null
      */
     protected $mode;
     /**
      * Agreement name.
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      * Agreement ID.
      *
-     * @return int
+     * @return int|null
      */
-    public function getAgreementId(): int
+    public function getAgreementId(): ?int
     {
         return $this->agreementId;
     }
     /**
      * Agreement ID.
      *
-     * @param int $agreementId
+     * @param int|null $agreementId
      *
      * @return self
      */
-    public function setAgreementId(int $agreementId): self
+    public function setAgreementId(?int $agreementId): self
     {
         $this->agreementId = $agreementId;
         return $this;
@@ -82,20 +82,20 @@ class CheckoutAgreementsDataAgreementInterface
     /**
      * Agreement checkbox text.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCheckboxText(): string
+    public function getCheckboxText(): ?string
     {
         return $this->checkboxText;
     }
     /**
      * Agreement checkbox text.
      *
-     * @param string $checkboxText
+     * @param string|null $checkboxText
      *
      * @return self
      */
-    public function setCheckboxText(string $checkboxText): self
+    public function setCheckboxText(?string $checkboxText): self
     {
         $this->checkboxText = $checkboxText;
         return $this;
@@ -103,20 +103,20 @@ class CheckoutAgreementsDataAgreementInterface
     /**
      * Agreement content.
      *
-     * @return string
+     * @return string|null
      */
-    public function getContent(): string
+    public function getContent(): ?string
     {
         return $this->content;
     }
     /**
      * Agreement content.
      *
-     * @param string $content
+     * @param string|null $content
      *
      * @return self
      */
-    public function setContent(string $content): self
+    public function setContent(?string $content): self
     {
         $this->content = $content;
         return $this;
@@ -124,20 +124,20 @@ class CheckoutAgreementsDataAgreementInterface
     /**
      * Agreement content height. Otherwise, null.
      *
-     * @return string
+     * @return string|null
      */
-    public function getContentHeight(): string
+    public function getContentHeight(): ?string
     {
         return $this->contentHeight;
     }
     /**
      * Agreement content height. Otherwise, null.
      *
-     * @param string $contentHeight
+     * @param string|null $contentHeight
      *
      * @return self
      */
-    public function setContentHeight(string $contentHeight): self
+    public function setContentHeight(?string $contentHeight): self
     {
         $this->contentHeight = $contentHeight;
         return $this;
@@ -166,20 +166,20 @@ class CheckoutAgreementsDataAgreementInterface
     /**
      * Agreement status.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsActive(): bool
+    public function getIsActive(): ?bool
     {
         return $this->isActive;
     }
     /**
      * Agreement status.
      *
-     * @param bool $isActive
+     * @param bool|null $isActive
      *
      * @return self
      */
-    public function setIsActive(bool $isActive): self
+    public function setIsActive(?bool $isActive): self
     {
         $this->isActive = $isActive;
         return $this;
@@ -187,20 +187,20 @@ class CheckoutAgreementsDataAgreementInterface
     /**
      * * true - HTML. * false - plain text.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsHtml(): bool
+    public function getIsHtml(): ?bool
     {
         return $this->isHtml;
     }
     /**
      * * true - HTML. * false - plain text.
      *
-     * @param bool $isHtml
+     * @param bool|null $isHtml
      *
      * @return self
      */
-    public function setIsHtml(bool $isHtml): self
+    public function setIsHtml(?bool $isHtml): self
     {
         $this->isHtml = $isHtml;
         return $this;
@@ -208,20 +208,20 @@ class CheckoutAgreementsDataAgreementInterface
     /**
      * The agreement applied mode.
      *
-     * @return int
+     * @return int|null
      */
-    public function getMode(): int
+    public function getMode(): ?int
     {
         return $this->mode;
     }
     /**
      * The agreement applied mode.
      *
-     * @param int $mode
+     * @param int|null $mode
      *
      * @return self
      */
-    public function setMode(int $mode): self
+    public function setMode(?int $mode): self
     {
         $this->mode = $mode;
         return $this;
@@ -229,20 +229,20 @@ class CheckoutAgreementsDataAgreementInterface
     /**
      * Agreement name.
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      * Agreement name.
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;

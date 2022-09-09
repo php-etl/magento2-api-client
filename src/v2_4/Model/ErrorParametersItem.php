@@ -7,38 +7,38 @@ class ErrorParametersItem
     /**
      * Missing or invalid field name
      *
-     * @var string
+     * @var string|null
      */
     protected $fieldName;
     /**
      * Incorrect field value
      *
-     * @var string
+     * @var string|null
      */
     protected $fieldValue;
     /**
      * ACL resource
      *
-     * @var string
+     * @var string|null
      */
     protected $resources;
     /**
      * Missing or invalid field name
      *
-     * @return string
+     * @return string|null
      */
-    public function getFieldName(): string
+    public function getFieldName(): ?string
     {
         return $this->fieldName;
     }
     /**
      * Missing or invalid field name
      *
-     * @param string $fieldName
+     * @param string|null $fieldName
      *
      * @return self
      */
-    public function setFieldName(string $fieldName): self
+    public function setFieldName(?string $fieldName): self
     {
         $this->fieldName = $fieldName;
         return $this;
@@ -46,20 +46,20 @@ class ErrorParametersItem
     /**
      * Incorrect field value
      *
-     * @return string
+     * @return string|null
      */
-    public function getFieldValue(): string
+    public function getFieldValue(): ?string
     {
         return $this->fieldValue;
     }
     /**
      * Incorrect field value
      *
-     * @param string $fieldValue
+     * @param string|null $fieldValue
      *
      * @return self
      */
-    public function setFieldValue(string $fieldValue): self
+    public function setFieldValue(?string $fieldValue): self
     {
         $this->fieldValue = $fieldValue;
         return $this;
@@ -67,20 +67,20 @@ class ErrorParametersItem
     /**
      * ACL resource
      *
-     * @return string
+     * @return string|null
      */
-    public function getResources(): string
+    public function getResources(): ?string
     {
         return $this->resources;
     }
     /**
      * ACL resource
      *
-     * @param string $resources
+     * @param string|null $resources
      *
      * @return self
      */
-    public function setResources(string $resources): self
+    public function setResources(?string $resources): self
     {
         $this->resources = $resources;
         return $this;

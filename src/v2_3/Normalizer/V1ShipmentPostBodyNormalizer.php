@@ -40,8 +40,10 @@ class V1ShipmentPostBodyNormalizer implements DenormalizerInterface, NormalizerI
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('entity', $data)) {
+        if (\array_key_exists('entity', $data) && $data['entity'] !== null) {
             $object->setEntity($this->denormalizer->denormalize($data['entity'], 'Kiboko\\Magento\\V2_3\\Model\\SalesDataShipmentInterface', 'json', $context));
+        } elseif (\array_key_exists('entity', $data) && $data['entity'] === null) {
+            $object->setEntity(null);
         }
         return $object;
     }

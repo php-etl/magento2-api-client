@@ -40,8 +40,10 @@ class V1GuestGiftregistryCartIdEstimateShippingMethodsPostBodyNormalizer impleme
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('registryId', $data)) {
+        if (\array_key_exists('registryId', $data) && $data['registryId'] !== null) {
             $object->setRegistryId($data['registryId']);
+        } elseif (\array_key_exists('registryId', $data) && $data['registryId'] === null) {
+            $object->setRegistryId(null);
         }
         return $object;
     }

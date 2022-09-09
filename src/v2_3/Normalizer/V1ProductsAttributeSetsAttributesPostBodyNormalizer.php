@@ -40,17 +40,25 @@ class V1ProductsAttributeSetsAttributesPostBodyNormalizer implements Denormalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('attributeCode', $data)) {
+        if (\array_key_exists('attributeCode', $data) && $data['attributeCode'] !== null) {
             $object->setAttributeCode($data['attributeCode']);
+        } elseif (\array_key_exists('attributeCode', $data) && $data['attributeCode'] === null) {
+            $object->setAttributeCode(null);
         }
-        if (\array_key_exists('attributeGroupId', $data)) {
+        if (\array_key_exists('attributeGroupId', $data) && $data['attributeGroupId'] !== null) {
             $object->setAttributeGroupId($data['attributeGroupId']);
+        } elseif (\array_key_exists('attributeGroupId', $data) && $data['attributeGroupId'] === null) {
+            $object->setAttributeGroupId(null);
         }
-        if (\array_key_exists('attributeSetId', $data)) {
+        if (\array_key_exists('attributeSetId', $data) && $data['attributeSetId'] !== null) {
             $object->setAttributeSetId($data['attributeSetId']);
+        } elseif (\array_key_exists('attributeSetId', $data) && $data['attributeSetId'] === null) {
+            $object->setAttributeSetId(null);
         }
-        if (\array_key_exists('sortOrder', $data)) {
+        if (\array_key_exists('sortOrder', $data) && $data['sortOrder'] !== null) {
             $object->setSortOrder($data['sortOrder']);
+        } elseif (\array_key_exists('sortOrder', $data) && $data['sortOrder'] === null) {
+            $object->setSortOrder(null);
         }
         return $object;
     }

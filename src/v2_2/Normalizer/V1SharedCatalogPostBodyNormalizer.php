@@ -40,8 +40,10 @@ class V1SharedCatalogPostBodyNormalizer implements DenormalizerInterface, Normal
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('sharedCatalog', $data)) {
+        if (\array_key_exists('sharedCatalog', $data) && $data['sharedCatalog'] !== null) {
             $object->setSharedCatalog($this->denormalizer->denormalize($data['sharedCatalog'], 'Kiboko\\Magento\\V2_2\\Model\\SharedCatalogDataSharedCatalogInterface', 'json', $context));
+        } elseif (\array_key_exists('sharedCatalog', $data) && $data['sharedCatalog'] === null) {
+            $object->setSharedCatalog(null);
         }
         return $object;
     }

@@ -43,14 +43,20 @@ class TemandoShippingDataOrderShippingExperienceInterfaceNormalizer implements D
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('code', $data)) {
+        if (\array_key_exists('code', $data) && $data['code'] !== null) {
             $object->setCode($data['code']);
+        } elseif (\array_key_exists('code', $data) && $data['code'] === null) {
+            $object->setCode(null);
         }
-        if (\array_key_exists('cost', $data)) {
+        if (\array_key_exists('cost', $data) && $data['cost'] !== null) {
             $object->setCost($data['cost']);
+        } elseif (\array_key_exists('cost', $data) && $data['cost'] === null) {
+            $object->setCost(null);
         }
-        if (\array_key_exists('label', $data)) {
+        if (\array_key_exists('label', $data) && $data['label'] !== null) {
             $object->setLabel($data['label']);
+        } elseif (\array_key_exists('label', $data) && $data['label'] === null) {
+            $object->setLabel(null);
         }
         return $object;
     }

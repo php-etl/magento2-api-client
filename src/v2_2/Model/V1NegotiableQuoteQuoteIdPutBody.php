@@ -7,26 +7,26 @@ class V1NegotiableQuoteQuoteIdPutBody
     /**
      * Interface CartInterface
      *
-     * @var QuoteDataCartInterface
+     * @var QuoteDataCartInterface|null
      */
     protected $quote;
     /**
      * Interface CartInterface
      *
-     * @return QuoteDataCartInterface
+     * @return QuoteDataCartInterface|null
      */
-    public function getQuote(): QuoteDataCartInterface
+    public function getQuote(): ?QuoteDataCartInterface
     {
         return $this->quote;
     }
     /**
      * Interface CartInterface
      *
-     * @param QuoteDataCartInterface $quote
+     * @param QuoteDataCartInterface|null $quote
      *
      * @return self
      */
-    public function setQuote(QuoteDataCartInterface $quote): self
+    public function setQuote(?QuoteDataCartInterface $quote): self
     {
         $this->quote = $quote;
         return $this;

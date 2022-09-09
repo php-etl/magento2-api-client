@@ -40,23 +40,35 @@ class CompanyDataCompanyCustomerInterfaceNormalizer implements DenormalizerInter
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('company_id', $data)) {
+        if (\array_key_exists('company_id', $data) && $data['company_id'] !== null) {
             $object->setCompanyId($data['company_id']);
+        } elseif (\array_key_exists('company_id', $data) && $data['company_id'] === null) {
+            $object->setCompanyId(null);
         }
-        if (\array_key_exists('customer_id', $data)) {
+        if (\array_key_exists('customer_id', $data) && $data['customer_id'] !== null) {
             $object->setCustomerId($data['customer_id']);
+        } elseif (\array_key_exists('customer_id', $data) && $data['customer_id'] === null) {
+            $object->setCustomerId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('job_title', $data)) {
+        if (\array_key_exists('job_title', $data) && $data['job_title'] !== null) {
             $object->setJobTitle($data['job_title']);
+        } elseif (\array_key_exists('job_title', $data) && $data['job_title'] === null) {
+            $object->setJobTitle(null);
         }
-        if (\array_key_exists('status', $data)) {
+        if (\array_key_exists('status', $data) && $data['status'] !== null) {
             $object->setStatus($data['status']);
+        } elseif (\array_key_exists('status', $data) && $data['status'] === null) {
+            $object->setStatus(null);
         }
-        if (\array_key_exists('telephone', $data)) {
+        if (\array_key_exists('telephone', $data) && $data['telephone'] !== null) {
             $object->setTelephone($data['telephone']);
+        } elseif (\array_key_exists('telephone', $data) && $data['telephone'] === null) {
+            $object->setTelephone(null);
         }
         return $object;
     }

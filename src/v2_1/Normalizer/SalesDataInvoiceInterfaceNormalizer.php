@@ -118,154 +118,248 @@ class SalesDataInvoiceInterfaceNormalizer implements DenormalizerInterface, Norm
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('base_currency_code', $data)) {
+        if (\array_key_exists('base_currency_code', $data) && $data['base_currency_code'] !== null) {
             $object->setBaseCurrencyCode($data['base_currency_code']);
+        } elseif (\array_key_exists('base_currency_code', $data) && $data['base_currency_code'] === null) {
+            $object->setBaseCurrencyCode(null);
         }
-        if (\array_key_exists('base_discount_amount', $data)) {
+        if (\array_key_exists('base_discount_amount', $data) && $data['base_discount_amount'] !== null) {
             $object->setBaseDiscountAmount($data['base_discount_amount']);
+        } elseif (\array_key_exists('base_discount_amount', $data) && $data['base_discount_amount'] === null) {
+            $object->setBaseDiscountAmount(null);
         }
-        if (\array_key_exists('base_discount_tax_compensation_amount', $data)) {
+        if (\array_key_exists('base_discount_tax_compensation_amount', $data) && $data['base_discount_tax_compensation_amount'] !== null) {
             $object->setBaseDiscountTaxCompensationAmount($data['base_discount_tax_compensation_amount']);
+        } elseif (\array_key_exists('base_discount_tax_compensation_amount', $data) && $data['base_discount_tax_compensation_amount'] === null) {
+            $object->setBaseDiscountTaxCompensationAmount(null);
         }
-        if (\array_key_exists('base_grand_total', $data)) {
+        if (\array_key_exists('base_grand_total', $data) && $data['base_grand_total'] !== null) {
             $object->setBaseGrandTotal($data['base_grand_total']);
+        } elseif (\array_key_exists('base_grand_total', $data) && $data['base_grand_total'] === null) {
+            $object->setBaseGrandTotal(null);
         }
-        if (\array_key_exists('base_shipping_amount', $data)) {
+        if (\array_key_exists('base_shipping_amount', $data) && $data['base_shipping_amount'] !== null) {
             $object->setBaseShippingAmount($data['base_shipping_amount']);
+        } elseif (\array_key_exists('base_shipping_amount', $data) && $data['base_shipping_amount'] === null) {
+            $object->setBaseShippingAmount(null);
         }
-        if (\array_key_exists('base_shipping_discount_tax_compensation_amnt', $data)) {
+        if (\array_key_exists('base_shipping_discount_tax_compensation_amnt', $data) && $data['base_shipping_discount_tax_compensation_amnt'] !== null) {
             $object->setBaseShippingDiscountTaxCompensationAmnt($data['base_shipping_discount_tax_compensation_amnt']);
+        } elseif (\array_key_exists('base_shipping_discount_tax_compensation_amnt', $data) && $data['base_shipping_discount_tax_compensation_amnt'] === null) {
+            $object->setBaseShippingDiscountTaxCompensationAmnt(null);
         }
-        if (\array_key_exists('base_shipping_incl_tax', $data)) {
+        if (\array_key_exists('base_shipping_incl_tax', $data) && $data['base_shipping_incl_tax'] !== null) {
             $object->setBaseShippingInclTax($data['base_shipping_incl_tax']);
+        } elseif (\array_key_exists('base_shipping_incl_tax', $data) && $data['base_shipping_incl_tax'] === null) {
+            $object->setBaseShippingInclTax(null);
         }
-        if (\array_key_exists('base_shipping_tax_amount', $data)) {
+        if (\array_key_exists('base_shipping_tax_amount', $data) && $data['base_shipping_tax_amount'] !== null) {
             $object->setBaseShippingTaxAmount($data['base_shipping_tax_amount']);
+        } elseif (\array_key_exists('base_shipping_tax_amount', $data) && $data['base_shipping_tax_amount'] === null) {
+            $object->setBaseShippingTaxAmount(null);
         }
-        if (\array_key_exists('base_subtotal', $data)) {
+        if (\array_key_exists('base_subtotal', $data) && $data['base_subtotal'] !== null) {
             $object->setBaseSubtotal($data['base_subtotal']);
+        } elseif (\array_key_exists('base_subtotal', $data) && $data['base_subtotal'] === null) {
+            $object->setBaseSubtotal(null);
         }
-        if (\array_key_exists('base_subtotal_incl_tax', $data)) {
+        if (\array_key_exists('base_subtotal_incl_tax', $data) && $data['base_subtotal_incl_tax'] !== null) {
             $object->setBaseSubtotalInclTax($data['base_subtotal_incl_tax']);
+        } elseif (\array_key_exists('base_subtotal_incl_tax', $data) && $data['base_subtotal_incl_tax'] === null) {
+            $object->setBaseSubtotalInclTax(null);
         }
-        if (\array_key_exists('base_tax_amount', $data)) {
+        if (\array_key_exists('base_tax_amount', $data) && $data['base_tax_amount'] !== null) {
             $object->setBaseTaxAmount($data['base_tax_amount']);
+        } elseif (\array_key_exists('base_tax_amount', $data) && $data['base_tax_amount'] === null) {
+            $object->setBaseTaxAmount(null);
         }
-        if (\array_key_exists('base_to_global_rate', $data)) {
+        if (\array_key_exists('base_to_global_rate', $data) && $data['base_to_global_rate'] !== null) {
             $object->setBaseToGlobalRate($data['base_to_global_rate']);
+        } elseif (\array_key_exists('base_to_global_rate', $data) && $data['base_to_global_rate'] === null) {
+            $object->setBaseToGlobalRate(null);
         }
-        if (\array_key_exists('base_to_order_rate', $data)) {
+        if (\array_key_exists('base_to_order_rate', $data) && $data['base_to_order_rate'] !== null) {
             $object->setBaseToOrderRate($data['base_to_order_rate']);
+        } elseif (\array_key_exists('base_to_order_rate', $data) && $data['base_to_order_rate'] === null) {
+            $object->setBaseToOrderRate(null);
         }
-        if (\array_key_exists('base_total_refunded', $data)) {
+        if (\array_key_exists('base_total_refunded', $data) && $data['base_total_refunded'] !== null) {
             $object->setBaseTotalRefunded($data['base_total_refunded']);
+        } elseif (\array_key_exists('base_total_refunded', $data) && $data['base_total_refunded'] === null) {
+            $object->setBaseTotalRefunded(null);
         }
-        if (\array_key_exists('billing_address_id', $data)) {
+        if (\array_key_exists('billing_address_id', $data) && $data['billing_address_id'] !== null) {
             $object->setBillingAddressId($data['billing_address_id']);
+        } elseif (\array_key_exists('billing_address_id', $data) && $data['billing_address_id'] === null) {
+            $object->setBillingAddressId(null);
         }
-        if (\array_key_exists('can_void_flag', $data)) {
+        if (\array_key_exists('can_void_flag', $data) && $data['can_void_flag'] !== null) {
             $object->setCanVoidFlag($data['can_void_flag']);
+        } elseif (\array_key_exists('can_void_flag', $data) && $data['can_void_flag'] === null) {
+            $object->setCanVoidFlag(null);
         }
-        if (\array_key_exists('comments', $data)) {
+        if (\array_key_exists('comments', $data) && $data['comments'] !== null) {
             $values = array();
             foreach ($data['comments'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\SalesDataInvoiceCommentInterface', 'json', $context);
             }
             $object->setComments($values);
+        } elseif (\array_key_exists('comments', $data) && $data['comments'] === null) {
+            $object->setComments(null);
         }
-        if (\array_key_exists('created_at', $data)) {
+        if (\array_key_exists('created_at', $data) && $data['created_at'] !== null) {
             $object->setCreatedAt($data['created_at']);
+        } elseif (\array_key_exists('created_at', $data) && $data['created_at'] === null) {
+            $object->setCreatedAt(null);
         }
-        if (\array_key_exists('discount_amount', $data)) {
+        if (\array_key_exists('discount_amount', $data) && $data['discount_amount'] !== null) {
             $object->setDiscountAmount($data['discount_amount']);
+        } elseif (\array_key_exists('discount_amount', $data) && $data['discount_amount'] === null) {
+            $object->setDiscountAmount(null);
         }
-        if (\array_key_exists('discount_description', $data)) {
+        if (\array_key_exists('discount_description', $data) && $data['discount_description'] !== null) {
             $object->setDiscountDescription($data['discount_description']);
+        } elseif (\array_key_exists('discount_description', $data) && $data['discount_description'] === null) {
+            $object->setDiscountDescription(null);
         }
-        if (\array_key_exists('discount_tax_compensation_amount', $data)) {
+        if (\array_key_exists('discount_tax_compensation_amount', $data) && $data['discount_tax_compensation_amount'] !== null) {
             $object->setDiscountTaxCompensationAmount($data['discount_tax_compensation_amount']);
+        } elseif (\array_key_exists('discount_tax_compensation_amount', $data) && $data['discount_tax_compensation_amount'] === null) {
+            $object->setDiscountTaxCompensationAmount(null);
         }
-        if (\array_key_exists('email_sent', $data)) {
+        if (\array_key_exists('email_sent', $data) && $data['email_sent'] !== null) {
             $object->setEmailSent($data['email_sent']);
+        } elseif (\array_key_exists('email_sent', $data) && $data['email_sent'] === null) {
+            $object->setEmailSent(null);
         }
-        if (\array_key_exists('entity_id', $data)) {
+        if (\array_key_exists('entity_id', $data) && $data['entity_id'] !== null) {
             $object->setEntityId($data['entity_id']);
+        } elseif (\array_key_exists('entity_id', $data) && $data['entity_id'] === null) {
+            $object->setEntityId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_1\\Model\\SalesDataInvoiceExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('global_currency_code', $data)) {
+        if (\array_key_exists('global_currency_code', $data) && $data['global_currency_code'] !== null) {
             $object->setGlobalCurrencyCode($data['global_currency_code']);
+        } elseif (\array_key_exists('global_currency_code', $data) && $data['global_currency_code'] === null) {
+            $object->setGlobalCurrencyCode(null);
         }
-        if (\array_key_exists('grand_total', $data)) {
+        if (\array_key_exists('grand_total', $data) && $data['grand_total'] !== null) {
             $object->setGrandTotal($data['grand_total']);
+        } elseif (\array_key_exists('grand_total', $data) && $data['grand_total'] === null) {
+            $object->setGrandTotal(null);
         }
-        if (\array_key_exists('increment_id', $data)) {
+        if (\array_key_exists('increment_id', $data) && $data['increment_id'] !== null) {
             $object->setIncrementId($data['increment_id']);
+        } elseif (\array_key_exists('increment_id', $data) && $data['increment_id'] === null) {
+            $object->setIncrementId(null);
         }
-        if (\array_key_exists('is_used_for_refund', $data)) {
+        if (\array_key_exists('is_used_for_refund', $data) && $data['is_used_for_refund'] !== null) {
             $object->setIsUsedForRefund($data['is_used_for_refund']);
+        } elseif (\array_key_exists('is_used_for_refund', $data) && $data['is_used_for_refund'] === null) {
+            $object->setIsUsedForRefund(null);
         }
-        if (\array_key_exists('items', $data)) {
+        if (\array_key_exists('items', $data) && $data['items'] !== null) {
             $values_1 = array();
             foreach ($data['items'] as $value_1) {
                 $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_1\\Model\\SalesDataInvoiceItemInterface', 'json', $context);
             }
             $object->setItems($values_1);
+        } elseif (\array_key_exists('items', $data) && $data['items'] === null) {
+            $object->setItems(null);
         }
-        if (\array_key_exists('order_currency_code', $data)) {
+        if (\array_key_exists('order_currency_code', $data) && $data['order_currency_code'] !== null) {
             $object->setOrderCurrencyCode($data['order_currency_code']);
+        } elseif (\array_key_exists('order_currency_code', $data) && $data['order_currency_code'] === null) {
+            $object->setOrderCurrencyCode(null);
         }
-        if (\array_key_exists('order_id', $data)) {
+        if (\array_key_exists('order_id', $data) && $data['order_id'] !== null) {
             $object->setOrderId($data['order_id']);
+        } elseif (\array_key_exists('order_id', $data) && $data['order_id'] === null) {
+            $object->setOrderId(null);
         }
-        if (\array_key_exists('shipping_address_id', $data)) {
+        if (\array_key_exists('shipping_address_id', $data) && $data['shipping_address_id'] !== null) {
             $object->setShippingAddressId($data['shipping_address_id']);
+        } elseif (\array_key_exists('shipping_address_id', $data) && $data['shipping_address_id'] === null) {
+            $object->setShippingAddressId(null);
         }
-        if (\array_key_exists('shipping_amount', $data)) {
+        if (\array_key_exists('shipping_amount', $data) && $data['shipping_amount'] !== null) {
             $object->setShippingAmount($data['shipping_amount']);
+        } elseif (\array_key_exists('shipping_amount', $data) && $data['shipping_amount'] === null) {
+            $object->setShippingAmount(null);
         }
-        if (\array_key_exists('shipping_discount_tax_compensation_amount', $data)) {
+        if (\array_key_exists('shipping_discount_tax_compensation_amount', $data) && $data['shipping_discount_tax_compensation_amount'] !== null) {
             $object->setShippingDiscountTaxCompensationAmount($data['shipping_discount_tax_compensation_amount']);
+        } elseif (\array_key_exists('shipping_discount_tax_compensation_amount', $data) && $data['shipping_discount_tax_compensation_amount'] === null) {
+            $object->setShippingDiscountTaxCompensationAmount(null);
         }
-        if (\array_key_exists('shipping_incl_tax', $data)) {
+        if (\array_key_exists('shipping_incl_tax', $data) && $data['shipping_incl_tax'] !== null) {
             $object->setShippingInclTax($data['shipping_incl_tax']);
+        } elseif (\array_key_exists('shipping_incl_tax', $data) && $data['shipping_incl_tax'] === null) {
+            $object->setShippingInclTax(null);
         }
-        if (\array_key_exists('shipping_tax_amount', $data)) {
+        if (\array_key_exists('shipping_tax_amount', $data) && $data['shipping_tax_amount'] !== null) {
             $object->setShippingTaxAmount($data['shipping_tax_amount']);
+        } elseif (\array_key_exists('shipping_tax_amount', $data) && $data['shipping_tax_amount'] === null) {
+            $object->setShippingTaxAmount(null);
         }
-        if (\array_key_exists('state', $data)) {
+        if (\array_key_exists('state', $data) && $data['state'] !== null) {
             $object->setState($data['state']);
+        } elseif (\array_key_exists('state', $data) && $data['state'] === null) {
+            $object->setState(null);
         }
-        if (\array_key_exists('store_currency_code', $data)) {
+        if (\array_key_exists('store_currency_code', $data) && $data['store_currency_code'] !== null) {
             $object->setStoreCurrencyCode($data['store_currency_code']);
+        } elseif (\array_key_exists('store_currency_code', $data) && $data['store_currency_code'] === null) {
+            $object->setStoreCurrencyCode(null);
         }
-        if (\array_key_exists('store_id', $data)) {
+        if (\array_key_exists('store_id', $data) && $data['store_id'] !== null) {
             $object->setStoreId($data['store_id']);
+        } elseif (\array_key_exists('store_id', $data) && $data['store_id'] === null) {
+            $object->setStoreId(null);
         }
-        if (\array_key_exists('store_to_base_rate', $data)) {
+        if (\array_key_exists('store_to_base_rate', $data) && $data['store_to_base_rate'] !== null) {
             $object->setStoreToBaseRate($data['store_to_base_rate']);
+        } elseif (\array_key_exists('store_to_base_rate', $data) && $data['store_to_base_rate'] === null) {
+            $object->setStoreToBaseRate(null);
         }
-        if (\array_key_exists('store_to_order_rate', $data)) {
+        if (\array_key_exists('store_to_order_rate', $data) && $data['store_to_order_rate'] !== null) {
             $object->setStoreToOrderRate($data['store_to_order_rate']);
+        } elseif (\array_key_exists('store_to_order_rate', $data) && $data['store_to_order_rate'] === null) {
+            $object->setStoreToOrderRate(null);
         }
-        if (\array_key_exists('subtotal', $data)) {
+        if (\array_key_exists('subtotal', $data) && $data['subtotal'] !== null) {
             $object->setSubtotal($data['subtotal']);
+        } elseif (\array_key_exists('subtotal', $data) && $data['subtotal'] === null) {
+            $object->setSubtotal(null);
         }
-        if (\array_key_exists('subtotal_incl_tax', $data)) {
+        if (\array_key_exists('subtotal_incl_tax', $data) && $data['subtotal_incl_tax'] !== null) {
             $object->setSubtotalInclTax($data['subtotal_incl_tax']);
+        } elseif (\array_key_exists('subtotal_incl_tax', $data) && $data['subtotal_incl_tax'] === null) {
+            $object->setSubtotalInclTax(null);
         }
-        if (\array_key_exists('tax_amount', $data)) {
+        if (\array_key_exists('tax_amount', $data) && $data['tax_amount'] !== null) {
             $object->setTaxAmount($data['tax_amount']);
+        } elseif (\array_key_exists('tax_amount', $data) && $data['tax_amount'] === null) {
+            $object->setTaxAmount(null);
         }
-        if (\array_key_exists('total_qty', $data)) {
+        if (\array_key_exists('total_qty', $data) && $data['total_qty'] !== null) {
             $object->setTotalQty($data['total_qty']);
+        } elseif (\array_key_exists('total_qty', $data) && $data['total_qty'] === null) {
+            $object->setTotalQty(null);
         }
-        if (\array_key_exists('transaction_id', $data)) {
+        if (\array_key_exists('transaction_id', $data) && $data['transaction_id'] !== null) {
             $object->setTransactionId($data['transaction_id']);
+        } elseif (\array_key_exists('transaction_id', $data) && $data['transaction_id'] === null) {
+            $object->setTransactionId(null);
         }
-        if (\array_key_exists('updated_at', $data)) {
+        if (\array_key_exists('updated_at', $data) && $data['updated_at'] !== null) {
             $object->setUpdatedAt($data['updated_at']);
+        } elseif (\array_key_exists('updated_at', $data) && $data['updated_at'] === null) {
+            $object->setUpdatedAt(null);
         }
         return $object;
     }

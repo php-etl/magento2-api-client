@@ -40,38 +40,52 @@ class V1OrderOrderIdShipPostBodyNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('appendComment', $data)) {
+        if (\array_key_exists('appendComment', $data) && $data['appendComment'] !== null) {
             $object->setAppendComment($data['appendComment']);
+        } elseif (\array_key_exists('appendComment', $data) && $data['appendComment'] === null) {
+            $object->setAppendComment(null);
         }
-        if (\array_key_exists('arguments', $data)) {
+        if (\array_key_exists('arguments', $data) && $data['arguments'] !== null) {
             $object->setArguments($this->denormalizer->denormalize($data['arguments'], 'Kiboko\\Magento\\V2_1\\Model\\SalesDataShipmentCreationArgumentsInterface', 'json', $context));
+        } elseif (\array_key_exists('arguments', $data) && $data['arguments'] === null) {
+            $object->setArguments(null);
         }
-        if (\array_key_exists('comment', $data)) {
+        if (\array_key_exists('comment', $data) && $data['comment'] !== null) {
             $object->setComment($this->denormalizer->denormalize($data['comment'], 'Kiboko\\Magento\\V2_1\\Model\\SalesDataShipmentCommentCreationInterface', 'json', $context));
+        } elseif (\array_key_exists('comment', $data) && $data['comment'] === null) {
+            $object->setComment(null);
         }
-        if (\array_key_exists('items', $data)) {
+        if (\array_key_exists('items', $data) && $data['items'] !== null) {
             $values = array();
             foreach ($data['items'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_1\\Model\\SalesDataShipmentItemCreationInterface', 'json', $context);
             }
             $object->setItems($values);
+        } elseif (\array_key_exists('items', $data) && $data['items'] === null) {
+            $object->setItems(null);
         }
-        if (\array_key_exists('notify', $data)) {
+        if (\array_key_exists('notify', $data) && $data['notify'] !== null) {
             $object->setNotify($data['notify']);
+        } elseif (\array_key_exists('notify', $data) && $data['notify'] === null) {
+            $object->setNotify(null);
         }
-        if (\array_key_exists('packages', $data)) {
+        if (\array_key_exists('packages', $data) && $data['packages'] !== null) {
             $values_1 = array();
             foreach ($data['packages'] as $value_1) {
                 $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_1\\Model\\SalesDataShipmentPackageCreationInterface', 'json', $context);
             }
             $object->setPackages($values_1);
+        } elseif (\array_key_exists('packages', $data) && $data['packages'] === null) {
+            $object->setPackages(null);
         }
-        if (\array_key_exists('tracks', $data)) {
+        if (\array_key_exists('tracks', $data) && $data['tracks'] !== null) {
             $values_2 = array();
             foreach ($data['tracks'] as $value_2) {
                 $values_2[] = $this->denormalizer->denormalize($value_2, 'Kiboko\\Magento\\V2_1\\Model\\SalesDataShipmentTrackCreationInterface', 'json', $context);
             }
             $object->setTracks($values_2);
+        } elseif (\array_key_exists('tracks', $data) && $data['tracks'] === null) {
+            $object->setTracks(null);
         }
         return $object;
     }

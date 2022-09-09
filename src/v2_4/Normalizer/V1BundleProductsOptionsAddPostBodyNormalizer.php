@@ -40,8 +40,10 @@ class V1BundleProductsOptionsAddPostBodyNormalizer implements DenormalizerInterf
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('option', $data)) {
+        if (\array_key_exists('option', $data) && $data['option'] !== null) {
             $object->setOption($this->denormalizer->denormalize($data['option'], 'Kiboko\\Magento\\V2_4\\Model\\BundleDataOptionInterface', 'json', $context));
+        } elseif (\array_key_exists('option', $data) && $data['option'] === null) {
+            $object->setOption(null);
         }
         return $object;
     }

@@ -40,23 +40,35 @@ class RmaDataTrackInterfaceNormalizer implements DenormalizerInterface, Normaliz
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('carrier_code', $data)) {
+        if (\array_key_exists('carrier_code', $data) && $data['carrier_code'] !== null) {
             $object->setCarrierCode($data['carrier_code']);
+        } elseif (\array_key_exists('carrier_code', $data) && $data['carrier_code'] === null) {
+            $object->setCarrierCode(null);
         }
-        if (\array_key_exists('carrier_title', $data)) {
+        if (\array_key_exists('carrier_title', $data) && $data['carrier_title'] !== null) {
             $object->setCarrierTitle($data['carrier_title']);
+        } elseif (\array_key_exists('carrier_title', $data) && $data['carrier_title'] === null) {
+            $object->setCarrierTitle(null);
         }
-        if (\array_key_exists('entity_id', $data)) {
+        if (\array_key_exists('entity_id', $data) && $data['entity_id'] !== null) {
             $object->setEntityId($data['entity_id']);
+        } elseif (\array_key_exists('entity_id', $data) && $data['entity_id'] === null) {
+            $object->setEntityId(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('rma_entity_id', $data)) {
+        if (\array_key_exists('rma_entity_id', $data) && $data['rma_entity_id'] !== null) {
             $object->setRmaEntityId($data['rma_entity_id']);
+        } elseif (\array_key_exists('rma_entity_id', $data) && $data['rma_entity_id'] === null) {
+            $object->setRmaEntityId(null);
         }
-        if (\array_key_exists('track_number', $data)) {
+        if (\array_key_exists('track_number', $data) && $data['track_number'] !== null) {
             $object->setTrackNumber($data['track_number']);
+        } elseif (\array_key_exists('track_number', $data) && $data['track_number'] === null) {
+            $object->setTrackNumber(null);
         }
         return $object;
     }

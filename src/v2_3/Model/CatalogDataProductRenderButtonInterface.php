@@ -7,25 +7,25 @@ class CatalogDataProductRenderButtonInterface
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductRender\ButtonInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Post data
      *
-     * @var string
+     * @var string|null
      */
     protected $postData;
     /**
      * Flag whether a product has options or not
      *
-     * @var bool
+     * @var bool|null
      */
     protected $requiredOptions;
     /**
      * Url, needed to add product to cart
      *
-     * @var string
+     * @var string|null
      */
     protected $url;
     /**
@@ -52,20 +52,20 @@ class CatalogDataProductRenderButtonInterface
     /**
      * Post data
      *
-     * @return string
+     * @return string|null
      */
-    public function getPostData(): string
+    public function getPostData(): ?string
     {
         return $this->postData;
     }
     /**
      * Post data
      *
-     * @param string $postData
+     * @param string|null $postData
      *
      * @return self
      */
-    public function setPostData(string $postData): self
+    public function setPostData(?string $postData): self
     {
         $this->postData = $postData;
         return $this;
@@ -73,20 +73,20 @@ class CatalogDataProductRenderButtonInterface
     /**
      * Flag whether a product has options or not
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getRequiredOptions(): bool
+    public function getRequiredOptions(): ?bool
     {
         return $this->requiredOptions;
     }
     /**
      * Flag whether a product has options or not
      *
-     * @param bool $requiredOptions
+     * @param bool|null $requiredOptions
      *
      * @return self
      */
-    public function setRequiredOptions(bool $requiredOptions): self
+    public function setRequiredOptions(?bool $requiredOptions): self
     {
         $this->requiredOptions = $requiredOptions;
         return $this;
@@ -94,20 +94,20 @@ class CatalogDataProductRenderButtonInterface
     /**
      * Url, needed to add product to cart
      *
-     * @return string
+     * @return string|null
      */
-    public function getUrl(): string
+    public function getUrl(): ?string
     {
         return $this->url;
     }
     /**
      * Url, needed to add product to cart
      *
-     * @param string $url
+     * @param string|null $url
      *
      * @return self
      */
-    public function setUrl(string $url): self
+    public function setUrl(?string $url): self
     {
         $this->url = $url;
         return $this;

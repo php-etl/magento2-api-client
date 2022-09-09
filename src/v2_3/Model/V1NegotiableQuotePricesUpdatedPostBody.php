@@ -7,26 +7,26 @@ class V1NegotiableQuotePricesUpdatedPostBody
     /**
      *
      *
-     * @var int[]
+     * @var int[]|null
      */
     protected $quoteIds;
     /**
      *
      *
-     * @return int[]
+     * @return int[]|null
      */
-    public function getQuoteIds(): array
+    public function getQuoteIds(): ?array
     {
         return $this->quoteIds;
     }
     /**
      *
      *
-     * @param int[] $quoteIds
+     * @param int[]|null $quoteIds
      *
      * @return self
      */
-    public function setQuoteIds(array $quoteIds): self
+    public function setQuoteIds(?array $quoteIds): self
     {
         $this->quoteIds = $quoteIds;
         return $this;

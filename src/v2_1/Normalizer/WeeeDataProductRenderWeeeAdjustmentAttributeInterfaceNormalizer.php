@@ -40,23 +40,35 @@ class WeeeDataProductRenderWeeeAdjustmentAttributeInterfaceNormalizer implements
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('amount', $data)) {
+        if (\array_key_exists('amount', $data) && $data['amount'] !== null) {
             $object->setAmount($data['amount']);
+        } elseif (\array_key_exists('amount', $data) && $data['amount'] === null) {
+            $object->setAmount(null);
         }
-        if (\array_key_exists('amount_excl_tax', $data)) {
+        if (\array_key_exists('amount_excl_tax', $data) && $data['amount_excl_tax'] !== null) {
             $object->setAmountExclTax($data['amount_excl_tax']);
+        } elseif (\array_key_exists('amount_excl_tax', $data) && $data['amount_excl_tax'] === null) {
+            $object->setAmountExclTax(null);
         }
-        if (\array_key_exists('attribute_code', $data)) {
+        if (\array_key_exists('attribute_code', $data) && $data['attribute_code'] !== null) {
             $object->setAttributeCode($data['attribute_code']);
+        } elseif (\array_key_exists('attribute_code', $data) && $data['attribute_code'] === null) {
+            $object->setAttributeCode(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('tax_amount', $data)) {
+        if (\array_key_exists('tax_amount', $data) && $data['tax_amount'] !== null) {
             $object->setTaxAmount($data['tax_amount']);
+        } elseif (\array_key_exists('tax_amount', $data) && $data['tax_amount'] === null) {
+            $object->setTaxAmount(null);
         }
-        if (\array_key_exists('tax_amount_incl_tax', $data)) {
+        if (\array_key_exists('tax_amount_incl_tax', $data) && $data['tax_amount_incl_tax'] !== null) {
             $object->setTaxAmountInclTax($data['tax_amount_incl_tax']);
+        } elseif (\array_key_exists('tax_amount_incl_tax', $data) && $data['tax_amount_incl_tax'] === null) {
+            $object->setTaxAmountInclTax(null);
         }
         return $object;
     }

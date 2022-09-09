@@ -46,32 +46,50 @@ class QuoteDataCartItemInterfaceNormalizer implements DenormalizerInterface, Nor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_3\\Model\\QuoteDataCartItemExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('item_id', $data)) {
+        if (\array_key_exists('item_id', $data) && $data['item_id'] !== null) {
             $object->setItemId($data['item_id']);
+        } elseif (\array_key_exists('item_id', $data) && $data['item_id'] === null) {
+            $object->setItemId(null);
         }
-        if (\array_key_exists('name', $data)) {
+        if (\array_key_exists('name', $data) && $data['name'] !== null) {
             $object->setName($data['name']);
+        } elseif (\array_key_exists('name', $data) && $data['name'] === null) {
+            $object->setName(null);
         }
-        if (\array_key_exists('price', $data)) {
+        if (\array_key_exists('price', $data) && $data['price'] !== null) {
             $object->setPrice($data['price']);
+        } elseif (\array_key_exists('price', $data) && $data['price'] === null) {
+            $object->setPrice(null);
         }
-        if (\array_key_exists('product_option', $data)) {
+        if (\array_key_exists('product_option', $data) && $data['product_option'] !== null) {
             $object->setProductOption($this->denormalizer->denormalize($data['product_option'], 'Kiboko\\Magento\\V2_3\\Model\\QuoteDataProductOptionInterface', 'json', $context));
+        } elseif (\array_key_exists('product_option', $data) && $data['product_option'] === null) {
+            $object->setProductOption(null);
         }
-        if (\array_key_exists('product_type', $data)) {
+        if (\array_key_exists('product_type', $data) && $data['product_type'] !== null) {
             $object->setProductType($data['product_type']);
+        } elseif (\array_key_exists('product_type', $data) && $data['product_type'] === null) {
+            $object->setProductType(null);
         }
-        if (\array_key_exists('qty', $data)) {
+        if (\array_key_exists('qty', $data) && $data['qty'] !== null) {
             $object->setQty($data['qty']);
+        } elseif (\array_key_exists('qty', $data) && $data['qty'] === null) {
+            $object->setQty(null);
         }
-        if (\array_key_exists('quote_id', $data)) {
+        if (\array_key_exists('quote_id', $data) && $data['quote_id'] !== null) {
             $object->setQuoteId($data['quote_id']);
+        } elseif (\array_key_exists('quote_id', $data) && $data['quote_id'] === null) {
+            $object->setQuoteId(null);
         }
-        if (\array_key_exists('sku', $data)) {
+        if (\array_key_exists('sku', $data) && $data['sku'] !== null) {
             $object->setSku($data['sku']);
+        } elseif (\array_key_exists('sku', $data) && $data['sku'] === null) {
+            $object->setSku(null);
         }
         return $object;
     }

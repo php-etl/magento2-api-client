@@ -7,26 +7,26 @@ class V1CartsMineItemsPostBody
     /**
      * Interface CartItemInterface
      *
-     * @var QuoteDataCartItemInterface
+     * @var QuoteDataCartItemInterface|null
      */
     protected $cartItem;
     /**
      * Interface CartItemInterface
      *
-     * @return QuoteDataCartItemInterface
+     * @return QuoteDataCartItemInterface|null
      */
-    public function getCartItem(): QuoteDataCartItemInterface
+    public function getCartItem(): ?QuoteDataCartItemInterface
     {
         return $this->cartItem;
     }
     /**
      * Interface CartItemInterface
      *
-     * @param QuoteDataCartItemInterface $cartItem
+     * @param QuoteDataCartItemInterface|null $cartItem
      *
      * @return self
      */
-    public function setCartItem(QuoteDataCartItemInterface $cartItem): self
+    public function setCartItem(?QuoteDataCartItemInterface $cartItem): self
     {
         $this->cartItem = $cartItem;
         return $this;

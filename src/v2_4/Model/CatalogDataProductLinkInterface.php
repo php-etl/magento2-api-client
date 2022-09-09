@@ -7,56 +7,56 @@ class CatalogDataProductLinkInterface
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductLinkInterface
      *
-     * @var CatalogDataProductLinkExtensionInterface
+     * @var CatalogDataProductLinkExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * Link type
      *
-     * @var string
+     * @var string|null
      */
     protected $linkType;
     /**
      * Linked product sku
      *
-     * @var string
+     * @var string|null
      */
     protected $linkedProductSku;
     /**
      * Linked product type (simple, virtual, etc)
      *
-     * @var string
+     * @var string|null
      */
     protected $linkedProductType;
     /**
      * Linked item position
      *
-     * @var int
+     * @var int|null
      */
     protected $position;
     /**
      * SKU
      *
-     * @var string
+     * @var string|null
      */
     protected $sku;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductLinkInterface
      *
-     * @return CatalogDataProductLinkExtensionInterface
+     * @return CatalogDataProductLinkExtensionInterface|null
      */
-    public function getExtensionAttributes(): CatalogDataProductLinkExtensionInterface
+    public function getExtensionAttributes(): ?CatalogDataProductLinkExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductLinkInterface
      *
-     * @param CatalogDataProductLinkExtensionInterface $extensionAttributes
+     * @param CatalogDataProductLinkExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(CatalogDataProductLinkExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?CatalogDataProductLinkExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -64,20 +64,20 @@ class CatalogDataProductLinkInterface
     /**
      * Link type
      *
-     * @return string
+     * @return string|null
      */
-    public function getLinkType(): string
+    public function getLinkType(): ?string
     {
         return $this->linkType;
     }
     /**
      * Link type
      *
-     * @param string $linkType
+     * @param string|null $linkType
      *
      * @return self
      */
-    public function setLinkType(string $linkType): self
+    public function setLinkType(?string $linkType): self
     {
         $this->linkType = $linkType;
         return $this;
@@ -85,20 +85,20 @@ class CatalogDataProductLinkInterface
     /**
      * Linked product sku
      *
-     * @return string
+     * @return string|null
      */
-    public function getLinkedProductSku(): string
+    public function getLinkedProductSku(): ?string
     {
         return $this->linkedProductSku;
     }
     /**
      * Linked product sku
      *
-     * @param string $linkedProductSku
+     * @param string|null $linkedProductSku
      *
      * @return self
      */
-    public function setLinkedProductSku(string $linkedProductSku): self
+    public function setLinkedProductSku(?string $linkedProductSku): self
     {
         $this->linkedProductSku = $linkedProductSku;
         return $this;
@@ -106,20 +106,20 @@ class CatalogDataProductLinkInterface
     /**
      * Linked product type (simple, virtual, etc)
      *
-     * @return string
+     * @return string|null
      */
-    public function getLinkedProductType(): string
+    public function getLinkedProductType(): ?string
     {
         return $this->linkedProductType;
     }
     /**
      * Linked product type (simple, virtual, etc)
      *
-     * @param string $linkedProductType
+     * @param string|null $linkedProductType
      *
      * @return self
      */
-    public function setLinkedProductType(string $linkedProductType): self
+    public function setLinkedProductType(?string $linkedProductType): self
     {
         $this->linkedProductType = $linkedProductType;
         return $this;
@@ -127,20 +127,20 @@ class CatalogDataProductLinkInterface
     /**
      * Linked item position
      *
-     * @return int
+     * @return int|null
      */
-    public function getPosition(): int
+    public function getPosition(): ?int
     {
         return $this->position;
     }
     /**
      * Linked item position
      *
-     * @param int $position
+     * @param int|null $position
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(?int $position): self
     {
         $this->position = $position;
         return $this;
@@ -148,20 +148,20 @@ class CatalogDataProductLinkInterface
     /**
      * SKU
      *
-     * @return string
+     * @return string|null
      */
-    public function getSku(): string
+    public function getSku(): ?string
     {
         return $this->sku;
     }
     /**
      * SKU
      *
-     * @param string $sku
+     * @param string|null $sku
      *
      * @return self
      */
-    public function setSku(string $sku): self
+    public function setSku(?string $sku): self
     {
         $this->sku = $sku;
         return $this;

@@ -7,80 +7,80 @@ class RmaDataCommentInterface
     /**
      * Is_admin
      *
-     * @var bool
+     * @var bool|null
      */
     protected $admin;
     /**
      * Comment
      *
-     * @var string
+     * @var string|null
      */
     protected $comment;
     /**
      * Created_at
      *
-     * @var string
+     * @var string|null
      */
     protected $createdAt;
     /**
      * Custom attributes values.
      *
-     * @var FrameworkAttributeInterface[]
+     * @var FrameworkAttributeInterface[]|null
      */
     protected $customAttributes;
     /**
      * Is_customer_notified
      *
-     * @var bool
+     * @var bool|null
      */
     protected $customerNotified;
     /**
      * Entity_id
      *
-     * @var int
+     * @var int|null
      */
     protected $entityId;
     /**
      * ExtensionInterface class for @see \Magento\Rma\Api\Data\CommentInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Rma Id
      *
-     * @var int
+     * @var int|null
      */
     protected $rmaEntityId;
     /**
      * Status
      *
-     * @var string
+     * @var string|null
      */
     protected $status;
     /**
      * Is_visible_on_front
      *
-     * @var bool
+     * @var bool|null
      */
     protected $visibleOnFront;
     /**
      * Is_admin
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getAdmin(): bool
+    public function getAdmin(): ?bool
     {
         return $this->admin;
     }
     /**
      * Is_admin
      *
-     * @param bool $admin
+     * @param bool|null $admin
      *
      * @return self
      */
-    public function setAdmin(bool $admin): self
+    public function setAdmin(?bool $admin): self
     {
         $this->admin = $admin;
         return $this;
@@ -88,20 +88,20 @@ class RmaDataCommentInterface
     /**
      * Comment
      *
-     * @return string
+     * @return string|null
      */
-    public function getComment(): string
+    public function getComment(): ?string
     {
         return $this->comment;
     }
     /**
      * Comment
      *
-     * @param string $comment
+     * @param string|null $comment
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(?string $comment): self
     {
         $this->comment = $comment;
         return $this;
@@ -109,20 +109,20 @@ class RmaDataCommentInterface
     /**
      * Created_at
      *
-     * @return string
+     * @return string|null
      */
-    public function getCreatedAt(): string
+    public function getCreatedAt(): ?string
     {
         return $this->createdAt;
     }
     /**
      * Created_at
      *
-     * @param string $createdAt
+     * @param string|null $createdAt
      *
      * @return self
      */
-    public function setCreatedAt(string $createdAt): self
+    public function setCreatedAt(?string $createdAt): self
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -130,20 +130,20 @@ class RmaDataCommentInterface
     /**
      * Custom attributes values.
      *
-     * @return FrameworkAttributeInterface[]
+     * @return FrameworkAttributeInterface[]|null
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes(): ?array
     {
         return $this->customAttributes;
     }
     /**
      * Custom attributes values.
      *
-     * @param FrameworkAttributeInterface[] $customAttributes
+     * @param FrameworkAttributeInterface[]|null $customAttributes
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(?array $customAttributes): self
     {
         $this->customAttributes = $customAttributes;
         return $this;
@@ -151,20 +151,20 @@ class RmaDataCommentInterface
     /**
      * Is_customer_notified
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getCustomerNotified(): bool
+    public function getCustomerNotified(): ?bool
     {
         return $this->customerNotified;
     }
     /**
      * Is_customer_notified
      *
-     * @param bool $customerNotified
+     * @param bool|null $customerNotified
      *
      * @return self
      */
-    public function setCustomerNotified(bool $customerNotified): self
+    public function setCustomerNotified(?bool $customerNotified): self
     {
         $this->customerNotified = $customerNotified;
         return $this;
@@ -172,20 +172,20 @@ class RmaDataCommentInterface
     /**
      * Entity_id
      *
-     * @return int
+     * @return int|null
      */
-    public function getEntityId(): int
+    public function getEntityId(): ?int
     {
         return $this->entityId;
     }
     /**
      * Entity_id
      *
-     * @param int $entityId
+     * @param int|null $entityId
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(?int $entityId): self
     {
         $this->entityId = $entityId;
         return $this;
@@ -214,20 +214,20 @@ class RmaDataCommentInterface
     /**
      * Rma Id
      *
-     * @return int
+     * @return int|null
      */
-    public function getRmaEntityId(): int
+    public function getRmaEntityId(): ?int
     {
         return $this->rmaEntityId;
     }
     /**
      * Rma Id
      *
-     * @param int $rmaEntityId
+     * @param int|null $rmaEntityId
      *
      * @return self
      */
-    public function setRmaEntityId(int $rmaEntityId): self
+    public function setRmaEntityId(?int $rmaEntityId): self
     {
         $this->rmaEntityId = $rmaEntityId;
         return $this;
@@ -235,20 +235,20 @@ class RmaDataCommentInterface
     /**
      * Status
      *
-     * @return string
+     * @return string|null
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
     /**
      * Status
      *
-     * @param string $status
+     * @param string|null $status
      *
      * @return self
      */
-    public function setStatus(string $status): self
+    public function setStatus(?string $status): self
     {
         $this->status = $status;
         return $this;
@@ -256,20 +256,20 @@ class RmaDataCommentInterface
     /**
      * Is_visible_on_front
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getVisibleOnFront(): bool
+    public function getVisibleOnFront(): ?bool
     {
         return $this->visibleOnFront;
     }
     /**
      * Is_visible_on_front
      *
-     * @param bool $visibleOnFront
+     * @param bool|null $visibleOnFront
      *
      * @return self
      */
-    public function setVisibleOnFront(bool $visibleOnFront): self
+    public function setVisibleOnFront(?bool $visibleOnFront): self
     {
         $this->visibleOnFront = $visibleOnFront;
         return $this;

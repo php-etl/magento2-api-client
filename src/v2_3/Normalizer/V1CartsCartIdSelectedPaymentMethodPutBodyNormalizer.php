@@ -40,8 +40,10 @@ class V1CartsCartIdSelectedPaymentMethodPutBodyNormalizer implements Denormalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('method', $data)) {
+        if (\array_key_exists('method', $data) && $data['method'] !== null) {
             $object->setMethod($this->denormalizer->denormalize($data['method'], 'Kiboko\\Magento\\V2_3\\Model\\QuoteDataPaymentInterface', 'json', $context));
+        } elseif (\array_key_exists('method', $data) && $data['method'] === null) {
+            $object->setMethod(null);
         }
         return $object;
     }

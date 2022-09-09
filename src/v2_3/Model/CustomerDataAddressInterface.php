@@ -7,146 +7,146 @@ class CustomerDataAddressInterface
     /**
      * City name
      *
-     * @var string
+     * @var string|null
      */
     protected $city;
     /**
      * Company
      *
-     * @var string
+     * @var string|null
      */
     protected $company;
     /**
      * Country code in ISO_3166-2 format
      *
-     * @var string
+     * @var string|null
      */
     protected $countryId;
     /**
      * Custom attributes values.
      *
-     * @var FrameworkAttributeInterface[]
+     * @var FrameworkAttributeInterface[]|null
      */
     protected $customAttributes;
     /**
      * Customer ID
      *
-     * @var int
+     * @var int|null
      */
     protected $customerId;
     /**
      * If this address is default billing address
      *
-     * @var bool
+     * @var bool|null
      */
     protected $defaultBilling;
     /**
      * If this address is default shipping address.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $defaultShipping;
     /**
      * ExtensionInterface class for @see \Magento\Customer\Api\Data\AddressInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Fax number
      *
-     * @var string
+     * @var string|null
      */
     protected $fax;
     /**
      * First name
      *
-     * @var string
+     * @var string|null
      */
     protected $firstname;
     /**
      * ID
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Last name
      *
-     * @var string
+     * @var string|null
      */
     protected $lastname;
     /**
      * Middle name
      *
-     * @var string
+     * @var string|null
      */
     protected $middlename;
     /**
      * Postcode
      *
-     * @var string
+     * @var string|null
      */
     protected $postcode;
     /**
      * Prefix
      *
-     * @var string
+     * @var string|null
      */
     protected $prefix;
     /**
      * Customer address region interface.
      *
-     * @var CustomerDataRegionInterface
+     * @var CustomerDataRegionInterface|null
      */
     protected $region;
     /**
      * Region ID
      *
-     * @var int
+     * @var int|null
      */
     protected $regionId;
     /**
      * Street
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $street;
     /**
      * Suffix
      *
-     * @var string
+     * @var string|null
      */
     protected $suffix;
     /**
      * Telephone number
      *
-     * @var string
+     * @var string|null
      */
     protected $telephone;
     /**
      * Vat id
      *
-     * @var string
+     * @var string|null
      */
     protected $vatId;
     /**
      * City name
      *
-     * @return string
+     * @return string|null
      */
-    public function getCity(): string
+    public function getCity(): ?string
     {
         return $this->city;
     }
     /**
      * City name
      *
-     * @param string $city
+     * @param string|null $city
      *
      * @return self
      */
-    public function setCity(string $city): self
+    public function setCity(?string $city): self
     {
         $this->city = $city;
         return $this;
@@ -154,20 +154,20 @@ class CustomerDataAddressInterface
     /**
      * Company
      *
-     * @return string
+     * @return string|null
      */
-    public function getCompany(): string
+    public function getCompany(): ?string
     {
         return $this->company;
     }
     /**
      * Company
      *
-     * @param string $company
+     * @param string|null $company
      *
      * @return self
      */
-    public function setCompany(string $company): self
+    public function setCompany(?string $company): self
     {
         $this->company = $company;
         return $this;
@@ -175,20 +175,20 @@ class CustomerDataAddressInterface
     /**
      * Country code in ISO_3166-2 format
      *
-     * @return string
+     * @return string|null
      */
-    public function getCountryId(): string
+    public function getCountryId(): ?string
     {
         return $this->countryId;
     }
     /**
      * Country code in ISO_3166-2 format
      *
-     * @param string $countryId
+     * @param string|null $countryId
      *
      * @return self
      */
-    public function setCountryId(string $countryId): self
+    public function setCountryId(?string $countryId): self
     {
         $this->countryId = $countryId;
         return $this;
@@ -196,20 +196,20 @@ class CustomerDataAddressInterface
     /**
      * Custom attributes values.
      *
-     * @return FrameworkAttributeInterface[]
+     * @return FrameworkAttributeInterface[]|null
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes(): ?array
     {
         return $this->customAttributes;
     }
     /**
      * Custom attributes values.
      *
-     * @param FrameworkAttributeInterface[] $customAttributes
+     * @param FrameworkAttributeInterface[]|null $customAttributes
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(?array $customAttributes): self
     {
         $this->customAttributes = $customAttributes;
         return $this;
@@ -217,20 +217,20 @@ class CustomerDataAddressInterface
     /**
      * Customer ID
      *
-     * @return int
+     * @return int|null
      */
-    public function getCustomerId(): int
+    public function getCustomerId(): ?int
     {
         return $this->customerId;
     }
     /**
      * Customer ID
      *
-     * @param int $customerId
+     * @param int|null $customerId
      *
      * @return self
      */
-    public function setCustomerId(int $customerId): self
+    public function setCustomerId(?int $customerId): self
     {
         $this->customerId = $customerId;
         return $this;
@@ -238,20 +238,20 @@ class CustomerDataAddressInterface
     /**
      * If this address is default billing address
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getDefaultBilling(): bool
+    public function getDefaultBilling(): ?bool
     {
         return $this->defaultBilling;
     }
     /**
      * If this address is default billing address
      *
-     * @param bool $defaultBilling
+     * @param bool|null $defaultBilling
      *
      * @return self
      */
-    public function setDefaultBilling(bool $defaultBilling): self
+    public function setDefaultBilling(?bool $defaultBilling): self
     {
         $this->defaultBilling = $defaultBilling;
         return $this;
@@ -259,20 +259,20 @@ class CustomerDataAddressInterface
     /**
      * If this address is default shipping address.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getDefaultShipping(): bool
+    public function getDefaultShipping(): ?bool
     {
         return $this->defaultShipping;
     }
     /**
      * If this address is default shipping address.
      *
-     * @param bool $defaultShipping
+     * @param bool|null $defaultShipping
      *
      * @return self
      */
-    public function setDefaultShipping(bool $defaultShipping): self
+    public function setDefaultShipping(?bool $defaultShipping): self
     {
         $this->defaultShipping = $defaultShipping;
         return $this;
@@ -301,20 +301,20 @@ class CustomerDataAddressInterface
     /**
      * Fax number
      *
-     * @return string
+     * @return string|null
      */
-    public function getFax(): string
+    public function getFax(): ?string
     {
         return $this->fax;
     }
     /**
      * Fax number
      *
-     * @param string $fax
+     * @param string|null $fax
      *
      * @return self
      */
-    public function setFax(string $fax): self
+    public function setFax(?string $fax): self
     {
         $this->fax = $fax;
         return $this;
@@ -322,20 +322,20 @@ class CustomerDataAddressInterface
     /**
      * First name
      *
-     * @return string
+     * @return string|null
      */
-    public function getFirstname(): string
+    public function getFirstname(): ?string
     {
         return $this->firstname;
     }
     /**
      * First name
      *
-     * @param string $firstname
+     * @param string|null $firstname
      *
      * @return self
      */
-    public function setFirstname(string $firstname): self
+    public function setFirstname(?string $firstname): self
     {
         $this->firstname = $firstname;
         return $this;
@@ -343,20 +343,20 @@ class CustomerDataAddressInterface
     /**
      * ID
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * ID
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -364,20 +364,20 @@ class CustomerDataAddressInterface
     /**
      * Last name
      *
-     * @return string
+     * @return string|null
      */
-    public function getLastname(): string
+    public function getLastname(): ?string
     {
         return $this->lastname;
     }
     /**
      * Last name
      *
-     * @param string $lastname
+     * @param string|null $lastname
      *
      * @return self
      */
-    public function setLastname(string $lastname): self
+    public function setLastname(?string $lastname): self
     {
         $this->lastname = $lastname;
         return $this;
@@ -385,20 +385,20 @@ class CustomerDataAddressInterface
     /**
      * Middle name
      *
-     * @return string
+     * @return string|null
      */
-    public function getMiddlename(): string
+    public function getMiddlename(): ?string
     {
         return $this->middlename;
     }
     /**
      * Middle name
      *
-     * @param string $middlename
+     * @param string|null $middlename
      *
      * @return self
      */
-    public function setMiddlename(string $middlename): self
+    public function setMiddlename(?string $middlename): self
     {
         $this->middlename = $middlename;
         return $this;
@@ -406,20 +406,20 @@ class CustomerDataAddressInterface
     /**
      * Postcode
      *
-     * @return string
+     * @return string|null
      */
-    public function getPostcode(): string
+    public function getPostcode(): ?string
     {
         return $this->postcode;
     }
     /**
      * Postcode
      *
-     * @param string $postcode
+     * @param string|null $postcode
      *
      * @return self
      */
-    public function setPostcode(string $postcode): self
+    public function setPostcode(?string $postcode): self
     {
         $this->postcode = $postcode;
         return $this;
@@ -427,20 +427,20 @@ class CustomerDataAddressInterface
     /**
      * Prefix
      *
-     * @return string
+     * @return string|null
      */
-    public function getPrefix(): string
+    public function getPrefix(): ?string
     {
         return $this->prefix;
     }
     /**
      * Prefix
      *
-     * @param string $prefix
+     * @param string|null $prefix
      *
      * @return self
      */
-    public function setPrefix(string $prefix): self
+    public function setPrefix(?string $prefix): self
     {
         $this->prefix = $prefix;
         return $this;
@@ -448,20 +448,20 @@ class CustomerDataAddressInterface
     /**
      * Customer address region interface.
      *
-     * @return CustomerDataRegionInterface
+     * @return CustomerDataRegionInterface|null
      */
-    public function getRegion(): CustomerDataRegionInterface
+    public function getRegion(): ?CustomerDataRegionInterface
     {
         return $this->region;
     }
     /**
      * Customer address region interface.
      *
-     * @param CustomerDataRegionInterface $region
+     * @param CustomerDataRegionInterface|null $region
      *
      * @return self
      */
-    public function setRegion(CustomerDataRegionInterface $region): self
+    public function setRegion(?CustomerDataRegionInterface $region): self
     {
         $this->region = $region;
         return $this;
@@ -469,20 +469,20 @@ class CustomerDataAddressInterface
     /**
      * Region ID
      *
-     * @return int
+     * @return int|null
      */
-    public function getRegionId(): int
+    public function getRegionId(): ?int
     {
         return $this->regionId;
     }
     /**
      * Region ID
      *
-     * @param int $regionId
+     * @param int|null $regionId
      *
      * @return self
      */
-    public function setRegionId(int $regionId): self
+    public function setRegionId(?int $regionId): self
     {
         $this->regionId = $regionId;
         return $this;
@@ -490,20 +490,20 @@ class CustomerDataAddressInterface
     /**
      * Street
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getStreet(): array
+    public function getStreet(): ?array
     {
         return $this->street;
     }
     /**
      * Street
      *
-     * @param string[] $street
+     * @param string[]|null $street
      *
      * @return self
      */
-    public function setStreet(array $street): self
+    public function setStreet(?array $street): self
     {
         $this->street = $street;
         return $this;
@@ -511,20 +511,20 @@ class CustomerDataAddressInterface
     /**
      * Suffix
      *
-     * @return string
+     * @return string|null
      */
-    public function getSuffix(): string
+    public function getSuffix(): ?string
     {
         return $this->suffix;
     }
     /**
      * Suffix
      *
-     * @param string $suffix
+     * @param string|null $suffix
      *
      * @return self
      */
-    public function setSuffix(string $suffix): self
+    public function setSuffix(?string $suffix): self
     {
         $this->suffix = $suffix;
         return $this;
@@ -532,20 +532,20 @@ class CustomerDataAddressInterface
     /**
      * Telephone number
      *
-     * @return string
+     * @return string|null
      */
-    public function getTelephone(): string
+    public function getTelephone(): ?string
     {
         return $this->telephone;
     }
     /**
      * Telephone number
      *
-     * @param string $telephone
+     * @param string|null $telephone
      *
      * @return self
      */
-    public function setTelephone(string $telephone): self
+    public function setTelephone(?string $telephone): self
     {
         $this->telephone = $telephone;
         return $this;
@@ -553,20 +553,20 @@ class CustomerDataAddressInterface
     /**
      * Vat id
      *
-     * @return string
+     * @return string|null
      */
-    public function getVatId(): string
+    public function getVatId(): ?string
     {
         return $this->vatId;
     }
     /**
      * Vat id
      *
-     * @param string $vatId
+     * @param string|null $vatId
      *
      * @return self
      */
-    public function setVatId(string $vatId): self
+    public function setVatId(?string $vatId): self
     {
         $this->vatId = $vatId;
         return $this;

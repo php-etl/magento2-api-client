@@ -52,38 +52,60 @@ class QuoteDataShippingMethodInterfaceNormalizer implements DenormalizerInterfac
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('amount', $data)) {
+        if (\array_key_exists('amount', $data) && $data['amount'] !== null) {
             $object->setAmount($data['amount']);
+        } elseif (\array_key_exists('amount', $data) && $data['amount'] === null) {
+            $object->setAmount(null);
         }
-        if (\array_key_exists('available', $data)) {
+        if (\array_key_exists('available', $data) && $data['available'] !== null) {
             $object->setAvailable($data['available']);
+        } elseif (\array_key_exists('available', $data) && $data['available'] === null) {
+            $object->setAvailable(null);
         }
-        if (\array_key_exists('base_amount', $data)) {
+        if (\array_key_exists('base_amount', $data) && $data['base_amount'] !== null) {
             $object->setBaseAmount($data['base_amount']);
+        } elseif (\array_key_exists('base_amount', $data) && $data['base_amount'] === null) {
+            $object->setBaseAmount(null);
         }
-        if (\array_key_exists('carrier_code', $data)) {
+        if (\array_key_exists('carrier_code', $data) && $data['carrier_code'] !== null) {
             $object->setCarrierCode($data['carrier_code']);
+        } elseif (\array_key_exists('carrier_code', $data) && $data['carrier_code'] === null) {
+            $object->setCarrierCode(null);
         }
-        if (\array_key_exists('carrier_title', $data)) {
+        if (\array_key_exists('carrier_title', $data) && $data['carrier_title'] !== null) {
             $object->setCarrierTitle($data['carrier_title']);
+        } elseif (\array_key_exists('carrier_title', $data) && $data['carrier_title'] === null) {
+            $object->setCarrierTitle(null);
         }
-        if (\array_key_exists('error_message', $data)) {
+        if (\array_key_exists('error_message', $data) && $data['error_message'] !== null) {
             $object->setErrorMessage($data['error_message']);
+        } elseif (\array_key_exists('error_message', $data) && $data['error_message'] === null) {
+            $object->setErrorMessage(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('method_code', $data)) {
+        if (\array_key_exists('method_code', $data) && $data['method_code'] !== null) {
             $object->setMethodCode($data['method_code']);
+        } elseif (\array_key_exists('method_code', $data) && $data['method_code'] === null) {
+            $object->setMethodCode(null);
         }
-        if (\array_key_exists('method_title', $data)) {
+        if (\array_key_exists('method_title', $data) && $data['method_title'] !== null) {
             $object->setMethodTitle($data['method_title']);
+        } elseif (\array_key_exists('method_title', $data) && $data['method_title'] === null) {
+            $object->setMethodTitle(null);
         }
-        if (\array_key_exists('price_excl_tax', $data)) {
+        if (\array_key_exists('price_excl_tax', $data) && $data['price_excl_tax'] !== null) {
             $object->setPriceExclTax($data['price_excl_tax']);
+        } elseif (\array_key_exists('price_excl_tax', $data) && $data['price_excl_tax'] === null) {
+            $object->setPriceExclTax(null);
         }
-        if (\array_key_exists('price_incl_tax', $data)) {
+        if (\array_key_exists('price_incl_tax', $data) && $data['price_incl_tax'] !== null) {
             $object->setPriceInclTax($data['price_incl_tax']);
+        } elseif (\array_key_exists('price_incl_tax', $data) && $data['price_incl_tax'] === null) {
+            $object->setPriceInclTax(null);
         }
         return $object;
     }

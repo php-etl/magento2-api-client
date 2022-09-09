@@ -7,38 +7,38 @@ class FrameworkFilter
     /**
      * Condition type
      *
-     * @var string
+     * @var string|null
      */
     protected $conditionType;
     /**
      * Field
      *
-     * @var string
+     * @var string|null
      */
     protected $field;
     /**
      * Value
      *
-     * @var string
+     * @var string|null
      */
     protected $value;
     /**
      * Condition type
      *
-     * @return string
+     * @return string|null
      */
-    public function getConditionType(): string
+    public function getConditionType(): ?string
     {
         return $this->conditionType;
     }
     /**
      * Condition type
      *
-     * @param string $conditionType
+     * @param string|null $conditionType
      *
      * @return self
      */
-    public function setConditionType(string $conditionType): self
+    public function setConditionType(?string $conditionType): self
     {
         $this->conditionType = $conditionType;
         return $this;
@@ -46,20 +46,20 @@ class FrameworkFilter
     /**
      * Field
      *
-     * @return string
+     * @return string|null
      */
-    public function getField(): string
+    public function getField(): ?string
     {
         return $this->field;
     }
     /**
      * Field
      *
-     * @param string $field
+     * @param string|null $field
      *
      * @return self
      */
-    public function setField(string $field): self
+    public function setField(?string $field): self
     {
         $this->field = $field;
         return $this;
@@ -67,20 +67,20 @@ class FrameworkFilter
     /**
      * Value
      *
-     * @return string
+     * @return string|null
      */
-    public function getValue(): string
+    public function getValue(): ?string
     {
         return $this->value;
     }
     /**
      * Value
      *
-     * @param string $value
+     * @param string|null $value
      *
      * @return self
      */
-    public function setValue(string $value): self
+    public function setValue(?string $value): self
     {
         $this->value = $value;
         return $this;

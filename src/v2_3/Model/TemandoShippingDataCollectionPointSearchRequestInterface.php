@@ -7,44 +7,44 @@ class TemandoShippingDataCollectionPointSearchRequestInterface
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $countryId;
     /**
      *
      *
-     * @var bool
+     * @var bool|null
      */
     protected $pending;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $postcode;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $shippingAddressId;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getCountryId(): string
+    public function getCountryId(): ?string
     {
         return $this->countryId;
     }
     /**
      *
      *
-     * @param string $countryId
+     * @param string|null $countryId
      *
      * @return self
      */
-    public function setCountryId(string $countryId): self
+    public function setCountryId(?string $countryId): self
     {
         $this->countryId = $countryId;
         return $this;
@@ -52,20 +52,20 @@ class TemandoShippingDataCollectionPointSearchRequestInterface
     /**
      *
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getPending(): bool
+    public function getPending(): ?bool
     {
         return $this->pending;
     }
     /**
      *
      *
-     * @param bool $pending
+     * @param bool|null $pending
      *
      * @return self
      */
-    public function setPending(bool $pending): self
+    public function setPending(?bool $pending): self
     {
         $this->pending = $pending;
         return $this;
@@ -73,20 +73,20 @@ class TemandoShippingDataCollectionPointSearchRequestInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getPostcode(): string
+    public function getPostcode(): ?string
     {
         return $this->postcode;
     }
     /**
      *
      *
-     * @param string $postcode
+     * @param string|null $postcode
      *
      * @return self
      */
-    public function setPostcode(string $postcode): self
+    public function setPostcode(?string $postcode): self
     {
         $this->postcode = $postcode;
         return $this;
@@ -94,20 +94,20 @@ class TemandoShippingDataCollectionPointSearchRequestInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getShippingAddressId(): int
+    public function getShippingAddressId(): ?int
     {
         return $this->shippingAddressId;
     }
     /**
      *
      *
-     * @param int $shippingAddressId
+     * @param int|null $shippingAddressId
      *
      * @return self
      */
-    public function setShippingAddressId(int $shippingAddressId): self
+    public function setShippingAddressId(?int $shippingAddressId): self
     {
         $this->shippingAddressId = $shippingAddressId;
         return $this;

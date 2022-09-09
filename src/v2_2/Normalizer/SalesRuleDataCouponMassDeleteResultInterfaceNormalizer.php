@@ -40,19 +40,23 @@ class SalesRuleDataCouponMassDeleteResultInterfaceNormalizer implements Denormal
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('failed_items', $data)) {
+        if (\array_key_exists('failed_items', $data) && $data['failed_items'] !== null) {
             $values = array();
             foreach ($data['failed_items'] as $value) {
                 $values[] = $value;
             }
             $object->setFailedItems($values);
+        } elseif (\array_key_exists('failed_items', $data) && $data['failed_items'] === null) {
+            $object->setFailedItems(null);
         }
-        if (\array_key_exists('missing_items', $data)) {
+        if (\array_key_exists('missing_items', $data) && $data['missing_items'] !== null) {
             $values_1 = array();
             foreach ($data['missing_items'] as $value_1) {
                 $values_1[] = $value_1;
             }
             $object->setMissingItems($values_1);
+        } elseif (\array_key_exists('missing_items', $data) && $data['missing_items'] === null) {
+            $object->setMissingItems(null);
         }
         return $object;
     }

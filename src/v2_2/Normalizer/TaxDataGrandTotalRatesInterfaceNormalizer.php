@@ -40,11 +40,15 @@ class TaxDataGrandTotalRatesInterfaceNormalizer implements DenormalizerInterface
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('percent', $data)) {
+        if (\array_key_exists('percent', $data) && $data['percent'] !== null) {
             $object->setPercent($data['percent']);
+        } elseif (\array_key_exists('percent', $data) && $data['percent'] === null) {
+            $object->setPercent(null);
         }
-        if (\array_key_exists('title', $data)) {
+        if (\array_key_exists('title', $data) && $data['title'] !== null) {
             $object->setTitle($data['title']);
+        } elseif (\array_key_exists('title', $data) && $data['title'] === null) {
+            $object->setTitle(null);
         }
         return $object;
     }

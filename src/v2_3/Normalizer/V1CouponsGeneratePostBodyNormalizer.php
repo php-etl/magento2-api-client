@@ -40,8 +40,10 @@ class V1CouponsGeneratePostBodyNormalizer implements DenormalizerInterface, Norm
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('couponSpec', $data)) {
+        if (\array_key_exists('couponSpec', $data) && $data['couponSpec'] !== null) {
             $object->setCouponSpec($this->denormalizer->denormalize($data['couponSpec'], 'Kiboko\\Magento\\V2_3\\Model\\SalesRuleDataCouponGenerationSpecInterface', 'json', $context));
+        } elseif (\array_key_exists('couponSpec', $data) && $data['couponSpec'] === null) {
+            $object->setCouponSpec(null);
         }
         return $object;
     }

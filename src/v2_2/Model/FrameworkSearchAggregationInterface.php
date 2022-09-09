@@ -7,32 +7,32 @@ class FrameworkSearchAggregationInterface
     /**
      * Document field names
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $bucketNames;
     /**
      * All Document fields
      *
-     * @var FrameworkSearchBucketInterface[]
+     * @var FrameworkSearchBucketInterface[]|null
      */
     protected $buckets;
     /**
      * Document field names
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getBucketNames(): array
+    public function getBucketNames(): ?array
     {
         return $this->bucketNames;
     }
     /**
      * Document field names
      *
-     * @param string[] $bucketNames
+     * @param string[]|null $bucketNames
      *
      * @return self
      */
-    public function setBucketNames(array $bucketNames): self
+    public function setBucketNames(?array $bucketNames): self
     {
         $this->bucketNames = $bucketNames;
         return $this;
@@ -40,20 +40,20 @@ class FrameworkSearchAggregationInterface
     /**
      * All Document fields
      *
-     * @return FrameworkSearchBucketInterface[]
+     * @return FrameworkSearchBucketInterface[]|null
      */
-    public function getBuckets(): array
+    public function getBuckets(): ?array
     {
         return $this->buckets;
     }
     /**
      * All Document fields
      *
-     * @param FrameworkSearchBucketInterface[] $buckets
+     * @param FrameworkSearchBucketInterface[]|null $buckets
      *
      * @return self
      */
-    public function setBuckets(array $buckets): self
+    public function setBuckets(?array $buckets): self
     {
         $this->buckets = $buckets;
         return $this;

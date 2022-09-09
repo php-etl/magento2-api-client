@@ -40,17 +40,25 @@ class CustomerDataRegionInterfaceNormalizer implements DenormalizerInterface, No
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($data['extension_attributes']);
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('region', $data)) {
-            $object->setRegion($data['region'] ?? '');
+        if (\array_key_exists('region', $data) && $data['region'] !== null) {
+            $object->setRegion($data['region']);
+        } elseif (\array_key_exists('region', $data) && $data['region'] === null) {
+            $object->setRegion(null);
         }
-        if (\array_key_exists('region_code', $data)) {
-            $object->setRegionCode($data['region_code'] ?? '');
+        if (\array_key_exists('region_code', $data) && $data['region_code'] !== null) {
+            $object->setRegionCode($data['region_code']);
+        } elseif (\array_key_exists('region_code', $data) && $data['region_code'] === null) {
+            $object->setRegionCode(null);
         }
-        if (\array_key_exists('region_id', $data)) {
+        if (\array_key_exists('region_id', $data) && $data['region_id'] !== null) {
             $object->setRegionId($data['region_id']);
+        } elseif (\array_key_exists('region_id', $data) && $data['region_id'] === null) {
+            $object->setRegionId(null);
         }
         return $object;
     }

@@ -7,74 +7,74 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
     /**
      * Image Content data interface
      *
-     * @var FrameworkDataImageContentInterface
+     * @var FrameworkDataImageContentInterface|null
      */
     protected $content;
     /**
      * If gallery entry is hidden from product page
      *
-     * @var bool
+     * @var bool|null
      */
     protected $disabled;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductAttributeMediaGalleryEntryInterface
      *
-     * @var CatalogDataProductAttributeMediaGalleryEntryExtensionInterface
+     * @var CatalogDataProductAttributeMediaGalleryEntryExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * File path
      *
-     * @var string
+     * @var string|null
      */
     protected $file;
     /**
      * Gallery entry ID
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      * Gallery entry alternative text
      *
-     * @var string
+     * @var string|null
      */
     protected $label;
     /**
      * Media type
      *
-     * @var string
+     * @var string|null
      */
     protected $mediaType;
     /**
      * Gallery entry position (sort order)
      *
-     * @var int
+     * @var int|null
      */
     protected $position;
     /**
      * Gallery entry image types (thumbnail, image, small_image etc)
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $types;
     /**
      * Image Content data interface
      *
-     * @return FrameworkDataImageContentInterface
+     * @return FrameworkDataImageContentInterface|null
      */
-    public function getContent(): FrameworkDataImageContentInterface
+    public function getContent(): ?FrameworkDataImageContentInterface
     {
         return $this->content;
     }
     /**
      * Image Content data interface
      *
-     * @param FrameworkDataImageContentInterface $content
+     * @param FrameworkDataImageContentInterface|null $content
      *
      * @return self
      */
-    public function setContent(FrameworkDataImageContentInterface $content): self
+    public function setContent(?FrameworkDataImageContentInterface $content): self
     {
         $this->content = $content;
         return $this;
@@ -82,20 +82,20 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
     /**
      * If gallery entry is hidden from product page
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getDisabled(): bool
+    public function getDisabled(): ?bool
     {
         return $this->disabled;
     }
     /**
      * If gallery entry is hidden from product page
      *
-     * @param bool $disabled
+     * @param bool|null $disabled
      *
      * @return self
      */
-    public function setDisabled(bool $disabled): self
+    public function setDisabled(?bool $disabled): self
     {
         $this->disabled = $disabled;
         return $this;
@@ -103,20 +103,20 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductAttributeMediaGalleryEntryInterface
      *
-     * @return CatalogDataProductAttributeMediaGalleryEntryExtensionInterface
+     * @return CatalogDataProductAttributeMediaGalleryEntryExtensionInterface|null
      */
-    public function getExtensionAttributes(): CatalogDataProductAttributeMediaGalleryEntryExtensionInterface
+    public function getExtensionAttributes(): ?CatalogDataProductAttributeMediaGalleryEntryExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\ProductAttributeMediaGalleryEntryInterface
      *
-     * @param CatalogDataProductAttributeMediaGalleryEntryExtensionInterface $extensionAttributes
+     * @param CatalogDataProductAttributeMediaGalleryEntryExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(CatalogDataProductAttributeMediaGalleryEntryExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?CatalogDataProductAttributeMediaGalleryEntryExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;
@@ -124,20 +124,20 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
     /**
      * File path
      *
-     * @return string
+     * @return string|null
      */
-    public function getFile(): string
+    public function getFile(): ?string
     {
         return $this->file;
     }
     /**
      * File path
      *
-     * @param string $file
+     * @param string|null $file
      *
      * @return self
      */
-    public function setFile(string $file): self
+    public function setFile(?string $file): self
     {
         $this->file = $file;
         return $this;
@@ -145,20 +145,20 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
     /**
      * Gallery entry ID
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      * Gallery entry ID
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -166,16 +166,16 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
     /**
      * Gallery entry alternative text
      *
-     * @return string
+     * @return string|null
      */
-    public function getLabel(): string
+    public function getLabel(): ?string
     {
         return $this->label;
     }
     /**
      * Gallery entry alternative text
      *
-     * @param ?string $label
+     * @param string|null $label
      *
      * @return self
      */
@@ -187,20 +187,20 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
     /**
      * Media type
      *
-     * @return string
+     * @return string|null
      */
-    public function getMediaType(): string
+    public function getMediaType(): ?string
     {
         return $this->mediaType;
     }
     /**
      * Media type
      *
-     * @param string $mediaType
+     * @param string|null $mediaType
      *
      * @return self
      */
-    public function setMediaType(string $mediaType): self
+    public function setMediaType(?string $mediaType): self
     {
         $this->mediaType = $mediaType;
         return $this;
@@ -208,20 +208,20 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
     /**
      * Gallery entry position (sort order)
      *
-     * @return int
+     * @return int|null
      */
-    public function getPosition(): int
+    public function getPosition(): ?int
     {
         return $this->position;
     }
     /**
      * Gallery entry position (sort order)
      *
-     * @param int $position
+     * @param int|null $position
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(?int $position): self
     {
         $this->position = $position;
         return $this;
@@ -229,20 +229,20 @@ class CatalogDataProductAttributeMediaGalleryEntryInterface
     /**
      * Gallery entry image types (thumbnail, image, small_image etc)
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getTypes(): array
+    public function getTypes(): ?array
     {
         return $this->types;
     }
     /**
      * Gallery entry image types (thumbnail, image, small_image etc)
      *
-     * @param string[] $types
+     * @param string[]|null $types
      *
      * @return self
      */
-    public function setTypes(array $types): self
+    public function setTypes(?array $types): self
     {
         $this->types = $types;
         return $this;

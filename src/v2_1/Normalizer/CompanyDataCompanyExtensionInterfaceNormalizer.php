@@ -40,17 +40,25 @@ class CompanyDataCompanyExtensionInterfaceNormalizer implements DenormalizerInte
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('applicable_payment_method', $data)) {
+        if (\array_key_exists('applicable_payment_method', $data) && $data['applicable_payment_method'] !== null) {
             $object->setApplicablePaymentMethod($data['applicable_payment_method']);
+        } elseif (\array_key_exists('applicable_payment_method', $data) && $data['applicable_payment_method'] === null) {
+            $object->setApplicablePaymentMethod(null);
         }
-        if (\array_key_exists('available_payment_methods', $data)) {
+        if (\array_key_exists('available_payment_methods', $data) && $data['available_payment_methods'] !== null) {
             $object->setAvailablePaymentMethods($data['available_payment_methods']);
+        } elseif (\array_key_exists('available_payment_methods', $data) && $data['available_payment_methods'] === null) {
+            $object->setAvailablePaymentMethods(null);
         }
-        if (\array_key_exists('quote_config', $data)) {
+        if (\array_key_exists('quote_config', $data) && $data['quote_config'] !== null) {
             $object->setQuoteConfig($this->denormalizer->denormalize($data['quote_config'], 'Kiboko\\Magento\\V2_1\\Model\\NegotiableQuoteDataCompanyQuoteConfigInterface', 'json', $context));
+        } elseif (\array_key_exists('quote_config', $data) && $data['quote_config'] === null) {
+            $object->setQuoteConfig(null);
         }
-        if (\array_key_exists('use_config_settings', $data)) {
+        if (\array_key_exists('use_config_settings', $data) && $data['use_config_settings'] !== null) {
             $object->setUseConfigSettings($data['use_config_settings']);
+        } elseif (\array_key_exists('use_config_settings', $data) && $data['use_config_settings'] === null) {
+            $object->setUseConfigSettings(null);
         }
         return $object;
     }

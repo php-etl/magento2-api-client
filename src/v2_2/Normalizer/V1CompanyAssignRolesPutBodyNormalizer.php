@@ -40,15 +40,19 @@ class V1CompanyAssignRolesPutBodyNormalizer implements DenormalizerInterface, No
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('roles', $data)) {
+        if (\array_key_exists('roles', $data) && $data['roles'] !== null) {
             $values = array();
             foreach ($data['roles'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_2\\Model\\CompanyDataRoleInterface', 'json', $context);
             }
             $object->setRoles($values);
+        } elseif (\array_key_exists('roles', $data) && $data['roles'] === null) {
+            $object->setRoles(null);
         }
-        if (\array_key_exists('userId', $data)) {
+        if (\array_key_exists('userId', $data) && $data['userId'] !== null) {
             $object->setUserId($data['userId']);
+        } elseif (\array_key_exists('userId', $data) && $data['userId'] === null) {
+            $object->setUserId(null);
         }
         return $object;
     }

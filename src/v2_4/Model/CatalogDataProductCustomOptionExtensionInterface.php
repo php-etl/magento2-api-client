@@ -7,26 +7,26 @@ class CatalogDataProductCustomOptionExtensionInterface
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $vertexFlexField;
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getVertexFlexField(): string
+    public function getVertexFlexField(): ?string
     {
         return $this->vertexFlexField;
     }
     /**
      *
      *
-     * @param string $vertexFlexField
+     * @param string|null $vertexFlexField
      *
      * @return self
      */
-    public function setVertexFlexField(string $vertexFlexField): self
+    public function setVertexFlexField(?string $vertexFlexField): self
     {
         $this->vertexFlexField = $vertexFlexField;
         return $this;

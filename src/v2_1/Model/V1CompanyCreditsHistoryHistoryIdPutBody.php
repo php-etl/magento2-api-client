@@ -7,32 +7,32 @@ class V1CompanyCreditsHistoryHistoryIdPutBody
     /**
      * [optional]
      *
-     * @var string
+     * @var string|null
      */
     protected $comment;
     /**
      * [optional]
      *
-     * @var string
+     * @var string|null
      */
     protected $purchaseOrder;
     /**
      * [optional]
      *
-     * @return string
+     * @return string|null
      */
-    public function getComment(): string
+    public function getComment(): ?string
     {
         return $this->comment;
     }
     /**
      * [optional]
      *
-     * @param string $comment
+     * @param string|null $comment
      *
      * @return self
      */
-    public function setComment(string $comment): self
+    public function setComment(?string $comment): self
     {
         $this->comment = $comment;
         return $this;
@@ -40,20 +40,20 @@ class V1CompanyCreditsHistoryHistoryIdPutBody
     /**
      * [optional]
      *
-     * @return string
+     * @return string|null
      */
-    public function getPurchaseOrder(): string
+    public function getPurchaseOrder(): ?string
     {
         return $this->purchaseOrder;
     }
     /**
      * [optional]
      *
-     * @param string $purchaseOrder
+     * @param string|null $purchaseOrder
      *
      * @return self
      */
-    public function setPurchaseOrder(string $purchaseOrder): self
+    public function setPurchaseOrder(?string $purchaseOrder): self
     {
         $this->purchaseOrder = $purchaseOrder;
         return $this;

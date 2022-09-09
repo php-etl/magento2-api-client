@@ -7,38 +7,38 @@ class GiftWrappingDataWrappingSearchResultsInterface
     /**
      * Items
      *
-     * @var GiftWrappingDataWrappingInterface[]
+     * @var GiftWrappingDataWrappingInterface[]|null
      */
     protected $items;
     /**
      * Search criteria interface.
      *
-     * @var FrameworkSearchCriteriaInterface
+     * @var FrameworkSearchCriteriaInterface|null
      */
     protected $searchCriteria;
     /**
      * Total count.
      *
-     * @var int
+     * @var int|null
      */
     protected $totalCount;
     /**
      * Items
      *
-     * @return GiftWrappingDataWrappingInterface[]
+     * @return GiftWrappingDataWrappingInterface[]|null
      */
-    public function getItems(): array
+    public function getItems(): ?array
     {
         return $this->items;
     }
     /**
      * Items
      *
-     * @param GiftWrappingDataWrappingInterface[] $items
+     * @param GiftWrappingDataWrappingInterface[]|null $items
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(?array $items): self
     {
         $this->items = $items;
         return $this;
@@ -46,20 +46,20 @@ class GiftWrappingDataWrappingSearchResultsInterface
     /**
      * Search criteria interface.
      *
-     * @return FrameworkSearchCriteriaInterface
+     * @return FrameworkSearchCriteriaInterface|null
      */
-    public function getSearchCriteria(): FrameworkSearchCriteriaInterface
+    public function getSearchCriteria(): ?FrameworkSearchCriteriaInterface
     {
         return $this->searchCriteria;
     }
     /**
      * Search criteria interface.
      *
-     * @param FrameworkSearchCriteriaInterface $searchCriteria
+     * @param FrameworkSearchCriteriaInterface|null $searchCriteria
      *
      * @return self
      */
-    public function setSearchCriteria(FrameworkSearchCriteriaInterface $searchCriteria): self
+    public function setSearchCriteria(?FrameworkSearchCriteriaInterface $searchCriteria): self
     {
         $this->searchCriteria = $searchCriteria;
         return $this;
@@ -67,20 +67,20 @@ class GiftWrappingDataWrappingSearchResultsInterface
     /**
      * Total count.
      *
-     * @return int
+     * @return int|null
      */
-    public function getTotalCount(): int
+    public function getTotalCount(): ?int
     {
         return $this->totalCount;
     }
     /**
      * Total count.
      *
-     * @param int $totalCount
+     * @param int|null $totalCount
      *
      * @return self
      */
-    public function setTotalCount(int $totalCount): self
+    public function setTotalCount(?int $totalCount): self
     {
         $this->totalCount = $totalCount;
         return $this;

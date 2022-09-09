@@ -7,44 +7,44 @@ class EavDataAttributeGroupInterface
     /**
      * Id
      *
-     * @var string
+     * @var string|null
      */
     protected $attributeGroupId;
     /**
      * Name
      *
-     * @var string
+     * @var string|null
      */
     protected $attributeGroupName;
     /**
      * Attribute set id
      *
-     * @var int
+     * @var int|null
      */
     protected $attributeSetId;
     /**
      * ExtensionInterface class for @see \Magento\Eav\Api\Data\AttributeGroupInterface
      *
-     * @var EavDataAttributeGroupExtensionInterface
+     * @var EavDataAttributeGroupExtensionInterface|null
      */
     protected $extensionAttributes;
     /**
      * Id
      *
-     * @return string
+     * @return string|null
      */
-    public function getAttributeGroupId(): string
+    public function getAttributeGroupId(): ?string
     {
         return $this->attributeGroupId;
     }
     /**
      * Id
      *
-     * @param string $attributeGroupId
+     * @param string|null $attributeGroupId
      *
      * @return self
      */
-    public function setAttributeGroupId(string $attributeGroupId): self
+    public function setAttributeGroupId(?string $attributeGroupId): self
     {
         $this->attributeGroupId = $attributeGroupId;
         return $this;
@@ -52,20 +52,20 @@ class EavDataAttributeGroupInterface
     /**
      * Name
      *
-     * @return string
+     * @return string|null
      */
-    public function getAttributeGroupName(): string
+    public function getAttributeGroupName(): ?string
     {
         return $this->attributeGroupName;
     }
     /**
      * Name
      *
-     * @param string $attributeGroupName
+     * @param string|null $attributeGroupName
      *
      * @return self
      */
-    public function setAttributeGroupName(string $attributeGroupName): self
+    public function setAttributeGroupName(?string $attributeGroupName): self
     {
         $this->attributeGroupName = $attributeGroupName;
         return $this;
@@ -73,20 +73,20 @@ class EavDataAttributeGroupInterface
     /**
      * Attribute set id
      *
-     * @return int
+     * @return int|null
      */
-    public function getAttributeSetId(): int
+    public function getAttributeSetId(): ?int
     {
         return $this->attributeSetId;
     }
     /**
      * Attribute set id
      *
-     * @param int $attributeSetId
+     * @param int|null $attributeSetId
      *
      * @return self
      */
-    public function setAttributeSetId(int $attributeSetId): self
+    public function setAttributeSetId(?int $attributeSetId): self
     {
         $this->attributeSetId = $attributeSetId;
         return $this;
@@ -94,20 +94,20 @@ class EavDataAttributeGroupInterface
     /**
      * ExtensionInterface class for @see \Magento\Eav\Api\Data\AttributeGroupInterface
      *
-     * @return EavDataAttributeGroupExtensionInterface
+     * @return EavDataAttributeGroupExtensionInterface|null
      */
-    public function getExtensionAttributes(): EavDataAttributeGroupExtensionInterface
+    public function getExtensionAttributes(): ?EavDataAttributeGroupExtensionInterface
     {
         return $this->extensionAttributes;
     }
     /**
      * ExtensionInterface class for @see \Magento\Eav\Api\Data\AttributeGroupInterface
      *
-     * @param EavDataAttributeGroupExtensionInterface $extensionAttributes
+     * @param EavDataAttributeGroupExtensionInterface|null $extensionAttributes
      *
      * @return self
      */
-    public function setExtensionAttributes(EavDataAttributeGroupExtensionInterface $extensionAttributes): self
+    public function setExtensionAttributes(?EavDataAttributeGroupExtensionInterface $extensionAttributes): self
     {
         $this->extensionAttributes = $extensionAttributes;
         return $this;

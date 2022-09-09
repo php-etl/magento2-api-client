@@ -103,97 +103,153 @@ class QuoteDataTotalsInterfaceNormalizer implements DenormalizerInterface, Norma
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('base_currency_code', $data)) {
+        if (\array_key_exists('base_currency_code', $data) && $data['base_currency_code'] !== null) {
             $object->setBaseCurrencyCode($data['base_currency_code']);
+        } elseif (\array_key_exists('base_currency_code', $data) && $data['base_currency_code'] === null) {
+            $object->setBaseCurrencyCode(null);
         }
-        if (\array_key_exists('base_discount_amount', $data)) {
+        if (\array_key_exists('base_discount_amount', $data) && $data['base_discount_amount'] !== null) {
             $object->setBaseDiscountAmount($data['base_discount_amount']);
+        } elseif (\array_key_exists('base_discount_amount', $data) && $data['base_discount_amount'] === null) {
+            $object->setBaseDiscountAmount(null);
         }
-        if (\array_key_exists('base_grand_total', $data)) {
+        if (\array_key_exists('base_grand_total', $data) && $data['base_grand_total'] !== null) {
             $object->setBaseGrandTotal($data['base_grand_total']);
+        } elseif (\array_key_exists('base_grand_total', $data) && $data['base_grand_total'] === null) {
+            $object->setBaseGrandTotal(null);
         }
-        if (\array_key_exists('base_shipping_amount', $data)) {
+        if (\array_key_exists('base_shipping_amount', $data) && $data['base_shipping_amount'] !== null) {
             $object->setBaseShippingAmount($data['base_shipping_amount']);
+        } elseif (\array_key_exists('base_shipping_amount', $data) && $data['base_shipping_amount'] === null) {
+            $object->setBaseShippingAmount(null);
         }
-        if (\array_key_exists('base_shipping_discount_amount', $data)) {
+        if (\array_key_exists('base_shipping_discount_amount', $data) && $data['base_shipping_discount_amount'] !== null) {
             $object->setBaseShippingDiscountAmount($data['base_shipping_discount_amount']);
+        } elseif (\array_key_exists('base_shipping_discount_amount', $data) && $data['base_shipping_discount_amount'] === null) {
+            $object->setBaseShippingDiscountAmount(null);
         }
-        if (\array_key_exists('base_shipping_incl_tax', $data)) {
+        if (\array_key_exists('base_shipping_incl_tax', $data) && $data['base_shipping_incl_tax'] !== null) {
             $object->setBaseShippingInclTax($data['base_shipping_incl_tax']);
+        } elseif (\array_key_exists('base_shipping_incl_tax', $data) && $data['base_shipping_incl_tax'] === null) {
+            $object->setBaseShippingInclTax(null);
         }
-        if (\array_key_exists('base_shipping_tax_amount', $data)) {
+        if (\array_key_exists('base_shipping_tax_amount', $data) && $data['base_shipping_tax_amount'] !== null) {
             $object->setBaseShippingTaxAmount($data['base_shipping_tax_amount']);
+        } elseif (\array_key_exists('base_shipping_tax_amount', $data) && $data['base_shipping_tax_amount'] === null) {
+            $object->setBaseShippingTaxAmount(null);
         }
-        if (\array_key_exists('base_subtotal', $data)) {
+        if (\array_key_exists('base_subtotal', $data) && $data['base_subtotal'] !== null) {
             $object->setBaseSubtotal($data['base_subtotal']);
+        } elseif (\array_key_exists('base_subtotal', $data) && $data['base_subtotal'] === null) {
+            $object->setBaseSubtotal(null);
         }
-        if (\array_key_exists('base_subtotal_incl_tax', $data)) {
+        if (\array_key_exists('base_subtotal_incl_tax', $data) && $data['base_subtotal_incl_tax'] !== null) {
             $object->setBaseSubtotalInclTax($data['base_subtotal_incl_tax']);
+        } elseif (\array_key_exists('base_subtotal_incl_tax', $data) && $data['base_subtotal_incl_tax'] === null) {
+            $object->setBaseSubtotalInclTax(null);
         }
-        if (\array_key_exists('base_subtotal_with_discount', $data)) {
+        if (\array_key_exists('base_subtotal_with_discount', $data) && $data['base_subtotal_with_discount'] !== null) {
             $object->setBaseSubtotalWithDiscount($data['base_subtotal_with_discount']);
+        } elseif (\array_key_exists('base_subtotal_with_discount', $data) && $data['base_subtotal_with_discount'] === null) {
+            $object->setBaseSubtotalWithDiscount(null);
         }
-        if (\array_key_exists('base_tax_amount', $data)) {
+        if (\array_key_exists('base_tax_amount', $data) && $data['base_tax_amount'] !== null) {
             $object->setBaseTaxAmount($data['base_tax_amount']);
+        } elseif (\array_key_exists('base_tax_amount', $data) && $data['base_tax_amount'] === null) {
+            $object->setBaseTaxAmount(null);
         }
-        if (\array_key_exists('coupon_code', $data)) {
+        if (\array_key_exists('coupon_code', $data) && $data['coupon_code'] !== null) {
             $object->setCouponCode($data['coupon_code']);
+        } elseif (\array_key_exists('coupon_code', $data) && $data['coupon_code'] === null) {
+            $object->setCouponCode(null);
         }
-        if (\array_key_exists('discount_amount', $data)) {
+        if (\array_key_exists('discount_amount', $data) && $data['discount_amount'] !== null) {
             $object->setDiscountAmount($data['discount_amount']);
+        } elseif (\array_key_exists('discount_amount', $data) && $data['discount_amount'] === null) {
+            $object->setDiscountAmount(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataTotalsExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('grand_total', $data)) {
+        if (\array_key_exists('grand_total', $data) && $data['grand_total'] !== null) {
             $object->setGrandTotal($data['grand_total']);
+        } elseif (\array_key_exists('grand_total', $data) && $data['grand_total'] === null) {
+            $object->setGrandTotal(null);
         }
-        if (\array_key_exists('items', $data)) {
+        if (\array_key_exists('items', $data) && $data['items'] !== null) {
             $values = array();
             foreach ($data['items'] as $value) {
                 $values[] = $this->denormalizer->denormalize($value, 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataTotalsItemInterface', 'json', $context);
             }
             $object->setItems($values);
+        } elseif (\array_key_exists('items', $data) && $data['items'] === null) {
+            $object->setItems(null);
         }
-        if (\array_key_exists('items_qty', $data)) {
+        if (\array_key_exists('items_qty', $data) && $data['items_qty'] !== null) {
             $object->setItemsQty($data['items_qty']);
+        } elseif (\array_key_exists('items_qty', $data) && $data['items_qty'] === null) {
+            $object->setItemsQty(null);
         }
-        if (\array_key_exists('quote_currency_code', $data)) {
+        if (\array_key_exists('quote_currency_code', $data) && $data['quote_currency_code'] !== null) {
             $object->setQuoteCurrencyCode($data['quote_currency_code']);
+        } elseif (\array_key_exists('quote_currency_code', $data) && $data['quote_currency_code'] === null) {
+            $object->setQuoteCurrencyCode(null);
         }
-        if (\array_key_exists('shipping_amount', $data)) {
+        if (\array_key_exists('shipping_amount', $data) && $data['shipping_amount'] !== null) {
             $object->setShippingAmount($data['shipping_amount']);
+        } elseif (\array_key_exists('shipping_amount', $data) && $data['shipping_amount'] === null) {
+            $object->setShippingAmount(null);
         }
-        if (\array_key_exists('shipping_discount_amount', $data)) {
+        if (\array_key_exists('shipping_discount_amount', $data) && $data['shipping_discount_amount'] !== null) {
             $object->setShippingDiscountAmount($data['shipping_discount_amount']);
+        } elseif (\array_key_exists('shipping_discount_amount', $data) && $data['shipping_discount_amount'] === null) {
+            $object->setShippingDiscountAmount(null);
         }
-        if (\array_key_exists('shipping_incl_tax', $data)) {
+        if (\array_key_exists('shipping_incl_tax', $data) && $data['shipping_incl_tax'] !== null) {
             $object->setShippingInclTax($data['shipping_incl_tax']);
+        } elseif (\array_key_exists('shipping_incl_tax', $data) && $data['shipping_incl_tax'] === null) {
+            $object->setShippingInclTax(null);
         }
-        if (\array_key_exists('shipping_tax_amount', $data)) {
+        if (\array_key_exists('shipping_tax_amount', $data) && $data['shipping_tax_amount'] !== null) {
             $object->setShippingTaxAmount($data['shipping_tax_amount']);
+        } elseif (\array_key_exists('shipping_tax_amount', $data) && $data['shipping_tax_amount'] === null) {
+            $object->setShippingTaxAmount(null);
         }
-        if (\array_key_exists('subtotal', $data)) {
+        if (\array_key_exists('subtotal', $data) && $data['subtotal'] !== null) {
             $object->setSubtotal($data['subtotal']);
+        } elseif (\array_key_exists('subtotal', $data) && $data['subtotal'] === null) {
+            $object->setSubtotal(null);
         }
-        if (\array_key_exists('subtotal_incl_tax', $data)) {
+        if (\array_key_exists('subtotal_incl_tax', $data) && $data['subtotal_incl_tax'] !== null) {
             $object->setSubtotalInclTax($data['subtotal_incl_tax']);
+        } elseif (\array_key_exists('subtotal_incl_tax', $data) && $data['subtotal_incl_tax'] === null) {
+            $object->setSubtotalInclTax(null);
         }
-        if (\array_key_exists('subtotal_with_discount', $data)) {
+        if (\array_key_exists('subtotal_with_discount', $data) && $data['subtotal_with_discount'] !== null) {
             $object->setSubtotalWithDiscount($data['subtotal_with_discount']);
+        } elseif (\array_key_exists('subtotal_with_discount', $data) && $data['subtotal_with_discount'] === null) {
+            $object->setSubtotalWithDiscount(null);
         }
-        if (\array_key_exists('tax_amount', $data)) {
+        if (\array_key_exists('tax_amount', $data) && $data['tax_amount'] !== null) {
             $object->setTaxAmount($data['tax_amount']);
+        } elseif (\array_key_exists('tax_amount', $data) && $data['tax_amount'] === null) {
+            $object->setTaxAmount(null);
         }
-        if (\array_key_exists('total_segments', $data)) {
+        if (\array_key_exists('total_segments', $data) && $data['total_segments'] !== null) {
             $values_1 = array();
             foreach ($data['total_segments'] as $value_1) {
                 $values_1[] = $this->denormalizer->denormalize($value_1, 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataTotalSegmentInterface', 'json', $context);
             }
             $object->setTotalSegments($values_1);
+        } elseif (\array_key_exists('total_segments', $data) && $data['total_segments'] === null) {
+            $object->setTotalSegments(null);
         }
-        if (\array_key_exists('weee_tax_applied_amount', $data)) {
+        if (\array_key_exists('weee_tax_applied_amount', $data) && $data['weee_tax_applied_amount'] !== null) {
             $object->setWeeeTaxAppliedAmount($data['weee_tax_applied_amount']);
+        } elseif (\array_key_exists('weee_tax_applied_amount', $data) && $data['weee_tax_applied_amount'] === null) {
+            $object->setWeeeTaxAppliedAmount(null);
         }
         return $object;
     }

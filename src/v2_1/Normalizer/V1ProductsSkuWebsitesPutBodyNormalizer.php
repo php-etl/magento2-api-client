@@ -40,8 +40,10 @@ class V1ProductsSkuWebsitesPutBodyNormalizer implements DenormalizerInterface, N
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('productWebsiteLink', $data)) {
+        if (\array_key_exists('productWebsiteLink', $data) && $data['productWebsiteLink'] !== null) {
             $object->setProductWebsiteLink($this->denormalizer->denormalize($data['productWebsiteLink'], 'Kiboko\\Magento\\V2_1\\Model\\CatalogDataProductWebsiteLinkInterface', 'json', $context));
+        } elseif (\array_key_exists('productWebsiteLink', $data) && $data['productWebsiteLink'] === null) {
+            $object->setProductWebsiteLink(null);
         }
         return $object;
     }

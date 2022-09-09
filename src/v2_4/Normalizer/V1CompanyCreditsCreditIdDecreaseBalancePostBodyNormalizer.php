@@ -43,20 +43,30 @@ class V1CompanyCreditsCreditIdDecreaseBalancePostBodyNormalizer implements Denor
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('comment', $data)) {
+        if (\array_key_exists('comment', $data) && $data['comment'] !== null) {
             $object->setComment($data['comment']);
+        } elseif (\array_key_exists('comment', $data) && $data['comment'] === null) {
+            $object->setComment(null);
         }
-        if (\array_key_exists('currency', $data)) {
+        if (\array_key_exists('currency', $data) && $data['currency'] !== null) {
             $object->setCurrency($data['currency']);
+        } elseif (\array_key_exists('currency', $data) && $data['currency'] === null) {
+            $object->setCurrency(null);
         }
-        if (\array_key_exists('operationType', $data)) {
+        if (\array_key_exists('operationType', $data) && $data['operationType'] !== null) {
             $object->setOperationType($data['operationType']);
+        } elseif (\array_key_exists('operationType', $data) && $data['operationType'] === null) {
+            $object->setOperationType(null);
         }
-        if (\array_key_exists('options', $data)) {
+        if (\array_key_exists('options', $data) && $data['options'] !== null) {
             $object->setOptions($this->denormalizer->denormalize($data['options'], 'Kiboko\\Magento\\V2_4\\Model\\CompanyCreditDataCreditBalanceOptionsInterface', 'json', $context));
+        } elseif (\array_key_exists('options', $data) && $data['options'] === null) {
+            $object->setOptions(null);
         }
-        if (\array_key_exists('value', $data)) {
+        if (\array_key_exists('value', $data) && $data['value'] !== null) {
             $object->setValue($data['value']);
+        } elseif (\array_key_exists('value', $data) && $data['value'] === null) {
+            $object->setValue(null);
         }
         return $object;
     }

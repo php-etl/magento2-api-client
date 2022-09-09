@@ -7,44 +7,44 @@ class TaxDataAppliedTaxRateInterface
     /**
      * Code
      *
-     * @var string
+     * @var string|null
      */
     protected $code;
     /**
      * ExtensionInterface class for @see \Magento\Tax\Api\Data\AppliedTaxRateInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Tax Percent
      *
-     * @var float
+     * @var float|null
      */
     protected $percent;
     /**
      * Title
      *
-     * @var string
+     * @var string|null
      */
     protected $title;
     /**
      * Code
      *
-     * @return string
+     * @return string|null
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
     /**
      * Code
      *
-     * @param string $code
+     * @param string|null $code
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
         return $this;
@@ -73,20 +73,20 @@ class TaxDataAppliedTaxRateInterface
     /**
      * Tax Percent
      *
-     * @return float
+     * @return float|null
      */
-    public function getPercent(): float
+    public function getPercent(): ?float
     {
         return $this->percent;
     }
     /**
      * Tax Percent
      *
-     * @param float $percent
+     * @param float|null $percent
      *
      * @return self
      */
-    public function setPercent(float $percent): self
+    public function setPercent(?float $percent): self
     {
         $this->percent = $percent;
         return $this;
@@ -94,20 +94,20 @@ class TaxDataAppliedTaxRateInterface
     /**
      * Title
      *
-     * @return string
+     * @return string|null
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
     /**
      * Title
      *
-     * @param string $title
+     * @param string|null $title
      *
      * @return self
      */
-    public function setTitle(string $title): self
+    public function setTitle(?string $title): self
     {
         $this->title = $title;
         return $this;

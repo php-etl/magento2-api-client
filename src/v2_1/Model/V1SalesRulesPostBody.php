@@ -7,26 +7,26 @@ class V1SalesRulesPostBody
     /**
      * Interface RuleInterface
      *
-     * @var SalesRuleDataRuleInterface
+     * @var SalesRuleDataRuleInterface|null
      */
     protected $rule;
     /**
      * Interface RuleInterface
      *
-     * @return SalesRuleDataRuleInterface
+     * @return SalesRuleDataRuleInterface|null
      */
-    public function getRule(): SalesRuleDataRuleInterface
+    public function getRule(): ?SalesRuleDataRuleInterface
     {
         return $this->rule;
     }
     /**
      * Interface RuleInterface
      *
-     * @param SalesRuleDataRuleInterface $rule
+     * @param SalesRuleDataRuleInterface|null $rule
      *
      * @return self
      */
-    public function setRule(SalesRuleDataRuleInterface $rule): self
+    public function setRule(?SalesRuleDataRuleInterface $rule): self
     {
         $this->rule = $rule;
         return $this;

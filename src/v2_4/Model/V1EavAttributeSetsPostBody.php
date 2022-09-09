@@ -7,38 +7,38 @@ class V1EavAttributeSetsPostBody
     /**
      * Interface AttributeSetInterface
      *
-     * @var EavDataAttributeSetInterface
+     * @var EavDataAttributeSetInterface|null
      */
     protected $attributeSet;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $entityTypeCode;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $skeletonId;
     /**
      * Interface AttributeSetInterface
      *
-     * @return EavDataAttributeSetInterface
+     * @return EavDataAttributeSetInterface|null
      */
-    public function getAttributeSet(): EavDataAttributeSetInterface
+    public function getAttributeSet(): ?EavDataAttributeSetInterface
     {
         return $this->attributeSet;
     }
     /**
      * Interface AttributeSetInterface
      *
-     * @param EavDataAttributeSetInterface $attributeSet
+     * @param EavDataAttributeSetInterface|null $attributeSet
      *
      * @return self
      */
-    public function setAttributeSet(EavDataAttributeSetInterface $attributeSet): self
+    public function setAttributeSet(?EavDataAttributeSetInterface $attributeSet): self
     {
         $this->attributeSet = $attributeSet;
         return $this;
@@ -46,20 +46,20 @@ class V1EavAttributeSetsPostBody
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getEntityTypeCode(): string
+    public function getEntityTypeCode(): ?string
     {
         return $this->entityTypeCode;
     }
     /**
      *
      *
-     * @param string $entityTypeCode
+     * @param string|null $entityTypeCode
      *
      * @return self
      */
-    public function setEntityTypeCode(string $entityTypeCode): self
+    public function setEntityTypeCode(?string $entityTypeCode): self
     {
         $this->entityTypeCode = $entityTypeCode;
         return $this;
@@ -67,20 +67,20 @@ class V1EavAttributeSetsPostBody
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getSkeletonId(): int
+    public function getSkeletonId(): ?int
     {
         return $this->skeletonId;
     }
     /**
      *
      *
-     * @param int $skeletonId
+     * @param int|null $skeletonId
      *
      * @return self
      */
-    public function setSkeletonId(int $skeletonId): self
+    public function setSkeletonId(?int $skeletonId): self
     {
         $this->skeletonId = $skeletonId;
         return $this;

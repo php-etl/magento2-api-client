@@ -40,8 +40,10 @@ class V1CompanyRoleIdPutBodyNormalizer implements DenormalizerInterface, Normali
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('role', $data)) {
+        if (\array_key_exists('role', $data) && $data['role'] !== null) {
             $object->setRole($this->denormalizer->denormalize($data['role'], 'Kiboko\\Magento\\V2_1\\Model\\CompanyDataRoleInterface', 'json', $context));
+        } elseif (\array_key_exists('role', $data) && $data['role'] === null) {
+            $object->setRole(null);
         }
         return $object;
     }

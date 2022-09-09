@@ -7,242 +7,242 @@ class CatalogDataProductAttributeInterface
     /**
      * Apply to value for the element
      *
-     * @var string[]
+     * @var string[]|null
      */
     protected $applyTo;
     /**
      * Code of the attribute.
      *
-     * @var string
+     * @var string|null
      */
     protected $attributeCode;
     /**
      * Id of the attribute.
      *
-     * @var int
+     * @var int|null
      */
     protected $attributeId;
     /**
      * Backend model
      *
-     * @var string
+     * @var string|null
      */
     protected $backendModel;
     /**
      * Backend type.
      *
-     * @var string
+     * @var string|null
      */
     protected $backendType;
     /**
      * Custom attributes values.
      *
-     * @var FrameworkAttributeInterface[]
+     * @var FrameworkAttributeInterface[]|null
      */
     protected $customAttributes;
     /**
      * Frontend label for default store
      *
-     * @var string
+     * @var string|null
      */
     protected $defaultFrontendLabel;
     /**
      * Default value for the element.
      *
-     * @var string
+     * @var string|null
      */
     protected $defaultValue;
     /**
      * Entity type id
      *
-     * @var string
+     * @var string|null
      */
     protected $entityTypeId;
     /**
      * ExtensionInterface class for @see \Magento\Catalog\Api\Data\EavAttributeInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Frontend class of attribute
      *
-     * @var string
+     * @var string|null
      */
     protected $frontendClass;
     /**
      * HTML for input element.
      *
-     * @var string
+     * @var string|null
      */
     protected $frontendInput;
     /**
      * Frontend label for each store
      *
-     * @var EavDataAttributeFrontendLabelInterface[]
+     * @var EavDataAttributeFrontendLabelInterface[]|null
      */
     protected $frontendLabels;
     /**
      * The attribute can be compared on the frontend
      *
-     * @var string
+     * @var string|null
      */
     protected $isComparable;
     /**
      * It used in layered navigation
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isFilterable;
     /**
      * It is filterable in catalog product grid
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isFilterableInGrid;
     /**
      * It is used in search results layered navigation
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isFilterableInSearch;
     /**
      * The HTML tags are allowed on the frontend
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isHtmlAllowedOnFront;
     /**
      * Attribute is required.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isRequired;
     /**
      * The attribute can be used in Quick Search
      *
-     * @var string
+     * @var string|null
      */
     protected $isSearchable;
     /**
      * This is a unique attribute
      *
-     * @var string
+     * @var string|null
      */
     protected $isUnique;
     /**
      * The attribute can be used for promo rules
      *
-     * @var string
+     * @var string|null
      */
     protected $isUsedForPromoRules;
     /**
      * It is used in catalog product grid
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isUsedInGrid;
     /**
      * Current attribute has been defined by a user.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isUserDefined;
     /**
      * Attribute is visible on frontend.
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isVisible;
     /**
      * The attribute can be used in Advanced Search
      *
-     * @var string
+     * @var string|null
      */
     protected $isVisibleInAdvancedSearch;
     /**
      * It is visible in catalog product grid
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isVisibleInGrid;
     /**
      * The attribute is visible on the frontend
      *
-     * @var string
+     * @var string|null
      */
     protected $isVisibleOnFront;
     /**
      * WYSIWYG flag
      *
-     * @var bool
+     * @var bool|null
      */
     protected $isWysiwygEnabled;
     /**
      * The note attribute for the element.
      *
-     * @var string
+     * @var string|null
      */
     protected $note;
     /**
      * Options of the attribute (key => value pairs for select)
      *
-     * @var EavDataAttributeOptionInterface[]
+     * @var EavDataAttributeOptionInterface[]|null
      */
     protected $options;
     /**
      * Position
      *
-     * @var int
+     * @var int|null
      */
     protected $position;
     /**
      * Attribute scope
      *
-     * @var string
+     * @var string|null
      */
     protected $scope;
     /**
      * Source model
      *
-     * @var string
+     * @var string|null
      */
     protected $sourceModel;
     /**
      * It is used for sorting in product listing
      *
-     * @var bool
+     * @var bool|null
      */
     protected $usedForSortBy;
     /**
      * The attribute can be used in product listing
      *
-     * @var string
+     * @var string|null
      */
     protected $usedInProductListing;
     /**
      * Validation rules.
      *
-     * @var EavDataAttributeValidationRuleInterface[]
+     * @var EavDataAttributeValidationRuleInterface[]|null
      */
     protected $validationRules;
     /**
      * Apply to value for the element
      *
-     * @return string[]
+     * @return string[]|null
      */
-    public function getApplyTo(): array
+    public function getApplyTo(): ?array
     {
         return $this->applyTo;
     }
     /**
      * Apply to value for the element
      *
-     * @param string[] $applyTo
+     * @param string[]|null $applyTo
      *
      * @return self
      */
-    public function setApplyTo(array $applyTo): self
+    public function setApplyTo(?array $applyTo): self
     {
         $this->applyTo = $applyTo;
         return $this;
@@ -250,20 +250,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Code of the attribute.
      *
-     * @return string
+     * @return string|null
      */
-    public function getAttributeCode(): string
+    public function getAttributeCode(): ?string
     {
         return $this->attributeCode;
     }
     /**
      * Code of the attribute.
      *
-     * @param string $attributeCode
+     * @param string|null $attributeCode
      *
      * @return self
      */
-    public function setAttributeCode(string $attributeCode): self
+    public function setAttributeCode(?string $attributeCode): self
     {
         $this->attributeCode = $attributeCode;
         return $this;
@@ -271,20 +271,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Id of the attribute.
      *
-     * @return int
+     * @return int|null
      */
-    public function getAttributeId(): int
+    public function getAttributeId(): ?int
     {
         return $this->attributeId;
     }
     /**
      * Id of the attribute.
      *
-     * @param int $attributeId
+     * @param int|null $attributeId
      *
      * @return self
      */
-    public function setAttributeId(int $attributeId): self
+    public function setAttributeId(?int $attributeId): self
     {
         $this->attributeId = $attributeId;
         return $this;
@@ -292,20 +292,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Backend model
      *
-     * @return string
+     * @return string|null
      */
-    public function getBackendModel(): string
+    public function getBackendModel(): ?string
     {
         return $this->backendModel;
     }
     /**
      * Backend model
      *
-     * @param string $backendModel
+     * @param string|null $backendModel
      *
      * @return self
      */
-    public function setBackendModel(string $backendModel): self
+    public function setBackendModel(?string $backendModel): self
     {
         $this->backendModel = $backendModel;
         return $this;
@@ -313,20 +313,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Backend type.
      *
-     * @return string
+     * @return string|null
      */
-    public function getBackendType(): string
+    public function getBackendType(): ?string
     {
         return $this->backendType;
     }
     /**
      * Backend type.
      *
-     * @param string $backendType
+     * @param string|null $backendType
      *
      * @return self
      */
-    public function setBackendType(string $backendType): self
+    public function setBackendType(?string $backendType): self
     {
         $this->backendType = $backendType;
         return $this;
@@ -334,20 +334,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Custom attributes values.
      *
-     * @return FrameworkAttributeInterface[]
+     * @return FrameworkAttributeInterface[]|null
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes(): ?array
     {
         return $this->customAttributes;
     }
     /**
      * Custom attributes values.
      *
-     * @param FrameworkAttributeInterface[] $customAttributes
+     * @param FrameworkAttributeInterface[]|null $customAttributes
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(?array $customAttributes): self
     {
         $this->customAttributes = $customAttributes;
         return $this;
@@ -355,20 +355,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Frontend label for default store
      *
-     * @return string
+     * @return string|null
      */
-    public function getDefaultFrontendLabel(): string
+    public function getDefaultFrontendLabel(): ?string
     {
         return $this->defaultFrontendLabel;
     }
     /**
      * Frontend label for default store
      *
-     * @param string $defaultFrontendLabel
+     * @param string|null $defaultFrontendLabel
      *
      * @return self
      */
-    public function setDefaultFrontendLabel(string $defaultFrontendLabel): self
+    public function setDefaultFrontendLabel(?string $defaultFrontendLabel): self
     {
         $this->defaultFrontendLabel = $defaultFrontendLabel;
         return $this;
@@ -376,20 +376,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Default value for the element.
      *
-     * @return string
+     * @return string|null
      */
-    public function getDefaultValue(): string
+    public function getDefaultValue(): ?string
     {
         return $this->defaultValue;
     }
     /**
      * Default value for the element.
      *
-     * @param string $defaultValue
+     * @param string|null $defaultValue
      *
      * @return self
      */
-    public function setDefaultValue(string $defaultValue): self
+    public function setDefaultValue(?string $defaultValue): self
     {
         $this->defaultValue = $defaultValue;
         return $this;
@@ -397,20 +397,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Entity type id
      *
-     * @return string
+     * @return string|null
      */
-    public function getEntityTypeId(): string
+    public function getEntityTypeId(): ?string
     {
         return $this->entityTypeId;
     }
     /**
      * Entity type id
      *
-     * @param string $entityTypeId
+     * @param string|null $entityTypeId
      *
      * @return self
      */
-    public function setEntityTypeId(string $entityTypeId): self
+    public function setEntityTypeId(?string $entityTypeId): self
     {
         $this->entityTypeId = $entityTypeId;
         return $this;
@@ -439,20 +439,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Frontend class of attribute
      *
-     * @return string
+     * @return string|null
      */
-    public function getFrontendClass(): string
+    public function getFrontendClass(): ?string
     {
         return $this->frontendClass;
     }
     /**
      * Frontend class of attribute
      *
-     * @param string $frontendClass
+     * @param string|null $frontendClass
      *
      * @return self
      */
-    public function setFrontendClass(string $frontendClass): self
+    public function setFrontendClass(?string $frontendClass): self
     {
         $this->frontendClass = $frontendClass;
         return $this;
@@ -460,20 +460,20 @@ class CatalogDataProductAttributeInterface
     /**
      * HTML for input element.
      *
-     * @return string
+     * @return string|null
      */
-    public function getFrontendInput(): string
+    public function getFrontendInput(): ?string
     {
         return $this->frontendInput;
     }
     /**
      * HTML for input element.
      *
-     * @param string $frontendInput
+     * @param string|null $frontendInput
      *
      * @return self
      */
-    public function setFrontendInput(string $frontendInput): self
+    public function setFrontendInput(?string $frontendInput): self
     {
         $this->frontendInput = $frontendInput;
         return $this;
@@ -481,20 +481,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Frontend label for each store
      *
-     * @return EavDataAttributeFrontendLabelInterface[]
+     * @return EavDataAttributeFrontendLabelInterface[]|null
      */
-    public function getFrontendLabels(): array
+    public function getFrontendLabels(): ?array
     {
         return $this->frontendLabels;
     }
     /**
      * Frontend label for each store
      *
-     * @param EavDataAttributeFrontendLabelInterface[] $frontendLabels
+     * @param EavDataAttributeFrontendLabelInterface[]|null $frontendLabels
      *
      * @return self
      */
-    public function setFrontendLabels(array $frontendLabels): self
+    public function setFrontendLabels(?array $frontendLabels): self
     {
         $this->frontendLabels = $frontendLabels;
         return $this;
@@ -502,20 +502,20 @@ class CatalogDataProductAttributeInterface
     /**
      * The attribute can be compared on the frontend
      *
-     * @return string
+     * @return string|null
      */
-    public function getIsComparable(): string
+    public function getIsComparable(): ?string
     {
         return $this->isComparable;
     }
     /**
      * The attribute can be compared on the frontend
      *
-     * @param string $isComparable
+     * @param string|null $isComparable
      *
      * @return self
      */
-    public function setIsComparable(string $isComparable): self
+    public function setIsComparable(?string $isComparable): self
     {
         $this->isComparable = $isComparable;
         return $this;
@@ -523,20 +523,20 @@ class CatalogDataProductAttributeInterface
     /**
      * It used in layered navigation
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsFilterable(): bool
+    public function getIsFilterable(): ?bool
     {
         return $this->isFilterable;
     }
     /**
      * It used in layered navigation
      *
-     * @param bool $isFilterable
+     * @param bool|null $isFilterable
      *
      * @return self
      */
-    public function setIsFilterable(bool $isFilterable): self
+    public function setIsFilterable(?bool $isFilterable): self
     {
         $this->isFilterable = $isFilterable;
         return $this;
@@ -544,20 +544,20 @@ class CatalogDataProductAttributeInterface
     /**
      * It is filterable in catalog product grid
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsFilterableInGrid(): bool
+    public function getIsFilterableInGrid(): ?bool
     {
         return $this->isFilterableInGrid;
     }
     /**
      * It is filterable in catalog product grid
      *
-     * @param bool $isFilterableInGrid
+     * @param bool|null $isFilterableInGrid
      *
      * @return self
      */
-    public function setIsFilterableInGrid(bool $isFilterableInGrid): self
+    public function setIsFilterableInGrid(?bool $isFilterableInGrid): self
     {
         $this->isFilterableInGrid = $isFilterableInGrid;
         return $this;
@@ -565,20 +565,20 @@ class CatalogDataProductAttributeInterface
     /**
      * It is used in search results layered navigation
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsFilterableInSearch(): bool
+    public function getIsFilterableInSearch(): ?bool
     {
         return $this->isFilterableInSearch;
     }
     /**
      * It is used in search results layered navigation
      *
-     * @param bool $isFilterableInSearch
+     * @param bool|null $isFilterableInSearch
      *
      * @return self
      */
-    public function setIsFilterableInSearch(bool $isFilterableInSearch): self
+    public function setIsFilterableInSearch(?bool $isFilterableInSearch): self
     {
         $this->isFilterableInSearch = $isFilterableInSearch;
         return $this;
@@ -586,20 +586,20 @@ class CatalogDataProductAttributeInterface
     /**
      * The HTML tags are allowed on the frontend
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsHtmlAllowedOnFront(): bool
+    public function getIsHtmlAllowedOnFront(): ?bool
     {
         return $this->isHtmlAllowedOnFront;
     }
     /**
      * The HTML tags are allowed on the frontend
      *
-     * @param bool $isHtmlAllowedOnFront
+     * @param bool|null $isHtmlAllowedOnFront
      *
      * @return self
      */
-    public function setIsHtmlAllowedOnFront(bool $isHtmlAllowedOnFront): self
+    public function setIsHtmlAllowedOnFront(?bool $isHtmlAllowedOnFront): self
     {
         $this->isHtmlAllowedOnFront = $isHtmlAllowedOnFront;
         return $this;
@@ -607,20 +607,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Attribute is required.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsRequired(): bool
+    public function getIsRequired(): ?bool
     {
         return $this->isRequired;
     }
     /**
      * Attribute is required.
      *
-     * @param bool $isRequired
+     * @param bool|null $isRequired
      *
      * @return self
      */
-    public function setIsRequired(bool $isRequired): self
+    public function setIsRequired(?bool $isRequired): self
     {
         $this->isRequired = $isRequired;
         return $this;
@@ -628,20 +628,20 @@ class CatalogDataProductAttributeInterface
     /**
      * The attribute can be used in Quick Search
      *
-     * @return string
+     * @return string|null
      */
-    public function getIsSearchable(): string
+    public function getIsSearchable(): ?string
     {
         return $this->isSearchable;
     }
     /**
      * The attribute can be used in Quick Search
      *
-     * @param string $isSearchable
+     * @param string|null $isSearchable
      *
      * @return self
      */
-    public function setIsSearchable(string $isSearchable): self
+    public function setIsSearchable(?string $isSearchable): self
     {
         $this->isSearchable = $isSearchable;
         return $this;
@@ -649,20 +649,20 @@ class CatalogDataProductAttributeInterface
     /**
      * This is a unique attribute
      *
-     * @return string
+     * @return string|null
      */
-    public function getIsUnique(): string
+    public function getIsUnique(): ?string
     {
         return $this->isUnique;
     }
     /**
      * This is a unique attribute
      *
-     * @param string $isUnique
+     * @param string|null $isUnique
      *
      * @return self
      */
-    public function setIsUnique(string $isUnique): self
+    public function setIsUnique(?string $isUnique): self
     {
         $this->isUnique = $isUnique;
         return $this;
@@ -670,20 +670,20 @@ class CatalogDataProductAttributeInterface
     /**
      * The attribute can be used for promo rules
      *
-     * @return string
+     * @return string|null
      */
-    public function getIsUsedForPromoRules(): string
+    public function getIsUsedForPromoRules(): ?string
     {
         return $this->isUsedForPromoRules;
     }
     /**
      * The attribute can be used for promo rules
      *
-     * @param string $isUsedForPromoRules
+     * @param string|null $isUsedForPromoRules
      *
      * @return self
      */
-    public function setIsUsedForPromoRules(string $isUsedForPromoRules): self
+    public function setIsUsedForPromoRules(?string $isUsedForPromoRules): self
     {
         $this->isUsedForPromoRules = $isUsedForPromoRules;
         return $this;
@@ -691,20 +691,20 @@ class CatalogDataProductAttributeInterface
     /**
      * It is used in catalog product grid
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsUsedInGrid(): bool
+    public function getIsUsedInGrid(): ?bool
     {
         return $this->isUsedInGrid;
     }
     /**
      * It is used in catalog product grid
      *
-     * @param bool $isUsedInGrid
+     * @param bool|null $isUsedInGrid
      *
      * @return self
      */
-    public function setIsUsedInGrid(bool $isUsedInGrid): self
+    public function setIsUsedInGrid(?bool $isUsedInGrid): self
     {
         $this->isUsedInGrid = $isUsedInGrid;
         return $this;
@@ -712,20 +712,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Current attribute has been defined by a user.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsUserDefined(): bool
+    public function getIsUserDefined(): ?bool
     {
         return $this->isUserDefined;
     }
     /**
      * Current attribute has been defined by a user.
      *
-     * @param bool $isUserDefined
+     * @param bool|null $isUserDefined
      *
      * @return self
      */
-    public function setIsUserDefined(bool $isUserDefined): self
+    public function setIsUserDefined(?bool $isUserDefined): self
     {
         $this->isUserDefined = $isUserDefined;
         return $this;
@@ -733,20 +733,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Attribute is visible on frontend.
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsVisible(): bool
+    public function getIsVisible(): ?bool
     {
         return $this->isVisible;
     }
     /**
      * Attribute is visible on frontend.
      *
-     * @param bool $isVisible
+     * @param bool|null $isVisible
      *
      * @return self
      */
-    public function setIsVisible(bool $isVisible): self
+    public function setIsVisible(?bool $isVisible): self
     {
         $this->isVisible = $isVisible;
         return $this;
@@ -754,20 +754,20 @@ class CatalogDataProductAttributeInterface
     /**
      * The attribute can be used in Advanced Search
      *
-     * @return string
+     * @return string|null
      */
-    public function getIsVisibleInAdvancedSearch(): string
+    public function getIsVisibleInAdvancedSearch(): ?string
     {
         return $this->isVisibleInAdvancedSearch;
     }
     /**
      * The attribute can be used in Advanced Search
      *
-     * @param string $isVisibleInAdvancedSearch
+     * @param string|null $isVisibleInAdvancedSearch
      *
      * @return self
      */
-    public function setIsVisibleInAdvancedSearch(string $isVisibleInAdvancedSearch): self
+    public function setIsVisibleInAdvancedSearch(?string $isVisibleInAdvancedSearch): self
     {
         $this->isVisibleInAdvancedSearch = $isVisibleInAdvancedSearch;
         return $this;
@@ -775,20 +775,20 @@ class CatalogDataProductAttributeInterface
     /**
      * It is visible in catalog product grid
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsVisibleInGrid(): bool
+    public function getIsVisibleInGrid(): ?bool
     {
         return $this->isVisibleInGrid;
     }
     /**
      * It is visible in catalog product grid
      *
-     * @param bool $isVisibleInGrid
+     * @param bool|null $isVisibleInGrid
      *
      * @return self
      */
-    public function setIsVisibleInGrid(bool $isVisibleInGrid): self
+    public function setIsVisibleInGrid(?bool $isVisibleInGrid): self
     {
         $this->isVisibleInGrid = $isVisibleInGrid;
         return $this;
@@ -796,20 +796,20 @@ class CatalogDataProductAttributeInterface
     /**
      * The attribute is visible on the frontend
      *
-     * @return string
+     * @return string|null
      */
-    public function getIsVisibleOnFront(): string
+    public function getIsVisibleOnFront(): ?string
     {
         return $this->isVisibleOnFront;
     }
     /**
      * The attribute is visible on the frontend
      *
-     * @param string $isVisibleOnFront
+     * @param string|null $isVisibleOnFront
      *
      * @return self
      */
-    public function setIsVisibleOnFront(string $isVisibleOnFront): self
+    public function setIsVisibleOnFront(?string $isVisibleOnFront): self
     {
         $this->isVisibleOnFront = $isVisibleOnFront;
         return $this;
@@ -817,20 +817,20 @@ class CatalogDataProductAttributeInterface
     /**
      * WYSIWYG flag
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getIsWysiwygEnabled(): bool
+    public function getIsWysiwygEnabled(): ?bool
     {
         return $this->isWysiwygEnabled;
     }
     /**
      * WYSIWYG flag
      *
-     * @param bool $isWysiwygEnabled
+     * @param bool|null $isWysiwygEnabled
      *
      * @return self
      */
-    public function setIsWysiwygEnabled(bool $isWysiwygEnabled): self
+    public function setIsWysiwygEnabled(?bool $isWysiwygEnabled): self
     {
         $this->isWysiwygEnabled = $isWysiwygEnabled;
         return $this;
@@ -838,20 +838,20 @@ class CatalogDataProductAttributeInterface
     /**
      * The note attribute for the element.
      *
-     * @return string
+     * @return string|null
      */
-    public function getNote(): string
+    public function getNote(): ?string
     {
         return $this->note;
     }
     /**
      * The note attribute for the element.
      *
-     * @param string $note
+     * @param string|null $note
      *
      * @return self
      */
-    public function setNote(string $note): self
+    public function setNote(?string $note): self
     {
         $this->note = $note;
         return $this;
@@ -859,20 +859,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Options of the attribute (key => value pairs for select)
      *
-     * @return EavDataAttributeOptionInterface[]
+     * @return EavDataAttributeOptionInterface[]|null
      */
-    public function getOptions(): array
+    public function getOptions(): ?array
     {
         return $this->options;
     }
     /**
      * Options of the attribute (key => value pairs for select)
      *
-     * @param EavDataAttributeOptionInterface[] $options
+     * @param EavDataAttributeOptionInterface[]|null $options
      *
      * @return self
      */
-    public function setOptions(array $options): self
+    public function setOptions(?array $options): self
     {
         $this->options = $options;
         return $this;
@@ -880,20 +880,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Position
      *
-     * @return int
+     * @return int|null
      */
-    public function getPosition(): int
+    public function getPosition(): ?int
     {
         return $this->position;
     }
     /**
      * Position
      *
-     * @param int $position
+     * @param int|null $position
      *
      * @return self
      */
-    public function setPosition(int $position): self
+    public function setPosition(?int $position): self
     {
         $this->position = $position;
         return $this;
@@ -901,20 +901,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Attribute scope
      *
-     * @return string
+     * @return string|null
      */
-    public function getScope(): string
+    public function getScope(): ?string
     {
         return $this->scope;
     }
     /**
      * Attribute scope
      *
-     * @param string $scope
+     * @param string|null $scope
      *
      * @return self
      */
-    public function setScope(string $scope): self
+    public function setScope(?string $scope): self
     {
         $this->scope = $scope;
         return $this;
@@ -922,20 +922,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Source model
      *
-     * @return string
+     * @return string|null
      */
-    public function getSourceModel(): string
+    public function getSourceModel(): ?string
     {
         return $this->sourceModel;
     }
     /**
      * Source model
      *
-     * @param string $sourceModel
+     * @param string|null $sourceModel
      *
      * @return self
      */
-    public function setSourceModel(string $sourceModel): self
+    public function setSourceModel(?string $sourceModel): self
     {
         $this->sourceModel = $sourceModel;
         return $this;
@@ -943,20 +943,20 @@ class CatalogDataProductAttributeInterface
     /**
      * It is used for sorting in product listing
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getUsedForSortBy(): bool
+    public function getUsedForSortBy(): ?bool
     {
         return $this->usedForSortBy;
     }
     /**
      * It is used for sorting in product listing
      *
-     * @param bool $usedForSortBy
+     * @param bool|null $usedForSortBy
      *
      * @return self
      */
-    public function setUsedForSortBy(bool $usedForSortBy): self
+    public function setUsedForSortBy(?bool $usedForSortBy): self
     {
         $this->usedForSortBy = $usedForSortBy;
         return $this;
@@ -964,20 +964,20 @@ class CatalogDataProductAttributeInterface
     /**
      * The attribute can be used in product listing
      *
-     * @return string
+     * @return string|null
      */
-    public function getUsedInProductListing(): string
+    public function getUsedInProductListing(): ?string
     {
         return $this->usedInProductListing;
     }
     /**
      * The attribute can be used in product listing
      *
-     * @param string $usedInProductListing
+     * @param string|null $usedInProductListing
      *
      * @return self
      */
-    public function setUsedInProductListing(string $usedInProductListing): self
+    public function setUsedInProductListing(?string $usedInProductListing): self
     {
         $this->usedInProductListing = $usedInProductListing;
         return $this;
@@ -985,20 +985,20 @@ class CatalogDataProductAttributeInterface
     /**
      * Validation rules.
      *
-     * @return EavDataAttributeValidationRuleInterface[]
+     * @return EavDataAttributeValidationRuleInterface[]|null
      */
-    public function getValidationRules(): array
+    public function getValidationRules(): ?array
     {
         return $this->validationRules;
     }
     /**
      * Validation rules.
      *
-     * @param EavDataAttributeValidationRuleInterface[] $validationRules
+     * @param EavDataAttributeValidationRuleInterface[]|null $validationRules
      *
      * @return self
      */
-    public function setValidationRules(array $validationRules): self
+    public function setValidationRules(?array $validationRules): self
     {
         $this->validationRules = $validationRules;
         return $this;

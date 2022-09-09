@@ -40,15 +40,19 @@ class FrameworkSearchAggregationValueInterfaceNormalizer implements Denormalizer
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('metrics', $data)) {
+        if (\array_key_exists('metrics', $data) && $data['metrics'] !== null) {
             $values = array();
             foreach ($data['metrics'] as $value) {
                 $values[] = $value;
             }
             $object->setMetrics($values);
+        } elseif (\array_key_exists('metrics', $data) && $data['metrics'] === null) {
+            $object->setMetrics(null);
         }
-        if (\array_key_exists('value', $data)) {
+        if (\array_key_exists('value', $data) && $data['value'] !== null) {
             $object->setValue($data['value']);
+        } elseif (\array_key_exists('value', $data) && $data['value'] === null) {
+            $object->setValue(null);
         }
         return $object;
     }

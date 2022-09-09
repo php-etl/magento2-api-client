@@ -40,36 +40,54 @@ class CatalogDataProductAttributeMediaGalleryEntryInterfaceNormalizer implements
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('content', $data)) {
+        if (\array_key_exists('content', $data) && $data['content'] !== null) {
             $object->setContent($this->denormalizer->denormalize($data['content'], 'Kiboko\\Magento\\V2_3\\Model\\FrameworkDataImageContentInterface', 'json', $context));
+        } elseif (\array_key_exists('content', $data) && $data['content'] === null) {
+            $object->setContent(null);
         }
-        if (\array_key_exists('disabled', $data)) {
+        if (\array_key_exists('disabled', $data) && $data['disabled'] !== null) {
             $object->setDisabled($data['disabled']);
+        } elseif (\array_key_exists('disabled', $data) && $data['disabled'] === null) {
+            $object->setDisabled(null);
         }
-        if (\array_key_exists('extension_attributes', $data)) {
+        if (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] !== null) {
             $object->setExtensionAttributes($this->denormalizer->denormalize($data['extension_attributes'], 'Kiboko\\Magento\\V2_3\\Model\\CatalogDataProductAttributeMediaGalleryEntryExtensionInterface', 'json', $context));
+        } elseif (\array_key_exists('extension_attributes', $data) && $data['extension_attributes'] === null) {
+            $object->setExtensionAttributes(null);
         }
-        if (\array_key_exists('file', $data)) {
+        if (\array_key_exists('file', $data) && $data['file'] !== null) {
             $object->setFile($data['file']);
+        } elseif (\array_key_exists('file', $data) && $data['file'] === null) {
+            $object->setFile(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('label', $data)) {
+        if (\array_key_exists('label', $data) && $data['label'] !== null) {
             $object->setLabel($data['label']);
+        } elseif (\array_key_exists('label', $data) && $data['label'] === null) {
+            $object->setLabel(null);
         }
-        if (\array_key_exists('media_type', $data)) {
+        if (\array_key_exists('media_type', $data) && $data['media_type'] !== null) {
             $object->setMediaType($data['media_type']);
+        } elseif (\array_key_exists('media_type', $data) && $data['media_type'] === null) {
+            $object->setMediaType(null);
         }
-        if (\array_key_exists('position', $data)) {
+        if (\array_key_exists('position', $data) && $data['position'] !== null) {
             $object->setPosition($data['position']);
+        } elseif (\array_key_exists('position', $data) && $data['position'] === null) {
+            $object->setPosition(null);
         }
-        if (\array_key_exists('types', $data)) {
+        if (\array_key_exists('types', $data) && $data['types'] !== null) {
             $values = array();
             foreach ($data['types'] as $value) {
                 $values[] = $value;
             }
             $object->setTypes($values);
+        } elseif (\array_key_exists('types', $data) && $data['types'] === null) {
+            $object->setTypes(null);
         }
         return $object;
     }

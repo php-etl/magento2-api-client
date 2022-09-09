@@ -40,8 +40,10 @@ class V1NegotiableCartsCartIdEstimateShippingMethodsPostBodyNormalizer implement
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('address', $data)) {
+        if (\array_key_exists('address', $data) && $data['address'] !== null) {
             $object->setAddress($this->denormalizer->denormalize($data['address'], 'Kiboko\\Magento\\V2_4\\Model\\QuoteDataAddressInterface', 'json', $context));
+        } elseif (\array_key_exists('address', $data) && $data['address'] === null) {
+            $object->setAddress(null);
         }
         return $object;
     }

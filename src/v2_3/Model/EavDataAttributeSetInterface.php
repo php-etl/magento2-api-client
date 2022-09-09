@@ -7,50 +7,50 @@ class EavDataAttributeSetInterface
     /**
      * Attribute set ID
      *
-     * @var int
+     * @var int|null
      */
     protected $attributeSetId;
     /**
      * Attribute set name
      *
-     * @var string
+     * @var string|null
      */
     protected $attributeSetName;
     /**
      * Attribute set entity type id
      *
-     * @var int
+     * @var int|null
      */
     protected $entityTypeId;
     /**
      * ExtensionInterface class for @see \Magento\Eav\Api\Data\AttributeSetInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Attribute set sort order index
      *
-     * @var int
+     * @var int|null
      */
     protected $sortOrder;
     /**
      * Attribute set ID
      *
-     * @return int
+     * @return int|null
      */
-    public function getAttributeSetId(): int
+    public function getAttributeSetId(): ?int
     {
         return $this->attributeSetId;
     }
     /**
      * Attribute set ID
      *
-     * @param int $attributeSetId
+     * @param int|null $attributeSetId
      *
      * @return self
      */
-    public function setAttributeSetId(int $attributeSetId): self
+    public function setAttributeSetId(?int $attributeSetId): self
     {
         $this->attributeSetId = $attributeSetId;
         return $this;
@@ -58,20 +58,20 @@ class EavDataAttributeSetInterface
     /**
      * Attribute set name
      *
-     * @return string
+     * @return string|null
      */
-    public function getAttributeSetName(): string
+    public function getAttributeSetName(): ?string
     {
         return $this->attributeSetName;
     }
     /**
      * Attribute set name
      *
-     * @param string $attributeSetName
+     * @param string|null $attributeSetName
      *
      * @return self
      */
-    public function setAttributeSetName(string $attributeSetName): self
+    public function setAttributeSetName(?string $attributeSetName): self
     {
         $this->attributeSetName = $attributeSetName;
         return $this;
@@ -79,20 +79,20 @@ class EavDataAttributeSetInterface
     /**
      * Attribute set entity type id
      *
-     * @return int
+     * @return int|null
      */
-    public function getEntityTypeId(): int
+    public function getEntityTypeId(): ?int
     {
         return $this->entityTypeId;
     }
     /**
      * Attribute set entity type id
      *
-     * @param int $entityTypeId
+     * @param int|null $entityTypeId
      *
      * @return self
      */
-    public function setEntityTypeId(int $entityTypeId): self
+    public function setEntityTypeId(?int $entityTypeId): self
     {
         $this->entityTypeId = $entityTypeId;
         return $this;
@@ -121,20 +121,20 @@ class EavDataAttributeSetInterface
     /**
      * Attribute set sort order index
      *
-     * @return int
+     * @return int|null
      */
-    public function getSortOrder(): int
+    public function getSortOrder(): ?int
     {
         return $this->sortOrder;
     }
     /**
      * Attribute set sort order index
      *
-     * @param int $sortOrder
+     * @param int|null $sortOrder
      *
      * @return self
      */
-    public function setSortOrder(int $sortOrder): self
+    public function setSortOrder(?int $sortOrder): self
     {
         $this->sortOrder = $sortOrder;
         return $this;

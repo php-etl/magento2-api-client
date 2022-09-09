@@ -7,26 +7,26 @@ class SalesDataOrderPaymentExtensionInterface
     /**
      * Gateway vault payment token interface.
      *
-     * @var VaultDataPaymentTokenInterface
+     * @var VaultDataPaymentTokenInterface|null
      */
     protected $vaultPaymentToken;
     /**
      * Gateway vault payment token interface.
      *
-     * @return VaultDataPaymentTokenInterface
+     * @return VaultDataPaymentTokenInterface|null
      */
-    public function getVaultPaymentToken(): VaultDataPaymentTokenInterface
+    public function getVaultPaymentToken(): ?VaultDataPaymentTokenInterface
     {
         return $this->vaultPaymentToken;
     }
     /**
      * Gateway vault payment token interface.
      *
-     * @param VaultDataPaymentTokenInterface $vaultPaymentToken
+     * @param VaultDataPaymentTokenInterface|null $vaultPaymentToken
      *
      * @return self
      */
-    public function setVaultPaymentToken(VaultDataPaymentTokenInterface $vaultPaymentToken): self
+    public function setVaultPaymentToken(?VaultDataPaymentTokenInterface $vaultPaymentToken): self
     {
         $this->vaultPaymentToken = $vaultPaymentToken;
         return $this;

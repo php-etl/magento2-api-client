@@ -7,62 +7,62 @@ class StoreDataGroupInterface
     /**
      * Group code.
      *
-     * @var string
+     * @var string|null
      */
     protected $code;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $defaultStoreId;
     /**
      * ExtensionInterface class for @see \Magento\Store\Api\Data\GroupInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $id;
     /**
      *
      *
-     * @var string
+     * @var string|null
      */
     protected $name;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $rootCategoryId;
     /**
      *
      *
-     * @var int
+     * @var int|null
      */
     protected $websiteId;
     /**
      * Group code.
      *
-     * @return string
+     * @return string|null
      */
-    public function getCode(): string
+    public function getCode(): ?string
     {
         return $this->code;
     }
     /**
      * Group code.
      *
-     * @param string $code
+     * @param string|null $code
      *
      * @return self
      */
-    public function setCode(string $code): self
+    public function setCode(?string $code): self
     {
         $this->code = $code;
         return $this;
@@ -70,20 +70,20 @@ class StoreDataGroupInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getDefaultStoreId(): int
+    public function getDefaultStoreId(): ?int
     {
         return $this->defaultStoreId;
     }
     /**
      *
      *
-     * @param int $defaultStoreId
+     * @param int|null $defaultStoreId
      *
      * @return self
      */
-    public function setDefaultStoreId(int $defaultStoreId): self
+    public function setDefaultStoreId(?int $defaultStoreId): self
     {
         $this->defaultStoreId = $defaultStoreId;
         return $this;
@@ -112,20 +112,20 @@ class StoreDataGroupInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
     /**
      *
      *
-     * @param int $id
+     * @param int|null $id
      *
      * @return self
      */
-    public function setId(int $id): self
+    public function setId(?int $id): self
     {
         $this->id = $id;
         return $this;
@@ -133,20 +133,20 @@ class StoreDataGroupInterface
     /**
      *
      *
-     * @return string
+     * @return string|null
      */
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
     /**
      *
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return self
      */
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
         return $this;
@@ -154,20 +154,20 @@ class StoreDataGroupInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getRootCategoryId(): int
+    public function getRootCategoryId(): ?int
     {
         return $this->rootCategoryId;
     }
     /**
      *
      *
-     * @param int $rootCategoryId
+     * @param int|null $rootCategoryId
      *
      * @return self
      */
-    public function setRootCategoryId(int $rootCategoryId): self
+    public function setRootCategoryId(?int $rootCategoryId): self
     {
         $this->rootCategoryId = $rootCategoryId;
         return $this;
@@ -175,20 +175,20 @@ class StoreDataGroupInterface
     /**
      *
      *
-     * @return int
+     * @return int|null
      */
-    public function getWebsiteId(): int
+    public function getWebsiteId(): ?int
     {
         return $this->websiteId;
     }
     /**
      *
      *
-     * @param int $websiteId
+     * @param int|null $websiteId
      *
      * @return self
      */
-    public function setWebsiteId(int $websiteId): self
+    public function setWebsiteId(?int $websiteId): self
     {
         $this->websiteId = $websiteId;
         return $this;

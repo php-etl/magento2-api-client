@@ -7,26 +7,26 @@ class V1SharedCatalogPostBody
     /**
      * SharedCatalogInterface interface.
      *
-     * @var SharedCatalogDataSharedCatalogInterface
+     * @var SharedCatalogDataSharedCatalogInterface|null
      */
     protected $sharedCatalog;
     /**
      * SharedCatalogInterface interface.
      *
-     * @return SharedCatalogDataSharedCatalogInterface
+     * @return SharedCatalogDataSharedCatalogInterface|null
      */
-    public function getSharedCatalog(): SharedCatalogDataSharedCatalogInterface
+    public function getSharedCatalog(): ?SharedCatalogDataSharedCatalogInterface
     {
         return $this->sharedCatalog;
     }
     /**
      * SharedCatalogInterface interface.
      *
-     * @param SharedCatalogDataSharedCatalogInterface $sharedCatalog
+     * @param SharedCatalogDataSharedCatalogInterface|null $sharedCatalog
      *
      * @return self
      */
-    public function setSharedCatalog(SharedCatalogDataSharedCatalogInterface $sharedCatalog): self
+    public function setSharedCatalog(?SharedCatalogDataSharedCatalogInterface $sharedCatalog): self
     {
         $this->sharedCatalog = $sharedCatalog;
         return $this;

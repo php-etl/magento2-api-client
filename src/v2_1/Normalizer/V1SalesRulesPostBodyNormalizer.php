@@ -40,8 +40,10 @@ class V1SalesRulesPostBodyNormalizer implements DenormalizerInterface, Normalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('rule', $data)) {
+        if (\array_key_exists('rule', $data) && $data['rule'] !== null) {
             $object->setRule($this->denormalizer->denormalize($data['rule'], 'Kiboko\\Magento\\V2_1\\Model\\SalesRuleDataRuleInterface', 'json', $context));
+        } elseif (\array_key_exists('rule', $data) && $data['rule'] === null) {
+            $object->setRule(null);
         }
         return $object;
     }

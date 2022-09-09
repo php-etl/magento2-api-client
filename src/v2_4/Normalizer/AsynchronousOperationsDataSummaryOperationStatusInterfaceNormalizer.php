@@ -40,17 +40,25 @@ class AsynchronousOperationsDataSummaryOperationStatusInterfaceNormalizer implem
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('error_code', $data)) {
+        if (\array_key_exists('error_code', $data) && $data['error_code'] !== null) {
             $object->setErrorCode($data['error_code']);
+        } elseif (\array_key_exists('error_code', $data) && $data['error_code'] === null) {
+            $object->setErrorCode(null);
         }
-        if (\array_key_exists('id', $data)) {
+        if (\array_key_exists('id', $data) && $data['id'] !== null) {
             $object->setId($data['id']);
+        } elseif (\array_key_exists('id', $data) && $data['id'] === null) {
+            $object->setId(null);
         }
-        if (\array_key_exists('result_message', $data)) {
+        if (\array_key_exists('result_message', $data) && $data['result_message'] !== null) {
             $object->setResultMessage($data['result_message']);
+        } elseif (\array_key_exists('result_message', $data) && $data['result_message'] === null) {
+            $object->setResultMessage(null);
         }
-        if (\array_key_exists('status', $data)) {
+        if (\array_key_exists('status', $data) && $data['status'] !== null) {
             $object->setStatus($data['status']);
+        } elseif (\array_key_exists('status', $data) && $data['status'] === null) {
+            $object->setStatus(null);
         }
         return $object;
     }

@@ -40,12 +40,14 @@ class V1ProductsSpecialPriceInformationPostBodyNormalizer implements Denormalize
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
-        if (\array_key_exists('skus', $data)) {
+        if (\array_key_exists('skus', $data) && $data['skus'] !== null) {
             $values = array();
             foreach ($data['skus'] as $value) {
                 $values[] = $value;
             }
             $object->setSkus($values);
+        } elseif (\array_key_exists('skus', $data) && $data['skus'] === null) {
+            $object->setSkus(null);
         }
         return $object;
     }

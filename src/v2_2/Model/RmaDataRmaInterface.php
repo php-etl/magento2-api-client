@@ -7,104 +7,104 @@ class RmaDataRmaInterface
     /**
      * Comments list
      *
-     * @var RmaDataCommentInterface[]
+     * @var RmaDataCommentInterface[]|null
      */
     protected $comments;
     /**
      * Custom attributes values.
      *
-     * @var FrameworkAttributeInterface[]
+     * @var FrameworkAttributeInterface[]|null
      */
     protected $customAttributes;
     /**
      * Customer_custom_email
      *
-     * @var string
+     * @var string|null
      */
     protected $customerCustomEmail;
     /**
      * Customer_id
      *
-     * @var int
+     * @var int|null
      */
     protected $customerId;
     /**
      * Date_requested
      *
-     * @var string
+     * @var string|null
      */
     protected $dateRequested;
     /**
      * Entity_id
      *
-     * @var int
+     * @var int|null
      */
     protected $entityId;
     /**
      * ExtensionInterface class for @see \Magento\Rma\Api\Data\RmaInterface
      *
-     * @var mixed
+     * @var mixed|null
      */
     protected $extensionAttributes;
     /**
      * Entity_id
      *
-     * @var string
+     * @var string|null
      */
     protected $incrementId;
     /**
      * Items
      *
-     * @var RmaDataItemInterface[]
+     * @var RmaDataItemInterface[]|null
      */
     protected $items;
     /**
      * Order_id
      *
-     * @var int
+     * @var int|null
      */
     protected $orderId;
     /**
      * Order_increment_id
      *
-     * @var string
+     * @var string|null
      */
     protected $orderIncrementId;
     /**
      * Status
      *
-     * @var string
+     * @var string|null
      */
     protected $status;
     /**
      * Store_id
      *
-     * @var int
+     * @var int|null
      */
     protected $storeId;
     /**
      * Tracks list
      *
-     * @var RmaDataTrackInterface[]
+     * @var RmaDataTrackInterface[]|null
      */
     protected $tracks;
     /**
      * Comments list
      *
-     * @return RmaDataCommentInterface[]
+     * @return RmaDataCommentInterface[]|null
      */
-    public function getComments(): array
+    public function getComments(): ?array
     {
         return $this->comments;
     }
     /**
      * Comments list
      *
-     * @param RmaDataCommentInterface[] $comments
+     * @param RmaDataCommentInterface[]|null $comments
      *
      * @return self
      */
-    public function setComments(array $comments): self
+    public function setComments(?array $comments): self
     {
         $this->comments = $comments;
         return $this;
@@ -112,20 +112,20 @@ class RmaDataRmaInterface
     /**
      * Custom attributes values.
      *
-     * @return FrameworkAttributeInterface[]
+     * @return FrameworkAttributeInterface[]|null
      */
-    public function getCustomAttributes(): array
+    public function getCustomAttributes(): ?array
     {
         return $this->customAttributes;
     }
     /**
      * Custom attributes values.
      *
-     * @param FrameworkAttributeInterface[] $customAttributes
+     * @param FrameworkAttributeInterface[]|null $customAttributes
      *
      * @return self
      */
-    public function setCustomAttributes(array $customAttributes): self
+    public function setCustomAttributes(?array $customAttributes): self
     {
         $this->customAttributes = $customAttributes;
         return $this;
@@ -133,20 +133,20 @@ class RmaDataRmaInterface
     /**
      * Customer_custom_email
      *
-     * @return string
+     * @return string|null
      */
-    public function getCustomerCustomEmail(): string
+    public function getCustomerCustomEmail(): ?string
     {
         return $this->customerCustomEmail;
     }
     /**
      * Customer_custom_email
      *
-     * @param string $customerCustomEmail
+     * @param string|null $customerCustomEmail
      *
      * @return self
      */
-    public function setCustomerCustomEmail(string $customerCustomEmail): self
+    public function setCustomerCustomEmail(?string $customerCustomEmail): self
     {
         $this->customerCustomEmail = $customerCustomEmail;
         return $this;
@@ -154,20 +154,20 @@ class RmaDataRmaInterface
     /**
      * Customer_id
      *
-     * @return int
+     * @return int|null
      */
-    public function getCustomerId(): int
+    public function getCustomerId(): ?int
     {
         return $this->customerId;
     }
     /**
      * Customer_id
      *
-     * @param int $customerId
+     * @param int|null $customerId
      *
      * @return self
      */
-    public function setCustomerId(int $customerId): self
+    public function setCustomerId(?int $customerId): self
     {
         $this->customerId = $customerId;
         return $this;
@@ -175,20 +175,20 @@ class RmaDataRmaInterface
     /**
      * Date_requested
      *
-     * @return string
+     * @return string|null
      */
-    public function getDateRequested(): string
+    public function getDateRequested(): ?string
     {
         return $this->dateRequested;
     }
     /**
      * Date_requested
      *
-     * @param string $dateRequested
+     * @param string|null $dateRequested
      *
      * @return self
      */
-    public function setDateRequested(string $dateRequested): self
+    public function setDateRequested(?string $dateRequested): self
     {
         $this->dateRequested = $dateRequested;
         return $this;
@@ -196,20 +196,20 @@ class RmaDataRmaInterface
     /**
      * Entity_id
      *
-     * @return int
+     * @return int|null
      */
-    public function getEntityId(): int
+    public function getEntityId(): ?int
     {
         return $this->entityId;
     }
     /**
      * Entity_id
      *
-     * @param int $entityId
+     * @param int|null $entityId
      *
      * @return self
      */
-    public function setEntityId(int $entityId): self
+    public function setEntityId(?int $entityId): self
     {
         $this->entityId = $entityId;
         return $this;
@@ -238,20 +238,20 @@ class RmaDataRmaInterface
     /**
      * Entity_id
      *
-     * @return string
+     * @return string|null
      */
-    public function getIncrementId(): string
+    public function getIncrementId(): ?string
     {
         return $this->incrementId;
     }
     /**
      * Entity_id
      *
-     * @param string $incrementId
+     * @param string|null $incrementId
      *
      * @return self
      */
-    public function setIncrementId(string $incrementId): self
+    public function setIncrementId(?string $incrementId): self
     {
         $this->incrementId = $incrementId;
         return $this;
@@ -259,20 +259,20 @@ class RmaDataRmaInterface
     /**
      * Items
      *
-     * @return RmaDataItemInterface[]
+     * @return RmaDataItemInterface[]|null
      */
-    public function getItems(): array
+    public function getItems(): ?array
     {
         return $this->items;
     }
     /**
      * Items
      *
-     * @param RmaDataItemInterface[] $items
+     * @param RmaDataItemInterface[]|null $items
      *
      * @return self
      */
-    public function setItems(array $items): self
+    public function setItems(?array $items): self
     {
         $this->items = $items;
         return $this;
@@ -280,20 +280,20 @@ class RmaDataRmaInterface
     /**
      * Order_id
      *
-     * @return int
+     * @return int|null
      */
-    public function getOrderId(): int
+    public function getOrderId(): ?int
     {
         return $this->orderId;
     }
     /**
      * Order_id
      *
-     * @param int $orderId
+     * @param int|null $orderId
      *
      * @return self
      */
-    public function setOrderId(int $orderId): self
+    public function setOrderId(?int $orderId): self
     {
         $this->orderId = $orderId;
         return $this;
@@ -301,20 +301,20 @@ class RmaDataRmaInterface
     /**
      * Order_increment_id
      *
-     * @return string
+     * @return string|null
      */
-    public function getOrderIncrementId(): string
+    public function getOrderIncrementId(): ?string
     {
         return $this->orderIncrementId;
     }
     /**
      * Order_increment_id
      *
-     * @param string $orderIncrementId
+     * @param string|null $orderIncrementId
      *
      * @return self
      */
-    public function setOrderIncrementId(string $orderIncrementId): self
+    public function setOrderIncrementId(?string $orderIncrementId): self
     {
         $this->orderIncrementId = $orderIncrementId;
         return $this;
@@ -322,20 +322,20 @@ class RmaDataRmaInterface
     /**
      * Status
      *
-     * @return string
+     * @return string|null
      */
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }
     /**
      * Status
      *
-     * @param string $status
+     * @param string|null $status
      *
      * @return self
      */
-    public function setStatus(string $status): self
+    public function setStatus(?string $status): self
     {
         $this->status = $status;
         return $this;
@@ -343,20 +343,20 @@ class RmaDataRmaInterface
     /**
      * Store_id
      *
-     * @return int
+     * @return int|null
      */
-    public function getStoreId(): int
+    public function getStoreId(): ?int
     {
         return $this->storeId;
     }
     /**
      * Store_id
      *
-     * @param int $storeId
+     * @param int|null $storeId
      *
      * @return self
      */
-    public function setStoreId(int $storeId): self
+    public function setStoreId(?int $storeId): self
     {
         $this->storeId = $storeId;
         return $this;
@@ -364,20 +364,20 @@ class RmaDataRmaInterface
     /**
      * Tracks list
      *
-     * @return RmaDataTrackInterface[]
+     * @return RmaDataTrackInterface[]|null
      */
-    public function getTracks(): array
+    public function getTracks(): ?array
     {
         return $this->tracks;
     }
     /**
      * Tracks list
      *
-     * @param RmaDataTrackInterface[] $tracks
+     * @param RmaDataTrackInterface[]|null $tracks
      *
      * @return self
      */
-    public function setTracks(array $tracks): self
+    public function setTracks(?array $tracks): self
     {
         $this->tracks = $tracks;
         return $this;
