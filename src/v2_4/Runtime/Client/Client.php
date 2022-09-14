@@ -97,7 +97,7 @@ abstract class Client
         $response = $this->httpClient->sendRequest(
             $this->requestFactory->createRequest(
                 'POST',
-                $this->uriFactory->createUri()->withPath('V1/integration/admin/token')
+                $this->uriFactory->createUri()->withPath('/V1/integration/admin/token')
             )
                 ->withHeader('Content-Type', 'application/json')
                 ->withBody(
