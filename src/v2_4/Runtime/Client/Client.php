@@ -98,7 +98,9 @@ abstract class Client
             $this->requestFactory->createRequest(
                 'POST',
                 $this->uriFactory->createUri()->withPath('V1/integration/admin/token')
-            )->withBody(
+            )
+                ->withHeader('Content-Type', 'application/json')
+                ->withBody(
                 $this->streamFactory->createStream(json_encode([
                     'username' => $this->username,
                     'password' => $this->password,
@@ -110,6 +112,6 @@ abstract class Client
             throw new AccessDeniedException('Something went wrong while refreshing your credentials. Please check your information.');
         }
 
-        $this->accessToken = json_decode($response->getBody()->getContents(), true);
+        $this->accessToken = json_decode($response->getBody(), true);
     }
 }
