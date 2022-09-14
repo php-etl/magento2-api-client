@@ -6560,7 +6560,7 @@ class Client extends \Kiboko\Magento\V2_4\Runtime\Client\Client
     {
         return $this->executeEndpoint(new \Kiboko\Magento\V2_4\Endpoint\WorldpayGuestPaymentInformationManagementProxyV1SavePaymentInformationAndPlaceOrderPost($cartId, $requestBody), $fetch);
     }
-    public static function create($httpClient = null, array $additionalPlugins = array(), array $additionalNormalizers = array())
+    public static function create(string $accessToken, string $username, string $password, $httpClient = null, array $additionalPlugins = array(), array $additionalNormalizers = array())
     {
         if (null === $httpClient) {
             $httpClient = \Http\Discovery\Psr18ClientDiscovery::find();
@@ -6571,12 +6571,13 @@ class Client extends \Kiboko\Magento\V2_4\Runtime\Client\Client
             $httpClient = new \Http\Client\Common\PluginClient($httpClient, $plugins);
         }
         $requestFactory = \Http\Discovery\Psr17FactoryDiscovery::findRequestFactory();
+        $uriFactory = \Http\Discovery\Psr17FactoryDiscovery::findUriFactory();
         $streamFactory = \Http\Discovery\Psr17FactoryDiscovery::findStreamFactory();
         $normalizers = array(new \Symfony\Component\Serializer\Normalizer\ArrayDenormalizer(), new \Kiboko\Magento\V2_4\Normalizer\JaneObjectNormalizer());
         if (count($additionalNormalizers) > 0) {
             $normalizers = array_merge($normalizers, $additionalNormalizers);
         }
         $serializer = new \Symfony\Component\Serializer\Serializer($normalizers, array(new \Symfony\Component\Serializer\Encoder\JsonEncoder(new \Symfony\Component\Serializer\Encoder\JsonEncode(), new \Symfony\Component\Serializer\Encoder\JsonDecode(array('json_decode_associative' => true)))));
-        return new static($httpClient, $requestFactory, $serializer, $streamFactory);
+        return new static($httpClient, $requestFactory, $uriFactory, $serializer, $streamFactory, $accessToken, $username, $password);
     }
 }

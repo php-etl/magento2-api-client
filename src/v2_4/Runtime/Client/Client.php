@@ -5,38 +5,30 @@ namespace Kiboko\Magento\V2_4\Runtime\Client;
 use Jane\Component\OpenApiRuntime\Client\Plugin\AuthenticationRegistry;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
+use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\StreamInterface;
+use Psr\Http\Message\UriFactoryInterface;
 use Symfony\Component\Serializer\SerializerInterface;
 
 abstract class Client
 {
     public const FETCH_RESPONSE = 'response';
     public const FETCH_OBJECT = 'object';
-    /**
-     * @var ClientInterface
-     */
-    protected $httpClient;
-    /**
-     * @var RequestFactoryInterface
-     */
-    protected $requestFactory;
-    /**
-     * @var SerializerInterface
-     */
-    protected $serializer;
-    /**
-     * @var StreamFactoryInterface
-     */
-    protected $streamFactory;
-    public function __construct(ClientInterface $httpClient, RequestFactoryInterface $requestFactory, SerializerInterface $serializer, StreamFactoryInterface $streamFactory)
-    {
-        $this->httpClient = $httpClient;
-        $this->requestFactory = $requestFactory;
-        $this->serializer = $serializer;
-        $this->streamFactory = $streamFactory;
+
+    public function __construct(
+        private ClientInterface $httpClient,
+        private RequestFactoryInterface $requestFactory,
+        private UriFactoryInterface $uriFactory,
+        private SerializerInterface $serializer,
+        private StreamFactoryInterface $streamFactory,
+        private string $accessToken,
+        private string $username,
+        private string $password,
+    ) {
     }
+
     public function executeEndpoint(Endpoint $endpoint, string $fetch = self::FETCH_OBJECT)
     {
         if (self::FETCH_RESPONSE === $fetch) {
@@ -78,6 +70,46 @@ abstract class Client
             }
             $request = $request->withHeader(AuthenticationRegistry::SCOPES_HEADER, $scopes);
         }
+        return $this->sendRequest($request);
+    }
+
+    private function sendRequest(RequestInterface $request): ResponseInterface
+    {
+        $response = $this->tryRequest($request);
+        if ($response->getStatusCode() === 401) {
+            $this->refreshToken();
+
+            $response = $this->tryRequest($request);
+        }
+
+        return $response;
+    }
+
+    private function tryRequest(RequestInterface $request): ResponseInterface
+    {
+        $request = $request->withHeader('Authorization', sprintf('Bearer %s', $this->accessToken));
+
         return $this->httpClient->sendRequest($request);
+    }
+
+    private function refreshToken(): void
+    {
+        $response = $this->httpClient->sendRequest(
+            $this->requestFactory->createRequest(
+                'POST',
+                $this->uriFactory->createUri()->withPath('V1/integration/admin/token')
+            )->withBody(
+                $this->streamFactory->createStream(json_encode([
+                    'username' => $this->username,
+                    'password' => $this->password,
+                ]))
+            )
+        );
+
+        if ($response->getStatusCode() !== 200) {
+            throw new AccessDeniedException('Something went wrong while refreshing your credentials. Please check your information.');
+        }
+
+        $this->accessToken = json_decode($response->getBody()->getContents(), true);
     }
 }
