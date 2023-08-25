@@ -109,7 +109,11 @@ abstract class Client
         );
 
         if ($response->getStatusCode() !== 200) {
-            throw new AccessDeniedException('Something went wrong while refreshing your credentials. Please check your information.');
+            throw new AccessDeniedException(sprintf(
+                'Something went wrong while refreshing Magento credentials: %d - "%s"',
+                $response->getStatusCode(),
+                $response->getBody()->getContents(),
+            ));
         }
 
         $this->accessToken = json_decode($response->getBody(), true);
