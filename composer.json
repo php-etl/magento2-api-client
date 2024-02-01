@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Kiboko\\Magento\\": "src"
+            "Kiboko\\Magento\\": ["src/","generated/"]
         }
     },
     "authors": [

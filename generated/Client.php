@@ -3310,6 +3310,9 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.

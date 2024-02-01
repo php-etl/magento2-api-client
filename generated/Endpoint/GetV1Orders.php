@@ -11,6 +11,9 @@ class GetV1Orders extends \Kiboko\Magento\Runtime\Client\BaseEndpoint implements
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
@@ -41,10 +44,13 @@ class GetV1Orders extends \Kiboko\Magento\Runtime\Client\BaseEndpoint implements
     protected function getQueryOptionsResolver() : \Symfony\Component\OptionsResolver\OptionsResolver
     {
         $optionsResolver = parent::getQueryOptionsResolver();
-        $optionsResolver->setDefined(array('searchCriteria[filterGroups][0][filters][0][field]', 'searchCriteria[filterGroups][0][filters][0][value]', 'searchCriteria[filterGroups][0][filters][0][conditionType]', 'searchCriteria[sortOrders][0][field]', 'searchCriteria[sortOrders][0][direction]', 'searchCriteria[pageSize]', 'searchCriteria[currentPage]'));
+        $optionsResolver->setDefined(array('searchCriteria[filterGroups][0][filters][0][field]', 'searchCriteria[filterGroups][0][filters][0][value]', 'searchCriteria[filterGroups][0][filters][0][conditionType]', 'searchCriteria[filterGroups][0][filters][1][field]', 'searchCriteria[sortOrders][0][field]', 'searchCriteria[sortOrders][0][direction]', 'searchCriteria[pageSize]', 'searchCriteria[currentPage]'));
         $optionsResolver->setRequired(array());
         $optionsResolver->setDefaults(array());
         $optionsResolver->addAllowedTypes('searchCriteria[filterGroups][0][filters][0][field]', array('string'));
+        $optionsResolver->addAllowedTypes('searchCriteria[filterGroups][0][filters][0][value]', array('string'));
+        $optionsResolver->addAllowedTypes('searchCriteria[filterGroups][0][filters][0][conditionType]', array('string'));
+        $optionsResolver->addAllowedTypes('searchCriteria[filterGroups][0][filters][1][field]', array('string'));
         $optionsResolver->addAllowedTypes('searchCriteria[filterGroups][0][filters][0][value]', array('string'));
         $optionsResolver->addAllowedTypes('searchCriteria[filterGroups][0][filters][0][conditionType]', array('string'));
         $optionsResolver->addAllowedTypes('searchCriteria[sortOrders][0][field]', array('string'));
