@@ -10,6 +10,9 @@ use Jane\Component\OpenApiCommon\Console\Loader\ConfigLoader;
 use Jane\Component\OpenApiCommon\Console\Loader\OpenApiMatcher;
 use Jane\Component\OpenApiCommon\Console\Loader\SchemaLoader;
 
+$path = __DIR__;
+`$path/search-criteria-generate > $path/../jane/parameters.json`;
+
 $command = new GenerateCommand(new ConfigLoader(), new SchemaLoader(), new OpenApiMatcher());
 $inputArray = new ArrayInput(['--config-file' => __DIR__ . '/../jane/open_api.php'], $command->getDefinition());
 

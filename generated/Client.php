@@ -57,8 +57,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -125,8 +440,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -258,8 +888,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -561,8 +1506,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -882,8 +2142,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -966,8 +2541,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -1017,12 +2907,326 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      * Make Full Text Search and return found Documents
      *
      * @param array $queryParameters {
-     *     @var string $searchCriteria[requestName] 
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -1042,8 +3246,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -1184,8 +3703,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -1235,8 +4069,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -1282,8 +4431,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -1409,8 +4873,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -1949,8 +5728,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -2246,15 +6340,330 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      * Collect and retrieve the list of product render info. This info contains raw prices and formatted prices, product name, stock status, store_id, etc.
      *
      * @param array $queryParameters {
+     *     @var int $storeId 
+     *     @var string $currencyCode 
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
-     *     @var int $storeId 
-     *     @var string $currencyCode 
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @throws \Kiboko\Magento\Exception\UnexpectedStatusCodeException
@@ -2375,8 +6784,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -3311,10 +8035,322 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
      *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
-     *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
-     *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -3491,8 +8527,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -3527,8 +8878,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -3736,8 +9402,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -3801,8 +9782,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -3954,8 +10250,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -4627,8 +11238,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -4711,8 +11637,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -4794,8 +12035,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -4846,8 +12402,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -5166,11 +13037,327 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      * @param string $salesChannelType 
      * @param string $salesChannelCode 
      * @param array $queryParameters {
+     *     @var array $searchCriteria Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -5459,8 +13646,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -5482,8 +13984,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -5554,8 +14371,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -5642,8 +14774,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -5739,8 +15186,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -5824,8 +15586,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -5909,8 +15986,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -5995,8 +16387,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }
@@ -6396,8 +17103,323 @@ class Client extends \Kiboko\Magento\Runtime\Client\Client
      *     @var string $searchCriteria[filterGroups][0][filters][0][field] Field
      *     @var string $searchCriteria[filterGroups][0][filters][0][value] Value
      *     @var string $searchCriteria[filterGroups][0][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][0][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][0][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][0][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][1][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][1][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][1][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][2][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][2][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][2][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][3][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][3][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][3][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][4][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][4][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][4][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][5][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][5][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][5][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][6][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][6][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][6][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][7][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][7][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][7][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][8][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][8][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][8][filters][9][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][0][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][0][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][0][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][1][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][1][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][1][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][2][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][2][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][2][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][3][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][3][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][3][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][4][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][4][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][4][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][5][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][5][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][5][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][6][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][6][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][6][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][7][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][7][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][7][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][8][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][8][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][8][conditionType] Condition type
+     *     @var string $searchCriteria[filterGroups][9][filters][9][field] Field
+     *     @var string $searchCriteria[filterGroups][9][filters][9][value] Value
+     *     @var string $searchCriteria[filterGroups][9][filters][9][conditionType] Condition type
      *     @var string $searchCriteria[sortOrders][0][field] Sorting field.
      *     @var string $searchCriteria[sortOrders][0][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][1][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][1][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][2][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][2][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][3][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][3][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][4][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][4][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][5][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][5][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][6][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][6][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][7][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][7][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][8][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][8][direction] Sorting direction.
+     *     @var string $searchCriteria[sortOrders][9][field] Sorting field.
+     *     @var string $searchCriteria[sortOrders][9][direction] Sorting direction.
      *     @var int $searchCriteria[pageSize] Page size.
      *     @var int $searchCriteria[currentPage] Current page.
      * }

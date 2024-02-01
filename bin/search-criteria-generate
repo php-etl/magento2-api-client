@@ -1,0 +1,74 @@
+#!/usr/bin/env php
+<?php
+
+echo <<<HEAD
+{
+    "parameters": {
+
+HEAD;
+
+
+$pattern =<<<'PATTERN'
+        "filterGroups%1$d_filters%2$d_field": {
+          "name": "searchCriteria[filterGroups][%1$d][filters][%2$d][field]",
+          "in": "query",
+          "type": "string",
+          "description": "Field"
+        },
+        "filterGroups%1$d_filters%2$d_value": {
+          "name": "searchCriteria[filterGroups][%1$d][filters][%2$d][value]",
+          "in": "query",
+          "type": "string",
+          "description": "Value"
+        },
+        "filterGroups%1$d_filters%2$d_conditionType": {
+          "name": "searchCriteria[filterGroups][%1$d][filters][%2$d][conditionType]",
+          "in": "query",
+          "type": "string",
+          "description": "Condition type"
+        },
+
+PATTERN;
+
+for ($group = 0; $group < 10; $group++) {
+    for ($filter = 0; $filter < 10; $filter++) {
+        printf($pattern, $group, $filter);
+    }
+}
+
+$pattern = <<<'SORTS'
+        "sortOrders%1$d_field": {
+          "name": "searchCriteria[sortOrders][%1$d][field]",
+          "in": "query",
+          "type": "string",
+          "description": "Sorting field."
+        },
+        "sortOrders%1$d_direction": {
+          "name": "searchCriteria[sortOrders][%1$d][direction]",
+          "in": "query",
+          "type": "string",
+          "description": "Sorting direction."
+        },
+
+SORTS;
+
+for ($sort = 0; $sort < 10; $sort++) {
+    printf($pattern, $sort);
+}
+
+echo <<<'FOOT'
+        "pageSize": {
+          "name": "searchCriteria[pageSize]",
+          "in": "query",
+          "type": "integer",
+          "description": "Page size."
+        },
+        "currentPage": {
+          "name": "searchCriteria[currentPage]",
+          "in": "query",
+          "type": "integer",
+          "description": "Current page."
+        }
+    }
+}
+FOOT;
